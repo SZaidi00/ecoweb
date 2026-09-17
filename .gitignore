@@ -27,3 +27,6 @@ venv/
 # Logs
 *.log
 npm-debug.log*
+
+# Throwaway checkpoint tooling (screenshot capture, not part of the build)
+.checkpoint-tools/

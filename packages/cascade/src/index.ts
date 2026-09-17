@@ -1,3 +1,17 @@
+export { GraphModel, type GraphModelEvent } from './graph-model'
+export {
+  bandForLevel,
+  bandCenterY,
+  computeLayout,
+  TROPHIC_BAND_COUNT,
+  TROPHIC_BAND_LABELS,
+  WORLD,
+  WORLD_HEIGHT,
+  type GraphLayout,
+  type LayoutEdge,
+  type LayoutNode,
+} from './layout'
+
 /**
  * Placeholder for the cascade simulation engine (Phase 4).
  *

@@ -15,6 +15,14 @@ export const colors = {
   ink: '#2b2620',
   /** Brand deep-canopy green. */
   canopy: '#3e5c41',
+  /** Secondary text (muted warm gray-brown). */
+  inkSoft: '#57503f',
+  /** Tertiary text, lane labels, legends. */
+  muted: '#8a7f68',
+  /** Default edge color: muted warm gray. The focus accent is reserved for focus mode. */
+  edge: '#b3a88d',
+  /** Canvas dot-texture color on the paper background. */
+  paperDot: '#e3dbc8',
   /** Focus accent (species focus view). */
   focus: '#b8772e',
   /** Trophic ramp (soil → leaf → sun), bottom to top of the web. */
