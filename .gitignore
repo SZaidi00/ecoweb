@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+apps/web/dist/
+packages/*/dist/
+
+# Test coverage
+coverage/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Environment / local files
+.env
+.env.*
+*.local
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
