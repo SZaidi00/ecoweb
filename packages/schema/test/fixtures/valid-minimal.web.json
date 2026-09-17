@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "id": "example-estuary",
+    "name": "Example Estuary",
+    "location": "Nowhere In Particular",
+    "biome": "wetland",
+    "lat": 58.3,
+    "lng": -134.4,
+    "provenance": "composite",
+    "citations": [
+      "Doe, J. (2020). An example food web used only for testing. Journal of Examples 12(3): 1-9."
+    ],
+    "sourceUrl": "https://example.org/datasets/example-estuary",
+    "licenseNote": "Test fixture; not real data.",
+    "curator": "Jane Curator",
+    "dateCurated": "2026-01-15"
+  },
+  "nodes": [
+    {
+      "id": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": { "x": 30, "y": 5 }
+    },
+    {
+      "id": "zooplankton",
+      "displayName": "Zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2,
+      "functionalRole": "primary-consumer",
+      "description": "Small drifting animals grazing on phytoplankton. Functional group of copepods and larval crustaceans pooled by the source study because gut-content data were aggregated at this level.",
+      "metrics": { "biomass": 4.2, "respiration": 31.5, "import": 0, "export": 1.1 },
+      "layout": { "x": 30, "y": 45 }
+    },
+    {
+      "id": "small-shark",
+      "displayName": "Small Shark",
+      "kind": "species",
+      "trophicLevel": 3.2,
+      "functionalRole": "top-consumer",
+      "description": "A small coastal shark feeding on zooplanktivorous fish; measured at species level in the source study.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Shark",
+        "iNaturalist": "https://www.inaturalist.org/taxa/47273"
+      },
+      "layout": { "x": 55, "y": 85 }
+    }
+  ],
+  "edges": [
+    { "prey": "phytoplankton", "predator": "zooplankton", "weight": 0.9 },
+    { "prey": "zooplankton", "predator": "small-shark", "qualitative": true }
+  ]
+}

@@ -2,7 +2,8 @@ import { PixiCanvas } from '@/components/PixiCanvas'
 import { webIndexSchema } from '@/lib/webIndex'
 
 export function ExplorePage() {
-  // No data loading in Phase 0; index.json ships as { "webs": [] }.
+  // Placeholder from Phase 0: wiring the real data/webs/index.json into the
+  // explore canvas is Phase 2+ scope. Review the data via #/debug/webs.
   const index = webIndexSchema.parse({ webs: [] })
 
   return (

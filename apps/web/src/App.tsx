@@ -1,13 +1,9 @@
-import type { EcosystemWeb } from '@foodweb/schema'
 import { Route, Routes } from 'react-router-dom'
 
 import { AppHeader } from '@/components/AppHeader'
 import { AboutPage } from '@/pages/AboutPage'
+import { DebugWebsPage } from '@/pages/DebugWebsPage'
 import { ExplorePage } from '@/pages/ExplorePage'
-
-/** Placeholder web — real ecosystem data arrives in Phase 1. */
-const placeholderWeb: EcosystemWeb = { id: 'pending-phase-1' }
-void placeholderWeb
 
 export default function App() {
   return (
@@ -17,6 +13,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<ExplorePage />} />
           <Route path="/about" element={<AboutPage />} />
+          {/* Data-review tool; route-only, intentionally not in the main nav. */}
+          <Route path="/debug/webs" element={<DebugWebsPage />} />
         </Routes>
       </main>
     </div>

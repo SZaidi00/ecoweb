@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "id": "example-estuary",
+    "name": "Example Estuary",
+    "location": "Nowhere In Particular",
+    "biome": "wetland",
+    "lat": 58.3,
+    "lng": -134.4,
+    "provenance": "composite",
+    "citations": [
+      "Doe, J. (2020). An example food web used only for testing. Journal of Examples 12(3): 1-9."
+    ],
+    "sourceUrl": "https://example.org/datasets/example-estuary",
+    "licenseNote": "Test fixture; not real data.",
+    "curator": "Jane Curator",
+    "dateCurated": "2026-01-15"
+  },
+  "nodes": [
+    {
+      "id": "filler-00",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-01",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-02",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 3,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-03",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-04",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-05",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 3,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-06",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-07",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-08",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 3,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-09",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-10",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-11",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 3,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-12",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-13",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-14",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 3,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-15",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-16",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-17",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 3,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-18",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-19",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-20",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 3,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-21",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-22",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-23",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 3,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-24",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    },
+    {
+      "id": "filler-25",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2,
+      "functionalRole": "producer",
+      "description": "Microscopic photosynthetic plankton. Functional group of diatoms and flagellates pooled by the source study because they were measured together in net samples.",
+      "layout": {
+        "x": 30,
+        "y": 5
+      }
+    }
+  ],
+  "edges": []
+}

@@ -28,5 +28,16 @@ jobs:
       - name: Test
         run: npm test
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install -r scripts/pipeline/requirements.txt
+
       - name: Validate ecosystem data
         run: npm run validate:data
+
+      - name: Test data pipeline
+        run: npm run test:pipeline

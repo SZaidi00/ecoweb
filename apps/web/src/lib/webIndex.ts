@@ -1,12 +1,9 @@
-import { z } from 'zod'
-
 /**
- * Shape of data/webs/index.json. Phase 0 placeholder — the real index
- * listing (biomes, ecosystems, provenance) is defined in Phase 1 and
- * validated against @foodweb/schema.
+ * Shape of data/webs/index.json, the browse-layer listing of all webs.
+ *
+ * The canonical contract (zod schema + types) lives in @foodweb/schema;
+ * scripts/pipeline/validate.py checks every index entry against the actual
+ * web files on disk (node counts, ids, biome, provenance, ...).
  */
-export const webIndexSchema = z.object({
-  webs: z.array(z.string()),
-})
-
-export type WebIndex = z.infer<typeof webIndexSchema>
+export { webIndexSchema } from '@foodweb/schema'
+export type { WebIndex, WebIndexEntry } from '@foodweb/schema'

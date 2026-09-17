@@ -1,0 +1,610 @@
+{
+  "meta": {
+    "id": "prince-william-sound",
+    "name": "Prince William Sound",
+    "location": "Prince William Sound, Alaska, USA",
+    "biome": "marine",
+    "lat": 60.61,
+    "lng": -147.14,
+    "provenance": "empirical",
+    "citations": [
+      "Dalsgaard, J. & Pauly, D. 1997. Preliminary Mass-Balance Models of Prince William Sound, Alaska, for the Pre-Spill Period, 1980-1989. Fisheries Centre Research Reports 5(2), 33 p. https://doi.org/10.14288/1.0074775",
+      "Iskrzynski, M., Pawluczuk, M., Fath, B.D. et al. 2022. foodwebviz: Food web visualisation - heat map, interactive graph and animated flow network. Methods in Ecology and Evolution 13: 1295-1302. https://doi.org/10.1111/2041-210X.13839 (EcoBase SCOR export of the PWS model mirrored at github.com/ibs-pan/foodwebviz)",
+      "Okey, T.A. & Pauly, D. (eds.) 1999. Trophic Mass-Balance Model of Alaska's Prince William Sound Ecosystem, for the Post-Spill Period 1994-1996. Fisheries Centre Research Reports 7(4), 137 p. (successor 48-group model; not encoded here)"
+    ],
+    "sourceUrl": "https://github.com/ibs-pan/foodwebviz/blob/master/examples/data/Alaska_Prince_William_Sound.scor",
+    "licenseNote": "Structure, biomasses, trophic levels and the full diet matrix are from Dalsgaard & Pauly (1997, UBC Fisheries Centre Research Reports 5(2); report openly available via UBC cIRcle and Sea Around Us), cross-checked against the EcoBase SCOR export of the same 19-group model mirrored by the foodwebviz project (MIT-licensed code; data attribution to the original authors). Edge weights are the published diet fractions (Table 24 of the source; identical to SCOR flows normalized per predator). Curation notes: flows from consumers to detritus (faeces/mortality, not predation) and within-group (cannibalism) flows are omitted from the edge list, so a predator's edge weights can sum to less than 1; bacteria are excluded by the source model. Reuse requires citing Dalsgaard & Pauly (1997).",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-09-17"
+  },
+  "nodes": [
+    {
+      "id": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Microscopic drifting algae that power the Sound's pelagic food web. Functional group aggregating the whole phytoplankton community (diatoms, flagellates and small cells under 5 micrometres), pooled because the source model measured primary production for the community as a whole. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 41.513
+      },
+      "layout": {
+        "x": 20,
+        "y": 4
+      }
+    },
+    {
+      "id": "macroalgae",
+      "displayName": "Macroalgae (kelps)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Kelp beds of the shallow subtidal zone (0-20 m). Functional group pooling the canopy and understory kelps - the source reports Agarum cribrosum and Laminaria saccharina as over 90% of biomass, with Nereocystis luetkeana beds on exposed sites - measured together by the source study. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 400.0
+      },
+      "layout": {
+        "x": 50,
+        "y": 4
+      }
+    },
+    {
+      "id": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Non-living particulate organic matter: dead plankton, faeces and other debris sinking to the bottom. Functional group aggregating all detrital material; the source explicitly excludes bacteria, treating their decomposition fluxes as occurring outside the model. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 7.0
+      },
+      "layout": {
+        "x": 80,
+        "y": 4
+      }
+    },
+    {
+      "id": "mesozooplankton",
+      "displayName": "Mesozooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Small drifting grazers. Functional group pooling mainly copepods (Neocalanus cristatus, N. plumchrus, Calanus marshallae, Pseudocalanus spp., Acartia), plus cladocerans (Podon, Evadne) and the arrowworm Sagitta elegans, as grouped by the source's zooplankton sampling. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 276.0
+      },
+      "layout": {
+        "x": 25,
+        "y": 31
+      }
+    },
+    {
+      "id": "infaunal-zoobenthos",
+      "displayName": "Infaunal zoobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.3,
+      "functionalRole": "primary-consumer",
+      "description": "Invertebrates living inside the seafloor sediment. Functional group pooling mostly deposit-feeding polychaete worms and bivalves (e.g. clams) plus suspension feeders, pooled from the source's benthic infauna surveys. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 225.0
+      },
+      "layout": {
+        "x": 8,
+        "y": 38
+      }
+    },
+    {
+      "id": "intertidal-invertebrates",
+      "displayName": "Intertidal invertebrates",
+      "kind": "functional-group",
+      "trophicLevel": 2.5,
+      "functionalRole": "primary-consumer",
+      "description": "Rocky-shore invertebrates between the tides. Functional group dominated by barnacles, gastropods (snails, limpets) and bivalves - especially the mussel Mytilus edulis - pooled because the source's biomass estimate covered the intertidal community as a whole. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 6.24
+      },
+      "layout": {
+        "x": 45,
+        "y": 44
+      }
+    },
+    {
+      "id": "macrozooplankton",
+      "displayName": "Macrozooplankton (krill and kin)",
+      "kind": "functional-group",
+      "trophicLevel": 2.8,
+      "functionalRole": "intermediate-consumer",
+      "description": "Large zooplankton. Functional group pooling euphausiids (krill; five species in PWS), amphipods and coelenterates (jellyfish and relatives), aggregated by the source from zooplankton community data. Krill feed on smaller zooplankton as well as phytoplankton, so the group sits well above level 2. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 92.0
+      },
+      "layout": {
+        "x": 62,
+        "y": 51
+      }
+    },
+    {
+      "id": "epifaunal-zoobenthos",
+      "displayName": "Epifaunal zoobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.9,
+      "functionalRole": "intermediate-consumer",
+      "description": "Invertebrates living on the seafloor surface. Functional group pooling Tanner crab, pink shrimp, mud stars and sunflower stars - mostly scavengers and predators of other benthos - aggregated from the source's benthic epifauna surveys. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 1.3
+      },
+      "layout": {
+        "x": 86,
+        "y": 54
+      }
+    },
+    {
+      "id": "wild-salmon-fry",
+      "displayName": "Wild salmon fry",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.2,
+      "functionalRole": "intermediate-consumer",
+      "description": "Newly seaward-migrated juvenile salmon of wild origin, mostly pink and chum salmon, during roughly their first 120 days in the Sound. Life-stage group pooled by the source (wild fry were tracked separately from hatchery releases); they feed on zooplankton, preferring calanoid copepods. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 0.014
+      },
+      "layout": {
+        "x": 18,
+        "y": 62
+      }
+    },
+    {
+      "id": "hatchery-salmon-fry",
+      "displayName": "Hatchery salmon fry",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.2,
+      "functionalRole": "intermediate-consumer",
+      "description": "Juvenile salmon released from PWS hatcheries (mostly pink salmon, released late April/early May), residing in the Sound from early April to July/August. Life-stage group pooled separately from wild fry by the source because hatchery releases are large enough to matter for the Sound's carrying capacity. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 0.009
+      },
+      "layout": {
+        "x": 34,
+        "y": 62
+      }
+    },
+    {
+      "id": "pacific-herring",
+      "displayName": "Pacific herring",
+      "kind": "species",
+      "trophicLevel": 3.3,
+      "functionalRole": "intermediate-consumer",
+      "description": "Pacific herring (Clupea pallasii), a single species tracked by the source. The key forage fish of PWS: it converts zooplankton (euphausiids, copepods, mysids, amphipods) into food for fish, birds and mammals, and supported major seine, gillnet and spawn-on-kelp fisheries in the 1980s. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Pacific_herring",
+        "iNaturalist": "https://www.inaturalist.org/taxa/52346-Clupea-pallasii"
+      },
+      "metrics": {
+        "biomass": 8.107
+      },
+      "layout": {
+        "x": 52,
+        "y": 64
+      }
+    },
+    {
+      "id": "small-pelagics",
+      "displayName": "Small pelagic fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.3,
+      "functionalRole": "intermediate-consumer",
+      "description": "Small schooling fishes of open water. Functional group pooling capelin, eulachon, smelt and other small fishes, aggregated by the source because no standing-stock estimates existed for the individual species; the model estimated the group's biomass from predator demand. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 8.909
+      },
+      "layout": {
+        "x": 68,
+        "y": 64
+      }
+    },
+    {
+      "id": "sea-otter",
+      "displayName": "Sea otter",
+      "kind": "species",
+      "trophicLevel": 3.5,
+      "functionalRole": "intermediate-consumer",
+      "description": "Sea otter (Enhydra lutris), a single species tracked by the source. A keystone benthic predator: diet studies in PWS (Montague Strait) found clams dominating its diet (about 81% by weight), with crabs, mussels, octopus and echinoderms making up the rest - represented in the model as feeding on infaunal zoobenthos. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Sea_otter",
+        "iNaturalist": "https://www.inaturalist.org/taxa/41438-Enhydra-lutris"
+      },
+      "metrics": {
+        "biomass": 0.017
+      },
+      "layout": {
+        "x": 88,
+        "y": 69
+      }
+    },
+    {
+      "id": "demersal-fish",
+      "displayName": "Demersal fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.9,
+      "functionalRole": "intermediate-consumer",
+      "description": "Bottom-dwelling and semi-demersal fishes. Functional group pooling arrowtooth flounder (about 60% of biomass), walleye pollock, flathead sole, sablefish, skates, Pacific halibut, Pacific cod, rougheye rockfish and others, aggregated from a 1989 PWS trawl survey. The source notes this group is very over-aggregated and includes 10% within-group (cannibalistic) feeding, not shown as an edge here. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 9.4
+      },
+      "layout": {
+        "x": 40,
+        "y": 80
+      }
+    },
+    {
+      "id": "birds",
+      "displayName": "Birds (seabirds and waterfowl)",
+      "kind": "functional-group",
+      "trophicLevel": 4.1,
+      "functionalRole": "top-consumer",
+      "description": "Functional group aggregating the Sound's marine birds - roughly 88% seabirds (alcids such as murres and puffins, black-legged kittiwakes, cormorants, gulls, terns) and 12% overwintering waterfowl (scoters, goldeneyes, harlequin ducks and other ducks) - pooled by the source with a weighted-mean diet. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 0.021
+      },
+      "layout": {
+        "x": 58,
+        "y": 85
+      }
+    },
+    {
+      "id": "salmon",
+      "displayName": "Salmon (adults)",
+      "kind": "functional-group",
+      "trophicLevel": 4.1,
+      "functionalRole": "top-consumer",
+      "description": "Functional group pooling all five Pacific salmon species caught in PWS - Chinook, Sockeye, Coho, Pink and Chum - during their adult feeding and spawning-run phase in the Sound (June-September), because the source model measured them together (pink salmon dominate, about 83% of the catch by weight). Diet data came from pink salmon: 85% small pelagics, 15% macrozooplankton. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 2.125
+      },
+      "layout": {
+        "x": 24,
+        "y": 85
+      }
+    },
+    {
+      "id": "transient-marine-mammals",
+      "displayName": "Transient marine mammals",
+      "kind": "functional-group",
+      "trophicLevel": 4.2,
+      "functionalRole": "top-consumer",
+      "description": "Functional group pooling the whales that occur only seasonally in PWS: fin whales, humpback whales, minke whales, beluga whales and transient (mammal-eating) killer whales, as defined by the source. Because baleen whales dominate the group's biomass, much of its diet is krill and small fish; the transient killer whale component preys on pinnipeds and other marine mammals. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 0.28
+      },
+      "layout": {
+        "x": 72,
+        "y": 87
+      }
+    },
+    {
+      "id": "resident-marine-mammals",
+      "displayName": "Resident marine mammals",
+      "kind": "functional-group",
+      "trophicLevel": 4.4,
+      "functionalRole": "top-consumer",
+      "description": "Functional group pooling the year-round toothed whales of PWS: resident (fish-eating) killer whales, Dall's porpoise and harbour porpoise, as defined by the source. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Killer_whale"
+      },
+      "metrics": {
+        "biomass": 0.095
+      },
+      "layout": {
+        "x": 88,
+        "y": 92
+      }
+    },
+    {
+      "id": "pinnipeds",
+      "displayName": "Pinnipeds (seals and sea lions)",
+      "kind": "functional-group",
+      "trophicLevel": 4.5,
+      "functionalRole": "top-consumer",
+      "description": "Functional group pooling harbour seals and Steller sea lions, as defined by the source. Large fish predators feeding heavily on demersal fish, small pelagics, herring and returning adult salmon. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "metrics": {
+        "biomass": 0.3
+      },
+      "layout": {
+        "x": 8,
+        "y": 95
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "phytoplankton",
+      "predator": "mesozooplankton",
+      "weight": 0.8
+    },
+    {
+      "prey": "detritus",
+      "predator": "mesozooplankton",
+      "weight": 0.2
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "infaunal-zoobenthos",
+      "weight": 0.29
+    },
+    {
+      "prey": "detritus",
+      "predator": "infaunal-zoobenthos",
+      "weight": 0.7
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "intertidal-invertebrates",
+      "weight": 0.36
+    },
+    {
+      "prey": "detritus",
+      "predator": "intertidal-invertebrates",
+      "weight": 0.31
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "intertidal-invertebrates",
+      "weight": 0.23
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "macrozooplankton",
+      "weight": 0.75
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "macrozooplankton",
+      "weight": 0.25
+    },
+    {
+      "prey": "infaunal-zoobenthos",
+      "predator": "epifaunal-zoobenthos",
+      "weight": 0.5
+    },
+    {
+      "prey": "macroalgae",
+      "predator": "epifaunal-zoobenthos",
+      "weight": 0.199
+    },
+    {
+      "prey": "detritus",
+      "predator": "epifaunal-zoobenthos",
+      "weight": 0.121
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "epifaunal-zoobenthos",
+      "weight": 0.1
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "wild-salmon-fry",
+      "weight": 0.75
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "wild-salmon-fry",
+      "weight": 0.25
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "hatchery-salmon-fry",
+      "weight": 0.75
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "hatchery-salmon-fry",
+      "weight": 0.25
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "pacific-herring",
+      "weight": 0.6
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "pacific-herring",
+      "weight": 0.4
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "small-pelagics",
+      "weight": 0.6
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "small-pelagics",
+      "weight": 0.299
+    },
+    {
+      "prey": "infaunal-zoobenthos",
+      "predator": "small-pelagics",
+      "weight": 0.101
+    },
+    {
+      "prey": "infaunal-zoobenthos",
+      "predator": "sea-otter",
+      "weight": 1.0
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "demersal-fish",
+      "weight": 0.265
+    },
+    {
+      "prey": "small-pelagics",
+      "predator": "demersal-fish",
+      "weight": 0.26
+    },
+    {
+      "prey": "infaunal-zoobenthos",
+      "predator": "demersal-fish",
+      "weight": 0.13
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "demersal-fish",
+      "weight": 0.1
+    },
+    {
+      "prey": "pacific-herring",
+      "predator": "demersal-fish",
+      "weight": 0.08
+    },
+    {
+      "prey": "epifaunal-zoobenthos",
+      "predator": "demersal-fish",
+      "weight": 0.03
+    },
+    {
+      "prey": "intertidal-invertebrates",
+      "predator": "demersal-fish",
+      "weight": 0.025
+    },
+    {
+      "prey": "wild-salmon-fry",
+      "predator": "demersal-fish",
+      "weight": 0.005
+    },
+    {
+      "prey": "hatchery-salmon-fry",
+      "predator": "demersal-fish",
+      "weight": 0.005
+    },
+    {
+      "prey": "small-pelagics",
+      "predator": "birds",
+      "weight": 0.459
+    },
+    {
+      "prey": "intertidal-invertebrates",
+      "predator": "birds",
+      "weight": 0.216
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "birds",
+      "weight": 0.187
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "birds",
+      "weight": 0.136
+    },
+    {
+      "prey": "macroalgae",
+      "predator": "birds",
+      "weight": 0.002
+    },
+    {
+      "prey": "small-pelagics",
+      "predator": "salmon",
+      "weight": 0.85
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "salmon",
+      "weight": 0.15
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "transient-marine-mammals",
+      "weight": 0.459
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "transient-marine-mammals",
+      "weight": 0.193
+    },
+    {
+      "prey": "small-pelagics",
+      "predator": "transient-marine-mammals",
+      "weight": 0.138
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "transient-marine-mammals",
+      "weight": 0.137
+    },
+    {
+      "prey": "pacific-herring",
+      "predator": "transient-marine-mammals",
+      "weight": 0.067
+    },
+    {
+      "prey": "pinnipeds",
+      "predator": "transient-marine-mammals",
+      "weight": 0.004
+    },
+    {
+      "prey": "salmon",
+      "predator": "transient-marine-mammals",
+      "weight": 0.001
+    },
+    {
+      "prey": "resident-marine-mammals",
+      "predator": "transient-marine-mammals",
+      "weight": 0.001
+    },
+    {
+      "prey": "small-pelagics",
+      "predator": "resident-marine-mammals",
+      "weight": 0.487
+    },
+    {
+      "prey": "pacific-herring",
+      "predator": "resident-marine-mammals",
+      "weight": 0.296
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "resident-marine-mammals",
+      "weight": 0.15
+    },
+    {
+      "prey": "salmon",
+      "predator": "resident-marine-mammals",
+      "weight": 0.056
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "resident-marine-mammals",
+      "weight": 0.01
+    },
+    {
+      "prey": "sea-otter",
+      "predator": "resident-marine-mammals",
+      "weight": 0.001
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "pinnipeds",
+      "weight": 0.5
+    },
+    {
+      "prey": "small-pelagics",
+      "predator": "pinnipeds",
+      "weight": 0.362
+    },
+    {
+      "prey": "intertidal-invertebrates",
+      "predator": "pinnipeds",
+      "weight": 0.07
+    },
+    {
+      "prey": "pacific-herring",
+      "predator": "pinnipeds",
+      "weight": 0.051
+    },
+    {
+      "prey": "salmon",
+      "predator": "pinnipeds",
+      "weight": 0.017
+    }
+  ]
+}

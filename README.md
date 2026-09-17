@@ -7,7 +7,7 @@ An open-source, interactive web app that lets a general audience explore real-wo
 
 ## Quick Start
 
-Requires Node.js 20 LTS (see `.nvmrc`) and npm.
+Requires Node.js 22 LTS (see `.nvmrc`) and npm. The data pipeline additionally needs Python 3.12+ (`pip install -r scripts/pipeline/requirements.txt`).
 
 ```sh
 npm install
@@ -22,6 +22,7 @@ Other useful commands (from the repo root):
 - `npm test` — run unit tests
 - `npm run lint` — lint the codebase
 - `npm run validate:data` — validate the ecosystem data files in `data/webs/`
+- `npm run test:pipeline` — run the Python data-pipeline tests (pytest)
 
 ## Contributing
 

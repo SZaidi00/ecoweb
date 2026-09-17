@@ -1,3 +1,12 @@
 {
-  "webs": []
+  "webs": [
+    {
+      "id": "prince-william-sound",
+      "name": "Prince William Sound",
+      "biome": "marine",
+      "location": "Prince William Sound, Alaska, USA",
+      "nodeCount": 19,
+      "provenance": "empirical"
+    }
+  ]
 }

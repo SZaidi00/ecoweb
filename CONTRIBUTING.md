@@ -1,16 +1,17 @@
 # Contributing to Food Web Explorer
 
-Thanks for your interest in contributing! This document is a Phase 0 stub and will grow as the project matures.
+Thanks for your interest in contributing!
 
 ## Development setup
 
-1. Use Node.js 20 LTS (see `.nvmrc`).
+1. Use Node.js 22 LTS (see `.nvmrc`).
 2. `npm install` at the repo root (npm workspaces).
-3. `npm run dev` to start the app locally.
-4. Before opening a PR, make sure `npm run build`, `npm test`, `npm run lint`, and `npm run validate:data` all pass from the repo root.
+3. Install the Python tooling (Python 3.12+): `pip install -r scripts/pipeline/requirements.txt`
+4. `npm run dev` to start the app locally.
+5. Before opening a PR, make sure `npm run build`, `npm test`, `npm run lint`, `npm run validate:data`, and `npm run test:pipeline` all pass from the repo root.
 
 ## How to contribute an ecosystem web
 
-Each ecosystem web is a static JSON file in `data/webs/`, validated against the schema in `packages/schema`. Webs are **curated, not comprehensive**: 15–25 nodes maximum, honest about aggregation (functional groups, not fabricated species splits) and provenance (empirical study vs. curated composite, with full citation).
+Each ecosystem web is a static JSON file in `data/webs/`, validated against the schema in `packages/schema` by `scripts/pipeline/validate.py`. Webs are **curated, not comprehensive**: 25 nodes maximum, honest about aggregation (functional groups, not fabricated species splits) and provenance (empirical study vs. curated composite, with full citation).
 
-The exact file format is documented in [docs/data-format.md](docs/data-format.md) (lands in Phase 1). Until then, hold off on submitting new webs — the schema is still being defined.
+The exact file format — every field, the salmon rule, the qualitative-edge policy, layout conventions, and the validator's fail/warning rules — is documented in [docs/data-format.md](docs/data-format.md). Start there; `scripts/pipeline/convert_template.py` is a runnable skeleton for converting a published web.
