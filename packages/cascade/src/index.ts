@@ -1,5 +1,18 @@
 export { GraphModel, type GraphModelEvent } from './graph-model'
 export {
+  buildDependencyChains,
+  connectionCount,
+  oneHopVisibleSet,
+  sortedNeighbors,
+  transitivePreyClosure,
+  CHAIN_NODE_BUDGET,
+  type ChainPath,
+  type ChainSegment,
+  type DependencyChain,
+  type Neighbor,
+  type NeighborList,
+} from './focus'
+export {
   bandForLevel,
   bandCenterY,
   computeLayout,

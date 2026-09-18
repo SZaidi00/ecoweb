@@ -16,7 +16,7 @@ import { GraphView } from '@/graph/GraphView'
 import { colors } from '@/theme/tokens'
 
 interface TooltipState {
-  name: string
+  text: string
   x: number
   y: number
 }
@@ -24,21 +24,21 @@ interface TooltipState {
 export interface GraphCanvasProps {
   model: GraphModel
   particlesEnabled: boolean
-  /** Fired on node click / Enter; `null` when selection is cleared. */
-  onNodeSelected: (id: string | null) => void
+  /** Fired on node/chip click or Enter (id); `null` when focus is cleared. */
+  onFocusChange: (id: string | null) => void
   /** Access to the underlying Pixi view (perf harness instrumentation). */
   onViewReady?: (view: GraphView) => void
 }
 
-export function GraphCanvas({ model, particlesEnabled, onNodeSelected, onViewReady }: GraphCanvasProps) {
+export function GraphCanvas({ model, particlesEnabled, onFocusChange, onViewReady }: GraphCanvasProps) {
   const hostRef = useRef<HTMLDivElement>(null)
   const viewRef = useRef<GraphView | null>(null)
   const [tooltip, setTooltip] = useState<TooltipState | null>(null)
 
   // Keep latest callbacks reachable from the long-lived Pixi view without
   // re-creating the view on every render.
-  const callbacksRef = useRef({ onNodeSelected, onViewReady })
-  callbacksRef.current = { onNodeSelected, onViewReady }
+  const callbacksRef = useRef({ onFocusChange, onViewReady })
+  callbacksRef.current = { onFocusChange, onViewReady }
 
   useEffect(() => {
     const host = hostRef.current
@@ -51,8 +51,8 @@ export function GraphCanvas({ model, particlesEnabled, onNodeSelected, onViewRea
       model,
       particlesEnabled,
       onNodeSelected: (id) => {
-        model.select(id)
-        callbacksRef.current.onNodeSelected(id)
+        model.focus(id)
+        callbacksRef.current.onFocusChange(id)
       },
       onNodeHover: (id, screen) => {
         if (!id || !screen) {
@@ -60,11 +60,18 @@ export function GraphCanvas({ model, particlesEnabled, onNodeSelected, onViewRea
           return
         }
         const node = model.getNode(id)
-        setTooltip(node ? { name: node.node.displayName, x: screen.x, y: screen.y } : null)
+        setTooltip(node ? { text: node.node.displayName, x: screen.x, y: screen.y } : null)
+      },
+      onChipHover: (count, screen) => {
+        if (count === null || !screen) {
+          setTooltip(null)
+          return
+        }
+        setTooltip({ text: `${count} connections — select to focus`, x: screen.x, y: screen.y })
       },
       onBackgroundTap: () => {
-        model.select(null)
-        callbacksRef.current.onNodeSelected(null)
+        model.focus(null)
+        callbacksRef.current.onFocusChange(null)
       },
     }).then((created) => {
       if (cancelled) {
@@ -107,10 +114,10 @@ export function GraphCanvas({ model, particlesEnabled, onNodeSelected, onViewRea
       {tooltip && (
         <div
           role="tooltip"
-          className="pointer-events-none absolute z-10 -translate-x-1/2 rounded-md border border-hairline bg-panel px-2.5 py-1 text-xs font-medium text-ink shadow-sm"
+          className="pointer-events-none absolute z-10 -translate-x-1/2 whitespace-nowrap rounded-md border border-hairline bg-panel px-2.5 py-1 text-xs font-medium text-ink shadow-sm"
           style={{ left: tooltip.x, top: tooltip.y - 30 }}
         >
-          {tooltip.name}
+          {tooltip.text}
         </div>
       )}
 
@@ -123,8 +130,8 @@ export function GraphCanvas({ model, particlesEnabled, onNodeSelected, onViewRea
               onFocus={() => model.setKeyboardFocus(node.id)}
               onBlur={() => model.setKeyboardFocus(null)}
               onClick={() => {
-                model.select(node.id)
-                callbacksRef.current.onNodeSelected(node.id)
+                model.focus(node.id)
+                callbacksRef.current.onFocusChange(node.id)
               }}
             >
               {node.node.displayName}

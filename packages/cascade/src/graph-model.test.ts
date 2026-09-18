@@ -51,23 +51,38 @@ describe('GraphModel', () => {
     expect(model.layout.edges).toHaveLength(1)
   })
 
-  it('emits change events on hover / select / keyboard focus, without redundant emits', () => {
+  it('emits change events on hover / focus / keyboard focus, without redundant emits', () => {
     const model = new GraphModel(fixture())
     const listener = vi.fn()
     const unsubscribe = model.subscribe(listener)
 
     model.setHovered('prey-a')
     model.setHovered('prey-a') // no-op: same value
-    model.select('pred-b')
+    model.focus('pred-b')
     model.setKeyboardFocus('prey-a')
     expect(listener).toHaveBeenCalledTimes(3)
     expect(model.getHoveredId()).toBe('prey-a')
-    expect(model.getSelectedId()).toBe('pred-b')
+    expect(model.getFocusedId()).toBe('pred-b')
     expect(model.getKeyboardFocusId()).toBe('prey-a')
 
     unsubscribe()
     model.setHovered(null)
     expect(listener).toHaveBeenCalledTimes(3)
+  })
+
+  it('tracks the focus-mode visible set', () => {
+    const model = new GraphModel(fixture())
+    expect(model.getVisibleIds()).toBeNull()
+
+    model.focus('pred-b')
+    expect(model.getVisibleIds()).toEqual(new Set(['pred-b', 'prey-a']))
+
+    model.focus(null)
+    expect(model.getFocusedId()).toBeNull()
+    expect(model.getVisibleIds()).toBeNull()
+
+    model.focus('missing')
+    expect(model.getFocusedId()).toBeNull()
   })
 
   it('reports direct prey and predators', () => {

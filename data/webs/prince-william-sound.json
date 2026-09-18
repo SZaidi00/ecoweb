@@ -258,6 +258,10 @@
       "trophicLevel": 4.1,
       "functionalRole": "top-consumer",
       "description": "Functional group pooling all five Pacific salmon species caught in PWS - Chinook, Sockeye, Coho, Pink and Chum - during their adult feeding and spawning-run phase in the Sound (June-September), because the source model measured them together (pink salmon dominate, about 83% of the catch by weight). Diet data came from pink salmon: 85% small pelagics, 15% macrozooplankton. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Pacific_salmon",
+        "iNaturalist": "https://www.inaturalist.org/taxa/47765-Oncorhynchus"
+      },
       "metrics": {
         "biomass": 2.125
       },

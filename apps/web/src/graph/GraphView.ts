@@ -7,7 +7,7 @@
  * owns graph state; it subscribes to the model and mirrors it.
  */
 
-import { Application, Container, Graphics, Text, TextStyle } from 'pixi.js'
+import { Application, Circle, Container, Graphics, Text, TextStyle } from 'pixi.js'
 
 import type { GraphModel, LayoutEdge, LayoutNode } from '@foodweb/cascade'
 import { TROPHIC_BAND_COUNT, TROPHIC_BAND_LABELS, bandCenterY } from '@foodweb/cascade'
@@ -28,6 +28,16 @@ function hex(color: string): number {
   return Number.parseInt(color.slice(1), 16)
 }
 
+/** Blend two hex colors; t = 1 returns `b`. Desaturates dimmed node bodies. */
+function mixHex(a: string, b: string, t: number): number {
+  const ca = hex(a)
+  const cb = hex(b)
+  const r = Math.round(((ca >> 16) & 0xff) * (1 - t) + ((cb >> 16) & 0xff) * t)
+  const g = Math.round(((ca >> 8) & 0xff) * (1 - t) + ((cb >> 8) & 0xff) * t)
+  const bl = Math.round((ca & 0xff) * (1 - t) + (cb & 0xff) * t)
+  return (r << 16) | (g << 8) | bl
+}
+
 const NODE_RADIUS = 10
 const HALO_RADIUS = 19
 const ARROW_LENGTH = 8
@@ -35,6 +45,17 @@ const ARROW_WIDTH = 7
 /** Arrowheads sit this far before the predator center (node radius + gap). */
 const ARROW_OFFSET = NODE_RADIUS + 6
 const PARTICLE_TRAVERSAL_MS = 8000
+/** Alpha for nodes/edges outside the focus-mode visible set. */
+const DIM_ALPHA = 0.1
+/** How far dimmed node bodies shift toward warm grey (mockup: saturate(.2)). */
+const DIM_DESATURATION = 0.8
+const CHIP_RADIUS = 8.5
+const CHIP_OFFSET_X = 16
+const CHIP_OFFSET_Y = -13
+const CAMERA_FOCUS_MS = 400
+/** Camera scale limits while eased into a focused species. */
+const FOCUS_MAX_ZOOM = 2.0
+const FOCUS_MIN_ZOOM_RATIO = 0.85
 
 /** Band fill colors, bottom (band 1) to top (band 5), from the trophic ramp. */
 const BAND_COLORS = [
@@ -55,9 +76,12 @@ export interface GraphViewOptions {
   model: GraphModel
   /** Ambient particles off (prefers-reduced-motion or user toggle). */
   particlesEnabled: boolean
+  /** Node or connection-chip tap — enter focus mode on that species. */
   onNodeSelected: (id: string) => void
   onNodeHover: (id: string | null, screen: ScreenPoint | null) => void
-  /** Tap on empty canvas (not a drag, not a node) — used to clear selection. */
+  /** Connection-chip hover; count is the node's total link count. */
+  onChipHover?: (count: number | null, screen: ScreenPoint | null) => void
+  /** Tap on empty canvas (not a drag, not a node) — used to clear focus. */
   onBackgroundTap: () => void
 }
 
@@ -69,16 +93,29 @@ interface NodeView {
   selectedRing: Graphics
   focusRing: Graphics
   label: Text
+  /** Outside the focus-mode visible set: alpha-dimmed and desaturated. */
+  dimmed: boolean
 }
+
+/** Focus-mode edge emphasis: lit (touches focus), muted, dim, or normal. */
+type EdgeEmphasis = 'normal' | 'lit' | 'muted' | 'dim'
 
 interface EdgeView {
   edge: LayoutEdge
   curve: EdgeCurve
+  graphics: Graphics
   particle: Graphics
+  emphasis: EdgeEmphasis
   /** Traversal parameter 0–1; advances each frame. */
   t: number
   /** Traversal speed in t-units per ms; qualitative edges drift slower. */
   speed: number
+}
+
+interface CameraPose {
+  scale: number
+  x: number
+  y: number
 }
 
 export class GraphView {
@@ -96,6 +133,20 @@ export class GraphView {
   private viewY = 0
   private fitScale = 1
   private userTransformed = false
+  /** Zoom-fade factor for labels, set by applyViewport; dimming multiplies it. */
+  private labelZoomAlpha = 1
+
+  private chipLayer: Container | null = null
+  /** Focused id on last repaint; focus visuals only re-render when it changes. */
+  private focusKey = ''
+  private cameraAnim: {
+    elapsed: number
+    duration: number
+    from: CameraPose
+    to: CameraPose
+  } | null = null
+  /** Camera pose captured when focus mode was entered, restored on exit. */
+  private viewBeforeFocus: CameraPose | null = null
 
   private particlesEnabled: boolean
   private frameListener: ((deltaMS: number) => void) | null = null
@@ -173,8 +224,22 @@ export class GraphView {
       const predator = nodeById.get(edge.predator)
       if (!prey || !predator) continue
       const curve = edgeCurve({ x: prey.x, y: prey.y }, { x: predator.x, y: predator.y })
-      edgeLayer.addChild(this.buildEdgeGraphics(edge, curve))
-      this.particleLayer.addChild(this.buildParticle(edge, curve))
+      const view: EdgeView = {
+        edge,
+        curve,
+        graphics: new Graphics(),
+        particle: new Graphics(),
+        emphasis: 'normal',
+        t: hash01(`${edge.prey}->${edge.predator}`),
+        // Qualitative edges carry unquantified flow — drift them a touch slower.
+        speed: (edge.qualitative ? 0.7 : 1) / PARTICLE_TRAVERSAL_MS,
+      }
+      this.paintEdge(view)
+      const p = cubicPoint(curve, view.t)
+      view.particle.position.set(p.x, p.y)
+      this.edgeViews.push(view)
+      edgeLayer.addChild(view.graphics)
+      this.particleLayer.addChild(view.particle)
     }
     world.addChild(edgeLayer)
     world.addChild(this.particleLayer)
@@ -190,6 +255,10 @@ export class GraphView {
     }
     world.addChild(nodeLayer)
     world.addChild(this.labelLayer)
+
+    // Connection-count chips float above labels in focus mode.
+    this.chipLayer = new Container()
+    world.addChild(this.chipLayer)
   }
 
   private buildBandLayer(): Container {
@@ -224,12 +293,21 @@ export class GraphView {
     return edge.qualitative ? 1.3 : 1.1 + (edge.weight ?? 0) * 3.6
   }
 
-  private buildEdgeGraphics(edge: LayoutEdge, curve: EdgeCurve): Graphics {
-    const g = new Graphics()
+  /**
+   * (Re)paint one edge and its particle for the current emphasis. Geometry
+   * never changes — only color/alpha — so focus mode is a cheap redraw of
+   * 58 strokes, not a scene rebuild.
+   */
+  private paintEdge(view: EdgeView): void {
+    const { edge, curve, graphics: g, emphasis } = view
+    const lit = emphasis === 'lit'
+    const color = hex(lit ? colors.focus : colors.edge)
+    const alpha = lit ? 0.95 : emphasis === 'muted' ? 0.3 : edge.qualitative ? 0.55 : 0.5
+    g.clear()
     const strokeStyle = {
-      width: this.edgeWidth(edge),
-      color: hex(colors.edge),
-      alpha: edge.qualitative ? 0.55 : 0.5,
+      width: lit ? Math.max(2, this.edgeWidth(edge)) : this.edgeWidth(edge),
+      color,
+      alpha,
       cap: 'round' as const,
     }
     if (edge.qualitative) {
@@ -253,8 +331,14 @@ export class GraphView {
       base.y + normal.y * (ARROW_WIDTH / 2),
       base.x - normal.x * (ARROW_WIDTH / 2),
       base.y - normal.y * (ARROW_WIDTH / 2),
-    ]).fill({ color: hex(colors.edge), alpha: strokeStyle.alpha + 0.15 })
-    return g
+    ]).fill({ color, alpha: Math.min(1, alpha + 0.15) })
+    g.alpha = emphasis === 'dim' ? DIM_ALPHA : 1
+
+    view.particle
+      .clear()
+      .circle(0, 0, 2.2)
+      .fill({ color: hex(lit ? colors.focus : colors.inkSoft), alpha: lit ? 0.85 : 0.4 })
+    view.particle.alpha = emphasis === 'dim' ? DIM_ALPHA : emphasis === 'muted' ? 0.4 : 1
   }
 
   /** Trace sampled points as an on/off dash pattern (7px on, 5px off). */
@@ -273,24 +357,6 @@ export class GraphView {
       if (drawing) g.lineTo(point.x, point.y)
       else g.moveTo(point.x, point.y)
     }
-  }
-
-  private buildParticle(edge: LayoutEdge, curve: EdgeCurve): Graphics {
-    const particle = new Graphics()
-      .circle(0, 0, 2.2)
-      .fill({ color: hex(colors.inkSoft), alpha: 0.4 })
-    const t = hash01(`${edge.prey}->${edge.predator}`)
-    this.edgeViews.push({
-      edge,
-      curve,
-      particle,
-      t,
-      // Qualitative edges carry unquantified flow — drift them a touch slower.
-      speed: (edge.qualitative ? 0.7 : 1) / PARTICLE_TRAVERSAL_MS,
-    })
-    const p = cubicPoint(curve, t)
-    particle.position.set(p.x, p.y)
-    return particle
   }
 
   /** Per-band label wrap width derived from the tightest horizontal gap. */
@@ -319,9 +385,6 @@ export class GraphView {
       .circle(0, 0, HALO_RADIUS)
       .fill({ color: hex(colors.focus), alpha: 0 })
     const body = new Graphics()
-      .circle(0, 0, NODE_RADIUS)
-      .fill(hex(BAND_COLORS[layout.band - 1]))
-      .stroke({ width: 2.5, color: hex(colors.panel) })
     const selectedRing = new Graphics()
       .circle(0, 0, NODE_RADIUS + 5)
       .stroke({ width: 3, color: hex(colors.focus) })
@@ -364,7 +427,84 @@ export class GraphView {
       this.options.onNodeSelected(layout.id)
     })
 
-    return { layout, container, halo, body, selectedRing, focusRing, label }
+    const view: NodeView = {
+      layout,
+      container,
+      halo,
+      body,
+      selectedRing,
+      focusRing,
+      label,
+      dimmed: false,
+    }
+    this.paintNodeBody(view)
+    return view
+  }
+
+  /** Node bodies redraw (never re-layout) so dimmed nodes can desaturate. */
+  private paintNodeBody(view: NodeView): void {
+    const base = BAND_COLORS[view.layout.band - 1]
+    view.body
+      .clear()
+      .circle(0, 0, NODE_RADIUS)
+      .fill(view.dimmed ? mixHex(base, colors.muted, DIM_DESATURATION) : hex(base))
+      .stroke({ width: 2.5, color: hex(colors.panel) })
+  }
+
+  // ------------------------------------------------------- focus chips
+
+  /** Rebuild connection-count chips for the current focus visible set. */
+  private rebuildChips(focusedId: string | null, visible: ReadonlySet<string> | null): void {
+    const layer = this.chipLayer
+    if (!layer) return
+    for (const child of layer.removeChildren()) child.destroy({ children: true })
+    if (!focusedId || !visible) return
+
+    for (const node of this.model.layout.nodes) {
+      if (node.id === focusedId || !visible.has(node.id)) continue
+      const count = this.model.connectionCount(node.id)
+      if (count < 2) continue
+      layer.addChild(this.buildChip(node, count))
+    }
+  }
+
+  /** A chip showing a neighbor's total link count; tapping refocuses on it. */
+  private buildChip(node: LayoutNode, count: number): Container {
+    const chip = new Container()
+    chip.position.set(node.x + CHIP_OFFSET_X, node.y + CHIP_OFFSET_Y)
+    chip.eventMode = 'static'
+    chip.cursor = 'pointer'
+    chip.hitArea = new Circle(0, 0, CHIP_RADIUS + 5)
+
+    const circle = new Graphics()
+      .circle(0, 0, CHIP_RADIUS)
+      .fill(hex(colors.panel))
+      .stroke({ width: 1, color: hex(colors.hairline) })
+    const text = new Text({
+      text: String(count),
+      style: new TextStyle({
+        fontFamily: fonts.sans.join(', '),
+        fontSize: 9.5,
+        fontWeight: '600',
+        fill: hex(colors.inkSoft),
+      }),
+    })
+    text.anchor.set(0.5)
+    chip.addChild(circle, text)
+
+    chip.on('pointertap', (event) => {
+      event.stopPropagation()
+      if ((this.dragState?.moved ?? 0) > 5) return
+      this.options.onNodeSelected(node.id)
+    })
+    chip.on('pointerover', () => {
+      this.options.onChipHover?.(count, {
+        x: this.screenPositionOfNode(node.id)?.x ?? 0,
+        y: (this.screenPositionOfNode(node.id)?.y ?? 0) - 14,
+      })
+    })
+    chip.on('pointerout', () => this.options.onChipHover?.(null, null))
+    return chip
   }
 
   // ------------------------------------------------------------- viewport
@@ -387,10 +527,85 @@ export class GraphView {
     this.world.scale.set(this.viewScale)
     this.world.position.set(this.viewX, this.viewY)
     // Fade labels out when zoomed far out; always legible near fit scale.
-    if (this.labelLayer) {
-      const ratio = this.viewScale / this.fitScale
-      const alpha = Math.min(1, Math.max(0, (ratio - 0.55) / 0.35))
-      for (const child of this.labelLayer.children) child.alpha = alpha
+    const ratio = this.viewScale / this.fitScale
+    this.labelZoomAlpha = Math.min(1, Math.max(0, (ratio - 0.55) / 0.35))
+    this.updateLabelAlphas()
+  }
+
+  private updateLabelAlphas(): void {
+    for (const view of this.nodeViews) {
+      view.label.alpha = this.labelZoomAlpha * (view.dimmed ? DIM_ALPHA : 1)
+    }
+  }
+
+  /** Ease the camera to a pose over `duration` ms (instant when motion is off). */
+  private easeCameraTo(to: CameraPose, duration: number = CAMERA_FOCUS_MS): void {
+    if (duration <= 0 || !this.particlesEnabled) {
+      this.cameraAnim = null
+      this.viewScale = to.scale
+      this.viewX = to.x
+      this.viewY = to.y
+      this.applyViewport()
+      return
+    }
+    this.cameraAnim = {
+      elapsed: 0,
+      duration,
+      from: { scale: this.viewScale, x: this.viewX, y: this.viewY },
+      to,
+    }
+  }
+
+  /** Camera pose framing the focus visible set with room for labels/chips. */
+  private focusTarget(visible: ReadonlySet<string>): CameraPose {
+    const { host } = this.options
+    let minX = Infinity
+    let maxX = -Infinity
+    let minY = Infinity
+    let maxY = -Infinity
+    for (const node of this.model.layout.nodes) {
+      if (!visible.has(node.id)) continue
+      minX = Math.min(minX, node.x)
+      maxX = Math.max(maxX, node.x)
+      minY = Math.min(minY, node.y)
+      maxY = Math.max(maxY, node.y)
+    }
+    const padX = 110
+    minX -= padX
+    maxX += padX
+    minY -= 90 // labels sit above nodes
+    maxY += 110
+    const w = Math.max(1, maxX - minX)
+    const h = Math.max(1, maxY - minY)
+    const padScreen = 40
+    const scale = Math.max(
+      this.fitScale * FOCUS_MIN_ZOOM_RATIO,
+      Math.min(
+        (host.clientWidth - padScreen * 2) / w,
+        (host.clientHeight - padScreen * 2) / h,
+        FOCUS_MAX_ZOOM,
+      ),
+    )
+    return {
+      scale,
+      x: (host.clientWidth - w * scale) / 2 - minX * scale,
+      y: (host.clientHeight - h * scale) / 2 - minY * scale,
+    }
+  }
+
+  /** Ease into the focused neighborhood on entry/hop, back out on exit. */
+  private animateCameraForFocus(focusedId: string | null, visible: ReadonlySet<string> | null): void {
+    if (focusedId && visible) {
+      if (!this.viewBeforeFocus) {
+        this.viewBeforeFocus = { scale: this.viewScale, x: this.viewX, y: this.viewY }
+      }
+      this.userTransformed = true
+      this.easeCameraTo(this.focusTarget(visible))
+    } else if (this.viewBeforeFocus) {
+      const back = this.viewBeforeFocus
+      this.viewBeforeFocus = null
+      this.easeCameraTo(back)
+      this.userTransformed = false
     }
   }
 
@@ -430,6 +645,7 @@ export class GraphView {
       const dy = event.movementY
       drag.moved += Math.abs(dx) + Math.abs(dy)
       if (drag.moved > 5) {
+        this.cameraAnim = null
         this.viewX += dx
         this.viewY += dy
         this.userTransformed = true
@@ -441,6 +657,7 @@ export class GraphView {
     }
     const onWheel = (event: WheelEvent) => {
       event.preventDefault()
+      this.cameraAnim = null
       const rect = canvas.getBoundingClientRect()
       this.zoomAt(
         { x: event.clientX - rect.left, y: event.clientY - rect.top },
@@ -460,6 +677,17 @@ export class GraphView {
   // -------------------------------------------------------------- runtime
 
   private tick(deltaMS: number): void {
+    if (this.cameraAnim) {
+      const anim = this.cameraAnim
+      anim.elapsed += deltaMS
+      const p = Math.min(1, anim.elapsed / anim.duration)
+      const e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2
+      this.viewScale = anim.from.scale + (anim.to.scale - anim.from.scale) * e
+      this.viewX = anim.from.x + (anim.to.x - anim.from.x) * e
+      this.viewY = anim.from.y + (anim.to.y - anim.from.y) * e
+      this.applyViewport()
+      if (p >= 1) this.cameraAnim = null
+    }
     if (!this.particleLayer) return
     const visible = this.particlesEnabled
     if (this.particleLayer.visible !== visible) this.particleLayer.visible = visible
@@ -471,18 +699,59 @@ export class GraphView {
     }
   }
 
-  /** Repaint transient state from the model. GPU-cheap: alpha/visibility only. */
+  /**
+   * Repaint transient state from the model. Hover/keyboard rings are
+   * alpha/visibility only; focus transitions additionally redraw edge
+   * colors, desaturate dimmed node bodies, and rebuild chips — all on the
+   * focus change only, never per frame.
+   */
   private applyState(): void {
     const hoveredId = this.model.getHoveredId()
-    const selectedId = this.model.getSelectedId()
+    const focusedId = this.model.getFocusedId()
     const keyboardFocusId = this.model.getKeyboardFocusId()
     for (const view of this.nodeViews) {
       const hovered = view.layout.id === hoveredId
       view.halo.alpha = hovered ? 0.16 : 0
       view.body.scale.set(hovered ? 1.15 : 1)
-      view.selectedRing.visible = view.layout.id === selectedId
+      view.selectedRing.visible = view.layout.id === focusedId
       view.focusRing.visible = view.layout.id === keyboardFocusId
     }
+
+    const nextKey = focusedId ?? ''
+    if (nextKey !== this.focusKey) {
+      this.focusKey = nextKey
+      const visible = this.model.getVisibleIds()
+      this.applyFocusVisuals(focusedId, visible)
+      this.animateCameraForFocus(focusedId, visible)
+    }
+  }
+
+  /** One-time repaint when focus changes: dim, desaturate, light edges, chips. */
+  private applyFocusVisuals(focusedId: string | null, visible: ReadonlySet<string> | null): void {
+    for (const view of this.nodeViews) {
+      const dimmed = visible !== null && !visible.has(view.layout.id)
+      if (dimmed !== view.dimmed) {
+        view.dimmed = dimmed
+        this.paintNodeBody(view)
+      }
+      view.container.alpha = dimmed ? DIM_ALPHA : 1
+    }
+    this.updateLabelAlphas()
+
+    for (const view of this.edgeViews) {
+      let emphasis: EdgeEmphasis = 'normal'
+      if (visible) {
+        const touchesFocus = view.edge.prey === focusedId || view.edge.predator === focusedId
+        const bothVisible = visible.has(view.edge.prey) && visible.has(view.edge.predator)
+        emphasis = touchesFocus ? 'lit' : bothVisible ? 'muted' : 'dim'
+      }
+      if (emphasis !== view.emphasis) {
+        view.emphasis = emphasis
+        this.paintEdge(view)
+      }
+    }
+
+    this.rebuildChips(focusedId, visible)
   }
 
   // ------------------------------------------------------------------ API

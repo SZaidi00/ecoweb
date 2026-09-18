@@ -98,7 +98,7 @@ export function DebugPerfPage() {
       <GraphCanvas
         model={model}
         particlesEnabled
-        onNodeSelected={() => {}}
+        onFocusChange={() => {}}
         onViewReady={(view) => {
           viewRef.current = view
         }}

@@ -2,13 +2,14 @@
  * GraphModel — plain-TypeScript state container for one rendered web.
  *
  * Holds the web data, its deterministic layout, and transient interaction
- * state (hover, selection, keyboard focus). Emits a single `change` event;
- * the Pixi view subscribes and repaints. Zero rendering imports — the model
- * never knows who is listening.
+ * state (hover, species focus, keyboard focus). Emits a single `change`
+ * event; the Pixi view subscribes and repaints. Zero rendering imports —
+ * the model never knows who is listening.
  */
 
 import type { EcosystemWeb } from '@foodweb/schema'
 
+import { connectionCount, oneHopVisibleSet } from './focus'
 import { computeLayout, type GraphLayout, type LayoutNode } from './layout'
 
 export type GraphModelEvent = 'change'
@@ -20,7 +21,8 @@ export class GraphModel {
   readonly layout: GraphLayout
 
   private hoveredId: string | null = null
-  private selectedId: string | null = null
+  private focusedId: string | null = null
+  private visibleIds: Set<string> | null = null
   private keyboardFocusId: string | null = null
   private readonly listeners = new Set<Listener>()
 
@@ -46,8 +48,8 @@ export class GraphModel {
     return this.hoveredId
   }
 
-  getSelectedId(): string | null {
-    return this.selectedId
+  getFocusedId(): string | null {
+    return this.focusedId
   }
 
   getKeyboardFocusId(): string | null {
@@ -60,10 +62,27 @@ export class GraphModel {
     this.emit()
   }
 
-  select(id: string | null): void {
-    if (id === this.selectedId) return
-    this.selectedId = id
+  /**
+   * Enter focus mode on a node (null clears it). Unknown ids clear focus.
+   * Focus state is plain data: the visible 1-hop set is derived here, and
+   * the view renders it with alpha/tint diffs only.
+   */
+  focus(id: string | null): void {
+    const next = id && this.getNode(id) ? id : null
+    if (next === this.focusedId) return
+    this.focusedId = next
+    this.visibleIds = next ? oneHopVisibleSet(this.web, next) : null
     this.emit()
+  }
+
+  /** The focus-mode visible set (focused node + 1-hop neighbors), or null. */
+  getVisibleIds(): ReadonlySet<string> | null {
+    return this.visibleIds
+  }
+
+  /** Total link count in the full web — the connection-chip number. */
+  connectionCount(id: string): number {
+    return connectionCount(this.web, id)
   }
 
   setKeyboardFocus(id: string | null): void {

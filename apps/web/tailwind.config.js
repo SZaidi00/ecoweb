@@ -7,13 +7,16 @@ export default {
     extend: {
       colors: {
         paper: colors.paper,
+        paper2: colors.paper2,
         panel: colors.panel,
         hairline: colors.hairline,
         ink: colors.ink,
         inkSoft: colors.inkSoft,
         muted: colors.muted,
         canopy: colors.canopy,
+        canopySoft: colors.canopySoft,
         focus: colors.focus,
+        accent: colors.accent,
         edge: colors.edge,
         trophic: { ...colors.trophic },
         cascade: { ...colors.cascade },

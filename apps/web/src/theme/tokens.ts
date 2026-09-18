@@ -15,6 +15,8 @@ export const colors = {
   ink: '#2b2620',
   /** Brand deep-canopy green. */
   canopy: '#3e5c41',
+  /** Soft canopy tint: provenance badge background. */
+  canopySoft: '#e6efe2',
   /** Secondary text (muted warm gray-brown). */
   inkSoft: '#57503f',
   /** Tertiary text, lane labels, legends. */
@@ -23,8 +25,12 @@ export const colors = {
   edge: '#b3a88d',
   /** Canvas dot-texture color on the paper background. */
   paperDot: '#e3dbc8',
+  /** Recessed paper tone: ghost buttons, quiet chips. */
+  paper2: '#efe9db',
   /** Focus accent (species focus view). */
   focus: '#b8772e',
+  /** Link accents (matches the mid-level trophic tone). */
+  accent: '#3f7d6b',
   /** Trophic ramp (soil → leaf → sun), bottom to top of the web. */
   trophic: {
     /** Producers & detritus. */
