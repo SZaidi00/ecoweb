@@ -26,19 +26,34 @@ export interface GraphCanvasProps {
   particlesEnabled: boolean
   /** Fired on node/chip click or Enter (id); `null` when focus is cleared. */
   onFocusChange: (id: string | null) => void
+  /**
+   * 'focus' (default): clicks focus species. 'cascade-target': the next node
+   * click is a removal target (cascade mode arming). 'locked': canvas clicks
+   * are inert (cascade running/finished).
+   */
+  interactionMode?: 'focus' | 'cascade-target' | 'locked'
+  /** Node picked as the cascade removal target (interactionMode === 'cascade-target'). */
+  onCascadeTarget?: (id: string) => void
   /** Access to the underlying Pixi view (perf harness instrumentation). */
   onViewReady?: (view: GraphView) => void
 }
 
-export function GraphCanvas({ model, particlesEnabled, onFocusChange, onViewReady }: GraphCanvasProps) {
+export function GraphCanvas({
+  model,
+  particlesEnabled,
+  onFocusChange,
+  interactionMode = 'focus',
+  onCascadeTarget,
+  onViewReady,
+}: GraphCanvasProps) {
   const hostRef = useRef<HTMLDivElement>(null)
   const viewRef = useRef<GraphView | null>(null)
   const [tooltip, setTooltip] = useState<TooltipState | null>(null)
 
   // Keep latest callbacks reachable from the long-lived Pixi view without
   // re-creating the view on every render.
-  const callbacksRef = useRef({ onFocusChange, onViewReady })
-  callbacksRef.current = { onFocusChange, onViewReady }
+  const callbacksRef = useRef({ onFocusChange, onViewReady, interactionMode, onCascadeTarget })
+  callbacksRef.current = { onFocusChange, onViewReady, interactionMode, onCascadeTarget }
 
   useEffect(() => {
     const host = hostRef.current
@@ -51,6 +66,12 @@ export function GraphCanvas({ model, particlesEnabled, onFocusChange, onViewRead
       model,
       particlesEnabled,
       onNodeSelected: (id) => {
+        const { interactionMode: mode, onCascadeTarget: onTarget } = callbacksRef.current
+        if (mode === 'locked') return
+        if (mode === 'cascade-target') {
+          onTarget?.(id)
+          return
+        }
         model.focus(id)
         callbacksRef.current.onFocusChange(id)
       },
@@ -70,6 +91,7 @@ export function GraphCanvas({ model, particlesEnabled, onFocusChange, onViewRead
         setTooltip({ text: `${count} connections — select to focus`, x: screen.x, y: screen.y })
       },
       onBackgroundTap: () => {
+        if (callbacksRef.current.interactionMode === 'locked') return
         model.focus(null)
         callbacksRef.current.onFocusChange(null)
       },
@@ -130,6 +152,11 @@ export function GraphCanvas({ model, particlesEnabled, onFocusChange, onViewRead
               onFocus={() => model.setKeyboardFocus(node.id)}
               onBlur={() => model.setKeyboardFocus(null)}
               onClick={() => {
+                if (interactionMode === 'locked') return
+                if (interactionMode === 'cascade-target') {
+                  onCascadeTarget?.(node.id)
+                  return
+                }
                 model.focus(node.id)
                 callbacksRef.current.onFocusChange(node.id)
               }}

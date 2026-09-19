@@ -2,14 +2,17 @@
  * Hidden perf harness (#/debug/perf).
  *
  * Renders a synthetic 200-node / 400-edge web (the Phase 2 budget, 8× the
- * curated ceiling) and measures frame times in three phases: idle ambient
- * particles, a programmed pan/zoom sweep, and a hover-tint storm. Reports
- * mean/p95 frame time and fps; 60fps means ≤16.7ms mean frame time.
+ * curated ceiling) and measures frame times in four phases: idle ambient
+ * particles, a programmed pan/zoom sweep, a hover-tint storm, and a full
+ * cascade wave animation (Phase 4). Reports mean/p95 frame time and fps;
+ * 60fps means ≤16.7ms mean frame time. Also measures clearCascade() —
+ * the restore path must stay under 100ms.
  */
 
 import { useCallback, useMemo, useRef, useState } from 'react'
 
-import { GraphModel } from '@foodweb/cascade'
+import { GraphModel, simulateRemoval } from '@foodweb/cascade'
+import type { CascadeResult } from '@foodweb/cascade'
 
 import { GraphCanvas } from '@/components/GraphCanvas'
 import type { GraphView } from '@/graph/GraphView'
@@ -43,13 +46,33 @@ export function DebugPerfPage() {
   const viewRef = useRef<GraphView | null>(null)
   const [running, setRunning] = useState(false)
   const [stats, setStats] = useState<PhaseStats[]>([])
+  const [restoreMs, setRestoreMs] = useState<number | null>(null)
+
+  // The biggest cascade available: the producer whose removal affects the
+  // most nodes, so the wave-animation phase exercises the worst case.
+  const cascadeResult = useMemo<CascadeResult | null>(() => {
+    let best: CascadeResult | null = null
+    let bestCount = -1
+    for (const node of model.layout.nodes) {
+      if (node.band !== 1) continue
+      const result = simulateRemoval(model.web, node.id)
+      const count = result.waves.reduce((sum, w) => sum + w.effects.length, 0)
+      if (count > bestCount) {
+        best = result
+        bestCount = count
+      }
+    }
+    return best
+  }, [model])
 
   const run = useCallback(() => {
     const view = viewRef.current
     if (!view || running) return
     setRunning(true)
     setStats([])
+    setRestoreMs(null)
 
+    let cascadeStarted = false
     const phases: { label: string; drive: (elapsed: number) => void }[] = [
       { label: 'Idle (ambient particles)', drive: () => {} },
       {
@@ -60,6 +83,15 @@ export function DebugPerfPage() {
         label: 'Tint storm (hover updates)',
         drive: (elapsed) =>
           model.setHovered(`node-${Math.floor(elapsed / 16) % model.layout.nodes.length}`),
+      },
+      {
+        label: 'Cascade waves (removal simulation)',
+        drive: () => {
+          if (!cascadeStarted && cascadeResult) {
+            cascadeStarted = true
+            view.playCascade(cascadeResult)
+          }
+        },
       },
     ]
 
@@ -83,15 +115,19 @@ export function DebugPerfPage() {
         if (phaseIndex >= phases.length) {
           view.setFrameListener(null)
           model.setHovered(null)
+          // Restore path: must feel instant (<100ms budget).
+          const t0 = performance.now()
+          view.clearCascade()
+          setRestoreMs(Math.round((performance.now() - t0) * 100) / 100)
           view.resetView()
           setRunning(false)
         }
       }
     })
-  }, [model, running])
+  }, [model, running, cascadeResult])
 
   const meanOverall =
-    stats.length === 3 ? stats.reduce((sum, s) => sum + s.meanMs, 0) / stats.length : null
+    stats.length === 4 ? stats.reduce((sum, s) => sum + s.meanMs, 0) / stats.length : null
 
   return (
     <section aria-label="Renderer performance harness" className="relative h-full">
@@ -116,7 +152,7 @@ export function DebugPerfPage() {
           disabled={running}
           className="mt-3 w-full rounded-lg bg-canopy px-3 py-2 font-semibold text-panel transition-opacity disabled:opacity-50"
         >
-          {running ? 'Measuring…' : 'Run 3-phase benchmark'}
+          {running ? 'Measuring…' : 'Run 4-phase benchmark'}
         </button>
         {stats.map((s) => (
           <div key={s.label} className="mt-3 border-t border-hairline pt-2" data-perf-phase={s.label}>
@@ -133,6 +169,14 @@ export function DebugPerfPage() {
           >
             {meanOverall <= 16.7 ? 'PASS' : 'FAIL'} — mean {meanOverall.toFixed(2)}ms/frame across
             phases
+          </p>
+        )}
+        {restoreMs !== null && (
+          <p
+            className="mt-2 rounded-lg border border-hairline bg-paper px-3 py-2 font-semibold"
+            data-perf-restore={restoreMs < 100 ? 'pass' : 'fail'}
+          >
+            {restoreMs < 100 ? 'PASS' : 'FAIL'} — restore {restoreMs}ms (budget &lt;100ms)
           </p>
         )}
       </div>

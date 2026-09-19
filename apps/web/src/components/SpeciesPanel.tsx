@@ -21,6 +21,7 @@ export interface SpeciesPanelProps {
   onToggleChain: () => void
   onFocus: (id: string) => void
   onClearFocus: () => void
+  onSimulateRemoval: (id: string) => void
 }
 
 function FlaskIcon() {
@@ -64,6 +65,7 @@ export function SpeciesPanel({
   onToggleChain,
   onFocus,
   onClearFocus,
+  onSimulateRemoval,
 }: SpeciesPanelProps) {
   const { node: data } = node
   const { prey, predators } = sortedNeighbors(model.web, node.id)
@@ -173,10 +175,8 @@ export function SpeciesPanel({
 
       <button
         type="button"
-        disabled
-        title="Coming in next build"
-        aria-disabled="true"
-        className={`${btnBase} cursor-not-allowed bg-cascade-severe text-panel opacity-60`}
+        onClick={() => onSimulateRemoval(node.id)}
+        className={`${btnBase} bg-cascade-severe text-panel hover:opacity-90`}
       >
         <FlaskIcon />
         Simulate removal

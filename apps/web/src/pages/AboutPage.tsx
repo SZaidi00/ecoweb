@@ -1,4 +1,4 @@
-import { describeCascadeEngine } from '@foodweb/cascade'
+import { CASCADE_DISCLAIMER } from '@foodweb/cascade'
 
 import { CascadeStateIcon } from '@/components/CascadeStateIcon'
 import { cascadeStates } from '@/theme/tokens'
@@ -37,7 +37,7 @@ export function AboutPage() {
         ))}
       </ul>
 
-      <p className="mt-8 text-xs italic text-ink/50">{describeCascadeEngine()}</p>
+      <p className="mt-8 text-xs italic text-ink/50">{CASCADE_DISCLAIMER}</p>
     </section>
   )
 }

@@ -20,7 +20,13 @@ function FlaskIcon() {
 }
 
 /** Default sidebar (no species focused): web intro and provenance. */
-export function WebPanel({ web }: { web: EcosystemWeb }) {
+export function WebPanel({
+  web,
+  onEnterCascadeMode,
+}: {
+  web: EcosystemWeb
+  onEnterCascadeMode: () => void
+}) {
   return (
     <div>
       <h2 className="mb-0.5 font-heading text-[22px] font-semibold">{web.meta.name}</h2>
@@ -41,16 +47,16 @@ export function WebPanel({ web }: { web: EcosystemWeb }) {
 
       <div className={panelBox}>
         <h5 className={panelHeading}>How to explore</h5>
-        Select a node for its dependency view. The layout runs from producers (bottom) to apex
-        predators (top) — energy flows upward.
+        Select a node for its dependency view, or use{' '}
+        <strong className="font-semibold text-ink">Simulate a removal</strong> to watch effects
+        cascade. The layout runs from producers (bottom) to apex predators (top) — energy flows
+        upward.
       </div>
 
       <button
         type="button"
-        disabled
-        title="Coming in next build"
-        aria-disabled="true"
-        className="mt-2 flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-[10px] bg-paper2 px-3 py-2.5 text-[13.5px] font-semibold text-ink opacity-60"
+        onClick={onEnterCascadeMode}
+        className="mt-2 flex w-full items-center justify-center gap-2 rounded-[10px] bg-paper2 px-3 py-2.5 text-[13.5px] font-semibold text-ink transition-colors hover:bg-hairline"
       >
         <FlaskIcon />
         Simulate a removal

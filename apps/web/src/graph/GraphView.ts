@@ -9,7 +9,14 @@
 
 import { Application, Circle, Container, Graphics, Text, TextStyle } from 'pixi.js'
 
-import type { GraphModel, LayoutEdge, LayoutNode } from '@foodweb/cascade'
+import type {
+  CascadeLossState,
+  CascadeNodeState,
+  CascadeResult,
+  GraphModel,
+  LayoutEdge,
+  LayoutNode,
+} from '@foodweb/cascade'
 import { TROPHIC_BAND_COUNT, TROPHIC_BAND_LABELS, bandCenterY } from '@foodweb/cascade'
 
 import { colors, fonts } from '@/theme/tokens'
@@ -57,6 +64,19 @@ const CAMERA_FOCUS_MS = 400
 const FOCUS_MAX_ZOOM = 2.0
 const FOCUS_MIN_ZOOM_RATIO = 0.85
 
+/** Cascade choreography (Phase 4 spec: ~700ms wave stagger). */
+const CASCADE_WAVE_MS = 700
+/** The removed node darkens this long after the ripple starts. */
+const CASCADE_REMOVED_MARK_MS = 150
+/** Released flashes land slightly after the wave's loss effects. */
+const CASCADE_RELEASE_DELAY_MS = 200
+const CASCADE_RIPPLE_MS = 650
+const CASCADE_PULSE_MS = 500
+/** Edges to/from collapsed nodes fade to this alpha at their wave. */
+const CASCADE_EDGE_ALPHA = 0.12
+const CASCADE_COLLAPSED_SCALE = 0.85
+const BADGE_RADIUS = 7.5
+
 /** Band fill colors, bottom (band 1) to top (band 5), from the trophic ramp. */
 const BAND_COLORS = [
   colors.trophic.producers,
@@ -95,6 +115,11 @@ interface NodeView {
   label: Text
   /** Outside the focus-mode visible set: alpha-dimmed and desaturated. */
   dimmed: boolean
+  /** Cascade state: escalating loss state and/or release (both can hold). */
+  cascadeLoss: CascadeLossState | null
+  cascadeReleased: boolean
+  /** Lazily built cascade-state icon badge (accessibility: not color alone). */
+  badge: Container | null
 }
 
 /** Focus-mode edge emphasis: lit (touches focus), muted, dim, or normal. */
@@ -106,6 +131,8 @@ interface EdgeView {
   graphics: Graphics
   particle: Graphics
   emphasis: EdgeEmphasis
+  /** Touches a collapsed/removed node: faded to CASCADE_EDGE_ALPHA. */
+  cascadeFaded: boolean
   /** Traversal parameter 0–1; advances each frame. */
   t: number
   /** Traversal speed in t-units per ms; qualitative edges drift slower. */
@@ -127,6 +154,7 @@ export class GraphView {
   private particleLayer: Container | null = null
   private nodeViews: NodeView[] = []
   private edgeViews: EdgeView[] = []
+  private readonly nodeViewById = new Map<string, NodeView>()
 
   private viewScale = 1
   private viewX = 0
@@ -147,6 +175,19 @@ export class GraphView {
   } | null = null
   /** Camera pose captured when focus mode was entered, restored on exit. */
   private viewBeforeFocus: CameraPose | null = null
+
+  /** Badges and ripple rings live above nodes/labels during a cascade. */
+  private cascadeLayer: Container | null = null
+  /** Scheduled cascade events (wave visuals + React callbacks), fired by tick. */
+  private cascadeTimeline: { at: number; fire: () => void }[] | null = null
+  private cascadeElapsed = 0
+  /** Active "released" scale-up pulses. */
+  private pulses: { view: NodeView; elapsed: number }[] = []
+  /** Active expanding ripple rings. */
+  private ripples: { g: Graphics; elapsed: number }[] = []
+  /** Dashed severe-colored ring around the removed node. */
+  private removedRing: Graphics | null = null
+  private cascadeRemovedId: string | null = null
 
   private particlesEnabled: boolean
   private frameListener: ((deltaMS: number) => void) | null = null
@@ -230,6 +271,7 @@ export class GraphView {
         graphics: new Graphics(),
         particle: new Graphics(),
         emphasis: 'normal',
+        cascadeFaded: false,
         t: hash01(`${edge.prey}->${edge.predator}`),
         // Qualitative edges carry unquantified flow — drift them a touch slower.
         speed: (edge.qualitative ? 0.7 : 1) / PARTICLE_TRAVERSAL_MS,
@@ -250,6 +292,7 @@ export class GraphView {
     for (const layout of this.model.layout.nodes) {
       const view = this.buildNode(layout, wrapWidths.get(layout.band) ?? 140)
       this.nodeViews.push(view)
+      this.nodeViewById.set(layout.id, view)
       nodeLayer.addChild(view.container)
       this.labelLayer.addChild(view.label)
     }
@@ -259,6 +302,10 @@ export class GraphView {
     // Connection-count chips float above labels in focus mode.
     this.chipLayer = new Container()
     world.addChild(this.chipLayer)
+
+    // Cascade badges and ripple rings sit above everything else.
+    this.cascadeLayer = new Container()
+    world.addChild(this.cascadeLayer)
   }
 
   private buildBandLayer(): Container {
@@ -299,10 +346,32 @@ export class GraphView {
    * 58 strokes, not a scene rebuild.
    */
   private paintEdge(view: EdgeView): void {
-    const { edge, curve, graphics: g, emphasis } = view
+    const { edge, graphics: g, emphasis } = view
+    // Collapse fade overrides every other emphasis (cascade owns the scene).
+    if (view.cascadeFaded) {
+      this.paintEdgeGeometry(view, CASCADE_EDGE_ALPHA)
+      view.particle.visible = false
+      return
+    }
+    view.particle.visible = true
     const lit = emphasis === 'lit'
     const color = hex(lit ? colors.focus : colors.edge)
     const alpha = lit ? 0.95 : emphasis === 'muted' ? 0.3 : edge.qualitative ? 0.55 : 0.5
+    this.paintEdgeGeometry(view, alpha, lit ? color : undefined)
+    g.alpha = emphasis === 'dim' ? DIM_ALPHA : 1
+
+    view.particle
+      .clear()
+      .circle(0, 0, 2.2)
+      .fill({ color: hex(lit ? colors.focus : colors.inkSoft), alpha: lit ? 0.85 : 0.4 })
+    view.particle.alpha = emphasis === 'dim' ? DIM_ALPHA : emphasis === 'muted' ? 0.4 : 1
+  }
+
+  /** Stroke the curve + arrowhead at a single alpha; color defaults to edge. */
+  private paintEdgeGeometry(view: EdgeView, alpha: number, colorOverride?: number): void {
+    const { edge, curve, graphics: g } = view
+    const color = colorOverride ?? hex(colors.edge)
+    const lit = colorOverride !== undefined
     g.clear()
     const strokeStyle = {
       width: lit ? Math.max(2, this.edgeWidth(edge)) : this.edgeWidth(edge),
@@ -332,13 +401,7 @@ export class GraphView {
       base.x - normal.x * (ARROW_WIDTH / 2),
       base.y - normal.y * (ARROW_WIDTH / 2),
     ]).fill({ color, alpha: Math.min(1, alpha + 0.15) })
-    g.alpha = emphasis === 'dim' ? DIM_ALPHA : 1
-
-    view.particle
-      .clear()
-      .circle(0, 0, 2.2)
-      .fill({ color: hex(lit ? colors.focus : colors.inkSoft), alpha: lit ? 0.85 : 0.4 })
-    view.particle.alpha = emphasis === 'dim' ? DIM_ALPHA : emphasis === 'muted' ? 0.4 : 1
+    g.alpha = 1
   }
 
   /** Trace sampled points as an on/off dash pattern (7px on, 5px off). */
@@ -436,19 +499,28 @@ export class GraphView {
       focusRing,
       label,
       dimmed: false,
+      cascadeLoss: null,
+      cascadeReleased: false,
+      badge: null,
     }
     this.paintNodeBody(view)
     return view
   }
 
-  /** Node bodies redraw (never re-layout) so dimmed nodes can desaturate. */
+  /**
+   * Node bodies redraw (never re-layout) so dimmed nodes can desaturate and
+   * cascade states can recolor. Cascade fill wins over focus dimming.
+   */
   private paintNodeBody(view: NodeView): void {
     const base = BAND_COLORS[view.layout.band - 1]
-    view.body
-      .clear()
-      .circle(0, 0, NODE_RADIUS)
-      .fill(view.dimmed ? mixHex(base, colors.muted, DIM_DESATURATION) : hex(base))
-      .stroke({ width: 2.5, color: hex(colors.panel) })
+    const fill = view.cascadeLoss
+      ? hex(colors.cascade[view.cascadeLoss])
+      : view.cascadeReleased
+        ? hex(colors.cascade.released)
+        : view.dimmed
+          ? mixHex(base, colors.muted, DIM_DESATURATION)
+          : hex(base)
+    view.body.clear().circle(0, 0, NODE_RADIUS).fill(fill).stroke({ width: 2.5, color: hex(colors.panel) })
   }
 
   // ------------------------------------------------------- focus chips
@@ -688,14 +760,62 @@ export class GraphView {
       this.applyViewport()
       if (p >= 1) this.cameraAnim = null
     }
+
+    this.tickCascade(deltaMS)
+
     if (!this.particleLayer) return
     const visible = this.particlesEnabled
     if (this.particleLayer.visible !== visible) this.particleLayer.visible = visible
     if (!visible) return
     for (const view of this.edgeViews) {
+      if (view.cascadeFaded) continue
       view.t = (view.t + deltaMS * view.speed) % 1
       const p = cubicPoint(view.curve, view.t)
       view.particle.position.set(p.x, p.y)
+    }
+  }
+
+  /** Advance the cascade timeline, ripple rings, and release pulses. */
+  private tickCascade(deltaMS: number): void {
+    if (this.cascadeTimeline) {
+      this.cascadeElapsed += deltaMS
+      const due = this.cascadeTimeline.filter((event) => event.at <= this.cascadeElapsed)
+      if (due.length > 0) {
+        this.cascadeTimeline = this.cascadeTimeline.filter(
+          (event) => event.at > this.cascadeElapsed,
+        )
+        for (const event of due) event.fire()
+        if (this.cascadeTimeline.length === 0) this.cascadeTimeline = null
+      }
+    }
+
+    for (let i = this.ripples.length - 1; i >= 0; i--) {
+      const ripple = this.ripples[i]
+      ripple.elapsed += deltaMS
+      const p = Math.max(0, Math.min(1, ripple.elapsed / CASCADE_RIPPLE_MS))
+      const radius = NODE_RADIUS + 4 + p * 100
+      ripple.g
+        .clear()
+        .circle(0, 0, radius)
+        .stroke({ width: 3 - p * 2, color: hex(colors.cascade.severe), alpha: 0.55 * (1 - p) })
+      if (p >= 1) {
+        ripple.g.destroy()
+        this.ripples.splice(i, 1)
+      }
+    }
+
+    for (let i = this.pulses.length - 1; i >= 0; i--) {
+      const pulse = this.pulses[i]
+      pulse.elapsed += deltaMS
+      const p = Math.min(1, pulse.elapsed / CASCADE_PULSE_MS)
+      // Brief scale-up and settle back (1 → 1.3 → 1).
+      pulse.view.container.scale.set(1 + 0.3 * Math.sin(p * Math.PI))
+      if (p >= 1) {
+        pulse.view.container.scale.set(
+          pulse.view.cascadeLoss === 'collapsed' ? CASCADE_COLLAPSED_SCALE : 1,
+        )
+        this.pulses.splice(i, 1)
+      }
     }
   }
 
@@ -752,6 +872,224 @@ export class GraphView {
     }
 
     this.rebuildChips(focusedId, visible)
+  }
+
+  // -------------------------------------------------------------- cascade
+
+  /**
+   * Play a precomputed CascadeResult: ripple at the removed node, then each
+   * wave applies after a ~700ms stagger (release flashes trail by 200ms).
+   * `onWave` fires as each wave's visuals land so the summary panel streams
+   * in sync; `onComplete` fires after the last wave settles. With motion
+   * disabled the timeline still runs — only the ripple/pulse flourishes are
+   * skipped.
+   */
+  playCascade(
+    result: CascadeResult,
+    callbacks: { onWave?: (waveIndex: number) => void; onComplete?: () => void } = {},
+  ): void {
+    this.clearCascade()
+    this.model.setHovered(null)
+    // Canvas picking is suspended for the duration; React routes clicks.
+    for (const view of this.nodeViews) view.container.eventMode = 'none'
+
+    const removed = this.nodeViewById.get(result.removedId) ?? null
+    if (removed && this.particlesEnabled) this.spawnRipple(removed, 0)
+
+    const timeline: { at: number; fire: () => void }[] = [
+      {
+        at: CASCADE_REMOVED_MARK_MS,
+        fire: () => {
+          if (removed) this.markRemovedNode(removed)
+        },
+      },
+    ]
+    for (const wave of result.waves) {
+      const at = wave.index * CASCADE_WAVE_MS
+      const losses = wave.effects.filter((e) => e.state !== 'released')
+      const releases = wave.effects.filter((e) => e.state === 'released')
+      timeline.push({
+        at,
+        fire: () => {
+          for (const effect of losses) {
+            const view = this.nodeViewById.get(effect.nodeId)
+            if (view) this.applyCascadeLoss(view, effect.state as CascadeLossState)
+          }
+          callbacks.onWave?.(wave.index)
+        },
+      })
+      if (releases.length > 0) {
+        timeline.push({
+          at: at + CASCADE_RELEASE_DELAY_MS,
+          fire: () => {
+            for (const effect of releases) {
+              const view = this.nodeViewById.get(effect.nodeId)
+              if (view) this.applyCascadeReleased(view)
+            }
+          },
+        })
+      }
+    }
+    const lastWaveAt = (result.waves[result.waves.length - 1]?.index ?? 0) * CASCADE_WAVE_MS
+    timeline.push({
+      at: lastWaveAt + CASCADE_RELEASE_DELAY_MS + CASCADE_PULSE_MS,
+      fire: () => callbacks.onComplete?.(),
+    })
+    timeline.sort((a, b) => a.at - b.at)
+    this.cascadeTimeline = timeline
+    this.cascadeElapsed = 0
+  }
+
+  /**
+   * Instantly restore the pre-cascade scene (synchronous repaint of ≤25
+   * nodes — well under the 100ms restore budget). Safe to call anytime.
+   */
+  clearCascade(): void {
+    this.cascadeTimeline = null
+    for (const ripple of this.ripples) ripple.g.destroy()
+    this.ripples = []
+    this.pulses = []
+    this.removedRing?.destroy()
+    this.removedRing = null
+    for (const view of this.nodeViews) {
+      const hadCascade = view.cascadeLoss !== null || view.cascadeReleased
+      if (view.badge) {
+        view.badge.destroy({ children: true })
+        view.badge = null
+      }
+      view.cascadeLoss = null
+      view.cascadeReleased = false
+      view.container.scale.set(1)
+      view.container.eventMode = 'static'
+      if (hadCascade || view.layout.id === this.cascadeRemovedId) this.paintNodeBody(view)
+    }
+    this.cascadeRemovedId = null
+    for (const view of this.edgeViews) {
+      if (view.cascadeFaded) {
+        view.cascadeFaded = false
+        this.paintEdge(view)
+      }
+    }
+  }
+
+  /** Darken the removed node, ring it dashed severe, fade its edges. */
+  private markRemovedNode(view: NodeView): void {
+    this.cascadeRemovedId = view.layout.id
+    view.body
+      .clear()
+      .circle(0, 0, NODE_RADIUS)
+      .fill(hex(colors.ink))
+      .stroke({ width: 2.5, color: hex(colors.panel) })
+    const ring = new Graphics()
+    ring.position.set(view.layout.x, view.layout.y)
+    this.traceDashedCircle(ring, NODE_RADIUS + 6)
+    ring.stroke({ width: 2.5, color: hex(colors.cascade.severe) })
+    this.cascadeLayer?.addChild(ring)
+    this.removedRing = ring
+    this.fadeEdgesOf(view.layout.id)
+  }
+
+  /** Loss effect: recolor, badge icon, and on collapse shrink + fade edges. */
+  private applyCascadeLoss(view: NodeView, state: CascadeLossState): void {
+    view.cascadeLoss = state
+    this.paintNodeBody(view)
+    this.setBadge(view, state)
+    if (state === 'collapsed') {
+      view.container.scale.set(CASCADE_COLLAPSED_SCALE)
+      this.fadeEdgesOf(view.layout.id)
+    }
+  }
+
+  /** Release effect: green flash + pulse; badge only if no loss icon yet. */
+  private applyCascadeReleased(view: NodeView): void {
+    view.cascadeReleased = true
+    this.paintNodeBody(view)
+    if (!view.cascadeLoss) this.setBadge(view, 'released')
+    if (this.particlesEnabled) this.pulses.push({ view, elapsed: 0 })
+  }
+
+  private fadeEdgesOf(nodeId: string): void {
+    for (const view of this.edgeViews) {
+      if (view.cascadeFaded) continue
+      if (view.edge.prey === nodeId || view.edge.predator === nodeId) {
+        view.cascadeFaded = true
+        this.paintEdge(view)
+      }
+    }
+  }
+
+  /** Expanding ripple ring from a node (motion on only). */
+  private spawnRipple(view: NodeView, delay: number): void {
+    const g = new Graphics()
+    g.position.set(view.layout.x, view.layout.y)
+    this.cascadeLayer?.addChild(g)
+    this.ripples.push({ g, elapsed: -delay })
+  }
+
+  /** Badge icon: circle chip + the state's line icon (never color alone). */
+  private setBadge(view: NodeView, state: CascadeNodeState): void {
+    if (!view.badge) {
+      const badge = new Container()
+      badge.position.set(CHIP_OFFSET_X, CHIP_OFFSET_Y)
+      view.container.addChild(badge)
+      view.badge = badge
+    }
+    for (const child of view.badge.removeChildren()) child.destroy({ children: true })
+    const color = hex(colors.cascade[state])
+    const bg = new Graphics()
+      .circle(0, 0, BADGE_RADIUS)
+      .fill(hex(colors.panel))
+      .stroke({ width: 1.2, color })
+    const icon = new Graphics()
+    this.drawStateIcon(icon, state, color)
+    view.badge.addChild(bg, icon)
+  }
+
+  /**
+   * Pixi line-icons mirroring components/CascadeStateIcon's 24×24 glyphs,
+   * scaled down into the badge.
+   */
+  private drawStateIcon(g: Graphics, state: CascadeNodeState, color: number): void {
+    const k = 11 / 24
+    const px = (x: number) => x * k - 5.5
+    const py = (y: number) => y * k - 5.5
+    const line = (points: [number, number][]) => {
+      g.moveTo(px(points[0][0]), py(points[0][1]))
+      for (let i = 1; i < points.length; i++) g.lineTo(px(points[i][0]), py(points[i][1]))
+    }
+    switch (state) {
+      case 'stressed':
+        line([[3, 12], [7, 12], [9, 6], [13, 18], [15, 12], [19, 12]])
+        break
+      case 'severe':
+        line([[5, 6], [12, 13], [19, 6]])
+        line([[5, 12], [12, 19], [19, 12]])
+        break
+      case 'collapsed': {
+        this.traceDashedCircle(g, 6 * k, px(11), py(12))
+        line([[16, 6], [21, 11]])
+        line([[21, 6], [16, 11]])
+        break
+      }
+      case 'released':
+        line([[4, 20], [20, 20]])
+        line([[12, 20], [12, 9]])
+        line([[12, 9], [8, 13]])
+        line([[12, 9], [16, 13]])
+        break
+    }
+    g.stroke({ width: 1.6, color, cap: 'round', join: 'round' })
+  }
+
+  /** Dashed circle stroke (collapsed badge + removed-node ring). */
+  private traceDashedCircle(g: Graphics, radius: number, cx = 0, cy = 0): void {
+    const segments = 28
+    for (let i = 0; i < segments; i += 2) {
+      const a0 = (i / segments) * Math.PI * 2
+      const a1 = ((i + 1) / segments) * Math.PI * 2
+      g.moveTo(cx + Math.cos(a0) * radius, cy + Math.sin(a0) * radius)
+      g.lineTo(cx + Math.cos(a1) * radius, cy + Math.sin(a1) * radius)
+    }
   }
 
   // ------------------------------------------------------------------ API

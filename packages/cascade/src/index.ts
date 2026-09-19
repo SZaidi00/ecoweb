@@ -24,13 +24,17 @@ export {
   type LayoutEdge,
   type LayoutNode,
 } from './layout'
-
-/**
- * Placeholder for the cascade simulation engine (Phase 4).
- *
- * This package is pure TypeScript: it must never import React or Pixi.
- * The renderer consumes plain state produced here.
- */
-export function describeCascadeEngine(): string {
-  return 'Cascade simulation is not implemented yet (Phase 4).'
-}
+export {
+  simulateRemoval,
+  CASCADE_DISCLAIMER,
+  DEFAULT_CASCADE_THRESHOLDS,
+  MAX_CASCADE_WAVES,
+  type CascadeEffect,
+  type CascadeFinalState,
+  type CascadeLossState,
+  type CascadeNodeState,
+  type CascadeResult,
+  type CascadeSummaryLine,
+  type CascadeThresholds,
+  type CascadeWave,
+} from './cascade'

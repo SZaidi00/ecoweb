@@ -1,9 +1,17 @@
 import { describe, expect, it } from 'vitest'
 
-import { describeCascadeEngine } from './index'
+import {
+  CASCADE_DISCLAIMER,
+  DEFAULT_CASCADE_THRESHOLDS,
+  MAX_CASCADE_WAVES,
+  simulateRemoval,
+} from './index'
 
-describe('describeCascadeEngine (Phase 0 placeholder)', () => {
-  it('reports that the cascade engine lands in Phase 4', () => {
-    expect(describeCascadeEngine()).toContain('Phase 4')
+describe('package exports', () => {
+  it('exposes the cascade engine with spec defaults', () => {
+    expect(typeof simulateRemoval).toBe('function')
+    expect(DEFAULT_CASCADE_THRESHOLDS).toEqual({ severe: 0.3, collapsed: 0.7 })
+    expect(MAX_CASCADE_WAVES).toBe(10)
+    expect(CASCADE_DISCLAIMER).toContain('structural dependency')
   })
 })

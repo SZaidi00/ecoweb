@@ -1,4 +1,5 @@
-import { colors } from '@/theme/tokens'
+import { CascadeStateIcon } from '@/components/CascadeStateIcon'
+import { cascadeStates, colors } from '@/theme/tokens'
 
 const ROLES = [
   { label: 'Producers & detritus', color: colors.trophic.producers },
@@ -9,7 +10,7 @@ const ROLES = [
 ] as const
 
 /** Legend bar under the canvas: trophic ramp, edge encodings, energy-flow cue. */
-export function LegendBar() {
+export function LegendBar({ cascadeActive = false }: { cascadeActive?: boolean }) {
   return (
     <div
       className="flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-hairline bg-panel px-8 py-2.5 text-[11.5px] text-inkSoft"
@@ -24,6 +25,15 @@ export function LegendBar() {
           {role.label}
         </span>
       ))}
+      {cascadeActive &&
+        cascadeStates.map((state) => (
+          <span key={state.id} className="inline-flex items-center gap-1.5">
+            <span style={{ color: state.color }}>
+              <CascadeStateIcon state={state.id} className="h-[13px] w-[13px]" />
+            </span>
+            {state.label}
+          </span>
+        ))}
       <span className="inline-flex items-center gap-1.5">
         <svg width="26" height="6" aria-hidden="true">
           <line x1="0" y1="3" x2="26" y2="3" stroke={colors.edge} strokeWidth="3" />
