@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
 
+import type { Biome } from '@foodweb/schema'
+
+import { biomeLabel } from '@/lib/biomes'
+
 export interface BreadcrumbsProps {
-  /** Biome label, e.g. "Marine". Plain text until biome pages land (Phase 5). */
-  biome: string
+  /** Biome id; rendered as a link to the biome page. */
+  biome: Biome
   webName: string
   /** Focused species display name, when in focus mode. */
   focusedName: string | null
@@ -25,7 +29,9 @@ export function Breadcrumbs({ biome, webName, focusedName, onClearFocus }: Bread
         Explore
       </Link>
       <Sep />
-      <span>{biome}</span>
+      <Link to={`/biome/${biome}`} className="transition-colors hover:text-canopy">
+        {biomeLabel(biome)}
+      </Link>
       <Sep />
       {focusedName ? (
         <>

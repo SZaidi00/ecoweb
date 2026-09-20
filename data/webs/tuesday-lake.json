@@ -1,0 +1,468 @@
+{
+  "meta": {
+    "id": "tuesday-lake",
+    "name": "Tuesday Lake",
+    "location": "Tuesday Lake, Wisconsin, USA",
+    "biome": "freshwater",
+    "lat": 46.23,
+    "lng": -89.53,
+    "provenance": "empirical",
+    "tagline": "A whole-lake trophic cascade, measured by experiment",
+    "citations": [
+      "Carpenter, S.R. & Kitchell, J.F. (eds.) 1996. The Trophic Cascade in Lakes. Cambridge University Press. (primary source of the Tuesday Lake food web)",
+      "Cohen, J.E., Jonsson, T. & Carpenter, S.R. 2003. Ecological community description using the food web, species abundance, and body size. Proceedings of the National Academy of Sciences USA 100(4): 1781-1786. https://doi.org/10.1073/pnas.2327156100",
+      "Jonsson, T., Cohen, J.E. & Carpenter, S.R. 2005. Food webs, body size, and species abundance in ecological community description. Advances in Ecological Research 36: 1-84.",
+      "Hudson, L.N., Emerson, R., Jenkins, G.B., Layer, K., Ledger, M.E., Pichler, D.E., Thompson, M.S.A., O'Gorman, E.J., Woodward, G. & Reuman, D.C. 2013. Cheddar: analysis and visualisation of ecological communities in R. Methods in Ecology and Evolution 4: 956-961. https://doi.org/10.1111/2041-210X.12005 (R package distributing the dataset)"
+    ],
+    "sourceUrl": "https://github.com/cran/cheddar/blob/master/data/TL84.RData",
+    "licenseNote": "Dataset redistributed with the cheddar R package (GPL) as the TL84 community object (Tuesday Lake sampled in 1984), read programmatically from data/TL84.RData on the cran/cheddar CRAN mirror; the underlying web is attributed to Carpenter & Kitchell (1996), Cohen et al. (2003) and Jonsson et al. (2005). The source web contains 56 taxa and 269 trophic links with NO interaction strengths, so every edge here is qualitative. Curation notes: the 56 taxa were pooled into 16 nodes following the standard groupings of the limnological literature (major phytoplankton classes; rotifers; small herbivorous cladocerans with Daphnia pulex kept separate; herbivorous calanoid vs. predatory cyclopoid copepods); a pooled edge exists wherever at least one source link connected a member of each group. Nine of the 269 source links fell WITHIN a pooled group (cannibalism and within-guild predation, e.g. Chaoborus eating Chaoborus, cyclopoid copepods eating each other, Umbra limi cannibalism) and are not drawn as edges, consistent with the exemplar web's handling of within-group flows. Note: cheddar's help file says 'Tuesday Lake, Michigan', but the dataset's own coordinates (46.2167, -89.5333) and the Carpenter & Kitchell literature place Tuesday Lake in Vilas County, Wisconsin; Wisconsin is used here. The source also reports mean body mass (kg) and numerical density (per cubic metre) per taxon, not encoded here. Reuse requires citing the sources above.",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-09-19"
+  },
+  "nodes": [
+    {
+      "id": "cyanobacteria",
+      "displayName": "Cyanobacteria (blue-green algae)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Photosynthetic bacteria of the open water. Functional group pooling the four cyanobacteria taxa in the source web - Nostoc sp., Chroococcus dispersus, Dactylococcopsis fascicularis and the bloom-forming Microcystis aeruginosa - following the major phytoplankton classes used by the limnological literature.",
+      "layout": {
+        "x": 6,
+        "y": 4
+      }
+    },
+    {
+      "id": "diatoms",
+      "displayName": "Diatoms",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Silica-shelled algae. Functional group pooling the three diatom taxa in the source web - Asterionella formosa, Rhizosolenia sp. and Synedra sp. - following the major phytoplankton classes used by the limnological literature.",
+      "layout": {
+        "x": 20,
+        "y": 4
+      }
+    },
+    {
+      "id": "chrysophytes",
+      "displayName": "Golden algae (chrysophytes)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Golden-brown flagellated algae, abundant in soft-water lakes. Functional group pooling nine source taxa - Chromulina sp., Diceras sp., Chrysosphaerella longispina, three Dinobryon species (D. bavaricum, D. cylindricum, D. sertularia and D. sociale) and two Mallomonas species - following the major phytoplankton classes used by the limnological literature.",
+      "layout": {
+        "x": 34,
+        "y": 4
+      }
+    },
+    {
+      "id": "cryptophytes",
+      "displayName": "Cryptophytes",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Small flagellated algae prized as food by zooplankton. Functional group pooling the two Cryptomonas taxa in the source web (Cryptomonas sp. 1 and sp. 2), following the major phytoplankton classes used by the limnological literature.",
+      "layout": {
+        "x": 48,
+        "y": 4
+      }
+    },
+    {
+      "id": "dinoflagellates",
+      "displayName": "Dinoflagellates",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Large, motile algae with two flagella. Functional group pooling the five dinoflagellate taxa in the source web - Glenodinium quadridens and four Peridinium species (P. cinctum, P. limbatum, P. pulsillum and P. wisconsinense) - following the major phytoplankton classes used by the limnological literature.",
+      "layout": {
+        "x": 62,
+        "y": 4
+      }
+    },
+    {
+      "id": "green-algae-desmids",
+      "displayName": "Green algae and desmids",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Green algae, including the often ornate desmids. Functional group pooling six source taxa - Arthrodesmus sp., Closteriopsis longissimus, Dictyosphaerium pulchellum, Selenastrum minutum, Spinocosmarium sp. and Staurastrum sp. - following the major phytoplankton classes used by the limnological literature.",
+      "layout": {
+        "x": 76,
+        "y": 4
+      }
+    },
+    {
+      "id": "small-flagellates",
+      "displayName": "Euglenoids and unclassified flagellates",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Tiny swimming algae. Functional group pooling Trachelomonas sp. (a euglenoid) with the source's 'Unclassified flagellates', the single most abundant 'taxon' in the samples (about 1.9 billion cells per cubic metre), aggregated because the source itself could not resolve these small cells further.",
+      "layout": {
+        "x": 90,
+        "y": 4
+      }
+    },
+    {
+      "id": "rotifers",
+      "displayName": "Rotifers",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Microscopic swimming animals that graze small algae. Functional group pooling all thirteen rotifer taxa in the source web (including Keratella, Kellicottia, Polyarthra, Synchaeta, Conochilus, Conochiloides, Trichocerca, Filinia, Gastropus, Ascomorpha and Ploesoma), the standard zooplankton guild in the limnological literature; all feed on small phytoplankton and flagellates.",
+      "layout": {
+        "x": 16,
+        "y": 28
+      }
+    },
+    {
+      "id": "herbivorous-cladocerans",
+      "displayName": "Small herbivorous cladocerans",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Small filter-feeding water fleas. Functional group pooling three source taxa - Bosmina longirostris, Diaphanosoma leuchtenbergianum and Holopedium gibberum - which in the source web feed only on phytoplankton; they are pooled following the herbivorous-cladoceran guild of the limnological literature, with Daphnia kept separate because of its central role in the cascade.",
+      "layout": {
+        "x": 68,
+        "y": 28
+      }
+    },
+    {
+      "id": "leptodiaptomus-siciloides",
+      "displayName": "Leptodiaptomus siciloides (calanoid copepod)",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "A calanoid copepod, a single species tracked by the source. The dominant herbivorous copepod of the lake's open water, grazing a broad range of phytoplankton and falling prey to cyclopoid copepods, Chaoborus and all three fishes.",
+      "layout": {
+        "x": 42,
+        "y": 28
+      }
+    },
+    {
+      "id": "daphnia-pulex",
+      "displayName": "Daphnia pulex (water flea)",
+      "kind": "species",
+      "trophicLevel": 2.1,
+      "functionalRole": "primary-consumer",
+      "description": "A large water flea, a single species tracked by the source and the classic grazer of lake trophic-cascade studies. In the source web it filters all seven algal groups and also ingests small rotifers, which nudges it slightly above trophic level 2.",
+      "layout": {
+        "x": 30,
+        "y": 33
+      }
+    },
+    {
+      "id": "cyclopoid-copepods",
+      "displayName": "Cyclopoid copepods",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "Predatory copepods. Functional group pooling the three cyclopoid species in the source web - Cyclops varians rubellus, Orthocyclops modestus and Tropocyclops prasinus - following the standard limnological split between herbivorous calanoids and carnivorous cyclopoids; they hunt rotifers and the calanoid Leptodiaptomus, and also eat each other (within-group links not drawn).",
+      "layout": {
+        "x": 30,
+        "y": 58
+      }
+    },
+    {
+      "id": "chaoborus-punctipennis",
+      "displayName": "Chaoborus punctipennis (phantom midge larva)",
+      "kind": "species",
+      "trophicLevel": 3.1,
+      "functionalRole": "intermediate-consumer",
+      "description": "The nearly transparent larva of the phantom midge, a single species tracked by the source. A voracious sit-and-wait predator of zooplankton - rotifers, cladocerans, copepods and even, per the source web, large dinoflagellates - and itself a major food for all three fishes.",
+      "layout": {
+        "x": 62,
+        "y": 62
+      }
+    },
+    {
+      "id": "phoxinus-eos",
+      "displayName": "Northern redbelly dace",
+      "kind": "species",
+      "trophicLevel": 3.6,
+      "functionalRole": "intermediate-consumer",
+      "description": "Phoxinus eos, a small minnow, a single species tracked by the source. Feeds on the larger zooplankton (cladocerans, copepods and Chaoborus larvae) and is in turn eaten by the central mudminnow.",
+      "layout": {
+        "x": 38,
+        "y": 76
+      }
+    },
+    {
+      "id": "phoxinus-neogaeus",
+      "displayName": "Finescale dace",
+      "kind": "species",
+      "trophicLevel": 3.6,
+      "functionalRole": "intermediate-consumer",
+      "description": "Phoxinus neogaeus, a small minnow, a single species tracked by the source. Its recorded diet in the source web is identical to its congener's: large zooplankton including Chaoborus, with the central mudminnow as its predator.",
+      "layout": {
+        "x": 64,
+        "y": 76
+      }
+    },
+    {
+      "id": "umbra-limi",
+      "displayName": "Central mudminnow",
+      "kind": "species",
+      "trophicLevel": 4.1,
+      "functionalRole": "top-consumer",
+      "description": "Umbra limi, a single species tracked by the source and the top predator of this fishless-looking lake's pelagic web. Eats large zooplankton, Chaoborus, both Phoxinus minnows and even smaller mudminnows (cannibalism, not drawn as an edge).",
+      "layout": {
+        "x": 50,
+        "y": 92
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "chaoborus-punctipennis",
+      "predator": "phoxinus-eos",
+      "qualitative": true
+    },
+    {
+      "prey": "chaoborus-punctipennis",
+      "predator": "phoxinus-neogaeus",
+      "qualitative": true
+    },
+    {
+      "prey": "chaoborus-punctipennis",
+      "predator": "umbra-limi",
+      "qualitative": true
+    },
+    {
+      "prey": "chrysophytes",
+      "predator": "daphnia-pulex",
+      "qualitative": true
+    },
+    {
+      "prey": "chrysophytes",
+      "predator": "herbivorous-cladocerans",
+      "qualitative": true
+    },
+    {
+      "prey": "chrysophytes",
+      "predator": "leptodiaptomus-siciloides",
+      "qualitative": true
+    },
+    {
+      "prey": "chrysophytes",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "cryptophytes",
+      "predator": "daphnia-pulex",
+      "qualitative": true
+    },
+    {
+      "prey": "cryptophytes",
+      "predator": "herbivorous-cladocerans",
+      "qualitative": true
+    },
+    {
+      "prey": "cryptophytes",
+      "predator": "leptodiaptomus-siciloides",
+      "qualitative": true
+    },
+    {
+      "prey": "cryptophytes",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "cyanobacteria",
+      "predator": "daphnia-pulex",
+      "qualitative": true
+    },
+    {
+      "prey": "cyanobacteria",
+      "predator": "herbivorous-cladocerans",
+      "qualitative": true
+    },
+    {
+      "prey": "cyanobacteria",
+      "predator": "leptodiaptomus-siciloides",
+      "qualitative": true
+    },
+    {
+      "prey": "cyanobacteria",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "cyclopoid-copepods",
+      "predator": "chaoborus-punctipennis",
+      "qualitative": true
+    },
+    {
+      "prey": "cyclopoid-copepods",
+      "predator": "phoxinus-eos",
+      "qualitative": true
+    },
+    {
+      "prey": "cyclopoid-copepods",
+      "predator": "phoxinus-neogaeus",
+      "qualitative": true
+    },
+    {
+      "prey": "cyclopoid-copepods",
+      "predator": "umbra-limi",
+      "qualitative": true
+    },
+    {
+      "prey": "daphnia-pulex",
+      "predator": "chaoborus-punctipennis",
+      "qualitative": true
+    },
+    {
+      "prey": "daphnia-pulex",
+      "predator": "phoxinus-eos",
+      "qualitative": true
+    },
+    {
+      "prey": "daphnia-pulex",
+      "predator": "phoxinus-neogaeus",
+      "qualitative": true
+    },
+    {
+      "prey": "daphnia-pulex",
+      "predator": "umbra-limi",
+      "qualitative": true
+    },
+    {
+      "prey": "diatoms",
+      "predator": "daphnia-pulex",
+      "qualitative": true
+    },
+    {
+      "prey": "dinoflagellates",
+      "predator": "chaoborus-punctipennis",
+      "qualitative": true
+    },
+    {
+      "prey": "dinoflagellates",
+      "predator": "daphnia-pulex",
+      "qualitative": true
+    },
+    {
+      "prey": "dinoflagellates",
+      "predator": "herbivorous-cladocerans",
+      "qualitative": true
+    },
+    {
+      "prey": "dinoflagellates",
+      "predator": "leptodiaptomus-siciloides",
+      "qualitative": true
+    },
+    {
+      "prey": "green-algae-desmids",
+      "predator": "daphnia-pulex",
+      "qualitative": true
+    },
+    {
+      "prey": "green-algae-desmids",
+      "predator": "herbivorous-cladocerans",
+      "qualitative": true
+    },
+    {
+      "prey": "green-algae-desmids",
+      "predator": "leptodiaptomus-siciloides",
+      "qualitative": true
+    },
+    {
+      "prey": "green-algae-desmids",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "herbivorous-cladocerans",
+      "predator": "chaoborus-punctipennis",
+      "qualitative": true
+    },
+    {
+      "prey": "herbivorous-cladocerans",
+      "predator": "phoxinus-eos",
+      "qualitative": true
+    },
+    {
+      "prey": "herbivorous-cladocerans",
+      "predator": "phoxinus-neogaeus",
+      "qualitative": true
+    },
+    {
+      "prey": "herbivorous-cladocerans",
+      "predator": "umbra-limi",
+      "qualitative": true
+    },
+    {
+      "prey": "leptodiaptomus-siciloides",
+      "predator": "chaoborus-punctipennis",
+      "qualitative": true
+    },
+    {
+      "prey": "leptodiaptomus-siciloides",
+      "predator": "cyclopoid-copepods",
+      "qualitative": true
+    },
+    {
+      "prey": "leptodiaptomus-siciloides",
+      "predator": "phoxinus-eos",
+      "qualitative": true
+    },
+    {
+      "prey": "leptodiaptomus-siciloides",
+      "predator": "phoxinus-neogaeus",
+      "qualitative": true
+    },
+    {
+      "prey": "leptodiaptomus-siciloides",
+      "predator": "umbra-limi",
+      "qualitative": true
+    },
+    {
+      "prey": "phoxinus-eos",
+      "predator": "umbra-limi",
+      "qualitative": true
+    },
+    {
+      "prey": "phoxinus-neogaeus",
+      "predator": "umbra-limi",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "chaoborus-punctipennis",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "cyclopoid-copepods",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "daphnia-pulex",
+      "qualitative": true
+    },
+    {
+      "prey": "small-flagellates",
+      "predator": "daphnia-pulex",
+      "qualitative": true
+    },
+    {
+      "prey": "small-flagellates",
+      "predator": "herbivorous-cladocerans",
+      "qualitative": true
+    },
+    {
+      "prey": "small-flagellates",
+      "predator": "leptodiaptomus-siciloides",
+      "qualitative": true
+    },
+    {
+      "prey": "small-flagellates",
+      "predator": "rotifers",
+      "qualitative": true
+    }
+  ]
+}

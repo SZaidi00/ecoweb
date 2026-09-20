@@ -1,0 +1,556 @@
+{
+  "meta": {
+    "id": "chesapeake-bay",
+    "name": "Chesapeake Bay",
+    "location": "Chesapeake Bay, mesohaline reach, USA",
+    "biome": "marine",
+    "lat": 38.0,
+    "lng": -76.4,
+    "provenance": "empirical",
+    "tagline": "The estuary that launched ecosystem network analysis",
+    "citations": [
+      "Baird, D. & Ulanowicz, R.E. 1989. The seasonal dynamics of the Chesapeake Bay ecosystem. Ecological Monographs 59(4): 329-364. https://doi.org/10.2307/1943071",
+      "Iskrzynski, M., Pawluczuk, M., Fath, B.D. et al. 2022. foodwebviz: Food web visualisation - heat map, interactive graph and animated flow network. Methods in Ecology and Evolution 13: 1295-1302. https://doi.org/10.1111/2041-210X.13839 (SCOR-format export of the Baird & Ulanowicz 1989 annual-average mesohaline carbon network mirrored at github.com/ibs-pan/foodwebviz)"
+    ],
+    "sourceUrl": "https://github.com/ibs-pan/foodwebviz/blob/master/examples/data/Chesapeake_Bay_mesohaline_C_annual.scor",
+    "licenseNote": "Structure, biomasses and the carbon-flow matrix are from Baird & Ulanowicz (1989, Ecological Monographs 59: 329-364), specifically the annual-average variant of the 36-compartment mesohaline (moderately saline, estuarine) carbon network in mgC/m2, obtained as a machine-readable SCOR-format export mirrored by the foodwebviz project (MIT-licensed code; data attribution to the original authors; the paper also publishes four seasonal variants not encoded here). Curation and pooling: the 36 published compartments were pooled to 19 nodes - the three bacterial compartments (free, suspended-POC and sediment-POC bacteria) into Bacteria; the three non-living pools (dissolved organic, suspended particulate and sediment particulate nutrient) into Detritus; 'other suspension feeders' plus Mya arenaria into Suspension-feeding benthos; the four deposit-feeder compartments (other polychaetes, Nereis, Macoma spp., crustacean deposit feeders) into Deposit-feeding benthos; alewife & blueback herring plus bay anchovy plus shad into forage fish; croaker, hogchoker, spot, white perch and catfish into bottom-feeding fish; and bluefish, weakfish, summer flounder and striped bass into piscivorous fish. Each pooling is also stated in the node's description. Edge weights were derived from the published flow matrix after pooling: weight(i->j) = pooled flow(i->j) / sum of all pooled food inflows of consumer j, rounded to 3 decimals. Respiration, imports and exports are excluded (they are not diet); flows from consumers to the detritus pools (faeces, mortality) are not diet edges; and the single within-compartment flow (blue crab cannibalism) is omitted, so each consumer's edge weights sum to 1. Reported biomasses (metrics.biomass) are the published annual-mean values in mgC/m2; pooled nodes carry the sum of their component compartments. Reuse requires citing Baird & Ulanowicz (1989).",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-09-19"
+  },
+  "nodes": [
+    {
+      "id": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Microscopic drifting algae of the Bay's mesohaline (moderately salty, estuarine) waters - the main primary producers of the carbon network. Functional group aggregating the whole suspended phytoplankton community (diatoms, dinoflagellates and small flagellates), measured together by the source. Reported biomass (metrics.biomass) is the annual mean in mgC/m2 from the source flow network.",
+      "metrics": {
+        "biomass": 3480.0
+      },
+      "layout": {
+        "x": 15,
+        "y": 4
+      }
+    },
+    {
+      "id": "benthic-diatoms",
+      "displayName": "Benthic diatoms",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Diatoms living on the estuary's shallow bottom sediments where enough light reaches for photosynthesis. Functional group aggregating the microphytobenthos community, treated as one compartment by the source; the main food of meiofauna. Reported biomass (metrics.biomass) is the annual mean in mgC/m2 from the source.",
+      "metrics": {
+        "biomass": 177.25
+      },
+      "layout": {
+        "x": 46,
+        "y": 4
+      }
+    },
+    {
+      "id": "detritus",
+      "displayName": "Detritus (dissolved and particulate organic matter)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Non-living organic matter of the estuary: dissolved organic carbon plus suspended and bottom-sediment particles of dead plankton, faeces and decaying plant material. Functional group pooling the source's three non-living compartments (dissolved organic nutrient, suspended particulate nutrient, sediment particulate nutrient); the sediment pool dominates. Reported biomass (metrics.biomass) is the sum of the three pools, annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 334488.5
+      },
+      "layout": {
+        "x": 80,
+        "y": 4
+      }
+    },
+    {
+      "id": "bacteria",
+      "displayName": "Bacteria",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The engines of the estuary's microbial loop, consuming dissolved and particulate detritus. Functional group pooling the source's three bacterial compartments - free bacteria, bacteria attached to suspended particles, and bacteria living in bottom sediments. Reported biomass (metrics.biomass) is the summed annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 1069.5
+      },
+      "layout": {
+        "x": 20,
+        "y": 20
+      }
+    },
+    {
+      "id": "zooplankton",
+      "displayName": "Zooplankton (copepods and kin)",
+      "kind": "functional-group",
+      "trophicLevel": 2.16,
+      "functionalRole": "primary-consumer",
+      "description": "Small drifting crustacean grazers, chiefly copepods such as Acartia tonsa. Functional group aggregating the mesozooplankton community sampled by the source; in this estuarine network they take much of their carbon from suspended detritus and ciliates as well as phytoplankton. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 197.5
+      },
+      "layout": {
+        "x": 52,
+        "y": 26
+      }
+    },
+    {
+      "id": "oysters",
+      "displayName": "Oysters",
+      "kind": "functional-group",
+      "trophicLevel": 2.08,
+      "functionalRole": "primary-consumer",
+      "description": "Functional group aggregating the source's oyster compartment - overwhelmingly the eastern oyster (Crassostrea virginica) on Bay reefs - kept plural because the source measured the suspension-feeding oyster stock as a whole. Filters phytoplankton, suspended detritus and microzooplankton from the estuarine water column; nothing in the network eats it. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 1100.0
+      },
+      "layout": {
+        "x": 84,
+        "y": 25
+      }
+    },
+    {
+      "id": "other-suspension-feeders",
+      "displayName": "Suspension-feeding benthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.09,
+      "functionalRole": "primary-consumer",
+      "description": "Functional group pooling the source's 'other suspension feeders' compartment (barnacles, hooked mussels and other filter-feeding bottom life) with the soft-shell clam Mya arenaria, because both are benthic filter feeders with near-identical diets in the source flow matrix. Reported biomass (metrics.biomass) is the summed annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 473.75
+      },
+      "layout": {
+        "x": 8,
+        "y": 27
+      }
+    },
+    {
+      "id": "meiofauna",
+      "displayName": "Meiofauna",
+      "kind": "functional-group",
+      "trophicLevel": 2.63,
+      "functionalRole": "primary-consumer",
+      "description": "Tiny invertebrates living between sediment grains - nematodes, harpacticoid copepods, foraminifera and kin. Functional group aggregating the meiobenthos community as a single source compartment; feeds on benthic diatoms and sediment bacteria. Nothing in the published network consumes it. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 337.5
+      },
+      "layout": {
+        "x": 33,
+        "y": 38
+      }
+    },
+    {
+      "id": "ciliates",
+      "displayName": "Ciliates",
+      "kind": "functional-group",
+      "trophicLevel": 2.74,
+      "functionalRole": "primary-consumer",
+      "description": "Single-celled planktonic grazers that eat phytoplankton, flagellates, bacteria and suspended detritus. Functional group aggregating all planktonic ciliate taxa as measured by the source. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 148.75
+      },
+      "layout": {
+        "x": 62,
+        "y": 41
+      }
+    },
+    {
+      "id": "menhaden",
+      "displayName": "Atlantic menhaden",
+      "kind": "species",
+      "trophicLevel": 2.77,
+      "functionalRole": "primary-consumer",
+      "description": "Atlantic menhaden (Brevoortia tyrannus), tracked as its own compartment by the source. A schooling filter-feeding forage fish of the estuary, straining phytoplankton, zooplankton and suspended detritus; preyed on by bluefish, summer flounder and striped bass. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Atlantic_menhaden",
+        "iNaturalist": "https://www.inaturalist.org/taxa/51363-Brevoortia-tyrannus"
+      },
+      "metrics": {
+        "biomass": 31.525
+      },
+      "layout": {
+        "x": 90,
+        "y": 43
+      }
+    },
+    {
+      "id": "forage-fish",
+      "displayName": "Planktivorous forage fish",
+      "kind": "functional-group",
+      "trophicLevel": 2.85,
+      "functionalRole": "primary-consumer",
+      "description": "Functional group pooling the source's small schooling plankton-eaters - alewife and blueback herring (a single source compartment), bay anchovy and shad - grouped because they share the same diet of zooplankton with some phytoplankton and suspended detritus. The key prey of the estuary's piscivorous fish. Reported biomass (metrics.biomass) is the summed annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 74.35
+      },
+      "layout": {
+        "x": 45,
+        "y": 47
+      }
+    },
+    {
+      "id": "microflagellates",
+      "displayName": "Heterotrophic microflagellates",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "Tiny single-celled predators that graze almost exclusively on bacteria - the link that returns bacterial carbon to the estuarine food web. Functional group aggregating all heterotrophic microflagellate taxa as one source compartment. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 39.0
+      },
+      "layout": {
+        "x": 10,
+        "y": 50
+      }
+    },
+    {
+      "id": "deposit-feeding-benthos",
+      "displayName": "Deposit-feeding benthos",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "Worms, clams and small crustaceans that eat the sediment itself. Functional group pooling the source's four deposit-feeder compartments - 'other polychaetes', the clam worm Nereis, macoma clams (Macoma spp.) and crustacean deposit feeders - all of which consume sediment bacteria in the source network. The main food of blue crabs and bottom-feeding fish. Reported biomass (metrics.biomass) is the summed annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 3418.0
+      },
+      "layout": {
+        "x": 70,
+        "y": 52
+      }
+    },
+    {
+      "id": "ctenophores",
+      "displayName": "Ctenophores (comb jellies)",
+      "kind": "functional-group",
+      "trophicLevel": 3.03,
+      "functionalRole": "intermediate-consumer",
+      "description": "Gelatinous estuarine predators dominated in the mesohaline Bay by the comb jelly Mnemiopsis leidyi. Functional group aggregating ctenophore taxa as a single source compartment; they eat zooplankton, ciliates and suspended detritus and are in turn eaten by sea nettles. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 19.25
+      },
+      "layout": {
+        "x": 28,
+        "y": 55
+      }
+    },
+    {
+      "id": "fish-larvae",
+      "displayName": "Fish larvae",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.16,
+      "functionalRole": "intermediate-consumer",
+      "description": "Larval stages of all Bay fishes. Life-stage group aggregated by the source because larvae could not be assigned to individual fish species in the diet data; they feed on zooplankton, and nothing in the published network consumes them. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 0.1
+      },
+      "layout": {
+        "x": 88,
+        "y": 58
+      }
+    },
+    {
+      "id": "sea-nettle",
+      "displayName": "Atlantic sea nettle",
+      "kind": "species",
+      "trophicLevel": 3.44,
+      "functionalRole": "top-consumer",
+      "description": "Atlantic sea nettle (Chrysaora quinquecirrha), tracked as its own compartment by the source. The Bay's iconic summer jellyfish, preying heavily on copepods and comb jellies; nothing in the network eats it. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Chrysaora_quinquecirrha",
+        "iNaturalist": "https://www.inaturalist.org/taxa/48478-Chrysaora-quinquecirrha"
+      },
+      "metrics": {
+        "biomass": 1.75
+      },
+      "layout": {
+        "x": 55,
+        "y": 63
+      }
+    },
+    {
+      "id": "blue-crab",
+      "displayName": "Blue crab",
+      "kind": "species",
+      "trophicLevel": 3.5,
+      "functionalRole": "intermediate-consumer",
+      "description": "Blue crab (Callinectes sapidus), tracked as its own compartment by the source. The estuary's famous benthic omnivore, eating deposit-feeding worms and clams, suspension feeders and sediment detritus - plus other blue crabs (the source's within-compartment cannibalism flow is omitted here). Eaten by striped bass. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Callinectes_sapidus",
+        "iNaturalist": "https://www.inaturalist.org/taxa/49504-Callinectes-sapidus"
+      },
+      "metrics": {
+        "biomass": 275.0
+      },
+      "layout": {
+        "x": 12,
+        "y": 66
+      }
+    },
+    {
+      "id": "benthivorous-fish",
+      "displayName": "Bottom-feeding fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.98,
+      "functionalRole": "intermediate-consumer",
+      "description": "Functional group pooling the source's bottom-feeding fishes - croaker, hogchoker, spot, white perch and catfish - aggregated because their diets in the source matrix are all dominated by deposit-feeding benthos, with minor shares of suspension feeders and small forage fish. Reported biomass (metrics.biomass) is the summed annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 92.8
+      },
+      "layout": {
+        "x": 30,
+        "y": 85
+      }
+    },
+    {
+      "id": "piscivorous-fish",
+      "displayName": "Piscivorous fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.9,
+      "functionalRole": "top-consumer",
+      "description": "Functional group pooling the estuary's top fish predators - bluefish, weakfish, summer flounder and striped bass - aggregated because all four prey mainly on forage fish (anchovies, herrings, menhaden) in the source network. Nothing in the network eats them; their losses go to fisheries and emigration. Reported biomass (metrics.biomass) is the summed annual mean in mgC/m2.",
+      "metrics": {
+        "biomass": 17.375
+      },
+      "layout": {
+        "x": 68,
+        "y": 84
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "detritus",
+      "predator": "bacteria",
+      "weight": 1.0
+    },
+    {
+      "prey": "bacteria",
+      "predator": "microflagellates",
+      "weight": 1.0
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "ciliates",
+      "weight": 0.376
+    },
+    {
+      "prey": "microflagellates",
+      "predator": "ciliates",
+      "weight": 0.363
+    },
+    {
+      "prey": "detritus",
+      "predator": "ciliates",
+      "weight": 0.245
+    },
+    {
+      "prey": "bacteria",
+      "predator": "ciliates",
+      "weight": 0.016
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "zooplankton",
+      "weight": 0.426
+    },
+    {
+      "prey": "detritus",
+      "predator": "zooplankton",
+      "weight": 0.477
+    },
+    {
+      "prey": "ciliates",
+      "predator": "zooplankton",
+      "weight": 0.085
+    },
+    {
+      "prey": "bacteria",
+      "predator": "zooplankton",
+      "weight": 0.012
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "oysters",
+      "weight": 0.588
+    },
+    {
+      "prey": "detritus",
+      "predator": "oysters",
+      "weight": 0.359
+    },
+    {
+      "prey": "ciliates",
+      "predator": "oysters",
+      "weight": 0.04
+    },
+    {
+      "prey": "bacteria",
+      "predator": "oysters",
+      "weight": 0.014
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "other-suspension-feeders",
+      "weight": 0.588
+    },
+    {
+      "prey": "detritus",
+      "predator": "other-suspension-feeders",
+      "weight": 0.353
+    },
+    {
+      "prey": "ciliates",
+      "predator": "other-suspension-feeders",
+      "weight": 0.04
+    },
+    {
+      "prey": "bacteria",
+      "predator": "other-suspension-feeders",
+      "weight": 0.02
+    },
+    {
+      "prey": "bacteria",
+      "predator": "meiofauna",
+      "weight": 0.625
+    },
+    {
+      "prey": "benthic-diatoms",
+      "predator": "meiofauna",
+      "weight": 0.375
+    },
+    {
+      "prey": "bacteria",
+      "predator": "deposit-feeding-benthos",
+      "weight": 1.0
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "ctenophores",
+      "weight": 0.502
+    },
+    {
+      "prey": "ciliates",
+      "predator": "ctenophores",
+      "weight": 0.25
+    },
+    {
+      "prey": "detritus",
+      "predator": "ctenophores",
+      "weight": 0.239
+    },
+    {
+      "prey": "bacteria",
+      "predator": "ctenophores",
+      "weight": 0.009
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "sea-nettle",
+      "weight": 0.678
+    },
+    {
+      "prey": "ctenophores",
+      "predator": "sea-nettle",
+      "weight": 0.322
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "fish-larvae",
+      "weight": 1.0
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "menhaden",
+      "weight": 0.655
+    },
+    {
+      "prey": "detritus",
+      "predator": "menhaden",
+      "weight": 0.276
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "menhaden",
+      "weight": 0.056
+    },
+    {
+      "prey": "bacteria",
+      "predator": "menhaden",
+      "weight": 0.013
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "forage-fish",
+      "weight": 0.723
+    },
+    {
+      "prey": "detritus",
+      "predator": "forage-fish",
+      "weight": 0.14
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "forage-fish",
+      "weight": 0.13
+    },
+    {
+      "prey": "bacteria",
+      "predator": "forage-fish",
+      "weight": 0.006
+    },
+    {
+      "prey": "deposit-feeding-benthos",
+      "predator": "blue-crab",
+      "weight": 0.69
+    },
+    {
+      "prey": "detritus",
+      "predator": "blue-crab",
+      "weight": 0.2
+    },
+    {
+      "prey": "other-suspension-feeders",
+      "predator": "blue-crab",
+      "weight": 0.11
+    },
+    {
+      "prey": "deposit-feeding-benthos",
+      "predator": "benthivorous-fish",
+      "weight": 0.951
+    },
+    {
+      "prey": "forage-fish",
+      "predator": "benthivorous-fish",
+      "weight": 0.038
+    },
+    {
+      "prey": "other-suspension-feeders",
+      "predator": "benthivorous-fish",
+      "weight": 0.012
+    },
+    {
+      "prey": "forage-fish",
+      "predator": "piscivorous-fish",
+      "weight": 0.794
+    },
+    {
+      "prey": "menhaden",
+      "predator": "piscivorous-fish",
+      "weight": 0.136
+    },
+    {
+      "prey": "benthivorous-fish",
+      "predator": "piscivorous-fish",
+      "weight": 0.053
+    },
+    {
+      "prey": "blue-crab",
+      "predator": "piscivorous-fish",
+      "weight": 0.013
+    },
+    {
+      "prey": "deposit-feeding-benthos",
+      "predator": "piscivorous-fish",
+      "weight": 0.005
+    }
+  ]
+}

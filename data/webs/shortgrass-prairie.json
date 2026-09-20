@@ -1,0 +1,480 @@
+{
+  "meta": {
+    "id": "shortgrass-prairie",
+    "name": "Shortgrass Prairie",
+    "location": "Central Plains Experimental Range, Colorado, USA",
+    "biome": "grassland",
+    "lat": 40.8,
+    "lng": -104.8,
+    "provenance": "empirical",
+    "tagline": "The hidden web under the grass: microbes, mites and nematodes",
+    "citations": [
+      "de Ruiter, P.C., Neutel, A.-M. & Moore, J.C. 1995. Energetics, patterns of interaction strengths, and stability in real ecosystems. Science 269(5228): 1257-1260. https://doi.org/10.1126/science.269.5228.1257",
+      "Hunt, H.W., Coleman, D.C., Ingham, E.R., Ingham, R.E., Elliott, E.T., Moore, J.C., Rose, S.L., Reid, C.P.P. & Morley, C.R. 1987. The detrital food web in a shortgrass prairie. Biology and Fertility of Soils 3(1-2): 57-68. https://doi.org/10.1007/BF00260580 (original quantitative web; closed access)",
+      "Olff, H., Alonso, D., Berg, M.P., Eriksson, B.K., Loreau, M., Piersma, T. & Rooney, N. 2009. Parallel ecological networks in ecosystems. Philosophical Transactions of the Royal Society B 364: 1755-1779. https://doi.org/10.1098/rstb.2008.0222 (Fig. 5a re-draws the CPER web of Hunt et al. 1987 with nitrogen-flow magnitude classes; link structure transcribed from this figure)",
+      "van Altena, C., Hemerik, L. & de Ruiter, P.C. 2016. Food web stability and weighted connectance: the complexity-stability debate revisited. Theoretical Ecology 9: 49-58. https://doi.org/10.1007/s12080-015-0291-7 (open access; Table A1 gives the yearly-averaged biomasses of the 17 functional groups of the same web, from Hunt et al. 1987)"
+    ],
+    "sourceUrl": "https://sete-moulis-cnrs.fr/fr/component/flexicontent/download/525/826/30",
+    "licenseNote": "All 38 feeding links were transcribed from Figure 5a of Olff et al. (2009, Phil. Trans. R. Soc. B; article freely readable via the publisher; PDF retrieved from the authors' mirror at the sourceUrl), which re-draws the Central Plains Experimental Range soil food web of Hunt et al. (1987) - the same web analysed by de Ruiter, Neutel & Moore (1995) and compiled by van Altena et al. (2016). The source figure quantifies links only as four arrow-thickness classes of nitrogen flow (<10, 10-100, 100-1000, >1000 mg N m-2 yr-1); the exact published feeding-rate matrix (Hunt et al. 1987, closed access) could not be obtained in verifiable form, so EVERY edge is encoded as qualitative and the figure's thickness classes were used only as a consistency check, never as weights. Node biomasses (metrics.biomass, kg C per hectare, yearly averages) are taken from van Altena et al. 2016, Table A1 (CC-BY 4.0), which tabulates the same web. Curation decisions, disclosed per the project's pooling rules: (1) the figure's non-trophic arrows are omitted - nitrogen uptake (inorganic N to roots and to mycorrhizae), mycorrhizal nitrogen delivery to roots, and roots-shoots translocation; the inorganic N pool and shoots are therefore not nodes; (2) the mycorrhizae link is encoded as roots -> mycorrhizal fungi, the consumer-resource direction of the Hunt/de Ruiter web (mycorrhizal fungi obtain their carbon from living roots), reversing the nitrogen-delivery arrow the figure draws from mycorrhizae to roots; (3) trophic levels are curator-computed prey-averaged values, not source data. Reuse requires citing Hunt et al. (1987) and Olff et al. (2009).",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-09-19"
+  },
+  "nodes": [
+    {
+      "id": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Dead plant material and other non-living soil organic matter, the main energy source of this below-ground web. Functional group aggregating the three detritus compartments of the source model (numbered 3, 5 and 7 in the source figure), pooled because the web's consumers draw on them as one resource. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 3000
+      },
+      "layout": {
+        "x": 25,
+        "y": 4
+      }
+    },
+    {
+      "id": "roots",
+      "displayName": "Plant roots",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Living roots of the shortgrass steppe vegetation (dominated by blue grama, Bouteloua gracilis), the plant-based energy channel of the soil web. Functional group aggregating the roots of all plant species, measured by the source as a single below-ground pool. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 300
+      },
+      "layout": {
+        "x": 75,
+        "y": 4
+      }
+    },
+    {
+      "id": "bacteria",
+      "displayName": "Bacteria",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Soil bacteria decomposing detritus; the base of the web's bacterial energy channel and by far the largest microbial biomass. Functional group aggregating the whole bacterial community, measured together in the source's soil sampling. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 304
+      },
+      "layout": {
+        "x": 12,
+        "y": 26
+      }
+    },
+    {
+      "id": "saprophytic-fungi",
+      "displayName": "Saprophytic fungi",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Fungi that feed on dead organic matter; the base of the web's fungal energy channel. Functional group aggregating all saprophytic soil fungi, measured together by the source study. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 63
+      },
+      "layout": {
+        "x": 40,
+        "y": 26
+      }
+    },
+    {
+      "id": "mycorrhizal-fungi",
+      "displayName": "Mycorrhizal fungi",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Fungi living in symbiosis with grass roots, obtaining their carbon from the living plant (and delivering mineral nutrients in return - the nutrient-delivery arrow shown in the source figure is not a feeding link and is omitted). Functional group aggregating all mycorrhizal fungi, measured as one pool by the source. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 7
+      },
+      "layout": {
+        "x": 62,
+        "y": 26
+      }
+    },
+    {
+      "id": "root-feeding-nematodes",
+      "displayName": "Root-feeding nematodes",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Plant-parasitic nematodes that pierce living roots and suck out cell contents (called 'phytophagous nematodes' in the source). Functional group pooling all root-feeding nematode species of the site, grouped by the source on the basis of their shared diet. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 2.9
+      },
+      "layout": {
+        "x": 88,
+        "y": 26
+      }
+    },
+    {
+      "id": "flagellates",
+      "displayName": "Flagellates",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "Tiny swimming protozoa that consume bacteria, releasing nitrogen that plants can take up again. Functional group aggregating all heterotrophic flagellate species, counted together in the source's soil samples. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 0.16
+      },
+      "layout": {
+        "x": 8,
+        "y": 48
+      }
+    },
+    {
+      "id": "bacterivorous-nematodes",
+      "displayName": "Bacteria-feeding nematodes",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "Nematodes that graze on bacteria ('bacteriophagous nematodes' in the source); with amoebae they account for most of the nitrogen mineralized by soil animals in this prairie. Functional group pooling all bacterial-feeding nematode species, grouped by the source on the basis of their shared diet. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 5.8
+      },
+      "layout": {
+        "x": 24,
+        "y": 48
+      }
+    },
+    {
+      "id": "fungivorous-nematodes",
+      "displayName": "Fungal-feeding nematodes",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "Nematodes whose stylets puncture fungal hyphae - here feeding on both saprophytic and mycorrhizal fungi. Functional group pooling all fungal-feeding nematode species, grouped by the source on the basis of their shared diet. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 0.41
+      },
+      "layout": {
+        "x": 40,
+        "y": 48
+      }
+    },
+    {
+      "id": "cryptostigmatic-mites",
+      "displayName": "Cryptostigmatic mites (oribatids)",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "Heavily armoured oribatid mites that graze on fungi, both saprophytic and mycorrhizal. Functional group aggregating the cryptostigmatic (oribatid) mite species of the site, measured together by the source. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Oribatida"
+      },
+      "metrics": {
+        "biomass": 1.68
+      },
+      "layout": {
+        "x": 56,
+        "y": 48
+      }
+    },
+    {
+      "id": "noncryptostigmatic-mites",
+      "displayName": "Non-cryptostigmatic mites",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "Fungus-grazing soil mites other than the oribatids (e.g. prostigmatic and astigmatic mites), feeding on saprophytic and mycorrhizal fungi. Functional group aggregating the non-cryptostigmatic mite species, measured together by the source. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 1.36
+      },
+      "layout": {
+        "x": 72,
+        "y": 48
+      }
+    },
+    {
+      "id": "collembolans",
+      "displayName": "Springtails (collembola)",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "Springtails - small wingless insects grazing on fungal hyphae, both saprophytic and mycorrhizal. Functional group aggregating all collembolan species of the site, measured together by the source. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Springtail"
+      },
+      "metrics": {
+        "biomass": 0.46
+      },
+      "layout": {
+        "x": 88,
+        "y": 48
+      }
+    },
+    {
+      "id": "amoebae",
+      "displayName": "Amoebae",
+      "kind": "functional-group",
+      "trophicLevel": 3.5,
+      "functionalRole": "intermediate-consumer",
+      "description": "Shape-shifting protozoa that engulf bacteria - and, at a much lower rate, flagellates, a within-channel link noted by the source commentary. Functional group aggregating all soil amoeba species, counted together in the source's samples. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 3.78
+      },
+      "layout": {
+        "x": 30,
+        "y": 62
+      }
+    },
+    {
+      "id": "omnivorous-nematodes",
+      "displayName": "Omnivorous nematodes",
+      "kind": "functional-group",
+      "trophicLevel": 3.8,
+      "functionalRole": "intermediate-consumer",
+      "description": "Nematodes with a mixed diet - mostly bacteria, plus amoebae - sitting between the microbial grazers and the true predators. Functional group pooling all omnivorous nematode species, grouped by the source on the basis of their shared diet. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 0.65
+      },
+      "layout": {
+        "x": 45,
+        "y": 72
+      }
+    },
+    {
+      "id": "nematode-feeding-mites",
+      "displayName": "Nematode-feeding mites",
+      "kind": "functional-group",
+      "trophicLevel": 3.9,
+      "functionalRole": "intermediate-consumer",
+      "description": "Mites specialized on hunting nematodes - root-feeders, bacteria-feeders, fungus-feeders and omnivores alike ('nematophagous mites' in the source). Functional group aggregating the nematode-feeding mite species, measured together by the source. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 0.16
+      },
+      "layout": {
+        "x": 68,
+        "y": 74
+      }
+    },
+    {
+      "id": "predaceous-mites",
+      "displayName": "Predatory mites",
+      "kind": "functional-group",
+      "trophicLevel": 4.2,
+      "functionalRole": "top-consumer",
+      "description": "The web's top predators: fast-running mesostigmatic mites that eat every kind of nematode, other mites (including nematode-feeding mites and oribatids) and springtails. Functional group aggregating the predaceous mite species, measured together by the source. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Mesostigmata"
+      },
+      "metrics": {
+        "biomass": 0.16
+      },
+      "layout": {
+        "x": 40,
+        "y": 88
+      }
+    },
+    {
+      "id": "predaceous-nematodes",
+      "displayName": "Predatory nematodes",
+      "kind": "functional-group",
+      "trophicLevel": 4.2,
+      "functionalRole": "top-consumer",
+      "description": "Nematodes that hunt other soil organisms: all other nematode groups plus protozoa (amoebae and flagellates) and, weakly, bacteria. Functional group pooling all predaceous nematode species, grouped by the source on the basis of their shared diet. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+      "metrics": {
+        "biomass": 1.08
+      },
+      "layout": {
+        "x": 65,
+        "y": 88
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "detritus",
+      "predator": "bacteria",
+      "qualitative": true
+    },
+    {
+      "prey": "detritus",
+      "predator": "saprophytic-fungi",
+      "qualitative": true
+    },
+    {
+      "prey": "roots",
+      "predator": "mycorrhizal-fungi",
+      "qualitative": true
+    },
+    {
+      "prey": "roots",
+      "predator": "root-feeding-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "bacteria",
+      "predator": "flagellates",
+      "qualitative": true
+    },
+    {
+      "prey": "bacteria",
+      "predator": "amoebae",
+      "qualitative": true
+    },
+    {
+      "prey": "flagellates",
+      "predator": "amoebae",
+      "qualitative": true
+    },
+    {
+      "prey": "bacteria",
+      "predator": "bacterivorous-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "bacteria",
+      "predator": "omnivorous-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "amoebae",
+      "predator": "omnivorous-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "bacteria",
+      "predator": "predaceous-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "flagellates",
+      "predator": "predaceous-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "amoebae",
+      "predator": "predaceous-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "saprophytic-fungi",
+      "predator": "fungivorous-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "mycorrhizal-fungi",
+      "predator": "fungivorous-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "saprophytic-fungi",
+      "predator": "cryptostigmatic-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "mycorrhizal-fungi",
+      "predator": "cryptostigmatic-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "saprophytic-fungi",
+      "predator": "noncryptostigmatic-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "mycorrhizal-fungi",
+      "predator": "noncryptostigmatic-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "saprophytic-fungi",
+      "predator": "collembolans",
+      "qualitative": true
+    },
+    {
+      "prey": "mycorrhizal-fungi",
+      "predator": "collembolans",
+      "qualitative": true
+    },
+    {
+      "prey": "bacterivorous-nematodes",
+      "predator": "predaceous-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "fungivorous-nematodes",
+      "predator": "predaceous-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "omnivorous-nematodes",
+      "predator": "predaceous-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "root-feeding-nematodes",
+      "predator": "predaceous-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "bacterivorous-nematodes",
+      "predator": "nematode-feeding-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "fungivorous-nematodes",
+      "predator": "nematode-feeding-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "omnivorous-nematodes",
+      "predator": "nematode-feeding-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "root-feeding-nematodes",
+      "predator": "nematode-feeding-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "bacterivorous-nematodes",
+      "predator": "predaceous-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "fungivorous-nematodes",
+      "predator": "predaceous-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "omnivorous-nematodes",
+      "predator": "predaceous-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "root-feeding-nematodes",
+      "predator": "predaceous-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "predaceous-nematodes",
+      "predator": "predaceous-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "cryptostigmatic-mites",
+      "predator": "predaceous-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "noncryptostigmatic-mites",
+      "predator": "predaceous-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "collembolans",
+      "predator": "predaceous-mites",
+      "qualitative": true
+    },
+    {
+      "prey": "nematode-feeding-mites",
+      "predator": "predaceous-mites",
+      "qualitative": true
+    }
+  ]
+}

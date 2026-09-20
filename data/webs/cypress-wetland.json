@@ -1,0 +1,764 @@
+{
+  "meta": {
+    "id": "cypress-wetland",
+    "name": "Cypress Wetland",
+    "location": "Big Cypress / Everglades, Florida, USA",
+    "biome": "wetland",
+    "lat": 26.0,
+    "lng": -80.9,
+    "provenance": "empirical",
+    "tagline": "Where the Everglades slows to a standstill, periphyton feeds everything",
+    "citations": [
+      "Ulanowicz, R. E., C. Bondavalli, and M. S. Egnotovich. 1997. Network analysis of trophic dynamics in South Florida ecosystems, FY 96: the cypress wetland ecosystem. Annual Report to the United States Geological Service Biological Resources Division, University of Miami Coral Gables, [UMCES] CBL 97-075, Maryland System Center for Environmental Science, Chesapeake Biological Laboratory.",
+      "Csardi, G. 2015. igraphdata: A Collection of Network Data Sets for the igraph Package. R package version 1.0.1 (CC BY-SA 4.0), 'cypwet' wet-season network (71 nodes including Input/Output/Respiration boundary nodes, 631 weighted carbon-flow edges), mirrored at github.com/cran/igraphdata"
+    ],
+    "sourceUrl": "https://github.com/cran/igraphdata/blob/master/data/foodwebs.rda",
+    "licenseNote": "Flow structure and all edge weights derive from the 'cypwet' (wet season) carbon-flow network of Ulanowicz, Bondavalli & Egnotovich (1997, USGS Biological Resources Division report UMCES CBL 97-075), retrieved from the igraphdata R package (CC BY-SA 4.0) CRAN mirror at github.com/cran/igraphdata, file data/foodwebs.rda; the dry-season variant ('cypdry') exists but is not encoded here. The source's 68 ecosystem compartments were pooled into the 22 nodes shown; every pooling is stated in the node descriptions. The source's Input, Output and Respiration boundary nodes (imports, exports, respiratory losses) are not feeding relationships and were dropped. Edge weight derivation: weight(i->j) = pooled carbon flow from i to j divided by the total food inflows of j, where total food inflows of j = sum of all flows from other living/detrital compartments into j (boundary-node flows, flows into detritus compartments - which are mortality/egestion returns, not feeding - and within-pool flows are excluded), rounded to 3 decimals. Edges with a derived share below 0.005 are omitted, so a consumer's weights can sum to less than 1. Trophic levels were computed from the pooled diet shares (1 plus the flow-weighted mean of prey levels) and rounded to 1 decimal; they are derivations from the source flows, not values published in the report. Reuse requires citing Ulanowicz, Bondavalli & Egnotovich (1997); the redistributed dataset is CC BY-SA 4.0.",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-09-19"
+  },
+  "nodes": [
+    {
+      "id": "detritus",
+      "displayName": "Detritus and carrion",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Dead organic matter and the microbes living on it, in the water and sediments. Functional group pooling five source compartments: living particulate organic carbon, living sediment organic matter (both microbe-rich detrital pools), refractory detritus, labile detritus, and vertebrate carrion, aggregated because all are consumed as non-living food. Because carrion is pooled here, vulture scavenging appears as detritus feeding.",
+      "layout": {
+        "x": 90,
+        "y": 5
+      }
+    },
+    {
+      "id": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Microscopic algae suspended in the swamp's open water. Functional group aggregating the entire phytoplankton community, which the source study measured as a single compartment.",
+      "layout": {
+        "x": 8,
+        "y": 5
+      }
+    },
+    {
+      "id": "periphyton",
+      "displayName": "Periphyton (algal mats)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "The film of algae, cyanobacteria and microbes coating stems, leaves and every submerged surface of the marsh. Functional group pooling the source's periphyton compartment with its small epiphyte compartment (algae growing directly on plant surfaces), aggregated because both are grazed as attached algal mats. The largest producer compartment in the wet-season web and the food base for snails, crayfish, prawns and small fishes.",
+      "layout": {
+        "x": 28,
+        "y": 5
+      }
+    },
+    {
+      "id": "macrophytes",
+      "displayName": "Aquatic macrophytes",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Floating and rooted aquatic plants of the marsh. Functional group pooling the source's floating vegetation and macrophyte compartments, aggregated because both are higher aquatic plants; eaten by turtles, ducks and rails.",
+      "layout": {
+        "x": 48,
+        "y": 5
+      }
+    },
+    {
+      "id": "cypress-trees",
+      "displayName": "Cypress trees and understory",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "The swamp's woody vegetation: bald cypress and hardwoods, plus vines and understory shrubs. Functional group pooling seven source compartments (cypress leaves, cypress wood, hardwood leaves, hardwood wood, roots, vines, understory), aggregated because the source tracked each plant part separately. Most of their production enters the web as litter falling to detritus (litter fall is not feeding, so not an edge here); they are eaten directly as leaves, seeds and mast by insects, ducks, squirrels, deer, hogs and bears.",
+      "layout": {
+        "x": 68,
+        "y": 5
+      }
+    },
+    {
+      "id": "aquatic-inverts",
+      "displayName": "Crayfish, prawns and aquatic insects",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Freshwater crayfish, grass prawns and aquatic insects. Functional group pooling the source's crayfish, prawn and aquatic insect compartments, aggregated because all are small swimming/crawling invertebrates of the marsh. The key middle link of the wet-season web: they graze periphyton and detritus and are eaten by fishes, amphibians, turtles, alligators, wading birds, otters and raccoons.",
+      "layout": {
+        "x": 8,
+        "y": 38
+      }
+    },
+    {
+      "id": "apple-snail",
+      "displayName": "Florida apple snail",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Florida apple snail (Pomacea paludosa), a single compartment tracked by the source. An iconic Everglades grazer of periphyton and detritus, and famously the main prey of the snail kite; in this web it is also eaten by predatory fishes, turtles, wading birds, otters and raccoons.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Pomacea_paludosa"
+      },
+      "layout": {
+        "x": 26,
+        "y": 38
+      }
+    },
+    {
+      "id": "terr-insects",
+      "displayName": "Terrestrial insects",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Insects living on the swamp's vegetation. Functional group aggregating all terrestrial insects into the source's single terrestrial-insect compartment; they eat leaves and detritus and feed fish, frogs, lizards, birds and small mammals.",
+      "layout": {
+        "x": 44,
+        "y": 38
+      }
+    },
+    {
+      "id": "deer-hogs",
+      "displayName": "White-tailed deer and hogs",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The swamp's large hoofed mammals. Functional group pooling the source's white-tailed deer and feral hog compartments, aggregated because both are large plant-eating mammals; they browse leaves, shoots and mast and are the main prey of the Florida panther.",
+      "layout": {
+        "x": 62,
+        "y": 38
+      }
+    },
+    {
+      "id": "waterfowl-rails",
+      "displayName": "Ducks, rails and coots",
+      "kind": "functional-group",
+      "trophicLevel": 2.1,
+      "functionalRole": "primary-consumer",
+      "description": "Waterfowl and rail-like marsh birds. Functional group pooling the source's Anseriformes (ducks and geese) and Gruiformes (rails, coots and kin) compartments, aggregated because both are marsh birds that feed heavily on plants; among the most plant-dependent consumers in the web, eating seeds, leaves and aquatic vegetation.",
+      "layout": {
+        "x": 80,
+        "y": 40
+      }
+    },
+    {
+      "id": "small-mammals",
+      "displayName": "Small mammals",
+      "kind": "functional-group",
+      "trophicLevel": 2.1,
+      "functionalRole": "primary-consumer",
+      "description": "Small plant- and insect-eating mammals. Functional group pooling six source compartments: shrews, bats, squirrels, mice and rats, rabbits, and armadillos, aggregated because the source tracked each as a small mammal compartment. They feed mostly on seeds, leaves and insects and are preyed on by bobcats, gray foxes and wading birds.",
+      "layout": {
+        "x": 95,
+        "y": 40
+      }
+    },
+    {
+      "id": "raptors",
+      "displayName": "Raptors and vultures",
+      "kind": "functional-group",
+      "trophicLevel": 2.3,
+      "functionalRole": "intermediate-consumer",
+      "description": "Birds of prey and carrion birds. Functional group pooling the source's vultures, kites and hawks, and owls compartments, aggregated because all are predatory or scavenging birds. In this web most of their pooled intake is carrion (pooled into the detritus node, which is why the group's level is low for a 'predator'); live prey includes apple snails (the snail kite's specialty), fish and snakes.",
+      "layout": {
+        "x": 20,
+        "y": 46
+      }
+    },
+    {
+      "id": "land-birds",
+      "displayName": "Land birds",
+      "kind": "functional-group",
+      "trophicLevel": 2.3,
+      "functionalRole": "primary-consumer",
+      "description": "Small to medium birds of the swamp forest. Functional group pooling five source compartments: galliform birds, nightjars, hummingbirds, woodpeckers, and omnivorous plus predatory perching birds, aggregated because the source tracked each as a small forest-bird compartment. They eat seeds, mast and insects.",
+      "layout": {
+        "x": 50,
+        "y": 47
+      }
+    },
+    {
+      "id": "herb-fish",
+      "displayName": "Small forage fishes",
+      "kind": "functional-group",
+      "trophicLevel": 2.4,
+      "functionalRole": "primary-consumer",
+      "description": "Small marsh fishes that eat algae, detritus and small invertebrates. Functional group matching the source's herbivore-omnivore fish compartment; the main link from the algal/detrital base to predatory fishes, alligators and wading birds.",
+      "layout": {
+        "x": 78,
+        "y": 48
+      }
+    },
+    {
+      "id": "mesomammals",
+      "displayName": "Mid-sized mammals",
+      "kind": "functional-group",
+      "trophicLevel": 2.5,
+      "functionalRole": "intermediate-consumer",
+      "description": "Mid-sized mammals, mostly omnivores. Functional group pooling six source compartments: opossum, raccoon, gray fox, mink, river otter and Florida black bear, aggregated because the source tracked each as a small mid-trophic mammal compartment. The pooled diet mixes plants, mast and insects (bear, raccoon, opossum) with crayfish, prawns and fish (otter, mink).",
+      "layout": {
+        "x": 90,
+        "y": 55
+      }
+    },
+    {
+      "id": "turtles",
+      "displayName": "Turtles",
+      "kind": "functional-group",
+      "trophicLevel": 2.8,
+      "functionalRole": "intermediate-consumer",
+      "description": "Freshwater turtles of the swamp. Functional group aggregating all turtle species into the source's single turtle compartment. Omnivores: they eat aquatic plants, periphyton, invertebrates and fishes, and even take alligator eggs and hatchlings (which is why a small alligator-to-turtle edge appears).",
+      "layout": {
+        "x": 25,
+        "y": 63
+      }
+    },
+    {
+      "id": "pred-fish",
+      "displayName": "Predatory and large fishes",
+      "kind": "functional-group",
+      "trophicLevel": 2.9,
+      "functionalRole": "intermediate-consumer",
+      "description": "Larger fishes that eat other fishes and invertebrates. Functional group pooling the source's piscivorous fish and large fish compartments, aggregated because both are bigger, animal-eating fishes; preyed on by alligators, turtles, snakes and wading birds.",
+      "layout": {
+        "x": 58,
+        "y": 66
+      }
+    },
+    {
+      "id": "amphibians",
+      "displayName": "Frogs, salamanders and larvae",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "Frogs, salamanders and their aquatic young. Functional group pooling six source compartments: large, medium and small frogs, salamanders, salamander larvae and tadpoles, aggregated because all are small amphibians; the pooled diet spans periphyton grazing by tadpoles and insect- and fish-hunting by adults.",
+      "layout": {
+        "x": 12,
+        "y": 71
+      }
+    },
+    {
+      "id": "big-predators",
+      "displayName": "Panther and bobcat",
+      "kind": "functional-group",
+      "trophicLevel": 3.1,
+      "functionalRole": "top-consumer",
+      "description": "The Florida panther and the bobcat. Functional group pooling the source's two big-cat compartments, aggregated because both are the web's mammalian apex predators; they prey mainly on deer and hogs, with raccoons, rabbits, squirrels and other smaller animals making up the rest.",
+      "layout": {
+        "x": 85,
+        "y": 74
+      }
+    },
+    {
+      "id": "wading-birds",
+      "displayName": "Wading birds",
+      "kind": "functional-group",
+      "trophicLevel": 3.3,
+      "functionalRole": "intermediate-consumer",
+      "description": "Herons, egrets, ibises and wood storks. Functional group pooling six source compartments: egrets, great blue heron, other herons, wood stork, white ibis and the remaining pelican-like waterbirds, aggregated because all hunt in the marsh shallows. Heavy consumers of crayfish, prawns and other aquatic invertebrates; they also take snakes and are raided by alligators.",
+      "layout": {
+        "x": 42,
+        "y": 79
+      }
+    },
+    {
+      "id": "lizards-snakes",
+      "displayName": "Snakes and lizards",
+      "kind": "functional-group",
+      "trophicLevel": 3.4,
+      "functionalRole": "intermediate-consumer",
+      "description": "Snakes and lizards of the swamp. Functional group pooling the source's snake and lizard compartments, aggregated because both are small reptilian predators of insects, fishes and frogs; in turn eaten by alligators and wading birds.",
+      "layout": {
+        "x": 65,
+        "y": 82
+      }
+    },
+    {
+      "id": "alligators",
+      "displayName": "American alligator",
+      "kind": "species",
+      "trophicLevel": 3.6,
+      "functionalRole": "top-consumer",
+      "description": "American alligator (Alligator mississippiensis), a single compartment tracked by the source. The top predator of the wet-season web, eating fishes, turtles, snakes and amphibians, with eggs and hatchlings lost to turtles, snakes and raccoons.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/American_alligator"
+      },
+      "layout": {
+        "x": 35,
+        "y": 91
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "detritus",
+      "predator": "aquatic-inverts",
+      "weight": 0.512
+    },
+    {
+      "prey": "periphyton",
+      "predator": "aquatic-inverts",
+      "weight": 0.309
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "aquatic-inverts",
+      "weight": 0.122
+    },
+    {
+      "prey": "macrophytes",
+      "predator": "aquatic-inverts",
+      "weight": 0.057
+    },
+    {
+      "prey": "detritus",
+      "predator": "apple-snail",
+      "weight": 0.6
+    },
+    {
+      "prey": "periphyton",
+      "predator": "apple-snail",
+      "weight": 0.35
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "apple-snail",
+      "weight": 0.05
+    },
+    {
+      "prey": "cypress-trees",
+      "predator": "terr-insects",
+      "weight": 0.577
+    },
+    {
+      "prey": "detritus",
+      "predator": "terr-insects",
+      "weight": 0.423
+    },
+    {
+      "prey": "aquatic-inverts",
+      "predator": "herb-fish",
+      "weight": 0.3
+    },
+    {
+      "prey": "detritus",
+      "predator": "herb-fish",
+      "weight": 0.27
+    },
+    {
+      "prey": "periphyton",
+      "predator": "herb-fish",
+      "weight": 0.15
+    },
+    {
+      "prey": "macrophytes",
+      "predator": "herb-fish",
+      "weight": 0.13
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "herb-fish",
+      "weight": 0.1
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "herb-fish",
+      "weight": 0.05
+    },
+    {
+      "prey": "aquatic-inverts",
+      "predator": "pred-fish",
+      "weight": 0.626
+    },
+    {
+      "prey": "herb-fish",
+      "predator": "pred-fish",
+      "weight": 0.123
+    },
+    {
+      "prey": "detritus",
+      "predator": "pred-fish",
+      "weight": 0.077
+    },
+    {
+      "prey": "apple-snail",
+      "predator": "pred-fish",
+      "weight": 0.05
+    },
+    {
+      "prey": "periphyton",
+      "predator": "pred-fish",
+      "weight": 0.046
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "pred-fish",
+      "weight": 0.038
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "pred-fish",
+      "weight": 0.022
+    },
+    {
+      "prey": "macrophytes",
+      "predator": "pred-fish",
+      "weight": 0.017
+    },
+    {
+      "prey": "aquatic-inverts",
+      "predator": "amphibians",
+      "weight": 0.741
+    },
+    {
+      "prey": "herb-fish",
+      "predator": "amphibians",
+      "weight": 0.096
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "amphibians",
+      "weight": 0.059
+    },
+    {
+      "prey": "apple-snail",
+      "predator": "amphibians",
+      "weight": 0.037
+    },
+    {
+      "prey": "periphyton",
+      "predator": "amphibians",
+      "weight": 0.02
+    },
+    {
+      "prey": "pred-fish",
+      "predator": "amphibians",
+      "weight": 0.015
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "amphibians",
+      "weight": 0.013
+    },
+    {
+      "prey": "detritus",
+      "predator": "amphibians",
+      "weight": 0.011
+    },
+    {
+      "prey": "lizards-snakes",
+      "predator": "amphibians",
+      "weight": 0.007
+    },
+    {
+      "prey": "aquatic-inverts",
+      "predator": "turtles",
+      "weight": 0.363
+    },
+    {
+      "prey": "macrophytes",
+      "predator": "turtles",
+      "weight": 0.202
+    },
+    {
+      "prey": "periphyton",
+      "predator": "turtles",
+      "weight": 0.181
+    },
+    {
+      "prey": "herb-fish",
+      "predator": "turtles",
+      "weight": 0.093
+    },
+    {
+      "prey": "pred-fish",
+      "predator": "turtles",
+      "weight": 0.041
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "turtles",
+      "weight": 0.03
+    },
+    {
+      "prey": "alligators",
+      "predator": "turtles",
+      "weight": 0.029
+    },
+    {
+      "prey": "apple-snail",
+      "predator": "turtles",
+      "weight": 0.022
+    },
+    {
+      "prey": "amphibians",
+      "predator": "turtles",
+      "weight": 0.015
+    },
+    {
+      "prey": "land-birds",
+      "predator": "turtles",
+      "weight": 0.01
+    },
+    {
+      "prey": "lizards-snakes",
+      "predator": "turtles",
+      "weight": 0.01
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "lizards-snakes",
+      "weight": 0.421
+    },
+    {
+      "prey": "herb-fish",
+      "predator": "lizards-snakes",
+      "weight": 0.249
+    },
+    {
+      "prey": "amphibians",
+      "predator": "lizards-snakes",
+      "weight": 0.125
+    },
+    {
+      "prey": "aquatic-inverts",
+      "predator": "lizards-snakes",
+      "weight": 0.066
+    },
+    {
+      "prey": "pred-fish",
+      "predator": "lizards-snakes",
+      "weight": 0.056
+    },
+    {
+      "prey": "wading-birds",
+      "predator": "lizards-snakes",
+      "weight": 0.038
+    },
+    {
+      "prey": "alligators",
+      "predator": "lizards-snakes",
+      "weight": 0.03
+    },
+    {
+      "prey": "land-birds",
+      "predator": "lizards-snakes",
+      "weight": 0.005
+    },
+    {
+      "prey": "waterfowl-rails",
+      "predator": "lizards-snakes",
+      "weight": 0.005
+    },
+    {
+      "prey": "herb-fish",
+      "predator": "alligators",
+      "weight": 0.462
+    },
+    {
+      "prey": "lizards-snakes",
+      "predator": "alligators",
+      "weight": 0.122
+    },
+    {
+      "prey": "pred-fish",
+      "predator": "alligators",
+      "weight": 0.109
+    },
+    {
+      "prey": "turtles",
+      "predator": "alligators",
+      "weight": 0.092
+    },
+    {
+      "prey": "amphibians",
+      "predator": "alligators",
+      "weight": 0.088
+    },
+    {
+      "prey": "aquatic-inverts",
+      "predator": "alligators",
+      "weight": 0.087
+    },
+    {
+      "prey": "wading-birds",
+      "predator": "alligators",
+      "weight": 0.021
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "alligators",
+      "weight": 0.007
+    },
+    {
+      "prey": "aquatic-inverts",
+      "predator": "wading-birds",
+      "weight": 0.67
+    },
+    {
+      "prey": "lizards-snakes",
+      "predator": "wading-birds",
+      "weight": 0.137
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "wading-birds",
+      "weight": 0.055
+    },
+    {
+      "prey": "amphibians",
+      "predator": "wading-birds",
+      "weight": 0.053
+    },
+    {
+      "prey": "apple-snail",
+      "predator": "wading-birds",
+      "weight": 0.036
+    },
+    {
+      "prey": "herb-fish",
+      "predator": "wading-birds",
+      "weight": 0.024
+    },
+    {
+      "prey": "small-mammals",
+      "predator": "wading-birds",
+      "weight": 0.009
+    },
+    {
+      "prey": "land-birds",
+      "predator": "wading-birds",
+      "weight": 0.008
+    },
+    {
+      "prey": "cypress-trees",
+      "predator": "waterfowl-rails",
+      "weight": 0.467
+    },
+    {
+      "prey": "macrophytes",
+      "predator": "waterfowl-rails",
+      "weight": 0.43
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "waterfowl-rails",
+      "weight": 0.1
+    },
+    {
+      "prey": "detritus",
+      "predator": "raptors",
+      "weight": 0.73
+    },
+    {
+      "prey": "aquatic-inverts",
+      "predator": "raptors",
+      "weight": 0.211
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "raptors",
+      "weight": 0.017
+    },
+    {
+      "prey": "apple-snail",
+      "predator": "raptors",
+      "weight": 0.011
+    },
+    {
+      "prey": "herb-fish",
+      "predator": "raptors",
+      "weight": 0.008
+    },
+    {
+      "prey": "alligators",
+      "predator": "raptors",
+      "weight": 0.006
+    },
+    {
+      "prey": "lizards-snakes",
+      "predator": "raptors",
+      "weight": 0.006
+    },
+    {
+      "prey": "cypress-trees",
+      "predator": "land-birds",
+      "weight": 0.661
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "land-birds",
+      "weight": 0.339
+    },
+    {
+      "prey": "cypress-trees",
+      "predator": "small-mammals",
+      "weight": 0.914
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "small-mammals",
+      "weight": 0.085
+    },
+    {
+      "prey": "aquatic-inverts",
+      "predator": "mesomammals",
+      "weight": 0.285
+    },
+    {
+      "prey": "detritus",
+      "predator": "mesomammals",
+      "weight": 0.27
+    },
+    {
+      "prey": "cypress-trees",
+      "predator": "mesomammals",
+      "weight": 0.206
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "mesomammals",
+      "weight": 0.201
+    },
+    {
+      "prey": "apple-snail",
+      "predator": "mesomammals",
+      "weight": 0.015
+    },
+    {
+      "prey": "herb-fish",
+      "predator": "mesomammals",
+      "weight": 0.01
+    },
+    {
+      "prey": "cypress-trees",
+      "predator": "deer-hogs",
+      "weight": 0.99
+    },
+    {
+      "prey": "terr-insects",
+      "predator": "deer-hogs",
+      "weight": 0.01
+    },
+    {
+      "prey": "deer-hogs",
+      "predator": "big-predators",
+      "weight": 0.686
+    },
+    {
+      "prey": "small-mammals",
+      "predator": "big-predators",
+      "weight": 0.148
+    },
+    {
+      "prey": "mesomammals",
+      "predator": "big-predators",
+      "weight": 0.116
+    },
+    {
+      "prey": "land-birds",
+      "predator": "big-predators",
+      "weight": 0.049
+    }
+  ]
+}

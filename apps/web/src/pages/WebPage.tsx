@@ -1,14 +1,14 @@
 /**
  * Ecosystem route: #/web/:webId
  *
- * Loads one web from the bundled data/webs/ JSON, validates it against the
+ * Loads one web on demand from data/webs/, validates it against the
  * schema, builds a GraphModel, and renders the full-web GraphView with the
  * species focus view (Phase 3) and cascade mode (Phase 4): arm removal from
  * the web panel or the species panel, watch the staggered ripple of effects
  * with a synced plain-language summary, restore instantly to compare.
  */
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 import { CASCADE_DISCLAIMER, GraphModel, simulateRemoval } from '@foodweb/cascade'
@@ -23,7 +23,7 @@ import { LegendBar } from '@/components/LegendBar'
 import { SpeciesPanel } from '@/components/SpeciesPanel'
 import { WebPanel } from '@/components/WebPanel'
 import type { GraphView } from '@/graph/GraphView'
-import { getRawWeb } from '@/lib/webData'
+import { loadRawWeb } from '@/lib/webData'
 import { colors } from '@/theme/tokens'
 
 function prefersReducedMotion(): boolean {
@@ -36,16 +36,36 @@ function prefersReducedMotion(): boolean {
  */
 type CascadePhase = 'idle' | 'arming' | 'running' | 'done'
 
+/** Webs load on demand (lazy chunk per web), so the model arrives async. */
+type LoadState = 'loading' | 'error' | { model: GraphModel }
+
 export function WebPage() {
   const { webId } = useParams<{ webId: string }>()
 
-  const model = useMemo(() => {
-    if (!webId) return null
-    const raw = getRawWeb(webId)
-    if (!raw) return null
-    const parsed = ecosystemWebSchema.safeParse(raw)
-    return parsed.success ? new GraphModel(parsed.data) : null
+  const [loadState, setLoadState] = useState<LoadState>('loading')
+
+  useEffect(() => {
+    if (!webId) {
+      setLoadState('error')
+      return
+    }
+    let cancelled = false
+    setLoadState('loading')
+    loadRawWeb(webId)
+      .then((raw) => {
+        if (cancelled) return
+        const parsed = raw === undefined ? null : ecosystemWebSchema.safeParse(raw)
+        setLoadState(parsed?.success ? { model: new GraphModel(parsed.data) } : 'error')
+      })
+      .catch(() => {
+        if (!cancelled) setLoadState('error')
+      })
+    return () => {
+      cancelled = true
+    }
   }, [webId])
+
+  const model = typeof loadState === 'object' ? loadState.model : null
 
   const [focusedId, setFocusedId] = useState<string | null>(null)
   const [chainOpen, setChainOpen] = useState(false)
@@ -128,6 +148,16 @@ export function WebPage() {
     return () => window.removeEventListener('keydown', onKey)
   }, [clearFocus, cascadePhase])
 
+  if (loadState === 'loading') {
+    return (
+      <div className="flex h-full items-center justify-center">
+        <div className="max-w-md rounded-xl border border-hairline bg-panel p-8 text-center">
+          <p className="text-sm text-ink">Loading ecosystem…</p>
+        </div>
+      </div>
+    )
+  }
+
   if (!model) {
     return (
       <div className="flex h-full items-center justify-center">
@@ -163,7 +193,7 @@ export function WebPage() {
   return (
     <section aria-label={model.web.meta.name} className="flex h-full flex-col">
       <Breadcrumbs
-        biome={model.web.meta.biome[0].toUpperCase() + model.web.meta.biome.slice(1)}
+        biome={model.web.meta.biome}
         webName={model.web.meta.name}
         focusedName={focusedNode?.node.displayName ?? null}
         onClearFocus={clearFocus}

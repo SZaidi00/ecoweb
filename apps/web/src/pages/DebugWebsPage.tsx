@@ -1,7 +1,7 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { parseEcosystemWeb, parseWebIndex, type EcosystemWeb } from '@foodweb/schema'
 
-import { getRawWeb, getRawWebIndex } from '@/lib/webData'
+import { getRawWebIndex, loadRawWeb } from '@/lib/webData'
 
 /**
  * Debug route (#/debug/webs) — Phase 1 data review tool.
@@ -28,16 +28,36 @@ export function DebugWebsPage() {
   const activeId =
     selectedId ?? (indexResult.ok ? (indexResult.index.webs[0]?.id ?? null) : null)
 
-  const webResult = useMemo(() => {
-    if (!activeId) return null
-    const raw = getRawWeb(activeId)
-    if (raw === undefined) {
-      return { ok: false as const, error: `data/webs/${activeId}.json not found` }
+  // Individual webs load on demand (lazy chunk per web); resolve async.
+  const [webResult, setWebResult] = useState<
+    { ok: true; web: EcosystemWeb } | { ok: false; error: string } | null
+  >(null)
+
+  useEffect(() => {
+    if (!activeId) {
+      setWebResult(null)
+      return
     }
-    try {
-      return { ok: true as const, web: parseEcosystemWeb(raw) }
-    } catch (error) {
-      return { ok: false as const, error: formatError(error) }
+    let cancelled = false
+    loadRawWeb(activeId).then(
+      (raw) => {
+        if (cancelled) return
+        if (raw === undefined) {
+          setWebResult({ ok: false, error: `data/webs/${activeId}.json not found` })
+          return
+        }
+        try {
+          setWebResult({ ok: true, web: parseEcosystemWeb(raw) })
+        } catch (error) {
+          setWebResult({ ok: false, error: formatError(error) })
+        }
+      },
+      (error) => {
+        if (!cancelled) setWebResult({ ok: false, error: formatError(error) })
+      },
+    )
+    return () => {
+      cancelled = true
     }
   }, [activeId])
 

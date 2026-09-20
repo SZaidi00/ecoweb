@@ -85,6 +85,7 @@ export function synthesizeWeb(nodeCount = 200, edgeCount = 400, seed = 42): Ecos
       lat: 0,
       lng: 0,
       provenance: 'composite',
+      tagline: 'A synthetic web for renderer benchmarking.',
       citations: ['Synthetic data — not ecological.'],
       sourceUrl: 'https://example.com',
       licenseNote: 'Synthetic benchmark data.',

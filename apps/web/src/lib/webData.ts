@@ -1,29 +1,41 @@
 /**
  * Access to the curated web data in the repo-level `data/webs/` directory.
  *
- * The JSON is bundled at build time via Vite's `import.meta.glob` (eager).
+ * The data is split in two:
+ *   * `index.json` — the tiny browse-layer listing — is bundled eagerly, so
+ *     `getRawWebIndex()` can stay synchronous for the landing page.
+ *   * Individual webs load on demand via a lazy `import.meta.glob`: each
+ *     `<id>.json` becomes its own chunk, fetched the first time
+ *     `loadRawWeb(id)` is called.
+ *
  * The glob reaches outside `apps/web` into `data/webs`: in dev, Vite's
  * `fs.allow` covers the monorepo workspace root; in the static build the
- * matched files are simply bundled into the JS. So the same code path works
- * for `npm run dev` and the GitHub Pages build, with no `public/` copies and
+ * matched files are bundled into the JS. So the same code path works for
+ * `npm run dev` and the GitHub Pages build, with no `public/` copies and
  * no runtime `fetch`.
  */
-const dataModules = import.meta.glob<unknown>('../../../../data/webs/*.json', {
+const indexModules = import.meta.glob<unknown>('../../../../data/webs/index.json', {
   eager: true,
   import: 'default',
 })
 
-function findBySuffix(suffix: string): unknown | undefined {
-  const entry = Object.entries(dataModules).find(([path]) => path.endsWith(suffix))
-  return entry?.[1]
-}
+const webModules = import.meta.glob<unknown>(
+  ['../../../../data/webs/*.json', '!../../../../data/webs/index.json'],
+  { import: 'default' },
+)
 
 /** Raw contents of data/webs/index.json (unvalidated — validate with zod). */
 export function getRawWebIndex(): unknown {
-  return findBySuffix('/index.json')
+  const entry = Object.entries(indexModules).find(([path]) => path.endsWith('/index.json'))
+  return entry?.[1]
 }
 
-/** Raw contents of data/webs/<id>.json, or undefined if not present. */
-export function getRawWeb(id: string): unknown | undefined {
-  return findBySuffix(`/${id}.json`)
+/**
+ * Raw contents of data/webs/<id>.json, loaded on demand; resolves to
+ * undefined if no such web is bundled.
+ */
+export async function loadRawWeb(id: string): Promise<unknown | undefined> {
+  const entry = Object.entries(webModules).find(([path]) => path.endsWith(`/${id}.json`))
+  if (!entry) return undefined
+  return entry[1]()
 }

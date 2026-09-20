@@ -7,6 +7,7 @@
     "lat": 60.61,
     "lng": -147.14,
     "provenance": "empirical",
+    "tagline": "Home to one of the best-studied keystone cascades",
     "citations": [
       "Dalsgaard, J. & Pauly, D. 1997. Preliminary Mass-Balance Models of Prince William Sound, Alaska, for the Pre-Spill Period, 1980-1989. Fisheries Centre Research Reports 5(2), 33 p. https://doi.org/10.14288/1.0074775",
       "Iskrzynski, M., Pawluczuk, M., Fath, B.D. et al. 2022. foodwebviz: Food web visualisation - heat map, interactive graph and animated flow network. Methods in Ecology and Evolution 13: 1295-1302. https://doi.org/10.1111/2041-210X.13839 (EcoBase SCOR export of the PWS model mirrored at github.com/ibs-pan/foodwebviz)",

@@ -42,6 +42,8 @@ export interface WebMeta {
   lng: number
   /** 'empirical' = one published study; 'composite' = curated from several sources. */
   provenance: Provenance
+  /** One-line hook shown on browse cards (max 120 chars). */
+  tagline: string
   /** Full citations for every source used; at least one required. */
   citations: string[]
   /** URL of the primary source (paper, dataset, or data portal). */
@@ -142,6 +144,8 @@ export interface WebIndexEntry {
   /** Must equal the web file's actual node count. */
   nodeCount: number
   provenance: Provenance
+  /** One-line hook shown on browse cards (max 120 chars); matches the web's `meta.tagline`. */
+  tagline: string
 }
 
 export interface WebIndex {

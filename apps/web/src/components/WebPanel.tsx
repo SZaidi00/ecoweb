@@ -27,6 +27,7 @@ export function WebPanel({
   web: EcosystemWeb
   onEnterCascadeMode: () => void
 }) {
+  const pooledNode = web.nodes.find((node) => node.kind !== 'species')
   return (
     <div>
       <h2 className="mb-0.5 font-heading text-[22px] font-semibold">{web.meta.name}</h2>
@@ -40,8 +41,18 @@ export function WebPanel({
 
       <div className={panelBox}>
         <h5 className={panelHeading}>About this web</h5>
-        Nodes are <strong className="font-semibold text-ink">functional groups</strong> — for
-        example, “Salmon” pools several salmon species, exactly as the source study measured them.
+        {pooledNode ? (
+          <>
+            Nodes are <strong className="font-semibold text-ink">functional groups</strong> — for
+            example, “{pooledNode.displayName}” pools several species, exactly as the source study
+            measured them.
+          </>
+        ) : (
+          <>
+            Nodes represent species and groups exactly as the source study measured them — we never
+            invent resolution the data doesn’t have.
+          </>
+        )}{' '}
         Line thickness shows each food source’s share of the consumer’s diet.
       </div>
 

@@ -7,6 +7,7 @@
     "lat": 58.3,
     "lng": -134.4,
     "provenance": "composite",
+    "tagline": "A small estuary web used only for testing.",
     "sourceUrl": "https://example.org/datasets/example-estuary",
     "licenseNote": "Test fixture; not real data.",
     "curator": "Jane Curator",

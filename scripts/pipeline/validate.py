@@ -19,7 +19,8 @@ Hard-fail rules (exit 1):
     * non-species nodes whose description lacks an aggregation statement
       (see AGGREGATION_RE below; documented in docs/data-format.md)
     * index.json entries that are malformed or do not match the actual
-      web files (id/file name, name, biome, location, provenance, nodeCount)
+      web files (id/file name, name, biome, location, provenance, tagline,
+      nodeCount)
 
 Warnings (printed, exit code stays 0):
     * isolated nodes (no edges in either direction)
@@ -57,7 +58,7 @@ BIOMES = {
     "wetland",
 }
 PROVENANCES = {"empirical", "composite"}
-INDEX_ENTRY_FIELDS = {"id", "name", "biome", "location", "nodeCount", "provenance"}
+INDEX_ENTRY_FIELDS = {"id", "name", "biome", "location", "nodeCount", "provenance", "tagline"}
 
 # Aggregation-statement heuristic (the "salmon rule", docs/data-format.md):
 # the description of every node whose kind is not "species" must contain at
@@ -204,7 +205,7 @@ def validate_index(index_data: object, webs_by_id: dict[str, dict], webs_dir_lab
             )
         if not isinstance(entry["nodeCount"], int) or entry["nodeCount"] < 1:
             errors.append(f"{entry_label}: 'nodeCount' must be a positive integer")
-        for field in ("name", "location"):
+        for field in ("name", "location", "tagline"):
             if not isinstance(entry[field], str) or not entry[field]:
                 errors.append(f"{entry_label}: '{field}' must be a non-empty string")
 
@@ -216,7 +217,7 @@ def validate_index(index_data: object, webs_by_id: dict[str, dict], webs_dir_lab
             )
             continue
         meta = web.get("meta", {})
-        for field in ("name", "biome", "location", "provenance"):
+        for field in ("name", "biome", "location", "provenance", "tagline"):
             if meta.get(field) != entry[field]:
                 errors.append(
                     f"{entry_label}: {field} '{entry[field]}' does not match "

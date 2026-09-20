@@ -37,6 +37,7 @@ const webMetaSchema = z
     lat: z.number().min(-90).max(90),
     lng: z.number().min(-180).max(180),
     provenance: provenanceSchema,
+    tagline: z.string().min(1).max(120),
     citations: z.array(z.string().min(1)).min(1),
     sourceUrl: z.string().url(),
     licenseNote: z.string().min(1),
@@ -127,6 +128,7 @@ export const webIndexEntrySchema = z
     location: z.string().min(1),
     nodeCount: z.number().int().min(1),
     provenance: provenanceSchema,
+    tagline: z.string().min(1).max(120),
   })
   .strict()
 

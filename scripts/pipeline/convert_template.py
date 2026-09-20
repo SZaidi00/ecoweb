@@ -76,6 +76,8 @@ META = {
     # 'empirical' when one study measured the whole web; 'composite' when
     # you curated it from multiple sources.
     "provenance": "empirical",
+    # One-line hook for the browse cards (max 120 chars).
+    "tagline": "A tiny template fjord used to demonstrate the converter.",
     "citations": [
         "Example, A. (2001). A template fjord food web. Journal of Templates 1(1): 1-2."
     ],

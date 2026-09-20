@@ -1,12 +1,49 @@
 {
   "webs": [
     {
+      "id": "tuesday-lake",
+      "name": "Tuesday Lake",
+      "biome": "freshwater",
+      "location": "Tuesday Lake, Wisconsin, USA",
+      "nodeCount": 16,
+      "provenance": "empirical",
+      "tagline": "A whole-lake trophic cascade, measured by experiment"
+    },
+    {
+      "id": "shortgrass-prairie",
+      "name": "Shortgrass Prairie",
+      "biome": "grassland",
+      "location": "Central Plains Experimental Range, Colorado, USA",
+      "nodeCount": 17,
+      "provenance": "empirical",
+      "tagline": "The hidden web under the grass: microbes, mites and nematodes"
+    },
+    {
+      "id": "chesapeake-bay",
+      "name": "Chesapeake Bay",
+      "biome": "marine",
+      "location": "Chesapeake Bay, mesohaline reach, USA",
+      "nodeCount": 19,
+      "provenance": "empirical",
+      "tagline": "The estuary that launched ecosystem network analysis"
+    },
+    {
       "id": "prince-william-sound",
       "name": "Prince William Sound",
       "biome": "marine",
       "location": "Prince William Sound, Alaska, USA",
       "nodeCount": 19,
-      "provenance": "empirical"
+      "provenance": "empirical",
+      "tagline": "Home to one of the best-studied keystone cascades"
+    },
+    {
+      "id": "cypress-wetland",
+      "name": "Cypress Wetland",
+      "biome": "wetland",
+      "location": "Big Cypress / Everglades, Florida, USA",
+      "nodeCount": 22,
+      "provenance": "empirical",
+      "tagline": "Where the Everglades slows to a standstill, periphyton feeds everything"
     }
   ]
 }

@@ -17,6 +17,7 @@ import pytest
 
 PIPELINE_DIR = Path(__file__).resolve().parents[1]
 VALIDATE_PY = PIPELINE_DIR / "validate.py"
+BUILD_INDEX_PY = PIPELINE_DIR / "build_index.py"
 CONVERT_PY = PIPELINE_DIR / "convert_template.py"
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
 
@@ -24,6 +25,14 @@ FIXTURES = Path(__file__).resolve().parent / "fixtures"
 def run_validate(*args: str) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         [sys.executable, str(VALIDATE_PY), *args],
+        capture_output=True,
+        text=True,
+    )
+
+
+def run_build_index(*args: str) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        [sys.executable, str(BUILD_INDEX_PY), *args],
         capture_output=True,
         text=True,
     )
@@ -88,6 +97,7 @@ def _entry_for(web: dict, **overrides: object) -> dict:
         "location": web["meta"]["location"],
         "nodeCount": len(web["nodes"]),
         "provenance": web["meta"]["provenance"],
+        "tagline": web["meta"]["tagline"],
     }
     entry.update(overrides)
     return entry
@@ -106,6 +116,7 @@ def test_matching_index_passes(tmp_path: Path) -> None:
         ({"nodeCount": 99}, "nodeCount 99 does not match"),
         ({"biome": "desert"}, "biome 'desert' does not match"),
         ({"name": "Wrong Name"}, "does not match"),
+        ({"tagline": "Wrong tagline"}, "tagline 'Wrong tagline' does not match"),
         ({"id": "no-such-web"}, "no valid web file 'no-such-web.json'"),
     ],
 )
@@ -121,7 +132,7 @@ def test_mismatched_index_entry_is_rejected(
 
 def test_unregistered_web_file_is_rejected(tmp_path: Path) -> None:
     _copy_valid_web(tmp_path)
-    _write_index(tmp_path, _entry_for({"meta": {"id": "other-web", "name": "x", "biome": "marine", "location": "y", "provenance": "empirical"}, "nodes": [{}]}))
+    _write_index(tmp_path, _entry_for({"meta": {"id": "other-web", "name": "x", "biome": "marine", "location": "y", "provenance": "empirical", "tagline": "z"}, "nodes": [{}]}))
     result = run_validate("--webs-dir", str(tmp_path))
     assert result.returncode == 1
     assert "not registered" in result.stdout
@@ -131,6 +142,33 @@ def test_empty_webs_dir_with_empty_index_passes(tmp_path: Path) -> None:
     (tmp_path / "index.json").write_text('{"webs": []}', encoding="utf-8")
     result = run_validate("--webs-dir", str(tmp_path))
     assert result.returncode == 0, result.stdout
+
+
+def test_build_index_output_validates_and_matches_meta(tmp_path: Path) -> None:
+    """build_index.py generates an index that validate.py accepts and that
+    carries the web's meta fields verbatim."""
+    web = _copy_valid_web(tmp_path)
+    build = run_build_index("--webs-dir", str(tmp_path))
+    assert build.returncode == 0, build.stderr
+
+    index = json.loads((tmp_path / "index.json").read_text(encoding="utf-8"))
+    assert len(index["webs"]) == 1
+    entry = index["webs"][0]
+    for field in ("id", "name", "biome", "location", "provenance", "tagline"):
+        assert entry[field] == web["meta"][field]
+    assert entry["nodeCount"] == len(web["nodes"])
+
+    result = run_validate("--webs-dir", str(tmp_path))
+    assert result.returncode == 0, result.stdout
+
+
+def test_build_index_refuses_to_overwrite_on_broken_web(tmp_path: Path) -> None:
+    _copy_valid_web(tmp_path)
+    (tmp_path / "broken.web.json").write_text("{not json", encoding="utf-8")
+    build = run_build_index("--webs-dir", str(tmp_path))
+    assert build.returncode == 1
+    assert "left untouched" in build.stderr
+    assert not (tmp_path / "index.json").exists()
 
 
 def test_convert_template_output_is_valid(tmp_path: Path) -> None:

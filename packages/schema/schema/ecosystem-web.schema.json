@@ -18,6 +18,7 @@
         "lat",
         "lng",
         "provenance",
+        "tagline",
         "citations",
         "sourceUrl",
         "licenseNote",
@@ -69,6 +70,12 @@
           "type": "string",
           "description": "'empirical' = one published study measured this web; 'composite' = curated from multiple sources.",
           "enum": ["empirical", "composite"]
+        },
+        "tagline": {
+          "type": "string",
+          "description": "One-line hook shown on browse cards (e.g. 'Home to one of the best-studied keystone cascades').",
+          "minLength": 1,
+          "maxLength": 120
         },
         "citations": {
           "type": "array",
