@@ -9,7 +9,7 @@
  */
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 
 import { CASCADE_DISCLAIMER, GraphModel, simulateRemoval } from '@foodweb/cascade'
 import type { CascadeResult } from '@foodweb/cascade'
@@ -51,6 +51,7 @@ export function WebPage() {
     }
     let cancelled = false
     setLoadState('loading')
+    pushedFocusRef.current = false
     loadRawWeb(webId)
       .then((raw) => {
         if (cancelled) return
@@ -67,7 +68,16 @@ export function WebPage() {
 
   const model = typeof loadState === 'object' ? loadState.model : null
 
-  const [focusedId, setFocusedId] = useState<string | null>(null)
+  // Focus lives in the URL (?focus=<nodeId>) so browser back steps
+  // species → full web → biome → landing, and a focus view is deep-linkable.
+  const [searchParams, setSearchParams] = useSearchParams()
+  const navigate = useNavigate()
+  const focusParam = searchParams.get('focus')
+  const focusedId = model && focusParam && model.getNode(focusParam) ? focusParam : null
+  // True when the current history entry is a focus entry we pushed in-app —
+  // then clearing focus is a history pop, mirroring the browser back button.
+  const pushedFocusRef = useRef(false)
+
   const [chainOpen, setChainOpen] = useState(false)
   const [motion, setMotion] = useState(() => !prefersReducedMotion())
 
@@ -76,30 +86,58 @@ export function WebPage() {
   const [visibleWave, setVisibleWave] = useState(0)
   const viewRef = useRef<GraphView | null>(null)
 
+  // Cascade visuals own the canvas; a stale ?focus= param (e.g. via browser
+  // back mid-cascade) must not dim the cascade state.
+  const cascadeVisible = cascadePhase === 'running' || cascadePhase === 'done'
+
+  // The URL is the source of truth: applying focus here covers browser
+  // back/forward and deep links. Canvas taps call model.focus() themselves;
+  // re-applying the same focus is a no-op.
+  useEffect(() => {
+    const id = cascadeVisible ? null : focusedId
+    model?.focus(id)
+    if (!id) setChainOpen(false)
+  }, [model, focusedId, cascadeVisible])
+
   const clearFocus = useCallback(() => {
     model?.focus(null)
-    setFocusedId(null)
     setChainOpen(false)
-  }, [model])
+    if (!searchParams.has('focus')) return
+    if (pushedFocusRef.current) {
+      pushedFocusRef.current = false
+      navigate(-1)
+    } else {
+      // Deep-linked focus: no in-app entry to pop, just strip the param.
+      setSearchParams({}, { replace: true })
+    }
+  }, [model, searchParams, navigate, setSearchParams])
+
+  const pushFocus = useCallback(
+    (id: string) => {
+      if (searchParams.get('focus') === id) return
+      if (searchParams.has('focus')) {
+        // Refocus: replace, so clearing never walks through past species.
+        setSearchParams({ focus: id }, { replace: true })
+      } else {
+        pushedFocusRef.current = true
+        setSearchParams({ focus: id })
+      }
+    },
+    [searchParams, setSearchParams],
+  )
 
   const onFocusChange = useCallback(
     (id: string | null) => {
       // An empty-canvas tap while arming cancels cascade mode.
       if (id === null && cascadePhase === 'arming') setCascadePhase('idle')
-      setFocusedId(id)
-      if (!id) setChainOpen(false)
+      if (id) pushFocus(id)
+      else clearFocus()
     },
-    [cascadePhase],
+    [cascadePhase, pushFocus, clearFocus],
   )
 
   // Sidebar/chain-overlay refocus (canvas taps come through onFocusChange).
-  const focusNode = useCallback(
-    (id: string) => {
-      model?.focus(id)
-      setFocusedId(id)
-    },
-    [model],
-  )
+  const focusNode = pushFocus
 
   /** Enter cascade mode: the next node click is the removal target. */
   const armCascade = useCallback(() => {
@@ -176,8 +214,7 @@ export function WebPage() {
     )
   }
 
-  const focusedNode = focusedId ? model.getNode(focusedId) : null
-  const cascadeVisible = cascadePhase === 'running' || cascadePhase === 'done'
+  const focusedNode = !cascadeVisible && focusedId ? model.getNode(focusedId) : null
 
   const hint =
     cascadePhase === 'arming'
