@@ -13,7 +13,7 @@ export function AppHeader() {
         <h1 className="font-heading text-xl font-semibold text-canopy">
           Food Web Explorer
         </h1>
-        <span className="hidden text-xs uppercase tracking-widest text-ink/60 sm:inline">
+        <span className="hidden text-xs uppercase tracking-widest text-inkSoft sm:inline">
           Interactive documentary of ecosystems
         </span>
       </div>

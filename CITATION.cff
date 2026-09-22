@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+title: Food Web Explorer
+abstract: >-
+  An open-source, interactive web app for exploring real-world food webs:
+  trace what a species depends on, and simulate the structural effects of
+  removing it. Ecosystem data is curated from published empirical studies;
+  each web carries its own citations — please cite those too when reusing
+  data.
+type: software
+license: MIT
+repository-code: https://github.com/SZaidi00/ecoweb
+authors:
+  - family-names: Zaidi
+    given-names: S.

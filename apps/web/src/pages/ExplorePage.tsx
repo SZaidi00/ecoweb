@@ -24,7 +24,7 @@ function EcoCard({ entry }: { entry: WebIndexEntry }) {
       to={`/web/${entry.id}`}
       className={`mt-3.5 block rounded-xl border border-hairline bg-paper px-4 py-3.5 transition-colors hover:border-canopy ${focusRing}`}
     >
-      <h4 className="font-heading text-[15.5px] font-semibold">{entry.name}</h4>
+      <h3 className="font-heading text-[15.5px] font-semibold">{entry.name}</h3>
       <p className="mb-2 mt-1 text-xs text-muted">
         {entry.nodeCount} functional groups · {entry.location}
       </p>
@@ -43,7 +43,7 @@ function BiomeCard({ id, webs }: { id: Biome; webs: WebIndexEntry[] }) {
           className="mb-3 h-[34px] w-[34px] rounded-[10px]"
           style={{ background: info.swatch }}
         />
-        <h3 className="font-heading text-[19px] font-semibold">{info.name}</h3>
+        <h2 className="font-heading text-[19px] font-semibold">{info.name}</h2>
         <p className="text-[12.5px] text-muted">
           {webs.length} ecosystem{webs.length === 1 ? '' : 's'}
         </p>
@@ -66,7 +66,7 @@ function EmptyBiomeCard({ id }: { id: Biome }) {
         className="mb-3 h-[34px] w-[34px] rounded-[10px]"
         style={{ background: info.swatch }}
       />
-      <h3 className="font-heading text-[19px] font-semibold">{info.name}</h3>
+      <h2 className="font-heading text-[19px] font-semibold">{info.name}</h2>
       <p className="text-[12.5px] text-muted">{info.subtitle}</p>
       <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-paper2 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.6px] text-muted">
         <span className="h-1.5 w-1.5 rounded-full bg-muted" />

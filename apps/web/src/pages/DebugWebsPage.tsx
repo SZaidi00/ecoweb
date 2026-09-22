@@ -77,7 +77,7 @@ export function DebugWebsPage() {
         <div className="mt-2 overflow-x-auto rounded border border-hairline bg-panel">
           <table className="w-full text-left text-sm">
             <thead>
-              <tr className="border-b border-hairline text-xs uppercase tracking-wider text-ink/60">
+              <tr className="border-b border-hairline text-xs uppercase tracking-wider text-inkSoft">
                 <Th>id</Th>
                 <Th>name</Th>
                 <Th>biome</Th>
@@ -144,7 +144,7 @@ function WebDetail({ web }: { web: EcosystemWeb }) {
         <MetaRow label="Source URL" value={meta.sourceUrl} />
         <MetaRow label="License note" value={meta.licenseNote} wide />
         <div className="sm:col-span-2">
-          <dt className="text-xs uppercase tracking-wider text-ink/60">Citations</dt>
+          <dt className="text-xs uppercase tracking-wider text-inkSoft">Citations</dt>
           <dd>
             <ol className="mt-1 list-decimal space-y-1 pl-5">
               {meta.citations.map((citation, i) => (
@@ -162,7 +162,7 @@ function WebDetail({ web }: { web: EcosystemWeb }) {
         <div className="mt-2 overflow-x-auto rounded border border-hairline bg-panel">
           <table className="w-full text-left text-sm">
             <thead>
-              <tr className="border-b border-hairline text-xs uppercase tracking-wider text-ink/60">
+              <tr className="border-b border-hairline text-xs uppercase tracking-wider text-inkSoft">
                 <Th>id</Th>
                 <Th>name</Th>
                 <Th>kind</Th>
@@ -195,14 +195,14 @@ function WebDetail({ web }: { web: EcosystemWeb }) {
         <h4 className="font-heading text-base font-semibold text-ink">
           Edges ({web.edges.length})
         </h4>
-        <p className="mt-1 text-xs text-ink/60">
+        <p className="mt-1 text-xs text-inkSoft">
           Prey is eaten by predator. Weight = prey&apos;s share of the
           predator&apos;s diet from the cited source.
         </p>
         <div className="mt-2 overflow-x-auto rounded border border-hairline bg-panel">
           <table className="w-full text-left text-sm">
             <thead>
-              <tr className="border-b border-hairline text-xs uppercase tracking-wider text-ink/60">
+              <tr className="border-b border-hairline text-xs uppercase tracking-wider text-inkSoft">
                 <Th>prey</Th>
                 <Th>predator</Th>
                 <Th>weight</Th>
@@ -258,7 +258,7 @@ function ValidationError({ label, error }: { label: string; error: string }) {
 function MetaRow({ label, value, wide }: { label: string; value: string; wide?: boolean }) {
   return (
     <div className={wide ? 'sm:col-span-2' : undefined}>
-      <dt className="text-xs uppercase tracking-wider text-ink/60">{label}</dt>
+      <dt className="text-xs uppercase tracking-wider text-inkSoft">{label}</dt>
       <dd className="break-words">{value}</dd>
     </div>
   )

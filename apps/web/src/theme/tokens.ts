@@ -20,7 +20,7 @@ export const colors = {
   /** Secondary text (muted warm gray-brown). */
   inkSoft: '#57503f',
   /** Tertiary text, lane labels, legends. */
-  muted: '#8a7f68',
+  muted: '#776c53',
   /** Default edge color: muted warm gray. The focus accent is reserved for focus mode. */
   edge: '#b3a88d',
   /** Canvas dot-texture color on the paper background. */
@@ -29,8 +29,8 @@ export const colors = {
   paper2: '#efe9db',
   /** Focus accent (species focus view). */
   focus: '#b8772e',
-  /** Link accents (matches the mid-level trophic tone). */
-  accent: '#3f7d6b',
+  /** Link accents (mid-level trophic tone, darkened for text contrast). */
+  accent: '#3a7261',
   /** Trophic ramp (soil → leaf → sun), bottom to top of the web. */
   trophic: {
     /** Producers & detritus. */

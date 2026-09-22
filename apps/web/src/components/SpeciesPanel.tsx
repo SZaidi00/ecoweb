@@ -101,7 +101,7 @@ export function SpeciesPanel({
       </p>
 
       <div className={panelBox}>
-        <h5 className={panelHeading}>What this node represents</h5>
+        <h3 className={panelHeading}>What this node represents</h3>
         <p>{data.description}</p>
         {data.externalLinks && (
           <p className="mt-2">
@@ -130,7 +130,7 @@ export function SpeciesPanel({
       </div>
 
       <div className={panelBox}>
-        <h5 className={panelHeading}>Dependencies</h5>
+        <h3 className={panelHeading}>Dependencies</h3>
         <div className="flex justify-between gap-2.5 py-0.5 text-[12.5px]">
           <span className="flex-none text-muted">Eats (below)</span>
           <span className="text-right">{neighborButtons(prey)}</span>

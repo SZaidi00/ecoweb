@@ -1,0 +1,42 @@
+name: Ecosystem submission
+description: Propose a new ecosystem food web for the atlas
+title: "[New ecosystem] "
+labels: [new-ecosystem]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Propose the web **before** curating it. Read [docs/data-format.md](https://github.com/SZaidi00/ecoweb/blob/main/docs/data-format.md) first — especially the salmon rule (never invent resolution the source doesn't have) and the qualitative-edge policy (never fabricate weights).
+  - type: input
+    id: ecosystem
+    attributes:
+      label: Ecosystem
+      description: Name, location, and biome
+      placeholder: "Lake Tanganyika, East Africa — freshwater"
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source study
+      description: Full citation of the published study, plus a link to the paper or dataset (Web of Life, GloBI, an R data package, a project mirror...)
+      placeholder: "Author et al. (year). Title. Journal. https://..."
+    validations:
+      required: true
+  - type: textarea
+    id: structure
+    attributes:
+      label: Web structure
+      description: Approximate node count (max 25), and whether the source publishes edge weights (diet shares / flow matrix) or only presence of links
+    validations:
+      required: true
+  - type: textarea
+    id: aggregation
+    attributes:
+      label: Aggregation
+      description: Are nodes species or functional groups? Which poolings will need aggregation statements?
+  - type: textarea
+    id: license
+    attributes:
+      label: Data license
+      description: License/attribution terms of the underlying data, if known

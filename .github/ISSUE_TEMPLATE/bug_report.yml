@@ -1,0 +1,37 @@
+name: Bug report
+description: Something in the app is broken or wrong
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report a bug!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, what happened instead?
+      placeholder: I opened Chesapeake Bay, clicked Oysters, and...
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      description: The full URL (including the # hash) where it happened
+      placeholder: "https://szaidi00.github.io/ecoweb/#/web/chesapeake-bay"
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome / Edge
+        - Firefox
+        - Safari
+        - Other
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors
+      description: Anything red in the browser devtools console (optional)
+      render: text

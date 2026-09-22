@@ -76,7 +76,7 @@ export function CascadePanel({
       </p>
 
       <div className={panelBox} aria-live="polite">
-        <h5 className={panelHeading}>Observed effects</h5>
+        <h3 className={panelHeading}>Observed effects</h3>
         {visibleLines.length === 0 ? (
           <p className="text-[12.5px] text-muted">Watching the first wave…</p>
         ) : (

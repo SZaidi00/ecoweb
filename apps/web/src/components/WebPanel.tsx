@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import type { EcosystemWeb } from '@foodweb/schema'
 
 const panelBox =
@@ -40,7 +42,7 @@ export function WebPanel({
       </p>
 
       <div className={panelBox}>
-        <h5 className={panelHeading}>About this web</h5>
+        <h3 className={panelHeading}>About this web</h3>
         {pooledNode ? (
           <>
             Nodes are <strong className="font-semibold text-ink">functional groups</strong> — for
@@ -57,11 +59,37 @@ export function WebPanel({
       </div>
 
       <div className={panelBox}>
-        <h5 className={panelHeading}>How to explore</h5>
+        <h3 className={panelHeading}>How to explore</h3>
         Select a node for its dependency view, or use{' '}
         <strong className="font-semibold text-ink">Simulate a removal</strong> to watch effects
         cascade. The layout runs from producers (bottom) to apex predators (top) — energy flows
         upward.
+      </div>
+
+      <div className={panelBox}>
+        <h3 className={panelHeading}>Sources &amp; citation</h3>
+        <ul className="space-y-1.5 text-xs text-inkSoft">
+          {web.meta.citations.map((citation) => (
+            <li key={citation}>{citation}</li>
+          ))}
+        </ul>
+        {web.meta.sourceUrl && (
+          <a
+            href={web.meta.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block text-xs font-medium text-accent hover:underline"
+          >
+            Machine-readable source →
+          </a>
+        )}
+        <p className="mt-2 text-[11.5px] text-muted">
+          Reuse requires citing the original source — see{' '}
+          <Link to="/about" className="font-medium text-accent hover:underline">
+            About → Sources
+          </Link>
+          .
+        </p>
       </div>
 
       <button
