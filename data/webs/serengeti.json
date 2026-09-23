@@ -1,0 +1,712 @@
+{
+  "meta": {
+    "id": "serengeti",
+    "name": "Serengeti",
+    "location": "Serengeti National Park, Tanzania",
+    "biome": "grassland",
+    "lat": -2.333,
+    "lng": 34.833,
+    "provenance": "empirical",
+    "tagline": "The most-studied savanna on Earth - and what extinction does to it",
+    "citations": [
+      "de Visser, S.N., Freymann, B.P. & Olff, H. 2011. The Serengeti food web: empirical quantification and analysis of topological changes under increasing human impact. Journal of Animal Ecology 80(2): 484-494. https://doi.org/10.1111/j.1365-2656.2010.01787.x (node list and consumer-resource link matrix: Appendices S1-S4)",
+      "Machine-readable transcription of the de Visser et al. (2011) Appendix S1 node list and link matrix from the repository of Caron et al. 2024, Global Ecology and Biogeography (DOI 10.1111/geb.13807): https://github.com/DominiqueCaron/Chapt-NicheSpace - verified against the paper's Table 2 (86 pristine nodes, 547 links, 12.7% self-links)"
+    ],
+    "sourceUrl": "https://github.com/DominiqueCaron/Chapt-NicheSpace",
+    "licenseNote": "Structure is the pristine-stage Serengeti food web of de Visser, Freymann & Olff (2011, Journal of Animal Ecology 80: 484-494), whose nodes are already trophic groups and functional plant/resource types compiled from a documented literature review (their Appendix S2) - links are unweighted, so every edge here is qualitative. The machine-readable copy is the transcription of the paper's Supporting Information republished by Caron et al. (2024, Global Ecology and Biogeography, DOI 10.1111/geb.13807) in their open code repository; it was verified against the paper's Table 2 (86 pristine nodes, 547 links). Curation: this web draws 25 of the 86 pristine nodes and keeps the links between them exactly as published; the 8 human-impact addition nodes (crops, livestock, domestic animals, humans) and the one node the paper itself excluded from analysis are not included; three within-node self-links (cannibalism within a pooled node) are not drawn as edges, consistent with the other webs in this atlas. The paper labels each pooled node by one member species (e.g. its 'Topi' node also contains wildebeest, zebra, waterbuck, kongoni and roan); display names here name the pooled contents instead, and every description lists them. The source paper pairs this web with an analysis of species loss under increasing human pressure, in which large predators disappear first - try removing the large predators here and compare. Reuse requires citing de Visser et al. (2011).",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-09-23"
+  },
+  "nodes": [
+    {
+      "id": "decaying-matter",
+      "displayName": "Decaying matter & carrion",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Dead plant material, dung and carcasses - the resource base for the savanna's decomposers and scavengers. Functional group pooling all decaying material as one resource node, exactly as the source study defined it.",
+      "layout": {
+        "x": 10,
+        "y": 4
+      }
+    },
+    {
+      "id": "fruits-nectar",
+      "displayName": "Fruits & nectar",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "The sweet products of savanna plants, eaten by insects, birds and mammals. Functional group pooling all fruits and nectar as one resource node, as defined by the source study.",
+      "layout": {
+        "x": 30,
+        "y": 4
+      }
+    },
+    {
+      "id": "grains-seeds",
+      "displayName": "Grains & seeds",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Grass grains and other seeds, the staple of rodents and seed-eating birds. Functional group pooling all grains and seeds as one resource node, as defined by the source study.",
+      "layout": {
+        "x": 50,
+        "y": 4
+      }
+    },
+    {
+      "id": "grasses-herbs",
+      "displayName": "Grasses & herbs",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "The grass sward itself - the engine of the Serengeti. Functional group pooling all grasses and herbs as one resource node, as defined by the source study; the study deliberately does not resolve individual grass species.",
+      "layout": {
+        "x": 70,
+        "y": 4
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Serengeti"
+      }
+    },
+    {
+      "id": "trees-shrubs",
+      "displayName": "Trees & shrubs",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Acacias and other woody plants dotting the savanna, browsed by giraffe, elephant and many insects. Functional group pooling all trees and shrubs as one resource node, as defined by the source study.",
+      "layout": {
+        "x": 90,
+        "y": 4
+      }
+    },
+    {
+      "id": "harvester-termites",
+      "displayName": "Harvester termites",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Grass-cutting termites, ecosystem engineers of the savanna. Functional group pooling the source's termite taxa - harvester termites (Hodotermes, Trinervitermes) and the fungus-growing termites Odontotermes and Macrotermes - which the source groups as one node.",
+      "layout": {
+        "x": 15,
+        "y": 22
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Hodotermes"
+      }
+    },
+    {
+      "id": "flies",
+      "displayName": "Flies, bees & butterflies",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Winged flower-visitors and scavengers. Functional group pooling the source's Diptera (true flies) node with bees, adult lacewings, butterflies and moths, as grouped by the source study.",
+      "layout": {
+        "x": 35,
+        "y": 22
+      }
+    },
+    {
+      "id": "crickets-grasshoppers",
+      "displayName": "Crickets, grasshoppers & beetles",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The main insect herbivores of the grass layer. Functional group pooling the source's crickets node with grasshoppers, planthoppers, dung beetles, weevils, caterpillars and stick insects, as grouped by the source study.",
+      "layout": {
+        "x": 55,
+        "y": 22
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Grasshopper"
+      }
+    },
+    {
+      "id": "gazelles",
+      "displayName": "Gazelles & small antelopes",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The small and medium antelopes, including the Serengeti's famous Thomson's gazelle and impala. Functional group pooling the source's 'Oribi' node: oribi, gray duiker, Thomson's gazelle, impala and Grant's gazelle - measured together because their diets and predators largely coincide.",
+      "layout": {
+        "x": 75,
+        "y": 22
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Thomson%27s_gazelle",
+        "iNaturalist": "https://www.inaturalist.org/taxa/42310-Eudorcas-thomsonii"
+      }
+    },
+    {
+      "id": "large-grazers",
+      "displayName": "Wildebeest, zebra & large grazers",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The great migration in one node. Functional group pooling the source's 'Topi' node - the white-bearded wildebeest, Burchell's zebra, topi, kongoni (hartebeest), Defassa waterbuck and roan antelope - measured together by the source study. Roughly 1.5 million wildebeest pass through the ecosystem each year.",
+      "layout": {
+        "x": 92,
+        "y": 22
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Wildebeest",
+        "iNaturalist": "https://www.inaturalist.org/taxa/42318-Connochaetes-taurinus"
+      }
+    },
+    {
+      "id": "buffalo",
+      "displayName": "African buffalo",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The African buffalo (Syncerus caffer), tracked as its own node by the source study. A bulk grazer of grasses and a dangerous prey that only lions regularly tackle.",
+      "layout": {
+        "x": 62,
+        "y": 30
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/African_buffalo",
+        "iNaturalist": "https://www.inaturalist.org/taxa/42146-Syncerus-caffer"
+      }
+    },
+    {
+      "id": "giraffe",
+      "displayName": "Maasai giraffe",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The Maasai giraffe (Giraffa camelopardalis), tracked as its own node by the source study. A high browser of trees and shrubs, beyond the reach of other herbivores - and of most predators.",
+      "layout": {
+        "x": 80,
+        "y": 30
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Maasai_giraffe",
+        "iNaturalist": "https://www.inaturalist.org/taxa/143177-Giraffa-tippelskirchi"
+      }
+    },
+    {
+      "id": "elephant",
+      "displayName": "African elephant",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The African elephant (Loxodonta africana), tracked as its own node by the source study. A mixed feeder on grasses and woody plants, and an ecosystem engineer that pushes over trees; no predator in the web takes an adult.",
+      "layout": {
+        "x": 95,
+        "y": 30
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/African_bush_elephant",
+        "iNaturalist": "https://www.inaturalist.org/taxa/43694-Loxodonta-africana"
+      }
+    },
+    {
+      "id": "ants",
+      "displayName": "Ants",
+      "kind": "functional-group",
+      "trophicLevel": 2.3,
+      "functionalRole": "primary-consumer",
+      "description": "Savanna ants, including ecosystem engineers that turn and aerate the soil. Functional group pooling the source's Formicidae (ant) node; omnivorous, taking seeds, termites and decaying matter.",
+      "layout": {
+        "x": 8,
+        "y": 34
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Ant"
+      }
+    },
+    {
+      "id": "rodents-hares",
+      "displayName": "Savanna rodents & hares",
+      "kind": "functional-group",
+      "trophicLevel": 2.4,
+      "functionalRole": "primary-consumer",
+      "description": "The small-mammal swarm of the grasslands. Functional group pooling the source's 'fat or tree mouse' node - about thirty taxa including grass rats, gerbils, spiny mice, multimammate rats, dormice, cane rats, springhares and Cape hares - measured together as one node by the source study.",
+      "layout": {
+        "x": 40,
+        "y": 34
+      }
+    },
+    {
+      "id": "lion",
+      "displayName": "Lion",
+      "kind": "species",
+      "trophicLevel": 3.0,
+      "functionalRole": "top-consumer",
+      "description": "The lion (Panthera leo), tracked as its own node by the source study. The Serengeti's apex social predator, taking gazelles, large grazers and buffalo; nothing in the web preys on it.",
+      "layout": {
+        "x": 80,
+        "y": 52
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Lion",
+        "iNaturalist": "https://www.inaturalist.org/taxa/41965-Panthera-leo"
+      }
+    },
+    {
+      "id": "frogs",
+      "displayName": "Savanna frogs & toads",
+      "kind": "functional-group",
+      "trophicLevel": 3.1,
+      "functionalRole": "intermediate-consumer",
+      "description": "Frogs and toads of the savanna's pools and grass layer, snapping up ants, termites and other insects. Functional group pooling the source's fifteen frog and toad taxa (reed frogs, puddle frogs, rubber frogs, bullfrogs and toads) as one node, as grouped by the source study.",
+      "layout": {
+        "x": 20,
+        "y": 58
+      }
+    },
+    {
+      "id": "small-carnivores",
+      "displayName": "Mongooses & small carnivores",
+      "kind": "functional-group",
+      "trophicLevel": 3.1,
+      "functionalRole": "intermediate-consumer",
+      "description": "The small hunters of the grass layer. Functional group pooling the source's 'dwarf mongoose' node - dwarf, banded, slender, marsh, Egyptian and white-tailed mongooses, the zorilla, two genets, the palm civet and the African wild cat - measured together by the source study.",
+      "layout": {
+        "x": 42,
+        "y": 64
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Mongoose"
+      }
+    },
+    {
+      "id": "jackals",
+      "displayName": "Jackals, honey badger & aardwolf",
+      "kind": "functional-group",
+      "trophicLevel": 3.1,
+      "functionalRole": "intermediate-consumer",
+      "description": "Medium-sized omnivorous carnivores. Functional group pooling the source's 'black-backed jackal' node - black-backed, golden and side-striped jackals plus the honey badger, the termite-eating aardwolf and the African civet - grouped by the source study on their shared, broad diets.",
+      "layout": {
+        "x": 60,
+        "y": 64
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Black-backed_jackal"
+      }
+    },
+    {
+      "id": "wild-dog-cheetah",
+      "displayName": "African wild dog & cheetah",
+      "kind": "functional-group",
+      "trophicLevel": 3.1,
+      "functionalRole": "top-consumer",
+      "description": "The savanna's two coursers - hunters that run down medium prey in the open. Functional group pooling the source's 'African wild dog' node: the wild dog (Lycaon pictus) and the cheetah (Acinonyx jubatus), grouped by the source study because both hunt gazelles and young large grazers in the same way.",
+      "layout": {
+        "x": 90,
+        "y": 64
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/African_wild_dog",
+        "iNaturalist": "https://www.inaturalist.org/taxa/42070-Lycaon-pictus"
+      }
+    },
+    {
+      "id": "leopard-hyena",
+      "displayName": "Leopard & spotted hyena",
+      "kind": "functional-group",
+      "trophicLevel": 3.4,
+      "functionalRole": "top-consumer",
+      "description": "The powerful solitary hunter and the bone-cracking clan hunter-scavenger. Functional group pooling the source's 'Leopard' node: the leopard (Panthera pardus) and the spotted hyena (Crocuta crocuta), grouped by the source study on their shared diet of gazelles, large grazers and small mammals.",
+      "layout": {
+        "x": 68,
+        "y": 74
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Spotted_hyena",
+        "iNaturalist": "https://www.inaturalist.org/taxa/41955-Crocuta-crocuta"
+      }
+    },
+    {
+      "id": "nile-crocodile",
+      "displayName": "Nile crocodile",
+      "kind": "species",
+      "trophicLevel": 3.7,
+      "functionalRole": "top-consumer",
+      "description": "The Nile crocodile (Crocodylus niloticus), tracked as its own node by the source study. The ambush predator of the rivers - famous for taking migrating wildebeest at the crossings - and recorded by the source as taking even leopards at the water's edge.",
+      "layout": {
+        "x": 20,
+        "y": 82
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Nile_crocodile",
+        "iNaturalist": "https://www.inaturalist.org/taxa/34100-Crocodylus-niloticus"
+      }
+    },
+    {
+      "id": "mamba-python",
+      "displayName": "Black mamba & rock python",
+      "kind": "functional-group",
+      "trophicLevel": 3.8,
+      "functionalRole": "intermediate-consumer",
+      "description": "The savanna's two largest hunting snakes, taking rodents and frogs. Functional group pooling the source's 'black mamba' node: the black mamba (Dendroaspis polylepis) and the African rock python (Python sebae), grouped by the source study; both fall prey to eagles.",
+      "layout": {
+        "x": 40,
+        "y": 82
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Black_mamba"
+      }
+    },
+    {
+      "id": "vulture-eagle",
+      "displayName": "Hooded vulture & tawny eagle",
+      "kind": "functional-group",
+      "trophicLevel": 4.1,
+      "functionalRole": "top-consumer",
+      "description": "A small scavenger and a powerful bird of prey. Functional group pooling the source's 'hooded vulture' node: the hooded vulture (Necrosyrtes monachus) and the tawny eagle (Aquila rapax), grouped by the source study; the eagle accounts for the live prey (rodents, snakes) in this node's diet.",
+      "layout": {
+        "x": 58,
+        "y": 92
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Hooded_vulture"
+      }
+    },
+    {
+      "id": "large-raptors",
+      "displayName": "Eagles & large owls",
+      "kind": "functional-group",
+      "trophicLevel": 4.1,
+      "functionalRole": "top-consumer",
+      "description": "The savanna's top avian hunters. Functional group pooling the source's 'African marsh owl' node - martial eagle, African crowned eagle, African hawk-eagle, bateleur, Verreaux's eagle-owl and the marsh owl - raptors powerful enough to take mongooses and large snakes, grouped by the source study.",
+      "layout": {
+        "x": 84,
+        "y": 92
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Martial_eagle"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "decaying-matter",
+      "predator": "ants",
+      "qualitative": true
+    },
+    {
+      "prey": "decaying-matter",
+      "predator": "harvester-termites",
+      "qualitative": true
+    },
+    {
+      "prey": "decaying-matter",
+      "predator": "flies",
+      "qualitative": true
+    },
+    {
+      "prey": "decaying-matter",
+      "predator": "crickets-grasshoppers",
+      "qualitative": true
+    },
+    {
+      "prey": "decaying-matter",
+      "predator": "rodents-hares",
+      "qualitative": true
+    },
+    {
+      "prey": "decaying-matter",
+      "predator": "jackals",
+      "qualitative": true
+    },
+    {
+      "prey": "fruits-nectar",
+      "predator": "flies",
+      "qualitative": true
+    },
+    {
+      "prey": "fruits-nectar",
+      "predator": "rodents-hares",
+      "qualitative": true
+    },
+    {
+      "prey": "fruits-nectar",
+      "predator": "small-carnivores",
+      "qualitative": true
+    },
+    {
+      "prey": "fruits-nectar",
+      "predator": "gazelles",
+      "qualitative": true
+    },
+    {
+      "prey": "grains-seeds",
+      "predator": "rodents-hares",
+      "qualitative": true
+    },
+    {
+      "prey": "grains-seeds",
+      "predator": "gazelles",
+      "qualitative": true
+    },
+    {
+      "prey": "grasses-herbs",
+      "predator": "harvester-termites",
+      "qualitative": true
+    },
+    {
+      "prey": "grasses-herbs",
+      "predator": "crickets-grasshoppers",
+      "qualitative": true
+    },
+    {
+      "prey": "grasses-herbs",
+      "predator": "rodents-hares",
+      "qualitative": true
+    },
+    {
+      "prey": "grasses-herbs",
+      "predator": "gazelles",
+      "qualitative": true
+    },
+    {
+      "prey": "grasses-herbs",
+      "predator": "large-grazers",
+      "qualitative": true
+    },
+    {
+      "prey": "grasses-herbs",
+      "predator": "buffalo",
+      "qualitative": true
+    },
+    {
+      "prey": "grasses-herbs",
+      "predator": "elephant",
+      "qualitative": true
+    },
+    {
+      "prey": "trees-shrubs",
+      "predator": "ants",
+      "qualitative": true
+    },
+    {
+      "prey": "trees-shrubs",
+      "predator": "crickets-grasshoppers",
+      "qualitative": true
+    },
+    {
+      "prey": "trees-shrubs",
+      "predator": "rodents-hares",
+      "qualitative": true
+    },
+    {
+      "prey": "trees-shrubs",
+      "predator": "gazelles",
+      "qualitative": true
+    },
+    {
+      "prey": "trees-shrubs",
+      "predator": "large-grazers",
+      "qualitative": true
+    },
+    {
+      "prey": "trees-shrubs",
+      "predator": "giraffe",
+      "qualitative": true
+    },
+    {
+      "prey": "trees-shrubs",
+      "predator": "elephant",
+      "qualitative": true
+    },
+    {
+      "prey": "ants",
+      "predator": "frogs",
+      "qualitative": true
+    },
+    {
+      "prey": "ants",
+      "predator": "rodents-hares",
+      "qualitative": true
+    },
+    {
+      "prey": "ants",
+      "predator": "small-carnivores",
+      "qualitative": true
+    },
+    {
+      "prey": "ants",
+      "predator": "jackals",
+      "qualitative": true
+    },
+    {
+      "prey": "harvester-termites",
+      "predator": "ants",
+      "qualitative": true
+    },
+    {
+      "prey": "harvester-termites",
+      "predator": "frogs",
+      "qualitative": true
+    },
+    {
+      "prey": "harvester-termites",
+      "predator": "rodents-hares",
+      "qualitative": true
+    },
+    {
+      "prey": "harvester-termites",
+      "predator": "small-carnivores",
+      "qualitative": true
+    },
+    {
+      "prey": "harvester-termites",
+      "predator": "jackals",
+      "qualitative": true
+    },
+    {
+      "prey": "flies",
+      "predator": "frogs",
+      "qualitative": true
+    },
+    {
+      "prey": "flies",
+      "predator": "small-carnivores",
+      "qualitative": true
+    },
+    {
+      "prey": "flies",
+      "predator": "jackals",
+      "qualitative": true
+    },
+    {
+      "prey": "crickets-grasshoppers",
+      "predator": "frogs",
+      "qualitative": true
+    },
+    {
+      "prey": "crickets-grasshoppers",
+      "predator": "rodents-hares",
+      "qualitative": true
+    },
+    {
+      "prey": "crickets-grasshoppers",
+      "predator": "small-carnivores",
+      "qualitative": true
+    },
+    {
+      "prey": "crickets-grasshoppers",
+      "predator": "jackals",
+      "qualitative": true
+    },
+    {
+      "prey": "frogs",
+      "predator": "small-carnivores",
+      "qualitative": true
+    },
+    {
+      "prey": "frogs",
+      "predator": "jackals",
+      "qualitative": true
+    },
+    {
+      "prey": "frogs",
+      "predator": "mamba-python",
+      "qualitative": true
+    },
+    {
+      "prey": "frogs",
+      "predator": "leopard-hyena",
+      "qualitative": true
+    },
+    {
+      "prey": "rodents-hares",
+      "predator": "large-raptors",
+      "qualitative": true
+    },
+    {
+      "prey": "rodents-hares",
+      "predator": "small-carnivores",
+      "qualitative": true
+    },
+    {
+      "prey": "rodents-hares",
+      "predator": "vulture-eagle",
+      "qualitative": true
+    },
+    {
+      "prey": "rodents-hares",
+      "predator": "jackals",
+      "qualitative": true
+    },
+    {
+      "prey": "rodents-hares",
+      "predator": "wild-dog-cheetah",
+      "qualitative": true
+    },
+    {
+      "prey": "rodents-hares",
+      "predator": "mamba-python",
+      "qualitative": true
+    },
+    {
+      "prey": "rodents-hares",
+      "predator": "leopard-hyena",
+      "qualitative": true
+    },
+    {
+      "prey": "small-carnivores",
+      "predator": "large-raptors",
+      "qualitative": true
+    },
+    {
+      "prey": "gazelles",
+      "predator": "wild-dog-cheetah",
+      "qualitative": true
+    },
+    {
+      "prey": "gazelles",
+      "predator": "leopard-hyena",
+      "qualitative": true
+    },
+    {
+      "prey": "gazelles",
+      "predator": "lion",
+      "qualitative": true
+    },
+    {
+      "prey": "mamba-python",
+      "predator": "large-raptors",
+      "qualitative": true
+    },
+    {
+      "prey": "mamba-python",
+      "predator": "vulture-eagle",
+      "qualitative": true
+    },
+    {
+      "prey": "leopard-hyena",
+      "predator": "nile-crocodile",
+      "qualitative": true
+    },
+    {
+      "prey": "large-grazers",
+      "predator": "wild-dog-cheetah",
+      "qualitative": true
+    },
+    {
+      "prey": "large-grazers",
+      "predator": "leopard-hyena",
+      "qualitative": true
+    },
+    {
+      "prey": "large-grazers",
+      "predator": "lion",
+      "qualitative": true
+    },
+    {
+      "prey": "large-grazers",
+      "predator": "nile-crocodile",
+      "qualitative": true
+    },
+    {
+      "prey": "buffalo",
+      "predator": "lion",
+      "qualitative": true
+    }
+  ]
+}

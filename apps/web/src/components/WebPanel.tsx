@@ -83,6 +83,12 @@ export function WebPanel({
             Machine-readable source →
           </a>
         )}
+        <details className="mt-2.5">
+          <summary className="cursor-pointer text-[11.5px] font-semibold uppercase tracking-[0.6px] text-canopy">
+            Curation &amp; aggregation notes
+          </summary>
+          <p className="mt-1.5 text-[11.5px] leading-relaxed text-muted">{web.meta.licenseNote}</p>
+        </details>
         <p className="mt-2 text-[11.5px] text-muted">
           Reuse requires citing the original source — see{' '}
           <Link to="/about" className="font-medium text-accent hover:underline">

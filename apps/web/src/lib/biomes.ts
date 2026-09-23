@@ -22,10 +22,17 @@ export interface BiomeInfo {
 export const BIOMES: Record<Biome, BiomeInfo> = {
   marine: {
     name: 'Marine',
-    subtitle: 'Oceans & estuaries',
+    subtitle: 'Oceans & coasts',
     description:
       'Saltwater webs from kelp forests to open ocean, where a handful of forage species often carry the whole system.',
     swatch: `linear-gradient(135deg, ${colors.trophic.midLevel}, ${colors.trophic.primaryConsumers})`,
+  },
+  estuary: {
+    name: 'Estuary',
+    subtitle: 'Where rivers meet the sea',
+    description:
+      'Brackish webs at the river mouth, built on detritus and filter feeders and serving as nurseries for ocean fish.',
+    swatch: `linear-gradient(135deg, ${colors.accent}, ${colors.trophic.producers})`,
   },
   freshwater: {
     name: 'Freshwater',
@@ -74,6 +81,7 @@ export const BIOMES: Record<Biome, BiomeInfo> = {
 /** Display order for the browse grid (matches the schema enum order). */
 export const BIOME_ORDER: Biome[] = [
   'marine',
+  'estuary',
   'freshwater',
   'terrestrial-forest',
   'grassland',

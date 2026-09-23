@@ -1,6 +1,24 @@
 {
   "webs": [
     {
+      "id": "chesapeake-bay",
+      "name": "Chesapeake Bay",
+      "biome": "estuary",
+      "location": "Chesapeake Bay, mesohaline reach, USA",
+      "nodeCount": 19,
+      "provenance": "empirical",
+      "tagline": "The estuary that launched ecosystem network analysis"
+    },
+    {
+      "id": "little-rock-lake",
+      "name": "Little Rock Lake",
+      "biome": "freshwater",
+      "location": "Little Rock Lake, Vilas County, Wisconsin, USA",
+      "nodeCount": 20,
+      "provenance": "empirical",
+      "tagline": "The bog-lake web that taught ecology how resolution changes everything"
+    },
+    {
       "id": "tuesday-lake",
       "name": "Tuesday Lake",
       "biome": "freshwater",
@@ -10,6 +28,15 @@
       "tagline": "A whole-lake trophic cascade, measured by experiment"
     },
     {
+      "id": "serengeti",
+      "name": "Serengeti",
+      "biome": "grassland",
+      "location": "Serengeti National Park, Tanzania",
+      "nodeCount": 25,
+      "provenance": "empirical",
+      "tagline": "The most-studied savanna on Earth - and what extinction does to it"
+    },
+    {
       "id": "shortgrass-prairie",
       "name": "Shortgrass Prairie",
       "biome": "grassland",
@@ -17,15 +44,6 @@
       "nodeCount": 17,
       "provenance": "empirical",
       "tagline": "The hidden web under the grass: microbes, mites and nematodes"
-    },
-    {
-      "id": "chesapeake-bay",
-      "name": "Chesapeake Bay",
-      "biome": "marine",
-      "location": "Chesapeake Bay, mesohaline reach, USA",
-      "nodeCount": 19,
-      "provenance": "empirical",
-      "tagline": "The estuary that launched ecosystem network analysis"
     },
     {
       "id": "prince-william-sound",

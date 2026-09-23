@@ -3,7 +3,7 @@
     "id": "chesapeake-bay",
     "name": "Chesapeake Bay",
     "location": "Chesapeake Bay, mesohaline reach, USA",
-    "biome": "marine",
+    "biome": "estuary",
     "lat": 38.0,
     "lng": -76.4,
     "provenance": "empirical",

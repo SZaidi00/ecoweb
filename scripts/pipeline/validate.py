@@ -50,6 +50,7 @@ MAX_NODES = 25
 
 BIOMES = {
     "marine",
+    "estuary",
     "freshwater",
     "terrestrial-forest",
     "grassland",

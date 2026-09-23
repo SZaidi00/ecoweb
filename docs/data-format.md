@@ -47,7 +47,7 @@ No additional top-level properties are allowed.
 | `id` | string | yes | Stable kebab-case identifier (`^[a-z0-9]+(-[a-z0-9]+)*$`). The file must be named `<id>.json`. |
 | `name` | string | yes | Human-readable ecosystem name (e.g. "Prince William Sound"). |
 | `location` | string | yes | Human-readable location (e.g. "Prince William Sound, Alaska, USA"). |
-| `biome` | enum | yes | One of `marine`, `freshwater`, `terrestrial-forest`, `grassland`, `tundra`, `desert`, `wetland`. |
+| `biome` | enum | yes | One of `marine`, `estuary`, `freshwater`, `terrestrial-forest`, `grassland`, `tundra`, `desert`, `wetland`. |
 | `lat` | number | yes | Latitude of a representative point, −90..90. For a future map view. |
 | `lng` | number | yes | Longitude of a representative point, −180..180. |
 | `provenance` | enum | yes | `empirical` (one published study) or `composite` (curated from multiple sources). |

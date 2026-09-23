@@ -10,6 +10,7 @@
 
 export type Biome =
   | 'marine'
+  | 'estuary'
   | 'freshwater'
   | 'terrestrial-forest'
   | 'grassland'

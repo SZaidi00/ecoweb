@@ -1,0 +1,1017 @@
+{
+  "meta": {
+    "id": "little-rock-lake",
+    "name": "Little Rock Lake",
+    "location": "Little Rock Lake, Vilas County, Wisconsin, USA",
+    "biome": "freshwater",
+    "lat": 46.0,
+    "lng": -89.7,
+    "provenance": "empirical",
+    "tagline": "The bog-lake web that taught ecology how resolution changes everything",
+    "citations": [
+      "Martinez, N.D. 1991. Artifacts or attributes? Effects of resolution on the Little Rock Lake food web. Ecological Monographs 61(4): 367-392. https://doi.org/10.2307/2937047",
+      "Netzschleuder network catalogue (graph-tool), entry foodweb_little_rock: machine-readable redistribution of the Martinez (1991) web via the Ma'an lab qualitative-networks collection, 183 taxa / 2,494 links. https://networks.skewed.de/net/foodweb_little_rock"
+    ],
+    "sourceUrl": "https://networks.skewed.de/net/foodweb_little_rock",
+    "licenseNote": "Structure is the published Little Rock Lake food web of Martinez (1991, Ecological Monographs 61: 367-392) - itself a study of how AGGREGATION changes food-web structure, making this web a real-world illustration of why this atlas never invents resolution the data does not have. The machine-readable copy was obtained from the Netzschleuder/graph-tool catalogue (entry foodweb_little_rock, derived from the Ma'ayan lab qualitative-networks distribution of Martinez's data) and verified to be edge-identical to that original distribution (183 nodes / 2,494 links, same per-node degree multiset; the web collapses to 94 trophic species, matching the paper's ~92). Curation and pooling: the 183 taxa were pooled to 20 nodes following the source file's own taxonomic group labels (e.g. all 31 Diptera - chironomid midges plus the predatory phantom midges Chaoborus - form one node); a pooled edge exists wherever at least one source link connected the two groups, and all edges are qualitative (the source has no weights). Documented curation judgments: (1) in the distributed file the diet records of fishes, dragonflies, predatory water bugs and beetles, alderfly, spongillafly and water mites were entered transposed (the consumer listed as food of its own prey, e.g. largemouth bass recorded as prey of chironomid midges and rotifers); those 114 fish and comparable predatory-insect records were reversed, while fish-as-prey-of-fish and fish-egg links were kept as published; (2) one unidentified taxon ('?') was dropped; (3) within-group links are not drawn as edges; (4) one mortality-flow record (dead sponge to fine organic matter) and three detritus-to-algae nutrient-uptake records were omitted as they are not consumption. Remaining cross-links among the littoral invertebrate groups reflect the famously omnivorous, gut-content-based records of the source web - not curation error. Algal material recorded in fish guts (incidental ingestion) is kept, as published. Reuse requires citing Martinez (1991).",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-09-23"
+  },
+  "nodes": [
+    {
+      "id": "detritus",
+      "displayName": "Detritus (fine organic matter & fish eggs)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Non-living food base of this bog lake: fine particles of dead plankton, plant material and faeces, plus fish eggs. Functional group pooling the source's two non-living food resources (fine organic matter and fish eggs), which the source recorded as eaten by much of the bottom-dwelling invertebrate community.",
+      "layout": {
+        "x": 84,
+        "y": 5
+      }
+    },
+    {
+      "id": "phytoplankton",
+      "displayName": "Phytoplankton (diatoms, green & golden algae)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Microscopic algae of the open water. Functional group pooling 25 source taxa - the golden algae and diatoms Tabellaria, Synura, Synedra, Mallomonas, Dinobryon and Asterionella, fifteen green algae including Scenedesmus and the desmids (Cosmarium, Staurastrum and kin), and the flagellates Cryptomonas, Chroomonas, Trachelomonas and Phacus - following the source file's own taxonomic group labels.",
+      "layout": {
+        "x": 12,
+        "y": 5
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Phytoplankton"
+      }
+    },
+    {
+      "id": "cyanobacteria",
+      "displayName": "Cyanobacteria (blue-green algae)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Photosynthetic bacteria, including colonial forms that are poor-quality food for many grazers. Functional group pooling the source's nine cyanobacteria taxa - Anabaena, Aphanothece, Rhabdoderma, Coelosphaerium, Gomphosphaeria, Aphanocapsa, Merismopedia, Gloeothece and Chroococcus.",
+      "layout": {
+        "x": 34,
+        "y": 5
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Cyanobacteria"
+      }
+    },
+    {
+      "id": "filamentous-algae",
+      "displayName": "Filamentous algae (the periphyton mats)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Mat-forming filamentous algae of the lake's shallow littoral zone, the physical scaffolding in which most of the invertebrate web lives. Functional group pooling the source's 25 filamentous algae taxa - Spirogyra, Zygnema, Mougeotia, Oedogonium, Bulbochaete, Oscillatoria, Lyngbya, Phormidium and kin.",
+      "layout": {
+        "x": 58,
+        "y": 5
+      }
+    },
+    {
+      "id": "freshwater-sponges",
+      "displayName": "Freshwater sponges",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Encrusting sponges filtering fine organic matter from the water. Functional group pooling the source's three sponge taxa - Spongilla lacustris, Ephydatia muelleri and Corvomeyenia everetti. Spongilla is recorded as food for an unusually broad guild of scrapers in the source web.",
+      "layout": {
+        "x": 68,
+        "y": 22
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Spongilla_lacustris"
+      }
+    },
+    {
+      "id": "rotifers",
+      "displayName": "Rotifers",
+      "kind": "functional-group",
+      "trophicLevel": 2.5,
+      "functionalRole": "primary-consumer",
+      "description": "Microscopic swimming animals of the open water; most graze algae and detritus, while Asplanchna and Trichocerca are predators of other rotifers and small zooplankton. Functional group pooling the source's 14 pelagic rotifer taxa - four Keratella species, two Kellicottia, two Polyarthra, Synchaeta, Gastropus, Asplanchna, Trichocerca, Conochiloides and Conochilus.",
+      "layout": {
+        "x": 20,
+        "y": 22
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Rotifer"
+      }
+    },
+    {
+      "id": "zooplankton",
+      "displayName": "Water fleas & pelagic copepods",
+      "kind": "functional-group",
+      "trophicLevel": 2.2,
+      "functionalRole": "primary-consumer",
+      "description": "The classic zooplankton: water fleas (Daphnia parvula and D. galeata, Bosmina, Eubosmina, Holopedium, Diaphanosoma) alongside the predatory Leptodora and Polyphemus, five pelagic copepods (Epischura, Tropocyclops, Mesocyclops, Diacyclops, Diaptomus) and their juvenile stages. Functional group pooling the source's 16 pelagic zooplankton taxa, which the source shows sharing most of their predators - exactly the redundancy Martinez's 1991 resolution study quantified.",
+      "layout": {
+        "x": 42,
+        "y": 30
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Daphnia"
+      }
+    },
+    {
+      "id": "benthic-microcrustaceans",
+      "displayName": "Benthic microcrustaceans",
+      "kind": "functional-group",
+      "trophicLevel": 2.2,
+      "functionalRole": "primary-consumer",
+      "description": "Tiny crustaceans browsing the surfaces of plants and algal mats - twelve chydorid water fleas (Sida, Scapholeberis, Alona and kin) and six bottom-dwelling copepods (harpacticoids and cyclopoids). Functional group pooling the source's 18 benthic cladoceran and copepod taxa, which share the same diet and predators in the source web.",
+      "layout": {
+        "x": 74,
+        "y": 30
+      }
+    },
+    {
+      "id": "snails-and-clams",
+      "displayName": "Snails & fingernail clams",
+      "kind": "functional-group",
+      "trophicLevel": 2.2,
+      "functionalRole": "primary-consumer",
+      "description": "The lake's molluscs: the large grazing snail Campeloma decisum and small fingernail clams (Sphaeriidae and other bivalves). Functional group pooling the source's three mollusc taxa; in the source's gut-content records Campeloma is an extreme generalist, its scraped-biofilm diet registering everything from algae to small invertebrates.",
+      "layout": {
+        "x": 8,
+        "y": 30
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Campeloma_decisum"
+      }
+    },
+    {
+      "id": "midges",
+      "displayName": "Midges & phantom midges (Diptera larvae)",
+      "kind": "functional-group",
+      "trophicLevel": 2.3,
+      "functionalRole": "primary-consumer",
+      "description": "Aquatic larvae of two-winged flies, the most diverse animal group in the lake. Functional group pooling the source's 31 Diptera taxa - mostly detritus- and algae-eating chironomid midges (Chironomus, Polypedilum, Tanytarsus and kin), plus the predatory tanypods (Procladius) and the glass-like phantom midge larvae Chaoborus, which hunt small zooplankton. Pooling predators and grazers here follows the source's own Diptera grouping.",
+      "layout": {
+        "x": 26,
+        "y": 38
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Chironomidae"
+      }
+    },
+    {
+      "id": "mayflies",
+      "displayName": "Mayfly nymphs",
+      "kind": "functional-group",
+      "trophicLevel": 2.3,
+      "functionalRole": "primary-consumer",
+      "description": "Aquatic juvenile mayflies grazing detritus and microcrustaceans in the shallows. Functional group pooling the source's two mayfly taxa, Caenis and Leptophlebia; Leptophlebia is an opportunistic omnivore, hence links to small animal prey.",
+      "layout": {
+        "x": 58,
+        "y": 38
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Mayfly"
+      }
+    },
+    {
+      "id": "caddisflies",
+      "displayName": "Caddisfly larvae & aquatic moth larvae",
+      "kind": "functional-group",
+      "trophicLevel": 2.6,
+      "functionalRole": "primary-consumer",
+      "description": "Case- and net-building aquatic larvae. Functional group pooling the source's seven caddisfly taxa (Polycentropus, Molanna, Banksiola, Agrypnia, Limnephilus, Mystacides, Oecetis) with one aquatic moth larva (a Parapoynx relative); most scrape algae and detritus, while Polycentropus is a net-spinning predator.",
+      "layout": {
+        "x": 12,
+        "y": 44
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Caddisfly"
+      }
+    },
+    {
+      "id": "amphipods",
+      "displayName": "Scud (Crangonyx gracilis)",
+      "kind": "species",
+      "trophicLevel": 2.4,
+      "functionalRole": "primary-consumer",
+      "description": "The scud or side-swimmer Crangonyx gracilis, tracked as its own taxon in the source. An omnivorous crustacean of the littoral zone, eating detritus, algae and small invertebrates, and scavenging fish eggs; a staple prey of the lake's fishes.",
+      "layout": {
+        "x": 88,
+        "y": 44
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Crangonyx"
+      }
+    },
+    {
+      "id": "flatworms",
+      "displayName": "Flatworms (triclads)",
+      "kind": "functional-group",
+      "trophicLevel": 2.8,
+      "functionalRole": "intermediate-consumer",
+      "description": "Free-living flatworms gliding over the bottom, predators and scavengers of small invertebrates. Functional group pooling the source's triclad flatworms, which the source recorded as one undivided taxon (Turbellaria Tricladida).",
+      "layout": {
+        "x": 38,
+        "y": 55
+      }
+    },
+    {
+      "id": "worms-and-leeches",
+      "displayName": "Oligochaete worms & leeches",
+      "kind": "functional-group",
+      "trophicLevel": 2.8,
+      "functionalRole": "intermediate-consumer",
+      "description": "Segmented worms of the sediment and their predatory relatives the leeches. Functional group pooling the source's two annelid taxa - an undivided oligochaete group (detritus feeders) and the leeches (Hirudinea, predators of worms, snails and insect larvae) - pooled here because each is a single source taxon of the same annelid grade.",
+      "layout": {
+        "x": 66,
+        "y": 55
+      }
+    },
+    {
+      "id": "young-fishes",
+      "displayName": "Young-of-year fishes",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.9,
+      "functionalRole": "intermediate-consumer",
+      "description": "This year's juvenile black crappie, rock bass, largemouth bass and yellow perch. Life-stage group aggregated by the source itself, which recorded the diets of young fishes separately from adults; they feed on zooplankton and small invertebrates and are eaten by adult fishes.",
+      "layout": {
+        "x": 14,
+        "y": 55
+      }
+    },
+    {
+      "id": "predatory-water-bugs",
+      "displayName": "Predatory water bugs, beetles & mites",
+      "kind": "functional-group",
+      "trophicLevel": 3.2,
+      "functionalRole": "intermediate-consumer",
+      "description": "Hunting insects and mites of the shallows and the water surface. Functional group pooling the source's eight predatory taxa - backswimmers (Notonectidae), water striders (Gerris) and smaller water measurers (Veliidae), the diving beetle Hydroporus and whirligig Gyrinus, the alderfly larva Sialis, the spongillafly Climacia (a sponge specialist) and water mites (Hydracarina).",
+      "layout": {
+        "x": 48,
+        "y": 68
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Notonectidae"
+      }
+    },
+    {
+      "id": "minnows",
+      "displayName": "Minnows (shiner & mudminnow)",
+      "kind": "functional-group",
+      "trophicLevel": 3.3,
+      "functionalRole": "intermediate-consumer",
+      "description": "Small omnivorous fishes: the golden shiner (Notemigonus crysoleucus) and the central mudminnow (Umbra limi). Functional group pooling the source's two minnow taxa, both recorded eating zooplankton and small benthic invertebrates; the source web records no predators for them (their real predators - birds and larger fish - are outside its scope).",
+      "layout": {
+        "x": 22,
+        "y": 68
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Golden_shiner"
+      }
+    },
+    {
+      "id": "dragonfly-nymphs",
+      "displayName": "Dragonfly & damselfly nymphs",
+      "kind": "functional-group",
+      "trophicLevel": 3.4,
+      "functionalRole": "intermediate-consumer",
+      "description": "Aquatic juvenile dragonflies and damselflies (Enallagma, Sympetrum, Libellula, Epitheca), ambush predators of midges, microcrustaceans and each other. Functional group pooling the source's four odonate taxa.",
+      "layout": {
+        "x": 76,
+        "y": 76
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Dragonfly"
+      }
+    },
+    {
+      "id": "adult-fishes",
+      "displayName": "Adult fishes (bass, perch, crappie, rock bass)",
+      "kind": "functional-group",
+      "trophicLevel": 4.0,
+      "functionalRole": "top-consumer",
+      "description": "The lake's top predators: adult largemouth bass, yellow perch, black crappie and rock bass. Functional group pooling the source's four adult fish taxa; the source's gut-content records show them eating invertebrates and young fishes, with incidental algal and plant material. Nothing in the web eats them.",
+      "layout": {
+        "x": 45,
+        "y": 90
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Largemouth_bass",
+        "iNaturalist": "https://www.inaturalist.org/taxa/49563-Micropterus-salmoides"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "amphipods",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "amphipods",
+      "predator": "dragonfly-nymphs",
+      "qualitative": true
+    },
+    {
+      "prey": "amphipods",
+      "predator": "flatworms",
+      "qualitative": true
+    },
+    {
+      "prey": "amphipods",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "amphipods",
+      "predator": "minnows",
+      "qualitative": true
+    },
+    {
+      "prey": "amphipods",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "amphipods",
+      "predator": "snails-and-clams",
+      "qualitative": true
+    },
+    {
+      "prey": "amphipods",
+      "predator": "worms-and-leeches",
+      "qualitative": true
+    },
+    {
+      "prey": "amphipods",
+      "predator": "young-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "amphipods",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "caddisflies",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "dragonfly-nymphs",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "flatworms",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "mayflies",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "minnows",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "snails-and-clams",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "worms-and-leeches",
+      "qualitative": true
+    },
+    {
+      "prey": "benthic-microcrustaceans",
+      "predator": "young-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "amphipods",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "benthic-microcrustaceans",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "dragonfly-nymphs",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "flatworms",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "mayflies",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "minnows",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "snails-and-clams",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "worms-and-leeches",
+      "qualitative": true
+    },
+    {
+      "prey": "caddisflies",
+      "predator": "young-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "cyanobacteria",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "cyanobacteria",
+      "predator": "caddisflies",
+      "qualitative": true
+    },
+    {
+      "prey": "cyanobacteria",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "cyanobacteria",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "cyanobacteria",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "cyanobacteria",
+      "predator": "zooplankton",
+      "qualitative": true
+    },
+    {
+      "prey": "detritus",
+      "predator": "amphipods",
+      "qualitative": true
+    },
+    {
+      "prey": "detritus",
+      "predator": "benthic-microcrustaceans",
+      "qualitative": true
+    },
+    {
+      "prey": "detritus",
+      "predator": "caddisflies",
+      "qualitative": true
+    },
+    {
+      "prey": "detritus",
+      "predator": "flatworms",
+      "qualitative": true
+    },
+    {
+      "prey": "detritus",
+      "predator": "freshwater-sponges",
+      "qualitative": true
+    },
+    {
+      "prey": "detritus",
+      "predator": "mayflies",
+      "qualitative": true
+    },
+    {
+      "prey": "detritus",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "detritus",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "detritus",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "detritus",
+      "predator": "snails-and-clams",
+      "qualitative": true
+    },
+    {
+      "prey": "detritus",
+      "predator": "worms-and-leeches",
+      "qualitative": true
+    },
+    {
+      "prey": "dragonfly-nymphs",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "filamentous-algae",
+      "predator": "caddisflies",
+      "qualitative": true
+    },
+    {
+      "prey": "filamentous-algae",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "filamentous-algae",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "flatworms",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "flatworms",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "flatworms",
+      "predator": "minnows",
+      "qualitative": true
+    },
+    {
+      "prey": "flatworms",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "flatworms",
+      "predator": "worms-and-leeches",
+      "qualitative": true
+    },
+    {
+      "prey": "flatworms",
+      "predator": "young-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "freshwater-sponges",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "freshwater-sponges",
+      "predator": "benthic-microcrustaceans",
+      "qualitative": true
+    },
+    {
+      "prey": "freshwater-sponges",
+      "predator": "dragonfly-nymphs",
+      "qualitative": true
+    },
+    {
+      "prey": "freshwater-sponges",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "freshwater-sponges",
+      "predator": "minnows",
+      "qualitative": true
+    },
+    {
+      "prey": "freshwater-sponges",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "freshwater-sponges",
+      "predator": "young-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "freshwater-sponges",
+      "predator": "zooplankton",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "amphipods",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "benthic-microcrustaceans",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "caddisflies",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "dragonfly-nymphs",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "flatworms",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "minnows",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "snails-and-clams",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "worms-and-leeches",
+      "qualitative": true
+    },
+    {
+      "prey": "mayflies",
+      "predator": "young-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "midges",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "midges",
+      "predator": "amphipods",
+      "qualitative": true
+    },
+    {
+      "prey": "midges",
+      "predator": "dragonfly-nymphs",
+      "qualitative": true
+    },
+    {
+      "prey": "midges",
+      "predator": "flatworms",
+      "qualitative": true
+    },
+    {
+      "prey": "midges",
+      "predator": "minnows",
+      "qualitative": true
+    },
+    {
+      "prey": "midges",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "midges",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "midges",
+      "predator": "snails-and-clams",
+      "qualitative": true
+    },
+    {
+      "prey": "midges",
+      "predator": "worms-and-leeches",
+      "qualitative": true
+    },
+    {
+      "prey": "midges",
+      "predator": "young-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "amphipods",
+      "qualitative": true
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "flatworms",
+      "qualitative": true
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "snails-and-clams",
+      "qualitative": true
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "worms-and-leeches",
+      "qualitative": true
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "zooplankton",
+      "qualitative": true
+    },
+    {
+      "prey": "predatory-water-bugs",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "predatory-water-bugs",
+      "predator": "dragonfly-nymphs",
+      "qualitative": true
+    },
+    {
+      "prey": "predatory-water-bugs",
+      "predator": "minnows",
+      "qualitative": true
+    },
+    {
+      "prey": "predatory-water-bugs",
+      "predator": "young-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "amphipods",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "benthic-microcrustaceans",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "caddisflies",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "flatworms",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "mayflies",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "minnows",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "snails-and-clams",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "worms-and-leeches",
+      "qualitative": true
+    },
+    {
+      "prey": "rotifers",
+      "predator": "young-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "snails-and-clams",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "snails-and-clams",
+      "predator": "amphipods",
+      "qualitative": true
+    },
+    {
+      "prey": "snails-and-clams",
+      "predator": "dragonfly-nymphs",
+      "qualitative": true
+    },
+    {
+      "prey": "snails-and-clams",
+      "predator": "flatworms",
+      "qualitative": true
+    },
+    {
+      "prey": "snails-and-clams",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "snails-and-clams",
+      "predator": "minnows",
+      "qualitative": true
+    },
+    {
+      "prey": "snails-and-clams",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "snails-and-clams",
+      "predator": "worms-and-leeches",
+      "qualitative": true
+    },
+    {
+      "prey": "snails-and-clams",
+      "predator": "young-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "worms-and-leeches",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "worms-and-leeches",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "worms-and-leeches",
+      "predator": "minnows",
+      "qualitative": true
+    },
+    {
+      "prey": "worms-and-leeches",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "worms-and-leeches",
+      "predator": "young-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "young-fishes",
+      "predator": "adult-fishes",
+      "qualitative": true
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "amphipods",
+      "qualitative": true
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "benthic-microcrustaceans",
+      "qualitative": true
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "caddisflies",
+      "qualitative": true
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "flatworms",
+      "qualitative": true
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "mayflies",
+      "qualitative": true
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "midges",
+      "qualitative": true
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "predatory-water-bugs",
+      "qualitative": true
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "rotifers",
+      "qualitative": true
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "snails-and-clams",
+      "qualitative": true
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "worms-and-leeches",
+      "qualitative": true
+    }
+  ]
+}

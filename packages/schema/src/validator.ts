@@ -18,6 +18,7 @@ const idSchema = z
 
 const biomeSchema = z.enum([
   'marine',
+  'estuary',
   'freshwater',
   'terrestrial-forest',
   'grassland',

@@ -46,6 +46,7 @@
           "type": "string",
           "enum": [
             "marine",
+            "estuary",
             "freshwater",
             "terrestrial-forest",
             "grassland",
