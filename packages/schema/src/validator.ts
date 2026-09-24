@@ -130,6 +130,8 @@ export const webIndexEntrySchema = z
     nodeCount: z.number().int().min(1),
     provenance: provenanceSchema,
     tagline: z.string().min(1).max(120),
+    lat: z.number().min(-90).max(90),
+    lng: z.number().min(-180).max(180),
   })
   .strict()
 

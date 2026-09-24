@@ -20,6 +20,7 @@ export default {
         edge: colors.edge,
         trophic: { ...colors.trophic },
         cascade: { ...colors.cascade },
+        biome: { ...colors.biome },
       },
       fontFamily: {
         heading: [...fonts.heading],

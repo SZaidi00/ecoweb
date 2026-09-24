@@ -145,6 +145,10 @@ export interface WebIndexEntry {
   /** Must equal the web file's actual node count. */
   nodeCount: number
   provenance: Provenance
+  /** Representative latitude of the study site, degrees (-90..90); matches the web's `meta.lat`. Drives the map pin. */
+  lat: number
+  /** Representative longitude of the study site, degrees (-180..180); matches the web's `meta.lng`. Drives the map pin. */
+  lng: number
   /** One-line hook shown on browse cards (max 120 chars); matches the web's `meta.tagline`. */
   tagline: string
 }

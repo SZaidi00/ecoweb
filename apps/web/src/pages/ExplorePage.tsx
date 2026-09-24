@@ -1,116 +1,142 @@
-import { Link } from 'react-router-dom'
+import { Suspense, lazy, useState, type ReactNode } from 'react'
 
 import { parseWebIndex } from '@foodweb/schema'
-import type { Biome, WebIndexEntry } from '@foodweb/schema'
 
-import { BIOMES, BIOME_ORDER } from '@/lib/biomes'
+import { BiomeGrid } from '@/components/BiomeGrid'
 import { getRawWebIndex } from '@/lib/webData'
+
+// The map (react-simple-maps + d3 + bundled TopoJSON) loads after the hero
+// paints, keeping first paint of the landing fast.
+const MapLanding = lazy(() =>
+  import('@/components/MapLanding').then((m) => ({ default: m.MapLanding })),
+)
+
+function MapFallback() {
+  // Matches the map's aspect and filter-bar height to avoid layout shift.
+  return (
+    <div role="status" aria-label="Loading map">
+      <div className="h-[30px] rounded-full bg-paper2" />
+      <div className="mt-4 aspect-[2/1] w-full animate-pulse rounded-2xl border border-hairline bg-paper2" />
+    </div>
+  )
+}
+
+type LandingView = 'map' | 'grid'
+
+const VIEW_STORAGE_KEY = 'foodweb.landingView'
 
 const focusRing =
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-canopy'
 
-function ProvenanceBadge({ provenance }: { provenance: WebIndexEntry['provenance'] }) {
-  return (
-    <span className="inline-flex items-center gap-1.5 rounded-full bg-canopySoft px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.6px] text-canopy">
-      <span className="h-1.5 w-1.5 rounded-full bg-canopy" />
-      {provenance === 'empirical' ? 'Empirical study' : 'Curated composite'}
-    </span>
-  )
+/** Session-persisted landing view; map is the default, grid is the fallback. */
+function initialView(): LandingView {
+  try {
+    return window.sessionStorage.getItem(VIEW_STORAGE_KEY) === 'grid' ? 'grid' : 'map'
+  } catch {
+    return 'map'
+  }
 }
 
-function EcoCard({ entry }: { entry: WebIndexEntry }) {
+function ViewToggle({ view, onChange }: { view: LandingView; onChange: (v: LandingView) => void }) {
+  const options: { id: LandingView; label: string; icon: ReactNode }[] = [
+    {
+      id: 'map',
+      label: 'Map',
+      icon: (
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.2" />
+          <path
+            d="M1.5 7h11M7 1.5c-2.8 3-2.8 8 0 11M7 1.5c2.8 3 2.8 8 0 11"
+            stroke="currentColor"
+            strokeWidth="1.2"
+          />
+        </svg>
+      ),
+    },
+    {
+      id: 'grid',
+      label: 'Grid',
+      icon: (
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <rect x="1.5" y="1.5" width="4.6" height="4.6" rx="1" stroke="currentColor" strokeWidth="1.2" />
+          <rect x="7.9" y="1.5" width="4.6" height="4.6" rx="1" stroke="currentColor" strokeWidth="1.2" />
+          <rect x="1.5" y="7.9" width="4.6" height="4.6" rx="1" stroke="currentColor" strokeWidth="1.2" />
+          <rect x="7.9" y="7.9" width="4.6" height="4.6" rx="1" stroke="currentColor" strokeWidth="1.2" />
+        </svg>
+      ),
+    },
+  ]
   return (
-    <Link
-      to={`/web/${entry.id}`}
-      className={`mt-3.5 block rounded-xl border border-hairline bg-paper px-4 py-3.5 transition-colors hover:border-canopy ${focusRing}`}
+    <div
+      role="group"
+      aria-label="Choose landing view"
+      className="inline-flex overflow-hidden rounded-lg border border-hairline bg-panel"
     >
-      <h3 className="font-heading text-[15.5px] font-semibold">{entry.name}</h3>
-      <p className="mb-2 mt-1 text-xs text-muted">
-        {entry.nodeCount} functional groups · {entry.location}
-      </p>
-      <ProvenanceBadge provenance={entry.provenance} />
-      <p className="mt-2 text-[12.5px] leading-relaxed text-inkSoft">{entry.tagline}</p>
-    </Link>
-  )
-}
-
-function BiomeCard({ id, webs }: { id: Biome; webs: WebIndexEntry[] }) {
-  const info = BIOMES[id]
-  return (
-    <div className="rounded-2xl border border-hairline bg-panel p-[22px] transition duration-200 hover:-translate-y-[3px] hover:border-canopy hover:shadow-lg hover:shadow-canopy/15">
-      <Link to={`/biome/${id}`} className={`block rounded-lg ${focusRing}`}>
-        <div
-          className="mb-3 h-[34px] w-[34px] rounded-[10px]"
-          style={{ background: info.swatch }}
-        />
-        <h2 className="font-heading text-[19px] font-semibold">{info.name}</h2>
-        <p className="text-[12.5px] text-muted">
-          {webs.length} ecosystem{webs.length === 1 ? '' : 's'}
-        </p>
-      </Link>
-      {webs.map((entry) => (
-        <EcoCard key={entry.id} entry={entry} />
+      {options.map(({ id, label, icon }) => (
+        <button
+          key={id}
+          type="button"
+          aria-pressed={view === id}
+          onClick={() => onChange(id)}
+          className={`flex items-center gap-1.5 px-3 py-1.5 text-[12.5px] font-medium transition-colors [&:not(:first-child)]:border-l [&:not(:first-child)]:border-hairline ${
+            view === id ? 'bg-canopy text-panel' : 'text-inkSoft hover:bg-paper2'
+          } ${focusRing}`}
+        >
+          {icon}
+          {label}
+        </button>
       ))}
     </div>
   )
 }
 
-function EmptyBiomeCard({ id }: { id: Biome }) {
-  const info = BIOMES[id]
-  return (
-    <div
-      aria-disabled="true"
-      className="rounded-2xl border border-hairline bg-panel p-[22px] opacity-50"
-    >
-      <div
-        className="mb-3 h-[34px] w-[34px] rounded-[10px]"
-        style={{ background: info.swatch }}
-      />
-      <h2 className="font-heading text-[19px] font-semibold">{info.name}</h2>
-      <p className="text-[12.5px] text-muted">{info.subtitle}</p>
-      <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-paper2 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.6px] text-muted">
-        <span className="h-1.5 w-1.5 rounded-full bg-muted" />
-        Coming soon
-      </span>
-    </div>
-  )
-}
-
-/** Landing page: the biome browse grid over data/webs/index.json. */
+/**
+ * Landing page (`#/`): hero + interactive world-map atlas of ecosystem webs.
+ * The biome browse grid remains available via the Map/Grid toggle — it is
+ * also the primary path for screen readers.
+ */
 export function ExplorePage() {
   const index = parseWebIndex(getRawWebIndex())
-  const websByBiome = new Map<Biome, WebIndexEntry[]>()
-  for (const entry of index.webs) {
-    const list = websByBiome.get(entry.biome) ?? []
-    list.push(entry)
-    websByBiome.set(entry.biome, list)
+  const [view, setView] = useState<LandingView>(initialView)
+
+  const changeView = (next: LandingView) => {
+    setView(next)
+    try {
+      window.sessionStorage.setItem(VIEW_STORAGE_KEY, next)
+    } catch {
+      // private-mode storage failures are fine: the toggle just won't persist
+    }
   }
 
   return (
     <section aria-label="Explore ecosystems" className="mx-auto max-w-[1060px] px-8 pb-12 pt-16">
-      <p className="mb-3.5 text-xs font-semibold uppercase tracking-[1.6px] text-canopy">
-        An atlas of living connections
-      </p>
-      <h1 className="mb-4 font-heading text-[44px] font-semibold leading-[1.12]">
-        Every species depends
-        <br />
-        on something. <em className="italic text-canopy">See it.</em>
-      </h1>
-      <p className="mb-11 max-w-[620px] text-base leading-relaxed text-inkSoft">
+      <div className="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p className="mb-3.5 text-xs font-semibold uppercase tracking-[1.6px] text-canopy">
+            An atlas of living connections
+          </p>
+          <h1 className="mb-4 font-heading text-[44px] font-semibold leading-[1.12]">
+            Every species depends
+            <br />
+            on something. <em className="italic text-canopy">See it.</em>
+          </h1>
+        </div>
+        <div className="pb-1.5">
+          <ViewToggle view={view} onChange={changeView} />
+        </div>
+      </div>
+      <p className="mb-8 max-w-[620px] text-base leading-relaxed text-inkSoft">
         Explore real, published food webs from ecosystems around the world. Select a species to
         trace what it relies on — and what relies on it. Remove one, and watch the ripple move
         through the whole web.
       </p>
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4">
-        {BIOME_ORDER.map((id) => {
-          const webs = websByBiome.get(id) ?? []
-          return webs.length > 0 ? (
-            <BiomeCard key={id} id={id} webs={webs} />
-          ) : (
-            <EmptyBiomeCard key={id} id={id} />
-          )
-        })}
-      </div>
+      {view === 'map' ? (
+        <Suspense fallback={<MapFallback />}>
+          <MapLanding index={index} />
+        </Suspense>
+      ) : (
+        <BiomeGrid webs={index.webs} />
+      )}
     </section>
   )
 }

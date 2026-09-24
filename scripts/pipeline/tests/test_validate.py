@@ -98,6 +98,8 @@ def _entry_for(web: dict, **overrides: object) -> dict:
         "nodeCount": len(web["nodes"]),
         "provenance": web["meta"]["provenance"],
         "tagline": web["meta"]["tagline"],
+        "lat": web["meta"]["lat"],
+        "lng": web["meta"]["lng"],
     }
     entry.update(overrides)
     return entry
@@ -132,7 +134,7 @@ def test_mismatched_index_entry_is_rejected(
 
 def test_unregistered_web_file_is_rejected(tmp_path: Path) -> None:
     _copy_valid_web(tmp_path)
-    _write_index(tmp_path, _entry_for({"meta": {"id": "other-web", "name": "x", "biome": "marine", "location": "y", "provenance": "empirical", "tagline": "z"}, "nodes": [{}]}))
+    _write_index(tmp_path, _entry_for({"meta": {"id": "other-web", "name": "x", "biome": "marine", "location": "y", "provenance": "empirical", "tagline": "z", "lat": 0.0, "lng": 0.0}, "nodes": [{}]}))
     result = run_validate("--webs-dir", str(tmp_path))
     assert result.returncode == 1
     assert "not registered" in result.stdout
@@ -154,7 +156,7 @@ def test_build_index_output_validates_and_matches_meta(tmp_path: Path) -> None:
     index = json.loads((tmp_path / "index.json").read_text(encoding="utf-8"))
     assert len(index["webs"]) == 1
     entry = index["webs"][0]
-    for field in ("id", "name", "biome", "location", "provenance", "tagline"):
+    for field in ("id", "name", "biome", "location", "provenance", "tagline", "lat", "lng"):
         assert entry[field] == web["meta"][field]
     assert entry["nodeCount"] == len(web["nodes"])
 

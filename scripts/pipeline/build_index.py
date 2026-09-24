@@ -3,7 +3,7 @@
 
 Scans ``data/webs/*.json`` (excluding ``index.json``), minimally parses each
 file, and writes ``index.json`` as ``{"webs": [...]}`` with one entry per web:
-``{id, name, biome, location, nodeCount, provenance, tagline}`` taken from the
+``{id, name, biome, location, nodeCount, provenance, tagline, lat, lng}`` taken from the
 web's ``meta`` (``nodeCount`` is the actual length of ``nodes``), sorted by
 biome then name. ``scripts/pipeline/validate.py`` cross-checks the result
 against the web files — run it after regenerating.
@@ -25,7 +25,17 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_WEBS_DIR = REPO_ROOT / "data" / "webs"
 
-INDEX_ENTRY_FIELDS = ("id", "name", "biome", "location", "nodeCount", "provenance", "tagline")
+INDEX_ENTRY_FIELDS = (
+    "id",
+    "name",
+    "biome",
+    "location",
+    "nodeCount",
+    "provenance",
+    "tagline",
+    "lat",
+    "lng",
+)
 
 
 def build_entry(path: Path) -> tuple[dict | None, str | None]:

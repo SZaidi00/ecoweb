@@ -59,7 +59,17 @@ BIOMES = {
     "wetland",
 }
 PROVENANCES = {"empirical", "composite"}
-INDEX_ENTRY_FIELDS = {"id", "name", "biome", "location", "nodeCount", "provenance", "tagline"}
+INDEX_ENTRY_FIELDS = {
+    "id",
+    "name",
+    "biome",
+    "location",
+    "nodeCount",
+    "provenance",
+    "tagline",
+    "lat",
+    "lng",
+}
 
 # Aggregation-statement heuristic (the "salmon rule", docs/data-format.md):
 # the description of every node whose kind is not "species" must contain at
@@ -206,6 +216,12 @@ def validate_index(index_data: object, webs_by_id: dict[str, dict], webs_dir_lab
             )
         if not isinstance(entry["nodeCount"], int) or entry["nodeCount"] < 1:
             errors.append(f"{entry_label}: 'nodeCount' must be a positive integer")
+        for coord, lo, hi in (("lat", -90.0, 90.0), ("lng", -180.0, 180.0)):
+            value = entry.get(coord)
+            if not isinstance(value, (int, float)) or isinstance(value, bool):
+                errors.append(f"{entry_label}: '{coord}' must be a number")
+            elif not lo <= value <= hi:
+                errors.append(f"{entry_label}: '{coord}' {value} out of range [{lo}, {hi}]")
         for field in ("name", "location", "tagline"):
             if not isinstance(entry[field], str) or not entry[field]:
                 errors.append(f"{entry_label}: '{field}' must be a non-empty string")
@@ -230,6 +246,12 @@ def validate_index(index_data: object, webs_by_id: dict[str, dict], webs_dir_lab
                 f"{entry_label}: nodeCount {entry['nodeCount']} does not match "
                 f"{entry['id']}.json ({actual_count} nodes)"
             )
+        for coord in ("lat", "lng"):
+            if entry.get(coord) != meta.get(coord):
+                errors.append(
+                    f"{entry_label}: {coord} '{entry.get(coord)}' does not match "
+                    f"{entry['id']}.json meta.{coord} '{meta.get(coord)}'"
+                )
 
     for web_id in webs_by_id:
         if web_id not in seen_ids:

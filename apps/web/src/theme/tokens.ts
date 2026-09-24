@@ -52,6 +52,18 @@ export const colors = {
     collapsed: '#9a927f',
     released: '#5c9c4f',
   },
+  /** Map pin hues, one per biome (landing-page atlas). Low-saturation earth
+   * tones that sit harmoniously with the palette above. */
+  biome: {
+    marine: '#3f7d6b',
+    estuary: '#4e6e8e',
+    freshwater: '#6d8a4e',
+    'terrestrial-forest': '#3e5c41',
+    grassland: '#c98a2b',
+    tundra: '#9a927f',
+    desert: '#a4542e',
+    wetland: '#8a6d4e',
+  },
 } as const
 
 export const fonts = {

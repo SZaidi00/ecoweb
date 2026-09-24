@@ -7,7 +7,9 @@
       "location": "Chesapeake Bay, mesohaline reach, USA",
       "nodeCount": 19,
       "provenance": "empirical",
-      "tagline": "The estuary that launched ecosystem network analysis"
+      "tagline": "The estuary that launched ecosystem network analysis",
+      "lat": 38.0,
+      "lng": -76.4
     },
     {
       "id": "little-rock-lake",
@@ -16,7 +18,9 @@
       "location": "Little Rock Lake, Vilas County, Wisconsin, USA",
       "nodeCount": 20,
       "provenance": "empirical",
-      "tagline": "The bog-lake web that taught ecology how resolution changes everything"
+      "tagline": "The bog-lake web that taught ecology how resolution changes everything",
+      "lat": 46.0,
+      "lng": -89.7
     },
     {
       "id": "tuesday-lake",
@@ -25,7 +29,9 @@
       "location": "Tuesday Lake, Wisconsin, USA",
       "nodeCount": 16,
       "provenance": "empirical",
-      "tagline": "A whole-lake trophic cascade, measured by experiment"
+      "tagline": "A whole-lake trophic cascade, measured by experiment",
+      "lat": 46.23,
+      "lng": -89.53
     },
     {
       "id": "serengeti",
@@ -34,7 +40,9 @@
       "location": "Serengeti National Park, Tanzania",
       "nodeCount": 25,
       "provenance": "empirical",
-      "tagline": "The most-studied savanna on Earth - and what extinction does to it"
+      "tagline": "The most-studied savanna on Earth - and what extinction does to it",
+      "lat": -2.333,
+      "lng": 34.833
     },
     {
       "id": "shortgrass-prairie",
@@ -43,7 +51,9 @@
       "location": "Central Plains Experimental Range, Colorado, USA",
       "nodeCount": 17,
       "provenance": "empirical",
-      "tagline": "The hidden web under the grass: microbes, mites and nematodes"
+      "tagline": "The hidden web under the grass: microbes, mites and nematodes",
+      "lat": 40.8,
+      "lng": -104.8
     },
     {
       "id": "prince-william-sound",
@@ -52,7 +62,9 @@
       "location": "Prince William Sound, Alaska, USA",
       "nodeCount": 19,
       "provenance": "empirical",
-      "tagline": "Home to one of the best-studied keystone cascades"
+      "tagline": "Home to one of the best-studied keystone cascades",
+      "lat": 60.61,
+      "lng": -147.14
     },
     {
       "id": "cypress-wetland",
@@ -61,7 +73,9 @@
       "location": "Big Cypress / Everglades, Florida, USA",
       "nodeCount": 22,
       "provenance": "empirical",
-      "tagline": "Where the Everglades slows to a standstill, periphyton feeds everything"
+      "tagline": "Where the Everglades slows to a standstill, periphyton feeds everything",
+      "lat": 26.0,
+      "lng": -80.9
     }
   ]
 }
