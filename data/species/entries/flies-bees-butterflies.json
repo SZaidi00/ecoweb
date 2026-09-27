@@ -1,0 +1,18 @@
+{
+  "slug": "flies-bees-butterflies",
+  "name": "Flies, bees & butterflies",
+  "kind": "functional-group",
+  "description": "Winged flower-visitors and scavengers. Functional group pooling the source's Diptera (true flies) node with bees, adult lacewings, butterflies and moths, as grouped by the source study.",
+  "sourceWeb": "serengeti",
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "flies",
+      "displayName": "Flies, bees & butterflies",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

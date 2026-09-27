@@ -1,0 +1,24 @@
+{
+  "slug": "caddisfly-larvae-aquatic-moth-larvae",
+  "name": "Caddisfly larvae & aquatic moth larvae",
+  "kind": "functional-group",
+  "description": "Case- and net-building aquatic larvae. Functional group pooling the source's seven caddisfly taxa (Polycentropus, Molanna, Banksiola, Agrypnia, Limnephilus, Mystacides, Oecetis) with one aquatic moth larva (a Parapoynx relative); most scrape algae and detritus, while Polycentropus is a net-spinning predator.",
+  "sourceWeb": "little-rock-lake",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Caddisfly"
+  },
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "caddisflies",
+      "displayName": "Caddisfly larvae & aquatic moth larvae",
+      "kind": "functional-group",
+      "trophicLevel": 2.6,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Caddisfly"
+      }
+    }
+  ]
+}

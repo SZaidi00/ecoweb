@@ -1,0 +1,24 @@
+{
+  "slug": "mongooses-small-carnivores",
+  "name": "Mongooses & small carnivores",
+  "kind": "functional-group",
+  "description": "The small hunters of the grass layer. Functional group pooling the source's 'dwarf mongoose' node - dwarf, banded, slender, marsh, Egyptian and white-tailed mongooses, the zorilla, two genets, the palm civet and the African wild cat - measured together by the source study.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Mongoose"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "small-carnivores",
+      "displayName": "Mongooses & small carnivores",
+      "kind": "functional-group",
+      "trophicLevel": 3.1,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Mongoose"
+      }
+    }
+  ]
+}

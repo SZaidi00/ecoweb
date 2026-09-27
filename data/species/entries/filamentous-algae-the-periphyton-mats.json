@@ -1,0 +1,18 @@
+{
+  "slug": "filamentous-algae-the-periphyton-mats",
+  "name": "Filamentous algae (the periphyton mats)",
+  "kind": "functional-group",
+  "description": "Mat-forming filamentous algae of the lake's shallow littoral zone, the physical scaffolding in which most of the invertebrate web lives. Functional group pooling the source's 25 filamentous algae taxa - Spirogyra, Zygnema, Mougeotia, Oedogonium, Bulbochaete, Oscillatoria, Lyngbya, Phormidium and kin.",
+  "sourceWeb": "little-rock-lake",
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "filamentous-algae",
+      "displayName": "Filamentous algae (the periphyton mats)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

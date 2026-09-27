@@ -1,0 +1,18 @@
+{
+  "slug": "cryptophytes",
+  "name": "Cryptophytes",
+  "kind": "functional-group",
+  "description": "Small flagellated algae prized as food by zooplankton. Functional group pooling the two Cryptomonas taxa in the source web (Cryptomonas sp. 1 and sp. 2), following the major phytoplankton classes used by the limnological literature.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "cryptophytes",
+      "displayName": "Cryptophytes",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

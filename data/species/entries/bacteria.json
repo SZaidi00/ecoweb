@@ -1,0 +1,27 @@
+{
+  "slug": "bacteria",
+  "name": "Bacteria",
+  "kind": "functional-group",
+  "description": "Soil bacteria decomposing detritus; the base of the web's bacterial energy channel and by far the largest microbial biomass. Functional group aggregating the whole bacterial community, measured together in the source's soil sampling. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+  "sourceWeb": "shortgrass-prairie",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "bacteria",
+      "displayName": "Bacteria",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    },
+    {
+      "web": "shortgrass-prairie",
+      "webName": "Shortgrass Prairie",
+      "biome": "grassland",
+      "node": "bacteria",
+      "displayName": "Bacteria",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "fish-larvae",
+  "name": "Fish larvae",
+  "kind": "life-stage-group",
+  "description": "Larval stages of all Bay fishes. Life-stage group aggregated by the source because larvae could not be assigned to individual fish species in the diet data; they feed on zooplankton, and nothing in the published network consumes them. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "fish-larvae",
+      "displayName": "Fish larvae",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.16
+    }
+  ]
+}

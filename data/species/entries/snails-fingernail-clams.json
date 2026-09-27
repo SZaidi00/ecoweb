@@ -1,0 +1,24 @@
+{
+  "slug": "snails-fingernail-clams",
+  "name": "Snails & fingernail clams",
+  "kind": "functional-group",
+  "description": "The lake's molluscs: the large grazing snail Campeloma decisum and small fingernail clams (Sphaeriidae and other bivalves). Functional group pooling the source's three mollusc taxa; in the source's gut-content records Campeloma is an extreme generalist, its scraped-biofilm diet registering everything from algae to small invertebrates.",
+  "sourceWeb": "little-rock-lake",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Campeloma_decisum"
+  },
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "snails-and-clams",
+      "displayName": "Snails & fingernail clams",
+      "kind": "functional-group",
+      "trophicLevel": 2.2,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Campeloma_decisum"
+      }
+    }
+  ]
+}

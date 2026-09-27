@@ -1,0 +1,18 @@
+{
+  "slug": "oligochaete-worms-leeches",
+  "name": "Oligochaete worms & leeches",
+  "kind": "functional-group",
+  "description": "Segmented worms of the sediment and their predatory relatives the leeches. Functional group pooling the source's two annelid taxa - an undivided oligochaete group (detritus feeders) and the leeches (Hirudinea, predators of worms, snails and insect larvae) - pooled here because each is a single source taxon of the same annelid grade.",
+  "sourceWeb": "little-rock-lake",
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "worms-and-leeches",
+      "displayName": "Oligochaete worms & leeches",
+      "kind": "functional-group",
+      "trophicLevel": 2.8
+    }
+  ]
+}

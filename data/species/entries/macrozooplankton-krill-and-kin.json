@@ -1,0 +1,18 @@
+{
+  "slug": "macrozooplankton-krill-and-kin",
+  "name": "Macrozooplankton (krill and kin)",
+  "kind": "functional-group",
+  "description": "Large zooplankton. Functional group pooling euphausiids (krill; five species in PWS), amphipods and coelenterates (jellyfish and relatives), aggregated by the source from zooplankton community data. Krill feed on smaller zooplankton as well as phytoplankton, so the group sits well above level 2. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "macrozooplankton",
+      "displayName": "Macrozooplankton (krill and kin)",
+      "kind": "functional-group",
+      "trophicLevel": 2.8
+    }
+  ]
+}

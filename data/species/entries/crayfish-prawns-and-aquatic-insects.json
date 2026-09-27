@@ -1,0 +1,18 @@
+{
+  "slug": "crayfish-prawns-and-aquatic-insects",
+  "name": "Crayfish, prawns and aquatic insects",
+  "kind": "functional-group",
+  "description": "Freshwater crayfish, grass prawns and aquatic insects. Functional group pooling the source's crayfish, prawn and aquatic insect compartments, aggregated because all are small swimming/crawling invertebrates of the marsh. The key middle link of the wet-season web: they graze periphyton and detritus and are eaten by fishes, amphibians, turtles, alligators, wading birds, otters and raccoons.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "aquatic-inverts",
+      "displayName": "Crayfish, prawns and aquatic insects",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

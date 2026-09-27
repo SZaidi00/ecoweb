@@ -1,0 +1,18 @@
+{
+  "slug": "periphyton-algal-mats",
+  "name": "Periphyton (algal mats)",
+  "kind": "functional-group",
+  "description": "The film of algae, cyanobacteria and microbes coating stems, leaves and every submerged surface of the marsh. Functional group pooling the source's periphyton compartment with its small epiphyte compartment (algae growing directly on plant surfaces), aggregated because both are grazed as attached algal mats. The largest producer compartment in the wet-season web and the food base for snails, crayfish, prawns and small fishes.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "periphyton",
+      "displayName": "Periphyton (algal mats)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

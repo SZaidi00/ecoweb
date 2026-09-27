@@ -1,0 +1,30 @@
+{
+  "slug": "cyanobacteria-blue-green-algae",
+  "name": "Cyanobacteria (blue-green algae)",
+  "kind": "functional-group",
+  "description": "Photosynthetic bacteria of the open water. Functional group pooling the four cyanobacteria taxa in the source web - Nostoc sp., Chroococcus dispersus, Dactylococcopsis fascicularis and the bloom-forming Microcystis aeruginosa - following the major phytoplankton classes used by the limnological literature.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "cyanobacteria",
+      "displayName": "Cyanobacteria (blue-green algae)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Cyanobacteria"
+      }
+    },
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "cyanobacteria",
+      "displayName": "Cyanobacteria (blue-green algae)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

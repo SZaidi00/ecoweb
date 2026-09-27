@@ -1,0 +1,18 @@
+{
+  "slug": "decaying-matter-carrion",
+  "name": "Decaying matter & carrion",
+  "kind": "functional-group",
+  "description": "Dead plant material, dung and carcasses - the resource base for the savanna's decomposers and scavengers. Functional group pooling all decaying material as one resource node, exactly as the source study defined it.",
+  "sourceWeb": "serengeti",
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "decaying-matter",
+      "displayName": "Decaying matter & carrion",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

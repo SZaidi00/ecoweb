@@ -1,0 +1,26 @@
+{
+  "slug": "atlantic-menhaden",
+  "name": "Atlantic menhaden",
+  "kind": "species",
+  "description": "Atlantic menhaden (Brevoortia tyrannus), tracked as its own compartment by the source. A schooling filter-feeding forage fish of the estuary, straining phytoplankton, zooplankton and suspended detritus; preyed on by bluefish, summer flounder and striped bass. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Atlantic_menhaden",
+    "iNaturalist": "https://www.inaturalist.org/taxa/51363-Brevoortia-tyrannus"
+  },
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "menhaden",
+      "displayName": "Atlantic menhaden",
+      "kind": "species",
+      "trophicLevel": 2.77,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Atlantic_menhaden",
+        "iNaturalist": "https://www.inaturalist.org/taxa/51363-Brevoortia-tyrannus"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "demersal-fish",
+  "name": "Demersal fish",
+  "kind": "functional-group",
+  "description": "Bottom-dwelling and semi-demersal fishes. Functional group pooling arrowtooth flounder (about 60% of biomass), walleye pollock, flathead sole, sablefish, skates, Pacific halibut, Pacific cod, rougheye rockfish and others, aggregated from a 1989 PWS trawl survey. The source notes this group is very over-aggregated and includes 10% within-group (cannibalistic) feeding, not shown as an edge here. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "demersal-fish",
+      "displayName": "Demersal fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.9
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "adult-fishes-bass-perch-crappie-rock-bass",
+  "name": "Adult fishes (bass, perch, crappie, rock bass)",
+  "kind": "functional-group",
+  "description": "The lake's top predators: adult largemouth bass, yellow perch, black crappie and rock bass. Functional group pooling the source's four adult fish taxa; the source's gut-content records show them eating invertebrates and young fishes, with incidental algal and plant material. Nothing in the web eats them.",
+  "sourceWeb": "little-rock-lake",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Largemouth_bass",
+    "iNaturalist": "https://www.inaturalist.org/taxa/49563-Micropterus-salmoides"
+  },
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "adult-fishes",
+      "displayName": "Adult fishes (bass, perch, crappie, rock bass)",
+      "kind": "functional-group",
+      "trophicLevel": 4.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Largemouth_bass",
+        "iNaturalist": "https://www.inaturalist.org/taxa/49563-Micropterus-salmoides"
+      }
+    }
+  ]
+}

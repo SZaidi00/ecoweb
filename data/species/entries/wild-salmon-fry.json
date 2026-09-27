@@ -1,0 +1,18 @@
+{
+  "slug": "wild-salmon-fry",
+  "name": "Wild salmon fry",
+  "kind": "life-stage-group",
+  "description": "Newly seaward-migrated juvenile salmon of wild origin, mostly pink and chum salmon, during roughly their first 120 days in the Sound. Life-stage group pooled by the source (wild fry were tracked separately from hatchery releases); they feed on zooplankton, preferring calanoid copepods. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "wild-salmon-fry",
+      "displayName": "Wild salmon fry",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.2
+    }
+  ]
+}

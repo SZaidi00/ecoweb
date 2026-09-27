@@ -1,0 +1,18 @@
+{
+  "slug": "suspension-feeding-benthos",
+  "name": "Suspension-feeding benthos",
+  "kind": "functional-group",
+  "description": "Functional group pooling the source's 'other suspension feeders' compartment (barnacles, hooked mussels and other filter-feeding bottom life) with the soft-shell clam Mya arenaria, because both are benthic filter feeders with near-identical diets in the source flow matrix. Reported biomass (metrics.biomass) is the summed annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "other-suspension-feeders",
+      "displayName": "Suspension-feeding benthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.09
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "birds-seabirds-and-waterfowl",
+  "name": "Birds (seabirds and waterfowl)",
+  "kind": "functional-group",
+  "description": "Functional group aggregating the Sound's marine birds - roughly 88% seabirds (alcids such as murres and puffins, black-legged kittiwakes, cormorants, gulls, terns) and 12% overwintering waterfowl (scoters, goldeneyes, harlequin ducks and other ducks) - pooled by the source with a weighted-mean diet. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "birds",
+      "displayName": "Birds (seabirds and waterfowl)",
+      "kind": "functional-group",
+      "trophicLevel": 4.1
+    }
+  ]
+}

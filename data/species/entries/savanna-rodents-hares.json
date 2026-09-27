@@ -1,0 +1,18 @@
+{
+  "slug": "savanna-rodents-hares",
+  "name": "Savanna rodents & hares",
+  "kind": "functional-group",
+  "description": "The small-mammal swarm of the grasslands. Functional group pooling the source's 'fat or tree mouse' node - about thirty taxa including grass rats, gerbils, spiny mice, multimammate rats, dormice, cane rats, springhares and Cape hares - measured together as one node by the source study.",
+  "sourceWeb": "serengeti",
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "rodents-hares",
+      "displayName": "Savanna rodents & hares",
+      "kind": "functional-group",
+      "trophicLevel": 2.4
+    }
+  ]
+}

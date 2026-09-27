@@ -1,0 +1,18 @@
+{
+  "slug": "small-forage-fishes",
+  "name": "Small forage fishes",
+  "kind": "functional-group",
+  "description": "Small marsh fishes that eat algae, detritus and small invertebrates. Functional group matching the source's herbivore-omnivore fish compartment; the main link from the algal/detrital base to predatory fishes, alligators and wading birds.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "herb-fish",
+      "displayName": "Small forage fishes",
+      "kind": "functional-group",
+      "trophicLevel": 2.4
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "small-herbivorous-cladocerans",
+  "name": "Small herbivorous cladocerans",
+  "kind": "functional-group",
+  "description": "Small filter-feeding water fleas. Functional group pooling three source taxa - Bosmina longirostris, Diaphanosoma leuchtenbergianum and Holopedium gibberum - which in the source web feed only on phytoplankton; they are pooled following the herbivorous-cladoceran guild of the limnological literature, with Daphnia kept separate because of its central role in the cascade.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "herbivorous-cladocerans",
+      "displayName": "Small herbivorous cladocerans",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

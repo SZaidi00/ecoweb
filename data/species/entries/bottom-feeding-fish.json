@@ -1,0 +1,18 @@
+{
+  "slug": "bottom-feeding-fish",
+  "name": "Bottom-feeding fish",
+  "kind": "functional-group",
+  "description": "Functional group pooling the source's bottom-feeding fishes - croaker, hogchoker, spot, white perch and catfish - aggregated because their diets in the source matrix are all dominated by deposit-feeding benthos, with minor shares of suspension feeders and small forage fish. Reported biomass (metrics.biomass) is the summed annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "benthivorous-fish",
+      "displayName": "Bottom-feeding fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.98
+    }
+  ]
+}

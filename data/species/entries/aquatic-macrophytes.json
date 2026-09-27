@@ -1,0 +1,18 @@
+{
+  "slug": "aquatic-macrophytes",
+  "name": "Aquatic macrophytes",
+  "kind": "functional-group",
+  "description": "Floating and rooted aquatic plants of the marsh. Functional group pooling the source's floating vegetation and macrophyte compartments, aggregated because both are higher aquatic plants; eaten by turtles, ducks and rails.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "macrophytes",
+      "displayName": "Aquatic macrophytes",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

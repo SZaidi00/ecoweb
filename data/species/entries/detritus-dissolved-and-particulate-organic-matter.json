@@ -1,0 +1,18 @@
+{
+  "slug": "detritus-dissolved-and-particulate-organic-matter",
+  "name": "Detritus (dissolved and particulate organic matter)",
+  "kind": "functional-group",
+  "description": "Non-living organic matter of the estuary: dissolved organic carbon plus suspended and bottom-sediment particles of dead plankton, faeces and decaying plant material. Functional group pooling the source's three non-living compartments (dissolved organic nutrient, suspended particulate nutrient, sediment particulate nutrient); the sediment pool dominates. Reported biomass (metrics.biomass) is the sum of the three pools, annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "detritus",
+      "displayName": "Detritus (dissolved and particulate organic matter)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

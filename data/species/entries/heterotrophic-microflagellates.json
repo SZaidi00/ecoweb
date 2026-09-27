@@ -1,0 +1,18 @@
+{
+  "slug": "heterotrophic-microflagellates",
+  "name": "Heterotrophic microflagellates",
+  "kind": "functional-group",
+  "description": "Tiny single-celled predators that graze almost exclusively on bacteria - the link that returns bacterial carbon to the estuarine food web. Functional group aggregating all heterotrophic microflagellate taxa as one source compartment. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "microflagellates",
+      "displayName": "Heterotrophic microflagellates",
+      "kind": "functional-group",
+      "trophicLevel": 3.0
+    }
+  ]
+}

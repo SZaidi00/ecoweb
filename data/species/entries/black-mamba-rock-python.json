@@ -1,0 +1,24 @@
+{
+  "slug": "black-mamba-rock-python",
+  "name": "Black mamba & rock python",
+  "kind": "functional-group",
+  "description": "The savanna's two largest hunting snakes, taking rodents and frogs. Functional group pooling the source's 'black mamba' node: the black mamba (Dendroaspis polylepis) and the African rock python (Python sebae), grouped by the source study; both fall prey to eagles.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Black_mamba"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "mamba-python",
+      "displayName": "Black mamba & rock python",
+      "kind": "functional-group",
+      "trophicLevel": 3.8,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Black_mamba"
+      }
+    }
+  ]
+}

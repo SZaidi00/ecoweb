@@ -1,0 +1,18 @@
+{
+  "slug": "young-of-year-fishes",
+  "name": "Young-of-year fishes",
+  "kind": "life-stage-group",
+  "description": "This year's juvenile black crappie, rock bass, largemouth bass and yellow perch. Life-stage group aggregated by the source itself, which recorded the diets of young fishes separately from adults; they feed on zooplankton and small invertebrates and are eaten by adult fishes.",
+  "sourceWeb": "little-rock-lake",
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "young-fishes",
+      "displayName": "Young-of-year fishes",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.9
+    }
+  ]
+}

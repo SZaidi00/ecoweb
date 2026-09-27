@@ -1,0 +1,18 @@
+{
+  "slug": "green-algae-and-desmids",
+  "name": "Green algae and desmids",
+  "kind": "functional-group",
+  "description": "Green algae, including the often ornate desmids. Functional group pooling six source taxa - Arthrodesmus sp., Closteriopsis longissimus, Dictyosphaerium pulchellum, Selenastrum minutum, Spinocosmarium sp. and Staurastrum sp. - following the major phytoplankton classes used by the limnological literature.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "green-algae-desmids",
+      "displayName": "Green algae and desmids",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

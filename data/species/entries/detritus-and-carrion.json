@@ -1,0 +1,18 @@
+{
+  "slug": "detritus-and-carrion",
+  "name": "Detritus and carrion",
+  "kind": "functional-group",
+  "description": "Dead organic matter and the microbes living on it, in the water and sediments. Functional group pooling five source compartments: living particulate organic carbon, living sediment organic matter (both microbe-rich detrital pools), refractory detritus, labile detritus, and vertebrate carrion, aggregated because all are consumed as non-living food. Because carrion is pooled here, vulture scavenging appears as detritus feeding.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "detritus",
+      "displayName": "Detritus and carrion",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

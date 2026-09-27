@@ -1,0 +1,18 @@
+{
+  "slug": "cypress-trees-and-understory",
+  "name": "Cypress trees and understory",
+  "kind": "functional-group",
+  "description": "The swamp's woody vegetation: bald cypress and hardwoods, plus vines and understory shrubs. Functional group pooling seven source compartments (cypress leaves, cypress wood, hardwood leaves, hardwood wood, roots, vines, understory), aggregated because the source tracked each plant part separately. Most of their production enters the web as litter falling to detritus (litter fall is not feeding, so not an edge here); they are eaten directly as leaves, seeds and mast by insects, ducks, squirrels, deer, hogs and bears.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "cypress-trees",
+      "displayName": "Cypress trees and understory",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "small-mammals",
+  "name": "Small mammals",
+  "kind": "functional-group",
+  "description": "Small plant- and insect-eating mammals. Functional group pooling six source compartments: shrews, bats, squirrels, mice and rats, rabbits, and armadillos, aggregated because the source tracked each as a small mammal compartment. They feed mostly on seeds, leaves and insects and are preyed on by bobcats, gray foxes and wading birds.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "small-mammals",
+      "displayName": "Small mammals",
+      "kind": "functional-group",
+      "trophicLevel": 2.1
+    }
+  ]
+}

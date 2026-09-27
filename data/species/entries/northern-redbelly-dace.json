@@ -1,0 +1,18 @@
+{
+  "slug": "northern-redbelly-dace",
+  "name": "Northern redbelly dace",
+  "kind": "species",
+  "description": "Phoxinus eos, a small minnow, a single species tracked by the source. Feeds on the larger zooplankton (cladocerans, copepods and Chaoborus larvae) and is in turn eaten by the central mudminnow.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "phoxinus-eos",
+      "displayName": "Northern redbelly dace",
+      "kind": "species",
+      "trophicLevel": 3.6
+    }
+  ]
+}

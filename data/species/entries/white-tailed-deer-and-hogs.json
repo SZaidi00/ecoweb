@@ -1,0 +1,18 @@
+{
+  "slug": "white-tailed-deer-and-hogs",
+  "name": "White-tailed deer and hogs",
+  "kind": "functional-group",
+  "description": "The swamp's large hoofed mammals. Functional group pooling the source's white-tailed deer and feral hog compartments, aggregated because both are large plant-eating mammals; they browse leaves, shoots and mast and are the main prey of the Florida panther.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "deer-hogs",
+      "displayName": "White-tailed deer and hogs",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "lion",
+  "name": "Lion",
+  "kind": "species",
+  "description": "The lion (Panthera leo), tracked as its own node by the source study. The Serengeti's apex social predator, taking gazelles, large grazers and buffalo; nothing in the web preys on it.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Lion",
+    "iNaturalist": "https://www.inaturalist.org/taxa/41965-Panthera-leo"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "lion",
+      "displayName": "Lion",
+      "kind": "species",
+      "trophicLevel": 3.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Lion",
+        "iNaturalist": "https://www.inaturalist.org/taxa/41965-Panthera-leo"
+      }
+    }
+  ]
+}

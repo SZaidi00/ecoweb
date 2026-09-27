@@ -1,0 +1,24 @@
+{
+  "slug": "eagles-large-owls",
+  "name": "Eagles & large owls",
+  "kind": "functional-group",
+  "description": "The savanna's top avian hunters. Functional group pooling the source's 'African marsh owl' node - martial eagle, African crowned eagle, African hawk-eagle, bateleur, Verreaux's eagle-owl and the marsh owl - raptors powerful enough to take mongooses and large snakes, grouped by the source study.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Martial_eagle"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "large-raptors",
+      "displayName": "Eagles & large owls",
+      "kind": "functional-group",
+      "trophicLevel": 4.1,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Martial_eagle"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "cyclopoid-copepods",
+  "name": "Cyclopoid copepods",
+  "kind": "functional-group",
+  "description": "Predatory copepods. Functional group pooling the three cyclopoid species in the source web - Cyclops varians rubellus, Orthocyclops modestus and Tropocyclops prasinus - following the standard limnological split between herbivorous calanoids and carnivorous cyclopoids; they hunt rotifers and the calanoid Leptodiaptomus, and also eat each other (within-group links not drawn).",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "cyclopoid-copepods",
+      "displayName": "Cyclopoid copepods",
+      "kind": "functional-group",
+      "trophicLevel": 3.0
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "transient-marine-mammals",
+  "name": "Transient marine mammals",
+  "kind": "functional-group",
+  "description": "Functional group pooling the whales that occur only seasonally in PWS: fin whales, humpback whales, minke whales, beluga whales and transient (mammal-eating) killer whales, as defined by the source. Because baleen whales dominate the group's biomass, much of its diet is krill and small fish; the transient killer whale component preys on pinnipeds and other marine mammals. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "transient-marine-mammals",
+      "displayName": "Transient marine mammals",
+      "kind": "functional-group",
+      "trophicLevel": 4.2
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "midges-phantom-midges-diptera-larvae",
+  "name": "Midges & phantom midges (Diptera larvae)",
+  "kind": "functional-group",
+  "description": "Aquatic larvae of two-winged flies, the most diverse animal group in the lake. Functional group pooling the source's 31 Diptera taxa - mostly detritus- and algae-eating chironomid midges (Chironomus, Polypedilum, Tanytarsus and kin), plus the predatory tanypods (Procladius) and the glass-like phantom midge larvae Chaoborus, which hunt small zooplankton. Pooling predators and grazers here follows the source's own Diptera grouping.",
+  "sourceWeb": "little-rock-lake",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Chironomidae"
+  },
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "midges",
+      "displayName": "Midges & phantom midges (Diptera larvae)",
+      "kind": "functional-group",
+      "trophicLevel": 2.3,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Chironomidae"
+      }
+    }
+  ]
+}

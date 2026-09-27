@@ -1,0 +1,36 @@
+{
+  "slug": "central-mudminnow",
+  "name": "Central mudminnow",
+  "kind": "functional-group",
+  "description": "Small omnivorous fishes: the golden shiner (Notemigonus crysoleucus) and the central mudminnow (Umbra limi). Functional group pooling the source's two minnow taxa, both recorded eating zooplankton and small benthic invertebrates; the source web records no predators for them (their real predators - birds and larger fish - are outside its scope).",
+  "sourceWeb": "little-rock-lake",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Golden_shiner"
+  },
+  "notes": [
+    "Little Rock Lake's minnow node explicitly pools 'shiner & mudminnow'; Tuesday Lake resolves the central mudminnow as its own species node \u2014 overlapping resolution, not identical taxa."
+  ],
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "minnows",
+      "displayName": "Minnows (shiner & mudminnow)",
+      "kind": "functional-group",
+      "trophicLevel": 3.3,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Golden_shiner"
+      }
+    },
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "umbra-limi",
+      "displayName": "Central mudminnow",
+      "kind": "species",
+      "trophicLevel": 4.1
+    }
+  ]
+}

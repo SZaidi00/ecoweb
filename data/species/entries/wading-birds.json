@@ -1,0 +1,18 @@
+{
+  "slug": "wading-birds",
+  "name": "Wading birds",
+  "kind": "functional-group",
+  "description": "Herons, egrets, ibises and wood storks. Functional group pooling six source compartments: egrets, great blue heron, other herons, wood stork, white ibis and the remaining pelican-like waterbirds, aggregated because all hunt in the marsh shallows. Heavy consumers of crayfish, prawns and other aquatic invertebrates; they also take snakes and are raided by alligators.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "wading-birds",
+      "displayName": "Wading birds",
+      "kind": "functional-group",
+      "trophicLevel": 3.3
+    }
+  ]
+}

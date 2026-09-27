@@ -1,0 +1,24 @@
+{
+  "slug": "dragonfly-damselfly-nymphs",
+  "name": "Dragonfly & damselfly nymphs",
+  "kind": "functional-group",
+  "description": "Aquatic juvenile dragonflies and damselflies (Enallagma, Sympetrum, Libellula, Epitheca), ambush predators of midges, microcrustaceans and each other. Functional group pooling the source's four odonate taxa.",
+  "sourceWeb": "little-rock-lake",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Dragonfly"
+  },
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "dragonfly-nymphs",
+      "displayName": "Dragonfly & damselfly nymphs",
+      "kind": "functional-group",
+      "trophicLevel": 3.4,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Dragonfly"
+      }
+    }
+  ]
+}

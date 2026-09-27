@@ -1,0 +1,24 @@
+{
+  "slug": "harvester-termites",
+  "name": "Harvester termites",
+  "kind": "functional-group",
+  "description": "Grass-cutting termites, ecosystem engineers of the savanna. Functional group pooling the source's termite taxa - harvester termites (Hodotermes, Trinervitermes) and the fungus-growing termites Odontotermes and Macrotermes - which the source groups as one node.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Hodotermes"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "harvester-termites",
+      "displayName": "Harvester termites",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Hodotermes"
+      }
+    }
+  ]
+}

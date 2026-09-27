@@ -1,0 +1,24 @@
+{
+  "slug": "resident-marine-mammals",
+  "name": "Resident marine mammals",
+  "kind": "functional-group",
+  "description": "Functional group pooling the year-round toothed whales of PWS: resident (fish-eating) killer whales, Dall's porpoise and harbour porpoise, as defined by the source. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Killer_whale"
+  },
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "resident-marine-mammals",
+      "displayName": "Resident marine mammals",
+      "kind": "functional-group",
+      "trophicLevel": 4.4,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Killer_whale"
+      }
+    }
+  ]
+}

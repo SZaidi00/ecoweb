@@ -1,0 +1,1875 @@
+{
+  "webCount": 7,
+  "entryCount": 131,
+  "entries": [
+    {
+      "slug": "adult-fishes-bass-perch-crappie-rock-bass",
+      "name": "Adult fishes (bass, perch, crappie, rock bass)",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "adult-fishes"
+        }
+      ]
+    },
+    {
+      "slug": "african-buffalo",
+      "name": "African buffalo",
+      "kind": "species",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "buffalo"
+        }
+      ]
+    },
+    {
+      "slug": "african-elephant",
+      "name": "African elephant",
+      "kind": "species",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "elephant"
+        }
+      ]
+    },
+    {
+      "slug": "african-wild-dog-cheetah",
+      "name": "African wild dog & cheetah",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "wild-dog-cheetah"
+        }
+      ]
+    },
+    {
+      "slug": "american-alligator",
+      "name": "American alligator",
+      "kind": "species",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "alligators"
+        }
+      ]
+    },
+    {
+      "slug": "amoebae",
+      "name": "Amoebae",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "amoebae"
+        }
+      ]
+    },
+    {
+      "slug": "ants",
+      "name": "Ants",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "ants"
+        }
+      ]
+    },
+    {
+      "slug": "aquatic-macrophytes",
+      "name": "Aquatic macrophytes",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "macrophytes"
+        }
+      ]
+    },
+    {
+      "slug": "atlantic-menhaden",
+      "name": "Atlantic menhaden",
+      "kind": "species",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "menhaden"
+        }
+      ]
+    },
+    {
+      "slug": "atlantic-sea-nettle",
+      "name": "Atlantic sea nettle",
+      "kind": "species",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "sea-nettle"
+        }
+      ]
+    },
+    {
+      "slug": "bacteria",
+      "name": "Bacteria",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay",
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "bacteria"
+        },
+        {
+          "web": "shortgrass-prairie",
+          "node": "bacteria"
+        }
+      ]
+    },
+    {
+      "slug": "bacteria-feeding-nematodes",
+      "name": "Bacteria-feeding nematodes",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "bacterivorous-nematodes"
+        }
+      ]
+    },
+    {
+      "slug": "benthic-diatoms",
+      "name": "Benthic diatoms",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "benthic-diatoms"
+        }
+      ]
+    },
+    {
+      "slug": "benthic-microcrustaceans",
+      "name": "Benthic microcrustaceans",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "benthic-microcrustaceans"
+        }
+      ]
+    },
+    {
+      "slug": "birds-seabirds-and-waterfowl",
+      "name": "Birds (seabirds and waterfowl)",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "birds"
+        }
+      ]
+    },
+    {
+      "slug": "black-mamba-rock-python",
+      "name": "Black mamba & rock python",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "mamba-python"
+        }
+      ]
+    },
+    {
+      "slug": "blue-crab",
+      "name": "Blue crab",
+      "kind": "species",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "blue-crab"
+        }
+      ]
+    },
+    {
+      "slug": "bottom-feeding-fish",
+      "name": "Bottom-feeding fish",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "benthivorous-fish"
+        }
+      ]
+    },
+    {
+      "slug": "caddisfly-larvae-aquatic-moth-larvae",
+      "name": "Caddisfly larvae & aquatic moth larvae",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "caddisflies"
+        }
+      ]
+    },
+    {
+      "slug": "central-mudminnow",
+      "name": "Central mudminnow",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake",
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "minnows"
+        },
+        {
+          "web": "tuesday-lake",
+          "node": "umbra-limi"
+        }
+      ]
+    },
+    {
+      "slug": "chaoborus-punctipennis-phantom-midge-larva",
+      "name": "Chaoborus punctipennis (phantom midge larva)",
+      "kind": "species",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "chaoborus-punctipennis"
+        }
+      ]
+    },
+    {
+      "slug": "ciliates",
+      "name": "Ciliates",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "ciliates"
+        }
+      ]
+    },
+    {
+      "slug": "crayfish-prawns-and-aquatic-insects",
+      "name": "Crayfish, prawns and aquatic insects",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "aquatic-inverts"
+        }
+      ]
+    },
+    {
+      "slug": "crickets-grasshoppers-beetles",
+      "name": "Crickets, grasshoppers & beetles",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "crickets-grasshoppers"
+        }
+      ]
+    },
+    {
+      "slug": "cryptophytes",
+      "name": "Cryptophytes",
+      "kind": "functional-group",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "cryptophytes"
+        }
+      ]
+    },
+    {
+      "slug": "cryptostigmatic-mites-oribatids",
+      "name": "Cryptostigmatic mites (oribatids)",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "cryptostigmatic-mites"
+        }
+      ]
+    },
+    {
+      "slug": "ctenophores-comb-jellies",
+      "name": "Ctenophores (comb jellies)",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "ctenophores"
+        }
+      ]
+    },
+    {
+      "slug": "cyanobacteria-blue-green-algae",
+      "name": "Cyanobacteria (blue-green algae)",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake",
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "cyanobacteria"
+        },
+        {
+          "web": "tuesday-lake",
+          "node": "cyanobacteria"
+        }
+      ]
+    },
+    {
+      "slug": "cyclopoid-copepods",
+      "name": "Cyclopoid copepods",
+      "kind": "functional-group",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "cyclopoid-copepods"
+        }
+      ]
+    },
+    {
+      "slug": "cypress-trees-and-understory",
+      "name": "Cypress trees and understory",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "cypress-trees"
+        }
+      ]
+    },
+    {
+      "slug": "daphnia-pulex-water-flea",
+      "name": "Daphnia pulex (water flea)",
+      "kind": "species",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "daphnia-pulex"
+        }
+      ]
+    },
+    {
+      "slug": "decaying-matter-carrion",
+      "name": "Decaying matter & carrion",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "decaying-matter"
+        }
+      ]
+    },
+    {
+      "slug": "demersal-fish",
+      "name": "Demersal fish",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "demersal-fish"
+        }
+      ]
+    },
+    {
+      "slug": "deposit-feeding-benthos",
+      "name": "Deposit-feeding benthos",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "deposit-feeding-benthos"
+        }
+      ]
+    },
+    {
+      "slug": "detritus",
+      "name": "Detritus",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound",
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "detritus"
+        },
+        {
+          "web": "shortgrass-prairie",
+          "node": "detritus"
+        }
+      ]
+    },
+    {
+      "slug": "detritus-dissolved-and-particulate-organic-matter",
+      "name": "Detritus (dissolved and particulate organic matter)",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "detritus"
+        }
+      ]
+    },
+    {
+      "slug": "detritus-fine-organic-matter-fish-eggs",
+      "name": "Detritus (fine organic matter & fish eggs)",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "detritus"
+        }
+      ]
+    },
+    {
+      "slug": "detritus-and-carrion",
+      "name": "Detritus and carrion",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "detritus"
+        }
+      ]
+    },
+    {
+      "slug": "diatoms",
+      "name": "Diatoms",
+      "kind": "functional-group",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "diatoms"
+        }
+      ]
+    },
+    {
+      "slug": "dinoflagellates",
+      "name": "Dinoflagellates",
+      "kind": "functional-group",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "dinoflagellates"
+        }
+      ]
+    },
+    {
+      "slug": "dragonfly-damselfly-nymphs",
+      "name": "Dragonfly & damselfly nymphs",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "dragonfly-nymphs"
+        }
+      ]
+    },
+    {
+      "slug": "ducks-rails-and-coots",
+      "name": "Ducks, rails and coots",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "waterfowl-rails"
+        }
+      ]
+    },
+    {
+      "slug": "eagles-large-owls",
+      "name": "Eagles & large owls",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "large-raptors"
+        }
+      ]
+    },
+    {
+      "slug": "epifaunal-zoobenthos",
+      "name": "Epifaunal zoobenthos",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "epifaunal-zoobenthos"
+        }
+      ]
+    },
+    {
+      "slug": "euglenoids-and-unclassified-flagellates",
+      "name": "Euglenoids and unclassified flagellates",
+      "kind": "functional-group",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "small-flagellates"
+        }
+      ]
+    },
+    {
+      "slug": "filamentous-algae-the-periphyton-mats",
+      "name": "Filamentous algae (the periphyton mats)",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "filamentous-algae"
+        }
+      ]
+    },
+    {
+      "slug": "finescale-dace",
+      "name": "Finescale dace",
+      "kind": "species",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "phoxinus-neogaeus"
+        }
+      ]
+    },
+    {
+      "slug": "fish-larvae",
+      "name": "Fish larvae",
+      "kind": "life-stage-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "fish-larvae"
+        }
+      ]
+    },
+    {
+      "slug": "flagellates",
+      "name": "Flagellates",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "flagellates"
+        }
+      ]
+    },
+    {
+      "slug": "flatworms-triclads",
+      "name": "Flatworms (triclads)",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "flatworms"
+        }
+      ]
+    },
+    {
+      "slug": "flies-bees-butterflies",
+      "name": "Flies, bees & butterflies",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "flies"
+        }
+      ]
+    },
+    {
+      "slug": "florida-apple-snail",
+      "name": "Florida apple snail",
+      "kind": "species",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "apple-snail"
+        }
+      ]
+    },
+    {
+      "slug": "freshwater-sponges",
+      "name": "Freshwater sponges",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "freshwater-sponges"
+        }
+      ]
+    },
+    {
+      "slug": "frogs-salamanders-and-larvae",
+      "name": "Frogs, salamanders and larvae",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "amphibians"
+        }
+      ]
+    },
+    {
+      "slug": "fruits-nectar",
+      "name": "Fruits & nectar",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "fruits-nectar"
+        }
+      ]
+    },
+    {
+      "slug": "fungal-feeding-nematodes",
+      "name": "Fungal-feeding nematodes",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "fungivorous-nematodes"
+        }
+      ]
+    },
+    {
+      "slug": "gazelles-small-antelopes",
+      "name": "Gazelles & small antelopes",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "gazelles"
+        }
+      ]
+    },
+    {
+      "slug": "golden-algae-chrysophytes",
+      "name": "Golden algae (chrysophytes)",
+      "kind": "functional-group",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "chrysophytes"
+        }
+      ]
+    },
+    {
+      "slug": "grains-seeds",
+      "name": "Grains & seeds",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "grains-seeds"
+        }
+      ]
+    },
+    {
+      "slug": "grasses-herbs",
+      "name": "Grasses & herbs",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "grasses-herbs"
+        }
+      ]
+    },
+    {
+      "slug": "green-algae-and-desmids",
+      "name": "Green algae and desmids",
+      "kind": "functional-group",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "green-algae-desmids"
+        }
+      ]
+    },
+    {
+      "slug": "harvester-termites",
+      "name": "Harvester termites",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "harvester-termites"
+        }
+      ]
+    },
+    {
+      "slug": "hatchery-salmon-fry",
+      "name": "Hatchery salmon fry",
+      "kind": "life-stage-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "hatchery-salmon-fry"
+        }
+      ]
+    },
+    {
+      "slug": "heterotrophic-microflagellates",
+      "name": "Heterotrophic microflagellates",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "microflagellates"
+        }
+      ]
+    },
+    {
+      "slug": "hooded-vulture-tawny-eagle",
+      "name": "Hooded vulture & tawny eagle",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "vulture-eagle"
+        }
+      ]
+    },
+    {
+      "slug": "infaunal-zoobenthos",
+      "name": "Infaunal zoobenthos",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "infaunal-zoobenthos"
+        }
+      ]
+    },
+    {
+      "slug": "intertidal-invertebrates",
+      "name": "Intertidal invertebrates",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "intertidal-invertebrates"
+        }
+      ]
+    },
+    {
+      "slug": "jackals-honey-badger-aardwolf",
+      "name": "Jackals, honey badger & aardwolf",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "jackals"
+        }
+      ]
+    },
+    {
+      "slug": "land-birds",
+      "name": "Land birds",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "land-birds"
+        }
+      ]
+    },
+    {
+      "slug": "leopard-spotted-hyena",
+      "name": "Leopard & spotted hyena",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "leopard-hyena"
+        }
+      ]
+    },
+    {
+      "slug": "leptodiaptomus-siciloides-calanoid-copepod",
+      "name": "Leptodiaptomus siciloides (calanoid copepod)",
+      "kind": "species",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "leptodiaptomus-siciloides"
+        }
+      ]
+    },
+    {
+      "slug": "lion",
+      "name": "Lion",
+      "kind": "species",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "lion"
+        }
+      ]
+    },
+    {
+      "slug": "maasai-giraffe",
+      "name": "Maasai giraffe",
+      "kind": "species",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "giraffe"
+        }
+      ]
+    },
+    {
+      "slug": "macroalgae-kelps",
+      "name": "Macroalgae (kelps)",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "macroalgae"
+        }
+      ]
+    },
+    {
+      "slug": "macrozooplankton-krill-and-kin",
+      "name": "Macrozooplankton (krill and kin)",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "macrozooplankton"
+        }
+      ]
+    },
+    {
+      "slug": "mayfly-nymphs",
+      "name": "Mayfly nymphs",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "mayflies"
+        }
+      ]
+    },
+    {
+      "slug": "meiofauna",
+      "name": "Meiofauna",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "meiofauna"
+        }
+      ]
+    },
+    {
+      "slug": "mesozooplankton",
+      "name": "Mesozooplankton",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "mesozooplankton"
+        }
+      ]
+    },
+    {
+      "slug": "mid-sized-mammals",
+      "name": "Mid-sized mammals",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "mesomammals"
+        }
+      ]
+    },
+    {
+      "slug": "midges-phantom-midges-diptera-larvae",
+      "name": "Midges & phantom midges (Diptera larvae)",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "midges"
+        }
+      ]
+    },
+    {
+      "slug": "mongooses-small-carnivores",
+      "name": "Mongooses & small carnivores",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "small-carnivores"
+        }
+      ]
+    },
+    {
+      "slug": "mycorrhizal-fungi",
+      "name": "Mycorrhizal fungi",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "mycorrhizal-fungi"
+        }
+      ]
+    },
+    {
+      "slug": "nematode-feeding-mites",
+      "name": "Nematode-feeding mites",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "nematode-feeding-mites"
+        }
+      ]
+    },
+    {
+      "slug": "nile-crocodile",
+      "name": "Nile crocodile",
+      "kind": "species",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "nile-crocodile"
+        }
+      ]
+    },
+    {
+      "slug": "non-cryptostigmatic-mites",
+      "name": "Non-cryptostigmatic mites",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "noncryptostigmatic-mites"
+        }
+      ]
+    },
+    {
+      "slug": "northern-redbelly-dace",
+      "name": "Northern redbelly dace",
+      "kind": "species",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "phoxinus-eos"
+        }
+      ]
+    },
+    {
+      "slug": "oligochaete-worms-leeches",
+      "name": "Oligochaete worms & leeches",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "worms-and-leeches"
+        }
+      ]
+    },
+    {
+      "slug": "omnivorous-nematodes",
+      "name": "Omnivorous nematodes",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "omnivorous-nematodes"
+        }
+      ]
+    },
+    {
+      "slug": "oysters",
+      "name": "Oysters",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "oysters"
+        }
+      ]
+    },
+    {
+      "slug": "pacific-herring",
+      "name": "Pacific herring",
+      "kind": "species",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "pacific-herring"
+        }
+      ]
+    },
+    {
+      "slug": "panther-and-bobcat",
+      "name": "Panther and bobcat",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "big-predators"
+        }
+      ]
+    },
+    {
+      "slug": "periphyton-algal-mats",
+      "name": "Periphyton (algal mats)",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "periphyton"
+        }
+      ]
+    },
+    {
+      "slug": "phytoplankton",
+      "name": "Phytoplankton",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay",
+        "cypress-wetland",
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "phytoplankton"
+        },
+        {
+          "web": "cypress-wetland",
+          "node": "phytoplankton"
+        },
+        {
+          "web": "prince-william-sound",
+          "node": "phytoplankton"
+        }
+      ]
+    },
+    {
+      "slug": "phytoplankton-diatoms-green-golden-algae",
+      "name": "Phytoplankton (diatoms, green & golden algae)",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "phytoplankton"
+        }
+      ]
+    },
+    {
+      "slug": "pinnipeds-seals-and-sea-lions",
+      "name": "Pinnipeds (seals and sea lions)",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "pinnipeds"
+        }
+      ]
+    },
+    {
+      "slug": "piscivorous-fish",
+      "name": "Piscivorous fish",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "piscivorous-fish"
+        }
+      ]
+    },
+    {
+      "slug": "planktivorous-forage-fish",
+      "name": "Planktivorous forage fish",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "forage-fish"
+        }
+      ]
+    },
+    {
+      "slug": "plant-roots",
+      "name": "Plant roots",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "roots"
+        }
+      ]
+    },
+    {
+      "slug": "predatory-and-large-fishes",
+      "name": "Predatory and large fishes",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "pred-fish"
+        }
+      ]
+    },
+    {
+      "slug": "predatory-mites",
+      "name": "Predatory mites",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "predaceous-mites"
+        }
+      ]
+    },
+    {
+      "slug": "predatory-nematodes",
+      "name": "Predatory nematodes",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "predaceous-nematodes"
+        }
+      ]
+    },
+    {
+      "slug": "predatory-water-bugs-beetles-mites",
+      "name": "Predatory water bugs, beetles & mites",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "predatory-water-bugs"
+        }
+      ]
+    },
+    {
+      "slug": "raptors-and-vultures",
+      "name": "Raptors and vultures",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "raptors"
+        }
+      ]
+    },
+    {
+      "slug": "resident-marine-mammals",
+      "name": "Resident marine mammals",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "resident-marine-mammals"
+        }
+      ]
+    },
+    {
+      "slug": "root-feeding-nematodes",
+      "name": "Root-feeding nematodes",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "root-feeding-nematodes"
+        }
+      ]
+    },
+    {
+      "slug": "rotifers",
+      "name": "Rotifers",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake",
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "rotifers"
+        },
+        {
+          "web": "tuesday-lake",
+          "node": "rotifers"
+        }
+      ]
+    },
+    {
+      "slug": "salmon-adults",
+      "name": "Salmon (adults)",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "salmon"
+        }
+      ]
+    },
+    {
+      "slug": "saprophytic-fungi",
+      "name": "Saprophytic fungi",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "saprophytic-fungi"
+        }
+      ]
+    },
+    {
+      "slug": "savanna-frogs-toads",
+      "name": "Savanna frogs & toads",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "frogs"
+        }
+      ]
+    },
+    {
+      "slug": "savanna-rodents-hares",
+      "name": "Savanna rodents & hares",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "rodents-hares"
+        }
+      ]
+    },
+    {
+      "slug": "scud-crangonyx-gracilis",
+      "name": "Scud (Crangonyx gracilis)",
+      "kind": "species",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "amphipods"
+        }
+      ]
+    },
+    {
+      "slug": "sea-otter",
+      "name": "Sea otter",
+      "kind": "species",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "sea-otter"
+        }
+      ]
+    },
+    {
+      "slug": "small-forage-fishes",
+      "name": "Small forage fishes",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "herb-fish"
+        }
+      ]
+    },
+    {
+      "slug": "small-herbivorous-cladocerans",
+      "name": "Small herbivorous cladocerans",
+      "kind": "functional-group",
+      "webs": [
+        "tuesday-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "tuesday-lake",
+          "node": "herbivorous-cladocerans"
+        }
+      ]
+    },
+    {
+      "slug": "small-mammals",
+      "name": "Small mammals",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "small-mammals"
+        }
+      ]
+    },
+    {
+      "slug": "small-pelagic-fish",
+      "name": "Small pelagic fish",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "small-pelagics"
+        }
+      ]
+    },
+    {
+      "slug": "snails-fingernail-clams",
+      "name": "Snails & fingernail clams",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "snails-and-clams"
+        }
+      ]
+    },
+    {
+      "slug": "snakes-and-lizards",
+      "name": "Snakes and lizards",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "lizards-snakes"
+        }
+      ]
+    },
+    {
+      "slug": "springtails-collembola",
+      "name": "Springtails (collembola)",
+      "kind": "functional-group",
+      "webs": [
+        "shortgrass-prairie"
+      ],
+      "occurrences": [
+        {
+          "web": "shortgrass-prairie",
+          "node": "collembolans"
+        }
+      ]
+    },
+    {
+      "slug": "suspension-feeding-benthos",
+      "name": "Suspension-feeding benthos",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "other-suspension-feeders"
+        }
+      ]
+    },
+    {
+      "slug": "terrestrial-insects",
+      "name": "Terrestrial insects",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "terr-insects"
+        }
+      ]
+    },
+    {
+      "slug": "transient-marine-mammals",
+      "name": "Transient marine mammals",
+      "kind": "functional-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "transient-marine-mammals"
+        }
+      ]
+    },
+    {
+      "slug": "trees-shrubs",
+      "name": "Trees & shrubs",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "trees-shrubs"
+        }
+      ]
+    },
+    {
+      "slug": "turtles",
+      "name": "Turtles",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "turtles"
+        }
+      ]
+    },
+    {
+      "slug": "wading-birds",
+      "name": "Wading birds",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "wading-birds"
+        }
+      ]
+    },
+    {
+      "slug": "water-fleas-pelagic-copepods",
+      "name": "Water fleas & pelagic copepods",
+      "kind": "functional-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "zooplankton"
+        }
+      ]
+    },
+    {
+      "slug": "white-tailed-deer-and-hogs",
+      "name": "White-tailed deer and hogs",
+      "kind": "functional-group",
+      "webs": [
+        "cypress-wetland"
+      ],
+      "occurrences": [
+        {
+          "web": "cypress-wetland",
+          "node": "deer-hogs"
+        }
+      ]
+    },
+    {
+      "slug": "wild-salmon-fry",
+      "name": "Wild salmon fry",
+      "kind": "life-stage-group",
+      "webs": [
+        "prince-william-sound"
+      ],
+      "occurrences": [
+        {
+          "web": "prince-william-sound",
+          "node": "wild-salmon-fry"
+        }
+      ]
+    },
+    {
+      "slug": "wildebeest-zebra-large-grazers",
+      "name": "Wildebeest, zebra & large grazers",
+      "kind": "functional-group",
+      "webs": [
+        "serengeti"
+      ],
+      "occurrences": [
+        {
+          "web": "serengeti",
+          "node": "large-grazers"
+        }
+      ]
+    },
+    {
+      "slug": "young-of-year-fishes",
+      "name": "Young-of-year fishes",
+      "kind": "life-stage-group",
+      "webs": [
+        "little-rock-lake"
+      ],
+      "occurrences": [
+        {
+          "web": "little-rock-lake",
+          "node": "young-fishes"
+        }
+      ]
+    },
+    {
+      "slug": "zooplankton-copepods-and-kin",
+      "name": "Zooplankton (copepods and kin)",
+      "kind": "functional-group",
+      "webs": [
+        "chesapeake-bay"
+      ],
+      "occurrences": [
+        {
+          "web": "chesapeake-bay",
+          "node": "zooplankton"
+        }
+      ]
+    }
+  ]
+}

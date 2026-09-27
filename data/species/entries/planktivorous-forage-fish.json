@@ -1,0 +1,18 @@
+{
+  "slug": "planktivorous-forage-fish",
+  "name": "Planktivorous forage fish",
+  "kind": "functional-group",
+  "description": "Functional group pooling the source's small schooling plankton-eaters - alewife and blueback herring (a single source compartment), bay anchovy and shad - grouped because they share the same diet of zooplankton with some phytoplankton and suspended detritus. The key prey of the estuary's piscivorous fish. Reported biomass (metrics.biomass) is the summed annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "forage-fish",
+      "displayName": "Planktivorous forage fish",
+      "kind": "functional-group",
+      "trophicLevel": 2.85
+    }
+  ]
+}

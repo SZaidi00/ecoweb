@@ -1,0 +1,18 @@
+{
+  "slug": "plant-roots",
+  "name": "Plant roots",
+  "kind": "functional-group",
+  "description": "Living roots of the shortgrass steppe vegetation (dominated by blue grama, Bouteloua gracilis), the plant-based energy channel of the soil web. Functional group aggregating the roots of all plant species, measured by the source as a single below-ground pool. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+  "sourceWeb": "shortgrass-prairie",
+  "occurrences": [
+    {
+      "web": "shortgrass-prairie",
+      "webName": "Shortgrass Prairie",
+      "biome": "grassland",
+      "node": "roots",
+      "displayName": "Plant roots",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

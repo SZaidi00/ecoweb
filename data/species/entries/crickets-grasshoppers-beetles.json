@@ -1,0 +1,24 @@
+{
+  "slug": "crickets-grasshoppers-beetles",
+  "name": "Crickets, grasshoppers & beetles",
+  "kind": "functional-group",
+  "description": "The main insect herbivores of the grass layer. Functional group pooling the source's crickets node with grasshoppers, planthoppers, dung beetles, weevils, caterpillars and stick insects, as grouped by the source study.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Grasshopper"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "crickets-grasshoppers",
+      "displayName": "Crickets, grasshoppers & beetles",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Grasshopper"
+      }
+    }
+  ]
+}

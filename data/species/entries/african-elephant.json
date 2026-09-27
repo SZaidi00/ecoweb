@@ -1,0 +1,26 @@
+{
+  "slug": "african-elephant",
+  "name": "African elephant",
+  "kind": "species",
+  "description": "The African elephant (Loxodonta africana), tracked as its own node by the source study. A mixed feeder on grasses and woody plants, and an ecosystem engineer that pushes over trees; no predator in the web takes an adult.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/African_bush_elephant",
+    "iNaturalist": "https://www.inaturalist.org/taxa/43694-Loxodonta-africana"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "elephant",
+      "displayName": "African elephant",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/African_bush_elephant",
+        "iNaturalist": "https://www.inaturalist.org/taxa/43694-Loxodonta-africana"
+      }
+    }
+  ]
+}

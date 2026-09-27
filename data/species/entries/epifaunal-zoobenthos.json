@@ -1,0 +1,18 @@
+{
+  "slug": "epifaunal-zoobenthos",
+  "name": "Epifaunal zoobenthos",
+  "kind": "functional-group",
+  "description": "Invertebrates living on the seafloor surface. Functional group pooling Tanner crab, pink shrimp, mud stars and sunflower stars - mostly scavengers and predators of other benthos - aggregated from the source's benthic epifauna surveys. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "epifaunal-zoobenthos",
+      "displayName": "Epifaunal zoobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.9
+    }
+  ]
+}

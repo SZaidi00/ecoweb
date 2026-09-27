@@ -1,0 +1,24 @@
+{
+  "slug": "ants",
+  "name": "Ants",
+  "kind": "functional-group",
+  "description": "Savanna ants, including ecosystem engineers that turn and aerate the soil. Functional group pooling the source's Formicidae (ant) node; omnivorous, taking seeds, termites and decaying matter.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Ant"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "ants",
+      "displayName": "Ants",
+      "kind": "functional-group",
+      "trophicLevel": 2.3,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Ant"
+      }
+    }
+  ]
+}

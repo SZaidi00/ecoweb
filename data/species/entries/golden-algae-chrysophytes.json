@@ -1,0 +1,18 @@
+{
+  "slug": "golden-algae-chrysophytes",
+  "name": "Golden algae (chrysophytes)",
+  "kind": "functional-group",
+  "description": "Golden-brown flagellated algae, abundant in soft-water lakes. Functional group pooling nine source taxa - Chromulina sp., Diceras sp., Chrysosphaerella longispina, three Dinobryon species (D. bavaricum, D. cylindricum, D. sertularia and D. sociale) and two Mallomonas species - following the major phytoplankton classes used by the limnological literature.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "chrysophytes",
+      "displayName": "Golden algae (chrysophytes)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

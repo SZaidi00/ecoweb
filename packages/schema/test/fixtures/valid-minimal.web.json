@@ -47,6 +47,7 @@
         "wikipedia": "https://en.wikipedia.org/wiki/Shark",
         "iNaturalist": "https://www.inaturalist.org/taxa/47273"
       },
+      "alsoKnownAs": ["Dogfish", "Lesser spotted dogfish"],
       "layout": { "x": 55, "y": 85 }
     }
   ],

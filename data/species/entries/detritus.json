@@ -1,0 +1,27 @@
+{
+  "slug": "detritus",
+  "name": "Detritus",
+  "kind": "functional-group",
+  "description": "Dead plant material and other non-living soil organic matter, the main energy source of this below-ground web. Functional group aggregating the three detritus compartments of the source model (numbered 3, 5 and 7 in the source figure), pooled because the web's consumers draw on them as one resource. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+  "sourceWeb": "shortgrass-prairie",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    },
+    {
+      "web": "shortgrass-prairie",
+      "webName": "Shortgrass Prairie",
+      "biome": "grassland",
+      "node": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

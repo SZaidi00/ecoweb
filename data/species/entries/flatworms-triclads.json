@@ -1,0 +1,18 @@
+{
+  "slug": "flatworms-triclads",
+  "name": "Flatworms (triclads)",
+  "kind": "functional-group",
+  "description": "Free-living flatworms gliding over the bottom, predators and scavengers of small invertebrates. Functional group pooling the source's triclad flatworms, which the source recorded as one undivided taxon (Turbellaria Tricladida).",
+  "sourceWeb": "little-rock-lake",
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "flatworms",
+      "displayName": "Flatworms (triclads)",
+      "kind": "functional-group",
+      "trophicLevel": 2.8
+    }
+  ]
+}

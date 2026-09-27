@@ -1,0 +1,18 @@
+{
+  "slug": "trees-shrubs",
+  "name": "Trees & shrubs",
+  "kind": "functional-group",
+  "description": "Acacias and other woody plants dotting the savanna, browsed by giraffe, elephant and many insects. Functional group pooling all trees and shrubs as one resource node, as defined by the source study.",
+  "sourceWeb": "serengeti",
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "trees-shrubs",
+      "displayName": "Trees & shrubs",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

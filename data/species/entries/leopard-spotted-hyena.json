@@ -1,0 +1,26 @@
+{
+  "slug": "leopard-spotted-hyena",
+  "name": "Leopard & spotted hyena",
+  "kind": "functional-group",
+  "description": "The powerful solitary hunter and the bone-cracking clan hunter-scavenger. Functional group pooling the source's 'Leopard' node: the leopard (Panthera pardus) and the spotted hyena (Crocuta crocuta), grouped by the source study on their shared diet of gazelles, large grazers and small mammals.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Spotted_hyena",
+    "iNaturalist": "https://www.inaturalist.org/taxa/41955-Crocuta-crocuta"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "leopard-hyena",
+      "displayName": "Leopard & spotted hyena",
+      "kind": "functional-group",
+      "trophicLevel": 3.4,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Spotted_hyena",
+        "iNaturalist": "https://www.inaturalist.org/taxa/41955-Crocuta-crocuta"
+      }
+    }
+  ]
+}

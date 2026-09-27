@@ -302,6 +302,7 @@ export function WebPage() {
             <SpeciesPanel
               model={model}
               node={focusedNode}
+              webId={model.web.meta.id}
               chainOpen={chainOpen}
               onToggleChain={() => setChainOpen((open) => !open)}
               onFocus={focusNode}

@@ -1,0 +1,30 @@
+{
+  "slug": "rotifers",
+  "name": "Rotifers",
+  "kind": "functional-group",
+  "description": "Microscopic swimming animals that graze small algae. Functional group pooling all thirteen rotifer taxa in the source web (including Keratella, Kellicottia, Polyarthra, Synchaeta, Conochilus, Conochiloides, Trichocerca, Filinia, Gastropus, Ascomorpha and Ploesoma), the standard zooplankton guild in the limnological literature; all feed on small phytoplankton and flagellates.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "rotifers",
+      "displayName": "Rotifers",
+      "kind": "functional-group",
+      "trophicLevel": 2.5,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Rotifer"
+      }
+    },
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "rotifers",
+      "displayName": "Rotifers",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

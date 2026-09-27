@@ -1,0 +1,18 @@
+{
+  "slug": "daphnia-pulex-water-flea",
+  "name": "Daphnia pulex (water flea)",
+  "kind": "species",
+  "description": "A large water flea, a single species tracked by the source and the classic grazer of lake trophic-cascade studies. In the source web it filters all seven algal groups and also ingests small rotifers, which nudges it slightly above trophic level 2.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "daphnia-pulex",
+      "displayName": "Daphnia pulex (water flea)",
+      "kind": "species",
+      "trophicLevel": 2.1
+    }
+  ]
+}

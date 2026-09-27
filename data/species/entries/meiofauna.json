@@ -1,0 +1,18 @@
+{
+  "slug": "meiofauna",
+  "name": "Meiofauna",
+  "kind": "functional-group",
+  "description": "Tiny invertebrates living between sediment grains - nematodes, harpacticoid copepods, foraminifera and kin. Functional group aggregating the meiobenthos community as a single source compartment; feeds on benthic diatoms and sediment bacteria. Nothing in the published network consumes it. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "meiofauna",
+      "displayName": "Meiofauna",
+      "kind": "functional-group",
+      "trophicLevel": 2.63
+    }
+  ]
+}

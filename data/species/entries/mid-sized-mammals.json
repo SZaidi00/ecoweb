@@ -1,0 +1,18 @@
+{
+  "slug": "mid-sized-mammals",
+  "name": "Mid-sized mammals",
+  "kind": "functional-group",
+  "description": "Mid-sized mammals, mostly omnivores. Functional group pooling six source compartments: opossum, raccoon, gray fox, mink, river otter and Florida black bear, aggregated because the source tracked each as a small mid-trophic mammal compartment. The pooled diet mixes plants, mast and insects (bear, raccoon, opossum) with crayfish, prawns and fish (otter, mink).",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "mesomammals",
+      "displayName": "Mid-sized mammals",
+      "kind": "functional-group",
+      "trophicLevel": 2.5
+    }
+  ]
+}

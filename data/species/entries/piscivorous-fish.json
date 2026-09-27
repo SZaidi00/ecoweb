@@ -1,0 +1,18 @@
+{
+  "slug": "piscivorous-fish",
+  "name": "Piscivorous fish",
+  "kind": "functional-group",
+  "description": "Functional group pooling the estuary's top fish predators - bluefish, weakfish, summer flounder and striped bass - aggregated because all four prey mainly on forage fish (anchovies, herrings, menhaden) in the source network. Nothing in the network eats them; their losses go to fisheries and emigration. Reported biomass (metrics.biomass) is the summed annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "piscivorous-fish",
+      "displayName": "Piscivorous fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.9
+    }
+  ]
+}

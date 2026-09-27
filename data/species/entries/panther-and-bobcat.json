@@ -1,0 +1,18 @@
+{
+  "slug": "panther-and-bobcat",
+  "name": "Panther and bobcat",
+  "kind": "functional-group",
+  "description": "The Florida panther and the bobcat. Functional group pooling the source's two big-cat compartments, aggregated because both are the web's mammalian apex predators; they prey mainly on deer and hogs, with raccoons, rabbits, squirrels and other smaller animals making up the rest.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "big-predators",
+      "displayName": "Panther and bobcat",
+      "kind": "functional-group",
+      "trophicLevel": 3.1
+    }
+  ]
+}

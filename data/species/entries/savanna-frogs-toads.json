@@ -1,0 +1,18 @@
+{
+  "slug": "savanna-frogs-toads",
+  "name": "Savanna frogs & toads",
+  "kind": "functional-group",
+  "description": "Frogs and toads of the savanna's pools and grass layer, snapping up ants, termites and other insects. Functional group pooling the source's fifteen frog and toad taxa (reed frogs, puddle frogs, rubber frogs, bullfrogs and toads) as one node, as grouped by the source study.",
+  "sourceWeb": "serengeti",
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "frogs",
+      "displayName": "Savanna frogs & toads",
+      "kind": "functional-group",
+      "trophicLevel": 3.1
+    }
+  ]
+}

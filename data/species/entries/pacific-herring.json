@@ -1,0 +1,26 @@
+{
+  "slug": "pacific-herring",
+  "name": "Pacific herring",
+  "kind": "species",
+  "description": "Pacific herring (Clupea pallasii), a single species tracked by the source. The key forage fish of PWS: it converts zooplankton (euphausiids, copepods, mysids, amphipods) into food for fish, birds and mammals, and supported major seine, gillnet and spawn-on-kelp fisheries in the 1980s. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Pacific_herring",
+    "iNaturalist": "https://www.inaturalist.org/taxa/52346-Clupea-pallasii"
+  },
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "pacific-herring",
+      "displayName": "Pacific herring",
+      "kind": "species",
+      "trophicLevel": 3.3,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Pacific_herring",
+        "iNaturalist": "https://www.inaturalist.org/taxa/52346-Clupea-pallasii"
+      }
+    }
+  ]
+}

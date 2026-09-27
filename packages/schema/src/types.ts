@@ -101,6 +101,12 @@ export interface WebNode {
   /** Plain-language description; includes the aggregation statement for non-species nodes. */
   description: string
   externalLinks?: ExternalLinks
+  /**
+   * Alternate display names for this node, used by the species-index
+   * generator for exact-name grouping. Curator-asserted only; never
+   * auto-generated.
+   */
+  alsoKnownAs?: string[]
   metrics?: NodeMetrics
   layout: LayoutHint
 }

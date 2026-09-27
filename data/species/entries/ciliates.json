@@ -1,0 +1,18 @@
+{
+  "slug": "ciliates",
+  "name": "Ciliates",
+  "kind": "functional-group",
+  "description": "Single-celled planktonic grazers that eat phytoplankton, flagellates, bacteria and suspended detritus. Functional group aggregating all planktonic ciliate taxa as measured by the source. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "ciliates",
+      "displayName": "Ciliates",
+      "kind": "functional-group",
+      "trophicLevel": 2.74
+    }
+  ]
+}

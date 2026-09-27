@@ -1,0 +1,18 @@
+{
+  "slug": "deposit-feeding-benthos",
+  "name": "Deposit-feeding benthos",
+  "kind": "functional-group",
+  "description": "Worms, clams and small crustaceans that eat the sediment itself. Functional group pooling the source's four deposit-feeder compartments - 'other polychaetes', the clam worm Nereis, macoma clams (Macoma spp.) and crustacean deposit feeders - all of which consume sediment bacteria in the source network. The main food of blue crabs and bottom-feeding fish. Reported biomass (metrics.biomass) is the summed annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "deposit-feeding-benthos",
+      "displayName": "Deposit-feeding benthos",
+      "kind": "functional-group",
+      "trophicLevel": 3.0
+    }
+  ]
+}

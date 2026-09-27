@@ -1,0 +1,18 @@
+{
+  "slug": "euglenoids-and-unclassified-flagellates",
+  "name": "Euglenoids and unclassified flagellates",
+  "kind": "functional-group",
+  "description": "Tiny swimming algae. Functional group pooling Trachelomonas sp. (a euglenoid) with the source's 'Unclassified flagellates', the single most abundant 'taxon' in the samples (about 1.9 billion cells per cubic metre), aggregated because the source itself could not resolve these small cells further.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "small-flagellates",
+      "displayName": "Euglenoids and unclassified flagellates",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

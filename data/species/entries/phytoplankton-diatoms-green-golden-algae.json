@@ -1,0 +1,24 @@
+{
+  "slug": "phytoplankton-diatoms-green-golden-algae",
+  "name": "Phytoplankton (diatoms, green & golden algae)",
+  "kind": "functional-group",
+  "description": "Microscopic algae of the open water. Functional group pooling 25 source taxa - the golden algae and diatoms Tabellaria, Synura, Synedra, Mallomonas, Dinobryon and Asterionella, fifteen green algae including Scenedesmus and the desmids (Cosmarium, Staurastrum and kin), and the flagellates Cryptomonas, Chroomonas, Trachelomonas and Phacus - following the source file's own taxonomic group labels.",
+  "sourceWeb": "little-rock-lake",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Phytoplankton"
+  },
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "phytoplankton",
+      "displayName": "Phytoplankton (diatoms, green & golden algae)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Phytoplankton"
+      }
+    }
+  ]
+}

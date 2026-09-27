@@ -1,0 +1,24 @@
+{
+  "slug": "american-alligator",
+  "name": "American alligator",
+  "kind": "species",
+  "description": "American alligator (Alligator mississippiensis), a single compartment tracked by the source. The top predator of the wet-season web, eating fishes, turtles, snakes and amphibians, with eggs and hatchlings lost to turtles, snakes and raccoons.",
+  "sourceWeb": "cypress-wetland",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/American_alligator"
+  },
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "alligators",
+      "displayName": "American alligator",
+      "kind": "species",
+      "trophicLevel": 3.6,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/American_alligator"
+      }
+    }
+  ]
+}

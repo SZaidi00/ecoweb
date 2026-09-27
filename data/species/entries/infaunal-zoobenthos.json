@@ -1,0 +1,18 @@
+{
+  "slug": "infaunal-zoobenthos",
+  "name": "Infaunal zoobenthos",
+  "kind": "functional-group",
+  "description": "Invertebrates living inside the seafloor sediment. Functional group pooling mostly deposit-feeding polychaete worms and bivalves (e.g. clams) plus suspension feeders, pooled from the source's benthic infauna surveys. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "infaunal-zoobenthos",
+      "displayName": "Infaunal zoobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.3
+    }
+  ]
+}

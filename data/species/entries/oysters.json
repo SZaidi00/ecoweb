@@ -1,0 +1,18 @@
+{
+  "slug": "oysters",
+  "name": "Oysters",
+  "kind": "functional-group",
+  "description": "Functional group aggregating the source's oyster compartment - overwhelmingly the eastern oyster (Crassostrea virginica) on Bay reefs - kept plural because the source measured the suspension-feeding oyster stock as a whole. Filters phytoplankton, suspended detritus and microzooplankton from the estuarine water column; nothing in the network eats it. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "oysters",
+      "displayName": "Oysters",
+      "kind": "functional-group",
+      "trophicLevel": 2.08
+    }
+  ]
+}

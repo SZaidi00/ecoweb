@@ -1,0 +1,18 @@
+{
+  "slug": "finescale-dace",
+  "name": "Finescale dace",
+  "kind": "species",
+  "description": "Phoxinus neogaeus, a small minnow, a single species tracked by the source. Its recorded diet in the source web is identical to its congener's: large zooplankton including Chaoborus, with the central mudminnow as its predator.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "phoxinus-neogaeus",
+      "displayName": "Finescale dace",
+      "kind": "species",
+      "trophicLevel": 3.6
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "freshwater-sponges",
+  "name": "Freshwater sponges",
+  "kind": "functional-group",
+  "description": "Encrusting sponges filtering fine organic matter from the water. Functional group pooling the source's three sponge taxa - Spongilla lacustris, Ephydatia muelleri and Corvomeyenia everetti. Spongilla is recorded as food for an unusually broad guild of scrapers in the source web.",
+  "sourceWeb": "little-rock-lake",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Spongilla_lacustris"
+  },
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "freshwater-sponges",
+      "displayName": "Freshwater sponges",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Spongilla_lacustris"
+      }
+    }
+  ]
+}

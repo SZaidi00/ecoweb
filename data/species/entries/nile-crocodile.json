@@ -1,0 +1,26 @@
+{
+  "slug": "nile-crocodile",
+  "name": "Nile crocodile",
+  "kind": "species",
+  "description": "The Nile crocodile (Crocodylus niloticus), tracked as its own node by the source study. The ambush predator of the rivers - famous for taking migrating wildebeest at the crossings - and recorded by the source as taking even leopards at the water's edge.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Nile_crocodile",
+    "iNaturalist": "https://www.inaturalist.org/taxa/34100-Crocodylus-niloticus"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "nile-crocodile",
+      "displayName": "Nile crocodile",
+      "kind": "species",
+      "trophicLevel": 3.7,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Nile_crocodile",
+        "iNaturalist": "https://www.inaturalist.org/taxa/34100-Crocodylus-niloticus"
+      }
+    }
+  ]
+}

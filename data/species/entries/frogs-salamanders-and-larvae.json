@@ -1,0 +1,18 @@
+{
+  "slug": "frogs-salamanders-and-larvae",
+  "name": "Frogs, salamanders and larvae",
+  "kind": "functional-group",
+  "description": "Frogs, salamanders and their aquatic young. Functional group pooling six source compartments: large, medium and small frogs, salamanders, salamander larvae and tadpoles, aggregated because all are small amphibians; the pooled diet spans periphyton grazing by tadpoles and insect- and fish-hunting by adults.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "amphibians",
+      "displayName": "Frogs, salamanders and larvae",
+      "kind": "functional-group",
+      "trophicLevel": 3.0
+    }
+  ]
+}

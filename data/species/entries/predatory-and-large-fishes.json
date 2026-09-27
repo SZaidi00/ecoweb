@@ -1,0 +1,18 @@
+{
+  "slug": "predatory-and-large-fishes",
+  "name": "Predatory and large fishes",
+  "kind": "functional-group",
+  "description": "Larger fishes that eat other fishes and invertebrates. Functional group pooling the source's piscivorous fish and large fish compartments, aggregated because both are bigger, animal-eating fishes; preyed on by alligators, turtles, snakes and wading birds.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "pred-fish",
+      "displayName": "Predatory and large fishes",
+      "kind": "functional-group",
+      "trophicLevel": 2.9
+    }
+  ]
+}

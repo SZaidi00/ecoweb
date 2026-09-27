@@ -1,0 +1,18 @@
+{
+  "slug": "intertidal-invertebrates",
+  "name": "Intertidal invertebrates",
+  "kind": "functional-group",
+  "description": "Rocky-shore invertebrates between the tides. Functional group dominated by barnacles, gastropods (snails, limpets) and bivalves - especially the mussel Mytilus edulis - pooled because the source's biomass estimate covered the intertidal community as a whole. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "intertidal-invertebrates",
+      "displayName": "Intertidal invertebrates",
+      "kind": "functional-group",
+      "trophicLevel": 2.5
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "phytoplankton",
+  "name": "Phytoplankton",
+  "kind": "functional-group",
+  "description": "Microscopic drifting algae of the Bay's mesohaline (moderately salty, estuarine) waters - the main primary producers of the carbon network. Functional group aggregating the whole suspended phytoplankton community (diatoms, dinoflagellates and small flagellates), measured together by the source. Reported biomass (metrics.biomass) is the annual mean in mgC/m2 from the source flow network.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    },
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    },
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

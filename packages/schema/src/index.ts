@@ -5,6 +5,8 @@
  *   also enforced by scripts/pipeline/validate.py)
  * - TypeScript types: re-exported from `types.ts`
  * - zod validators: `ecosystemWebSchema`, `parseEcosystemWeb`, `webIndexSchema`, `parseWebIndex`
+ * - species-index schemas (generated `data/species/` files): `speciesIndexSchema`,
+ *   `speciesEntrySchema`, `parseSpeciesIndex`, `parseSpeciesEntry`
  *
  * Schema, types, and zod validator are proven to agree: compile-time
  * assertions in `validator.ts`, round-trip tests in `test/roundtrip.test.ts`.
@@ -33,6 +35,7 @@ export type {
 
 export {
   ecosystemWebSchema,
+  externalLinksSchema,
   parseEcosystemWeb,
   parseWebIndex,
   webEdgeSchema,
@@ -40,3 +43,21 @@ export {
   webIndexSchema,
   webNodeSchema,
 } from './validator'
+
+export {
+  parseSpeciesEntry,
+  parseSpeciesIndex,
+  speciesEntryOccurrenceSchema,
+  speciesEntrySchema,
+  speciesIndexEntrySchema,
+  speciesIndexSchema,
+  speciesOccurrenceSchema,
+} from './species-index'
+
+export type {
+  SpeciesEntry,
+  SpeciesEntryOccurrence,
+  SpeciesIndex,
+  SpeciesIndexEntry,
+  SpeciesOccurrence,
+} from './species-index'

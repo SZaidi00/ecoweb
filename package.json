@@ -13,6 +13,7 @@
     "test": "npm test --workspaces --if-present",
     "validate:data": "python3 scripts/pipeline/validate.py",
     "build:index": "python3 scripts/pipeline/build_index.py",
+    "build:species-index": "python3 scripts/pipeline/build_species_index.py",
     "test:pipeline": "python3 -m pytest scripts/pipeline/tests/ -q",
     "lint": "eslint ."
   },

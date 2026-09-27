@@ -1,0 +1,18 @@
+{
+  "slug": "dinoflagellates",
+  "name": "Dinoflagellates",
+  "kind": "functional-group",
+  "description": "Large, motile algae with two flagella. Functional group pooling the five dinoflagellate taxa in the source web - Glenodinium quadridens and four Peridinium species (P. cinctum, P. limbatum, P. pulsillum and P. wisconsinense) - following the major phytoplankton classes used by the limnological literature.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "dinoflagellates",
+      "displayName": "Dinoflagellates",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

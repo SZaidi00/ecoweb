@@ -1,0 +1,24 @@
+{
+  "slug": "water-fleas-pelagic-copepods",
+  "name": "Water fleas & pelagic copepods",
+  "kind": "functional-group",
+  "description": "The classic zooplankton: water fleas (Daphnia parvula and D. galeata, Bosmina, Eubosmina, Holopedium, Diaphanosoma) alongside the predatory Leptodora and Polyphemus, five pelagic copepods (Epischura, Tropocyclops, Mesocyclops, Diacyclops, Diaptomus) and their juvenile stages. Functional group pooling the source's 16 pelagic zooplankton taxa, which the source shows sharing most of their predators - exactly the redundancy Martinez's 1991 resolution study quantified.",
+  "sourceWeb": "little-rock-lake",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Daphnia"
+  },
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "zooplankton",
+      "displayName": "Water fleas & pelagic copepods",
+      "kind": "functional-group",
+      "trophicLevel": 2.2,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Daphnia"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "omnivorous-nematodes",
+  "name": "Omnivorous nematodes",
+  "kind": "functional-group",
+  "description": "Nematodes with a mixed diet - mostly bacteria, plus amoebae - sitting between the microbial grazers and the true predators. Functional group pooling all omnivorous nematode species, grouped by the source on the basis of their shared diet. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+  "sourceWeb": "shortgrass-prairie",
+  "occurrences": [
+    {
+      "web": "shortgrass-prairie",
+      "webName": "Shortgrass Prairie",
+      "biome": "grassland",
+      "node": "omnivorous-nematodes",
+      "displayName": "Omnivorous nematodes",
+      "kind": "functional-group",
+      "trophicLevel": 3.8
+    }
+  ]
+}

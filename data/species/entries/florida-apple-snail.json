@@ -1,0 +1,24 @@
+{
+  "slug": "florida-apple-snail",
+  "name": "Florida apple snail",
+  "kind": "species",
+  "description": "Florida apple snail (Pomacea paludosa), a single compartment tracked by the source. An iconic Everglades grazer of periphyton and detritus, and famously the main prey of the snail kite; in this web it is also eaten by predatory fishes, turtles, wading birds, otters and raccoons.",
+  "sourceWeb": "cypress-wetland",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Pomacea_paludosa"
+  },
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "apple-snail",
+      "displayName": "Florida apple snail",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Pomacea_paludosa"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "grasses-herbs",
+  "name": "Grasses & herbs",
+  "kind": "functional-group",
+  "description": "The grass sward itself - the engine of the Serengeti. Functional group pooling all grasses and herbs as one resource node, as defined by the source study; the study deliberately does not resolve individual grass species.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Serengeti"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "grasses-herbs",
+      "displayName": "Grasses & herbs",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Serengeti"
+      }
+    }
+  ]
+}

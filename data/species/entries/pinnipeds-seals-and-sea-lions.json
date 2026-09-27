@@ -1,0 +1,18 @@
+{
+  "slug": "pinnipeds-seals-and-sea-lions",
+  "name": "Pinnipeds (seals and sea lions)",
+  "kind": "functional-group",
+  "description": "Functional group pooling harbour seals and Steller sea lions, as defined by the source. Large fish predators feeding heavily on demersal fish, small pelagics, herring and returning adult salmon. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "pinnipeds",
+      "displayName": "Pinnipeds (seals and sea lions)",
+      "kind": "functional-group",
+      "trophicLevel": 4.5
+    }
+  ]
+}

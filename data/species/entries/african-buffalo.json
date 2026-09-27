@@ -1,0 +1,26 @@
+{
+  "slug": "african-buffalo",
+  "name": "African buffalo",
+  "kind": "species",
+  "description": "The African buffalo (Syncerus caffer), tracked as its own node by the source study. A bulk grazer of grasses and a dangerous prey that only lions regularly tackle.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/African_buffalo",
+    "iNaturalist": "https://www.inaturalist.org/taxa/42146-Syncerus-caffer"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "buffalo",
+      "displayName": "African buffalo",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/African_buffalo",
+        "iNaturalist": "https://www.inaturalist.org/taxa/42146-Syncerus-caffer"
+      }
+    }
+  ]
+}

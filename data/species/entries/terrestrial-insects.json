@@ -1,0 +1,18 @@
+{
+  "slug": "terrestrial-insects",
+  "name": "Terrestrial insects",
+  "kind": "functional-group",
+  "description": "Insects living on the swamp's vegetation. Functional group aggregating all terrestrial insects into the source's single terrestrial-insect compartment; they eat leaves and detritus and feed fish, frogs, lizards, birds and small mammals.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "terr-insects",
+      "displayName": "Terrestrial insects",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

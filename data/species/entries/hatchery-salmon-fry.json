@@ -1,0 +1,18 @@
+{
+  "slug": "hatchery-salmon-fry",
+  "name": "Hatchery salmon fry",
+  "kind": "life-stage-group",
+  "description": "Juvenile salmon released from PWS hatcheries (mostly pink salmon, released late April/early May), residing in the Sound from early April to July/August. Life-stage group pooled separately from wild fry by the source because hatchery releases are large enough to matter for the Sound's carrying capacity. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "hatchery-salmon-fry",
+      "displayName": "Hatchery salmon fry",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.2
+    }
+  ]
+}

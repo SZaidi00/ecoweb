@@ -1,0 +1,18 @@
+{
+  "slug": "ctenophores-comb-jellies",
+  "name": "Ctenophores (comb jellies)",
+  "kind": "functional-group",
+  "description": "Gelatinous estuarine predators dominated in the mesohaline Bay by the comb jelly Mnemiopsis leidyi. Functional group aggregating ctenophore taxa as a single source compartment; they eat zooplankton, ciliates and suspended detritus and are in turn eaten by sea nettles. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "ctenophores",
+      "displayName": "Ctenophores (comb jellies)",
+      "kind": "functional-group",
+      "trophicLevel": 3.03
+    }
+  ]
+}

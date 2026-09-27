@@ -1,0 +1,26 @@
+{
+  "slug": "sea-otter",
+  "name": "Sea otter",
+  "kind": "species",
+  "description": "Sea otter (Enhydra lutris), a single species tracked by the source. A keystone benthic predator: diet studies in PWS (Montague Strait) found clams dominating its diet (about 81% by weight), with crabs, mussels, octopus and echinoderms making up the rest - represented in the model as feeding on infaunal zoobenthos. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sea_otter",
+    "iNaturalist": "https://www.inaturalist.org/taxa/41438-Enhydra-lutris"
+  },
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "sea-otter",
+      "displayName": "Sea otter",
+      "kind": "species",
+      "trophicLevel": 3.5,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Sea_otter",
+        "iNaturalist": "https://www.inaturalist.org/taxa/41438-Enhydra-lutris"
+      }
+    }
+  ]
+}

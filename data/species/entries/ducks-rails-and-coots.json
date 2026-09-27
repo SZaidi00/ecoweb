@@ -1,0 +1,18 @@
+{
+  "slug": "ducks-rails-and-coots",
+  "name": "Ducks, rails and coots",
+  "kind": "functional-group",
+  "description": "Waterfowl and rail-like marsh birds. Functional group pooling the source's Anseriformes (ducks and geese) and Gruiformes (rails, coots and kin) compartments, aggregated because both are marsh birds that feed heavily on plants; among the most plant-dependent consumers in the web, eating seeds, leaves and aquatic vegetation.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "waterfowl-rails",
+      "displayName": "Ducks, rails and coots",
+      "kind": "functional-group",
+      "trophicLevel": 2.1
+    }
+  ]
+}

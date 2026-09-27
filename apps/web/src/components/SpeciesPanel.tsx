@@ -1,6 +1,10 @@
+import { Link } from 'react-router-dom'
+
 import { sortedNeighbors, type GraphModel, type LayoutNode } from '@foodweb/cascade'
 
-const KIND_LABELS = {
+import { findSpeciesRef } from '@/lib/speciesData'
+
+export const KIND_LABELS = {
   'functional-group': 'Functional group',
   species: 'Species',
   'life-stage-group': 'Life-stage group',
@@ -17,6 +21,7 @@ const btnGhost = `${btnBase} bg-paper2 text-ink hover:bg-hairline`
 export interface SpeciesPanelProps {
   model: GraphModel
   node: LayoutNode
+  webId: string
   chainOpen: boolean
   onToggleChain: () => void
   onFocus: (id: string) => void
@@ -61,6 +66,7 @@ function ChainIcon() {
 export function SpeciesPanel({
   model,
   node,
+  webId,
   chainOpen,
   onToggleChain,
   onFocus,
@@ -70,6 +76,7 @@ export function SpeciesPanel({
   const { node: data } = node
   const { prey, predators } = sortedNeighbors(model.web, node.id)
   const nameOf = (id: string) => model.getNode(id)?.node.displayName ?? id
+  const speciesRef = findSpeciesRef(webId, node.id)
 
   const neighborButtons = (list: { id: string }[]) =>
     list.length === 0 ? (
@@ -125,6 +132,16 @@ export function SpeciesPanel({
                 iNaturalist →
               </a>
             )}
+          </p>
+        )}
+        {speciesRef && speciesRef.webCount > 1 && (
+          <p className="mt-2">
+            <Link
+              to={`/species/${speciesRef.slug}`}
+              className="text-xs font-medium text-accent hover:underline"
+            >
+              Appears in {speciesRef.webCount} ecosystems →
+            </Link>
           </p>
         )}
       </div>

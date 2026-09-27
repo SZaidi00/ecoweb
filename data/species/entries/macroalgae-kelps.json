@@ -1,0 +1,18 @@
+{
+  "slug": "macroalgae-kelps",
+  "name": "Macroalgae (kelps)",
+  "kind": "functional-group",
+  "description": "Kelp beds of the shallow subtidal zone (0-20 m). Functional group pooling the canopy and understory kelps - the source reports Agarum cribrosum and Laminaria saccharina as over 90% of biomass, with Nereocystis luetkeana beds on exposed sites - measured together by the source study. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "macroalgae",
+      "displayName": "Macroalgae (kelps)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

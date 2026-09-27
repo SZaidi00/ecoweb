@@ -1,0 +1,26 @@
+{
+  "slug": "wildebeest-zebra-large-grazers",
+  "name": "Wildebeest, zebra & large grazers",
+  "kind": "functional-group",
+  "description": "The great migration in one node. Functional group pooling the source's 'Topi' node - the white-bearded wildebeest, Burchell's zebra, topi, kongoni (hartebeest), Defassa waterbuck and roan antelope - measured together by the source study. Roughly 1.5 million wildebeest pass through the ecosystem each year.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Wildebeest",
+    "iNaturalist": "https://www.inaturalist.org/taxa/42318-Connochaetes-taurinus"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "large-grazers",
+      "displayName": "Wildebeest, zebra & large grazers",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Wildebeest",
+        "iNaturalist": "https://www.inaturalist.org/taxa/42318-Connochaetes-taurinus"
+      }
+    }
+  ]
+}

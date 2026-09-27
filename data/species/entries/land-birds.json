@@ -1,0 +1,18 @@
+{
+  "slug": "land-birds",
+  "name": "Land birds",
+  "kind": "functional-group",
+  "description": "Small to medium birds of the swamp forest. Functional group pooling five source compartments: galliform birds, nightjars, hummingbirds, woodpeckers, and omnivorous plus predatory perching birds, aggregated because the source tracked each as a small forest-bird compartment. They eat seeds, mast and insects.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "land-birds",
+      "displayName": "Land birds",
+      "kind": "functional-group",
+      "trophicLevel": 2.3
+    }
+  ]
+}

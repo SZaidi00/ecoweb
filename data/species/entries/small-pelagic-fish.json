@@ -1,0 +1,18 @@
+{
+  "slug": "small-pelagic-fish",
+  "name": "Small pelagic fish",
+  "kind": "functional-group",
+  "description": "Small schooling fishes of open water. Functional group pooling capelin, eulachon, smelt and other small fishes, aggregated by the source because no standing-stock estimates existed for the individual species; the model estimated the group's biomass from predator demand. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "small-pelagics",
+      "displayName": "Small pelagic fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.3
+    }
+  ]
+}

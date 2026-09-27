@@ -1,0 +1,18 @@
+{
+  "slug": "grains-seeds",
+  "name": "Grains & seeds",
+  "kind": "functional-group",
+  "description": "Grass grains and other seeds, the staple of rodents and seed-eating birds. Functional group pooling all grains and seeds as one resource node, as defined by the source study.",
+  "sourceWeb": "serengeti",
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "grains-seeds",
+      "displayName": "Grains & seeds",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

@@ -177,6 +177,11 @@
             "iNaturalist": { "type": "string", "format": "uri" }
           }
         },
+        "alsoKnownAs": {
+          "type": "array",
+          "description": "Optional alternate display names for this node, used by the species-index generator for exact-name grouping. Curator-asserted only; never auto-generated.",
+          "items": { "type": "string", "minLength": 1 }
+        },
         "metrics": {
           "type": "object",
           "description": "Optional quantitative research metrics from the source study, kept clearly separate from the core web structure. Never fabricate; omit when the source does not report them.",

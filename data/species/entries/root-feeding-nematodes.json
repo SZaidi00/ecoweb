@@ -1,0 +1,18 @@
+{
+  "slug": "root-feeding-nematodes",
+  "name": "Root-feeding nematodes",
+  "kind": "functional-group",
+  "description": "Plant-parasitic nematodes that pierce living roots and suck out cell contents (called 'phytophagous nematodes' in the source). Functional group pooling all root-feeding nematode species of the site, grouped by the source on the basis of their shared diet. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+  "sourceWeb": "shortgrass-prairie",
+  "occurrences": [
+    {
+      "web": "shortgrass-prairie",
+      "webName": "Shortgrass Prairie",
+      "biome": "grassland",
+      "node": "root-feeding-nematodes",
+      "displayName": "Root-feeding nematodes",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

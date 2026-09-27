@@ -1,0 +1,18 @@
+{
+  "slug": "raptors-and-vultures",
+  "name": "Raptors and vultures",
+  "kind": "functional-group",
+  "description": "Birds of prey and carrion birds. Functional group pooling the source's vultures, kites and hawks, and owls compartments, aggregated because all are predatory or scavenging birds. In this web most of their pooled intake is carrion (pooled into the detritus node, which is why the group's level is low for a 'predator'); live prey includes apple snails (the snail kite's specialty), fish and snakes.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "raptors",
+      "displayName": "Raptors and vultures",
+      "kind": "functional-group",
+      "trophicLevel": 2.3
+    }
+  ]
+}

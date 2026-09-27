@@ -47,7 +47,7 @@ const webMetaSchema = z
   })
   .strict()
 
-const externalLinksSchema = z
+export const externalLinksSchema = z
   .object({
     wikipedia: z.string().url().optional(),
     iNaturalist: z.string().url().optional(),
@@ -85,6 +85,7 @@ export const webNodeSchema = z
     ]),
     description: z.string().min(1),
     externalLinks: externalLinksSchema.optional(),
+    alsoKnownAs: z.array(z.string().min(1)).optional(),
     metrics: nodeMetricsSchema.optional(),
     layout: layoutHintSchema,
   })

@@ -1,0 +1,18 @@
+{
+  "slug": "turtles",
+  "name": "Turtles",
+  "kind": "functional-group",
+  "description": "Freshwater turtles of the swamp. Functional group aggregating all turtle species into the source's single turtle compartment. Omnivores: they eat aquatic plants, periphyton, invertebrates and fishes, and even take alligator eggs and hatchlings (which is why a small alligator-to-turtle edge appears).",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "turtles",
+      "displayName": "Turtles",
+      "kind": "functional-group",
+      "trophicLevel": 2.8
+    }
+  ]
+}

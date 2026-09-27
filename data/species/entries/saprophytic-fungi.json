@@ -1,0 +1,18 @@
+{
+  "slug": "saprophytic-fungi",
+  "name": "Saprophytic fungi",
+  "kind": "functional-group",
+  "description": "Fungi that feed on dead organic matter; the base of the web's fungal energy channel. Functional group aggregating all saprophytic soil fungi, measured together by the source study. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+  "sourceWeb": "shortgrass-prairie",
+  "occurrences": [
+    {
+      "web": "shortgrass-prairie",
+      "webName": "Shortgrass Prairie",
+      "biome": "grassland",
+      "node": "saprophytic-fungi",
+      "displayName": "Saprophytic fungi",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

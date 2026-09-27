@@ -1,0 +1,18 @@
+{
+  "slug": "benthic-diatoms",
+  "name": "Benthic diatoms",
+  "kind": "functional-group",
+  "description": "Diatoms living on the estuary's shallow bottom sediments where enough light reaches for photosynthesis. Functional group aggregating the microphytobenthos community, treated as one compartment by the source; the main food of meiofauna. Reported biomass (metrics.biomass) is the annual mean in mgC/m2 from the source.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "benthic-diatoms",
+      "displayName": "Benthic diatoms",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

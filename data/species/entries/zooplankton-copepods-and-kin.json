@@ -1,0 +1,18 @@
+{
+  "slug": "zooplankton-copepods-and-kin",
+  "name": "Zooplankton (copepods and kin)",
+  "kind": "functional-group",
+  "description": "Small drifting crustacean grazers, chiefly copepods such as Acartia tonsa. Functional group aggregating the mesozooplankton community sampled by the source; in this estuarine network they take much of their carbon from suspended detritus and ciliates as well as phytoplankton. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "zooplankton",
+      "displayName": "Zooplankton (copepods and kin)",
+      "kind": "functional-group",
+      "trophicLevel": 2.16
+    }
+  ]
+}

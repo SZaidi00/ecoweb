@@ -1,0 +1,24 @@
+{
+  "slug": "jackals-honey-badger-aardwolf",
+  "name": "Jackals, honey badger & aardwolf",
+  "kind": "functional-group",
+  "description": "Medium-sized omnivorous carnivores. Functional group pooling the source's 'black-backed jackal' node - black-backed, golden and side-striped jackals plus the honey badger, the termite-eating aardwolf and the African civet - grouped by the source study on their shared, broad diets.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Black-backed_jackal"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "jackals",
+      "displayName": "Jackals, honey badger & aardwolf",
+      "kind": "functional-group",
+      "trophicLevel": 3.1,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Black-backed_jackal"
+      }
+    }
+  ]
+}

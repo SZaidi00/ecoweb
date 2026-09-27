@@ -1,0 +1,24 @@
+{
+  "slug": "scud-crangonyx-gracilis",
+  "name": "Scud (Crangonyx gracilis)",
+  "kind": "species",
+  "description": "The scud or side-swimmer Crangonyx gracilis, tracked as its own taxon in the source. An omnivorous crustacean of the littoral zone, eating detritus, algae and small invertebrates, and scavenging fish eggs; a staple prey of the lake's fishes.",
+  "sourceWeb": "little-rock-lake",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Crangonyx"
+  },
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "amphipods",
+      "displayName": "Scud (Crangonyx gracilis)",
+      "kind": "species",
+      "trophicLevel": 2.4,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Crangonyx"
+      }
+    }
+  ]
+}

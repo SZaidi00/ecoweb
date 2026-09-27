@@ -1,0 +1,24 @@
+{
+  "slug": "mayfly-nymphs",
+  "name": "Mayfly nymphs",
+  "kind": "functional-group",
+  "description": "Aquatic juvenile mayflies grazing detritus and microcrustaceans in the shallows. Functional group pooling the source's two mayfly taxa, Caenis and Leptophlebia; Leptophlebia is an opportunistic omnivore, hence links to small animal prey.",
+  "sourceWeb": "little-rock-lake",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Mayfly"
+  },
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "mayflies",
+      "displayName": "Mayfly nymphs",
+      "kind": "functional-group",
+      "trophicLevel": 2.3,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Mayfly"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "maasai-giraffe",
+  "name": "Maasai giraffe",
+  "kind": "species",
+  "description": "The Maasai giraffe (Giraffa camelopardalis), tracked as its own node by the source study. A high browser of trees and shrubs, beyond the reach of other herbivores - and of most predators.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Maasai_giraffe",
+    "iNaturalist": "https://www.inaturalist.org/taxa/143177-Giraffa-tippelskirchi"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "giraffe",
+      "displayName": "Maasai giraffe",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Maasai_giraffe",
+        "iNaturalist": "https://www.inaturalist.org/taxa/143177-Giraffa-tippelskirchi"
+      }
+    }
+  ]
+}

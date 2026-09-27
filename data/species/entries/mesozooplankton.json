@@ -1,0 +1,18 @@
+{
+  "slug": "mesozooplankton",
+  "name": "Mesozooplankton",
+  "kind": "functional-group",
+  "description": "Small drifting grazers. Functional group pooling mainly copepods (Neocalanus cristatus, N. plumchrus, Calanus marshallae, Pseudocalanus spp., Acartia), plus cladocerans (Podon, Evadne) and the arrowworm Sagitta elegans, as grouped by the source's zooplankton sampling. Reported biomass (metrics.biomass) is in tonnes wet weight per km2, from Table 23 of the source.",
+  "sourceWeb": "prince-william-sound",
+  "occurrences": [
+    {
+      "web": "prince-william-sound",
+      "webName": "Prince William Sound",
+      "biome": "marine",
+      "node": "mesozooplankton",
+      "displayName": "Mesozooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

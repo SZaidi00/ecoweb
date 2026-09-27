@@ -1,0 +1,18 @@
+{
+  "slug": "snakes-and-lizards",
+  "name": "Snakes and lizards",
+  "kind": "functional-group",
+  "description": "Snakes and lizards of the swamp. Functional group pooling the source's snake and lizard compartments, aggregated because both are small reptilian predators of insects, fishes and frogs; in turn eaten by alligators and wading birds.",
+  "sourceWeb": "cypress-wetland",
+  "occurrences": [
+    {
+      "web": "cypress-wetland",
+      "webName": "Cypress Wetland",
+      "biome": "wetland",
+      "node": "lizards-snakes",
+      "displayName": "Snakes and lizards",
+      "kind": "functional-group",
+      "trophicLevel": 3.4
+    }
+  ]
+}

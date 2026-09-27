@@ -1,0 +1,26 @@
+{
+  "slug": "atlantic-sea-nettle",
+  "name": "Atlantic sea nettle",
+  "kind": "species",
+  "description": "Atlantic sea nettle (Chrysaora quinquecirrha), tracked as its own compartment by the source. The Bay's iconic summer jellyfish, preying heavily on copepods and comb jellies; nothing in the network eats it. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Chrysaora_quinquecirrha",
+    "iNaturalist": "https://www.inaturalist.org/taxa/48478-Chrysaora-quinquecirrha"
+  },
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "sea-nettle",
+      "displayName": "Atlantic sea nettle",
+      "kind": "species",
+      "trophicLevel": 3.44,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Chrysaora_quinquecirrha",
+        "iNaturalist": "https://www.inaturalist.org/taxa/48478-Chrysaora-quinquecirrha"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "hooded-vulture-tawny-eagle",
+  "name": "Hooded vulture & tawny eagle",
+  "kind": "functional-group",
+  "description": "A small scavenger and a powerful bird of prey. Functional group pooling the source's 'hooded vulture' node: the hooded vulture (Necrosyrtes monachus) and the tawny eagle (Aquila rapax), grouped by the source study; the eagle accounts for the live prey (rodents, snakes) in this node's diet.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Hooded_vulture"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "vulture-eagle",
+      "displayName": "Hooded vulture & tawny eagle",
+      "kind": "functional-group",
+      "trophicLevel": 4.1,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Hooded_vulture"
+      }
+    }
+  ]
+}

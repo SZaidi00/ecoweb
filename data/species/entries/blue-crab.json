@@ -1,0 +1,26 @@
+{
+  "slug": "blue-crab",
+  "name": "Blue crab",
+  "kind": "species",
+  "description": "Blue crab (Callinectes sapidus), tracked as its own compartment by the source. The estuary's famous benthic omnivore, eating deposit-feeding worms and clams, suspension feeders and sediment detritus - plus other blue crabs (the source's within-compartment cannibalism flow is omitted here). Eaten by striped bass. Reported biomass (metrics.biomass) is the annual mean in mgC/m2.",
+  "sourceWeb": "chesapeake-bay",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Callinectes_sapidus",
+    "iNaturalist": "https://www.inaturalist.org/taxa/49504-Callinectes-sapidus"
+  },
+  "occurrences": [
+    {
+      "web": "chesapeake-bay",
+      "webName": "Chesapeake Bay",
+      "biome": "estuary",
+      "node": "blue-crab",
+      "displayName": "Blue crab",
+      "kind": "species",
+      "trophicLevel": 3.5,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Callinectes_sapidus",
+        "iNaturalist": "https://www.inaturalist.org/taxa/49504-Callinectes-sapidus"
+      }
+    }
+  ]
+}

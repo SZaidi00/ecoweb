@@ -1,0 +1,18 @@
+{
+  "slug": "mycorrhizal-fungi",
+  "name": "Mycorrhizal fungi",
+  "kind": "functional-group",
+  "description": "Fungi living in symbiosis with grass roots, obtaining their carbon from the living plant (and delivering mineral nutrients in return - the nutrient-delivery arrow shown in the source figure is not a feeding link and is omitted). Functional group aggregating all mycorrhizal fungi, measured as one pool by the source. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+  "sourceWeb": "shortgrass-prairie",
+  "occurrences": [
+    {
+      "web": "shortgrass-prairie",
+      "webName": "Shortgrass Prairie",
+      "biome": "grassland",
+      "node": "mycorrhizal-fungi",
+      "displayName": "Mycorrhizal fungi",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

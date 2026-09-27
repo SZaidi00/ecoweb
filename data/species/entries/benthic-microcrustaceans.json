@@ -1,0 +1,18 @@
+{
+  "slug": "benthic-microcrustaceans",
+  "name": "Benthic microcrustaceans",
+  "kind": "functional-group",
+  "description": "Tiny crustaceans browsing the surfaces of plants and algal mats - twelve chydorid water fleas (Sida, Scapholeberis, Alona and kin) and six bottom-dwelling copepods (harpacticoids and cyclopoids). Functional group pooling the source's 18 benthic cladoceran and copepod taxa, which share the same diet and predators in the source web.",
+  "sourceWeb": "little-rock-lake",
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "benthic-microcrustaceans",
+      "displayName": "Benthic microcrustaceans",
+      "kind": "functional-group",
+      "trophicLevel": 2.2
+    }
+  ]
+}

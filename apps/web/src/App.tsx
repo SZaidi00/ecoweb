@@ -9,6 +9,12 @@ import { ExplorePage } from '@/pages/ExplorePage'
 const BiomePage = lazy(() => import('@/pages/BiomePage').then((m) => ({ default: m.BiomePage })))
 const WebPage = lazy(() => import('@/pages/WebPage').then((m) => ({ default: m.WebPage })))
 const AboutPage = lazy(() => import('@/pages/AboutPage').then((m) => ({ default: m.AboutPage })))
+const SpeciesIndexPage = lazy(
+  () => import('@/pages/SpeciesIndexPage').then((m) => ({ default: m.SpeciesIndexPage })),
+)
+const SpeciesEntryPage = lazy(
+  () => import('@/pages/SpeciesEntryPage').then((m) => ({ default: m.SpeciesEntryPage })),
+)
 const DebugWebsPage = lazy(
   () => import('@/pages/DebugWebsPage').then((m) => ({ default: m.DebugWebsPage })),
 )
@@ -34,6 +40,8 @@ export default function App() {
             <Route path="/" element={<ExplorePage />} />
             <Route path="/biome/:biomeId" element={<BiomePage />} />
             <Route path="/web/:webId" element={<WebPage />} />
+            <Route path="/species" element={<SpeciesIndexPage />} />
+            <Route path="/species/:slug" element={<SpeciesEntryPage />} />
             <Route path="/about" element={<AboutPage />} />
             {/* Data-review tool; route-only, intentionally not in the main nav. */}
             <Route path="/debug/webs" element={<DebugWebsPage />} />

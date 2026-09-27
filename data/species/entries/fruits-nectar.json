@@ -1,0 +1,18 @@
+{
+  "slug": "fruits-nectar",
+  "name": "Fruits & nectar",
+  "kind": "functional-group",
+  "description": "The sweet products of savanna plants, eaten by insects, birds and mammals. Functional group pooling all fruits and nectar as one resource node, as defined by the source study.",
+  "sourceWeb": "serengeti",
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "fruits-nectar",
+      "displayName": "Fruits & nectar",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

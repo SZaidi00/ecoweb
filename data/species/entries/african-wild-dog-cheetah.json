@@ -1,0 +1,26 @@
+{
+  "slug": "african-wild-dog-cheetah",
+  "name": "African wild dog & cheetah",
+  "kind": "functional-group",
+  "description": "The savanna's two coursers - hunters that run down medium prey in the open. Functional group pooling the source's 'African wild dog' node: the wild dog (Lycaon pictus) and the cheetah (Acinonyx jubatus), grouped by the source study because both hunt gazelles and young large grazers in the same way.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/African_wild_dog",
+    "iNaturalist": "https://www.inaturalist.org/taxa/42070-Lycaon-pictus"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "wild-dog-cheetah",
+      "displayName": "African wild dog & cheetah",
+      "kind": "functional-group",
+      "trophicLevel": 3.1,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/African_wild_dog",
+        "iNaturalist": "https://www.inaturalist.org/taxa/42070-Lycaon-pictus"
+      }
+    }
+  ]
+}

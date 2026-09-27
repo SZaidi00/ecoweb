@@ -1,0 +1,24 @@
+{
+  "slug": "predatory-water-bugs-beetles-mites",
+  "name": "Predatory water bugs, beetles & mites",
+  "kind": "functional-group",
+  "description": "Hunting insects and mites of the shallows and the water surface. Functional group pooling the source's eight predatory taxa - backswimmers (Notonectidae), water striders (Gerris) and smaller water measurers (Veliidae), the diving beetle Hydroporus and whirligig Gyrinus, the alderfly larva Sialis, the spongillafly Climacia (a sponge specialist) and water mites (Hydracarina).",
+  "sourceWeb": "little-rock-lake",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Notonectidae"
+  },
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "predatory-water-bugs",
+      "displayName": "Predatory water bugs, beetles & mites",
+      "kind": "functional-group",
+      "trophicLevel": 3.2,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Notonectidae"
+      }
+    }
+  ]
+}

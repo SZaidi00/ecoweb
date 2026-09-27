@@ -1,0 +1,18 @@
+{
+  "slug": "leptodiaptomus-siciloides-calanoid-copepod",
+  "name": "Leptodiaptomus siciloides (calanoid copepod)",
+  "kind": "species",
+  "description": "A calanoid copepod, a single species tracked by the source. The dominant herbivorous copepod of the lake's open water, grazing a broad range of phytoplankton and falling prey to cyclopoid copepods, Chaoborus and all three fishes.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "leptodiaptomus-siciloides",
+      "displayName": "Leptodiaptomus siciloides (calanoid copepod)",
+      "kind": "species",
+      "trophicLevel": 2.0
+    }
+  ]
+}

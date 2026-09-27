@@ -1,0 +1,26 @@
+{
+  "slug": "gazelles-small-antelopes",
+  "name": "Gazelles & small antelopes",
+  "kind": "functional-group",
+  "description": "The small and medium antelopes, including the Serengeti's famous Thomson's gazelle and impala. Functional group pooling the source's 'Oribi' node: oribi, gray duiker, Thomson's gazelle, impala and Grant's gazelle - measured together because their diets and predators largely coincide.",
+  "sourceWeb": "serengeti",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Thomson%27s_gazelle",
+    "iNaturalist": "https://www.inaturalist.org/taxa/42310-Eudorcas-thomsonii"
+  },
+  "occurrences": [
+    {
+      "web": "serengeti",
+      "webName": "Serengeti",
+      "biome": "grassland",
+      "node": "gazelles",
+      "displayName": "Gazelles & small antelopes",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Thomson%27s_gazelle",
+        "iNaturalist": "https://www.inaturalist.org/taxa/42310-Eudorcas-thomsonii"
+      }
+    }
+  ]
+}

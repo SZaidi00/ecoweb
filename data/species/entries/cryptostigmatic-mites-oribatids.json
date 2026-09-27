@@ -1,0 +1,24 @@
+{
+  "slug": "cryptostigmatic-mites-oribatids",
+  "name": "Cryptostigmatic mites (oribatids)",
+  "kind": "functional-group",
+  "description": "Heavily armoured oribatid mites that graze on fungi, both saprophytic and mycorrhizal. Functional group aggregating the cryptostigmatic (oribatid) mite species of the site, measured together by the source. Reported biomass (metrics.biomass) is in kg C per hectare, yearly average, from Table A1 of van Altena et al. 2016.",
+  "sourceWeb": "shortgrass-prairie",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Oribatida"
+  },
+  "occurrences": [
+    {
+      "web": "shortgrass-prairie",
+      "webName": "Shortgrass Prairie",
+      "biome": "grassland",
+      "node": "cryptostigmatic-mites",
+      "displayName": "Cryptostigmatic mites (oribatids)",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Oribatida"
+      }
+    }
+  ]
+}

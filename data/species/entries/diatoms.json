@@ -1,0 +1,18 @@
+{
+  "slug": "diatoms",
+  "name": "Diatoms",
+  "kind": "functional-group",
+  "description": "Silica-shelled algae. Functional group pooling the three diatom taxa in the source web - Asterionella formosa, Rhizosolenia sp. and Synedra sp. - following the major phytoplankton classes used by the limnological literature.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "diatoms",
+      "displayName": "Diatoms",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

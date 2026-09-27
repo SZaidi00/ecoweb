@@ -1,0 +1,18 @@
+{
+  "slug": "detritus-fine-organic-matter-fish-eggs",
+  "name": "Detritus (fine organic matter & fish eggs)",
+  "kind": "functional-group",
+  "description": "Non-living food base of this bog lake: fine particles of dead plankton, plant material and faeces, plus fish eggs. Functional group pooling the source's two non-living food resources (fine organic matter and fish eggs), which the source recorded as eaten by much of the bottom-dwelling invertebrate community.",
+  "sourceWeb": "little-rock-lake",
+  "occurrences": [
+    {
+      "web": "little-rock-lake",
+      "webName": "Little Rock Lake",
+      "biome": "freshwater",
+      "node": "detritus",
+      "displayName": "Detritus (fine organic matter & fish eggs)",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

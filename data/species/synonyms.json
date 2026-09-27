@@ -1,0 +1,11 @@
+{
+  "synonyms": [
+    {
+      "members": [
+        { "web": "little-rock-lake", "node": "minnows" },
+        { "web": "tuesday-lake", "node": "umbra-limi" }
+      ],
+      "note": "Little Rock Lake's minnow node explicitly pools 'shiner & mudminnow'; Tuesday Lake resolves the central mudminnow as its own species node — overlapping resolution, not identical taxa."
+    }
+  ]
+}

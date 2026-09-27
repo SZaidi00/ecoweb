@@ -1,0 +1,18 @@
+{
+  "slug": "chaoborus-punctipennis-phantom-midge-larva",
+  "name": "Chaoborus punctipennis (phantom midge larva)",
+  "kind": "species",
+  "description": "The nearly transparent larva of the phantom midge, a single species tracked by the source. A voracious sit-and-wait predator of zooplankton - rotifers, cladocerans, copepods and even, per the source web, large dinoflagellates - and itself a major food for all three fishes.",
+  "sourceWeb": "tuesday-lake",
+  "occurrences": [
+    {
+      "web": "tuesday-lake",
+      "webName": "Tuesday Lake",
+      "biome": "freshwater",
+      "node": "chaoborus-punctipennis",
+      "displayName": "Chaoborus punctipennis (phantom midge larva)",
+      "kind": "species",
+      "trophicLevel": 3.1
+    }
+  ]
+}
