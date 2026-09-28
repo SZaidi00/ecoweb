@@ -1,0 +1,18 @@
+{
+  "slug": "squid",
+  "name": "Squid",
+  "kind": "functional-group",
+  "description": "Squid of the Weddell Sea. Functional group pooling the oceanic squid resolved by the source web (gonatids such as Gonatus antarcticus and relatives), aggregated because the source does not separate their diets; they take krill and lanternfish and are in turn hunted by emperor penguins, Weddell seals and sperm whales.",
+  "sourceWeb": "weddell-sea",
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "squid",
+      "displayName": "Squid",
+      "kind": "functional-group",
+      "trophicLevel": 3.8
+    }
+  ]
+}

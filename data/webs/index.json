@@ -67,6 +67,17 @@
       "lng": -147.14
     },
     {
+      "id": "weddell-sea",
+      "name": "Weddell Sea",
+      "biome": "marine",
+      "location": "Weddell Sea, Southern Ocean, Antarctica",
+      "nodeCount": 21,
+      "provenance": "composite",
+      "tagline": "The coldest web in the atlas - remove Antarctic krill and everything shudders",
+      "lat": -73.0,
+      "lng": -45.0
+    },
+    {
       "id": "cypress-wetland",
       "name": "Cypress Wetland",
       "biome": "wetland",

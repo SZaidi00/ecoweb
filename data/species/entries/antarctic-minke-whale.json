@@ -1,0 +1,24 @@
+{
+  "slug": "antarctic-minke-whale",
+  "name": "Antarctic minke whale",
+  "kind": "species",
+  "description": "Antarctic minke whale (Balaenoptera bonaerensis), a single species resolved by the source. The smallest baleen whale here and the one that remained numerous after the great whales were hunted out; it feeds on krill and silverfish along the ice edge.",
+  "sourceWeb": "weddell-sea",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Antarctic_minke_whale"
+  },
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "minke-whale",
+      "displayName": "Antarctic minke whale",
+      "kind": "species",
+      "trophicLevel": 3.4,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Antarctic_minke_whale"
+      }
+    }
+  ]
+}

@@ -31,6 +31,15 @@
       "displayName": "Phytoplankton",
       "kind": "functional-group",
       "trophicLevel": 1.0
+    },
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
     }
   ]
 }

@@ -1,0 +1,24 @@
+{
+  "slug": "antarctic-krill",
+  "name": "Antarctic krill",
+  "kind": "species",
+  "description": "Antarctic krill (Euphausia superba), a single species resolved by the source. The keystone of this ecosystem: swarms can stretch for kilometres, turning algae - including ice algae scraped from beneath the floes - into food for penguins, seals, whales, fish and squid. Krill also hunt copepods, which lifts them above trophic level 2.",
+  "sourceWeb": "weddell-sea",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Antarctic_krill"
+  },
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "antarctic-krill",
+      "displayName": "Antarctic krill",
+      "kind": "species",
+      "trophicLevel": 2.2,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Antarctic_krill"
+      }
+    }
+  ]
+}

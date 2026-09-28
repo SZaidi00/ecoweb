@@ -1,0 +1,24 @@
+{
+  "slug": "leopard-seal",
+  "name": "Leopard seal",
+  "kind": "species",
+  "description": "Leopard seal (Hydrurga leptonyx), a single species resolved by the source. The Antarctic's mammal-eating seal: krill and fish when small, penguins and young seals of other species when grown.",
+  "sourceWeb": "weddell-sea",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Leopard_seal"
+  },
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "leopard-seal",
+      "displayName": "Leopard seal",
+      "kind": "species",
+      "trophicLevel": 4.3,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Leopard_seal"
+      }
+    }
+  ]
+}

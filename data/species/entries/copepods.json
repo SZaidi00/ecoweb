@@ -1,0 +1,18 @@
+{
+  "slug": "copepods",
+  "name": "Copepods",
+  "kind": "functional-group",
+  "description": "Small crustacean grazers that swarm through the water column. Functional group pooling the dominant Weddell Sea copepods - Calanoides acutus, Calanus propinquus, Metridia gerlachei and others - because the source web resolves them only as part of the mesozooplankton.",
+  "sourceWeb": "weddell-sea",
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "copepods",
+      "displayName": "Copepods",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

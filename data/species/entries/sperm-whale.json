@@ -1,0 +1,24 @@
+{
+  "slug": "sperm-whale",
+  "name": "Sperm whale",
+  "kind": "species",
+  "description": "Sperm whale (Physeter macrocephalus), a single species resolved by the source. The deep-diving squid specialist of the Southern Ocean, linking the mid-water squid stock to the top of the web.",
+  "sourceWeb": "weddell-sea",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sperm_whale"
+  },
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "sperm-whale",
+      "displayName": "Sperm whale",
+      "kind": "species",
+      "trophicLevel": 4.4,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Sperm_whale"
+      }
+    }
+  ]
+}

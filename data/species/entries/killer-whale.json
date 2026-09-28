@@ -1,0 +1,24 @@
+{
+  "slug": "killer-whale",
+  "name": "Killer whale",
+  "kind": "species",
+  "description": "Killer whale (Orcinus orca), a single species resolved by the source. The apex predator of the Weddell Sea; local ecotypes specialise on Weddell seals, penguins and minke whales, washing seals off ice floes with coordinated waves.",
+  "sourceWeb": "weddell-sea",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Killer_whale"
+  },
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "killer-whale",
+      "displayName": "Killer whale",
+      "kind": "species",
+      "trophicLevel": 4.8,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Killer_whale"
+      }
+    }
+  ]
+}

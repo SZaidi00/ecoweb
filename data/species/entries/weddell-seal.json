@@ -1,0 +1,24 @@
+{
+  "slug": "weddell-seal",
+  "name": "Weddell seal",
+  "kind": "species",
+  "description": "Weddell seal (Leptonychotes weddellii), a single species resolved by the source. The southernmost breeding mammal on Earth, hunting fish and squid beneath the fast ice and surfacing through breathing holes it saws open with its teeth.",
+  "sourceWeb": "weddell-sea",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Weddell_seal"
+  },
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "weddell-seal",
+      "displayName": "Weddell seal",
+      "kind": "species",
+      "trophicLevel": 4.1,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Weddell_seal"
+      }
+    }
+  ]
+}

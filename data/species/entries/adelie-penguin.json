@@ -1,0 +1,24 @@
+{
+  "slug": "adelie-penguin",
+  "name": "Adelie penguin",
+  "kind": "species",
+  "description": "Adelie penguin (Pygoscelis adeliae), a single species resolved by the source. A true sea-ice penguin of the Antarctic coast, feeding mainly on krill with silverfish taken when available.",
+  "sourceWeb": "weddell-sea",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Ad%C3%A9lie_penguin"
+  },
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "adelie-penguin",
+      "displayName": "Adelie penguin",
+      "kind": "species",
+      "trophicLevel": 3.4,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Ad%C3%A9lie_penguin"
+      }
+    }
+  ]
+}

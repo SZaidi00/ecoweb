@@ -51,14 +51,29 @@ const webSources = [
     note: 'Carpenter & Kitchell 1996; redistributed via the cheddar R package, GPL.',
   },
   {
+    name: 'Little Rock Lake',
+    href: 'https://networks.skewed.de/net/foodweb_little_rock',
+    note: 'Martinez 1991, Ecological Monographs.',
+  },
+  {
     name: 'Shortgrass Prairie',
     href: 'https://sete-moulis-cnrs.fr/fr/component/flexicontent/download/525/826/30',
     note: 'Hunt et al. 1987; Olff et al. 2009; van Altena et al. 2016, CC-BY.',
   },
   {
+    name: 'Serengeti',
+    href: 'https://github.com/DominiqueCaron/Chapt-NicheSpace',
+    note: 'de Visser, Freymann & Olff 2011, Journal of Animal Ecology.',
+  },
+  {
     name: 'Cypress Wetland',
     href: 'https://github.com/cran/igraphdata/blob/master/data/foodwebs.rda',
     note: 'Ulanowicz, Bondavalli & Egnotovich 1997; redistributed via igraphdata, CC BY-SA 4.0.',
+  },
+  {
+    name: 'Weddell Sea',
+    href: 'https://doi.org/10.1016/B978-0-12-386475-8.00005-1',
+    note: 'Jacob et al. 2011, Advances in Ecological Research; curated composite.',
   },
 ]
 

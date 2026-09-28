@@ -1,0 +1,289 @@
+{
+  "meta": {
+    "id": "weddell-sea",
+    "name": "Weddell Sea",
+    "location": "Weddell Sea, Southern Ocean, Antarctica",
+    "biome": "marine",
+    "lat": -73.0,
+    "lng": -45.0,
+    "provenance": "composite",
+    "tagline": "The coldest web in the atlas - remove Antarctic krill and everything shudders",
+    "citations": [
+      "Jacob, U., Thierry, A., Brose, U., Arntz, W.E., Berg, S., Brey, T., Fetzer, I., Jonsson, T., Mintenbeck, K., Mollmann, C., Petchey, O.L., Riede, J.O. & Dunne, J.A. 2011. The role of body size in complex food webs: a cold case. Advances in Ecological Research 45: 181-223. https://doi.org/10.1016/B978-0-12-386475-8.00005-1"
+    ],
+    "sourceUrl": "https://doi.org/10.1016/B978-0-12-386475-8.00005-1",
+    "licenseNote": "Curated composite. Jacob et al. (2011) published the full high-Antarctic Weddell Sea food web - 488 species and roughly 16,200 feeding links, compiled from decades of diet studies - which is far beyond this atlas's 25-node ceiling. This web therefore aggregates their species list into 21 nodes; the grouping choices are the curator's, guided by the source's structure and by what a general reader recognises. Where the source resolves an iconic single species and that species is a household name (Antarctic krill, the penguins, the seals, the whales, the silverfish), the node is kept at species resolution; everything else is pooled into functional groups (producers, zooplankton, benthos, squid, lanternfish, flying seabirds), and each pooled node says so in its description. All edges are qualitative: the source web documents who eats whom without diet fractions, so no edge weights are shown and none were invented. Krill is deliberately kept as a named node with its full predator set so its keystone role is visible in the link structure. Reuse requires citing Jacob et al. (2011).",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-09-27"
+  },
+  "nodes": [
+    {
+      "id": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Microscopic algae drifting in the open water, blooming each austral summer when the sea ice retreats. Functional group aggregating the whole phytoplankton community (diatoms such as Fragilariopsis, flagellates and haptophytes such as Phaeocystis antarctica), pooled because the source web does not resolve primary producers beyond broad compartments.",
+      "layout": { "x": 22, "y": 5 }
+    },
+    {
+      "id": "sea-ice-algae",
+      "displayName": "Sea ice algae",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Algae growing inside and beneath the sea ice, available as food in early spring before the open-water bloom begins. Functional group aggregating the ice-associated algal community, mostly pennate diatoms, pooled because the source web treats ice algae as one producer compartment.",
+      "layout": { "x": 48, "y": 5 }
+    },
+    {
+      "id": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Dead organic matter: marine snow sinking from surface blooms, faeces, and debris resting on the seafloor. Functional group aggregating all non-living particulate organic matter; the source web does not distinguish detrital fractions.",
+      "layout": { "x": 78, "y": 5 }
+    },
+    {
+      "id": "copepods",
+      "displayName": "Copepods",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Small crustacean grazers that swarm through the water column. Functional group pooling the dominant Weddell Sea copepods - Calanoides acutus, Calanus propinquus, Metridia gerlachei and others - because the source web resolves them only as part of the mesozooplankton.",
+      "layout": { "x": 16, "y": 28 }
+    },
+    {
+      "id": "salps",
+      "displayName": "Salps",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Barrel-shaped, gelatinous filter feeders that can bloom enormously in years when krill are scarce. Functional group pooling Salpa thompsoni with the other pelagic tunicates of the source web.",
+      "layout": { "x": 44, "y": 28 }
+    },
+    {
+      "id": "benthic-deposit-feeders",
+      "displayName": "Benthic deposit feeders",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Seafloor animals that eat the sediment itself and the detritus within it. Functional group pooling polychaete worms, sea cucumbers, burrowing crustaceans and other sediment processors, aggregated by the source web's benthic compartments.",
+      "layout": { "x": 90, "y": 28 }
+    },
+    {
+      "id": "benthic-suspension-feeders",
+      "displayName": "Benthic suspension feeders",
+      "kind": "functional-group",
+      "trophicLevel": 2.1,
+      "functionalRole": "primary-consumer",
+      "description": "Seafloor animals that filter plankton and falling particles from the water. Functional group pooling sponges, bryozoans, bivalves and sea squirts - the group that builds the Weddell Sea's famously rich sponge gardens - aggregated by the source web's benthic compartments.",
+      "layout": { "x": 68, "y": 30 }
+    },
+    {
+      "id": "antarctic-krill",
+      "displayName": "Antarctic krill",
+      "kind": "species",
+      "trophicLevel": 2.2,
+      "functionalRole": "primary-consumer",
+      "description": "Antarctic krill (Euphausia superba), a single species resolved by the source. The keystone of this ecosystem: swarms can stretch for kilometres, turning algae - including ice algae scraped from beneath the floes - into food for penguins, seals, whales, fish and squid. Krill also hunt copepods, which lifts them above trophic level 2.",
+      "alsoKnownAs": ["Krill"],
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Antarctic_krill"
+      },
+      "layout": { "x": 30, "y": 33 }
+    },
+    {
+      "id": "benthic-invertebrate-predators",
+      "displayName": "Benthic invertebrate predators",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "Hunters and scavengers of the seafloor. Functional group pooling sea stars, giant nemertean worms, predatory isopods and octopuses, aggregated from the source web's benthic predator compartments.",
+      "layout": { "x": 88, "y": 53 }
+    },
+    {
+      "id": "antarctic-silverfish",
+      "displayName": "Antarctic silverfish",
+      "kind": "species",
+      "trophicLevel": 3.2,
+      "functionalRole": "intermediate-consumer",
+      "description": "Antarctic silverfish (Pleuragramma antarctica), a single species resolved by the source. The dominant mid-water fish of the high Antarctic and the main fish prey of penguins, seals and flying seabirds in the Weddell Sea.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Antarctic_silverfish"
+      },
+      "layout": { "x": 52, "y": 58 }
+    },
+    {
+      "id": "myctophid-fish",
+      "displayName": "Lanternfish (myctophids)",
+      "kind": "functional-group",
+      "trophicLevel": 3.3,
+      "functionalRole": "intermediate-consumer",
+      "description": "Small deep-water fishes that rise toward the surface at night to feed. Functional group pooling the mesopelagic fishes of the source web - mainly lanternfishes such as Electrona antarctica and Gymnoscopelus species - aggregated because the source does not split their feeding links.",
+      "layout": { "x": 32, "y": 60 }
+    },
+    {
+      "id": "crabeater-seal",
+      "displayName": "Crabeater seal",
+      "kind": "species",
+      "trophicLevel": 3.3,
+      "functionalRole": "intermediate-consumer",
+      "description": "Crabeater seal (Lobodon carcinophaga), a single species resolved by the source. Despite the name it eats almost exclusively krill, sieved through intricately lobed teeth; it may be the most abundant large seal on Earth.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Crabeater_seal"
+      },
+      "layout": { "x": 8, "y": 60 }
+    },
+    {
+      "id": "adelie-penguin",
+      "displayName": "Adelie penguin",
+      "kind": "species",
+      "trophicLevel": 3.4,
+      "functionalRole": "intermediate-consumer",
+      "description": "Adelie penguin (Pygoscelis adeliae), a single species resolved by the source. A true sea-ice penguin of the Antarctic coast, feeding mainly on krill with silverfish taken when available.",
+      "alsoKnownAs": ["Ad\u00e9lie penguin"],
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Ad%C3%A9lie_penguin"
+      },
+      "layout": { "x": 14, "y": 62 }
+    },
+    {
+      "id": "minke-whale",
+      "displayName": "Antarctic minke whale",
+      "kind": "species",
+      "trophicLevel": 3.4,
+      "functionalRole": "intermediate-consumer",
+      "description": "Antarctic minke whale (Balaenoptera bonaerensis), a single species resolved by the source. The smallest baleen whale here and the one that remained numerous after the great whales were hunted out; it feeds on krill and silverfish along the ice edge.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Antarctic_minke_whale"
+      },
+      "layout": { "x": 62, "y": 62 }
+    },
+    {
+      "id": "flying-seabirds",
+      "displayName": "Flying seabirds",
+      "kind": "functional-group",
+      "trophicLevel": 3.6,
+      "functionalRole": "intermediate-consumer",
+      "description": "The volant seabirds of the Weddell Sea. Functional group pooling Antarctic petrels, snow petrels, skuas and other flying seabirds, aggregated by the source web; they skim krill, fish and salps from the surface and scavenge at seal kills.",
+      "layout": { "x": 38, "y": 66 }
+    },
+    {
+      "id": "squid",
+      "displayName": "Squid",
+      "kind": "functional-group",
+      "trophicLevel": 3.8,
+      "functionalRole": "intermediate-consumer",
+      "description": "Squid of the Weddell Sea. Functional group pooling the oceanic squid resolved by the source web (gonatids such as Gonatus antarcticus and relatives), aggregated because the source does not separate their diets; they take krill and lanternfish and are in turn hunted by emperor penguins, Weddell seals and sperm whales.",
+      "layout": { "x": 72, "y": 70 }
+    },
+    {
+      "id": "emperor-penguin",
+      "displayName": "Emperor penguin",
+      "kind": "species",
+      "trophicLevel": 4.1,
+      "functionalRole": "top-consumer",
+      "description": "Emperor penguin (Aptenodytes forsteri), a single species resolved by the source. The only animal that breeds on the sea ice through the polar winter; it dives deep for silverfish and squid, with krill as a smaller share of the diet.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Emperor_penguin"
+      },
+      "layout": { "x": 30, "y": 76 }
+    },
+    {
+      "id": "weddell-seal",
+      "displayName": "Weddell seal",
+      "kind": "species",
+      "trophicLevel": 4.1,
+      "functionalRole": "top-consumer",
+      "description": "Weddell seal (Leptonychotes weddellii), a single species resolved by the source. The southernmost breeding mammal on Earth, hunting fish and squid beneath the fast ice and surfacing through breathing holes it saws open with its teeth.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Weddell_seal"
+      },
+      "layout": { "x": 80, "y": 76 }
+    },
+    {
+      "id": "leopard-seal",
+      "displayName": "Leopard seal",
+      "kind": "species",
+      "trophicLevel": 4.3,
+      "functionalRole": "top-consumer",
+      "description": "Leopard seal (Hydrurga leptonyx), a single species resolved by the source. The Antarctic's mammal-eating seal: krill and fish when small, penguins and young seals of other species when grown.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Leopard_seal"
+      },
+      "layout": { "x": 10, "y": 80 }
+    },
+    {
+      "id": "sperm-whale",
+      "displayName": "Sperm whale",
+      "kind": "species",
+      "trophicLevel": 4.4,
+      "functionalRole": "top-consumer",
+      "description": "Sperm whale (Physeter macrocephalus), a single species resolved by the source. The deep-diving squid specialist of the Southern Ocean, linking the mid-water squid stock to the top of the web.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Sperm_whale"
+      },
+      "layout": { "x": 58, "y": 83 }
+    },
+    {
+      "id": "killer-whale",
+      "displayName": "Killer whale",
+      "kind": "species",
+      "trophicLevel": 4.8,
+      "functionalRole": "top-consumer",
+      "description": "Killer whale (Orcinus orca), a single species resolved by the source. The apex predator of the Weddell Sea; local ecotypes specialise on Weddell seals, penguins and minke whales, washing seals off ice floes with coordinated waves.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Killer_whale"
+      },
+      "layout": { "x": 45, "y": 93 }
+    }
+  ],
+  "edges": [
+    { "prey": "phytoplankton", "predator": "copepods", "qualitative": true },
+    { "prey": "sea-ice-algae", "predator": "copepods", "qualitative": true },
+    { "prey": "phytoplankton", "predator": "salps", "qualitative": true },
+    { "prey": "phytoplankton", "predator": "antarctic-krill", "qualitative": true },
+    { "prey": "sea-ice-algae", "predator": "antarctic-krill", "qualitative": true },
+    { "prey": "copepods", "predator": "antarctic-krill", "qualitative": true },
+    { "prey": "phytoplankton", "predator": "benthic-suspension-feeders", "qualitative": true },
+    { "prey": "detritus", "predator": "benthic-suspension-feeders", "qualitative": true },
+    { "prey": "detritus", "predator": "benthic-deposit-feeders", "qualitative": true },
+    { "prey": "copepods", "predator": "myctophid-fish", "qualitative": true },
+    { "prey": "antarctic-krill", "predator": "myctophid-fish", "qualitative": true },
+    { "prey": "salps", "predator": "myctophid-fish", "qualitative": true },
+    { "prey": "copepods", "predator": "antarctic-silverfish", "qualitative": true },
+    { "prey": "antarctic-krill", "predator": "antarctic-silverfish", "qualitative": true },
+    { "prey": "benthic-deposit-feeders", "predator": "benthic-invertebrate-predators", "qualitative": true },
+    { "prey": "benthic-suspension-feeders", "predator": "benthic-invertebrate-predators", "qualitative": true },
+    { "prey": "antarctic-krill", "predator": "squid", "qualitative": true },
+    { "prey": "myctophid-fish", "predator": "squid", "qualitative": true },
+    { "prey": "antarctic-krill", "predator": "adelie-penguin", "qualitative": true },
+    { "prey": "antarctic-silverfish", "predator": "adelie-penguin", "qualitative": true },
+    { "prey": "antarctic-krill", "predator": "emperor-penguin", "qualitative": true },
+    { "prey": "antarctic-silverfish", "predator": "emperor-penguin", "qualitative": true },
+    { "prey": "squid", "predator": "emperor-penguin", "qualitative": true },
+    { "prey": "antarctic-krill", "predator": "flying-seabirds", "qualitative": true },
+    { "prey": "myctophid-fish", "predator": "flying-seabirds", "qualitative": true },
+    { "prey": "antarctic-silverfish", "predator": "flying-seabirds", "qualitative": true },
+    { "prey": "antarctic-krill", "predator": "crabeater-seal", "qualitative": true },
+    { "prey": "antarctic-silverfish", "predator": "crabeater-seal", "qualitative": true },
+    { "prey": "antarctic-krill", "predator": "minke-whale", "qualitative": true },
+    { "prey": "antarctic-silverfish", "predator": "minke-whale", "qualitative": true },
+    { "prey": "antarctic-silverfish", "predator": "weddell-seal", "qualitative": true },
+    { "prey": "squid", "predator": "weddell-seal", "qualitative": true },
+    { "prey": "benthic-invertebrate-predators", "predator": "weddell-seal", "qualitative": true },
+    { "prey": "antarctic-krill", "predator": "leopard-seal", "qualitative": true },
+    { "prey": "antarctic-silverfish", "predator": "leopard-seal", "qualitative": true },
+    { "prey": "adelie-penguin", "predator": "leopard-seal", "qualitative": true },
+    { "prey": "emperor-penguin", "predator": "leopard-seal", "qualitative": true },
+    { "prey": "crabeater-seal", "predator": "leopard-seal", "qualitative": true },
+    { "prey": "squid", "predator": "sperm-whale", "qualitative": true },
+    { "prey": "adelie-penguin", "predator": "killer-whale", "qualitative": true },
+    { "prey": "emperor-penguin", "predator": "killer-whale", "qualitative": true },
+    { "prey": "crabeater-seal", "predator": "killer-whale", "qualitative": true },
+    { "prey": "weddell-seal", "predator": "killer-whale", "qualitative": true },
+    { "prey": "leopard-seal", "predator": "killer-whale", "qualitative": true },
+    { "prey": "minke-whale", "predator": "killer-whale", "qualitative": true }
+  ]
+}

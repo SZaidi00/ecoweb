@@ -22,6 +22,15 @@
       "displayName": "Detritus",
       "kind": "functional-group",
       "trophicLevel": 1.0
+    },
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
     }
   ]
 }

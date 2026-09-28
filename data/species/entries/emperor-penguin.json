@@ -1,0 +1,24 @@
+{
+  "slug": "emperor-penguin",
+  "name": "Emperor penguin",
+  "kind": "species",
+  "description": "Emperor penguin (Aptenodytes forsteri), a single species resolved by the source. The only animal that breeds on the sea ice through the polar winter; it dives deep for silverfish and squid, with krill as a smaller share of the diet.",
+  "sourceWeb": "weddell-sea",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Emperor_penguin"
+  },
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "emperor-penguin",
+      "displayName": "Emperor penguin",
+      "kind": "species",
+      "trophicLevel": 4.1,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Emperor_penguin"
+      }
+    }
+  ]
+}

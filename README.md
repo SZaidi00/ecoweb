@@ -6,7 +6,7 @@ An open-source, interactive web app that lets a general audience explore real-wo
 
 ## Features
 
-- **An atlas of real ecosystems** — five curated food webs across four biomes (marine, freshwater, grassland, wetland), each built from published empirical studies with full citations and a provenance badge.
+- **An atlas of real ecosystems** — eight curated food webs across five biomes (marine, estuary, freshwater, grassland, wetland), pole to equator, each built from published empirical studies with full citations and a provenance badge.
 - **Species Focus View** — select any species to light up its direct prey and predators while the rest of the web dims; trace dependencies down to the producers.
 - **Cascade Mode** — remove a species and watch a staggered ripple of effects through the web: who starves, who struggles, who is released. Clearly labeled as structural dependency, not population prediction.
 - **Honest science** — nodes are functional groups exactly as the source studies measured them (the "Salmon" node pools five Pacific salmon species; we never invent resolution the data doesn't have). Edges with unquantified strength are drawn dashed.

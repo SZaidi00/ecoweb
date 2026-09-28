@@ -1,0 +1,18 @@
+{
+  "slug": "sea-ice-algae",
+  "name": "Sea ice algae",
+  "kind": "functional-group",
+  "description": "Algae growing inside and beneath the sea ice, available as food in early spring before the open-water bloom begins. Functional group aggregating the ice-associated algal community, mostly pennate diatoms, pooled because the source web treats ice algae as one producer compartment.",
+  "sourceWeb": "weddell-sea",
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "sea-ice-algae",
+      "displayName": "Sea ice algae",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

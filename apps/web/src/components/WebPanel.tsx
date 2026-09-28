@@ -30,6 +30,7 @@ export function WebPanel({
   onEnterCascadeMode: () => void
 }) {
   const pooledNode = web.nodes.find((node) => node.kind !== 'species')
+  const hasWeightedEdges = web.edges.some((edge) => 'weight' in edge)
   return (
     <div>
       <h2 className="mb-0.5 font-heading text-[22px] font-semibold">{web.meta.name}</h2>
@@ -43,6 +44,7 @@ export function WebPanel({
 
       <div className={panelBox}>
         <h3 className={panelHeading}>About this web</h3>
+        {web.meta.tagline}.{' '}
         {pooledNode ? (
           <>
             Nodes are <strong className="font-semibold text-ink">functional groups</strong> — for
@@ -55,7 +57,14 @@ export function WebPanel({
             invent resolution the data doesn’t have.
           </>
         )}{' '}
-        Line thickness shows each food source’s share of the consumer’s diet.
+        {hasWeightedEdges ? (
+          <>Line thickness shows each food source’s share of the consumer’s diet.</>
+        ) : (
+          <>
+            All links here are documented but unquantified — drawn dashed and thin, since the
+            source records who eats whom, not how much.
+          </>
+        )}
       </div>
 
       <div className={panelBox}>

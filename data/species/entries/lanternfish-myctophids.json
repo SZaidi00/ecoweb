@@ -1,0 +1,18 @@
+{
+  "slug": "lanternfish-myctophids",
+  "name": "Lanternfish (myctophids)",
+  "kind": "functional-group",
+  "description": "Small deep-water fishes that rise toward the surface at night to feed. Functional group pooling the mesopelagic fishes of the source web - mainly lanternfishes such as Electrona antarctica and Gymnoscopelus species - aggregated because the source does not split their feeding links.",
+  "sourceWeb": "weddell-sea",
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "myctophid-fish",
+      "displayName": "Lanternfish (myctophids)",
+      "kind": "functional-group",
+      "trophicLevel": 3.3
+    }
+  ]
+}

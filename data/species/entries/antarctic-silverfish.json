@@ -1,0 +1,24 @@
+{
+  "slug": "antarctic-silverfish",
+  "name": "Antarctic silverfish",
+  "kind": "species",
+  "description": "Antarctic silverfish (Pleuragramma antarctica), a single species resolved by the source. The dominant mid-water fish of the high Antarctic and the main fish prey of penguins, seals and flying seabirds in the Weddell Sea.",
+  "sourceWeb": "weddell-sea",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Antarctic_silverfish"
+  },
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "antarctic-silverfish",
+      "displayName": "Antarctic silverfish",
+      "kind": "species",
+      "trophicLevel": 3.2,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Antarctic_silverfish"
+      }
+    }
+  ]
+}

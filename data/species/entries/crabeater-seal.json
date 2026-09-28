@@ -1,0 +1,24 @@
+{
+  "slug": "crabeater-seal",
+  "name": "Crabeater seal",
+  "kind": "species",
+  "description": "Crabeater seal (Lobodon carcinophaga), a single species resolved by the source. Despite the name it eats almost exclusively krill, sieved through intricately lobed teeth; it may be the most abundant large seal on Earth.",
+  "sourceWeb": "weddell-sea",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Crabeater_seal"
+  },
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "crabeater-seal",
+      "displayName": "Crabeater seal",
+      "kind": "species",
+      "trophicLevel": 3.3,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Crabeater_seal"
+      }
+    }
+  ]
+}

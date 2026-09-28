@@ -1,0 +1,18 @@
+{
+  "slug": "flying-seabirds",
+  "name": "Flying seabirds",
+  "kind": "functional-group",
+  "description": "The volant seabirds of the Weddell Sea. Functional group pooling Antarctic petrels, snow petrels, skuas and other flying seabirds, aggregated by the source web; they skim krill, fish and salps from the surface and scavenge at seal kills.",
+  "sourceWeb": "weddell-sea",
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "flying-seabirds",
+      "displayName": "Flying seabirds",
+      "kind": "functional-group",
+      "trophicLevel": 3.6
+    }
+  ]
+}

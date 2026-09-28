@@ -1,0 +1,18 @@
+{
+  "slug": "salps",
+  "name": "Salps",
+  "kind": "functional-group",
+  "description": "Barrel-shaped, gelatinous filter feeders that can bloom enormously in years when krill are scarce. Functional group pooling Salpa thompsoni with the other pelagic tunicates of the source web.",
+  "sourceWeb": "weddell-sea",
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "salps",
+      "displayName": "Salps",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

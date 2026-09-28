@@ -1,0 +1,18 @@
+{
+  "slug": "benthic-deposit-feeders",
+  "name": "Benthic deposit feeders",
+  "kind": "functional-group",
+  "description": "Seafloor animals that eat the sediment itself and the detritus within it. Functional group pooling polychaete worms, sea cucumbers, burrowing crustaceans and other sediment processors, aggregated by the source web's benthic compartments.",
+  "sourceWeb": "weddell-sea",
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "benthic-deposit-feeders",
+      "displayName": "Benthic deposit feeders",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

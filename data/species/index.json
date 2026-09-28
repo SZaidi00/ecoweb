@@ -1,7 +1,21 @@
 {
-  "webCount": 7,
-  "entryCount": 131,
+  "webCount": 8,
+  "entryCount": 150,
   "entries": [
+    {
+      "slug": "adelie-penguin",
+      "name": "Adelie penguin",
+      "kind": "species",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "adelie-penguin"
+        }
+      ]
+    },
     {
       "slug": "adult-fishes-bass-perch-crappie-rock-bass",
       "name": "Adult fishes (bass, perch, crappie, rock bass)",
@@ -83,6 +97,48 @@
         {
           "web": "shortgrass-prairie",
           "node": "amoebae"
+        }
+      ]
+    },
+    {
+      "slug": "antarctic-krill",
+      "name": "Antarctic krill",
+      "kind": "species",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "antarctic-krill"
+        }
+      ]
+    },
+    {
+      "slug": "antarctic-minke-whale",
+      "name": "Antarctic minke whale",
+      "kind": "species",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "minke-whale"
+        }
+      ]
+    },
+    {
+      "slug": "antarctic-silverfish",
+      "name": "Antarctic silverfish",
+      "kind": "species",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "antarctic-silverfish"
         }
       ]
     },
@@ -176,6 +232,20 @@
       ]
     },
     {
+      "slug": "benthic-deposit-feeders",
+      "name": "Benthic deposit feeders",
+      "kind": "functional-group",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "benthic-deposit-feeders"
+        }
+      ]
+    },
+    {
       "slug": "benthic-diatoms",
       "name": "Benthic diatoms",
       "kind": "functional-group",
@@ -190,6 +260,20 @@
       ]
     },
     {
+      "slug": "benthic-invertebrate-predators",
+      "name": "Benthic invertebrate predators",
+      "kind": "functional-group",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "benthic-invertebrate-predators"
+        }
+      ]
+    },
+    {
       "slug": "benthic-microcrustaceans",
       "name": "Benthic microcrustaceans",
       "kind": "functional-group",
@@ -200,6 +284,20 @@
         {
           "web": "little-rock-lake",
           "node": "benthic-microcrustaceans"
+        }
+      ]
+    },
+    {
+      "slug": "benthic-suspension-feeders",
+      "name": "Benthic suspension feeders",
+      "kind": "functional-group",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "benthic-suspension-feeders"
         }
       ]
     },
@@ -317,6 +415,34 @@
         {
           "web": "chesapeake-bay",
           "node": "ciliates"
+        }
+      ]
+    },
+    {
+      "slug": "copepods",
+      "name": "Copepods",
+      "kind": "functional-group",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "copepods"
+        }
+      ]
+    },
+    {
+      "slug": "crabeater-seal",
+      "name": "Crabeater seal",
+      "kind": "species",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "crabeater-seal"
         }
       ]
     },
@@ -499,7 +625,8 @@
       "kind": "functional-group",
       "webs": [
         "prince-william-sound",
-        "shortgrass-prairie"
+        "shortgrass-prairie",
+        "weddell-sea"
       ],
       "occurrences": [
         {
@@ -508,6 +635,10 @@
         },
         {
           "web": "shortgrass-prairie",
+          "node": "detritus"
+        },
+        {
+          "web": "weddell-sea",
           "node": "detritus"
         }
       ]
@@ -621,6 +752,20 @@
         {
           "web": "serengeti",
           "node": "large-raptors"
+        }
+      ]
+    },
+    {
+      "slug": "emperor-penguin",
+      "name": "Emperor penguin",
+      "kind": "species",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "emperor-penguin"
         }
       ]
     },
@@ -747,6 +892,20 @@
         {
           "web": "cypress-wetland",
           "node": "apple-snail"
+        }
+      ]
+    },
+    {
+      "slug": "flying-seabirds",
+      "name": "Flying seabirds",
+      "kind": "functional-group",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "flying-seabirds"
         }
       ]
     },
@@ -975,6 +1134,20 @@
       ]
     },
     {
+      "slug": "killer-whale",
+      "name": "Killer whale",
+      "kind": "species",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "killer-whale"
+        }
+      ]
+    },
+    {
       "slug": "land-birds",
       "name": "Land birds",
       "kind": "functional-group",
@@ -989,6 +1162,20 @@
       ]
     },
     {
+      "slug": "lanternfish-myctophids",
+      "name": "Lanternfish (myctophids)",
+      "kind": "functional-group",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "myctophid-fish"
+        }
+      ]
+    },
+    {
       "slug": "leopard-spotted-hyena",
       "name": "Leopard & spotted hyena",
       "kind": "functional-group",
@@ -999,6 +1186,20 @@
         {
           "web": "serengeti",
           "node": "leopard-hyena"
+        }
+      ]
+    },
+    {
+      "slug": "leopard-seal",
+      "name": "Leopard seal",
+      "kind": "species",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "leopard-seal"
         }
       ]
     },
@@ -1317,7 +1518,8 @@
       "webs": [
         "chesapeake-bay",
         "cypress-wetland",
-        "prince-william-sound"
+        "prince-william-sound",
+        "weddell-sea"
       ],
       "occurrences": [
         {
@@ -1330,6 +1532,10 @@
         },
         {
           "web": "prince-william-sound",
+          "node": "phytoplankton"
+        },
+        {
+          "web": "weddell-sea",
           "node": "phytoplankton"
         }
       ]
@@ -1536,6 +1742,20 @@
       ]
     },
     {
+      "slug": "salps",
+      "name": "Salps",
+      "kind": "functional-group",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "salps"
+        }
+      ]
+    },
+    {
       "slug": "saprophytic-fungi",
       "name": "Saprophytic fungi",
       "kind": "functional-group",
@@ -1588,6 +1808,20 @@
         {
           "web": "little-rock-lake",
           "node": "amphipods"
+        }
+      ]
+    },
+    {
+      "slug": "sea-ice-algae",
+      "name": "Sea ice algae",
+      "kind": "functional-group",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "sea-ice-algae"
         }
       ]
     },
@@ -1690,6 +1924,20 @@
       ]
     },
     {
+      "slug": "sperm-whale",
+      "name": "Sperm whale",
+      "kind": "species",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "sperm-whale"
+        }
+      ]
+    },
+    {
       "slug": "springtails-collembola",
       "name": "Springtails (collembola)",
       "kind": "functional-group",
@@ -1700,6 +1948,20 @@
         {
           "web": "shortgrass-prairie",
           "node": "collembolans"
+        }
+      ]
+    },
+    {
+      "slug": "squid",
+      "name": "Squid",
+      "kind": "functional-group",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "squid"
         }
       ]
     },
@@ -1798,6 +2060,20 @@
         {
           "web": "little-rock-lake",
           "node": "zooplankton"
+        }
+      ]
+    },
+    {
+      "slug": "weddell-seal",
+      "name": "Weddell seal",
+      "kind": "species",
+      "webs": [
+        "weddell-sea"
+      ],
+      "occurrences": [
+        {
+          "web": "weddell-sea",
+          "node": "weddell-seal"
         }
       ]
     },

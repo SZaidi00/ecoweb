@@ -1,0 +1,18 @@
+{
+  "slug": "benthic-invertebrate-predators",
+  "name": "Benthic invertebrate predators",
+  "kind": "functional-group",
+  "description": "Hunters and scavengers of the seafloor. Functional group pooling sea stars, giant nemertean worms, predatory isopods and octopuses, aggregated from the source web's benthic predator compartments.",
+  "sourceWeb": "weddell-sea",
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "benthic-invertebrate-predators",
+      "displayName": "Benthic invertebrate predators",
+      "kind": "functional-group",
+      "trophicLevel": 3.0
+    }
+  ]
+}

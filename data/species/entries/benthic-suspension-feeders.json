@@ -1,0 +1,18 @@
+{
+  "slug": "benthic-suspension-feeders",
+  "name": "Benthic suspension feeders",
+  "kind": "functional-group",
+  "description": "Seafloor animals that filter plankton and falling particles from the water. Functional group pooling sponges, bryozoans, bivalves and sea squirts - the group that builds the Weddell Sea's famously rich sponge gardens - aggregated by the source web's benthic compartments.",
+  "sourceWeb": "weddell-sea",
+  "occurrences": [
+    {
+      "web": "weddell-sea",
+      "webName": "Weddell Sea",
+      "biome": "marine",
+      "node": "benthic-suspension-feeders",
+      "displayName": "Benthic suspension feeders",
+      "kind": "functional-group",
+      "trophicLevel": 2.1
+    }
+  ]
+}
