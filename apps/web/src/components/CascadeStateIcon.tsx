@@ -14,8 +14,8 @@ const glyphs: Record<CascadeState, ReactNode> = {
       <path d="M16 6l5 5M21 6l-5 5" />
     </>
   ),
-  /* Upward sprout — released from predation */
-  released: <path d="M4 20h16M12 20V9M12 9l-4 4M12 9l4 4" />,
+  /* Double chevron up — released from predation */
+  released: <path d="M5 18l7-7 7 7M5 12l7-7 7 7" />,
 }
 
 export interface CascadeStateIconProps {

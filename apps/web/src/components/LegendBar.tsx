@@ -25,15 +25,26 @@ export function LegendBar({ cascadeActive = false }: { cascadeActive?: boolean }
           {role.label}
         </span>
       ))}
-      {cascadeActive &&
-        cascadeStates.map((state) => (
-          <span key={state.id} className="inline-flex items-center gap-1.5">
-            <span style={{ color: state.color }}>
-              <CascadeStateIcon state={state.id} className="h-[13px] w-[13px]" />
-            </span>
-            {state.label}
+      {cascadeActive && (
+        <>
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-muted">
+            Ecosystem changes:
           </span>
-        ))}
+          {cascadeStates.map((state) => (
+            <span
+              key={state.id}
+              className="inline-flex items-center gap-1.5"
+              title={`${state.label}: ${state.description}`}
+            >
+              <span style={{ color: state.color }}>
+                <CascadeStateIcon state={state.id} className="h-[13px] w-[13px]" />
+              </span>
+              {state.label}
+              <span className="text-muted">— {state.description}</span>
+            </span>
+          ))}
+        </>
+      )}
       <span className="inline-flex items-center gap-1.5">
         <svg width="26" height="6" aria-hidden="true">
           <line x1="0" y1="3" x2="26" y2="3" stroke={colors.edge} strokeWidth="3" />

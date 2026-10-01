@@ -79,11 +79,33 @@ export interface CascadeStateMeta {
   readonly id: CascadeState
   readonly label: string
   readonly color: string
+  /** Plain-language meaning, shown in legends (thresholds: packages/cascade). */
+  readonly description: string
 }
 
 export const cascadeStates: readonly CascadeStateMeta[] = [
-  { id: 'stressed', label: 'Stressed', color: colors.cascade.stressed },
-  { id: 'severe', label: 'Severe', color: colors.cascade.severe },
-  { id: 'collapsed', label: 'Collapsed', color: colors.cascade.collapsed },
-  { id: 'released', label: 'Released', color: colors.cascade.released },
+  {
+    id: 'stressed',
+    label: 'Stressed',
+    color: colors.cascade.stressed,
+    description: 'lost some food (under 30% of its diet)',
+  },
+  {
+    id: 'severe',
+    label: 'Severe',
+    color: colors.cascade.severe,
+    description: 'lost 30–70% of its food',
+  },
+  {
+    id: 'collapsed',
+    label: 'Collapsed',
+    color: colors.cascade.collapsed,
+    description: 'lost over 70% of its food — dies out too',
+  },
+  {
+    id: 'released',
+    label: 'Released',
+    color: colors.cascade.released,
+    description: 'freed from a predator — likely increases',
+  },
 ] as const

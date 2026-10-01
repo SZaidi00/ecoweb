@@ -200,6 +200,9 @@ export function AboutPage() {
             <span className="text-xs font-medium uppercase tracking-wider text-ink/80">
               {state.label}
             </span>
+            <span className="text-center text-[11px] leading-snug text-muted">
+              {state.description}
+            </span>
           </li>
         ))}
       </ul>

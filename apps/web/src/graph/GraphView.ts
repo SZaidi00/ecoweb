@@ -1072,10 +1072,8 @@ export class GraphView {
         break
       }
       case 'released':
-        line([[4, 20], [20, 20]])
-        line([[12, 20], [12, 9]])
-        line([[12, 9], [8, 13]])
-        line([[12, 9], [16, 13]])
+        line([[5, 18], [12, 11], [19, 18]])
+        line([[5, 12], [12, 5], [19, 12]])
         break
     }
     g.stroke({ width: 1.6, color, cap: 'round', join: 'round' })
