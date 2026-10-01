@@ -2,19 +2,11 @@ import { Link } from 'react-router-dom'
 
 import type { Biome, WebIndexEntry } from '@foodweb/schema'
 
+import { ProvenanceBadge } from '@/components/ProvenanceBadge'
 import { BIOMES, BIOME_ORDER } from '@/lib/biomes'
 
 const focusRing =
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-canopy'
-
-function ProvenanceBadge({ provenance }: { provenance: WebIndexEntry['provenance'] }) {
-  return (
-    <span className="inline-flex items-center gap-1.5 rounded-full bg-canopySoft px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.6px] text-canopy">
-      <span className="h-1.5 w-1.5 rounded-full bg-canopy" />
-      {provenance === 'empirical' ? 'Empirical study' : 'Curated composite'}
-    </span>
-  )
-}
 
 function EcoCard({ entry }: { entry: WebIndexEntry }) {
   return (

@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 
 import type { EcosystemWeb } from '@foodweb/schema'
 
+import { ProvenanceBadge } from '@/components/ProvenanceBadge'
+
 const panelBox =
   'mb-3 rounded-xl border border-hairline bg-paper px-4 py-3.5 text-[13px] leading-relaxed text-inkSoft'
 const panelHeading = 'mb-2 text-[10.5px] font-bold uppercase tracking-[0.9px] text-canopy'
@@ -35,11 +37,7 @@ export function WebPanel({
     <div>
       <h2 className="mb-0.5 font-heading text-[22px] font-semibold">{web.meta.name}</h2>
       <p className="mb-4 flex items-center gap-2 text-[12.5px] text-muted">
-        {web.meta.location} ·{' '}
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-canopySoft px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.6px] text-canopy">
-          <span className="h-1.5 w-1.5 rounded-full bg-canopy" />
-          {web.meta.provenance === 'empirical' ? 'Empirical study' : 'Curated composite'}
-        </span>
+        {web.meta.location} · <ProvenanceBadge provenance={web.meta.provenance} />
       </p>
 
       <div className={panelBox}>
