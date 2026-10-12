@@ -1,0 +1,192 @@
+# Ecosystem Research Strategy — Food Web Explorer
+
+**Purpose of this document:** Give an agent (human or AI) everything needed to (a) assess the current state of the Food Web Explorer repo, and (b) conduct systematic, repeatable research to find future ecosystems worth adding.
+
+**How to use:** Read Section 1 for project context. For each new region/biome you research, follow the methodology in Section 4 using the template in Section 5. Record findings in the candidate table format in Section 7. Submit additions as a PR against this file or a follow-up `research/region-*.md`.
+
+---
+
+## 1. Project Context
+
+### What this product is
+Food Web Explorer is an open-source interactive atlas of **real, published food webs**. A general audience browses ecosystems on a world map, clicks a species to see its dependencies (what it eats, what eats it), and simulates removing a species to watch effects cascade through the web. Positioning: "interactive documentary of ecosystems" — not a network-analysis tool, not a classroom worksheet.
+
+### Current content (as of this writing)
+| Web | Biome | Continent | Provenance | Data type |
+|---|---|---|---|---|
+| Prince William Sound, Alaska | Marine | N. America | Empirical (foodwebviz / Web of Life) | Weighted flows |
+| Serengeti, Tanzania | Grassland | Africa | Empirical (de Visser et al. 2011) | Qualitative |
+| Chesapeake Bay, USA | Estuary | N. America | Empirical (NOAA CBFEM Ecopath model) | Weighted diet %s |
+| Little Rock Lake, Wisconsin | Freshwater lake | N. America | Empirical (Martinez 1991) | Qualitative |
+| Weddell Sea, Antarctica | Polar marine | Antarctica | Composite (Jacob et al. 2011) | Mostly qualitative |
+
+### Design and data constraints (these define what counts as a valid web)
+
+1. **15–25 nodes, hard ceiling.** Enforced by the data validator. Raw webs with more taxa must be aggregated into trophic/functional groups.
+2. **Trophic-level vertical layout.** Producers bottom, apex predators top. Webs must have a coherent trophic structure (weeds out purely topological webs with no level info).
+3. **The salmon rule (the single most important principle):** node granularity = whatever the source study measured. We never split a pooled group without sourced diet data, and never invent edge weights. Every non-species node carries an explicit aggregation statement. Node kinds: `functional-group` | `species` | `life-stage-group`.
+4. **Edges carry `weight` (share of predator's diet, 0–1) or `qualitative: true`.** Qualitative is legitimate and common; the renderer shows dashed edges with a legend entry.
+5. **Provenance badges:** `empirical` (single published dataset) or `composite` (assembled from diet literature; must be labeled and explained). Full citation required per web, plus lat/lng for the map.
+6. **Honesty rules:** no fabricated data, ever. If a source is inaccessible, STOP and flag — never reconstruct links from memory or secondary summaries. Sources must be peer-reviewed papers, agency reports, or established open databases.
+7. **Aesthetics matter:** webs with an iconic flagship story (krill in Antarctica, sea otters in kelp forests, lions in Serengeti) rank higher because the cascade simulation is the product's hero moment. A web where removing one node causes an interesting ripple beats a bigger, flatter web.
+
+### What "done" looks like per web
+One JSON in `data/webs/` passing `validate:data` (≤25 nodes, no dangling refs, citations present, aggregation statements on non-species nodes), layout hints curated, registered in `data/webs/index.json`, appearing as a pin on the map, and listed on the About page Sources panel.
+
+---
+
+## 2. Current Landscape (why this gap exists)
+
+The product occupies deliberate white space: educational tools (Gizmos, KiwiBee) are interactive but fake and tiny; research tools (foodwebviz, BEFANA) are real but require Python; data platforms (Web of Life, GloBI, Mangal) hold hundreds of real webs but with utilitarian expert interfaces. **Our competitive moat is curation: taking published webs and making them legible, honest, and explorable.** That means the limiting resource for growth is not engineering — it is finding webs that (a) exist in publishable form, (b) can be aggregated to ≤25 nodes without destroying their story, and (c) add geographic/biome diversity.
+
+**Known data biases to plan around:**
+- Aquatic systems (marine, freshwater) are massively over-represented in open food-web data. Terrestrial webs exist but skew qualitative.
+- Tropical webs are under-published relative to their biodiversity — expect thin pickings in rainforest and coral reef categories and plan aggregation accordingly.
+- Many classic webs (Ythan Estuary, Bridge Brook Lake, St. Martin Island, Benguela) are small enough to use nearly raw.
+
+---
+
+## 3. Source Databases Inventory (search these, in this order)
+
+| Source | What it holds | Access | Notes |
+|---|---|---|---|
+| **Web of Life** (web-of-life.es) | Hundreds of ecological networks: food webs, pollination, seed dispersal, host-parasite | Free web UI + downloads | Filter by interaction type "food web". Great starting point; each web has a primary citation. |
+| **GloBI** (globalbioticinteractions.org) | Species-interaction records aggregated from open datasets; API + explorers | Free API | Best for verifying/cross-checking individual feeding links. Also indexes GoMexSI (Gulf of Mexico) and Mangal. |
+| **Mangal** (mangal.io) | Ecological network database with an API | Free API | Good programmatic search by ecosystem type. |
+| **Netzschleuder** (networks.skewed.de) | Network science repository incl. famous food webs (Little Rock Lake, Ythan, etc.) | Free downloads | Standard formats; check each entry's citation. |
+| **Ecopath with Ecosim models** | Weighted ecosystem models with diet matrices (Chesapeake, many others) | Publications + some model repos (ecopath.org) | The single best source of *weighted* webs. Any published Ecopath model ≥20 groups is a strong candidate. |
+| **Primary literature** | J. Anim. Ecol., Ecological Monographs, Oecologia, Food Webs, Advances in Ecological Research | Publisher sites, author sites, supplementary appendices | Often the only route to terrestrial webs. Appendices S1–S4 style link matrices are gold. |
+| **figshare / Zenodo / Dryad** | Dataset deposits accompanying papers | Free | Search "food web" + ecosystem name. Frequently contains the machine-readable link matrix the paper used. |
+
+**Search hygiene:** always end at a citable primary source. Database entries are pointers, not citations.
+
+---
+
+## 4. Research Methodology (repeatable per region/biome)
+
+1. **Sweep the databases** (Section 3) for the target region/biome. Query patterns: "food web" + region/ecosystem name; Ecopath + ecosystem; "trophic network" + biome.
+2. **Screen candidates against the inclusion criteria** (Section 5). Reject early — don't dig into a web that can't work.
+3. **Verify accessibility:** the node list and link matrix (or diet matrix, for Ecopath models) must be obtainable — paper appendix, supplementary, repository deposit, or database download. If not obtainable → status `inaccessible`, note what's missing, stop.
+4. **Sketch the aggregation plan:** list the candidate's raw node count and a plausible ≤25-node grouping. If you can't imagine the aggregation without destroying the web's story (e.g. a coral reef with 400 fish species and no natural groupings), mark `high-curation-risk` and move on.
+5. **Score and rank** per the rubric in Section 5. Tier 1 = build next; Tier 2 = backlog; Appendix = recorded but not planned.
+6. **Write up** using the template in Section 6. One file per region/biome: `research/<region>.md`.
+7. **Human review checkpoint** before any curation begins (per the repo's phase protocol).
+
+---
+
+## 5. Inclusion Criteria & Scoring Rubric
+
+**Hard gates (all must be yes):**
+- [ ] Published and citable (peer-reviewed paper, agency report, or established database entry with primary citation)
+- [ ] Node/edge data actually obtainable (verified, not assumed)
+- [ ] Plausible aggregation to 15–25 nodes
+- [ ] Has a trophic structure usable in a vertical layout
+- [ ] Biome not already saturated (aim for ≤3 webs per biome until all biomes have ≥2)
+
+**Scoring rubric (1–3 each; higher is better):**
+
+| Criterion | What earns 3 |
+|---|---|
+| **Data quality** | Weighted diet/flow data documented; or exceptionally clean qualitative matrix |
+| **Story potential** | Removing 1–2 nodes produces a dramatic, explainable cascade; flagship/keystone species present |
+| **Geographic coverage** | Fills an empty region/biome on the map; not another north-temperate aquatic web |
+| **Aggregation cost** | Usable raw (≤30 nodes) or natural functional groups exist in the source |
+| **Audience recognition** | Ecosystem people have heard of: Great Barrier Reef, Amazon, Yellowstone |
+
+**Tiers:** 12–15 = Tier 1 (build next) · 8–11 = Tier 2 (backlog) · ≤7 or any hard-gate fail = Appendix only.
+
+---
+
+## 6. Worked Example — Research Template
+
+*This example is real and already executed — use it as the format standard.*
+
+### Region: North America — Estuarine & Coastal
+**Researched:** 2026-09 · **Status:** complete (1 web shipped, 1 candidate backlog)
+
+**Sweep log:**
+- Web of Life: filtered "food web", searched "estuary", "bay", "marsh" → 11 hits.
+- Ecopath publications: searched "estuarine Ecopath" → 4 models with diet matrices.
+- Primary literature: searched "salt marsh food web" trophic → 3 papers, 1 with appendix matrix.
+
+**Candidate: Chesapeake Bay (shipped ✅)**
+- Source: NOAA Technical Memorandum, "Fisheries Ecosystem Model of the Chesapeake Bay" (Ecopath; 45 functional groups, documented diet compositions).
+- Access: verified — model report with per-group diet appendix.
+- Aggregation plan: 45 → 22 groups (merge forage fish guilds, split microbes/detritus per model structure).
+- Scores: Data quality 3 (weighted diet %) · Story 3 (menhaden bottleneck — classic "most important fish in the sea" cascade) · Geography 2 (N. America already has PWS, but estuary biome new) · Aggregation cost 2 (group merges nontrivial) · Recognition 3. **Total 13 → Tier 1 → shipped.**
+
+**Candidate: Ythan Estuary, Scotland (backlog — recorded for Europe sweep)**
+- Source: classic published web (~92 taxa, multiple follow-up papers), downloadable via Netzschleuder.
+- Note: very low aggregation cost; strong story (tern declines). Europe coverage currently zero.
+
+**Rejected in sweep:**
+- *Gulf of Mexico (GoMexSI)* — data excellent but web too large for 25-node story without arbitrary picking; revisit as composite later.
+- *Various marsh webs (qualitative only, <12 nodes)* — fails minimum richness for a satisfying cascade.
+
+---
+
+## 7. Candidate List Format
+
+For every candidate, record:
+
+```markdown
+### <Ecosystem name>, <Location>
+- **Biome / Region:** · **Lat/Lng (approx):**
+- **Source:** <full citation + DOI/URL>
+- **Data access:** <where the matrix lives — appendix/figure/file; VERIFIED or ASSUMED>
+- **Raw size:** N taxa / M links · **Aggregation plan:** → ~K nodes (one line)
+- **Data type:** weighted | qualitative | mixed
+- **Provenance:** empirical | composite
+- **Scores:** data _ · story _ · geography _ · cost _ · recognition _ = **total**
+- **Tier:** 1 / 2 / appendix · **Notes:** <story hook, risks, dependencies>
+```
+
+---
+
+## 8. Initial Candidate Shortlist (from prior research — verify before building)
+
+*These are starting leads, pre-screened but not fully verified. Re-run Section 4 steps 3–5 on each before committing.*
+
+### Tier 1 leads
+| Ecosystem | Biome | Why | First source to check |
+|---|---|---|---|
+| **Ythan Estuary, Scotland** | Estuary/coastal | Tiny raw web, famous tern-decline story, Europe = empty on map | Netzschleuder entry + Hall & Raffaelli papers |
+| **Bridge Brook Lake, NY** | Freshwater lake | Classic lake web, moderate size, good complement to Little Rock | Web of Life / Martinez-era datasets |
+| **Benguela Current, Namibia** | Marine upwelling | Ecopath model w/ weights; Africa marine = empty; dramatic sardine-anchovy story | Shannon et al. Ecopath papers |
+| **Yellowstone (terrestrial)** | Temperate forest/grassland | Huge audience draw; must assemble as labeled composite from diet literature | Primary literature sweep; expect composite badge |
+
+### Tier 2 leads
+| Ecosystem | Biome | Note |
+|---|---|---|
+| St. Martin Island, Caribbean | Marine island | Small, classic, tropical marine |
+| Sanak intertidal, Alaska | Intertidal | Interesting nearshore story, N. America though |
+| Barents Sea | Marine | Ecopath model, weights; polar-adjacent |
+| Takapoto atoll lagoon | Coral reef | Tropical marine gap; expect high curation risk |
+| Cattle grazing web, Wyoming | Grassland | Terrestrial, tiny, classic — good quick win |
+| Skipwith Pond, England | Freshwater | Classic pond web, Europe coverage |
+| New Zealand stream webs | Freshwater | Southern hemisphere gap |
+
+### Deliberately out of scope (recorded for completeness)
+- Raw GloBI/Mangal mega-webs (100+ species) — fail the ≤25-node gate unless a curated composite is explicitly scoped.
+- Pollination / host-parasite networks — different product surface; schema supports them but UI doesn't yet.
+
+---
+
+## 9. Known Gaps to Prioritize in Future Sweeps
+
+1. **Tropical terrestrial** (rainforest) — thinnest published-web coverage; likely composite-only; high audience value.
+2. **Coral reefs** — iconic, data messy; aggregation to fish guilds is the only viable path.
+3. **Southern hemisphere broadly** — Australia, S. America, S. Africa webs are scarce in the classic canon; check Mangal and regional journals first.
+4. **Desert** — no obvious classic web; expect to build a composite from diet studies or leave "Coming soon."
+5. **Deep sea / hydrothermal vents** — exciting story, very sparse resolved food webs; treat as research bonus, not pipeline blocker.
+
+---
+
+## 10. Definition of Done for a Research Sweep
+
+- [ ] All databases in Section 3 swept with logged queries
+- [ ] Every candidate screened against hard gates; rejects recorded with reason
+- [ ] Tier 1 candidates fully verified (matrix actually obtained, not assumed)
+- [ ] Candidate list written in Section 7 format
+- [ ] Human review checkpoint passed; Tier 1 list approved for curation
+- [ ] PR submitted adding `research/<region>.md` and updating this file's shortlist
