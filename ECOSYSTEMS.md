@@ -190,3 +190,18 @@ For every candidate, record:
 - [ ] Candidate list written in Section 7 format
 - [ ] Human review checkpoint passed; Tier 1 list approved for curation
 - [ ] PR submitted adding `research/<region>.md` and updating this file's shortlist
+
+---
+
+## 11. Sweep Ledger
+
+*One row per candidate, updated stage by stage. Stage 1 (research) writes `researched` + the research file; later stages own `verified` / `implemented`. Note: research files live in `researched/`, not `research/` as sections above say.*
+
+| Candidate | Region | Tier | Researched | Verified | Implemented |
+|---|---|---|---|---|---|
+| tapajos-river | South America — Amazon river/floodplain | 1 | researched — researched/south-america.md | verified — verified/south-america.md (matrix: Springer ESM docx, 35 groups) | — |
+| san-jorge-gulf | South America — Patagonian marine | 1 | researched — researched/south-america.md | verified — verified/south-america.md (matrix: GitHub EcoComplex/NetworkGolfoSanJorge + Zenodo) | — |
+| balbina-forest-islands | South America — Amazon rainforest (terrestrial) | 1 (high-curation-risk) | researched — researched/south-america.md | rejected (provenance) — verified/south-america.md (model-inferred links; revisit only if a `modeled` badge is added) | — |
+| pantanal-oxbow-lakes | South America — Pantanal wetland lakes | 1 | researched — researched/south-america.md | verified — verified/south-america.md (matrix: open Annex A docx, 38–39 compartments) | — |
+| upper-parana-floodplain | South America — Paraná river/reservoir | 2 | researched — researched/south-america.md | verified (spot check) — verified/south-america.md (diet table in open SciELO PDF) | — |
+| strait-of-magellan | South America — sub-Antarctic channel | appendix | researched — researched/south-america.md | confirmed (record only) — verified/south-america.md (preprint live, 139 trophic species) | — |
