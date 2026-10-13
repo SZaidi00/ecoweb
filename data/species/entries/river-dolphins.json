@@ -1,0 +1,24 @@
+{
+  "slug": "river-dolphins",
+  "name": "River dolphins",
+  "kind": "functional-group",
+  "description": "The Amazon's two dolphins, patrolling the river and its flooded forest. Functional group pooling the boto (Inia geoffrensis) and the tucuxi (Sotalia fluviatilis), aggregated because the source model tracks a single river-dolphin compartment; both feed on fishes and nothing in the web eats them.",
+  "sourceWeb": "tapajos-river",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Amazon_river_dolphin"
+  },
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "river-dolphins",
+      "displayName": "River dolphins",
+      "kind": "functional-group",
+      "trophicLevel": 3.22,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Amazon_river_dolphin"
+      }
+    }
+  ]
+}

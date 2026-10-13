@@ -33,6 +33,15 @@
       "trophicLevel": 1.0
     },
     {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    },
+    {
       "web": "weddell-sea",
       "webName": "Weddell Sea",
       "biome": "marine",

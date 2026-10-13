@@ -1,0 +1,18 @@
+{
+  "slug": "jaraqui",
+  "name": "Jaraqui",
+  "kind": "functional-group",
+  "description": "Migratory prochilodontid fishes that graze periphyton and detritus in shifting schools - among the most caught fishes in the Amazon. Functional group pooling the two Semaprochilodus species of the source model (S. insignis and S. taeniurus), which were measured together.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "jaraqui",
+      "displayName": "Jaraqui",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

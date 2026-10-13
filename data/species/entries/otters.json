@@ -1,0 +1,24 @@
+{
+  "slug": "otters",
+  "name": "Otters",
+  "kind": "functional-group",
+  "description": "Two Amazonian otters hunting fish along the riverbanks. Functional group pooling the neotropical otter (Lontra longicaudis) and the giant otter (Pteronura brasiliensis), aggregated because the source model tracks a single otter compartment; both are fish-eating top predators of the river.",
+  "sourceWeb": "tapajos-river",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Giant_otter"
+  },
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "otters",
+      "displayName": "Otters",
+      "kind": "functional-group",
+      "trophicLevel": 3.35,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Giant_otter"
+      }
+    }
+  ]
+}

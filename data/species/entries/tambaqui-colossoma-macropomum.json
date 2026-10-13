@@ -1,0 +1,24 @@
+{
+  "slug": "tambaqui-colossoma-macropomum",
+  "name": "Tambaqui (Colossoma macropomum)",
+  "kind": "species",
+  "description": "Tambaqui (Colossoma macropomum), tracked as its own compartment by the source. One of the Amazon's most important food fishes, migrating into the flooded forest to gorge on fruits and seeds - about four-fifths of its diet in this web comes from the floodplain forest. Heavy fishing pressure makes it a focus of the study's deforestation-and-fishing scenarios.",
+  "sourceWeb": "tapajos-river",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Tambaqui"
+  },
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "tambaqui",
+      "displayName": "Tambaqui (Colossoma macropomum)",
+      "kind": "species",
+      "trophicLevel": 2.2,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Tambaqui"
+      }
+    }
+  ]
+}

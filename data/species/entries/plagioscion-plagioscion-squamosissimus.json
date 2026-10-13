@@ -1,0 +1,18 @@
+{
+  "slug": "plagioscion-plagioscion-squamosissimus",
+  "name": "Plagioscion (Plagioscion squamosissimus)",
+  "kind": "species",
+  "description": "Plagioscion squamosissimus, tracked as its own compartment by the source. A croaker-like sciaenid, native to the Amazon but spread widely by Amazonian fish farming, feeding on small fishes and aquatic invertebrates in turbid waters.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "plagioscion",
+      "displayName": "Plagioscion (Plagioscion squamosissimus)",
+      "kind": "species",
+      "trophicLevel": 3.18
+    }
+  ]
+}

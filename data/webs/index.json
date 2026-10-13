@@ -23,6 +23,17 @@
       "lng": -89.7
     },
     {
+      "id": "tapajos-river",
+      "name": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "location": "Lower Tapaj\u00f3s River, Santar\u00e9m reach, Par\u00e1, Brazil",
+      "nodeCount": 24,
+      "provenance": "empirical",
+      "tagline": "Where the flooded forest feeds the river's giants",
+      "lat": -2.5,
+      "lng": -54.7
+    },
+    {
       "id": "tuesday-lake",
       "name": "Tuesday Lake",
       "biome": "freshwater",

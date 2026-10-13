@@ -1,0 +1,24 @@
+{
+  "slug": "arapaima-pirarucu",
+  "name": "Arapaima (pirarucu)",
+  "kind": "species",
+  "description": "Arapaima (Arapaima gigas), tracked as its own compartment by the source. One of the world's largest freshwater fishes, an air-breathing predator of floodplain lagoons and river margins; because it surfaces to breathe it is easily harpooned, and it is a mainstay of community-based management in the region.",
+  "sourceWeb": "tapajos-river",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Arapaima"
+  },
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "arapaima",
+      "displayName": "Arapaima (pirarucu)",
+      "kind": "species",
+      "trophicLevel": 3.34,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Arapaima"
+      }
+    }
+  ]
+}

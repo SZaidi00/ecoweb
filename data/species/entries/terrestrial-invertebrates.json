@@ -1,0 +1,18 @@
+{
+  "slug": "terrestrial-invertebrates",
+  "name": "Terrestrial invertebrates",
+  "kind": "functional-group",
+  "description": "Ants, mites and millipedes falling or washed from the flooded forest into the river - a flood-pulse subsidy from land to water. Functional group aggregating the terrestrial-invertebrate families measured together by the source (Eremobelbidae, Formicidae, Fuhrmannodesmidae, Hypochthoniidae, Paradoxomatidae, Pseudonannolenidae, Pyrgodesmidae).",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "terrestrial-invertebrates",
+      "displayName": "Terrestrial invertebrates",
+      "kind": "functional-group",
+      "trophicLevel": 2.1
+    }
+  ]
+}

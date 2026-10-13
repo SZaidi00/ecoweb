@@ -1,0 +1,18 @@
+{
+  "slug": "periphyton",
+  "name": "Periphyton",
+  "kind": "functional-group",
+  "description": "Algae and microbes growing attached to submerged wood, stones and plants in the clear, nutrient-poor Tapaj\u00f3s waters. Functional group aggregating the whole periphyton community (diatoms, green algae, conjugatophytes, cyanobacteria, euglenophytes, dinoflagellates and red algae), treated as a single producer compartment by the source.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "periphyton",
+      "displayName": "Periphyton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

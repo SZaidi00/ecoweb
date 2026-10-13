@@ -1,0 +1,18 @@
+{
+  "slug": "floodplain-forest",
+  "name": "Floodplain forest",
+  "kind": "functional-group",
+  "description": "The riverine floodplain forest whose fruits, seeds and leaves drop into the water when the annual flood covers the forest floor - the cornerstone of the Amazonian fish food web. Functional group aggregating the floodplain tree community as one producer compartment (families Arecaceae, Euphorbiaceae, Fabaceae, Malpighiaceae, Myrtaceae, Rubiaceae, Sapindaceae), measured together by the source. Its fruits feed tambaqui, pacu and many other fishes.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "floodplain-forest",
+      "displayName": "Floodplain forest",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

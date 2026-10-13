@@ -1,0 +1,24 @@
+{
+  "slug": "tucunar-peacock-bass",
+  "name": "Tucunar\u00e9 (peacock bass)",
+  "kind": "functional-group",
+  "description": "The river's iconic ambush piscivores, known to anglers as tucunar\u00e9. Functional group pooling the three peacock bass species of the source model (Cichla monoculus, C. pinima and C. temensis), which were measured together.",
+  "sourceWeb": "tapajos-river",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Peacock_bass"
+  },
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "cichla",
+      "displayName": "Tucunar\u00e9 (peacock bass)",
+      "kind": "functional-group",
+      "trophicLevel": 3.2,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Peacock_bass"
+      }
+    }
+  ]
+}

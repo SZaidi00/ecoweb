@@ -75,6 +75,11 @@ const webSources = [
     href: 'https://doi.org/10.1016/B978-0-12-386475-8.00005-1',
     note: 'Jacob et al. 2011, Advances in Ecological Research; curated composite.',
   },
+  {
+    name: 'Tapajós River',
+    href: 'https://doi.org/10.1007/s10113-021-01777-z',
+    note: 'Capitani et al. 2021, Regional Environmental Change.',
+  },
 ]
 
 function ArrowUpRightIcon() {

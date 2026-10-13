@@ -1,0 +1,18 @@
+{
+  "slug": "aquatic-invertebrates",
+  "name": "Aquatic invertebrates",
+  "kind": "functional-group",
+  "description": "Aquatic insects, mites, snails and shrimps living in the river and on the flooded forest floor. Functional group aggregating the source's aquatic-invertebrate compartment - mites (superorder Acariformes), hemipteran and coleopteran insects, apple snails (Ampullariidae), chironomid midges, palaemonid shrimps and polymitarcyid mayflies.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "aquatic-invertebrates",
+      "displayName": "Aquatic invertebrates",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

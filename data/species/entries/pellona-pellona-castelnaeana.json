@@ -1,0 +1,18 @@
+{
+  "slug": "pellona-pellona-castelnaeana",
+  "name": "Pellona (Pellona castelnaeana)",
+  "kind": "species",
+  "description": "Pellona castelnaeana, tracked as its own compartment by the source. A large predaceous herring-like fish (family Pristigasteridae) of the Amazon basin, feeding on smaller fishes, zooplankton and invertebrates in the open river.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "pellona",
+      "displayName": "Pellona (Pellona castelnaeana)",
+      "kind": "species",
+      "trophicLevel": 3.1
+    }
+  ]
+}

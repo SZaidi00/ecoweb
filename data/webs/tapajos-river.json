@@ -1,0 +1,1099 @@
+{
+  "meta": {
+    "id": "tapajos-river",
+    "name": "Tapajós River",
+    "location": "Lower Tapajós River, Santarém reach, Pará, Brazil",
+    "biome": "freshwater",
+    "lat": -2.5,
+    "lng": -54.7,
+    "provenance": "empirical",
+    "tagline": "Where the flooded forest feeds the river's giants",
+    "citations": [
+      "Capitani, L., Angelini, R., Keppeler, F.W., Hallwass, G. & Silvano, R.A.M. 2021. Food web modeling indicates the potential impacts of increasing deforestation and fishing pressure in the Tapajós River, Brazilian Amazon. Regional Environmental Change 21:42. https://doi.org/10.1007/s10113-021-01777-z"
+    ],
+    "sourceUrl": "https://doi.org/10.1007/s10113-021-01777-z",
+    "licenseNote": "Structure and diet composition are from Capitani et al. (2021, Regional Environmental Change 21:42), specifically the 35-functional-group Ecopath model of the Lower Tapajós River near Santarém, as published in the paper's Springer Electronic Supplementary Material (Table 1SM1, the functional-group definitions, and Table 2SM1, the diet-composition matrix, downloaded from static-content.springer.com). Curation and pooling: the 35 published groups were pooled to 24 nodes - the zooplanktivorous catfish Hypophthalmus marginatus (source group 13) was pooled with 'others invertivorous fish' (group 5) into other-invertivorous-fish, and Loricariichthys spp. (group 27) with 'others algivorous/detritivorous fish' (group 7) into other-algivorous-detritivorous-fish, because each pair feeds in the same way in the source matrix; Brachyplatystoma filamentosum (9) and B. rousseauxii (10) were pooled into giant-catfishes; the five small omnivorous cichlids (16, 17, 18, 19, 22) were pooled into small-cichlid-omnivores and the five small omnivorous characins (20, 23, 24, 25, 26) into small-characin-omnivores; all other nodes map one-to-one onto a source group. Each pooling is also stated in the node's description. Edge weights were derived from the published diet matrix after pooling: for prey pools, the weight is the sum of the source diet fractions of all prey in the prey pool for that source predator; for predator nodes pooling several source groups, the component groups' fractions are averaged (Ecopath-style aggregation, so a pooled predator's weights still sum to approximately 1); rounded to 3 decimals. Diet imports from outside the model (source predator groups 1, 9, 10, 11 and 13 - the river dolphins, both giant catfishes, Pellona and Hypophthalmus - import 0.165, 0.10, 0.08, 0.05 and 0.02 of their diet, respectively, per the source's import row) were excluded, so those predators' edge weights sum to less than 1 - for the pooled nodes, the averaged imports of source predators 9 and 10 leave giant-catfishes with edge weights summing to 0.91, and the averaged import of source predator 13 leaves other-invertivorous-fish with edge weights summing to 0.99. The within-pool predation of source predator 17 (Acaronia nassa) on members of its own pooled group (source groups 16, 18, 19 and 22, 0.03 each = 0.12 in total) is omitted as self-loops, so that source predator's own fractions sum to 0.88 and the pooled small-cichlid-omnivores node's edge weights sum to 0.976. Trophic levels were recomputed from the published diet matrix after pooling by solving the Ecopath trophic-level equations (TL_i = 1 + sum_j w_ji * TL_j, detritus at TL 1), because the source paper's trophic-level table is paywalled. Ecopath diet compositions are model-balanced estimates that are partly literature-informed. Reuse requires citing Capitani et al. (2021).",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-10-12"
+  },
+  "nodes": [
+    {
+      "id": "floodplain-forest",
+      "displayName": "Floodplain forest",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "The riverine floodplain forest whose fruits, seeds and leaves drop into the water when the annual flood covers the forest floor - the cornerstone of the Amazonian fish food web. Functional group aggregating the floodplain tree community as one producer compartment (families Arecaceae, Euphorbiaceae, Fabaceae, Malpighiaceae, Myrtaceae, Rubiaceae, Sapindaceae), measured together by the source. Its fruits feed tambaqui, pacu and many other fishes.",
+      "layout": {
+        "x": 16,
+        "y": 4
+      }
+    },
+    {
+      "id": "periphyton",
+      "displayName": "Periphyton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Algae and microbes growing attached to submerged wood, stones and plants in the clear, nutrient-poor Tapajós waters. Functional group aggregating the whole periphyton community (diatoms, green algae, conjugatophytes, cyanobacteria, euglenophytes, dinoflagellates and red algae), treated as a single producer compartment by the source.",
+      "layout": {
+        "x": 50,
+        "y": 4
+      }
+    },
+    {
+      "id": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Microscopic drifting algae of the river's open water. Functional group aggregating the phytoplankton community (diatoms, green algae, chrysophytes, cryptophytes, cyanobacteria and zygnematophycean algae) as one compartment in the source model; grazed mainly by zooplankton and Hypophthalmus.",
+      "layout": {
+        "x": 84,
+        "y": 4
+      }
+    },
+    {
+      "id": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Non-living organic matter - fallen leaves and wood, faeces and decaying bodies - accumulating in the river and across the flooded forest floor. Functional group pooling the source's single detritus compartment; eaten directly by detritivorous fishes, turtles and aquatic invertebrates.",
+      "layout": {
+        "x": 67,
+        "y": 7
+      }
+    },
+    {
+      "id": "zooplankton",
+      "displayName": "Zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Small drifting and weakly swimming animals grazed by filter-feeding fishes. Functional group aggregating the source's zooplankton compartment - branchiopod crustaceans, copepods and rotifers (classes Branchiopoda, Copepoda, Digononta and Monogononta) - measured together; it feeds on phytoplankton and periphyton.",
+      "layout": {
+        "x": 82,
+        "y": 18
+      }
+    },
+    {
+      "id": "terrestrial-invertebrates",
+      "displayName": "Terrestrial invertebrates",
+      "kind": "functional-group",
+      "trophicLevel": 2.1,
+      "functionalRole": "primary-consumer",
+      "description": "Ants, mites and millipedes falling or washed from the flooded forest into the river - a flood-pulse subsidy from land to water. Functional group aggregating the terrestrial-invertebrate families measured together by the source (Eremobelbidae, Formicidae, Fuhrmannodesmidae, Hypochthoniidae, Paradoxomatidae, Pseudonannolenidae, Pyrgodesmidae).",
+      "layout": {
+        "x": 6,
+        "y": 24
+      }
+    },
+    {
+      "id": "aquatic-invertebrates",
+      "displayName": "Aquatic invertebrates",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Aquatic insects, mites, snails and shrimps living in the river and on the flooded forest floor. Functional group aggregating the source's aquatic-invertebrate compartment - mites (superorder Acariformes), hemipteran and coleopteran insects, apple snails (Ampullariidae), chironomid midges, palaemonid shrimps and polymitarcyid mayflies.",
+      "layout": {
+        "x": 60,
+        "y": 20
+      }
+    },
+    {
+      "id": "small-characin-omnivores",
+      "displayName": "Small characin omnivores",
+      "kind": "functional-group",
+      "trophicLevel": 2.4,
+      "functionalRole": "primary-consumer",
+      "description": "Small omnivorous characins of the midwater and the floodplain margin. Functional group pooling five source compartments - Bryconops spp. (B. cephalus, B. insignis, B. pesu), Hemiodus spp. (six species), Schizodon spp. (S. fasciatus, S. vittatus), Leporinus spp. (L. falcipinnis, L. friderici, L. trifasciatus) and Laemolyta spp. (L. proxima, L. taeniata) - grouped because they are small plant-and-invertebrate-eating fishes with near-identical diets in the source matrix.",
+      "layout": {
+        "x": 38,
+        "y": 48
+      }
+    },
+    {
+      "id": "small-cichlid-omnivores",
+      "displayName": "Small cichlid omnivores",
+      "kind": "functional-group",
+      "trophicLevel": 2.61,
+      "functionalRole": "intermediate-consumer",
+      "description": "Small omnivorous cichlids picking invertebrates, periphyton and detritus from the bottom. Functional group pooling five source compartments - Mesonauta festivus, Acaronia nassa, Satanoperca acuticeps, Acarichthys heckelii and Geophagus spp. (G. proximus, G. surinamensis) - aggregated because the source treated these small benthic omnivorous cichlids as one guild.",
+      "layout": {
+        "x": 72,
+        "y": 52
+      }
+    },
+    {
+      "id": "jaraqui",
+      "displayName": "Jaraqui",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Migratory prochilodontid fishes that graze periphyton and detritus in shifting schools - among the most caught fishes in the Amazon. Functional group pooling the two Semaprochilodus species of the source model (S. insignis and S. taeniurus), which were measured together.",
+      "layout": {
+        "x": 44,
+        "y": 22
+      }
+    },
+    {
+      "id": "pacu",
+      "displayName": "Pacu",
+      "kind": "functional-group",
+      "trophicLevel": 2.11,
+      "functionalRole": "primary-consumer",
+      "description": "Deep-bodied serrasalmids that crush fruits, seeds and invertebrates - the smaller cousins of the tambaqui. Functional group pooling three source genera (Myleus spp., Metynnis spp. and Mylossoma spp.), aggregated because the source measured these small fruit-and-seed-eating characins together.",
+      "layout": {
+        "x": 30,
+        "y": 36
+      }
+    },
+    {
+      "id": "other-algivorous-detritivorous-fish",
+      "displayName": "Algivorous and detritivorous fish",
+      "kind": "functional-group",
+      "trophicLevel": 2.15,
+      "functionalRole": "primary-consumer",
+      "description": "Bottom-dwelling fishes that scrape algae and swallow detritus. Functional group pooling the source's 'others algivorous/detritivorous fish' compartment (curimatids - Curimata, Curimatella, Curimatopsis, Cyphocharax and Potamorhina - plus the wood-eating catfish Peckoltia, the armored catfishes Hypoptopoma and Limatulichthys, and Loricariichthys acutus) with the separate Loricariichthys spp. compartment, because both are loricariid bottom grazers feeding the same way in the source matrix.",
+      "layout": {
+        "x": 68,
+        "y": 38
+      }
+    },
+    {
+      "id": "other-frugivorous-fish",
+      "displayName": "Frugivorous fish",
+      "kind": "functional-group",
+      "trophicLevel": 2.1,
+      "functionalRole": "primary-consumer",
+      "description": "Fruit-eating fishes that gorge on seeds and fruits during the flood and disperse them across the forest. Functional group aggregating the source's 'others frugivorous fish' compartment - Argonectes longiceps, Astrodoras asterifrons, Auchenipterichthys spp., Brycon spp., Hoplerythrinus unitaeniatus, Piaractus brachypomus, Pygopristis denticulata and Uaru amphiacanthoides - measured together because they share the flooded-forest fruit diet.",
+      "layout": {
+        "x": 10,
+        "y": 32
+      }
+    },
+    {
+      "id": "tambaqui",
+      "displayName": "Tambaqui (Colossoma macropomum)",
+      "kind": "species",
+      "trophicLevel": 2.2,
+      "functionalRole": "primary-consumer",
+      "description": "Tambaqui (Colossoma macropomum), tracked as its own compartment by the source. One of the Amazon's most important food fishes, migrating into the flooded forest to gorge on fruits and seeds - about four-fifths of its diet in this web comes from the floodplain forest. Heavy fishing pressure makes it a focus of the study's deforestation-and-fishing scenarios.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Tambaqui"
+      },
+      "layout": {
+        "x": 20,
+        "y": 44
+      }
+    },
+    {
+      "id": "other-invertivorous-fish",
+      "displayName": "Invertivorous fish",
+      "kind": "functional-group",
+      "trophicLevel": 2.99,
+      "functionalRole": "intermediate-consumer",
+      "description": "Small-bodied fishes feeding on invertebrates and zooplankton. Functional group pooling the source's 'others invertivorous fish' compartment (Achirus spp., Anchovia surinamensis, Apistogramma spp., Hassar orestis, Ilisha amazonica, Moenkhausia spp., Nemadoras leporhinus, Pimelodina flavipinnis, Potamotrygon spp., Scorpiodoras heckelii, Tetranematichthys sp. and Triportheus auritus) with the zooplanktivorous catfish Hypophthalmus marginatus, grouped because both are small invertebrate- and plankton-feeding fishes with similar diets in the source matrix.",
+      "layout": {
+        "x": 46,
+        "y": 62
+      }
+    },
+    {
+      "id": "pellona",
+      "displayName": "Pellona (Pellona castelnaeana)",
+      "kind": "species",
+      "trophicLevel": 3.1,
+      "functionalRole": "intermediate-consumer",
+      "description": "Pellona castelnaeana, tracked as its own compartment by the source. A large predaceous herring-like fish (family Pristigasteridae) of the Amazon basin, feeding on smaller fishes, zooplankton and invertebrates in the open river.",
+      "layout": {
+        "x": 88,
+        "y": 66
+      }
+    },
+    {
+      "id": "cichla",
+      "displayName": "Tucunaré (peacock bass)",
+      "kind": "functional-group",
+      "trophicLevel": 3.2,
+      "functionalRole": "intermediate-consumer",
+      "description": "The river's iconic ambush piscivores, known to anglers as tucunaré. Functional group pooling the three peacock bass species of the source model (Cichla monoculus, C. pinima and C. temensis), which were measured together.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Peacock_bass"
+      },
+      "layout": {
+        "x": 62,
+        "y": 78
+      }
+    },
+    {
+      "id": "plagioscion",
+      "displayName": "Plagioscion (Plagioscion squamosissimus)",
+      "kind": "species",
+      "trophicLevel": 3.18,
+      "functionalRole": "intermediate-consumer",
+      "description": "Plagioscion squamosissimus, tracked as its own compartment by the source. A croaker-like sciaenid, native to the Amazon but spread widely by Amazonian fish farming, feeding on small fishes and aquatic invertebrates in turbid waters.",
+      "layout": {
+        "x": 30,
+        "y": 74
+      }
+    },
+    {
+      "id": "giant-catfishes",
+      "displayName": "Giant catfishes",
+      "kind": "functional-group",
+      "trophicLevel": 3.12,
+      "functionalRole": "intermediate-consumer",
+      "description": "The Amazon's giant migratory catfishes. Functional group pooling two source compartments - Brachyplatystoma filamentosum (piraíba) and B. rousseauxii (dourada) - aggregated because the source treated these two large piscivorous pimelodids together; both undertake some of the longest freshwater fish migrations on Earth.",
+      "layout": {
+        "x": 90,
+        "y": 72
+      }
+    },
+    {
+      "id": "arapaima",
+      "displayName": "Arapaima (pirarucu)",
+      "kind": "species",
+      "trophicLevel": 3.34,
+      "functionalRole": "intermediate-consumer",
+      "description": "Arapaima (Arapaima gigas), tracked as its own compartment by the source. One of the world's largest freshwater fishes, an air-breathing predator of floodplain lagoons and river margins; because it surfaces to breathe it is easily harpooned, and it is a mainstay of community-based management in the region.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Arapaima"
+      },
+      "layout": {
+        "x": 40,
+        "y": 96
+      }
+    },
+    {
+      "id": "other-piscivorous-fish",
+      "displayName": "Piscivorous fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.3,
+      "functionalRole": "intermediate-consumer",
+      "description": "Medium-sized fish-eaters of the open water and the margins. Functional group aggregating the source's 'others piscivorous fish' compartment - Acestrorhynchus spp., Boulengerella maculata, Brachyplatystoma vaillantii, Cynodon gibbus, Hoplias spp., Oxydoras niger, Platynematichthys notatus, Pinirampus pirinampu, Pseudoplatystoma spp. and Serrasalmus spp. - a guild of predatory fishes measured together by the source.",
+      "layout": {
+        "x": 12,
+        "y": 94
+      }
+    },
+    {
+      "id": "turtles",
+      "displayName": "Amazon river turtles",
+      "kind": "functional-group",
+      "trophicLevel": 2.62,
+      "functionalRole": "intermediate-consumer",
+      "description": "Neotropical river turtles basking on logs and foraging across the floodplain. Functional group pooling the three Podocnemis species of the source model - the giant South American river turtle (P. expansa), the six-tubercled river turtle (P. sextuberculata) and the yellow-spotted river turtle (P. unifilis) - aggregated because the source measured the turtle fauna as one compartment; all three are heavily harvested.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Podocnemis"
+      },
+      "layout": {
+        "x": 26,
+        "y": 58
+      }
+    },
+    {
+      "id": "otters",
+      "displayName": "Otters",
+      "kind": "functional-group",
+      "trophicLevel": 3.35,
+      "functionalRole": "top-consumer",
+      "description": "Two Amazonian otters hunting fish along the riverbanks. Functional group pooling the neotropical otter (Lontra longicaudis) and the giant otter (Pteronura brasiliensis), aggregated because the source model tracks a single otter compartment; both are fish-eating top predators of the river.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Giant_otter"
+      },
+      "layout": {
+        "x": 80,
+        "y": 98
+      }
+    },
+    {
+      "id": "river-dolphins",
+      "displayName": "River dolphins",
+      "kind": "functional-group",
+      "trophicLevel": 3.22,
+      "functionalRole": "top-consumer",
+      "description": "The Amazon's two dolphins, patrolling the river and its flooded forest. Functional group pooling the boto (Inia geoffrensis) and the tucuxi (Sotalia fluviatilis), aggregated because the source model tracks a single river-dolphin compartment; both feed on fishes and nothing in the web eats them.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Amazon_river_dolphin"
+      },
+      "layout": {
+        "x": 50,
+        "y": 92
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "periphyton",
+      "predator": "zooplankton",
+      "weight": 0.2
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "zooplankton",
+      "weight": 0.7
+    },
+    {
+      "prey": "detritus",
+      "predator": "zooplankton",
+      "weight": 0.1
+    },
+    {
+      "prey": "floodplain-forest",
+      "predator": "terrestrial-invertebrates",
+      "weight": 0.9
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "terrestrial-invertebrates",
+      "weight": 0.1
+    },
+    {
+      "prey": "periphyton",
+      "predator": "aquatic-invertebrates",
+      "weight": 0.2
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "aquatic-invertebrates",
+      "weight": 0.3
+    },
+    {
+      "prey": "detritus",
+      "predator": "aquatic-invertebrates",
+      "weight": 0.5
+    },
+    {
+      "prey": "floodplain-forest",
+      "predator": "small-characin-omnivores",
+      "weight": 0.31
+    },
+    {
+      "prey": "periphyton",
+      "predator": "small-characin-omnivores",
+      "weight": 0.11
+    },
+    {
+      "prey": "detritus",
+      "predator": "small-characin-omnivores",
+      "weight": 0.19
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "small-characin-omnivores",
+      "weight": 0.07
+    },
+    {
+      "prey": "terrestrial-invertebrates",
+      "predator": "small-characin-omnivores",
+      "weight": 0.1
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "small-characin-omnivores",
+      "weight": 0.22
+    },
+    {
+      "prey": "floodplain-forest",
+      "predator": "small-cichlid-omnivores",
+      "weight": 0.147
+    },
+    {
+      "prey": "periphyton",
+      "predator": "small-cichlid-omnivores",
+      "weight": 0.04
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "small-cichlid-omnivores",
+      "weight": 0.012
+    },
+    {
+      "prey": "detritus",
+      "predator": "small-cichlid-omnivores",
+      "weight": 0.192
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "small-cichlid-omnivores",
+      "weight": 0.147
+    },
+    {
+      "prey": "terrestrial-invertebrates",
+      "predator": "small-cichlid-omnivores",
+      "weight": 0.133
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "small-cichlid-omnivores",
+      "weight": 0.246
+    },
+    {
+      "prey": "small-characin-omnivores",
+      "predator": "small-cichlid-omnivores",
+      "weight": 0.015
+    },
+    {
+      "prey": "other-algivorous-detritivorous-fish",
+      "predator": "small-cichlid-omnivores",
+      "weight": 0.016
+    },
+    {
+      "prey": "other-frugivorous-fish",
+      "predator": "small-cichlid-omnivores",
+      "weight": 0.004
+    },
+    {
+      "prey": "other-invertivorous-fish",
+      "predator": "small-cichlid-omnivores",
+      "weight": 0.02
+    },
+    {
+      "prey": "other-piscivorous-fish",
+      "predator": "small-cichlid-omnivores",
+      "weight": 0.004
+    },
+    {
+      "prey": "floodplain-forest",
+      "predator": "jaraqui",
+      "weight": 0.1
+    },
+    {
+      "prey": "periphyton",
+      "predator": "jaraqui",
+      "weight": 0.1
+    },
+    {
+      "prey": "detritus",
+      "predator": "jaraqui",
+      "weight": 0.8
+    },
+    {
+      "prey": "floodplain-forest",
+      "predator": "pacu",
+      "weight": 0.79
+    },
+    {
+      "prey": "periphyton",
+      "predator": "pacu",
+      "weight": 0.1
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "pacu",
+      "weight": 0.05
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "pacu",
+      "weight": 0.06
+    },
+    {
+      "prey": "periphyton",
+      "predator": "other-algivorous-detritivorous-fish",
+      "weight": 0.185
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "other-algivorous-detritivorous-fish",
+      "weight": 0.125
+    },
+    {
+      "prey": "detritus",
+      "predator": "other-algivorous-detritivorous-fish",
+      "weight": 0.54
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "other-algivorous-detritivorous-fish",
+      "weight": 0.15
+    },
+    {
+      "prey": "floodplain-forest",
+      "predator": "other-frugivorous-fish",
+      "weight": 0.9
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "other-frugivorous-fish",
+      "weight": 0.05
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "other-frugivorous-fish",
+      "weight": 0.05
+    },
+    {
+      "prey": "floodplain-forest",
+      "predator": "tambaqui",
+      "weight": 0.8
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "tambaqui",
+      "weight": 0.15
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "tambaqui",
+      "weight": 0.05
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "other-invertivorous-fish",
+      "weight": 0.69
+    },
+    {
+      "prey": "terrestrial-invertebrates",
+      "predator": "other-invertivorous-fish",
+      "weight": 0.075
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "other-invertivorous-fish",
+      "weight": 0.225
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "pellona",
+      "weight": 0.155
+    },
+    {
+      "prey": "terrestrial-invertebrates",
+      "predator": "pellona",
+      "weight": 0.15
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "pellona",
+      "weight": 0.25
+    },
+    {
+      "prey": "small-characin-omnivores",
+      "predator": "pellona",
+      "weight": 0.095
+    },
+    {
+      "prey": "small-cichlid-omnivores",
+      "predator": "pellona",
+      "weight": 0.15
+    },
+    {
+      "prey": "jaraqui",
+      "predator": "pellona",
+      "weight": 0.005
+    },
+    {
+      "prey": "pacu",
+      "predator": "pellona",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-algivorous-detritivorous-fish",
+      "predator": "pellona",
+      "weight": 0.06
+    },
+    {
+      "prey": "other-frugivorous-fish",
+      "predator": "pellona",
+      "weight": 0.03
+    },
+    {
+      "prey": "tambaqui",
+      "predator": "pellona",
+      "weight": 0.005
+    },
+    {
+      "prey": "other-invertivorous-fish",
+      "predator": "pellona",
+      "weight": 0.04
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "cichla",
+      "weight": 0.175
+    },
+    {
+      "prey": "terrestrial-invertebrates",
+      "predator": "cichla",
+      "weight": 0.15
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "cichla",
+      "weight": 0.28
+    },
+    {
+      "prey": "small-characin-omnivores",
+      "predator": "cichla",
+      "weight": 0.095
+    },
+    {
+      "prey": "small-cichlid-omnivores",
+      "predator": "cichla",
+      "weight": 0.15
+    },
+    {
+      "prey": "jaraqui",
+      "predator": "cichla",
+      "weight": 0.005
+    },
+    {
+      "prey": "pacu",
+      "predator": "cichla",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-algivorous-detritivorous-fish",
+      "predator": "cichla",
+      "weight": 0.06
+    },
+    {
+      "prey": "other-frugivorous-fish",
+      "predator": "cichla",
+      "weight": 0.03
+    },
+    {
+      "prey": "tambaqui",
+      "predator": "cichla",
+      "weight": 0.005
+    },
+    {
+      "prey": "other-invertivorous-fish",
+      "predator": "cichla",
+      "weight": 0.04
+    },
+    {
+      "prey": "floodplain-forest",
+      "predator": "plagioscion",
+      "weight": 0.06
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "plagioscion",
+      "weight": 0.145
+    },
+    {
+      "prey": "terrestrial-invertebrates",
+      "predator": "plagioscion",
+      "weight": 0.16
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "plagioscion",
+      "weight": 0.2
+    },
+    {
+      "prey": "small-characin-omnivores",
+      "predator": "plagioscion",
+      "weight": 0.095
+    },
+    {
+      "prey": "small-cichlid-omnivores",
+      "predator": "plagioscion",
+      "weight": 0.15
+    },
+    {
+      "prey": "jaraqui",
+      "predator": "plagioscion",
+      "weight": 0.005
+    },
+    {
+      "prey": "pacu",
+      "predator": "plagioscion",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-algivorous-detritivorous-fish",
+      "predator": "plagioscion",
+      "weight": 0.06
+    },
+    {
+      "prey": "other-frugivorous-fish",
+      "predator": "plagioscion",
+      "weight": 0.03
+    },
+    {
+      "prey": "tambaqui",
+      "predator": "plagioscion",
+      "weight": 0.005
+    },
+    {
+      "prey": "other-invertivorous-fish",
+      "predator": "plagioscion",
+      "weight": 0.06
+    },
+    {
+      "prey": "pellona",
+      "predator": "plagioscion",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-piscivorous-fish",
+      "predator": "plagioscion",
+      "weight": 0.01
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "giant-catfishes",
+      "weight": 0.08
+    },
+    {
+      "prey": "terrestrial-invertebrates",
+      "predator": "giant-catfishes",
+      "weight": 0.113
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "giant-catfishes",
+      "weight": 0.17
+    },
+    {
+      "prey": "small-characin-omnivores",
+      "predator": "giant-catfishes",
+      "weight": 0.12
+    },
+    {
+      "prey": "small-cichlid-omnivores",
+      "predator": "giant-catfishes",
+      "weight": 0.09
+    },
+    {
+      "prey": "jaraqui",
+      "predator": "giant-catfishes",
+      "weight": 0.06
+    },
+    {
+      "prey": "pacu",
+      "predator": "giant-catfishes",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-algivorous-detritivorous-fish",
+      "predator": "giant-catfishes",
+      "weight": 0.07
+    },
+    {
+      "prey": "other-frugivorous-fish",
+      "predator": "giant-catfishes",
+      "weight": 0.028
+    },
+    {
+      "prey": "tambaqui",
+      "predator": "giant-catfishes",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-invertivorous-fish",
+      "predator": "giant-catfishes",
+      "weight": 0.1
+    },
+    {
+      "prey": "pellona",
+      "predator": "giant-catfishes",
+      "weight": 0.02
+    },
+    {
+      "prey": "plagioscion",
+      "predator": "giant-catfishes",
+      "weight": 0.02
+    },
+    {
+      "prey": "other-piscivorous-fish",
+      "predator": "giant-catfishes",
+      "weight": 0.02
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "arapaima",
+      "weight": 0.085
+    },
+    {
+      "prey": "terrestrial-invertebrates",
+      "predator": "arapaima",
+      "weight": 0.15
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "arapaima",
+      "weight": 0.2
+    },
+    {
+      "prey": "small-characin-omnivores",
+      "predator": "arapaima",
+      "weight": 0.12
+    },
+    {
+      "prey": "small-cichlid-omnivores",
+      "predator": "arapaima",
+      "weight": 0.18
+    },
+    {
+      "prey": "jaraqui",
+      "predator": "arapaima",
+      "weight": 0.01
+    },
+    {
+      "prey": "pacu",
+      "predator": "arapaima",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-algivorous-detritivorous-fish",
+      "predator": "arapaima",
+      "weight": 0.07
+    },
+    {
+      "prey": "other-frugivorous-fish",
+      "predator": "arapaima",
+      "weight": 0.025
+    },
+    {
+      "prey": "tambaqui",
+      "predator": "arapaima",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-invertivorous-fish",
+      "predator": "arapaima",
+      "weight": 0.06
+    },
+    {
+      "prey": "pellona",
+      "predator": "arapaima",
+      "weight": 0.02
+    },
+    {
+      "prey": "cichla",
+      "predator": "arapaima",
+      "weight": 0.02
+    },
+    {
+      "prey": "plagioscion",
+      "predator": "arapaima",
+      "weight": 0.02
+    },
+    {
+      "prey": "other-piscivorous-fish",
+      "predator": "arapaima",
+      "weight": 0.02
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "other-piscivorous-fish",
+      "weight": 0.16
+    },
+    {
+      "prey": "terrestrial-invertebrates",
+      "predator": "other-piscivorous-fish",
+      "weight": 0.1
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "other-piscivorous-fish",
+      "weight": 0.2
+    },
+    {
+      "prey": "small-characin-omnivores",
+      "predator": "other-piscivorous-fish",
+      "weight": 0.12
+    },
+    {
+      "prey": "small-cichlid-omnivores",
+      "predator": "other-piscivorous-fish",
+      "weight": 0.16
+    },
+    {
+      "prey": "jaraqui",
+      "predator": "other-piscivorous-fish",
+      "weight": 0.01
+    },
+    {
+      "prey": "pacu",
+      "predator": "other-piscivorous-fish",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-algivorous-detritivorous-fish",
+      "predator": "other-piscivorous-fish",
+      "weight": 0.09
+    },
+    {
+      "prey": "other-frugivorous-fish",
+      "predator": "other-piscivorous-fish",
+      "weight": 0.02
+    },
+    {
+      "prey": "tambaqui",
+      "predator": "other-piscivorous-fish",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-invertivorous-fish",
+      "predator": "other-piscivorous-fish",
+      "weight": 0.08
+    },
+    {
+      "prey": "cichla",
+      "predator": "other-piscivorous-fish",
+      "weight": 0.04
+    },
+    {
+      "prey": "floodplain-forest",
+      "predator": "turtles",
+      "weight": 0.4
+    },
+    {
+      "prey": "terrestrial-invertebrates",
+      "predator": "turtles",
+      "weight": 0.24
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "turtles",
+      "weight": 0.36
+    },
+    {
+      "prey": "floodplain-forest",
+      "predator": "otters",
+      "weight": 0.08
+    },
+    {
+      "prey": "terrestrial-invertebrates",
+      "predator": "otters",
+      "weight": 0.09
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "otters",
+      "weight": 0.12
+    },
+    {
+      "prey": "small-characin-omnivores",
+      "predator": "otters",
+      "weight": 0.18
+    },
+    {
+      "prey": "small-cichlid-omnivores",
+      "predator": "otters",
+      "weight": 0.11
+    },
+    {
+      "prey": "jaraqui",
+      "predator": "otters",
+      "weight": 0.02
+    },
+    {
+      "prey": "pacu",
+      "predator": "otters",
+      "weight": 0.03
+    },
+    {
+      "prey": "other-algivorous-detritivorous-fish",
+      "predator": "otters",
+      "weight": 0.09
+    },
+    {
+      "prey": "other-frugivorous-fish",
+      "predator": "otters",
+      "weight": 0.04
+    },
+    {
+      "prey": "tambaqui",
+      "predator": "otters",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-invertivorous-fish",
+      "predator": "otters",
+      "weight": 0.1
+    },
+    {
+      "prey": "pellona",
+      "predator": "otters",
+      "weight": 0.01
+    },
+    {
+      "prey": "cichla",
+      "predator": "otters",
+      "weight": 0.04
+    },
+    {
+      "prey": "plagioscion",
+      "predator": "otters",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-piscivorous-fish",
+      "predator": "otters",
+      "weight": 0.07
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "river-dolphins",
+      "weight": 0.03
+    },
+    {
+      "prey": "small-characin-omnivores",
+      "predator": "river-dolphins",
+      "weight": 0.16
+    },
+    {
+      "prey": "small-cichlid-omnivores",
+      "predator": "river-dolphins",
+      "weight": 0.22
+    },
+    {
+      "prey": "jaraqui",
+      "predator": "river-dolphins",
+      "weight": 0.02
+    },
+    {
+      "prey": "pacu",
+      "predator": "river-dolphins",
+      "weight": 0.02
+    },
+    {
+      "prey": "other-algivorous-detritivorous-fish",
+      "predator": "river-dolphins",
+      "weight": 0.07
+    },
+    {
+      "prey": "other-frugivorous-fish",
+      "predator": "river-dolphins",
+      "weight": 0.02
+    },
+    {
+      "prey": "other-invertivorous-fish",
+      "predator": "river-dolphins",
+      "weight": 0.085
+    },
+    {
+      "prey": "pellona",
+      "predator": "river-dolphins",
+      "weight": 0.005
+    },
+    {
+      "prey": "cichla",
+      "predator": "river-dolphins",
+      "weight": 0.04
+    },
+    {
+      "prey": "plagioscion",
+      "predator": "river-dolphins",
+      "weight": 0.08
+    },
+    {
+      "prey": "giant-catfishes",
+      "predator": "river-dolphins",
+      "weight": 0.055
+    },
+    {
+      "prey": "other-piscivorous-fish",
+      "predator": "river-dolphins",
+      "weight": 0.03
+    }
+  ]
+}

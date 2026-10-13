@@ -1,0 +1,18 @@
+{
+  "slug": "small-characin-omnivores",
+  "name": "Small characin omnivores",
+  "kind": "functional-group",
+  "description": "Small omnivorous characins of the midwater and the floodplain margin. Functional group pooling five source compartments - Bryconops spp. (B. cephalus, B. insignis, B. pesu), Hemiodus spp. (six species), Schizodon spp. (S. fasciatus, S. vittatus), Leporinus spp. (L. falcipinnis, L. friderici, L. trifasciatus) and Laemolyta spp. (L. proxima, L. taeniata) - grouped because they are small plant-and-invertebrate-eating fishes with near-identical diets in the source matrix.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "small-characin-omnivores",
+      "displayName": "Small characin omnivores",
+      "kind": "functional-group",
+      "trophicLevel": 2.4
+    }
+  ]
+}

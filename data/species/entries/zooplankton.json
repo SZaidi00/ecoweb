@@ -1,0 +1,18 @@
+{
+  "slug": "zooplankton",
+  "name": "Zooplankton",
+  "kind": "functional-group",
+  "description": "Small drifting and weakly swimming animals grazed by filter-feeding fishes. Functional group aggregating the source's zooplankton compartment - branchiopod crustaceans, copepods and rotifers (classes Branchiopoda, Copepoda, Digononta and Monogononta) - measured together; it feeds on phytoplankton and periphyton.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "zooplankton",
+      "displayName": "Zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

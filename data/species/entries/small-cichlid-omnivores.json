@@ -1,0 +1,18 @@
+{
+  "slug": "small-cichlid-omnivores",
+  "name": "Small cichlid omnivores",
+  "kind": "functional-group",
+  "description": "Small omnivorous cichlids picking invertebrates, periphyton and detritus from the bottom. Functional group pooling five source compartments - Mesonauta festivus, Acaronia nassa, Satanoperca acuticeps, Acarichthys heckelii and Geophagus spp. (G. proximus, G. surinamensis) - aggregated because the source treated these small benthic omnivorous cichlids as one guild.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "small-cichlid-omnivores",
+      "displayName": "Small cichlid omnivores",
+      "kind": "functional-group",
+      "trophicLevel": 2.61
+    }
+  ]
+}

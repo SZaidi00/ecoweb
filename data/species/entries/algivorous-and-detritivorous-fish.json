@@ -1,0 +1,18 @@
+{
+  "slug": "algivorous-and-detritivorous-fish",
+  "name": "Algivorous and detritivorous fish",
+  "kind": "functional-group",
+  "description": "Bottom-dwelling fishes that scrape algae and swallow detritus. Functional group pooling the source's 'others algivorous/detritivorous fish' compartment (curimatids - Curimata, Curimatella, Curimatopsis, Cyphocharax and Potamorhina - plus the wood-eating catfish Peckoltia, the armored catfishes Hypoptopoma and Limatulichthys, and Loricariichthys acutus) with the separate Loricariichthys spp. compartment, because both are loricariid bottom grazers feeding the same way in the source matrix.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "other-algivorous-detritivorous-fish",
+      "displayName": "Algivorous and detritivorous fish",
+      "kind": "functional-group",
+      "trophicLevel": 2.15
+    }
+  ]
+}

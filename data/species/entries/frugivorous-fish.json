@@ -1,0 +1,18 @@
+{
+  "slug": "frugivorous-fish",
+  "name": "Frugivorous fish",
+  "kind": "functional-group",
+  "description": "Fruit-eating fishes that gorge on seeds and fruits during the flood and disperse them across the forest. Functional group aggregating the source's 'others frugivorous fish' compartment - Argonectes longiceps, Astrodoras asterifrons, Auchenipterichthys spp., Brycon spp., Hoplerythrinus unitaeniatus, Piaractus brachypomus, Pygopristis denticulata and Uaru amphiacanthoides - measured together because they share the flooded-forest fruit diet.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "other-frugivorous-fish",
+      "displayName": "Frugivorous fish",
+      "kind": "functional-group",
+      "trophicLevel": 2.1
+    }
+  ]
+}

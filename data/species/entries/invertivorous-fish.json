@@ -1,0 +1,18 @@
+{
+  "slug": "invertivorous-fish",
+  "name": "Invertivorous fish",
+  "kind": "functional-group",
+  "description": "Small-bodied fishes feeding on invertebrates and zooplankton. Functional group pooling the source's 'others invertivorous fish' compartment (Achirus spp., Anchovia surinamensis, Apistogramma spp., Hassar orestis, Ilisha amazonica, Moenkhausia spp., Nemadoras leporhinus, Pimelodina flavipinnis, Potamotrygon spp., Scorpiodoras heckelii, Tetranematichthys sp. and Triportheus auritus) with the zooplanktivorous catfish Hypophthalmus marginatus, grouped because both are small invertebrate- and plankton-feeding fishes with similar diets in the source matrix.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "other-invertivorous-fish",
+      "displayName": "Invertivorous fish",
+      "kind": "functional-group",
+      "trophicLevel": 2.99
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "pacu",
+  "name": "Pacu",
+  "kind": "functional-group",
+  "description": "Deep-bodied serrasalmids that crush fruits, seeds and invertebrates - the smaller cousins of the tambaqui. Functional group pooling three source genera (Myleus spp., Metynnis spp. and Mylossoma spp.), aggregated because the source measured these small fruit-and-seed-eating characins together.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "pacu",
+      "displayName": "Pacu",
+      "kind": "functional-group",
+      "trophicLevel": 2.11
+    }
+  ]
+}

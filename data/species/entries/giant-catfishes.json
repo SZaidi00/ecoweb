@@ -1,0 +1,18 @@
+{
+  "slug": "giant-catfishes",
+  "name": "Giant catfishes",
+  "kind": "functional-group",
+  "description": "The Amazon's giant migratory catfishes. Functional group pooling two source compartments - Brachyplatystoma filamentosum (pira\u00edba) and B. rousseauxii (dourada) - aggregated because the source treated these two large piscivorous pimelodids together; both undertake some of the longest freshwater fish migrations on Earth.",
+  "sourceWeb": "tapajos-river",
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "giant-catfishes",
+      "displayName": "Giant catfishes",
+      "kind": "functional-group",
+      "trophicLevel": 3.12
+    }
+  ]
+}

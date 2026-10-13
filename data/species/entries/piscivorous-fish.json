@@ -2,8 +2,8 @@
   "slug": "piscivorous-fish",
   "name": "Piscivorous fish",
   "kind": "functional-group",
-  "description": "Functional group pooling the estuary's top fish predators - bluefish, weakfish, summer flounder and striped bass - aggregated because all four prey mainly on forage fish (anchovies, herrings, menhaden) in the source network. Nothing in the network eats them; their losses go to fisheries and emigration. Reported biomass (metrics.biomass) is the summed annual mean in mgC/m2.",
-  "sourceWeb": "chesapeake-bay",
+  "description": "Medium-sized fish-eaters of the open water and the margins. Functional group aggregating the source's 'others piscivorous fish' compartment - Acestrorhynchus spp., Boulengerella maculata, Brachyplatystoma vaillantii, Cynodon gibbus, Hoplias spp., Oxydoras niger, Platynematichthys notatus, Pinirampus pirinampu, Pseudoplatystoma spp. and Serrasalmus spp. - a guild of predatory fishes measured together by the source.",
+  "sourceWeb": "tapajos-river",
   "occurrences": [
     {
       "web": "chesapeake-bay",
@@ -13,6 +13,15 @@
       "displayName": "Piscivorous fish",
       "kind": "functional-group",
       "trophicLevel": 3.9
+    },
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "other-piscivorous-fish",
+      "displayName": "Piscivorous fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.3
     }
   ]
 }

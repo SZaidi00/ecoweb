@@ -1,6 +1,6 @@
 {
-  "webCount": 8,
-  "entryCount": 150,
+  "webCount": 9,
+  "entryCount": 171,
   "entries": [
     {
       "slug": "adelie-penguin",
@@ -69,6 +69,34 @@
         {
           "web": "serengeti",
           "node": "wild-dog-cheetah"
+        }
+      ]
+    },
+    {
+      "slug": "algivorous-and-detritivorous-fish",
+      "name": "Algivorous and detritivorous fish",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "other-algivorous-detritivorous-fish"
+        }
+      ]
+    },
+    {
+      "slug": "amazon-river-turtles",
+      "name": "Amazon river turtles",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "turtles"
         }
       ]
     },
@@ -157,6 +185,20 @@
       ]
     },
     {
+      "slug": "aquatic-invertebrates",
+      "name": "Aquatic invertebrates",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "aquatic-invertebrates"
+        }
+      ]
+    },
+    {
       "slug": "aquatic-macrophytes",
       "name": "Aquatic macrophytes",
       "kind": "functional-group",
@@ -167,6 +209,20 @@
         {
           "web": "cypress-wetland",
           "node": "macrophytes"
+        }
+      ]
+    },
+    {
+      "slug": "arapaima-pirarucu",
+      "name": "Arapaima (pirarucu)",
+      "kind": "species",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "arapaima"
         }
       ]
     },
@@ -626,6 +682,7 @@
       "webs": [
         "prince-william-sound",
         "shortgrass-prairie",
+        "tapajos-river",
         "weddell-sea"
       ],
       "occurrences": [
@@ -635,6 +692,10 @@
         },
         {
           "web": "shortgrass-prairie",
+          "node": "detritus"
+        },
+        {
+          "web": "tapajos-river",
           "node": "detritus"
         },
         {
@@ -882,6 +943,20 @@
       ]
     },
     {
+      "slug": "floodplain-forest",
+      "name": "Floodplain forest",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "floodplain-forest"
+        }
+      ]
+    },
+    {
       "slug": "florida-apple-snail",
       "name": "Florida apple snail",
       "kind": "species",
@@ -938,6 +1013,20 @@
       ]
     },
     {
+      "slug": "frugivorous-fish",
+      "name": "Frugivorous fish",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "other-frugivorous-fish"
+        }
+      ]
+    },
+    {
       "slug": "fruits-nectar",
       "name": "Fruits & nectar",
       "kind": "functional-group",
@@ -976,6 +1065,20 @@
         {
           "web": "serengeti",
           "node": "gazelles"
+        }
+      ]
+    },
+    {
+      "slug": "giant-catfishes",
+      "name": "Giant catfishes",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "giant-catfishes"
         }
       ]
     },
@@ -1120,6 +1223,20 @@
       ]
     },
     {
+      "slug": "invertivorous-fish",
+      "name": "Invertivorous fish",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "other-invertivorous-fish"
+        }
+      ]
+    },
+    {
       "slug": "jackals-honey-badger-aardwolf",
       "name": "Jackals, honey badger & aardwolf",
       "kind": "functional-group",
@@ -1130,6 +1247,20 @@
         {
           "web": "serengeti",
           "node": "jackals"
+        }
+      ]
+    },
+    {
+      "slug": "jaraqui",
+      "name": "Jaraqui",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "jaraqui"
         }
       ]
     },
@@ -1456,6 +1587,20 @@
       ]
     },
     {
+      "slug": "otters",
+      "name": "Otters",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "otters"
+        }
+      ]
+    },
+    {
       "slug": "oysters",
       "name": "Oysters",
       "kind": "functional-group",
@@ -1484,6 +1629,20 @@
       ]
     },
     {
+      "slug": "pacu",
+      "name": "Pacu",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "pacu"
+        }
+      ]
+    },
+    {
       "slug": "panther-and-bobcat",
       "name": "Panther and bobcat",
       "kind": "functional-group",
@@ -1494,6 +1653,34 @@
         {
           "web": "cypress-wetland",
           "node": "big-predators"
+        }
+      ]
+    },
+    {
+      "slug": "pellona-pellona-castelnaeana",
+      "name": "Pellona (Pellona castelnaeana)",
+      "kind": "species",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "pellona"
+        }
+      ]
+    },
+    {
+      "slug": "periphyton",
+      "name": "Periphyton",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "periphyton"
         }
       ]
     },
@@ -1519,6 +1706,7 @@
         "chesapeake-bay",
         "cypress-wetland",
         "prince-william-sound",
+        "tapajos-river",
         "weddell-sea"
       ],
       "occurrences": [
@@ -1532,6 +1720,10 @@
         },
         {
           "web": "prince-william-sound",
+          "node": "phytoplankton"
+        },
+        {
+          "web": "tapajos-river",
           "node": "phytoplankton"
         },
         {
@@ -1573,12 +1765,31 @@
       "name": "Piscivorous fish",
       "kind": "functional-group",
       "webs": [
-        "chesapeake-bay"
+        "chesapeake-bay",
+        "tapajos-river"
       ],
       "occurrences": [
         {
           "web": "chesapeake-bay",
           "node": "piscivorous-fish"
+        },
+        {
+          "web": "tapajos-river",
+          "node": "other-piscivorous-fish"
+        }
+      ]
+    },
+    {
+      "slug": "plagioscion-plagioscion-squamosissimus",
+      "name": "Plagioscion (Plagioscion squamosissimus)",
+      "kind": "species",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "plagioscion"
         }
       ]
     },
@@ -1691,6 +1902,20 @@
         {
           "web": "prince-william-sound",
           "node": "resident-marine-mammals"
+        }
+      ]
+    },
+    {
+      "slug": "river-dolphins",
+      "name": "River dolphins",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "river-dolphins"
         }
       ]
     },
@@ -1840,6 +2065,34 @@
       ]
     },
     {
+      "slug": "small-characin-omnivores",
+      "name": "Small characin omnivores",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "small-characin-omnivores"
+        }
+      ]
+    },
+    {
+      "slug": "small-cichlid-omnivores",
+      "name": "Small cichlid omnivores",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "small-cichlid-omnivores"
+        }
+      ]
+    },
+    {
       "slug": "small-forage-fishes",
       "name": "Small forage fishes",
       "kind": "functional-group",
@@ -1980,6 +2233,20 @@
       ]
     },
     {
+      "slug": "tambaqui-colossoma-macropomum",
+      "name": "Tambaqui (Colossoma macropomum)",
+      "kind": "species",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "tambaqui"
+        }
+      ]
+    },
+    {
       "slug": "terrestrial-insects",
       "name": "Terrestrial insects",
       "kind": "functional-group",
@@ -1990,6 +2257,20 @@
         {
           "web": "cypress-wetland",
           "node": "terr-insects"
+        }
+      ]
+    },
+    {
+      "slug": "terrestrial-invertebrates",
+      "name": "Terrestrial invertebrates",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "terrestrial-invertebrates"
         }
       ]
     },
@@ -2018,6 +2299,20 @@
         {
           "web": "serengeti",
           "node": "trees-shrubs"
+        }
+      ]
+    },
+    {
+      "slug": "tucunar-peacock-bass",
+      "name": "Tucunar\u00e9 (peacock bass)",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "cichla"
         }
       ]
     },
@@ -2130,6 +2425,20 @@
         {
           "web": "little-rock-lake",
           "node": "young-fishes"
+        }
+      ]
+    },
+    {
+      "slug": "zooplankton",
+      "name": "Zooplankton",
+      "kind": "functional-group",
+      "webs": [
+        "tapajos-river"
+      ],
+      "occurrences": [
+        {
+          "web": "tapajos-river",
+          "node": "zooplankton"
         }
       ]
     },

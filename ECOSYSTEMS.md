@@ -19,6 +19,7 @@ Food Web Explorer is an open-source interactive atlas of **real, published food 
 | Chesapeake Bay, USA | Estuary | N. America | Empirical (NOAA CBFEM Ecopath model) | Weighted diet %s |
 | Little Rock Lake, Wisconsin | Freshwater lake | N. America | Empirical (Martinez 1991) | Qualitative |
 | Weddell Sea, Antarctica | Polar marine | Antarctica | Composite (Jacob et al. 2011) | Mostly qualitative |
+| Tapajós River, Brazil (lower, Santarém reach) | Freshwater river/floodplain | S. America | Empirical (Capitani et al. 2021, Ecopath model) | Weighted diet fractions |
 
 ### Design and data constraints (these define what counts as a valid web)
 
@@ -199,7 +200,7 @@ For every candidate, record:
 
 | Candidate | Region | Tier | Researched | Verified | Implemented |
 |---|---|---|---|---|---|
-| tapajos-river | South America — Amazon river/floodplain | 1 | researched — researched/south-america.md | verified — verified/south-america.md (matrix: Springer ESM docx, 35 groups) | — |
+| tapajos-river | South America — Amazon river/floodplain | 1 | researched — researched/south-america.md | verified — verified/south-america.md (matrix: Springer ESM docx, 35 groups) | implemented — data/webs/tapajos-river.json (24 nodes, weighted) |
 | san-jorge-gulf | South America — Patagonian marine | 1 | researched — researched/south-america.md | verified — verified/south-america.md (matrix: GitHub EcoComplex/NetworkGolfoSanJorge + Zenodo) | — |
 | balbina-forest-islands | South America — Amazon rainforest (terrestrial) | 1 (high-curation-risk) | researched — researched/south-america.md | rejected (provenance) — verified/south-america.md (model-inferred links; revisit only if a `modeled` badge is added) | — |
 | pantanal-oxbow-lakes | South America — Pantanal wetland lakes | 1 | researched — researched/south-america.md | verified — verified/south-america.md (matrix: open Annex A docx, 38–39 compartments) | — |

@@ -1,0 +1,24 @@
+{
+  "slug": "amazon-river-turtles",
+  "name": "Amazon river turtles",
+  "kind": "functional-group",
+  "description": "Neotropical river turtles basking on logs and foraging across the floodplain. Functional group pooling the three Podocnemis species of the source model - the giant South American river turtle (P. expansa), the six-tubercled river turtle (P. sextuberculata) and the yellow-spotted river turtle (P. unifilis) - aggregated because the source measured the turtle fauna as one compartment; all three are heavily harvested.",
+  "sourceWeb": "tapajos-river",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Podocnemis"
+  },
+  "occurrences": [
+    {
+      "web": "tapajos-river",
+      "webName": "Tapaj\u00f3s River",
+      "biome": "freshwater",
+      "node": "turtles",
+      "displayName": "Amazon river turtles",
+      "kind": "functional-group",
+      "trophicLevel": 2.62,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Podocnemis"
+      }
+    }
+  ]
+}
