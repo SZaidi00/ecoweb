@@ -21,6 +21,8 @@ Hard-fail rules (exit 1):
     * index.json entries that are malformed or do not match the actual
       web files (id/file name, name, biome, location, provenance, tagline,
       nodeCount)
+    * web files nested in a biome folder whose name does not match the
+      web's meta.biome (webs live in data/webs/<biome>/<id>.json)
 
 Warnings (printed, exit code stays 0):
     * isolated nodes (no edges in either direction)
@@ -309,15 +311,31 @@ def main() -> int:
     else:
         webs_dir: Path = args.webs_dir
         label = str(webs_dir.relative_to(REPO_ROOT)) if webs_dir.is_relative_to(REPO_ROOT) else str(webs_dir)
-        web_files = sorted(p for p in webs_dir.glob("*.json") if p.name != "index.json")
+        web_files = sorted(
+            p for p in webs_dir.rglob("*.json") if p.name != "index.json"
+        )
 
         webs_by_id: dict[str, dict] = {}
         for path in web_files:
-            data, err = load_json(path, f"{label}/{path.name}")
+            file_label = f"{label}/{path.relative_to(webs_dir)}"
+            data, err = load_json(path, file_label)
             if err:
                 all_errors.append(err)
                 continue
-            errors, warnings = validate_web(data, schema, f"{label}/{path.name}")
+            errors, warnings = validate_web(data, schema, file_label)
+            # --- Hard fail: biome folder must match meta.biome ---
+            # (webs live in <biome>/<id>.json; a flat layout simply skips this)
+            if (
+                not errors
+                and path.parent != webs_dir
+                and isinstance(data, dict)
+                and isinstance(data.get("meta"), dict)
+                and data["meta"].get("biome") != path.parent.name
+            ):
+                errors.append(
+                    f"file sits in biome folder '{path.parent.name}' but "
+                    f"meta.biome is '{data['meta'].get('biome')}'"
+                )
             all_errors.extend(errors)
             all_warnings.extend(warnings)
             web_count += 1

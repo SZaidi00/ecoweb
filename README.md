@@ -6,11 +6,13 @@ An open-source, interactive web app that lets a general audience explore real-wo
 
 ## Features
 
-- **An atlas of real ecosystems** — eight curated food webs across five biomes (marine, estuary, freshwater, grassland, wetland), pole to equator, each built from published empirical studies with full citations and a provenance badge.
+- **An atlas of real ecosystems** — nine curated food webs across five biomes (marine, estuary, freshwater, grassland, wetland), pole to equator, each built from published empirical studies with full citations and a provenance badge.
 - **Species Focus View** — select any species to light up its direct prey and predators while the rest of the web dims; trace dependencies down to the producers.
 - **Cascade Mode** — remove a species and watch a staggered ripple of effects through the web: who starves, who struggles, who is released. Clearly labeled as structural dependency, not population prediction.
 - **Honest science** — nodes are functional groups exactly as the source studies measured them (the "Salmon" node pools five Pacific salmon species; we never invent resolution the data doesn't have). Edges with unquantified strength are drawn dashed.
 - **Legible by design** — every web is capped at 25 nodes, laid out deterministically by trophic level, with depth delivered through zoom layers (Biome → Ecosystem → Species), not density.
+
+**Latest addition — Tapajós River, Brazilian Amazon** (Capitani et al. 2021, *Regional Environmental Change*): a 24-node, fully weighted web from a published Ecopath model of the lower Tapajós, where the flooded forest feeds the river's flagship fish (tambaqui, arapaima, giant catfishes) and removing the forest node replays the paper's deforestation scenario. One caveat: the paper's own trophic-level table is paywalled, so this web's trophic levels were **recomputed from the published diet matrix** after pooling rather than copied from the paper — the method is documented in the web's `meta.licenseNote`.
 
 ## Quick Start
 
@@ -38,7 +40,8 @@ Other useful commands (from the repo root):
 apps/web            React 18 + TypeScript + Vite SPA (PixiJS v8 renderer, Tailwind)
 packages/schema     JSON Schema + zod types for the ecosystem-web format
 packages/cascade    Pure TypeScript: graph model, focus queries, cascade simulation (no DOM/Pixi)
-data/webs           One validated JSON file per ecosystem + generated index.json
+data/webs           One validated JSON file per ecosystem, in per-biome subfolders
+                  (data/webs/<biome>/<id>.json), plus generated index.json
 scripts/pipeline    Python 3.12: convert/validate published webs into our schema
 ```
 

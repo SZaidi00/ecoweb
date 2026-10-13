@@ -16,7 +16,8 @@ Thanks for your interest in contributing! The highest-value contribution is a ne
 apps/web            React + TypeScript + Vite app (PixiJS renderer, Tailwind, hash routing)
 packages/schema     JSON Schema + zod types for the ecosystem-web format
 packages/cascade    Pure TypeScript: graph model, focus queries, cascade simulation
-data/webs           One validated JSON file per ecosystem (+ generated index.json)
+data/webs           One validated JSON file per ecosystem, in per-biome subfolders
+                  (data/webs/<biome>/<id>.json), plus generated index.json
 scripts/pipeline    Python: conversion/validation tooling for ecosystem data
 docs                data-format.md (the web format spec) and architecture notes
 ```
@@ -34,7 +35,7 @@ The model/view split is strict: `packages/schema` and `packages/cascade` never i
 
 ## Contribute an ecosystem
 
-Each ecosystem web is a static JSON file in `data/webs/`, validated against the schema in `packages/schema` by `scripts/pipeline/validate.py`. Webs are **curated, not comprehensive**: 25 nodes maximum, honest about aggregation (functional groups, not fabricated species splits) and provenance (empirical study vs. curated composite, with full citations).
+Each ecosystem web is a static JSON file in `data/webs/<biome>/` (the folder name must match the web's `meta.biome`), validated against the schema in `packages/schema` by `scripts/pipeline/validate.py`. Webs are **curated, not comprehensive**: 25 nodes maximum, honest about aggregation (functional groups, not fabricated species splits) and provenance (empirical study vs. curated composite, with full citations).
 
 The exact file format — every field, the salmon rule, the qualitative-edge policy, layout conventions, and the validator's fail/warning rules — is documented in [docs/data-format.md](docs/data-format.md). Read it before starting; `scripts/pipeline/convert_template.py` is a runnable skeleton for converting a published web.
 

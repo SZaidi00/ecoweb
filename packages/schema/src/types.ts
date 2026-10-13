@@ -30,7 +30,7 @@ export type FunctionalRole =
   | 'top-consumer'
 
 export interface WebMeta {
-  /** Stable kebab-case identifier; the file in data/webs/ is named `<id>.json`. */
+  /** Stable kebab-case identifier; the file in data/webs/<biome>/ is named `<id>.json`. */
   id: string
   /** Human-readable ecosystem name. */
   name: string

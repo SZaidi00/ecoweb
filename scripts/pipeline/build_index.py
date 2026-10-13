@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Generate data/webs/index.json, the browse-layer listing of all webs.
 
-Scans ``data/webs/*.json`` (excluding ``index.json``), minimally parses each
+Scans ``data/webs/**/*.json`` (webs live in per-biome subfolders,
+``<biome>/<id>.json``; excludes ``index.json``), minimally parses each
 file, and writes ``index.json`` as ``{"webs": [...]}`` with one entry per web:
 ``{id, name, biome, location, nodeCount, provenance, tagline, lat, lng}`` taken from the
 web's ``meta`` (``nodeCount`` is the actual length of ``nodes``), sorted by
@@ -71,7 +72,7 @@ def main() -> int:
     args = parser.parse_args()
 
     webs_dir: Path = args.webs_dir
-    web_files = sorted(p for p in webs_dir.glob("*.json") if p.name != "index.json")
+    web_files = sorted(p for p in webs_dir.rglob("*.json") if p.name != "index.json")
 
     entries: list[dict] = []
     errors: list[str] = []

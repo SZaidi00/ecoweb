@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Generate data/species/, the cross-ecosystem species index.
 
-Scans ``data/webs/*.json`` (excluding ``index.json``) and groups nodes across
+Scans ``data/webs/**/*.json`` (webs live in per-biome subfolders,
+``<biome>/<id>.json``; excludes ``index.json``) and groups nodes across
 webs into species entries by EXACT normalized display name — lowercased, every
 run of non-alphanumeric characters collapsed to a single space, stripped. No
 fuzzy or string-similarity matching. Optional per-node ``alsoKnownAs`` aliases
@@ -67,9 +68,9 @@ def load_webs(webs_dir: Path) -> tuple[dict[str, dict], list[str]]:
     """Parse every web file. Returns ({web_id: {meta, nodes: {id: node}}}, errors)."""
     webs: dict[str, dict] = {}
     errors: list[str] = []
-    web_files = sorted(p for p in webs_dir.glob("*.json") if p.name != "index.json")
+    web_files = sorted(p for p in webs_dir.rglob("*.json") if p.name != "index.json")
     for path in web_files:
-        label = path.name
+        label = str(path.relative_to(webs_dir))
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError as exc:

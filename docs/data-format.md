@@ -24,7 +24,8 @@ Every web declares whether it is `"empirical"` (one published study measured thi
 
 ## File layout
 
-- One JSON file per web in `data/webs/`, named `<meta.id>.json`.
+- One JSON file per web in `data/webs/<biome>/`, named `<meta.id>.json`. The
+  folder name must equal the web's `meta.biome` (the validator enforces this).
 - `data/webs/index.json` lists all webs for the browse layer (see [index.json](#indexjson)).
 - A web contains at most **25 nodes** (hard ceiling — curated, not comprehensive).
 

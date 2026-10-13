@@ -8,6 +8,8 @@
  *     `<id>.json` becomes its own chunk, fetched the first time
  *     `loadRawWeb(id)` is called.
  *
+ * Webs live in per-biome subfolders (`data/webs/<biome>/<id>.json`); the glob
+ * recurses so each `<id>.json` is picked up regardless of biome folder.
  * The glob reaches outside `apps/web` into `data/webs`: in dev, Vite's
  * `fs.allow` covers the monorepo workspace root; in the static build the
  * matched files are bundled into the JS. So the same code path works for
@@ -20,7 +22,7 @@ const indexModules = import.meta.glob<unknown>('../../../../data/webs/index.json
 })
 
 const webModules = import.meta.glob<unknown>(
-  ['../../../../data/webs/*.json', '!../../../../data/webs/index.json'],
+  ['../../../../data/webs/**/*.json', '!../../../../data/webs/index.json'],
   { import: 'default' },
 )
 
