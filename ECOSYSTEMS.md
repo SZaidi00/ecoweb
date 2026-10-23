@@ -236,3 +236,10 @@ For every candidate, record:
 | mar-azores-vent-complexity | Deep sea — Azores triple-junction vents | appendix (inaccessible) | researched — researched/deep-sea.md | — | — |
 | hadal-trench-megafauna | Deep sea — Mariana & Kermadec trenches | appendix (inaccessible) | researched — researched/deep-sea.md | — | — |
 | axial-volcano-vents | Deep sea — Juan de Fuca Ridge (NE Pacific) | appendix (inaccessible) | researched — researched/deep-sea.md | — | — |
+| el-verde-rainforest | Tropical terrestrial — Puerto Rico rainforest (Luquillo) | 1 | researched — researched/tropical-terrestrial.md | — | — |
+| sumatra-rainforest-energy-web | Tropical terrestrial — Sumatra lowland rainforest (Jambi) | 1 | researched — researched/tropical-terrestrial.md | — | — |
+| bci-seed-predators | Tropical terrestrial — Panama (Barro Colorado Island) | 2 | researched — researched/tropical-terrestrial.md | — | — |
+| team-tropical-mammal-webs | Tropical terrestrial — 15 forests, pan-tropical | 2 (high-curation-risk) | researched — researched/tropical-terrestrial.md | — | — |
+| el-yunque-understory-web | Tropical terrestrial — Puerto Rico (experimental understory) | 2 | researched — researched/tropical-terrestrial.md | — | — |
+| atlantic-rainforest-streams | Tropical terrestrial — Atlantic Forest streams, Brazil | appendix (biome-saturation gate) | researched — researched/tropical-terrestrial.md | — | — |
+| amazon-vertebrate-metaweb | Tropical terrestrial — pan-Amazon | appendix (preprint/model-inferred) | researched — researched/tropical-terrestrial.md | — | — |
