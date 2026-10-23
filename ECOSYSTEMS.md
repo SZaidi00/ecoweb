@@ -228,3 +228,11 @@ For every candidate, record:
 | lake-eyre-springs | Desert — Lake Eyre Basin springs, Australia | 2 | researched — researched/desert.md | — | — |
 | australian-brown-web | Desert — arid South Australia (Boolcoomatta) | 2 (high-curation-risk) | researched — researched/desert.md | — | — |
 | welwitschia-web | Desert — Namib (Welwitschia) | appendix | researched — researched/desert.md | — | — |
+| east-pacific-rise-vent | Deep sea — East Pacific Rise hydrothermal vents (9°50′N) | 1 | researched — researched/deep-sea.md | — | — |
+| menez-gwen-vent | Deep sea — Mid-Atlantic Ridge hydrothermal vent (Azores) | 1 | researched — researched/deep-sea.md | — | — |
+| east-scotia-ridge-vents | Deep sea — Southern Ocean hydrothermal vents (E2/E9) | 1 | researched — researched/deep-sea.md | — | — |
+| guaymas-basin-vents-seeps | Deep sea — Gulf of California vents & seeps | 2 (high-curation-risk) | researched — researched/deep-sea.md | — | — |
+| gom-seep-macrobenthos | Deep sea — Gulf of Mexico cold seeps | 2 (high-curation-risk) | researched — researched/deep-sea.md | — | — |
+| mar-azores-vent-complexity | Deep sea — Azores triple-junction vents | appendix (inaccessible) | researched — researched/deep-sea.md | — | — |
+| hadal-trench-megafauna | Deep sea — Mariana & Kermadec trenches | appendix (inaccessible) | researched — researched/deep-sea.md | — | — |
+| axial-volcano-vents | Deep sea — Juan de Fuca Ridge (NE Pacific) | appendix (inaccessible) | researched — researched/deep-sea.md | — | — |
