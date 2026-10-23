@@ -222,3 +222,9 @@ For every candidate, record:
 | st-martin-island | Coral reefs — Caribbean (classic) | appendix (inaccessible) | researched — researched/coral-reefs.md | — | — |
 | takapoto-planktonic | Coral reefs — French Polynesia (planktonic only) | appendix | researched — researched/coral-reefs.md | — | — |
 | caffee-wio-reef | Coral reefs — Western Indian Ocean | appendix | researched — researched/coral-reefs.md | — | — |
+| coachella-valley | Desert — Sonoran (Coachella Valley, USA) | 1 | researched — researched/desert.md | — | — |
+| namib-fog-oasis | Desert — Namib dunes, Namibia | 1 | researched — researched/desert.md | — | — |
+| gulf-of-california-islands | Desert — Gulf of California islands, Mexico | 2 (high-curation-risk) | researched — researched/desert.md | — | — |
+| lake-eyre-springs | Desert — Lake Eyre Basin springs, Australia | 2 | researched — researched/desert.md | — | — |
+| australian-brown-web | Desert — arid South Australia (Boolcoomatta) | 2 (high-curation-risk) | researched — researched/desert.md | — | — |
+| welwitschia-web | Desert — Namib (Welwitschia) | appendix | researched — researched/desert.md | — | — |
