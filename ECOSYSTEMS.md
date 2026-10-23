@@ -243,3 +243,12 @@ For every candidate, record:
 | el-yunque-understory-web | Tropical terrestrial — Puerto Rico (experimental understory) | 2 | researched — researched/tropical-terrestrial.md | — | — |
 | atlantic-rainforest-streams | Tropical terrestrial — Atlantic Forest streams, Brazil | appendix (biome-saturation gate) | researched — researched/tropical-terrestrial.md | — | — |
 | amazon-vertebrate-metaweb | Tropical terrestrial — pan-Amazon | appendix (preprint/model-inferred) | researched — researched/tropical-terrestrial.md | — | — |
+| bylot-island-tundra | Tundra & boreal — High Arctic tundra (Nunavut, Canada) | 1 | researched — researched/tundra-boreal.md | — | — |
+| zackenberg-arctic-web | Tundra & boreal — High Arctic tundra (NE Greenland) | 1 | researched — researched/tundra-boreal.md | — | — |
+| bear-island-bjornoya | Tundra & boreal — High Arctic island tundra (Svalbard, Norway) | 1 | researched — researched/tundra-boreal.md | — | — |
+| kluane-boreal-forest | Tundra & boreal — boreal forest (Yukon, Canada) | 1 | researched — researched/tundra-boreal.md | — | — |
+| varanger-peninsula-coat | Tundra & boreal — sub-Arctic tundra (Norway) | 2 | researched — researched/tundra-boreal.md | — | — |
+| barrow-ibp-tundra | Tundra & boreal — coastal tundra (Alaska, USA) | 2 | researched — researched/tundra-boreal.md | — | — |
+| svalbard-metaweb | Tundra & boreal — Svalbard archipelago | 2 (high-curation-risk) | researched — researched/tundra-boreal.md | — | — |
+| krebs-canadian-arctic-17-sites | Tundra & boreal — pan-Canadian Arctic | appendix | researched — researched/tundra-boreal.md | — | — |
+| kevo-mountain-birch | Tundra & boreal — sub-Arctic birch forest (N. Finland) | appendix | researched — researched/tundra-boreal.md | — | — |
