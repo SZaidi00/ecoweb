@@ -206,3 +206,19 @@ For every candidate, record:
 | pantanal-oxbow-lakes | South America — Pantanal wetland lakes | 1 | researched — researched/south-america.md | verified — verified/south-america.md (matrix: open Annex A docx, 38–39 compartments) | — |
 | upper-parana-floodplain | South America — Paraná river/reservoir | 2 | researched — researched/south-america.md | verified (spot check) — verified/south-america.md (diet table in open SciELO PDF) | — |
 | strait-of-magellan | South America — sub-Antarctic channel | appendix | researched — researched/south-america.md | confirmed (record only) — verified/south-america.md (preprint live, 139 trophic species) | — |
+| xisha-islands | Coral reefs — South China Sea | 1 | researched — researched/coral-reefs.md | — | — |
+| uvea-atoll | Coral reefs — New Caledonia lagoon | 1 | researched — researched/coral-reefs.md | — | — |
+| french-frigate-shoals | Coral reefs — NW Hawaiian Islands | 1 | researched — researched/coral-reefs.md | — | — |
+| la-parguera | Coral reefs — Caribbean (Puerto Rico) | 1 | researched — researched/coral-reefs.md | — | — |
+| banco-chinchorro | Coral reefs — Caribbean (Mexico) | 1 | researched — researched/coral-reefs.md | — | — |
+| global-reef-fish-webs | Coral reefs — six regions (Pozas-Schacre 2021) | 2 | researched — researched/coral-reefs.md | — | — |
+| west-hawaii-reefs | Coral reefs — Hawai'i | 2 | researched — researched/coral-reefs.md | — | — |
+| danajon-reef | Coral reefs — Philippines | 2 | researched — researched/coral-reefs.md | — | — |
+| opitz-caribbean-reef | Coral reefs — Caribbean (regional synthesis) | 2 | researched — researched/coral-reefs.md | — | — |
+| moorea-metabarcoding | Coral reefs — French Polynesia | 2 (high-curation-risk) | researched — researched/coral-reefs.md | — | — |
+| roopnarine-greater-antilles | Coral reefs — Caribbean (Cayman/Cuba/Jamaica) | 2 | researched — researched/coral-reefs.md | — | — |
+| moorea-tiahura | Coral reefs — French Polynesia | appendix | researched — researched/coral-reefs.md | — | — |
+| gbr-gribble-models | Coral reefs — Great Barrier Reef | appendix | researched — researched/coral-reefs.md | — | — |
+| st-martin-island | Coral reefs — Caribbean (classic) | appendix (inaccessible) | researched — researched/coral-reefs.md | — | — |
+| takapoto-planktonic | Coral reefs — French Polynesia (planktonic only) | appendix | researched — researched/coral-reefs.md | — | — |
+| caffee-wio-reef | Coral reefs — Western Indian Ocean | appendix | researched — researched/coral-reefs.md | — | — |
