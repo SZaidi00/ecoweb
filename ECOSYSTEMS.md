@@ -262,3 +262,15 @@ For every candidate, record:
 | broadstone-stream | Europe — English acid stream | appendix (biome-saturation gate) | researched — researched/europe.md | — | — |
 | loch-leven | Europe — Scottish lake | appendix (biome-saturation gate) | researched — researched/europe.md | — | — |
 | irish-sea-ecopath | Europe — Irish Sea | appendix (access unclear) | researched — researched/europe.md | — | — |
+| hauraki-gulf | Australia & Oceania — NZ coastal marine | 1 | researched — researched/australia-oceania.md | — | — |
+| otago-harbour-intertidal | Australia & Oceania — NZ intertidal mudflat (parasite-inclusive) | 1 | researched — researched/australia-oceania.md | — | — |
+| kerguelen-plateau | Australia & Oceania — sub-Antarctic marine plateau (Heard & McDonald Is.) | 1 | researched — researched/australia-oceania.md | — | — |
+| te-tapuwae-reef | Australia & Oceania — NZ rocky reef marine reserve | 1 | researched — researched/australia-oceania.md | — | — |
+| east-bass-strait | Australia & Oceania — SE Australia shelf/slope (Ecopath) | 2 | researched — researched/australia-oceania.md | — | — |
+| north-west-shelf | Australia & Oceania — WA tropical shelf (Ecopath) | 2 | researched — researched/australia-oceania.md | — | — |
+| chatham-rise | Australia & Oceania — NZ oceanic shelf/slope (Ecopath, preliminary) | 2 | researched — researched/australia-oceania.md | — | — |
+| southern-plateau-nz | Australia & Oceania — NZ sub-Antarctic oceanic (Ecopath pilot) | 2 | researched — researched/australia-oceania.md | — | — |
+| nz-stream-webs | Australia & Oceania — NZ South Island streams | appendix (biome-saturation gate) | researched — researched/australia-oceania.md | — | — |
+| burdekin-dry-tropics-rivers | Australia & Oceania — Queensland dry-tropics rivers | appendix (biome-saturation gate) | researched — researched/australia-oceania.md | — | — |
+| magela-creek | Australia & Oceania — NT wet-dry tropics (Alligator Rivers) | appendix (biome-saturation gate) | researched — researched/australia-oceania.md | — | — |
+| murray-billabongs | Australia & Oceania — SE Australia billabongs | appendix (biome-saturation gate) | researched — researched/australia-oceania.md | — | — |
