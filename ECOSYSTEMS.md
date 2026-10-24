@@ -274,3 +274,14 @@ For every candidate, record:
 | burdekin-dry-tropics-rivers | Australia & Oceania — Queensland dry-tropics rivers | appendix (biome-saturation gate) | researched — researched/australia-oceania.md | — | — |
 | magela-creek | Australia & Oceania — NT wet-dry tropics (Alligator Rivers) | appendix (biome-saturation gate) | researched — researched/australia-oceania.md | — | — |
 | murray-billabongs | Australia & Oceania — SE Australia billabongs | appendix (biome-saturation gate) | researched — researched/australia-oceania.md | — | — |
+| southern-benguela | Africa — South Africa upwelling shelf (Ecopath) | 1 | researched — researched/africa.md | — | — |
+| northern-benguela | Africa — Namibia upwelling shelf (Ecopath, regime shift) | 1 | researched — researched/africa.md | — | — |
+| banc-d-arguin | Africa — Mauritania shelf + intertidal flats (Ecopath) | 1 | researched — researched/africa.md | — | — |
+| okavango-delta | Africa — Botswana seasonal floodplain wetland | 1 | researched — researched/africa.md | — | — |
+| sene-gambian-shelf | Africa — Senegal/Gambia upwelling shelf (Ecopath) | 2 | researched — researched/africa.md | — | — |
+| senegal-bamboung-mpa | Africa — Senegal mangrove-creek MPA (Ecopath) | 2 | researched — researched/africa.md | — | — |
+| lake-victoria | Africa — East African Great Lake (Nile perch) | appendix (biome-saturation gate) | researched — researched/africa.md | — | — |
+| lake-malawi | Africa — East African Great Lake (cichlid radiation) | appendix (biome-saturation gate) | researched — researched/africa.md | — | — |
+| lake-tanganyika | Africa — East African Great Lake (7-group pilot model) | appendix (biome-saturation gate) | researched — researched/africa.md | — | — |
+| lake-turkana | Africa — Kenyan desert lake (ECOPATH II) | appendix (biome-saturation gate) | researched — researched/africa.md | — | — |
+| gulf-of-guinea-shelf | Africa — Gulf of Guinea shelf (Ecopath) | appendix (access unclear) | researched — researched/africa.md | — | — |
