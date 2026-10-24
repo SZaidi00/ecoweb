@@ -285,3 +285,12 @@ For every candidate, record:
 | lake-tanganyika | Africa — East African Great Lake (7-group pilot model) | appendix (biome-saturation gate) | researched — researched/africa.md | — | — |
 | lake-turkana | Africa — Kenyan desert lake (ECOPATH II) | appendix (biome-saturation gate) | researched — researched/africa.md | — | — |
 | gulf-of-guinea-shelf | Africa — Gulf of Guinea shelf (Ecopath) | appendix (access unclear) | researched — researched/africa.md | — | — |
+| karnataka-arabian-sea | Asia — SW India shelf (Ecopath, 24 groups) | 1 | researched — researched/asia.md | — | — |
+| pearl-river-estuary | Asia — South China megacity estuary (Ecopath) | 1 | researched — researched/asia.md | — | — |
+| east-china-sea | Asia — East China Sea shelf (Ecopath) | 2 | researched — researched/asia.md | — | — |
+| gulf-of-thailand | Asia — Gulf of Thailand pre-trawl baseline (Ecopath) | 2 | researched — researched/asia.md | — | — |
+| java-sea | Asia — N coast Central Java Sea (Ecopath) | 2 | researched — researched/asia.md | — | — |
+| persian-gulf | Asia — N Persian Gulf, Iran (Ecopath, open) | 2 | researched — researched/asia.md | — | — |
+| lake-baiyangdian | Asia — N China shallow lake, 5-period webs | appendix (biome-saturation gate) | researched — researched/asia.md | — | — |
+| sea-of-oman-reef | Asia — Oman artificial reef (Ecopath, open) | appendix (scope) | researched — researched/asia.md | — | — |
+| sri-lanka-coast | Asia — Sri Lanka coastal (Ecopath) | appendix (access unclear) | researched — researched/asia.md | — | — |
