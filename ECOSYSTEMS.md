@@ -294,3 +294,11 @@ For every candidate, record:
 | lake-baiyangdian | Asia — N China shallow lake, 5-period webs | appendix (biome-saturation gate) | researched — researched/asia.md | — | — |
 | sea-of-oman-reef | Asia — Oman artificial reef (Ecopath, open) | appendix (scope) | researched — researched/asia.md | — | — |
 | sri-lanka-coast | Asia — Sri Lanka coastal (Ecopath) | appendix (access unclear) | researched — researched/asia.md | — | — |
+| santa-barbara-kelp-forest | North America — California kelp forest (Scientific Data, open) | 1 | researched — researched/north-america.md | — | — |
+| narragansett-bay | North America — Rhode Island estuary (Ecopath, 2 periods) | 2 | researched — researched/north-america.md | — | — |
+| sanak-intertidal | North America — Aleutian intertidal (humans-in-web) | 2 | researched — researched/north-america.md | — | — |
+| yellowstone-composite | North America — Wyoming montane (composite) | 2 (high-curation-risk) | researched — researched/north-america.md | — | — |
+| bridge-brook-lake | North America — Adirondack lake (classic) | appendix (biome-saturation gate) | researched — researched/north-america.md | — | — |
+| california-intertidal-parasite-web | North America — California rocky intertidal (1,809 nodes) | appendix (aggregation cost) | researched — researched/north-america.md | — | — |
+| weeks-bay | North America — Alabama estuary (seasonal Ecopath) | appendix (provenance) | researched — researched/north-america.md | — | — |
+| puget-sound | North America — Washington inland sea (Ecopath) | appendix (geography) | researched — researched/north-america.md | — | — |
