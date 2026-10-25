@@ -1,154 +1,92 @@
 # Region: Arctic marine (sub-Arctic to High Arctic seas)
+**Researched:** 2026-10 · **Status:** complete (Stage 1 — awaiting verification)
 
-Researched 2026-10. Stage-1 research sweep (see ECOSYSTEMS.md §5 for scoring rubric).
+**Repo context at sweep time:** 9 webs live. The Weddell Sea (Antarctic) is the live polar web; this sweep is its Arctic counterpart — the single most audience-recognizable climate-change theatre on Earth. Biome saturation: marine 2 (PWS, Weddell), estuary 1, freshwater 3 (saturated), grassland 2, wetland 1. Scope note: terrestrial Arctic systems were covered by the tundra-boreal sweep (Bylot, Zackenberg, Bear Island, Kluane); this sweep covers Arctic and sub-Arctic *seas*. The Eastern Bering Sea is technically sub-Arctic but is included as the Pacific gateway and because it anchors the best-documented Arctic-type shelf webs. Cross-reference: Prince William Sound is live and pins the sub-Arctic NE Pacific — geography scores for further Alaskan webs are penalized accordingly.
 
-Scope: the Arctic Ocean and its marginal seas plus sub-Arctic gateways (Bering, Barents, Baffin/Labrador, Hudson Bay, Greenland shelf). Terrestrial Arctic (tundra food webs) was already covered by `research/tundra-boreal.md`. Southern Ocean is excluded — Weddell Sea is live.
-
-Note on "Arctic": several candidate systems (Eastern Bering Sea, West Greenland shelf) are technically sub-Arctic / Arctic-adjacent; they are included because the sweep treats the whole polar-marine belt and because the Bering Sea is the Pacific gateway to the Arctic.
-
-**Sweep log (queries + results):**
-
-1. `Ecopath Arctic Ocean ecosystem model` → broad review: 45+ published Ecopath models of Arctic/sub-Arctic systems exist (Aydin & Mueter 2007 synthesis, plus later work). Identified the major Ecopath hubs: Barents Sea, Eastern Bering Sea, Gulf of Alaska, Chukchi/Beaufort, Hudson Bay, West Greenland, Canadian Beaufort, Baffin Bay.
-2. `Barents Sea Ecopath model trophic structure` → **Blanchard, Pinnegar & Mackinson (2002)**, CEFAS Technical Report 117: "Exploring marine mammals-fisheries interactions using Ecopath with Ecosim: the Barents Sea" — open-access CEFAS PDF. 41 functional groups, calibrated for 1990/1995; cod–capelin–herring dynamics. Plus **Pedersen et al. (2021, Frontiers in Marine Science)** updated Barents Sea model (open access). Strong node-data fit.
-3. `Eastern Bering Sea ecosystem model Aydin 2007` → **Aydin et al. (2007)**, NOAA Technical Memorandum NMFS-AFSC-178: "Ecosystem modeling of the Eastern Bering Sea" — NOAA open PDF. 148 functional groups, trophic level up to 6; diet tables in appendices. Very aggregable.
-4. `Chukchi Beaufort Sea food web Ecopath` → **Whitehouse et al. (2014)** and **Whitehouse & Aydin (2016)**: Eastern Chukchi Sea Ecopath model (NOAA AFSC, open report). Also **Suprenand et al.** (NOAA/USF) Beaufort Sea EwE model 1970–2014, open report via USF Digital Commons. Both benthic-dominated, strong ice dependence.
-5. `Hudson Bay Ecopath model` → **Hoover et al. (2013, 2016)** ArcticNet / University of Manitoba: Hudson Bay marine ecosystem EwE models; thesis series openly accessible (UM space). Ice-algae-to-mammals chain; regime-shift story.
-6. `West Greenland shelf Ecopath` → **Pedersen & Zeller (2001)** UBC Fisheries Centre report "A mass balance model for the West Greenland marine ecosystem" (Sea Around Us archive, open PDF). Post-cod-collapse regime story.
-
-**Cross-sweep reference:** Weddell Sea (live) is the Antarctic counterpart — users can compare polar marine webs if one of these ships.
-
-**Best practice notes:**
-- All top candidates are **mass-balance (Ecopath) models** — that means every node has biomass and diet matrix fractions. This is the single best source type for this project (maps 1:1 onto the 0.001–0.01 edge-weight format).
-- Ecopath functional groups are abundant (40–150) — heavy aggregation to 15–25 nodes is needed but mechanically straightforward (collapse by trophic level and taxonomic affinity).
-- Ice (sea ice → ice algae) is a first-class node in Arctic webs and a distinctive story hook (the "ice algae" start of the chain) — no live web features it.
+**Sweep log:**
+- **Ecopath publications + EcoBase**: queries "Barents Sea Ecopath food web model diet matrix Blanchard 2002 cod capelin", "Eastern Bering Sea food web Ecopath model Aydin 2007 NOAA diet matrix", "Chukchi Sea Beaufort Sea Ecopath food web model Whitehouse Arctic", "Hudson Bay food web Ecopath model Arctic marine published", "Kara Sea Laptev Sea food web model Ecopath Russian Arctic", "Greenland shelf food web Ecopath model West Greenland Disko Bay trophic". EcoBase registers multiple of these models (Barents, EBS, Chukchi) as published-model entries.
+- **Primary literature / open repositories**: CEFAS Technical Report 117 (Barents, open PDF), NOAA TM AFSC-178 (Bering/GOA/Aleutians comparison, open PDF with full diet tables C4–C26), NOAA repository entry for Whitehouse & Aydin 2016 (Chukchi, open), USF Digital Commons (Beaufort, open), Hoover et al. 2013 lineage (Hudson Bay), ULaval corpus (Baffin Bay tech report, open).
+- **Cross-sweep reference**: Weddell Sea (live, Antarctic polar marine) and PWS (live, sub-Arctic NE Pacific) set the bar: an Arctic web must add ice-dependence (ice algae → under-ice amphipods → Arctic cod → ringed seal → polar bear) rather than duplicate the krill story.
 
 ---
 
-## Tier 1 — ready for curation
+## Tier 1 — build next
 
-### barents-sea — Barents Sea cod–capelin system
-
-**Sources:**
-- **Blanchard, J.L., Pinnegar, J.K. & Mackinson, S. (2002).** Exploring marine mammals–fisheries interactions using Ecopath with Ecosim: the Barents Sea. *CEFAS Technical Report 117*. Open-access PDF (CEFAS). 41 functional groups; models calibrated to 1990 and 1995; full diet matrix; includes fisheries (trawlers) and marine mammals (minke whale, harp seal).
-- **Pedersen, E.J. et al. (2021).** An updated ecosystem model for the Barents Sea. *Frontiers in Marine Science* 8. Open access. Updated mass-balance model; good for modern node set.
-- Norwegian-Russian Barents Sea capelin–cod monitoring literature (Gjøsæter et al.; ICES surveys) for species lists.
-
-**Status:** found + assumed-accessible (CEFAS reports and Frontiers are open access).
-
-**Aggregation feasibility:** very high. 41 groups collapse naturally to ~18 nodes: cod; capelin; herring; polar cod (Arctic speciality); haddock; redfish; long rough dab / other flatfish; Greenland halibut; minke whale; harp seal; harp/other pinnipeds grouped; seabirds (kittiwake, puffin, guillemot); zooplankton (Calanus spp.); krill/amphipods (Thysanoessa); benthos; demersal fish (misc); detritus; phytoplankton; ice algae; fishery. Each Ecopath group has biomass + diet fractions directly usable as edge weights.
-
-**Data quality:** 3 — calibrated mass-balance model with published diet matrix; multiple eras (1990/1995) allow a "regime" variant later.
-**Story clarity:** 3 — textbook "capelin collapse → cod starvation → seabird failure" wasp-waist trophic cascade; the Barents Sea is one of the world's best-documented marine cascades; polar cod vs capelin alternation is climate-linked (Atlantification).
-**Geography:** 2 — Arctic is new (no live Arctic web), but Norway-area is adjacent to UK shelf (live North Sea-ish? No — live marine are PWS and Weddell; check: live marine = PWS (Alaska) + Weddell (Antarctica)) → effectively new region; slightly docked because sub-Arctic Atlantic could compete with a future North Sea candidate.
-**Build cost:** 2 — open model tables; aggregation well-defined.
-**Name recognition:** 2 — Barents Sea is known to marine-science audiences; capelin–cod collapse taught in fisheries courses.
-**Total: 12 (Tier 1).**
+### Barents Sea — `barents-sea`
+- **Biome / Region:** Arctic shelf sea (Atlantic gateway) · N. Atlantic Arctic (Norway/Russia) · **Lat/Lng (approx):** 72.0, 35.0
+- **Source:** Blanchard, J.L. et al. (2002). Modelling the Barents Sea ecosystem. *CEFAS Technical Report* 117 — open PDF; 41 functional groups, Ecopath models for 1995 (low capelin) and 1990 (high capelin) with diet matrix documented in the report. A modern open alternative/upgrade: Pedersen et al. (2021) *Frontiers in Marine Science* "Overexploitation, Recovery, and Warming of the Barents Sea Ecosystem During 1950–2013" — open access, year-1950 and year-2000 Ecopath models (1,029 feeding interactions incl. snow crab and red king crab groups). Registered in EcoBase (Dommasnes lineage).
+- **Data access:** ASSUMED (strong) — the CEFAS report is an open PDF with the diet matrix inside; Frontiers 2021 is open access with supplements. Matrix not yet transcribed.
+- **Raw size:** 41 functional groups (1995 model) · **Aggregation plan:** → ~18–22 nodes (cod juvenile/adult, capelin by age class, herring, polar cod, krill/Thysanoessa, copepods, shrimp, benthos guilds, seals, whales, seabirds, fisheries)
+- **Data type:** weighted (Ecopath) · **Provenance:** empirical (model)
+- **Scores:** data 3 · story 3 · geography 2 · cost 2 · recognition 2 = **12**
+- **Tier:** 1 · **Notes:** Fulfils the §8 Tier-2 lead, promoted on evidence. The capelin boom–bust cycle is the finest documented example of a wasp-waist ecosystem on Earth: when capelin crash, cod cannibalize, seals starve and seabird colonies fail — a cascade the simulator can show by toggling one node, and the 1990-vs-1995 model pair is a built-in before/after. The ice-algae pathway and polar cod give the genuinely Arctic signature that Weddell (krill) doesn't cover. Geography docked one point for polar adjacency to Weddell; this is still the strongest Arctic-marine candidate found.
 
 ---
 
-## Tier 2 — needs a decision before building
+## Tier 2 — backlog
 
-### eastern-bering-sea — Eastern Bering Sea shelf
+### Eastern Bering Sea shelf, Alaska — `eastern-bering-sea`
+- **Biome / Region:** Sub-Arctic shelf sea (Pacific gateway) · N. America (Alaska, USA) · **Lat/Lng (approx):** 58.0, −165.0
+- **Source:** Aydin, K. et al. (2007). A comparison of the Bering Sea, Gulf of Alaska, and Aleutian Islands large marine ecosystems through food web modeling. *NOAA Technical Memorandum* NMFS-AFSC-178 — open PDF; 148-group EBS model with full diet tables (C4–C26) and data pedigrees. Earlier 41-group model: Aydin et al. (2002), data 1980–85.
+- **Data access:** ASSUMED (strong) — NOAA TM is open with the diet matrix printed in appendices. Not yet transcribed.
+- **Raw size:** 148 groups (modern) / 41 groups (1980s model) · **Aggregation plan:** → ~18–22 nodes (pollock adult/juvenile split, Pacific cod, flatfish guilds, snow crab, euphausiids, copepods, pinnipeds, whales, seabirds, fisheries)
+- **Data type:** weighted (Ecopath) · **Provenance:** empirical (model)
+- **Scores:** data 3 · story 3 · geography 1 · cost 1 · recognition 2 = **10**
+- **Tier:** 2 · **Notes:** Walleye pollock — the largest single-species fishery on Earth — sits at the centre of a web where over two-thirds of all groups link to it directly; the Steller sea lion decline controversy is exactly the kind of contested cascade the product handles well. Held back by geography (PWS already pins the NE Pacific) and aggregation cost (148 groups is the largest raw model in this sweep; the 41-group 1980s model is the fallback).
 
-**Sources:**
-- **Aydin, K.Y. et al. (2007).** Ecosystem modeling of the Eastern Bering Sea. NOAA Technical Memorandum NMFS-AFSC-178. Open PDF. 148 groups incl. fisheries; appendices with full diet tables.
-- **Whitehouse, G.A. & Aydin, K.Y. (2016).** Assessing the sensitivity of three Alaska marine food webs to perturbations. (Ecosystem / US Dept of Commerce) — comparative analysis of EBS, Gulf of Alaska, Aleutian models.
+### Eastern Chukchi Sea, Alaska — `eastern-chukchi-sea`
+- **Biome / Region:** High Arctic shelf sea · N. America (Alaska, USA) · **Lat/Lng (approx):** 70.0, −168.0
+- **Source:** Whitehouse, G.A. & Aydin, K. (2016). Trophic structure of the eastern Chukchi Sea: an updated mass balance food web model. *NOAA Tech. Memo.* — open at the NOAA repository; 2010s update of the 1990s Ecopath model (93 parameters updated, 9 groups added — 6 seabird, 3 fish), diet compositions documented. Used in Whitehouse et al. (2020) three-web Alaska sensitivity analysis.
+- **Data access:** ASSUMED (strong) — NOAA repository copy is open. Matrix not yet transcribed.
+- **Raw size:** ~40 functional groups · **Aggregation plan:** → ~18–22 nodes
+- **Data type:** weighted (Ecopath) · **Provenance:** empirical (model)
+- **Scores:** data 3 · story 2 · geography 1 · cost 2 · recognition 1 = **9**
+- **Tier:** 2 · **Notes:** The most benthic-dominated web in the sweep — energy flows through clams and amphipods to walrus and gray whales rather than up the pelagic chain; a genuinely different architecture from every live web. Geography docked (third potential Alaskan pin). The walrus haul-out story is strong but narrower than capelin or pollock.
 
-**Status:** found + assumed-accessible (NOAA tech memos are open).
+### Beaufort Sea — `beaufort-sea`
+- **Biome / Region:** High Arctic coastal sea · N. America (Alaska/Canada) · **Lat/Lng (approx):** 71.5, −140.0
+- **Source:** Suprenand, P.M. et al. — Ecosystem model of the entire Beaufort Sea marine ecosystem: a temporal tool for assessing food-web structure and marine animal populations from 1970 to 2014. *Ecological Modelling* lineage; open at USF Digital Commons (476,000 km² model; EwE with sea-ice and SST forcing; Inuit harvesting explicit).
+- **Data access:** ASSUMED (moderate) — open institutional copy exists; full diet matrix availability to be confirmed at verification.
+- **Raw size:** several dozen functional groups · **Aggregation plan:** → ~18–22 nodes (ice algae, under-ice amphipods, Arctic cod, ringed seal, polar bear, bowhead, beluga, fisheries/harvest)
+- **Data type:** weighted (Ecopath) · **Provenance:** empirical (model)
+- **Scores:** data 2 · story 3 · geography 1 · cost 2 · recognition 2 = **10**
+- **Tier:** 2 · **Notes:** The purest ice-dependence story in the sweep — ice algae → Arctic cod → ringed seal → polar bear, with documented 1993 climatological and 1998 biological tipping points and subsistence harvest as an explicit node. Held at Tier 2 until matrix access is confirmed (thesis-derived model; parameter tables must be checked at verification).
 
-**Aggregation feasibility:** very high mechanically (148 → 18–22 nodes: walleye pollock; Pacific cod; arrowtooth flounder; flathead sole; halibut; salmon (5 spp. or grouped); forage fish (capelin, herring, sand lance); euphausiids; large copepods; jellyfish; snow crab; Tanner crab; king crab; benthic infauna; Steller sea lion; northern fur seal; bearded seal; seabirds; orca; phytoplankton; ice algae; detritus; fishery).
+### Hudson Bay, Canada — `hudson-bay`
+- **Biome / Region:** Sub-Arctic inland sea · N. America (Canada) · **Lat/Lng (approx):** 57.0, −85.0
+- **Source:** Hoover, C. et al. (2013). Effects of hunting, fishing and climate change on the Hudson Bay marine ecosystem (parts I–II). *Ecological Modelling* — Ecopath model 1970–2009 with environmental forcing; future-scenario simulations project extirpation risk for narwhal, eastern beluga, polar bear and walrus under combined harvest + ice-loss scenarios.
+- **Data access:** ASSUMED (moderate) — journal articles; diet matrix in supplements to be confirmed at verification.
+- **Raw size:** several dozen functional groups · **Aggregation plan:** → ~18–22 nodes
+- **Data type:** weighted (Ecopath) · **Provenance:** empirical (model)
+- **Scores:** data 2 · story 3 · geography 2 · cost 2 · recognition 2 = **11**
+- **Tier:** 2 · **Notes:** The ice-algae→benthos→spring-bloom→pelagic regime shift is the clearest mechanistic "what climate change does to a food web" narrative in the Arctic literature. Just misses Tier 1 on data verification; narwhal + beluga + polar bear in one web is strong audience pull.
 
-**Data quality:** 3 — flagship NOAA model; enormous literature backing.
-**Story clarity:** 2 — pollock-centric "fish factory" ecosystem; ice-edge bloom timing; oscillating control hypothesis (crab-vs-fish regime). Less folkloric than Barents collapse but scientifically rich.
-**Geography:** 1 — penalized: Prince William Sound (Alaska) is already live; EBS is the same broad region (Alaskan shelf). Would add Alaska again.
-**Build cost:** 1 — 148 groups is a LOT of aggregation; diet matrix huge; expect the most curation effort of any candidate.
-**Name recognition:** 1 — Bering Sea has popular recognition (Deadliest Catch) but not as a food web.
-**Total: 8–10 → 10 (Tier 2, borderline).** Downgrade risk: duplication with PWS; if a cleaner non-Alaskan Arctic candidate verifies at 12+, this drops.
-
-### hudson-bay — Hudson Bay marine ecosystem
-
-**Sources:**
-- **Hoover, C. et al. (2013).** The ecosystem services and marine food web of Hudson Bay (ArcticNet / University of Manitoba theses and reports; Manitoba M.Sc. thesis open via UMspace). EwE model of the Hudson Bay System; ice-algae-based production; beluga, ringed seal, polar bear, anadromous chars.
-- ArcticNet project reports (open).
-
-**Status:** found + assumed-accessible (Canadian university open repositories).
-
-**Aggregation feasibility:** high (~35–45 groups → ~16–18 nodes: polar bear; beluga; ringed seal; bearded seal; walrus (marginal); Arctic char; capelin; sand lance; Greenland cod; sculpins; ice algae; phytoplankton; zooplankton; benthos; seabirds (eider, guillemot); orca (increasing); detritus; fishery/community harvest).
-
-**Data quality:** 2 — thesis-grade model, fewer calibrations than NOAA; uncertainty high in parts.
-**Story clarity:** 3 — longest ice-season ecosystem under direct climate regime shift; "the Mediterranean of the Arctic" losing its ice; beluga + polar bear + community harvest = strong human dimension; sea-ice-algae node as web's foundation is a signature hook.
-**Geography:** 2 — Canadian Arctic, new continent-scale region for marine; different from both live marine webs.
-**Build cost:** 2 — thesis PDFs are well-organized; moderate effort.
-**Name recognition:** 2 — Hudson Bay has name recognition (HBC, polar bears of Churchill).
-**Total: 11 (Tier 2, high).**
-
-### beaufort-sea — Canadian/US Beaufort Sea
-
-**Sources:**
-- **Suprenand, P.M. et al.** Ecopath with Ecosim model of the Beaufort Sea (1970–2014). University of South Florida / NOAA report — open via USF Digital Commons.
-- Bellman et al. / Arctic Eis (Arctic Ecosystem Integrated Survey) NOAA program outputs.
-
-**Status:** found + assumed-accessible.
-
-**Aggregation feasibility:** moderate (~50 groups → 15–20 nodes: polar cod (keystone); Arctic cod; capelin; Arctic char; beluga; bowhead whale; ringed seal; bearded seal; polar bear; seabirds; ice algae; phytoplankton; copepods; euphausiids; benthos (bivalves, amphipods); detritus; fishery (minimal/subsistence)).
-
-**Data quality:** 2 — real EwE model but the Beaufort is among the most data-poor Arctic shelves; many groups estimated.
-**Story clarity:** 3 — polar cod as THE keystone species (single-species wasp waist); ice-dependent production; bowhead recovery story; oil-and-gas tension.
-**Geography:** 2 — Alaskan/Canadian Arctic — partial overlap with PWS (Alaska) penalty, but High Arctic is distinct.
-**Build cost:** 2 — open report; moderate aggregation.
-**Name recognition:** 1 — low popular recognition.
-**Total: 10 (Tier 2).**
-
-### eastern-chukchi-sea — Eastern Chukchi Sea
-
-**Sources:**
-- **Whitehouse, G.A. & Aydin, K.Y. et al. (2014/2016).** Eastern Chukchi Sea Ecopath model. NOAA AFSC open reports; comparative food-web analysis with EBS and Gulf of Alaska.
-
-**Status:** found + assumed-accessible.
-
-**Aggregation feasibility:** moderate-high (~40 groups → 15–18 nodes; benthic-dominated: clams, amphipods; walrus; gray whale feeding; bearded seal; polar cod; seabirds; ice algae; phytoplankton; copepods; euphausiids; detritus; subsistence fishery).
-
-**Data quality:** 2 — NOAA-quality but genuinely data-poor region; model acknowledged to be uncertain.
-**Story clarity:** 2 — benthic-pelagic coupling; gray whale + walrus benthic feeding; Pacific inflow gateway. Good science story, less punch than Barents/Hudson.
-**Geography:** 2 — Alaskan Arctic; some PWS-region overlap penalty.
-**Build cost:** 2.
-**Name recognition:** 1.
-**Total: 9 (Tier 2).**
-
-### west-greenland-shelf — West Greenland marine ecosystem
-
-**Sources:**
-- **Pedersen, S.A. & Zeller, D. (2001).** A mass balance model for the West Greenland marine ecosystem. UBC Fisheries Centre Research Reports (Sea Around Us open archive).
-- Later updates in the Sea Around Us / DTU Aqua literature.
-
-**Status:** found + assumed-accessible (UBC archive is open).
-
-**Aggregation feasibility:** moderate (~30 groups → 15 nodes: cod (collapsed stock); Greenland halibut; redfish; shrimp (Pandalus borealis — the post-cod dominant); capelin; polar cod; harp seal; hooded seal; minke/fin whales; seabirds; benthos; zooplankton; phytoplankton; ice algae; detritus; fishery).
-
-**Data quality:** 2 — 2001-era model; old calibration, but the cod-collapse regime is well documented elsewhere.
-**Story clarity:** 3 — the clearest "regime shift" story in the North Atlantic: cod collapse (overfishing + cold period) → shrimp takeover; direct fishing-policy lesson.
-**Geography:** 3 — Greenland/Atlantic Arctic, entirely new region for the project.
-**Build cost:** 2 — compact old model; easy aggregation.
-**Name recognition:** 1 — low.
-**Total: 11 (Tier 2, high).**
+### West Greenland shelf — `west-greenland-shelf`
+- **Biome / Region:** Sub-Arctic shelf (Atlantic) · N. Atlantic (Greenland) · **Lat/Lng (approx):** 66.0, −53.0
+- **Source:** Pedersen, S.A. & Zeller, D. — A mass balance model for the West Greenland marine ecosystem (Ecopath, 1997 conditions; 0–1,500 m). Feeds the newer Baffin Bay community model (see appendix).
+- **Data access:** ASSUMED (moderate) — older model; matrix access to be confirmed at verification.
+- **Raw size:** several dozen groups · **Aggregation plan:** → ~18–22 nodes (shrimp, Greenland halibut, cod, capelin, sandeel, Calanus copepods, seals, whales)
+- **Data type:** weighted (Ecopath) · **Provenance:** empirical (model)
+- **Scores:** data 2 · story 2 · geography 3 · cost 2 · recognition 2 = **11**
+- **Tier:** 2 · **Notes:** Best geography score in the sweep (Atlantic Arctic, far from all live pins). The story is the northern shrimp fishery and the post-cod-collapse regime — historically important but less dramatic than capelin. Access age is the risk.
 
 ---
 
-## Appendix — recorded but gated out
+## Appendix — recorded, not planned
 
-### baffin-bay-coastal — Baffin Bay / Canadian Eastern Arctic coastal web
-- Source: Université Laval / MEOPAR technical reports (community co-created EwE models, e.g. Qikiqtarjuaq region). Real models exist but are preliminary and partially community-knowledge based.
-- Gated by: data confidence (provenance mixed: published + grey + community knowledge). Revisit if a clean published Baffin model appears.
+### Baffin Bay coastal & shelf, Nunavut — `baffin-bay-coastal`
+- ULaval / MEOPAR Ecopath technical report (open at corpus.ulaval.ca) — community co-created model with Qikiqtarjuaq for Inuit food security; adapted from the West Greenland model.
+- **Appendix (provenance/preliminary):** recent technical report, parameters still evolving through community co-creation; revisit once the peer-reviewed version and stable diet matrix appear. The co-creation angle is notable for future outreach.
 
-### western-bering-sea — Western Bering Sea (Russian side)
-- Source: exists in comparative literature (Whitehouse & Aydin 2016 reference a Russian-side model; Aydin & Mueter 2007).
-- Gated by: geography/overlap — EBS is the stronger representative of the Bering system; WBS would duplicate. Revisit only if EBS is rejected and a Russian-side angle is wanted.
+### Western Bering Sea shelf, Russia — `western-bering-sea`
+- Aydin et al. — WBS Ecopath model built for the EBS/WBS comparison (open PDF, same TM lineage).
+- **Appendix (geography/overlap):** same family and lineage as the EBS candidate; cephalopod-nexus structure is interesting but a second Bering pin is not justified while the Arctic is otherwise empty.
 
 ---
 
-## Rejected this sweep
+## Rejected in sweep
 
-- **Kara / Laptev / East Siberian seas** — no resolved published food-web models found; Russian Arctic data gap. Recorded as a genuine gap, not a candidate.
-- **Central Arctic Ocean basin** — too data-poor; no mass-balance model exists (only conceptual diagrams).
-- **Antarctic systems** — out of scope (Weddell Sea live).
-- **Disko Bay (Greenland) plankton-focused webs** — exist as partial plankton networks; parts-bin risk, not a full food web.
+- **Kara Sea / Laptev Sea / East Siberian Sea** — no resolved published food web or Ecopath model surfaced; only qualitative ecosystem descriptions (ice-meiofauna communities, Arctic cod under ice). Recorded as a data gap: the Russian Arctic is the empty quadrant of this biome.
+- **Central Arctic Ocean basin** — no resolved food web; observational effort is plankton-focused. Data gap.
+- **Disko Bay plankton webs (W. Greenland)** — PhD-level grazing studies, not a resolved community web; parts-bin only.
+- **Antarctic systems** — deliberately out of scope: Weddell Sea is live, and the deep-sea sweep already recorded East Scotia Ridge vents.
