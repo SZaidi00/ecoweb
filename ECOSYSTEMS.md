@@ -206,22 +206,24 @@ For every candidate, record:
 | pantanal-oxbow-lakes | South America — Pantanal wetland lakes | 1 | researched — researched/south-america.md | verified — verified/south-america.md (matrix: open Annex A docx, 38–39 compartments) | — |
 | upper-parana-floodplain | South America — Paraná river/reservoir | 2 | researched — researched/south-america.md | verified (spot check) — verified/south-america.md (diet table in open SciELO PDF) | — |
 | strait-of-magellan | South America — sub-Antarctic channel | appendix | researched — researched/south-america.md | confirmed (record only) — verified/south-america.md (preprint live, 139 trophic species) | — |
-| xisha-islands | Coral reefs — South China Sea | 1 | researched — researched/coral-reefs.md | — | — |
-| uvea-atoll | Coral reefs — New Caledonia lagoon | 1 | researched — researched/coral-reefs.md | — | — |
-| french-frigate-shoals | Coral reefs — NW Hawaiian Islands | 1 | researched — researched/coral-reefs.md | — | — |
-| la-parguera | Coral reefs — Caribbean (Puerto Rico) | 1 | researched — researched/coral-reefs.md | — | — |
-| banco-chinchorro | Coral reefs — Caribbean (Mexico) | 1 | researched — researched/coral-reefs.md | — | — |
-| global-reef-fish-webs | Coral reefs — six regions (Pozas-Schacre 2021) | 2 | researched — researched/coral-reefs.md | — | — |
-| west-hawaii-reefs | Coral reefs — Hawai'i | 2 | researched — researched/coral-reefs.md | — | — |
-| danajon-reef | Coral reefs — Philippines | 2 | researched — researched/coral-reefs.md | — | — |
-| opitz-caribbean-reef | Coral reefs — Caribbean (regional synthesis) | 2 | researched — researched/coral-reefs.md | — | — |
-| moorea-metabarcoding | Coral reefs — French Polynesia | 2 (high-curation-risk) | researched — researched/coral-reefs.md | — | — |
-| roopnarine-greater-antilles | Coral reefs — Caribbean (Cayman/Cuba/Jamaica) | 2 | researched — researched/coral-reefs.md | — | — |
-| moorea-tiahura | Coral reefs — French Polynesia | appendix | researched — researched/coral-reefs.md | — | — |
-| gbr-gribble-models | Coral reefs — Great Barrier Reef | appendix | researched — researched/coral-reefs.md | — | — |
-| st-martin-island | Coral reefs — Caribbean (classic) | appendix (inaccessible) | researched — researched/coral-reefs.md | — | — |
-| takapoto-planktonic | Coral reefs — French Polynesia (planktonic only) | appendix | researched — researched/coral-reefs.md | — | — |
-| caffee-wio-reef | Coral reefs — Western Indian Ocean | appendix | researched — researched/coral-reefs.md | — | — |
+| xisha-islands | Coral reefs — South China Sea | 1 | researched — researched/coral-reefs.md | rejected (access) — verified/coral-reefs.md (no supplementary exists; diet matrix never published; revisit only if authors deposit the EwE model) | — |
+| uvea-atoll | Coral reefs — New Caledonia lagoon | 1 | researched — researched/coral-reefs.md | verified — verified/coral-reefs.md (matrix: open PDF Appendix B, 25×25 diet matrix, 25 groups) | — |
+| french-frigate-shoals | Coral reefs — NW Hawaiian Islands | 1 | researched — researched/coral-reefs.md | verified — verified/coral-reefs.md (matrix: Table 1 in open PDF, 15 groups, weighted diet %) | — |
+| la-parguera | Coral reefs — Caribbean (Puerto Rico) | 1 | researched — researched/coral-reefs.md | rejected (access) — verified/coral-reefs.md (Tables A7/A8 verified to exist but walled: BioOne bot-block / UPR login) | — |
+| banco-chinchorro | Coral reefs — Caribbean (Mexico) | 1 | researched — researched/coral-reefs.md | rejected (access) — verified/coral-reefs.md (electronic appendices D–G verified real but unobtainable; publisher supplement link dead) | — |
+| la-parguera (blocked) | Coral reefs — Caribbean (Puerto Rico) | 1 | — | blocked — revisit with BioOne/library access: appendix Tables A7/A8 at DOI 10.18475/cjos.v45i2.a17 | — |
+| banco-chinchorro (blocked) | Coral reefs — Caribbean (Mexico) | 1 | — | blocked — revisit via author request (rzf39259@cucba.udg.mx) or if akjournals restores supplement hosting: App. D Tables D3–D7 | — |
+| global-reef-fish-webs | Coral reefs — six regions (Pozas-Schacre 2021) | 2 | researched — researched/coral-reefs.md | verified (spot check) — verified/coral-reefs.md (Zenodo 5341340 downloaded & parsed; per-region links corrected 491–883) | — |
+| west-hawaii-reefs | Coral reefs — Hawai'i | 2 | researched — researched/coral-reefs.md | verified (spot check) — verified/coral-reefs.md (Dryad 4sh45 EcopathInputData.xlsx contains diet matrix per manifest; promotes to Tier 1 — open xlsx before building) | — |
+| danajon-reef | Coral reefs — Philippines | 2 | researched — researched/coral-reefs.md | verified (spot check) — verified/coral-reefs.md (DOI 10.1016/j.jmarsys.2014.05.014; EcoBase model 711: 37 groups + 17 fleets; matrix unopened — paywalled) | — |
+| opitz-caribbean-reef | Coral reefs — Caribbean (regional synthesis) | 2 | researched — researched/coral-reefs.md | verified (spot check) — verified/coral-reefs.md (Dryad 1mv20r6 matrix parsed: 249×249 binary, 3,313 links) | — |
+| moorea-metabarcoding | Coral reefs — French Polynesia | 2 (high-curation-risk) | researched — researched/coral-reefs.md | verified (spot check) — verified/coral-reefs.md (Dryad t7pd371 otu_table.csv; 22 spp × 4,341 OTUs exact) | — |
+| roopnarine-greater-antilles | Coral reefs — Caribbean (Cayman/Cuba/Jamaica) | 2 | researched — researched/coral-reefs.md | verified (spot check) — verified/coral-reefs.md (Dryad c213h: 3× 265×265 matrices + guild key; Mangal 180 mirror) | — |
+| moorea-tiahura | Coral reefs — French Polynesia | appendix | researched — researched/coral-reefs.md | confirmed (record only) — verified/coral-reefs.md (citation exact; paywalled) | — |
+| gbr-gribble-models | Coral reefs — Great Barrier Reef | appendix | researched — researched/coral-reefs.md | confirmed (record only) — verified/coral-reefs.md (citations completed; diet matrix in no open document) | — |
+| st-martin-island | Coral reefs — Caribbean (classic) | appendix (inaccessible) | researched — researched/coral-reefs.md | confirmed (record only; inaccessible) — verified/coral-reefs.md (Ecology 74(4):1216–1233, 44-species island web; absence re-verified) | — |
+| takapoto-planktonic | Coral reefs — French Polynesia (planktonic only) | appendix | researched — researched/coral-reefs.md | confirmed (record only) — verified/coral-reefs.md (NetIndices Takapoto verified; 2001 ALR companion citation corrected to Niquil et al.) | — |
+| caffee-wio-reef | Coral reefs — Western Indian Ocean | appendix | researched — researched/coral-reefs.md | confirmed (record only) — verified/coral-reefs.md (Ecol. Modelling 263:326–348; 27 groups; suppl. Table s.1) | — |
 | coachella-valley | Desert — Sonoran (Coachella Valley, USA) | 1 | researched — researched/desert.md | — | — |
 | namib-fog-oasis | Desert — Namib dunes, Namibia | 1 | researched — researched/desert.md | — | — |
 | gulf-of-california-islands | Desert — Gulf of California islands, Mexico | 2 (high-curation-risk) | researched — researched/desert.md | — | — |
