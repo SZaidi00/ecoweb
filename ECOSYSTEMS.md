@@ -288,15 +288,15 @@ For every candidate, record:
 | lake-turkana | Africa — Kenyan desert lake (ECOPATH II) | appendix (biome-saturation gate) | researched — researched/africa.md | confirmed (record only) — verified/africa.md (ICLARM CP 26 pp. 116–123, exact title) | — |
 | gulf-of-guinea-shelf | Africa — Gulf of Guinea shelf (Ecopath) | appendix (access unclear) | researched — researched/africa.md | confirmed (record only) — verified/africa.md (EcoBase IDs 388/408 not re-verified; gated by saturation/thin metadata) | — |
 | okavango-delta (blocked) | Africa — Botswana Okavango via Bokhutlo 2021 | 1 | — | blocked — open isotope/mixing-model data (Environ. Biol. Fishes 104:1303–1319, OA); links literature-inferred — revisit only alongside a modeled/composite badge decision | — |
-| karnataka-arabian-sea | Asia — SW India shelf (Ecopath, 24 groups) | 1 | researched — researched/asia.md | — | — |
-| pearl-river-estuary | Asia — South China megacity estuary (Ecopath) | 1 | researched — researched/asia.md | — | — |
-| east-china-sea | Asia — East China Sea shelf (Ecopath) | 2 | researched — researched/asia.md | — | — |
-| gulf-of-thailand | Asia — Gulf of Thailand pre-trawl baseline (Ecopath) | 2 | researched — researched/asia.md | — | — |
-| java-sea | Asia — N coast Central Java Sea (Ecopath) | 2 | researched — researched/asia.md | — | — |
-| persian-gulf | Asia — N Persian Gulf, Iran (Ecopath, open) | 2 | researched — researched/asia.md | — | — |
-| lake-baiyangdian | Asia — N China shallow lake, 5-period webs | appendix (biome-saturation gate) | researched — researched/asia.md | — | — |
-| sea-of-oman-reef | Asia — Oman artificial reef (Ecopath, open) | appendix (scope) | researched — researched/asia.md | — | — |
-| sri-lanka-coast | Asia — Sri Lanka coastal (Ecopath) | appendix (access unclear) | researched — researched/asia.md | — | — |
+| karnataka-arabian-sea | Asia — SW India shelf (Ecopath, 24 groups) | 1 | researched — researched/asia.md | verified (corrected) — verified/asia.md (matrix: IJMS 38(1):69–76 open PDF Table 3 diet matrix, 24 groups; Bull. 51 full text eprints/3945; EcoBase 574; "17-fold oil sardine" story stat unverified — use documented boom–bust) | — |
+| pearl-river-estuary | Asia — South China megacity estuary (Ecopath) | 1 | researched — researched/asia.md | verified (corrected) — verified/asia.md (matrix: Table 2 diet matrix in open Duan et al. 2008 PDF / OCM 52(7):359–367; 26 groups 1997–99; EcoBase 548; 1981/1998 twin models Ecol. Model. 220:2802–2818, open mirror) | — |
+| east-china-sea | Asia — East China Sea shelf (Ecopath) | 2 | researched — researched/asia.md | verified (spot check; corrected) — verified/asia.md (citation: Progr. Nat. Sci. 19(10):1271–1280, DOI 10.1016/j.pnsc.2009.03.003 — not Acta Oceanol. Sin.; EcoBase 440; diet matrix unopened, paywalled) | — |
+| gulf-of-thailand | Asia — Gulf of Thailand pre-trawl baseline (Ecopath) | 2 | researched — researched/asia.md | verified (spot check) — verified/asia.md (J. Fish Biol. 53(Suppl. A):128–142, DOI 10.1111/j.1095-8649.1998.tb01023.x; EcoBase 56 = 1963–64 model; matrix via EcoBase, unopened) | — |
+| java-sea | Asia — N coast Central Java Sea (Ecopath) | 2 | researched — researched/asia.md | verified (spot check; corrected) — verified/asia.md (matrix: Nurhakim 2003 WorldFish CP 67 open PDF Table 3 diet matrix, 27 groups; "Buchary 1999 report" conflation corrected — Buchary is a separate UBC thesis, EcoBase Buchary_1974_JavaSea) | — |
+| persian-gulf | Asia — N Persian Gulf, Iran (Ecopath, open) | 2 | researched — researched/asia.md | verified (spot check; corrected — is northern OMAN Sea, rename) — verified/asia.md (matrix: Tajzadeh-Namin et al. 2020 IJFS 19(6):2804–2823 open PDF Table 3, 16 groups, pedigree 0.78; correct pin ~25.3N 60.6E) | — |
+| lake-baiyangdian | Asia — N China shallow lake, 5-period webs | appendix (biome-saturation gate) | researched — researched/asia.md | confirmed (record only; corrected) — verified/asia.md (Yang et al. 2022 Front. Environ. Sci. 10:987600 — first author Yang, not "Wang") | — |
+| sea-of-oman-reef | Asia — Oman artificial reef (Ecopath, open) | appendix (scope) | researched — researched/asia.md | confirmed (record only) — verified/asia.md (MDPI Sustainability 15(24):16574, 2023) | — |
+| sri-lanka-coast | Asia — Sri Lanka coastal (Ecopath) | appendix (access unclear) | researched — researched/asia.md | confirmed (record only; corrected) — verified/asia.md (Haputhantri, Villanueva & Moreau 2008, Estuar. Coast. Shelf Sci.; EcoBase 344 = Sri Lanka coast 2000) | — |
 | santa-barbara-kelp-forest | North America — California kelp forest (Scientific Data, open) | 1 | researched — researched/north-america.md | — | — |
 | narragansett-bay | North America — Rhode Island estuary (Ecopath, 2 periods) | 2 | researched — researched/north-america.md | — | — |
 | sanak-intertidal | North America — Aleutian intertidal (humans-in-web) | 2 | researched — researched/north-america.md | — | — |
