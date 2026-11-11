@@ -305,11 +305,11 @@ For every candidate, record:
 | california-intertidal-parasite-web | North America — California rocky intertidal (1,809 nodes) | appendix (aggregation cost) | researched — researched/north-america.md | — | — |
 | weeks-bay | North America — Alabama estuary (seasonal Ecopath) | appendix (provenance) | researched — researched/north-america.md | — | — |
 | puget-sound | North America — Washington inland sea (Ecopath) | appendix (geography) | researched — researched/north-america.md | — | — |
-| barents-sea | Arctic marine — Barents Sea (Ecopath, cod–capelin cycle) | 1 | researched — researched/arctic-marine.md | — | — |
-| eastern-bering-sea | Arctic marine — E. Bering Sea shelf (Ecopath, pollock) | 2 | researched — researched/arctic-marine.md | — | — |
-| hudson-bay | Arctic marine — Hudson Bay (Ecopath, ice-algae regime shift) | 2 | researched — researched/arctic-marine.md | — | — |
-| west-greenland-shelf | Arctic marine — West Greenland (Ecopath, post-cod regime) | 2 | researched — researched/arctic-marine.md | — | — |
-| beaufort-sea | Arctic marine — Beaufort Sea (EwE 1970–2014, ice dependence) | 2 | researched — researched/arctic-marine.md | — | — |
-| eastern-chukchi-sea | Arctic marine — E. Chukchi Sea (Ecopath, benthic-dominated) | 2 | researched — researched/arctic-marine.md | — | — |
-| baffin-bay-coastal | Arctic marine — Baffin Bay (Ecopath tech report, co-created) | appendix (provenance/preliminary) | researched — researched/arctic-marine.md | — | — |
-| western-bering-sea | Arctic marine — W. Bering Sea (Ecopath comparison) | appendix (geography/overlap) | researched — researched/arctic-marine.md | — | — |
+| barents-sea | Arctic marine — Barents Sea (Ecopath, cod–capelin cycle) | 1 | researched — researched/arctic-marine.md | verified (corrected) — verified/arctic-marine.md (matrices: CEFAS TR117 Table 4/Table 8; Pedersen 2021 Data Sheet 15 Part C, 1950 model; ice algae requires 2021 source) | — |
+| eastern-bering-sea | Arctic marine — E. Bering Sea shelf (Ecopath, pollock) | 2 | researched — researched/arctic-marine.md | verified (spot check; corrected) — verified/arctic-marine.md (TM-178 Tables C4–C26; earlier model 38 groups, 1979–85) | — |
+| hudson-bay | Arctic marine — Hudson Bay (Ecopath, ice-algae regime shift) | 2 | researched — researched/arctic-marine.md | verified (spot check; corrected) — verified/arctic-marine.md (40 groups; Part I supplement S.1 diet percentages) | — |
+| west-greenland-shelf | Arctic marine — West Greenland (Ecopath, post-cod regime) | 2 | researched — researched/arctic-marine.md | verified (spot check; corrected) — verified/arctic-marine.md (2001 FCRR 9(4), Table 2 p. 117 / EcoBase 168; 21 groups + detritus) | — |
+| beaufort-sea | Arctic marine — Beaufort Sea (EwE 1970–2014, ice dependence) | 2 | researched — researched/arctic-marine.md | verified (spot check; corrected) — verified/arctic-marine.md (2018 USF technical report; 36 groups; matrix unconfirmed) | — |
+| eastern-chukchi-sea | Arctic marine — E. Chukchi Sea (Ecopath, benthic-dominated) | 2 | researched — researched/arctic-marine.md | verified (spot check; corrected) — verified/arctic-marine.md (TM-318 Appendix A1 pp. 165–172; 57 groups) | — |
+| baffin-bay-coastal | Arctic marine — Baffin Bay (Ecopath tech report, co-created) | appendix (provenance/preliminary) | researched — researched/arctic-marine.md | verified (record only; corrected) — verified/arctic-marine.md (2023 report + peer-reviewed Elementa article + model repo; co-creation/base-model claims corrected) | — |
+| western-bering-sea | Arctic marine — W. Bering Sea (Ecopath comparison) | appendix (geography/overlap) | researched — researched/arctic-marine.md | verified (record only; corrected) — verified/arctic-marine.md (2002 TM-130; 36/48 groups, diet Tables B5/B6) | — |
