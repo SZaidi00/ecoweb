@@ -1,0 +1,18 @@
+{
+  "slug": "small-phytoplankton",
+  "name": "Small phytoplankton",
+  "kind": "functional-group",
+  "description": "Microscopic drifting algae smaller than 10 micrometres - the grass of the upwelling-driven sea, blooming where winds draw deep nutrients to the surface. Functional group aggregating the source's small-phytoplankton compartment (the source split phytoplankton by cell size, after Probyn 1992, to model upwelling effects on the food web).",
+  "sourceWeb": "southern-benguela",
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "phytoplankton-1",
+      "displayName": "Small phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

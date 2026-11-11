@@ -1,0 +1,18 @@
+{
+  "slug": "other-seabirds",
+  "name": "Other seabirds",
+  "kind": "functional-group",
+  "description": "The rest of the seabird cast, above all the Cape cormorant (Phalacrocorax capensis) - itself Endangered and a specialist on anchovy - plus gulls, terns and other birds. Functional group pooling the source's Cape-cormorant and other-seabirds compartments; the source's other-seabirds group takes a quarter of its diet from outside the modelled web (discards and carrion), so this node's diet weights sum to 0.875.",
+  "sourceWeb": "southern-benguela",
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "other-seabirds",
+      "displayName": "Other seabirds",
+      "kind": "functional-group",
+      "trophicLevel": 3.83
+    }
+  ]
+}

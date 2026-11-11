@@ -1,0 +1,24 @@
+{
+  "slug": "horse-mackerel",
+  "name": "Horse mackerel",
+  "kind": "life-stage-group",
+  "description": "Cape horse mackerel (Trachurus trachurus capensis), a deep-bodied schooling carangid. Life-stage group of the source's juvenile (under 2 years) and adult (2 years and older) compartments: juveniles eat zooplankton while adults turn to fish and squid, so the two stanzas were measured apart but are pooled here to fit the 25-node ceiling.",
+  "sourceWeb": "southern-benguela",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Trachurus_trachurus"
+  },
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "horse-mackerel",
+      "displayName": "Horse mackerel",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.69,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Trachurus_trachurus"
+      }
+    }
+  ]
+}

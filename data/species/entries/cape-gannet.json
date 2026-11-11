@@ -1,0 +1,24 @@
+{
+  "slug": "cape-gannet",
+  "name": "Cape gannet",
+  "kind": "species",
+  "description": "Cape gannet (Morus capensis), tracked as its own compartment by the source - and listed as Endangered. It plunge-dives for anchovy and sardine and is even more dependent on the small pelagics than the penguin; its largest colonies are on the islands off this coast.",
+  "sourceWeb": "southern-benguela",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Cape_gannet"
+  },
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "cape-gannet",
+      "displayName": "Cape gannet",
+      "kind": "species",
+      "trophicLevel": 4.41,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Cape_gannet"
+      }
+    }
+  ]
+}

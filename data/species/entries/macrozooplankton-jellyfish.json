@@ -1,0 +1,18 @@
+{
+  "slug": "macrozooplankton-jellyfish",
+  "name": "Macrozooplankton & jellyfish",
+  "kind": "functional-group",
+  "description": "Large drifting zooplankton (2-20 mm) - krill, amphipods and their kin - together with jellyfish. Functional group pooling the source's macrozooplankton and gelatinous-zooplankton compartments; the source measured them separately (jellyfish feed a step higher, on other zooplankton), but both are large-bodied drifters eaten by fish and seabirds, so they are pooled here to fit the 25-node ceiling.",
+  "sourceWeb": "southern-benguela",
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "macrozooplankton",
+      "displayName": "Macrozooplankton & jellyfish",
+      "kind": "functional-group",
+      "trophicLevel": 3.07
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "tuna-swordfish",
+  "name": "Tuna & swordfish",
+  "kind": "functional-group",
+  "description": "The open ocean's visiting giants: tunas (Thunnus spp.), Atlantic bonito (Sarda sarda) and swordfish, named 'Tuna & Swordfish' in the source's diet matrix (Table 1 lists the tuna and bonito species). Functional group aggregating the source's single large-tuna compartment; it imports a tiny fraction (0.6%) of its diet from beyond the modelled system, so its diet weights here sum to 0.994.",
+  "sourceWeb": "southern-benguela",
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "tuna-swordfish",
+      "displayName": "Tuna & swordfish",
+      "kind": "functional-group",
+      "trophicLevel": 4.61
+    }
+  ]
+}

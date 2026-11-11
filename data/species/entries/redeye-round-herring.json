@@ -1,0 +1,18 @@
+{
+  "slug": "redeye-round-herring",
+  "name": "Redeye round herring",
+  "kind": "species",
+  "description": "Redeye round herring (Etrumeus whiteheadii), tracked as its own compartment by the source. A small clupeid that feeds on zooplankton and small fish - the third small pelagic, less famed than anchovy and sardine but eaten by much the same cast of predators.",
+  "sourceWeb": "southern-benguela",
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "redeye",
+      "displayName": "Redeye round herring",
+      "kind": "species",
+      "trophicLevel": 3.66
+    }
+  ]
+}

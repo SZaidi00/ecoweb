@@ -24,6 +24,15 @@
       "trophicLevel": 1.0
     },
     {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    },
+    {
       "web": "tapajos-river",
       "webName": "Tapaj\u00f3s River",
       "biome": "freshwater",

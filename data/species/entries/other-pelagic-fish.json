@@ -1,0 +1,18 @@
+{
+  "slug": "other-pelagic-fish",
+  "name": "Other pelagic fish",
+  "kind": "functional-group",
+  "description": "Small midwater fishes that make a living on zooplankton: gobies and other small pelagics, chub mackerel (Scomber japonicus), lanternfish (Lampanyctodes hectoris) and lightfish (Maurolicus muelleri). Functional group pooling these four source compartments because they feed in the same way in the source matrix; the source's earlier models pooled lanternfish and lightfish together the same way (as 'mesopelagics').",
+  "sourceWeb": "southern-benguela",
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "other-pelagic-fish",
+      "displayName": "Other pelagic fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.77
+    }
+  ]
+}

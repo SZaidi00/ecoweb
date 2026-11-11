@@ -1,0 +1,24 @@
+{
+  "slug": "snoek",
+  "name": "Snoek",
+  "kind": "species",
+  "description": "Snoek (Thyrsites atun), tracked as its own compartment by the source. A long, snake-like predatory fish and a mainstay of the South African hand-line and gill-net fisheries - a major predator of anchovy in this web, eaten by little else.",
+  "sourceWeb": "southern-benguela",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Snoek"
+  },
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "snoek",
+      "displayName": "Snoek",
+      "kind": "species",
+      "trophicLevel": 4.41,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Snoek"
+      }
+    }
+  ]
+}

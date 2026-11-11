@@ -1,0 +1,18 @@
+{
+  "slug": "large-phytoplankton",
+  "name": "Large phytoplankton",
+  "kind": "functional-group",
+  "description": "Larger drifting algae (10 micrometres and bigger), including the diatoms that dominate productive upwelling waters. Functional group aggregating the source's large-phytoplankton compartment, split from small phytoplankton by cell size (after Probyn 1992); the preferred food of larger zooplankton.",
+  "sourceWeb": "southern-benguela",
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "phytoplankton-2",
+      "displayName": "Large phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

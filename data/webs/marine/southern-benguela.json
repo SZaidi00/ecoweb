@@ -1,0 +1,1159 @@
+{
+  "meta": {
+    "id": "southern-benguela",
+    "name": "Southern Benguela",
+    "location": "Southern Benguela upwelling system, South Africa (Orange River mouth to East London)",
+    "biome": "marine",
+    "lat": -33.0,
+    "lng": 17.5,
+    "provenance": "empirical",
+    "tagline": "Upwelling-powered seas where anchovy and sardine booms feed penguins, gannets and hake",
+    "citations": [
+      "Shannon, L.J., Ortega-Cisneros, K., Lamont, T., Winker, H., Crawford, R., Jarre, A. & Coll, M. (2020). Exploring temporal variability in the southern Benguela ecosystem over the past four decades using a time-dynamic ecosystem model. Frontiers in Marine Science 7:540. https://doi.org/10.3389/fmars.2020.00540",
+      "Shannon, L.J. et al. (2020). Supplementary material (Data Sheet 1: model parameterisation and diet tables S1-S8, including the Table S4 diet-composition matrix) to the above article, hosted on figshare. https://doi.org/10.3389/fmars.2020.00540.s001"
+    ],
+    "sourceUrl": "https://doi.org/10.3389/fmars.2020.00540",
+    "licenseNote": "Structure and diet composition are from Shannon et al. (2020, Frontiers in Marine Science 7:540), specifically the 49-compartment Ecopath model of the Southern Benguela in 1978 as published in the paper's figshare supplement (DOI 10.3389/fmars.2020.00540.s001): Table S4 (diet-composition matrix, transcribed in full and verified - every predator column sums to 1 plus its documented import), Table S2 (species-to-group allocation), and main-text Table 1 (group definitions) and Table 2 (balanced parameters). Curation and pooling: the 49 published compartments were pooled to 25 nodes - microzooplankton with mesozooplankton into small-zooplankton, macrozooplankton with gelatinous zooplankton into macrozooplankton, meiobenthos with macrobenthos and both rock-lobster compartments into benthic-invertebrates, juvenile with adult sardine into sardine, other-small-pelagics with chub-mackerel, lanternfish and lightfish into other-pelagic-fish (earlier models pooled the mesopelagics the same way), juvenile with adult horse-mackerel into horse-mackerel, the five linefish compartments (large and medium sparids, sciaenids, yellowtail, other linefish) into linefish (earlier models pooled them as 'other large pelagics'), chokka-squid with other-cephalopods into squid, the two stanzas of each hake species into one node per species (shallow-water Merluccius capensis, deep-water M. paradoxus), mullet with both demersal compartments and Agulhas sole into demersal-fish, the three chondrichthyan compartments into sharks-rays, seals with cetaceans into marine-mammals, and Cape-cormorant with other-seabirds into other-seabirds - each pooling is also stated in the node's description. Anchovy recruits and spawners, sardine, redeye, snoek, tuna-and-swordfish, and the African penguin and Cape gannet map one-to-one onto a source compartment (anchovy as two life-stage nodes, as the source modelled it). Edge weights were derived from the published diet matrix after pooling: for prey pools the weight is the sum of the source diet fractions of all prey in the prey pool for that source predator; for predator nodes pooling several source compartments the component compartments' fractions are averaged (Ecopath-style aggregation, so a pooled predator's weights still sum to approximately 1); rounded to 3 decimals. Within-pool predation (e.g. large hake eating small hake, jellyfish eating macrozooplankton) is omitted as self-loops, so some pooled predators' weights sum to less than 1. Diet imports from outside the model: the source's tuna-and-swordfish compartment imports 0.006 of its diet (its weights sum to 0.994), and the other-seabirds compartment imports 0.25, so the pooled other-seabirds node's weights sum to 0.875 after averaging with the Cape-cormorant compartment. Trophic levels were recomputed from the published diet matrix after pooling by solving the Ecopath trophic-level equations (TL_i = 1 + sum_j w_ji * TL_j, producers and detritus at TL 1), including within-pool flows; the resulting values match the source's published balanced trophic levels (main-text Table 2) to within about 0.2 for every node except other-seabirds (3.83 vs 4.54 published, because the imported fraction of its diet is outside the modelled web). Ecopath diet compositions are model-balanced estimates that are partly literature-informed. Article and supplement are open access under CC BY. Reuse requires citing Shannon et al. (2020).",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-11-11"
+  },
+  "nodes": [
+    {
+      "id": "phytoplankton-1",
+      "displayName": "Small phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Microscopic drifting algae smaller than 10 micrometres - the grass of the upwelling-driven sea, blooming where winds draw deep nutrients to the surface. Functional group aggregating the source's small-phytoplankton compartment (the source split phytoplankton by cell size, after Probyn 1992, to model upwelling effects on the food web).",
+      "layout": {
+        "x": 42,
+        "y": 4
+      }
+    },
+    {
+      "id": "phytoplankton-2",
+      "displayName": "Large phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Larger drifting algae (10 micrometres and bigger), including the diatoms that dominate productive upwelling waters. Functional group aggregating the source's large-phytoplankton compartment, split from small phytoplankton by cell size (after Probyn 1992); the preferred food of larger zooplankton.",
+      "layout": {
+        "x": 60,
+        "y": 4
+      }
+    },
+    {
+      "id": "benthic-producers",
+      "displayName": "Benthic producers",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Seaweeds and seagrasses growing on the shallow shelf and rocky grounds. Functional group aggregating the source's single benthic-producers compartment; eaten by sea urchins, abalone and other grazers in the source system, and here by the pooled benthic invertebrates.",
+      "layout": {
+        "x": 12,
+        "y": 6
+      }
+    },
+    {
+      "id": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Dead organic matter - fallen plankton, faeces and decaying bodies - raining onto the shelf and recycling through the benthic food web. Functional group pooling the source's single detritus compartment.",
+      "layout": {
+        "x": 78,
+        "y": 6
+      }
+    },
+    {
+      "id": "small-zooplankton",
+      "displayName": "Small zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.38,
+      "functionalRole": "primary-consumer",
+      "description": "The tiny grazing animals of the open water: microzooplankton (2-200 micrometres) and mesozooplankton (200-2000 micrometres) such as copepods. Functional group pooling the source's microzooplankton and mesozooplankton compartments, which were measured separately but feed on phytoplankton and are eaten by the same predators; pooled to bring the 49-compartment model within this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 50,
+        "y": 20
+      }
+    },
+    {
+      "id": "macrozooplankton",
+      "displayName": "Macrozooplankton & jellyfish",
+      "kind": "functional-group",
+      "trophicLevel": 3.07,
+      "functionalRole": "intermediate-consumer",
+      "description": "Large drifting zooplankton (2-20 mm) - krill, amphipods and their kin - together with jellyfish. Functional group pooling the source's macrozooplankton and gelatinous-zooplankton compartments; the source measured them separately (jellyfish feed a step higher, on other zooplankton), but both are large-bodied drifters eaten by fish and seabirds, so they are pooled here to fit the 25-node ceiling.",
+      "layout": {
+        "x": 68,
+        "y": 32
+      }
+    },
+    {
+      "id": "benthic-invertebrates",
+      "displayName": "Benthic invertebrates",
+      "kind": "functional-group",
+      "trophicLevel": 2.36,
+      "functionalRole": "primary-consumer",
+      "description": "The shelled and creeping life of the seafloor: meiobenthos (minute worms and crustaceans), macrobenthos (clams, worms, crabs, sea cucumbers) and both rock lobsters. Functional group pooling the source's meiobenthos, macrobenthos, West Coast rock lobster (Jasus lalandii) and South Coast rock lobster (Panulirus homarus) compartments - the benthic invertebrate guild that turns detritus and benthic algae into food for fish; pooled to fit the 25-node ceiling.",
+      "layout": {
+        "x": 16,
+        "y": 22
+      }
+    },
+    {
+      "id": "anchovy-recruits",
+      "displayName": "Anchovy (recruits)",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.69,
+      "functionalRole": "intermediate-consumer",
+      "description": "Young Cape anchovy (Engraulis encrasicolus) in their first year - the recruit stanza of the source model's two-stanza anchovy. Recruits filter small phytoplankton and microzooplankton low in the food web, and in turn are the single most important prey of seabirds, snoek, hake and seals. Life-stage group of the source's recruit compartment - a single measured stanza, not an aggregate.",
+      "layout": {
+        "x": 36,
+        "y": 40
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/European_anchovy"
+      }
+    },
+    {
+      "id": "anchovy-spawners",
+      "displayName": "Anchovy (adults)",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.54,
+      "functionalRole": "intermediate-consumer",
+      "description": "Adult Cape anchovy (Engraulis encrasicolus), one year and older - the spawning stock. Adults feed a step higher than recruits, on larger zooplankton, and are preyed on by snoek, hake, seabirds and seals. Life-stage group of the source's spawner compartment - a single measured stanza, not an aggregate.",
+      "layout": {
+        "x": 44,
+        "y": 52
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/European_anchovy"
+      }
+    },
+    {
+      "id": "sardine",
+      "displayName": "Sardine",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.84,
+      "functionalRole": "intermediate-consumer",
+      "description": "The South African sardine (Sardinops sagax), the other great small pelagic of the upwelling system, famous for its vast shoals and boom-and-bust fortunes. Life-stage group of the source's juvenile and adult sardine compartments, pooled into one node because the two stanzas feed on the same plankton prey; sardine numbers swing with the climate and everything from gannets to fishermen feels it.",
+      "layout": {
+        "x": 56,
+        "y": 42
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Sardinops_sagax"
+      }
+    },
+    {
+      "id": "redeye",
+      "displayName": "Redeye round herring",
+      "kind": "species",
+      "trophicLevel": 3.66,
+      "functionalRole": "intermediate-consumer",
+      "description": "Redeye round herring (Etrumeus whiteheadii), tracked as its own compartment by the source. A small clupeid that feeds on zooplankton and small fish - the third small pelagic, less famed than anchovy and sardine but eaten by much the same cast of predators.",
+      "layout": {
+        "x": 64,
+        "y": 46
+      }
+    },
+    {
+      "id": "other-pelagic-fish",
+      "displayName": "Other pelagic fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.77,
+      "functionalRole": "intermediate-consumer",
+      "description": "Small midwater fishes that make a living on zooplankton: gobies and other small pelagics, chub mackerel (Scomber japonicus), lanternfish (Lampanyctodes hectoris) and lightfish (Maurolicus muelleri). Functional group pooling these four source compartments because they feed in the same way in the source matrix; the source's earlier models pooled lanternfish and lightfish together the same way (as 'mesopelagics').",
+      "layout": {
+        "x": 72,
+        "y": 56
+      }
+    },
+    {
+      "id": "horse-mackerel",
+      "displayName": "Horse mackerel",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.69,
+      "functionalRole": "intermediate-consumer",
+      "description": "Cape horse mackerel (Trachurus trachurus capensis), a deep-bodied schooling carangid. Life-stage group of the source's juvenile (under 2 years) and adult (2 years and older) compartments: juveniles eat zooplankton while adults turn to fish and squid, so the two stanzas were measured apart but are pooled here to fit the 25-node ceiling.",
+      "layout": {
+        "x": 62,
+        "y": 62
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Trachurus_trachurus"
+      }
+    },
+    {
+      "id": "snoek",
+      "displayName": "Snoek",
+      "kind": "species",
+      "trophicLevel": 4.41,
+      "functionalRole": "top-consumer",
+      "description": "Snoek (Thyrsites atun), tracked as its own compartment by the source. A long, snake-like predatory fish and a mainstay of the South African hand-line and gill-net fisheries - a major predator of anchovy in this web, eaten by little else.",
+      "layout": {
+        "x": 34,
+        "y": 66
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Snoek"
+      }
+    },
+    {
+      "id": "tuna-swordfish",
+      "displayName": "Tuna & swordfish",
+      "kind": "functional-group",
+      "trophicLevel": 4.61,
+      "functionalRole": "top-consumer",
+      "description": "The open ocean's visiting giants: tunas (Thunnus spp.), Atlantic bonito (Sarda sarda) and swordfish, named 'Tuna & Swordfish' in the source's diet matrix (Table 1 lists the tuna and bonito species). Functional group aggregating the source's single large-tuna compartment; it imports a tiny fraction (0.6%) of its diet from beyond the modelled system, so its diet weights here sum to 0.994.",
+      "layout": {
+        "x": 84,
+        "y": 90
+      }
+    },
+    {
+      "id": "linefish",
+      "displayName": "Linefish",
+      "kind": "functional-group",
+      "trophicLevel": 4.01,
+      "functionalRole": "intermediate-consumer",
+      "description": "The boat-based hand-line fishery's targets: large and medium sparids (red steenbras, red roman, hottentot and kin), sciaenids (geelbek, silverkob), yellowtail (Seriola lalandii) and other linefish. Functional group pooling the source's five linefish compartments - earlier EwE models of this system pooled them the same way, as 'other large pelagics'. Several were badly overfished in the twentieth century.",
+      "layout": {
+        "x": 52,
+        "y": 68
+      }
+    },
+    {
+      "id": "squid",
+      "displayName": "Squid & octopus",
+      "kind": "functional-group",
+      "trophicLevel": 3.99,
+      "functionalRole": "intermediate-consumer",
+      "description": "Fast-growing cephalopods: the chokka squid (Loligo reynaudii) of the Agulhas Bank jig fishery, plus octopus and other squid. Functional group pooling the source's chokka-squid and other-cephalopods compartments (earlier models pooled them simply as 'cephalopods'); squid are eaten by almost everything large in this web, from hake to seals to tuna.",
+      "layout": {
+        "x": 74,
+        "y": 72
+      }
+    },
+    {
+      "id": "cape-hake-shallow",
+      "displayName": "Shallow-water hake",
+      "kind": "life-stage-group",
+      "trophicLevel": 4.47,
+      "functionalRole": "intermediate-consumer",
+      "description": "Shallow-water Cape hake (Merluccius capensis), the inshore hake of the trawl fishery. Life-stage group of the source's small (under 3 years) and large (3 years and older) stanzas, pooled into one node per species; the deep-water hake is kept as a separate node because the source tracks it as a different species. Hake feed on anchovy, sardine, squid and smaller hake, and are eaten by seals, sharks and bigger hake.",
+      "layout": {
+        "x": 58,
+        "y": 78
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Merluccius_capensis"
+      }
+    },
+    {
+      "id": "cape-hake-deep",
+      "displayName": "Deep-water hake",
+      "kind": "life-stage-group",
+      "trophicLevel": 4.39,
+      "functionalRole": "intermediate-consumer",
+      "description": "Deep-water hake (Merluccius paradoxus), the offshore hake that dominates the catch on the Agulhas Bank. Life-stage group of the source's small and large stanzas of this species, pooled into one node; together the two hakes anchor South Africa's most valuable fishery.",
+      "layout": {
+        "x": 66,
+        "y": 80
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Merluccius_paradoxus"
+      }
+    },
+    {
+      "id": "demersal-fish",
+      "displayName": "Demersal & inshore fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.47,
+      "functionalRole": "intermediate-consumer",
+      "description": "Bottom-living and inshore fishes: mullet (Liza richardsonii), pelagic-feeding demersals (anglerfish, Cape john dory, ribbonfish), benthic-feeding demersals (kingklip, monkfish, gurnards, rattails) and Agulhas sole (Austroglossus pectoralis). Functional group pooling these four source compartments - the guild of fishes that live on or near the seafloor; pooled to fit the 25-node ceiling.",
+      "layout": {
+        "x": 20,
+        "y": 48
+      }
+    },
+    {
+      "id": "sharks-rays",
+      "displayName": "Sharks & rays",
+      "kind": "functional-group",
+      "trophicLevel": 4.63,
+      "functionalRole": "top-consumer",
+      "description": "The seafloor's and open water's cartilaginous predators: pelagic-feeding sharks and skates (copper, blue and mako sharks), benthic-feeding sharks and rays (St Joseph's shark, catsharks, stingrays, soupfin) and the apex great white and six- and seven-gill sharks. Functional group pooling the source's three chondrichthyan compartments; the source measured them by feeding habit, and all three are top predators here, so they are pooled to fit the 25-node ceiling.",
+      "layout": {
+        "x": 28,
+        "y": 82
+      }
+    },
+    {
+      "id": "marine-mammals",
+      "displayName": "Marine mammals",
+      "kind": "functional-group",
+      "trophicLevel": 4.59,
+      "functionalRole": "top-consumer",
+      "description": "Warm-blooded hunters: the Cape fur seal (Arctocephalus pusillus pusillus) and the region's cetaceans (dolphins and whales). Functional group pooling the source's seal and cetacean compartments; the seal dominates the pool and is at the centre of a famous conflict with fishermen over who eats the last anchovy and hake. Both feed on small pelagics, hake and squid, and nothing in the web eats them.",
+      "layout": {
+        "x": 48,
+        "y": 88
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Cape_fur_seal"
+      }
+    },
+    {
+      "id": "african-penguin",
+      "displayName": "African penguin",
+      "kind": "species",
+      "trophicLevel": 4.12,
+      "functionalRole": "top-consumer",
+      "description": "African penguin (Spheniscus demersus), tracked as its own compartment by the source - and listed as Endangered. It feeds almost entirely on anchovy and sardine, so its fortunes rise and fall with the small-pelagic stocks; few colonies remain, all in this ecosystem.",
+      "layout": {
+        "x": 66,
+        "y": 90
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/African_penguin"
+      }
+    },
+    {
+      "id": "cape-gannet",
+      "displayName": "Cape gannet",
+      "kind": "species",
+      "trophicLevel": 4.41,
+      "functionalRole": "top-consumer",
+      "description": "Cape gannet (Morus capensis), tracked as its own compartment by the source - and listed as Endangered. It plunge-dives for anchovy and sardine and is even more dependent on the small pelagics than the penguin; its largest colonies are on the islands off this coast.",
+      "layout": {
+        "x": 76,
+        "y": 86
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Cape_gannet"
+      }
+    },
+    {
+      "id": "other-seabirds",
+      "displayName": "Other seabirds",
+      "kind": "functional-group",
+      "trophicLevel": 3.83,
+      "functionalRole": "top-consumer",
+      "description": "The rest of the seabird cast, above all the Cape cormorant (Phalacrocorax capensis) - itself Endangered and a specialist on anchovy - plus gulls, terns and other birds. Functional group pooling the source's Cape-cormorant and other-seabirds compartments; the source's other-seabirds group takes a quarter of its diet from outside the modelled web (discards and carrion), so this node's diet weights sum to 0.875.",
+      "layout": {
+        "x": 86,
+        "y": 78
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "anchovy-recruits",
+      "predator": "african-penguin",
+      "weight": 0.4
+    },
+    {
+      "prey": "anchovy-spawners",
+      "predator": "african-penguin",
+      "weight": 0.19
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "african-penguin",
+      "weight": 0.02
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "african-penguin",
+      "weight": 0.005
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "african-penguin",
+      "weight": 0.013
+    },
+    {
+      "prey": "redeye",
+      "predator": "african-penguin",
+      "weight": 0.05
+    },
+    {
+      "prey": "sardine",
+      "predator": "african-penguin",
+      "weight": 0.204
+    },
+    {
+      "prey": "snoek",
+      "predator": "african-penguin",
+      "weight": 0.006
+    },
+    {
+      "prey": "squid",
+      "predator": "african-penguin",
+      "weight": 0.112
+    },
+    {
+      "prey": "phytoplankton-1",
+      "predator": "anchovy-recruits",
+      "weight": 0.25
+    },
+    {
+      "prey": "phytoplankton-2",
+      "predator": "anchovy-recruits",
+      "weight": 0.25
+    },
+    {
+      "prey": "small-zooplankton",
+      "predator": "anchovy-recruits",
+      "weight": 0.5
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "anchovy-spawners",
+      "weight": 0.34
+    },
+    {
+      "prey": "phytoplankton-2",
+      "predator": "anchovy-spawners",
+      "weight": 0.05
+    },
+    {
+      "prey": "small-zooplankton",
+      "predator": "anchovy-spawners",
+      "weight": 0.61
+    },
+    {
+      "prey": "benthic-producers",
+      "predator": "benthic-invertebrates",
+      "weight": 0.05
+    },
+    {
+      "prey": "detritus",
+      "predator": "benthic-invertebrates",
+      "weight": 0.688
+    },
+    {
+      "prey": "anchovy-recruits",
+      "predator": "cape-gannet",
+      "weight": 0.064
+    },
+    {
+      "prey": "anchovy-spawners",
+      "predator": "cape-gannet",
+      "weight": 0.2
+    },
+    {
+      "prey": "cape-hake-deep",
+      "predator": "cape-gannet",
+      "weight": 0.08
+    },
+    {
+      "prey": "cape-hake-shallow",
+      "predator": "cape-gannet",
+      "weight": 0.004
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "cape-gannet",
+      "weight": 0.016
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "cape-gannet",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "cape-gannet",
+      "weight": 0.27
+    },
+    {
+      "prey": "redeye",
+      "predator": "cape-gannet",
+      "weight": 0.024
+    },
+    {
+      "prey": "sardine",
+      "predator": "cape-gannet",
+      "weight": 0.32
+    },
+    {
+      "prey": "snoek",
+      "predator": "cape-gannet",
+      "weight": 0.012
+    },
+    {
+      "prey": "anchovy-recruits",
+      "predator": "cape-hake-deep",
+      "weight": 0.042
+    },
+    {
+      "prey": "anchovy-spawners",
+      "predator": "cape-hake-deep",
+      "weight": 0.001
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "cape-hake-deep",
+      "weight": 0.062
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "cape-hake-deep",
+      "weight": 0.512
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "cape-hake-deep",
+      "weight": 0.224
+    },
+    {
+      "prey": "redeye",
+      "predator": "cape-hake-deep",
+      "weight": 0.041
+    },
+    {
+      "prey": "squid",
+      "predator": "cape-hake-deep",
+      "weight": 0.057
+    },
+    {
+      "prey": "anchovy-recruits",
+      "predator": "cape-hake-shallow",
+      "weight": 0.065
+    },
+    {
+      "prey": "anchovy-spawners",
+      "predator": "cape-hake-shallow",
+      "weight": 0.1
+    },
+    {
+      "prey": "cape-hake-deep",
+      "predator": "cape-hake-shallow",
+      "weight": 0.085
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "cape-hake-shallow",
+      "weight": 0.002
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "cape-hake-shallow",
+      "weight": 0.094
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "cape-hake-shallow",
+      "weight": 0.419
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "cape-hake-shallow",
+      "weight": 0.084
+    },
+    {
+      "prey": "redeye",
+      "predator": "cape-hake-shallow",
+      "weight": 0.059
+    },
+    {
+      "prey": "sardine",
+      "predator": "cape-hake-shallow",
+      "weight": 0.004
+    },
+    {
+      "prey": "snoek",
+      "predator": "cape-hake-shallow",
+      "weight": 0.001
+    },
+    {
+      "prey": "squid",
+      "predator": "cape-hake-shallow",
+      "weight": 0.03
+    },
+    {
+      "prey": "anchovy-recruits",
+      "predator": "demersal-fish",
+      "weight": 0.001
+    },
+    {
+      "prey": "anchovy-spawners",
+      "predator": "demersal-fish",
+      "weight": 0.001
+    },
+    {
+      "prey": "benthic-invertebrates",
+      "predator": "demersal-fish",
+      "weight": 0.495
+    },
+    {
+      "prey": "benthic-producers",
+      "predator": "demersal-fish",
+      "weight": 0.037
+    },
+    {
+      "prey": "cape-hake-deep",
+      "predator": "demersal-fish",
+      "weight": 0.007
+    },
+    {
+      "prey": "cape-hake-shallow",
+      "predator": "demersal-fish",
+      "weight": 0.002
+    },
+    {
+      "prey": "detritus",
+      "predator": "demersal-fish",
+      "weight": 0.113
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "demersal-fish",
+      "weight": 0.187
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "demersal-fish",
+      "weight": 0.05
+    },
+    {
+      "prey": "phytoplankton-2",
+      "predator": "demersal-fish",
+      "weight": 0.013
+    },
+    {
+      "prey": "redeye",
+      "predator": "demersal-fish",
+      "weight": 0.034
+    },
+    {
+      "prey": "sharks-rays",
+      "predator": "demersal-fish",
+      "weight": 0.001
+    },
+    {
+      "prey": "small-zooplankton",
+      "predator": "demersal-fish",
+      "weight": 0.005
+    },
+    {
+      "prey": "squid",
+      "predator": "demersal-fish",
+      "weight": 0.01
+    },
+    {
+      "prey": "anchovy-recruits",
+      "predator": "horse-mackerel",
+      "weight": 0.013
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "horse-mackerel",
+      "weight": 0.387
+    },
+    {
+      "prey": "redeye",
+      "predator": "horse-mackerel",
+      "weight": 0.03
+    },
+    {
+      "prey": "small-zooplankton",
+      "predator": "horse-mackerel",
+      "weight": 0.57
+    },
+    {
+      "prey": "anchovy-recruits",
+      "predator": "linefish",
+      "weight": 0.03
+    },
+    {
+      "prey": "anchovy-spawners",
+      "predator": "linefish",
+      "weight": 0.02
+    },
+    {
+      "prey": "benthic-invertebrates",
+      "predator": "linefish",
+      "weight": 0.38
+    },
+    {
+      "prey": "benthic-producers",
+      "predator": "linefish",
+      "weight": 0.02
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "linefish",
+      "weight": 0.16
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "linefish",
+      "weight": 0.06
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "linefish",
+      "weight": 0.08
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "linefish",
+      "weight": 0.06
+    },
+    {
+      "prey": "redeye",
+      "predator": "linefish",
+      "weight": 0.02
+    },
+    {
+      "prey": "sardine",
+      "predator": "linefish",
+      "weight": 0.05
+    },
+    {
+      "prey": "squid",
+      "predator": "linefish",
+      "weight": 0.1
+    },
+    {
+      "prey": "detritus",
+      "predator": "macrozooplankton",
+      "weight": 0.1
+    },
+    {
+      "prey": "phytoplankton-2",
+      "predator": "macrozooplankton",
+      "weight": 0.165
+    },
+    {
+      "prey": "small-zooplankton",
+      "predator": "macrozooplankton",
+      "weight": 0.655
+    },
+    {
+      "prey": "anchovy-recruits",
+      "predator": "marine-mammals",
+      "weight": 0.125
+    },
+    {
+      "prey": "anchovy-spawners",
+      "predator": "marine-mammals",
+      "weight": 0.15
+    },
+    {
+      "prey": "benthic-invertebrates",
+      "predator": "marine-mammals",
+      "weight": 0.027
+    },
+    {
+      "prey": "cape-hake-deep",
+      "predator": "marine-mammals",
+      "weight": 0.072
+    },
+    {
+      "prey": "cape-hake-shallow",
+      "predator": "marine-mammals",
+      "weight": 0.071
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "marine-mammals",
+      "weight": 0.067
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "marine-mammals",
+      "weight": 0.151
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "marine-mammals",
+      "weight": 0.02
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "marine-mammals",
+      "weight": 0.043
+    },
+    {
+      "prey": "redeye",
+      "predator": "marine-mammals",
+      "weight": 0.028
+    },
+    {
+      "prey": "sardine",
+      "predator": "marine-mammals",
+      "weight": 0.039
+    },
+    {
+      "prey": "small-zooplankton",
+      "predator": "marine-mammals",
+      "weight": 0.015
+    },
+    {
+      "prey": "squid",
+      "predator": "marine-mammals",
+      "weight": 0.193
+    },
+    {
+      "prey": "anchovy-recruits",
+      "predator": "other-pelagic-fish",
+      "weight": 0.005
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "other-pelagic-fish",
+      "weight": 0.48
+    },
+    {
+      "prey": "redeye",
+      "predator": "other-pelagic-fish",
+      "weight": 0.003
+    },
+    {
+      "prey": "sardine",
+      "predator": "other-pelagic-fish",
+      "weight": 0.003
+    },
+    {
+      "prey": "small-zooplankton",
+      "predator": "other-pelagic-fish",
+      "weight": 0.473
+    },
+    {
+      "prey": "anchovy-recruits",
+      "predator": "other-seabirds",
+      "weight": 0.364
+    },
+    {
+      "prey": "anchovy-spawners",
+      "predator": "other-seabirds",
+      "weight": 0.157
+    },
+    {
+      "prey": "benthic-invertebrates",
+      "predator": "other-seabirds",
+      "weight": 0.003
+    },
+    {
+      "prey": "cape-hake-deep",
+      "predator": "other-seabirds",
+      "weight": 0.007
+    },
+    {
+      "prey": "cape-hake-shallow",
+      "predator": "other-seabirds",
+      "weight": 0.05
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "other-seabirds",
+      "weight": 0.005
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "other-seabirds",
+      "weight": 0.009
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "other-seabirds",
+      "weight": 0.07
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "other-seabirds",
+      "weight": 0.105
+    },
+    {
+      "prey": "redeye",
+      "predator": "other-seabirds",
+      "weight": 0.011
+    },
+    {
+      "prey": "sardine",
+      "predator": "other-seabirds",
+      "weight": 0.04
+    },
+    {
+      "prey": "small-zooplankton",
+      "predator": "other-seabirds",
+      "weight": 0.002
+    },
+    {
+      "prey": "squid",
+      "predator": "other-seabirds",
+      "weight": 0.052
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "redeye",
+      "weight": 0.4
+    },
+    {
+      "prey": "small-zooplankton",
+      "predator": "redeye",
+      "weight": 0.6
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "sardine",
+      "weight": 0.035
+    },
+    {
+      "prey": "phytoplankton-1",
+      "predator": "sardine",
+      "weight": 0.285
+    },
+    {
+      "prey": "phytoplankton-2",
+      "predator": "sardine",
+      "weight": 0.125
+    },
+    {
+      "prey": "small-zooplankton",
+      "predator": "sardine",
+      "weight": 0.555
+    },
+    {
+      "prey": "anchovy-spawners",
+      "predator": "sharks-rays",
+      "weight": 0.007
+    },
+    {
+      "prey": "benthic-invertebrates",
+      "predator": "sharks-rays",
+      "weight": 0.252
+    },
+    {
+      "prey": "cape-hake-deep",
+      "predator": "sharks-rays",
+      "weight": 0.018
+    },
+    {
+      "prey": "cape-hake-shallow",
+      "predator": "sharks-rays",
+      "weight": 0.018
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "sharks-rays",
+      "weight": 0.139
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "sharks-rays",
+      "weight": 0.042
+    },
+    {
+      "prey": "linefish",
+      "predator": "sharks-rays",
+      "weight": 0.018
+    },
+    {
+      "prey": "marine-mammals",
+      "predator": "sharks-rays",
+      "weight": 0.047
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "sharks-rays",
+      "weight": 0.097
+    },
+    {
+      "prey": "redeye",
+      "predator": "sharks-rays",
+      "weight": 0.016
+    },
+    {
+      "prey": "sardine",
+      "predator": "sharks-rays",
+      "weight": 0.003
+    },
+    {
+      "prey": "snoek",
+      "predator": "sharks-rays",
+      "weight": 0.004
+    },
+    {
+      "prey": "squid",
+      "predator": "sharks-rays",
+      "weight": 0.14
+    },
+    {
+      "prey": "tuna-swordfish",
+      "predator": "sharks-rays",
+      "weight": 0.003
+    },
+    {
+      "prey": "detritus",
+      "predator": "small-zooplankton",
+      "weight": 0.275
+    },
+    {
+      "prey": "phytoplankton-1",
+      "predator": "small-zooplankton",
+      "weight": 0.45
+    },
+    {
+      "prey": "anchovy-recruits",
+      "predator": "snoek",
+      "weight": 0.15
+    },
+    {
+      "prey": "anchovy-spawners",
+      "predator": "snoek",
+      "weight": 0.277
+    },
+    {
+      "prey": "cape-hake-deep",
+      "predator": "snoek",
+      "weight": 0.06
+    },
+    {
+      "prey": "cape-hake-shallow",
+      "predator": "snoek",
+      "weight": 0.02
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "snoek",
+      "weight": 0.11
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "snoek",
+      "weight": 0.011
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "snoek",
+      "weight": 0.17
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "snoek",
+      "weight": 0.052
+    },
+    {
+      "prey": "redeye",
+      "predator": "snoek",
+      "weight": 0.11
+    },
+    {
+      "prey": "sardine",
+      "predator": "snoek",
+      "weight": 0.03
+    },
+    {
+      "prey": "squid",
+      "predator": "snoek",
+      "weight": 0.01
+    },
+    {
+      "prey": "anchovy-recruits",
+      "predator": "squid",
+      "weight": 0.03
+    },
+    {
+      "prey": "benthic-invertebrates",
+      "predator": "squid",
+      "weight": 0.409
+    },
+    {
+      "prey": "cape-hake-deep",
+      "predator": "squid",
+      "weight": 0.044
+    },
+    {
+      "prey": "cape-hake-shallow",
+      "predator": "squid",
+      "weight": 0.046
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "squid",
+      "weight": 0.28
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "squid",
+      "weight": 0.1
+    },
+    {
+      "prey": "redeye",
+      "predator": "squid",
+      "weight": 0.05
+    },
+    {
+      "prey": "sardine",
+      "predator": "squid",
+      "weight": 0.001
+    },
+    {
+      "prey": "small-zooplankton",
+      "predator": "squid",
+      "weight": 0.02
+    },
+    {
+      "prey": "anchovy-recruits",
+      "predator": "tuna-swordfish",
+      "weight": 0.06
+    },
+    {
+      "prey": "anchovy-spawners",
+      "predator": "tuna-swordfish",
+      "weight": 0.2
+    },
+    {
+      "prey": "cape-hake-deep",
+      "predator": "tuna-swordfish",
+      "weight": 0.05
+    },
+    {
+      "prey": "cape-hake-shallow",
+      "predator": "tuna-swordfish",
+      "weight": 0.05
+    },
+    {
+      "prey": "demersal-fish",
+      "predator": "tuna-swordfish",
+      "weight": 0.1
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "tuna-swordfish",
+      "weight": 0.002
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "tuna-swordfish",
+      "weight": 0.15
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "tuna-swordfish",
+      "weight": 0.052
+    },
+    {
+      "prey": "redeye",
+      "predator": "tuna-swordfish",
+      "weight": 0.01
+    },
+    {
+      "prey": "sardine",
+      "predator": "tuna-swordfish",
+      "weight": 0.02
+    },
+    {
+      "prey": "squid",
+      "predator": "tuna-swordfish",
+      "weight": 0.3
+    }
+  ]
+}

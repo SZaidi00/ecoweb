@@ -78,6 +78,17 @@
       "lng": -147.14
     },
     {
+      "id": "southern-benguela",
+      "name": "Southern Benguela",
+      "biome": "marine",
+      "location": "Southern Benguela upwelling system, South Africa (Orange River mouth to East London)",
+      "nodeCount": 25,
+      "provenance": "empirical",
+      "tagline": "Upwelling-powered seas where anchovy and sardine booms feed penguins, gannets and hake",
+      "lat": -33.0,
+      "lng": 17.5
+    },
+    {
       "id": "weddell-sea",
       "name": "Weddell Sea",
       "biome": "marine",

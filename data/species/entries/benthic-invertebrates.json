@@ -1,0 +1,18 @@
+{
+  "slug": "benthic-invertebrates",
+  "name": "Benthic invertebrates",
+  "kind": "functional-group",
+  "description": "The shelled and creeping life of the seafloor: meiobenthos (minute worms and crustaceans), macrobenthos (clams, worms, crabs, sea cucumbers) and both rock lobsters. Functional group pooling the source's meiobenthos, macrobenthos, West Coast rock lobster (Jasus lalandii) and South Coast rock lobster (Panulirus homarus) compartments - the benthic invertebrate guild that turns detritus and benthic algae into food for fish; pooled to fit the 25-node ceiling.",
+  "sourceWeb": "southern-benguela",
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "benthic-invertebrates",
+      "displayName": "Benthic invertebrates",
+      "kind": "functional-group",
+      "trophicLevel": 2.36
+    }
+  ]
+}

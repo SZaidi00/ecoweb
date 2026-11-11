@@ -1,0 +1,18 @@
+{
+  "slug": "sharks-rays",
+  "name": "Sharks & rays",
+  "kind": "functional-group",
+  "description": "The seafloor's and open water's cartilaginous predators: pelagic-feeding sharks and skates (copper, blue and mako sharks), benthic-feeding sharks and rays (St Joseph's shark, catsharks, stingrays, soupfin) and the apex great white and six- and seven-gill sharks. Functional group pooling the source's three chondrichthyan compartments; the source measured them by feeding habit, and all three are top predators here, so they are pooled to fit the 25-node ceiling.",
+  "sourceWeb": "southern-benguela",
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "sharks-rays",
+      "displayName": "Sharks & rays",
+      "kind": "functional-group",
+      "trophicLevel": 4.63
+    }
+  ]
+}

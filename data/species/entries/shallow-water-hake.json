@@ -1,0 +1,24 @@
+{
+  "slug": "shallow-water-hake",
+  "name": "Shallow-water hake",
+  "kind": "life-stage-group",
+  "description": "Shallow-water Cape hake (Merluccius capensis), the inshore hake of the trawl fishery. Life-stage group of the source's small (under 3 years) and large (3 years and older) stanzas, pooled into one node per species; the deep-water hake is kept as a separate node because the source tracks it as a different species. Hake feed on anchovy, sardine, squid and smaller hake, and are eaten by seals, sharks and bigger hake.",
+  "sourceWeb": "southern-benguela",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Merluccius_capensis"
+  },
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "cape-hake-shallow",
+      "displayName": "Shallow-water hake",
+      "kind": "life-stage-group",
+      "trophicLevel": 4.47,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Merluccius_capensis"
+      }
+    }
+  ]
+}

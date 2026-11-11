@@ -1,0 +1,18 @@
+{
+  "slug": "linefish",
+  "name": "Linefish",
+  "kind": "functional-group",
+  "description": "The boat-based hand-line fishery's targets: large and medium sparids (red steenbras, red roman, hottentot and kin), sciaenids (geelbek, silverkob), yellowtail (Seriola lalandii) and other linefish. Functional group pooling the source's five linefish compartments - earlier EwE models of this system pooled them the same way, as 'other large pelagics'. Several were badly overfished in the twentieth century.",
+  "sourceWeb": "southern-benguela",
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "linefish",
+      "displayName": "Linefish",
+      "kind": "functional-group",
+      "trophicLevel": 4.01
+    }
+  ]
+}

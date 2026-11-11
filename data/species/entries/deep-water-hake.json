@@ -1,0 +1,24 @@
+{
+  "slug": "deep-water-hake",
+  "name": "Deep-water hake",
+  "kind": "life-stage-group",
+  "description": "Deep-water hake (Merluccius paradoxus), the offshore hake that dominates the catch on the Agulhas Bank. Life-stage group of the source's small and large stanzas of this species, pooled into one node; together the two hakes anchor South Africa's most valuable fishery.",
+  "sourceWeb": "southern-benguela",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Merluccius_paradoxus"
+  },
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "cape-hake-deep",
+      "displayName": "Deep-water hake",
+      "kind": "life-stage-group",
+      "trophicLevel": 4.39,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Merluccius_paradoxus"
+      }
+    }
+  ]
+}

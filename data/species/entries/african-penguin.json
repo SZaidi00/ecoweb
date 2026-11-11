@@ -1,0 +1,24 @@
+{
+  "slug": "african-penguin",
+  "name": "African penguin",
+  "kind": "species",
+  "description": "African penguin (Spheniscus demersus), tracked as its own compartment by the source - and listed as Endangered. It feeds almost entirely on anchovy and sardine, so its fortunes rise and fall with the small-pelagic stocks; few colonies remain, all in this ecosystem.",
+  "sourceWeb": "southern-benguela",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/African_penguin"
+  },
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "african-penguin",
+      "displayName": "African penguin",
+      "kind": "species",
+      "trophicLevel": 4.12,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/African_penguin"
+      }
+    }
+  ]
+}

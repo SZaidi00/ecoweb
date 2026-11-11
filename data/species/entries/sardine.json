@@ -1,0 +1,24 @@
+{
+  "slug": "sardine",
+  "name": "Sardine",
+  "kind": "life-stage-group",
+  "description": "The South African sardine (Sardinops sagax), the other great small pelagic of the upwelling system, famous for its vast shoals and boom-and-bust fortunes. Life-stage group of the source's juvenile and adult sardine compartments, pooled into one node because the two stanzas feed on the same plankton prey; sardine numbers swing with the climate and everything from gannets to fishermen feels it.",
+  "sourceWeb": "southern-benguela",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sardinops_sagax"
+  },
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "sardine",
+      "displayName": "Sardine",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.84,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Sardinops_sagax"
+      }
+    }
+  ]
+}

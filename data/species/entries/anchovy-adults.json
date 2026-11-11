@@ -1,0 +1,24 @@
+{
+  "slug": "anchovy-adults",
+  "name": "Anchovy (adults)",
+  "kind": "life-stage-group",
+  "description": "Adult Cape anchovy (Engraulis encrasicolus), one year and older - the spawning stock. Adults feed a step higher than recruits, on larger zooplankton, and are preyed on by snoek, hake, seabirds and seals. Life-stage group of the source's spawner compartment - a single measured stanza, not an aggregate.",
+  "sourceWeb": "southern-benguela",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/European_anchovy"
+  },
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "anchovy-spawners",
+      "displayName": "Anchovy (adults)",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.54,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/European_anchovy"
+      }
+    }
+  ]
+}

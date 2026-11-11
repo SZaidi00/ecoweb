@@ -1,0 +1,18 @@
+{
+  "slug": "small-zooplankton",
+  "name": "Small zooplankton",
+  "kind": "functional-group",
+  "description": "The tiny grazing animals of the open water: microzooplankton (2-200 micrometres) and mesozooplankton (200-2000 micrometres) such as copepods. Functional group pooling the source's microzooplankton and mesozooplankton compartments, which were measured separately but feed on phytoplankton and are eaten by the same predators; pooled to bring the 49-compartment model within this atlas's 25-node ceiling.",
+  "sourceWeb": "southern-benguela",
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "small-zooplankton",
+      "displayName": "Small zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.38
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "marine-mammals",
+  "name": "Marine mammals",
+  "kind": "functional-group",
+  "description": "Warm-blooded hunters: the Cape fur seal (Arctocephalus pusillus pusillus) and the region's cetaceans (dolphins and whales). Functional group pooling the source's seal and cetacean compartments; the seal dominates the pool and is at the centre of a famous conflict with fishermen over who eats the last anchovy and hake. Both feed on small pelagics, hake and squid, and nothing in the web eats them.",
+  "sourceWeb": "southern-benguela",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Cape_fur_seal"
+  },
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "marine-mammals",
+      "displayName": "Marine mammals",
+      "kind": "functional-group",
+      "trophicLevel": 4.59,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Cape_fur_seal"
+      }
+    }
+  ]
+}

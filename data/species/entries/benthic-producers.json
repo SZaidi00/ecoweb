@@ -1,0 +1,18 @@
+{
+  "slug": "benthic-producers",
+  "name": "Benthic producers",
+  "kind": "functional-group",
+  "description": "Seaweeds and seagrasses growing on the shallow shelf and rocky grounds. Functional group aggregating the source's single benthic-producers compartment; eaten by sea urchins, abalone and other grazers in the source system, and here by the pooled benthic invertebrates.",
+  "sourceWeb": "southern-benguela",
+  "occurrences": [
+    {
+      "web": "southern-benguela",
+      "webName": "Southern Benguela",
+      "biome": "marine",
+      "node": "benthic-producers",
+      "displayName": "Benthic producers",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}
