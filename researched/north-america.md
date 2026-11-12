@@ -1,6 +1,8 @@
 # Region: North America (continental, estuarine & coastal sweep)
 **Researched:** 2026-10 · **Status:** complete (Stage 1 — awaiting verification)
 
+**Sub-region note (2026-11):** this file's scope is N. American coasts & iconic inland only. Interior coverage moved to approved gap-fill sub-region sweeps: Great Plains interior → `researched/north-america-great-plains.md` (done 2026-11); Mexico & Mesoamerica, Atlantic & Gulf estuaries, Boreal forest & Canadian Shield (pending). Keep new candidates inside these boundaries — Alaskan/tundra → tundra-boreal, sub-Arctic seas → arctic-marine, deserts → desert, Caribbean reefs → coral-reefs.
+
 **Repo context at sweep time:** 9 webs live; North America already has 5 pins (Chesapeake estuary, Little Rock + Tuesday lakes, cypress wetland, shortgrass prairie, PWS marine) — more than any other continent, so geography scores are penalized throughout this sweep. Biome saturation: freshwater 3 (saturated), marine 2, grassland 2, estuary 1, wetland 1. Scope note: Alaskan tundra systems belong to the tundra-boreal sweep (barrow-ibp-tundra); sub-Arctic seas belong to the arctic-marine sweep; Gulf of California islands and Sonoran desert belong to the desert sweep. This sweep covers the continental USA/Canada/Mexico systems not already claimed, with emphasis on the §8 shortlist leads (Yellowstone, Bridge Brook, Sanak, Wyoming cattle web).
 
 **Sweep log:**

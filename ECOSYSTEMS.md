@@ -2,7 +2,7 @@
 
 **Purpose of this document:** Give an agent (human or AI) everything needed to (a) assess the current state of the Food Web Explorer repo, and (b) conduct systematic, repeatable research to find future ecosystems worth adding.
 
-**How to use:** Read Section 1 for project context. For each new region/biome you research, follow the methodology in Section 4 using the template in Section 5. Record findings in the candidate table format in Section 7. Submit additions as a PR against this file or a follow-up `research/region-*.md`.
+**How to use:** Read Section 1 for project context. For each new region/biome you research, follow the methodology in Section 4 using the template in Section 5. Record findings in the candidate table format in Section 7. Submit additions as a PR against this file or a follow-up `researched/region-*.md`.
 
 ---
 
@@ -65,12 +65,13 @@ The product occupies deliberate white space: educational tools (Gizmos, KiwiBee)
 
 ## 4. Research Methodology (repeatable per region/biome)
 
+0. **Size the region first.** One sweep = one sub-region = one file. If the target is a continent or any area much larger than the already-implemented webs, don't sweep it whole: propose a split into sub-regions comparable in scope to existing implemented webs (e.g. "North America" → Pacific coast, Great Plains interior, Mexico & Mesoamerica, Atlantic & Gulf estuaries, Boreal forest & Canadian Shield) and get the split approved before sweeping. Record agreed boundaries in the sweep file's scope note so later sweeps don't overlap.
 1. **Sweep the databases** (Section 3) for the target region/biome. Query patterns: "food web" + region/ecosystem name; Ecopath + ecosystem; "trophic network" + biome.
 2. **Screen candidates against the inclusion criteria** (Section 5). Reject early — don't dig into a web that can't work.
 3. **Verify accessibility:** the node list and link matrix (or diet matrix, for Ecopath models) must be obtainable — paper appendix, supplementary, repository deposit, or database download. If not obtainable → status `inaccessible`, note what's missing, stop.
 4. **Sketch the aggregation plan:** list the candidate's raw node count and a plausible ≤25-node grouping. If you can't imagine the aggregation without destroying the web's story (e.g. a coral reef with 400 fish species and no natural groupings), mark `high-curation-risk` and move on.
 5. **Score and rank** per the rubric in Section 5. Tier 1 = build next; Tier 2 = backlog; Appendix = recorded but not planned.
-6. **Write up** using the template in Section 6. One file per region/biome: `research/<region>.md`.
+6. **Write up** using the template in Section 6. One file per region/biome: `researched/<region>.md`.
 7. **Human review checkpoint** before any curation begins (per the repo's phase protocol).
 
 ---
@@ -180,6 +181,7 @@ For every candidate, record:
 3. **Southern hemisphere broadly** — Australia, S. America, S. Africa webs are scarce in the classic canon; check Mangal and regional journals first.
 4. **Desert** — no obvious classic web; expect to build a composite from diet studies or leave "Coming soon."
 5. **Deep sea / hydrothermal vents** — exciting story, very sparse resolved food webs; treat as research bonus, not pipeline blocker.
+6. **N. America interior** — approved 2026-11 for gap-fill sub-region sweeps (the original single-file N. America sweep was coasts-only): Great Plains interior (done → `researched/north-america-great-plains.md`); Mexico & Mesoamerica; Atlantic & Gulf estuaries; Boreal forest & Canadian Shield (pending). Boundaries: coasts & iconic inland stay in `researched/north-america.md`; tundra → tundra-boreal; sub-Arctic seas → arctic-marine; deserts → desert; Caribbean reefs → coral-reefs.
 
 ---
 
@@ -190,13 +192,14 @@ For every candidate, record:
 - [ ] Tier 1 candidates fully verified (matrix actually obtained, not assumed)
 - [ ] Candidate list written in Section 7 format
 - [ ] Human review checkpoint passed; Tier 1 list approved for curation
-- [ ] PR submitted adding `research/<region>.md` and updating this file's shortlist
+- [ ] PR submitted adding `researched/<region>.md` and updating this file's shortlist
+- [ ] Verdict recorded: candidates tiered, or a nothing-buildable sweep parked in `researched/notbuildable/` with ledger paths updated
 
 ---
 
 ## 11. Sweep Ledger
 
-*One row per candidate, updated stage by stage. Stage 1 (research) writes `researched` + the research file; later stages own `verified` / `implemented`. Note: research files live in `researched/`, not `research/` as sections above say.*
+*One row per candidate, updated stage by stage. Stage 1 (research) writes `researched` + the research file; later stages own `verified` / `implemented`. Research files live in `researched/`, one per sub-region (see the region-sizing rule in Section 4); sweeps that found nothing buildable are parked in `researched/notbuildable/` so they aren't re-swept (re-sweep only on explicit user request). When every candidate of a region has reached `implemented`, Stage 3 archives both files to `implemented/researched/<region>.md` and `implemented/verified/<region>.md` and updates the paths in this table.*
 
 | Candidate | Region | Tier | Researched | Verified | Implemented |
 |---|---|---|---|---|---|
@@ -313,3 +316,10 @@ For every candidate, record:
 | eastern-chukchi-sea | Arctic marine — E. Chukchi Sea (Ecopath, benthic-dominated) | 2 | researched — researched/arctic-marine.md | verified (spot check; corrected) — verified/arctic-marine.md (TM-318 Appendix A1 pp. 165–172; 57 groups) | — |
 | baffin-bay-coastal | Arctic marine — Baffin Bay (Ecopath tech report, co-created) | appendix (provenance/preliminary) | researched — researched/arctic-marine.md | verified (record only; corrected) — verified/arctic-marine.md (2023 report + peer-reviewed Elementa article + model repo; co-creation/base-model claims corrected) | — |
 | western-bering-sea | Arctic marine — W. Bering Sea (Ecopath comparison) | appendix (geography/overlap) | researched — researched/arctic-marine.md | verified (record only; corrected) — verified/arctic-marine.md (2002 TM-130; 36/48 groups, diet Tables B5/B6) | — |
+| great-plains-saline-wetlands | N. America — Great Plains interior | 2 | researched — researched/north-america-great-plains.md | — | — |
+| delta-marsh-carp-cascade | N. America — Great Plains interior (Manitoba Delta Marsh) | appendix (composite path) | researched — researched/north-america-great-plains.md | — | — |
+| chaplin-saline-lakes | N. America — Great Plains interior (Saskatchewan saline lakes) | appendix (grey literature) | researched — researched/north-america-great-plains.md | — | — |
+| rocky-mountain-saline-wetlands | N. America — interior (Rocky Mountain basin; out of sub-region scope) | appendix (out of scope) | researched — researched/north-america-great-plains.md | — | — |
+| prairie-dog-colony-web | N. America — Great Plains interior | appendix (provenance gate) | researched — researched/north-america-great-plains.md | — | — |
+| mixed-grass-arthropod-web | N. America — Great Plains interior | appendix (unretrieved lead) | researched — researched/north-america-great-plains.md | — | — |
+| rawal-lake | Pakistan — Margalla Hills freshwater reservoir | appendix (11 nodes; biome saturation) | researched — researched/notbuildable/pakistan.md | — | — |
