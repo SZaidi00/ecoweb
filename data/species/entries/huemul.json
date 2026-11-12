@@ -1,0 +1,24 @@
+{
+  "slug": "huemul",
+  "name": "Huemul",
+  "kind": "species",
+  "description": "The huemul or south Andean deer (Hippocamelus bisulcus) - an endangered native deer with 40 plant items in its diet in this web. It shares 12 forage plants with the rabbit; the source paper flags it as a conservation-priority species that could benefit from rabbit control.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/South_Andean_deer"
+  },
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "huemul",
+      "displayName": "Huemul",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/South_Andean_deer"
+      }
+    }
+  ]
+}

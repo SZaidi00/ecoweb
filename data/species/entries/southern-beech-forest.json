@@ -1,0 +1,18 @@
+{
+  "slug": "southern-beech-forest",
+  "name": "Southern beech forest",
+  "kind": "functional-group",
+  "description": "Southern beech forest - the Nothofagus cluster (nire, lenga, coihue, roble, coigue de Chiloe) with its mistletoe Misodendrum, the understorey fern Blechnum and dwarf cypress Lepidothamnus fonckii. Functional group pooling 8 source nodes; the source study itself merges the five Nothofagus species into a bundled node wherever diet studies did not distinguish them (its >50% diet-resolution rule), and browsers feed on seedlings and saplings.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "nothofagus-forest",
+      "displayName": "Southern beech forest",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

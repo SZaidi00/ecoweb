@@ -1,0 +1,18 @@
+{
+  "slug": "reptiles-amphibians",
+  "name": "Reptiles & amphibians",
+  "kind": "functional-group",
+  "description": "Lizards (Liolaemus and other Sauria) and amphibians. Functional group pooling the source's three reptile/amphibian nodes; their own diets are unresolved in the source (its basal rule placed them at producer level), so they are leveled here as primary consumers preyed on by skunks and raptors.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "reptiles-amphibians",
+      "displayName": "Reptiles & amphibians",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

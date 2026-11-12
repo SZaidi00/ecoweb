@@ -85,6 +85,11 @@ const webSources = [
     href: 'https://doi.org/10.3389/fmars.2020.00540',
     note: 'Shannon et al. 2020, Frontiers in Marine Science.',
   },
+  {
+    name: 'Magellanic/Fuegian Steppe',
+    href: 'https://doi.org/10.1038/s41598-024-70511-6',
+    note: 'Mann-Vollrath et al. 2024, Scientific Reports; curated composite.',
+  },
 ]
 
 function ArrowUpRightIcon() {

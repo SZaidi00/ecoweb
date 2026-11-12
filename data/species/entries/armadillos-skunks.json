@@ -1,0 +1,18 @@
+{
+  "slug": "armadillos-skunks",
+  "name": "Armadillos & skunks",
+  "kind": "functional-group",
+  "description": "Omnivorous armoured and musteloid mesofauna - the large hairy armadillo peludo (Chaetophractus villosus), the pichi (Zaedyus pichiy) and the skunks chingue (Conepatus humboldtii) and chingue austral (C. chinga). Functional group pooling 4 source nodes (4 native, 0 exotic, 0 mixed-origin); they eat insects, rodents, carrion (including guanaco and sheep) and some plants, and are themselves prey for pumas, foxes and raptors. The source even records a skunk preying on the pichi within this guild.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "armadillos-skunks",
+      "displayName": "Armadillos & skunks",
+      "kind": "functional-group",
+      "trophicLevel": 2.5
+    }
+  ]
+}

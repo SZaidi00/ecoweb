@@ -1,0 +1,24 @@
+{
+  "slug": "american-mink",
+  "name": "American mink",
+  "kind": "species",
+  "description": "The American mink (Neogale vison), an exotic mustelid descended from fur farms and one of the web's most versatile predators - 19 prey spanning rodents, rabbit, waterfowl, aquatic invertebrates and even beaver and coypu. It is the web's bridge between the wetland prey base and the terrestrial predators, and is itself taken by the buzzard-eagle aguila mora.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/American_mink"
+  },
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "american-mink",
+      "displayName": "American mink",
+      "kind": "species",
+      "trophicLevel": 3.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/American_mink"
+      }
+    }
+  ]
+}

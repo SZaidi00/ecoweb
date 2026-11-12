@@ -1,0 +1,18 @@
+{
+  "slug": "weasel-cats-otter",
+  "name": "Weasel, cats & otter",
+  "kind": "functional-group",
+  "description": "Small native carnivores - the Patagonian weasel huron (Lyncodon patagonicus), Geoffroy's cat (Leopardus geoffroyi), the pampas cat pajeros (Leopardus pajeros) and the southern river otter huillin (Lontra provocax). Functional group pooling 4 source nodes (4 native, 0 exotic, 0 mixed-origin); all are small predator-scavengers of rodents, hare and rabbit - the otter appears in the source web chiefly as condor carrion.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "small-native-carnivores",
+      "displayName": "Weasel, cats & otter",
+      "kind": "functional-group",
+      "trophicLevel": 3.0
+    }
+  ]
+}

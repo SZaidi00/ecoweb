@@ -1,0 +1,18 @@
+{
+  "slug": "hare-wild-boar-beaver",
+  "name": "Hare, wild boar & beaver",
+  "kind": "functional-group",
+  "description": "Other introduced herbivores - the European hare (Lepus europaeus), wild boar (Sus scrofa) and North American beaver (Castor canadensis). Functional group pooling 3 source nodes (0 native, 3 exotic, 0 mixed-origin); all three arrived with human settlement and graze and browse the steppe - the beaver is taken only by the mink.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "exotic-herbivores",
+      "displayName": "Hare, wild boar & beaver",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

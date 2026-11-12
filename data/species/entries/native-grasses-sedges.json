@@ -1,0 +1,18 @@
+{
+  "slug": "native-grasses-sedges",
+  "name": "Native grasses & sedges",
+  "kind": "functional-group",
+  "description": "The tussock and turf grasses, rushes and sedges that build the steppe sward - coiron (Stipa, Pappostipa), Festuca magellanica, Poa, Agrostis and relatives. Functional group pooling 24 source nodes (18 native, 0 exotic, 6 mixed-origin), recorded by the source at plant-genus resolution; its diet studies treat this layer as the core forage shared by guanaco, huemul, livestock and the rabbit.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "native-grasses",
+      "displayName": "Native grasses & sedges",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

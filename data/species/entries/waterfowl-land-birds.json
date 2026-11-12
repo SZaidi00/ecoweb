@@ -1,0 +1,18 @@
+{
+  "slug": "waterfowl-land-birds",
+  "name": "Waterfowl & land birds",
+  "kind": "functional-group",
+  "description": "Ground-feeding and wetland birds - the upland geese cauquen and cabeza gris (Chloephaga picta, C. poliocephala), the lesser rhea (nandu), ducks and other waterbird orders, plovers, pigeons, doves, parakeets and penguins. Functional group pooling 26 source nodes (15 native, 1 exotic, 10 mixed-origin), following the source's precedent of bundling birds at order level (Anseriformes, Gruiformes and similar nodes); most contribute prey records only and are leveled as primary consumers.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "waterfowl-land-birds",
+      "displayName": "Waterfowl & land birds",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

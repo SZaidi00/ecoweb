@@ -1,0 +1,18 @@
+{
+  "slug": "insects",
+  "name": "Insects",
+  "kind": "functional-group",
+  "description": "The insect prey base of the steppe as one bundled node - the source pooled all insects into a single 'Insecta' node because diet studies rarely resolved them further. Guild whose own diet the source could not resolve; it was placed at the producer level by the source's basal rule (any node without recorded prey counts as basal) and is re-leveled here as a primary consumer. Eaten by armadillos, skunks, foxes, mink and most birds of prey.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "insects",
+      "displayName": "Insects",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

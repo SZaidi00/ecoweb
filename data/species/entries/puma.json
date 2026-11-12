@@ -1,0 +1,24 @@
+{
+  "slug": "puma",
+  "name": "Puma",
+  "kind": "species",
+  "description": "The puma (Puma concolor), the web's apex terrestrial predator - 16 prey spanning guanaco, huemul, livestock, rabbit, hare, foxes and skunks. Its kills in turn feed the condor and caracaras.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Puma"
+  },
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "puma",
+      "displayName": "Puma",
+      "kind": "species",
+      "trophicLevel": 3.5,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Puma"
+      }
+    }
+  ]
+}

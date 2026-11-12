@@ -1,0 +1,24 @@
+{
+  "slug": "lesser-grison",
+  "name": "Lesser grison",
+  "kind": "species",
+  "description": "The lesser grison (Galictis cuja), a small native mustelid. The study's rabbit-extinction simulation singles it out: with only five prey (rodents, hare and rabbit), removing the rabbit cuts its diet breadth by 20% - the largest predator-side effect in the web.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Lesser_grison"
+  },
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "lesser-grison",
+      "displayName": "Lesser grison",
+      "kind": "species",
+      "trophicLevel": 2.9,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Lesser_grison"
+      }
+    }
+  ]
+}

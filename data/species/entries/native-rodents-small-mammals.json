@@ -1,0 +1,18 @@
+{
+  "slug": "native-rodents-small-mammals",
+  "name": "Native rodents & small mammals",
+  "kind": "functional-group",
+  "description": "Small native mammals - the long-tailed mouse colilargo (Oligoryzomys longicaudatus, the web's fourth most-connected node), grass mice (Abrothrix), tuco-tucos (Chelemys, Eligomodontia), the leaf-eared mouse Phyllotis and the wetland coypu coipo (Myocastor coypus). Functional group pooling 7 source nodes (6 native, 0 exotic, 1 mixed-origin); all are granivore/herbivore prey leveled as primary consumers, eaten by virtually every predator in the web.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "native-rodents",
+      "displayName": "Native rodents & small mammals",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

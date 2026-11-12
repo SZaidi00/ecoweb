@@ -1,6 +1,6 @@
 {
-  "webCount": 10,
-  "entryCount": 195,
+  "webCount": 11,
+  "entryCount": 218,
   "entries": [
     {
       "slug": "adelie-penguin",
@@ -129,6 +129,20 @@
       ]
     },
     {
+      "slug": "american-mink",
+      "name": "American mink",
+      "kind": "species",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "american-mink"
+        }
+      ]
+    },
+    {
       "slug": "amoebae",
       "name": "Amoebae",
       "kind": "functional-group",
@@ -231,9 +245,14 @@
       "name": "Aquatic invertebrates",
       "kind": "functional-group",
       "webs": [
+        "magellanic-rabbit-steppe",
         "tapajos-river"
       ],
       "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "aquatic-invertebrates"
+        },
         {
           "web": "tapajos-river",
           "node": "aquatic-invertebrates"
@@ -265,6 +284,20 @@
         {
           "web": "tapajos-river",
           "node": "arapaima"
+        }
+      ]
+    },
+    {
+      "slug": "armadillos-skunks",
+      "name": "Armadillos & skunks",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "armadillos-skunks"
         }
       ]
     },
@@ -555,6 +588,20 @@
         {
           "web": "chesapeake-bay",
           "node": "ciliates"
+        }
+      ]
+    },
+    {
+      "slug": "condor-caracaras",
+      "name": "Condor & caracaras",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "condor-caracaras"
         }
       ]
     },
@@ -976,6 +1023,34 @@
       ]
     },
     {
+      "slug": "european-rabbit",
+      "name": "European rabbit",
+      "kind": "species",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "european-rabbit"
+        }
+      ]
+    },
+    {
+      "slug": "exotic-forage-weeds",
+      "name": "Exotic forage & weeds",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "exotic-forage"
+        }
+      ]
+    },
+    {
       "slug": "filamentous-algae-the-periphyton-mats",
       "name": "Filamentous algae (the periphyton mats)",
       "kind": "functional-group",
@@ -1098,6 +1173,20 @@
         {
           "web": "weddell-sea",
           "node": "flying-seabirds"
+        }
+      ]
+    },
+    {
+      "slug": "forbs-herbs",
+      "name": "Forbs & herbs",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "forbs-herbs"
         }
       ]
     },
@@ -1256,6 +1345,34 @@
       ]
     },
     {
+      "slug": "guanaco",
+      "name": "Guanaco",
+      "kind": "species",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "guanaco"
+        }
+      ]
+    },
+    {
+      "slug": "hare-wild-boar-beaver",
+      "name": "Hare, wild boar & beaver",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "exotic-herbivores"
+        }
+      ]
+    },
+    {
       "slug": "harvester-termites",
       "name": "Harvester termites",
       "kind": "functional-group",
@@ -1280,6 +1397,20 @@
         {
           "web": "prince-william-sound",
           "node": "hatchery-salmon-fry"
+        }
+      ]
+    },
+    {
+      "slug": "hawks-eagles-owls",
+      "name": "Hawks, eagles & owls",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "raptors-owls"
         }
       ]
     },
@@ -1326,6 +1457,20 @@
       ]
     },
     {
+      "slug": "huemul",
+      "name": "Huemul",
+      "kind": "species",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "huemul"
+        }
+      ]
+    },
+    {
       "slug": "infaunal-zoobenthos",
       "name": "Infaunal zoobenthos",
       "kind": "functional-group",
@@ -1336,6 +1481,20 @@
         {
           "web": "prince-william-sound",
           "node": "infaunal-zoobenthos"
+        }
+      ]
+    },
+    {
+      "slug": "insects",
+      "name": "Insects",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "insects"
         }
       ]
     },
@@ -1494,6 +1653,20 @@
       ]
     },
     {
+      "slug": "lesser-grison",
+      "name": "Lesser grison",
+      "kind": "species",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "lesser-grison"
+        }
+      ]
+    },
+    {
       "slug": "linefish",
       "name": "Linefish",
       "kind": "functional-group",
@@ -1518,6 +1691,20 @@
         {
           "web": "serengeti",
           "node": "lion"
+        }
+      ]
+    },
+    {
+      "slug": "livestock",
+      "name": "Livestock",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "livestock"
         }
       ]
     },
@@ -1686,6 +1873,34 @@
         {
           "web": "shortgrass-prairie",
           "node": "mycorrhizal-fungi"
+        }
+      ]
+    },
+    {
+      "slug": "native-grasses-sedges",
+      "name": "Native grasses & sedges",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "native-grasses"
+        }
+      ]
+    },
+    {
+      "slug": "native-rodents-small-mammals",
+      "name": "Native rodents & small mammals",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "native-rodents"
         }
       ]
     },
@@ -1868,6 +2083,34 @@
         {
           "web": "cypress-wetland",
           "node": "big-predators"
+        }
+      ]
+    },
+    {
+      "slug": "passerines",
+      "name": "Passerines",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "passerines"
+        }
+      ]
+    },
+    {
+      "slug": "patagonian-foxes",
+      "name": "Patagonian foxes",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "foxes"
         }
       ]
     },
@@ -2093,6 +2336,20 @@
       ]
     },
     {
+      "slug": "puma",
+      "name": "Puma",
+      "kind": "species",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "puma"
+        }
+      ]
+    },
+    {
       "slug": "raptors-and-vultures",
       "name": "Raptors and vultures",
       "kind": "functional-group",
@@ -2117,6 +2374,20 @@
         {
           "web": "southern-benguela",
           "node": "redeye"
+        }
+      ]
+    },
+    {
+      "slug": "reptiles-amphibians",
+      "name": "Reptiles & amphibians",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "reptiles-amphibians"
         }
       ]
     },
@@ -2336,6 +2607,20 @@
       ]
     },
     {
+      "slug": "shrubs-scrub",
+      "name": "Shrubs & scrub",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "shrubs"
+        }
+      ]
+    },
+    {
       "slug": "small-characin-omnivores",
       "name": "Small characin omnivores",
       "kind": "functional-group",
@@ -2486,6 +2771,20 @@
         {
           "web": "southern-benguela",
           "node": "snoek"
+        }
+      ]
+    },
+    {
+      "slug": "southern-beech-forest",
+      "name": "Southern beech forest",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "nothofagus-forest"
         }
       ]
     },
@@ -2696,6 +2995,34 @@
         {
           "web": "little-rock-lake",
           "node": "zooplankton"
+        }
+      ]
+    },
+    {
+      "slug": "waterfowl-land-birds",
+      "name": "Waterfowl & land birds",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "waterfowl-land-birds"
+        }
+      ]
+    },
+    {
+      "slug": "weasel-cats-otter",
+      "name": "Weasel, cats & otter",
+      "kind": "functional-group",
+      "webs": [
+        "magellanic-rabbit-steppe"
+      ],
+      "occurrences": [
+        {
+          "web": "magellanic-rabbit-steppe",
+          "node": "small-native-carnivores"
         }
       ]
     },

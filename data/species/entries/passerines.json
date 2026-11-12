@@ -1,0 +1,18 @@
+{
+  "slug": "passerines",
+  "name": "Passerines",
+  "kind": "functional-group",
+  "description": "Songbirds as one bundled node - the source's own >50% rule aggregates all passerines into this single node because most diet studies reported only 'passerines'. Functional group pooling the source's Passerines cluster node; no diet links are resolved for it (the basal rule placed it at producer level), and it is leveled here as a primary consumer and a staple prey of raptors, foxes and mink.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "passerines",
+      "displayName": "Passerines",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

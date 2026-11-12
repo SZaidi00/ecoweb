@@ -1,0 +1,18 @@
+{
+  "slug": "exotic-forage-weeds",
+  "name": "Exotic forage & weeds",
+  "kind": "functional-group",
+  "description": "Introduced pasture grasses, legumes and weeds - white clover, Dactylis, Holcus, Hordeum, Vicia, Taraxacum, Plantago - the green subsidy on which rabbits and livestock both thrive. Functional group pooling 24 source nodes (1 native, 15 exotic, 8 mixed-origin); the source paper stresses that the rabbit shares most of these forage plants with sheep (21 shared nodes) and cattle (19).",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "exotic-forage",
+      "displayName": "Exotic forage & weeds",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

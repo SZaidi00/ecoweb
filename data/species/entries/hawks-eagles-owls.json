@@ -1,0 +1,18 @@
+{
+  "slug": "hawks-eagles-owls",
+  "name": "Hawks, eagles & owls",
+  "kind": "functional-group",
+  "description": "The diurnal and nocturnal raptor guild - the peregrine falcon, the buzzard-eagle aguila mora (Geranoaetus melanoleucus), hawks (Buteo ventralis, Geranoaetus polyosoma), harriers, falcons, and the owls tucuquere, lechuza, nuco and concon. Functional group pooling 14 source nodes (14 native, 0 exotic, 0 mixed-origin); rodents, passerines, insects, reptiles and rabbits are their shared prey, and the source even records a hawk taking the chimango caracara (tiuque, pooled here).",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "raptors-owls",
+      "displayName": "Hawks, eagles & owls",
+      "kind": "functional-group",
+      "trophicLevel": 3.2
+    }
+  ]
+}

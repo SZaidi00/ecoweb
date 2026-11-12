@@ -1,0 +1,24 @@
+{
+  "slug": "patagonian-foxes",
+  "name": "Patagonian foxes",
+  "kind": "functional-group",
+  "description": "The two Patagonian foxes - the culpeo (Lycalopex culpaeus) and the grey or chilla fox (L. griseus) - among the rabbit's chief predators and the region's signature mesopredators. Functional group pooling 2 source nodes (2 native, 0 exotic, 0 mixed-origin); between them they take rodents, hare, rabbit, birds, insects and even fruit, and the puma kills both.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Culpeo"
+  },
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "foxes",
+      "displayName": "Patagonian foxes",
+      "kind": "functional-group",
+      "trophicLevel": 3.2,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Culpeo"
+      }
+    }
+  ]
+}

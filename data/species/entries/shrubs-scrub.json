@@ -1,0 +1,18 @@
+{
+  "slug": "shrubs-scrub",
+  "name": "Shrubs & scrub",
+  "kind": "functional-group",
+  "description": "Woody scrub - Berberis (calafate), Empetrum (murtilla de Magallanes), Gaultheria (chaura), Mulinum, cushion plants and xeric shrubs such as Larrea. Functional group pooling 34 source nodes (24 native, 2 exotic, 8 mixed-origin); rabbit, guanaco, huemul and livestock all browse this layer, and the rabbits feed on its seedlings.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "shrubs",
+      "displayName": "Shrubs & scrub",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

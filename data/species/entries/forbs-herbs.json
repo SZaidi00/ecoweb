@@ -1,0 +1,18 @@
+{
+  "slug": "forbs-herbs",
+  "name": "Forbs & herbs",
+  "kind": "functional-group",
+  "description": "Broad-leaved herbs of the steppe and forest floor - Acaena, Senecio, the giant rhubarb Gunnera (nalca, frutilla del diablo), orchids (Codonorchis, Gavilea) and nettles. Functional group pooling 33 source nodes (26 native, 0 exotic, 7 mixed-origin). Several are eaten only by the rabbit in the source web (e.g. Gunnera tinctoria, Codonorchis lessonii, Gavilea lutea, Tetroncium magellanicus), so removing the rabbit releases them completely from herbivory.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "forbs-herbs",
+      "displayName": "Forbs & herbs",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

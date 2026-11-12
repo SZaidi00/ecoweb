@@ -1,0 +1,831 @@
+{
+  "meta": {
+    "id": "magellanic-rabbit-steppe",
+    "name": "Magellanic/Fuegian Steppe",
+    "location": "Magallanes Region, Chilean Patagonia, Chile",
+    "biome": "grassland",
+    "lat": -53.0,
+    "lng": -71.0,
+    "provenance": "composite",
+    "tagline": "An invasive rabbit sits at the center of Patagonia's cold-steppe food web",
+    "citations": [
+      "Mann-Vollrath, H., Correa-Cuadros, J.P., Avila-Thieme, M.I., Duclos, L. & Jaksic, F.M. 2024. The ecological roles of the European rabbit in the Magellanic/Fuegian ecosystem of southernmost Chile. Scientific Reports 14: 19581. https://doi.org/10.1038/s41598-024-70511-6",
+      "Edge list and node list (post-review deposit analysed in the paper): Avila-Thieme, I. et al., GitHub repository IsidoraAvilaThieme/Magellanic_food_web, file Interaction list.xlsx (sheets Nodes, Links). https://github.com/IsidoraAvilaThieme/Magellanic_food_web"
+    ],
+    "sourceUrl": "https://doi.org/10.1038/s41598-024-70511-6",
+    "licenseNote": "Composite web. The source study assembled the Magellanic/Fuegian steppe food web from a bibliographic review of diet studies plus wildlife specialists' opinions (its Supplementary Table S1 cites a reference for every feeding link), so it carries the composite badge. This atlas web aggregates the source's 206 linked nodes (207 in the deposit minus the isolated Columbiformes node, which has no links even in the source) into 24 functional groups along the source's own bundling precedents (its >50% diet-resolution rule already clusters passerines, Nothofagus spp. and several bird orders), keeping every inter-guild link exactly as documented: 535 raw links collapse to 99 qualitative guild edges, and intra-guild links (including the source's few cannibalism and self links) are not drawn. Every edge is qualitative because the source records interaction presence only - it explicitly proposes collecting diet frequencies and amounts as future work. Herbivores, insectivores and insects that the source's basal rule placed at the producer level (it counts every node without recorded prey as basal) are re-leveled here as primary consumers, consistent with the source paper's own statement that its intermediate level includes herbivores. Reuse requires citing Mann-Vollrath et al. (2024).",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-11-12"
+  },
+  "nodes": [
+    {
+      "id": "native-grasses",
+      "displayName": "Native grasses & sedges",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "The tussock and turf grasses, rushes and sedges that build the steppe sward - coiron (Stipa, Pappostipa), Festuca magellanica, Poa, Agrostis and relatives. Functional group pooling 24 source nodes (18 native, 0 exotic, 6 mixed-origin), recorded by the source at plant-genus resolution; its diet studies treat this layer as the core forage shared by guanaco, huemul, livestock and the rabbit.",
+      "layout": {
+        "x": 12,
+        "y": 6
+      }
+    },
+    {
+      "id": "forbs-herbs",
+      "displayName": "Forbs & herbs",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Broad-leaved herbs of the steppe and forest floor - Acaena, Senecio, the giant rhubarb Gunnera (nalca, frutilla del diablo), orchids (Codonorchis, Gavilea) and nettles. Functional group pooling 33 source nodes (26 native, 0 exotic, 7 mixed-origin). Several are eaten only by the rabbit in the source web (e.g. Gunnera tinctoria, Codonorchis lessonii, Gavilea lutea, Tetroncium magellanicus), so removing the rabbit releases them completely from herbivory.",
+      "layout": {
+        "x": 32,
+        "y": 6
+      }
+    },
+    {
+      "id": "shrubs",
+      "displayName": "Shrubs & scrub",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Woody scrub - Berberis (calafate), Empetrum (murtilla de Magallanes), Gaultheria (chaura), Mulinum, cushion plants and xeric shrubs such as Larrea. Functional group pooling 34 source nodes (24 native, 2 exotic, 8 mixed-origin); rabbit, guanaco, huemul and livestock all browse this layer, and the rabbits feed on its seedlings.",
+      "layout": {
+        "x": 52,
+        "y": 6
+      }
+    },
+    {
+      "id": "nothofagus-forest",
+      "displayName": "Southern beech forest",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Southern beech forest - the Nothofagus cluster (nire, lenga, coihue, roble, coigue de Chiloe) with its mistletoe Misodendrum, the understorey fern Blechnum and dwarf cypress Lepidothamnus fonckii. Functional group pooling 8 source nodes; the source study itself merges the five Nothofagus species into a bundled node wherever diet studies did not distinguish them (its >50% diet-resolution rule), and browsers feed on seedlings and saplings.",
+      "layout": {
+        "x": 72,
+        "y": 6
+      }
+    },
+    {
+      "id": "exotic-forage",
+      "displayName": "Exotic forage & weeds",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Introduced pasture grasses, legumes and weeds - white clover, Dactylis, Holcus, Hordeum, Vicia, Taraxacum, Plantago - the green subsidy on which rabbits and livestock both thrive. Functional group pooling 24 source nodes (1 native, 15 exotic, 8 mixed-origin); the source paper stresses that the rabbit shares most of these forage plants with sheep (21 shared nodes) and cattle (19).",
+      "layout": {
+        "x": 90,
+        "y": 6
+      }
+    },
+    {
+      "id": "insects",
+      "displayName": "Insects",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The insect prey base of the steppe as one bundled node - the source pooled all insects into a single 'Insecta' node because diet studies rarely resolved them further. Guild whose own diet the source could not resolve; it was placed at the producer level by the source's basal rule (any node without recorded prey counts as basal) and is re-leveled here as a primary consumer. Eaten by armadillos, skunks, foxes, mink and most birds of prey.",
+      "layout": {
+        "x": 8,
+        "y": 30
+      }
+    },
+    {
+      "id": "aquatic-invertebrates",
+      "displayName": "Aquatic invertebrates",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Coastal and freshwater invertebrates - polychaete worms, amphipods, crustaceans and molluscs. Functional group pooling the source's four bundled aquatic-invertebrate nodes; no diet links are resolved for them in the source, so they sit at the primary-consumer level as the prey base of mink and foraging foxes.",
+      "layout": {
+        "x": 20,
+        "y": 28
+      }
+    },
+    {
+      "id": "reptiles-amphibians",
+      "displayName": "Reptiles & amphibians",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Lizards (Liolaemus and other Sauria) and amphibians. Functional group pooling the source's three reptile/amphibian nodes; their own diets are unresolved in the source (its basal rule placed them at producer level), so they are leveled here as primary consumers preyed on by skunks and raptors.",
+      "layout": {
+        "x": 32,
+        "y": 30
+      }
+    },
+    {
+      "id": "passerines",
+      "displayName": "Passerines",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Songbirds as one bundled node - the source's own >50% rule aggregates all passerines into this single node because most diet studies reported only 'passerines'. Functional group pooling the source's Passerines cluster node; no diet links are resolved for it (the basal rule placed it at producer level), and it is leveled here as a primary consumer and a staple prey of raptors, foxes and mink.",
+      "layout": {
+        "x": 44,
+        "y": 32
+      }
+    },
+    {
+      "id": "waterfowl-land-birds",
+      "displayName": "Waterfowl & land birds",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Ground-feeding and wetland birds - the upland geese cauquen and cabeza gris (Chloephaga picta, C. poliocephala), the lesser rhea (nandu), ducks and other waterbird orders, plovers, pigeons, doves, parakeets and penguins. Functional group pooling 26 source nodes (15 native, 1 exotic, 10 mixed-origin), following the source's precedent of bundling birds at order level (Anseriformes, Gruiformes and similar nodes); most contribute prey records only and are leveled as primary consumers.",
+      "layout": {
+        "x": 88,
+        "y": 30
+      }
+    },
+    {
+      "id": "native-rodents",
+      "displayName": "Native rodents & small mammals",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Small native mammals - the long-tailed mouse colilargo (Oligoryzomys longicaudatus, the web's fourth most-connected node), grass mice (Abrothrix), tuco-tucos (Chelemys, Eligomodontia), the leaf-eared mouse Phyllotis and the wetland coypu coipo (Myocastor coypus). Functional group pooling 7 source nodes (6 native, 0 exotic, 1 mixed-origin); all are granivore/herbivore prey leveled as primary consumers, eaten by virtually every predator in the web.",
+      "layout": {
+        "x": 58,
+        "y": 34
+      }
+    },
+    {
+      "id": "european-rabbit",
+      "displayName": "European rabbit",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The European rabbit (Oryctolagus cuniculus), introduced around 1936 and now the most-connected node of this food web: 56 links, eating 44 plants and preyed on by 12 predators. It is simultaneously an herbivore, a competitor of guanaco, sheep and cattle for forage, and the prey subsidy that sustains foxes, puma, raptors and condors. Removing it releases 14 plant nodes from all herbivory and relaxes competition for the big herbivores - the study's headline cascade.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/European_rabbit"
+      },
+      "layout": {
+        "x": 40,
+        "y": 38
+      }
+    },
+    {
+      "id": "guanaco",
+      "displayName": "Guanaco",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The guanaco (Lama guanicoe), the wild camelid of the Patagonian steppe and the web's widest-ranging herbivore with 47 plant items in the source. It shares 22 forage plants with the rabbit, is preyed on by the puma, and its carcasses feed condors and caracaras.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Guanaco"
+      },
+      "layout": {
+        "x": 18,
+        "y": 38
+      }
+    },
+    {
+      "id": "huemul",
+      "displayName": "Huemul",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The huemul or south Andean deer (Hippocamelus bisulcus) - an endangered native deer with 40 plant items in its diet in this web. It shares 12 forage plants with the rabbit; the source paper flags it as a conservation-priority species that could benefit from rabbit control.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/South_Andean_deer"
+      },
+      "layout": {
+        "x": 62,
+        "y": 38
+      }
+    },
+    {
+      "id": "livestock",
+      "displayName": "Livestock",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Domestic herbivores of the ranches - sheep (Ovis aries, 40 plant items), cattle (Bos taurus), horses (Equus caballus) and goats (Capra hircus). Functional group pooling 4 source nodes (0 native, 4 exotic, 0 mixed-origin); the source analyses them as the rabbit's main competitors for pasture (sheep share 21 forage nodes with the rabbit, cattle 19). Predated by pumas and foxes and heavily scavenged by condors and caracaras.",
+      "layout": {
+        "x": 76,
+        "y": 38
+      }
+    },
+    {
+      "id": "exotic-herbivores",
+      "displayName": "Hare, wild boar & beaver",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Other introduced herbivores - the European hare (Lepus europaeus), wild boar (Sus scrofa) and North American beaver (Castor canadensis). Functional group pooling 3 source nodes (0 native, 3 exotic, 0 mixed-origin); all three arrived with human settlement and graze and browse the steppe - the beaver is taken only by the mink.",
+      "layout": {
+        "x": 94,
+        "y": 40
+      }
+    },
+    {
+      "id": "armadillos-skunks",
+      "displayName": "Armadillos & skunks",
+      "kind": "functional-group",
+      "trophicLevel": 2.5,
+      "functionalRole": "intermediate-consumer",
+      "description": "Omnivorous armoured and musteloid mesofauna - the large hairy armadillo peludo (Chaetophractus villosus), the pichi (Zaedyus pichiy) and the skunks chingue (Conepatus humboldtii) and chingue austral (C. chinga). Functional group pooling 4 source nodes (4 native, 0 exotic, 0 mixed-origin); they eat insects, rodents, carrion (including guanaco and sheep) and some plants, and are themselves prey for pumas, foxes and raptors. The source even records a skunk preying on the pichi within this guild.",
+      "layout": {
+        "x": 30,
+        "y": 50
+      }
+    },
+    {
+      "id": "lesser-grison",
+      "displayName": "Lesser grison",
+      "kind": "species",
+      "trophicLevel": 2.9,
+      "functionalRole": "intermediate-consumer",
+      "description": "The lesser grison (Galictis cuja), a small native mustelid. The study's rabbit-extinction simulation singles it out: with only five prey in the source web (rodents, hare and rabbit), removing the rabbit cuts its diet breadth by 20% - the largest predator-side effect in the study. In this aggregated web the three rodent prey are pooled into one group, so the rabbit is one of the grison's three documented prey groups (a 33% structural diet share here).",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Lesser_grison"
+      },
+      "layout": {
+        "x": 48,
+        "y": 54
+      }
+    },
+    {
+      "id": "american-mink",
+      "displayName": "American mink",
+      "kind": "species",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "The American mink (Neogale vison), an exotic mustelid descended from fur farms and one of the web's most versatile predators - 19 prey spanning rodents, rabbit, waterfowl, aquatic invertebrates and even beaver and coypu. It is the web's bridge between the wetland prey base and the terrestrial predators, and is itself taken by the buzzard-eagle aguila mora.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/American_mink"
+      },
+      "layout": {
+        "x": 10,
+        "y": 56
+      }
+    },
+    {
+      "id": "small-native-carnivores",
+      "displayName": "Weasel, cats & otter",
+      "kind": "functional-group",
+      "trophicLevel": 3.0,
+      "functionalRole": "intermediate-consumer",
+      "description": "Small native carnivores - the Patagonian weasel huron (Lyncodon patagonicus), Geoffroy's cat (Leopardus geoffroyi), the pampas cat pajeros (Leopardus pajeros) and the southern river otter huillin (Lontra provocax). Functional group pooling 4 source nodes (4 native, 0 exotic, 0 mixed-origin); all are small predator-scavengers of rodents, hare and rabbit - the otter appears in the source web chiefly as condor carrion.",
+      "layout": {
+        "x": 66,
+        "y": 58
+      }
+    },
+    {
+      "id": "foxes",
+      "displayName": "Patagonian foxes",
+      "kind": "functional-group",
+      "trophicLevel": 3.2,
+      "functionalRole": "intermediate-consumer",
+      "description": "The two Patagonian foxes - the culpeo (Lycalopex culpaeus) and the grey or chilla fox (L. griseus) - among the rabbit's chief predators and the region's signature mesopredators. Functional group pooling 2 source nodes (2 native, 0 exotic, 0 mixed-origin); between them they take rodents, hare, rabbit, birds, insects and even fruit, and the puma kills both.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Culpeo"
+      },
+      "layout": {
+        "x": 38,
+        "y": 64
+      }
+    },
+    {
+      "id": "raptors-owls",
+      "displayName": "Hawks, eagles & owls",
+      "kind": "functional-group",
+      "trophicLevel": 3.2,
+      "functionalRole": "top-consumer",
+      "description": "The diurnal and nocturnal raptor guild - the peregrine falcon, the buzzard-eagle aguila mora (Geranoaetus melanoleucus), hawks (Buteo ventralis, Geranoaetus polyosoma), harriers, falcons, and the owls tucuquere, lechuza, nuco and concon. Functional group pooling 14 source nodes (14 native, 0 exotic, 0 mixed-origin); rodents, passerines, insects, reptiles and rabbits are their shared prey, and the source even records a hawk taking the chimango caracara (tiuque, pooled here).",
+      "layout": {
+        "x": 72,
+        "y": 68
+      }
+    },
+    {
+      "id": "puma",
+      "displayName": "Puma",
+      "kind": "species",
+      "trophicLevel": 3.5,
+      "functionalRole": "top-consumer",
+      "description": "The puma (Puma concolor), the web's apex terrestrial predator - 16 prey spanning guanaco, huemul, livestock, rabbit, hare, foxes and skunks. Its kills in turn feed the condor and caracaras.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Puma"
+      },
+      "layout": {
+        "x": 30,
+        "y": 82
+      }
+    },
+    {
+      "id": "condor-caracaras",
+      "displayName": "Condor & caracaras",
+      "kind": "functional-group",
+      "trophicLevel": 3.6,
+      "functionalRole": "top-consumer",
+      "description": "The scavenger guild - the Andean condor (Vultur gryphus) and the caracaras: southern carancho austral (Phalcoboenus australis), white-throated caracara araucano (P. albogularis) and the crested caracara traro (Caracara plancus). Functional group pooling 4 source nodes (4 native, 0 exotic, 0 mixed-origin); the paper describes these facultative and strict scavengers as direct beneficiaries of the rabbit subsidy, and their carrion links to livestock, guanaco and puma are documented feeding records.",
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Andean_condor"
+      },
+      "layout": {
+        "x": 60,
+        "y": 86
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "exotic-forage",
+      "predator": "exotic-herbivores",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-forage",
+      "predator": "guanaco",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-forage",
+      "predator": "huemul",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-forage",
+      "predator": "livestock",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-forage",
+      "predator": "native-rodents",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-forage",
+      "predator": "european-rabbit",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-forage",
+      "predator": "armadillos-skunks",
+      "qualitative": true
+    },
+    {
+      "prey": "forbs-herbs",
+      "predator": "exotic-herbivores",
+      "qualitative": true
+    },
+    {
+      "prey": "forbs-herbs",
+      "predator": "guanaco",
+      "qualitative": true
+    },
+    {
+      "prey": "forbs-herbs",
+      "predator": "huemul",
+      "qualitative": true
+    },
+    {
+      "prey": "forbs-herbs",
+      "predator": "livestock",
+      "qualitative": true
+    },
+    {
+      "prey": "forbs-herbs",
+      "predator": "native-rodents",
+      "qualitative": true
+    },
+    {
+      "prey": "forbs-herbs",
+      "predator": "european-rabbit",
+      "qualitative": true
+    },
+    {
+      "prey": "native-grasses",
+      "predator": "exotic-herbivores",
+      "qualitative": true
+    },
+    {
+      "prey": "native-grasses",
+      "predator": "guanaco",
+      "qualitative": true
+    },
+    {
+      "prey": "native-grasses",
+      "predator": "huemul",
+      "qualitative": true
+    },
+    {
+      "prey": "native-grasses",
+      "predator": "livestock",
+      "qualitative": true
+    },
+    {
+      "prey": "native-grasses",
+      "predator": "native-rodents",
+      "qualitative": true
+    },
+    {
+      "prey": "native-grasses",
+      "predator": "european-rabbit",
+      "qualitative": true
+    },
+    {
+      "prey": "native-grasses",
+      "predator": "armadillos-skunks",
+      "qualitative": true
+    },
+    {
+      "prey": "nothofagus-forest",
+      "predator": "guanaco",
+      "qualitative": true
+    },
+    {
+      "prey": "nothofagus-forest",
+      "predator": "huemul",
+      "qualitative": true
+    },
+    {
+      "prey": "nothofagus-forest",
+      "predator": "livestock",
+      "qualitative": true
+    },
+    {
+      "prey": "nothofagus-forest",
+      "predator": "native-rodents",
+      "qualitative": true
+    },
+    {
+      "prey": "nothofagus-forest",
+      "predator": "european-rabbit",
+      "qualitative": true
+    },
+    {
+      "prey": "shrubs",
+      "predator": "exotic-herbivores",
+      "qualitative": true
+    },
+    {
+      "prey": "shrubs",
+      "predator": "guanaco",
+      "qualitative": true
+    },
+    {
+      "prey": "shrubs",
+      "predator": "huemul",
+      "qualitative": true
+    },
+    {
+      "prey": "shrubs",
+      "predator": "livestock",
+      "qualitative": true
+    },
+    {
+      "prey": "shrubs",
+      "predator": "native-rodents",
+      "qualitative": true
+    },
+    {
+      "prey": "shrubs",
+      "predator": "european-rabbit",
+      "qualitative": true
+    },
+    {
+      "prey": "shrubs",
+      "predator": "armadillos-skunks",
+      "qualitative": true
+    },
+    {
+      "prey": "shrubs",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "american-mink",
+      "qualitative": true
+    },
+    {
+      "prey": "aquatic-invertebrates",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-herbivores",
+      "predator": "armadillos-skunks",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-herbivores",
+      "predator": "lesser-grison",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-herbivores",
+      "predator": "american-mink",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-herbivores",
+      "predator": "small-native-carnivores",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-herbivores",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-herbivores",
+      "predator": "raptors-owls",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-herbivores",
+      "predator": "puma",
+      "qualitative": true
+    },
+    {
+      "prey": "exotic-herbivores",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    },
+    {
+      "prey": "guanaco",
+      "predator": "armadillos-skunks",
+      "qualitative": true
+    },
+    {
+      "prey": "guanaco",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "guanaco",
+      "predator": "puma",
+      "qualitative": true
+    },
+    {
+      "prey": "guanaco",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    },
+    {
+      "prey": "reptiles-amphibians",
+      "predator": "armadillos-skunks",
+      "qualitative": true
+    },
+    {
+      "prey": "reptiles-amphibians",
+      "predator": "raptors-owls",
+      "qualitative": true
+    },
+    {
+      "prey": "huemul",
+      "predator": "puma",
+      "qualitative": true
+    },
+    {
+      "prey": "insects",
+      "predator": "armadillos-skunks",
+      "qualitative": true
+    },
+    {
+      "prey": "insects",
+      "predator": "american-mink",
+      "qualitative": true
+    },
+    {
+      "prey": "insects",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "insects",
+      "predator": "raptors-owls",
+      "qualitative": true
+    },
+    {
+      "prey": "insects",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    },
+    {
+      "prey": "livestock",
+      "predator": "armadillos-skunks",
+      "qualitative": true
+    },
+    {
+      "prey": "livestock",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "livestock",
+      "predator": "raptors-owls",
+      "qualitative": true
+    },
+    {
+      "prey": "livestock",
+      "predator": "puma",
+      "qualitative": true
+    },
+    {
+      "prey": "livestock",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    },
+    {
+      "prey": "native-rodents",
+      "predator": "armadillos-skunks",
+      "qualitative": true
+    },
+    {
+      "prey": "native-rodents",
+      "predator": "lesser-grison",
+      "qualitative": true
+    },
+    {
+      "prey": "native-rodents",
+      "predator": "american-mink",
+      "qualitative": true
+    },
+    {
+      "prey": "native-rodents",
+      "predator": "small-native-carnivores",
+      "qualitative": true
+    },
+    {
+      "prey": "native-rodents",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "native-rodents",
+      "predator": "raptors-owls",
+      "qualitative": true
+    },
+    {
+      "prey": "native-rodents",
+      "predator": "puma",
+      "qualitative": true
+    },
+    {
+      "prey": "native-rodents",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    },
+    {
+      "prey": "passerines",
+      "predator": "american-mink",
+      "qualitative": true
+    },
+    {
+      "prey": "passerines",
+      "predator": "small-native-carnivores",
+      "qualitative": true
+    },
+    {
+      "prey": "passerines",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "passerines",
+      "predator": "raptors-owls",
+      "qualitative": true
+    },
+    {
+      "prey": "passerines",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    },
+    {
+      "prey": "european-rabbit",
+      "predator": "lesser-grison",
+      "qualitative": true
+    },
+    {
+      "prey": "european-rabbit",
+      "predator": "american-mink",
+      "qualitative": true
+    },
+    {
+      "prey": "european-rabbit",
+      "predator": "small-native-carnivores",
+      "qualitative": true
+    },
+    {
+      "prey": "european-rabbit",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "european-rabbit",
+      "predator": "raptors-owls",
+      "qualitative": true
+    },
+    {
+      "prey": "european-rabbit",
+      "predator": "puma",
+      "qualitative": true
+    },
+    {
+      "prey": "european-rabbit",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    },
+    {
+      "prey": "waterfowl-land-birds",
+      "predator": "armadillos-skunks",
+      "qualitative": true
+    },
+    {
+      "prey": "waterfowl-land-birds",
+      "predator": "american-mink",
+      "qualitative": true
+    },
+    {
+      "prey": "waterfowl-land-birds",
+      "predator": "small-native-carnivores",
+      "qualitative": true
+    },
+    {
+      "prey": "waterfowl-land-birds",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "waterfowl-land-birds",
+      "predator": "raptors-owls",
+      "qualitative": true
+    },
+    {
+      "prey": "waterfowl-land-birds",
+      "predator": "puma",
+      "qualitative": true
+    },
+    {
+      "prey": "waterfowl-land-birds",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    },
+    {
+      "prey": "armadillos-skunks",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "armadillos-skunks",
+      "predator": "raptors-owls",
+      "qualitative": true
+    },
+    {
+      "prey": "armadillos-skunks",
+      "predator": "puma",
+      "qualitative": true
+    },
+    {
+      "prey": "armadillos-skunks",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    },
+    {
+      "prey": "lesser-grison",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    },
+    {
+      "prey": "american-mink",
+      "predator": "raptors-owls",
+      "qualitative": true
+    },
+    {
+      "prey": "small-native-carnivores",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "small-native-carnivores",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    },
+    {
+      "prey": "foxes",
+      "predator": "puma",
+      "qualitative": true
+    },
+    {
+      "prey": "foxes",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    },
+    {
+      "prey": "raptors-owls",
+      "predator": "foxes",
+      "qualitative": true
+    },
+    {
+      "prey": "puma",
+      "predator": "condor-caracaras",
+      "qualitative": true
+    }
+  ]
+}

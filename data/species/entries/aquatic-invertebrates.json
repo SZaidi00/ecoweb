@@ -6,6 +6,15 @@
   "sourceWeb": "tapajos-river",
   "occurrences": [
     {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "aquatic-invertebrates",
+      "displayName": "Aquatic invertebrates",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    },
+    {
       "web": "tapajos-river",
       "webName": "Tapaj\u00f3s River",
       "biome": "freshwater",

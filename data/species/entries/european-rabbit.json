@@ -1,0 +1,24 @@
+{
+  "slug": "european-rabbit",
+  "name": "European rabbit",
+  "kind": "species",
+  "description": "The European rabbit (Oryctolagus cuniculus), introduced around 1936 and now the most-connected node of this food web: 56 links, eating 44 plants and preyed on by 12 predators. It is simultaneously an herbivore, a competitor of guanaco, sheep and cattle for forage, and the prey subsidy that sustains foxes, puma, raptors and condors. Removing it releases 14 plant nodes from all herbivory and relaxes competition for the big herbivores - the study's headline cascade.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/European_rabbit"
+  },
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "european-rabbit",
+      "displayName": "European rabbit",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/European_rabbit"
+      }
+    }
+  ]
+}

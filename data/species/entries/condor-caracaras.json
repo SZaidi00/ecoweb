@@ -1,0 +1,24 @@
+{
+  "slug": "condor-caracaras",
+  "name": "Condor & caracaras",
+  "kind": "functional-group",
+  "description": "The scavenger guild - the Andean condor (Vultur gryphus) and the caracaras: southern carancho austral (Phalcoboenus australis), white-throated caracara araucano (P. albogularis) and the crested caracara traro (Caracara plancus). Functional group pooling 4 source nodes (4 native, 0 exotic, 0 mixed-origin); the paper describes these facultative and strict scavengers as direct beneficiaries of the rabbit subsidy, and their carrion links to livestock, guanaco and puma are documented feeding records.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Andean_condor"
+  },
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "condor-caracaras",
+      "displayName": "Condor & caracaras",
+      "kind": "functional-group",
+      "trophicLevel": 3.6,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Andean_condor"
+      }
+    }
+  ]
+}

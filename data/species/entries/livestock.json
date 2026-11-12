@@ -1,0 +1,18 @@
+{
+  "slug": "livestock",
+  "name": "Livestock",
+  "kind": "functional-group",
+  "description": "Domestic herbivores of the ranches - sheep (Ovis aries, 40 plant items), cattle (Bos taurus), horses (Equus caballus) and goats (Capra hircus). Functional group pooling 4 source nodes (0 native, 4 exotic, 0 mixed-origin); the source analyses them as the rabbit's main competitors for pasture (sheep share 21 forage nodes with the rabbit, cattle 19). Predated by pumas and foxes and heavily scavenged by condors and caracaras.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "livestock",
+      "displayName": "Livestock",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

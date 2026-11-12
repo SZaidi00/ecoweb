@@ -1,0 +1,24 @@
+{
+  "slug": "guanaco",
+  "name": "Guanaco",
+  "kind": "species",
+  "description": "The guanaco (Lama guanicoe), the wild camelid of the Patagonian steppe and the web's widest-ranging herbivore with 47 plant items in the source. It shares 22 forage plants with the rabbit, is preyed on by the puma, and its carcasses feed condors and caracaras.",
+  "sourceWeb": "magellanic-rabbit-steppe",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Guanaco"
+  },
+  "occurrences": [
+    {
+      "web": "magellanic-rabbit-steppe",
+      "webName": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "node": "guanaco",
+      "displayName": "Guanaco",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Guanaco"
+      }
+    }
+  ]
+}

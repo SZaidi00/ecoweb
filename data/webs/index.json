@@ -45,6 +45,17 @@
       "lng": -89.53
     },
     {
+      "id": "magellanic-rabbit-steppe",
+      "name": "Magellanic/Fuegian Steppe",
+      "biome": "grassland",
+      "location": "Magallanes Region, Chilean Patagonia, Chile",
+      "nodeCount": 24,
+      "provenance": "composite",
+      "tagline": "An invasive rabbit sits at the center of Patagonia's cold-steppe food web",
+      "lat": -53.0,
+      "lng": -71.0
+    },
+    {
       "id": "serengeti",
       "name": "Serengeti",
       "biome": "grassland",
