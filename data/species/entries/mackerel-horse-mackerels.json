@@ -1,0 +1,18 @@
+{
+  "slug": "mackerel-horse-mackerels",
+  "name": "Mackerel & horse mackerels",
+  "kind": "functional-group",
+  "description": "Mackerel (Scomber japonicus) and horse mackerels (Trachurus trachurus, T. trecae, Caranx rhonchus) - the schooling midwater predators that dominate the industrial pelagic trawl catch. Functional group pooling the source's mackerel and horse-mackerels compartments: both are schooling carangid-grade predators feeding on zooplankton and small fish, and horse mackerels feed partly on the seafloor, so the two are pooled here to fit this atlas's 25-node ceiling. Horse mackerels import 6% of their diet from outside the modelled system, so this node's weights sum to about 0.97.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "mackerels",
+      "displayName": "Mackerel & horse mackerels",
+      "kind": "functional-group",
+      "trophicLevel": 3.306
+    }
+  ]
+}

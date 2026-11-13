@@ -1,0 +1,18 @@
+{
+  "slug": "shelf-benthos",
+  "name": "Shelf benthos",
+  "kind": "functional-group",
+  "description": "The invertebrate life of the open shelf seafloor: large crustaceans, molluscs, worms, small crustaceans, other invertebrates and meiobenthos. Functional group pooling the source's six shelf-benthic compartments - the detritus-driven benthic guild that underpins the demersal food web; pooled to fit this atlas's 25-node ceiling.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "shelf-benthos",
+      "displayName": "Shelf benthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.134
+    }
+  ]
+}

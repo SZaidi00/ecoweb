@@ -1,0 +1,24 @@
+{
+  "slug": "mullets",
+  "name": "Mullets",
+  "kind": "functional-group",
+  "description": "Mullets (Mugil cephalus, M. capurrii and Liza species) - the fish of the Imraguen sailboat fishery, migrating along the coast and grazing the Banc's seagrass and algae flats; in this model over 80% of their diet is algae and eelgrass, and more than 60% of their production comes from the Banc - the highest of any fish group. Functional group pooling the source's mullets compartment (several Mugil and Liza species measured together).",
+  "sourceWeb": "banc-darguin",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Mugil_cephalus"
+  },
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "mullets",
+      "displayName": "Mullets",
+      "kind": "functional-group",
+      "trophicLevel": 2.105,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Mugil_cephalus"
+      }
+    }
+  ]
+}

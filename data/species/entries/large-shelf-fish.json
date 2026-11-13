@@ -1,0 +1,18 @@
+{
+  "slug": "large-shelf-fish",
+  "name": "Large shelf fish",
+  "kind": "functional-group",
+  "description": "Large shelf fishes - conger and moray eels, anglerfishes (Lophius), oilfish and other big bottom-associated predators. Functional group pooling the source's single 'Shelf L' compartment, the guild of large demersal piscivores; it imports 5.8% of its diet from beyond the modelled system, so this node's weights sum to about 0.94.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "shelf-l",
+      "displayName": "Large shelf fish",
+      "kind": "functional-group",
+      "trophicLevel": 4.137
+    }
+  ]
+}

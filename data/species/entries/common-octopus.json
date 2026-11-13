@@ -1,0 +1,24 @@
+{
+  "slug": "common-octopus",
+  "name": "Common octopus",
+  "kind": "species",
+  "description": "Common octopus (Octopus vulgaris) - tracked as its own single-species compartment by the source, and the backbone of Mauritania's industrial demersal fishery. It hunts shelf molluscs, worms and crabs; in turn it is eaten by groupers, large shelf fishes and coastal selacians.",
+  "sourceWeb": "banc-darguin",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Octopus_vulgaris"
+  },
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "octopus",
+      "displayName": "Common octopus",
+      "kind": "species",
+      "trophicLevel": 3.165,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Octopus_vulgaris"
+      }
+    }
+  ]
+}

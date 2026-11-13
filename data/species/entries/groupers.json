@@ -1,0 +1,24 @@
+{
+  "slug": "groupers",
+  "name": "Groupers",
+  "kind": "life-stage-group",
+  "description": "Groupers - Epinephelus and Mycteroperca sea basses (adults and juveniles measured as separate stanzas by the source), the big reef predators of the rocky shelf, eating crabs, octopus and small fish. Life-stage group pooling the source's adult and juvenile grouper compartments, pooled here because the two stanzas form one population.",
+  "sourceWeb": "banc-darguin",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Epinephelus"
+  },
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "groupers",
+      "displayName": "Groupers",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.548,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Epinephelus"
+      }
+    }
+  ]
+}

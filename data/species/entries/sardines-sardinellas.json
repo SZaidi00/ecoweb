@@ -1,0 +1,24 @@
+{
+  "slug": "sardines-sardinellas",
+  "name": "Sardines & sardinellas",
+  "kind": "functional-group",
+  "description": "Sardine (Sardina pilchardus), sardinellas (Sardinella aurita, S. maderensis) and anchovy (Engraulis encrasicolus) - the small clupeid plankton-eaters that school in enormous shoals and feed the birds, the big pelagics and the purse-seine fleet. Functional group pooling the source's sardine and sardinelles compartments: both are small filter-feeding planktivores (the source noted sardine is the one fish group that feeds entirely outside the Banc); pooled here to fit this atlas's 25-node ceiling.",
+  "sourceWeb": "banc-darguin",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sardina_pilchardus"
+  },
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "sardines",
+      "displayName": "Sardines & sardinellas",
+      "kind": "functional-group",
+      "trophicLevel": 3.042,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Sardina_pilchardus"
+      }
+    }
+  ]
+}

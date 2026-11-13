@@ -1,0 +1,18 @@
+{
+  "slug": "algae-eelgrass",
+  "name": "Algae & eelgrass",
+  "kind": "functional-group",
+  "description": "Algae and eelgrass - the Banc's vast seagrass meadows and algal beds, the largest producer pool in the model (nearly 550 tonnes per square kilometre). Functional group matching the source's single 'algae and eelgrass' compartment; grazed by mullets and sparids, and the anchor of the detrital food chain.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "algae-eelgrass",
+      "displayName": "Algae & eelgrass",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

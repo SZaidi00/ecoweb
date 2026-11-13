@@ -2,9 +2,18 @@
   "slug": "sharks-rays",
   "name": "Sharks & rays",
   "kind": "functional-group",
-  "description": "The seafloor's and open water's cartilaginous predators: pelagic-feeding sharks and skates (copper, blue and mako sharks), benthic-feeding sharks and rays (St Joseph's shark, catsharks, stingrays, soupfin) and the apex great white and six- and seven-gill sharks. Functional group pooling the source's three chondrichthyan compartments; the source measured them by feeding habit, and all three are top predators here, so they are pooled to fit the 25-node ceiling.",
-  "sourceWeb": "southern-benguela",
+  "description": "Sharks, rays and skates - the elasmobranch predators of the shelf and the shallow coast, from guitarfish and eagle rays inshore to deep-water catsharks and seven-gill sharks offshore. Functional group pooling the source's coastal-selacians and shelf-selacians compartments - one shark-and-ray guild that the source split by habitat; pooled here to fit this atlas's 25-node ceiling. Shelf selacians import 21% of their diet from beyond the modelled system, so this node's weights sum to about 0.89.",
+  "sourceWeb": "banc-darguin",
   "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "selacians",
+      "displayName": "Sharks & rays",
+      "kind": "functional-group",
+      "trophicLevel": 3.788
+    },
     {
       "web": "southern-benguela",
       "webName": "Southern Benguela",

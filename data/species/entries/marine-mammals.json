@@ -9,6 +9,15 @@
   },
   "occurrences": [
     {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "marine-mammals",
+      "displayName": "Marine mammals",
+      "kind": "functional-group",
+      "trophicLevel": 4.217
+    },
+    {
       "web": "southern-benguela",
       "webName": "Southern Benguela",
       "biome": "marine",

@@ -1,0 +1,18 @@
+{
+  "slug": "large-pelagic-fish",
+  "name": "Large pelagic fish",
+  "kind": "functional-group",
+  "description": "Large pelagic fishes - tunas, bonitos, pompanos, barracudas, dolphinfishes and their open-water kin (14 genera in the source's list). Functional group pooling the source's 'Pelagic L' compartment - the guild of large roaming predators whose seasonal migrations carry them along the whole Mauritanian shelf; it imports 2.1% of its diet from outside the modelled system.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "pelagic-l",
+      "displayName": "Large pelagic fish",
+      "kind": "functional-group",
+      "trophicLevel": 4.005
+    }
+  ]
+}

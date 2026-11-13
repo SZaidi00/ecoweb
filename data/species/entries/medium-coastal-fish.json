@@ -1,0 +1,18 @@
+{
+  "slug": "medium-coastal-fish",
+  "name": "Medium coastal fish",
+  "kind": "functional-group",
+  "description": "Medium-sized coastal fishes of the Banc and the near shore - drums, threadfins, pomadasyids and similar species (33 in the source's list), grazing the Banc's benthos: worms, molluscs, algae and eelgrass. Functional group pooling the source's single 'Coastal M' compartment, a size-and-habitat guild measured together by the source.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "coastal-m",
+      "displayName": "Medium coastal fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.06
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "meagre",
+  "name": "Meagre",
+  "kind": "life-stage-group",
+  "description": "Meagre (Argyrosomus regius) - a big coastal drum famous for its croaking chorus, targeted by the Imraguen artisanal fishers of the Banc and by foreign fleets. Life-stage group of the source's adult and juvenile meagre compartments, measured separately (adults hunt fish and cephalopods, juveniles add zooplankton) and pooled here because the two stanzas form one population.",
+  "sourceWeb": "banc-darguin",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Argyrosomus_regius"
+  },
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "meagre",
+      "displayName": "Meagre",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.867,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Argyrosomus_regius"
+      }
+    }
+  ]
+}

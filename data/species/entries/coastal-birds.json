@@ -1,0 +1,18 @@
+{
+  "slug": "coastal-birds",
+  "name": "Coastal birds",
+  "kind": "functional-group",
+  "description": "Seabirds - breeders and migrants that crowd the Banc's mudflats, the largest wintering ground for Palearctic wading birds in Africa. Their food is unmistakably Banc-made: three quarters of the diet is Banc-d'Arguin benthos (crabs, molluscs, worms) and sardinelles - the highest dependency on the Banc of any predator in the model. Functional group pooling the source's single coastal-birds compartment, which groups the region's seabird species measured together.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "coastal-birds",
+      "displayName": "Coastal birds",
+      "kind": "functional-group",
+      "trophicLevel": 3.455
+    }
+  ]
+}

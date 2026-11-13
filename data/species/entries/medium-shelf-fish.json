@@ -1,0 +1,18 @@
+{
+  "slug": "medium-shelf-fish",
+  "name": "Medium shelf fish",
+  "kind": "functional-group",
+  "description": "Medium-sized shelf fishes - gurnards, pomadasyids, goatfishes, weevers and similar species (40 in the source's list), rooting through shelf worms and crustaceans. Functional group pooling the source's single 'Shelf M' compartment, a size-and-habitat guild measured together by the source.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "shelf-m",
+      "displayName": "Medium shelf fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.294
+    }
+  ]
+}

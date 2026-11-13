@@ -1,0 +1,18 @@
+{
+  "slug": "banc-d-arguin-zooplankton",
+  "name": "Banc d'Arguin zooplankton",
+  "kind": "functional-group",
+  "description": "The tiny drifting grazers of the Banc's sheltered waters - meso- and macrozooplankton. Functional group pooling the source's BA mesozooplankton and BA macrozooplankton compartments (two size classes measured separately, as on the shelf), the plankton community that channels the Banc's phytoplankton to sardinellas, horse mackerels and juvenile fish.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "banc-zooplankton",
+      "displayName": "Banc d'Arguin zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.235
+    }
+  ]
+}

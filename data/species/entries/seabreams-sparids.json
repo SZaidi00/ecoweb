@@ -1,0 +1,18 @@
+{
+  "slug": "seabreams-sparids",
+  "name": "Seabreams & sparids",
+  "kind": "functional-group",
+  "description": "Seabreams and sparids - sea breams, dentexes, pandoras and salemas (adults and juveniles measured as separate stanzas by the source for the seabreams and sparids groups). Functional group pooling the source's seabreams-adult, seabreams-juvenile, sparids-adult and sparids-juvenile compartments - the sparid guild grazing algae and picking benthic invertebrates, one of the lightly exploited groups in the fishery; pooled to fit this atlas's 25-node ceiling.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "sparids-seabreams",
+      "displayName": "Seabreams & sparids",
+      "kind": "functional-group",
+      "trophicLevel": 2.999
+    }
+  ]
+}

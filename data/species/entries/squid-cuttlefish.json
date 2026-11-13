@@ -1,0 +1,18 @@
+{
+  "slug": "squid-cuttlefish",
+  "name": "Squid & cuttlefish",
+  "kind": "functional-group",
+  "description": "Other cephalopods - squid and cuttlefish. Functional group pooling the source's cephalopods compartment (the squid and cuttlefish species measured together, apart from the octopus which has its own compartment); they hunt worms, small fish and each other, and feed the shelf's top predators.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "cephalopods",
+      "displayName": "Squid & cuttlefish",
+      "kind": "functional-group",
+      "trophicLevel": 3.597
+    }
+  ]
+}

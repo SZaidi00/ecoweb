@@ -6,6 +6,15 @@
   "sourceWeb": "chesapeake-bay",
   "occurrences": [
     {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    },
+    {
       "web": "chesapeake-bay",
       "webName": "Chesapeake Bay",
       "biome": "estuary",

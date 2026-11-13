@@ -78,6 +78,17 @@
       "lng": -104.8
     },
     {
+      "id": "banc-darguin",
+      "name": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "location": "Banc d'Arguin National Park and the Mauritanian shelf, Mauritania (Cap Blanc to the Senegal border)",
+      "nodeCount": 25,
+      "provenance": "empirical",
+      "tagline": "Where the Sahara meets the sea: seagrass flats and shorebird crowds feed one of Africa's richest shelves",
+      "lat": 20.0,
+      "lng": -16.5
+    },
+    {
       "id": "northern-benguela",
       "name": "Northern Benguela",
       "biome": "marine",

@@ -1,0 +1,18 @@
+{
+  "slug": "shelf-zooplankton",
+  "name": "Shelf zooplankton",
+  "kind": "functional-group",
+  "description": "The tiny drifting grazers of the open shelf - meso- and macrozooplankton. Functional group pooling the source's mesozooplankton and macrozooplankton compartments (two size classes measured separately), the most-eaten prey of the whole web: sardine, anchovy, sardinellas, mackerel and young fish all filter them from the upwelling-enriched water.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "shelf-zooplankton",
+      "displayName": "Shelf zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.242
+    }
+  ]
+}

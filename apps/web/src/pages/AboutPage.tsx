@@ -91,6 +91,11 @@ const webSources = [
     note: 'Heymans & Sumaila 2007, Fisheries Centre Research Reports 15(6); model via EcoBase 115.',
   },
   {
+    name: "Banc d'Arguin & Mauritanian Shelf",
+    href: 'https://doi.org/10.1371/journal.pone.0094742',
+    note: 'Guénette, Meissa & Gascuel 2014, PLoS ONE; model via EcoBase 689.',
+  },
+  {
     name: 'Magellanic/Fuegian Steppe',
     href: 'https://doi.org/10.1038/s41598-024-70511-6',
     note: 'Mann-Vollrath et al. 2024, Scientific Reports; curated composite.',

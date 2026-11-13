@@ -1,0 +1,1280 @@
+{
+  "meta": {
+    "id": "banc-darguin",
+    "name": "Banc d'Arguin & Mauritanian Shelf",
+    "location": "Banc d'Arguin National Park and the Mauritanian shelf, Mauritania (Cap Blanc to the Senegal border)",
+    "biome": "marine",
+    "lat": 20.0,
+    "lng": -16.5,
+    "provenance": "empirical",
+    "tagline": "Where the Sahara meets the sea: seagrass flats and shorebird crowds feed one of Africa's richest shelves",
+    "citations": [
+      "Guénette, S., Meissa, B. & Gascuel, D. (2014). Assessing the Contribution of Marine Protected Areas to the Trophic Functioning of Ecosystems: A Model for the Banc d'Arguin and the Mauritanian Shelf. PLoS ONE 9(4):e94742. https://doi.org/10.1371/journal.pone.0094742",
+      "Guénette, Meissa & Gascuel (2014). Supplementary material (File S1: Text S1 model description, Table S1 species-to-group list, Table S2 diet-composition matrix, Tables S3-S9 parameters) to the above article. https://doi.org/10.1371/journal.pone.0094742.s001",
+      "Colléter, M. et al. EcoBase model 689 - 'Mauritanie' (Banc d'Arguin and the Mauritanian shelf), 1991 base model (machine-readable Ecopath model: group parameters, trophic levels and the diet-composition matrix downloaded 2026-11-12). https://ecobase.ecopath.org"
+    ],
+    "sourceUrl": "https://doi.org/10.1371/journal.pone.0094742",
+    "licenseNote": "Structure, parameters and diet composition are from Guénette, Meissa & Gascuel (2014, PLoS ONE 9(4):e94742), specifically the 51-compartment Ecopath base model of the Banc d'Arguin and the Mauritanian shelf in 1991, published as Table S2 of File S1 (DOI 10.1371/journal.pone.0094742.s001) and downloaded machine-readable from EcoBase model 689 (ecobase.ecopath.org). Cross-check between the two transcriptions found three discrepant cells, all resolved in favour of the EcoBase machine-readable values, which make every predator column sum to exactly 1 minus its documented diet import: (1) the published DOCX prints '134' for groupers-adult eating BA large crustaceans where EcoBase has 0.140 (a decimal-point typo - with 134 the column sums to 2.20 and the published trophic level of 3.78 would be unachievable); (2) the coastal-birds column omits shelf molluscs at 0.02, which EcoBase includes; (3) catfish-adult shelf worms are printed 0.14 where EcoBase has 0.142 (rounding). Curation and pooling: the 51 published compartments were pooled to 25 nodes - juvenile with adult stanzas merged for meagre, catfish and groupers (each a two-stanza population measured separately by the source); the sciaenid guild pooled (croakers adult + croakers juvenile + scianids into drums-croakers); the sparid guild pooled (seabreams and sparids, adult and juvenile stanzas each, into sparids-seabreams); sardine and sardinelles pooled into sardines; mackerel and horse mackerels pooled into mackerels; coastal and shelf selacians pooled into selacians; the small benthic-feeding demersals pooled (coastal S, shelf S, shelf soles into small-demersals); the six 'BA' benthic compartments pooled into banc-benthos and the six shelf benthic compartments into shelf-benthos; meso- with macrozooplankton pooled per habitat (banc-zooplankton, shelf-zooplankton); and BA phytoplankton with shelf phytoplankton pooled into phytoplankton - each pooling is also stated in the node's description. Edge weights were derived from the published diet matrix after pooling: for prey pools the weight is the sum of the source diet fractions of all prey in the pool for that source predator; for predator nodes pooling several source compartments the component compartments' fractions are averaged (the same convention as the atlas's other Ecopath webs); rounded to 3 decimals. Within-pool predation (e.g. macrozooplankton eating mesozooplankton, benthos eating meiobenthos, croakers eating croakers) is omitted as self-loops, so several pooled predators' weights sum to less than 1 (e.g. shelf-zooplankton 0.81, banc-benthos 0.89, selacians 0.89). Trophic levels were recomputed from the pooled diet matrix by solving the Ecopath trophic-level equations (TL_i = 1 + sum_j w_ji x TL_j, producers and detritus at TL 1), renormalising over in-system prey where the source documents diet import (marine mammals 17.3%, shelf selacians 21.1%, horse mackerels 6.0%, shelf L 5.8%, pelagic L 2.1%, mackerel 0.2%, shelf S 0.1%) and accounting for omitted within-pool flows as cannibalism; the resulting values track the source's published balanced trophic levels (main-text Table 1 and the EcoBase output table) within about 0.2, with pooled nodes falling between their source compartments' published levels. Diet imports from outside the model: as well as the fractions above, the 'Import' prey row of Table S2 corresponds to these same documented imports and was not transcribed as a node. This web is the 1991 base model; the source built two sensitivity variants (P30/M30) around the uncertain Banc benthos biomass. Ecopath diet compositions are model-balanced estimates that are partly literature-informed. Article and supplement are open access under CC BY. Reuse requires citing Guénette, Meissa & Gascuel (2014) and the EcoBase model.",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-11-12"
+  },
+  "nodes": [
+    {
+      "id": "marine-mammals",
+      "displayName": "Marine mammals",
+      "kind": "functional-group",
+      "trophicLevel": 4.217,
+      "functionalRole": "top-consumer",
+      "description": "Whales and dolphins feeding on this shelf - the source's single marine-mammal compartment, pooling the cetacean species that feed mainly in the study area (oceanic species feeding only marginally there were excluded by the source). It imports 17.3% of its diet from beyond the modelled system, so this node's weights sum to 0.827. Functional group pooling the source's marine mammals compartment.",
+      "layout": {
+        "x": 56,
+        "y": 84
+      }
+    },
+    {
+      "id": "coastal-birds",
+      "displayName": "Coastal birds",
+      "kind": "functional-group",
+      "trophicLevel": 3.455,
+      "functionalRole": "top-consumer",
+      "description": "Seabirds - breeders and migrants that crowd the Banc's mudflats, the largest wintering ground for Palearctic wading birds in Africa. Their food is unmistakably Banc-made: three quarters of the diet is Banc-d'Arguin benthos (crabs, molluscs, worms) and sardinelles - the highest dependency on the Banc of any predator in the model. Functional group pooling the source's single coastal-birds compartment, which groups the region's seabird species measured together.",
+      "layout": {
+        "x": 8,
+        "y": 60
+      }
+    },
+    {
+      "id": "meagre",
+      "displayName": "Meagre",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.867,
+      "functionalRole": "top-consumer",
+      "description": "Meagre (Argyrosomus regius) - a big coastal drum famous for its croaking chorus, targeted by the Imraguen artisanal fishers of the Banc and by foreign fleets. Life-stage group of the source's adult and juvenile meagre compartments, measured separately (adults hunt fish and cephalopods, juveniles add zooplankton) and pooled here because the two stanzas form one population.",
+      "layout": {
+        "x": 36,
+        "y": 72
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Argyrosomus_regius"
+      }
+    },
+    {
+      "id": "mullets",
+      "displayName": "Mullets",
+      "kind": "functional-group",
+      "trophicLevel": 2.105,
+      "functionalRole": "primary-consumer",
+      "description": "Mullets (Mugil cephalus, M. capurrii and Liza species) - the fish of the Imraguen sailboat fishery, migrating along the coast and grazing the Banc's seagrass and algae flats; in this model over 80% of their diet is algae and eelgrass, and more than 60% of their production comes from the Banc - the highest of any fish group. Functional group pooling the source's mullets compartment (several Mugil and Liza species measured together).",
+      "layout": {
+        "x": 26,
+        "y": 28
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Mugil_cephalus"
+      }
+    },
+    {
+      "id": "pelagic-l",
+      "displayName": "Large pelagic fish",
+      "kind": "functional-group",
+      "trophicLevel": 4.005,
+      "functionalRole": "top-consumer",
+      "description": "Large pelagic fishes - tunas, bonitos, pompanos, barracudas, dolphinfishes and their open-water kin (14 genera in the source's list). Functional group pooling the source's 'Pelagic L' compartment - the guild of large roaming predators whose seasonal migrations carry them along the whole Mauritanian shelf; it imports 2.1% of its diet from outside the modelled system.",
+      "layout": {
+        "x": 86,
+        "y": 76
+      }
+    },
+    {
+      "id": "mackerels",
+      "displayName": "Mackerel & horse mackerels",
+      "kind": "functional-group",
+      "trophicLevel": 3.306,
+      "functionalRole": "intermediate-consumer",
+      "description": "Mackerel (Scomber japonicus) and horse mackerels (Trachurus trachurus, T. trecae, Caranx rhonchus) - the schooling midwater predators that dominate the industrial pelagic trawl catch. Functional group pooling the source's mackerel and horse-mackerels compartments: both are schooling carangid-grade predators feeding on zooplankton and small fish, and horse mackerels feed partly on the seafloor, so the two are pooled here to fit this atlas's 25-node ceiling. Horse mackerels import 6% of their diet from outside the modelled system, so this node's weights sum to about 0.97.",
+      "layout": {
+        "x": 58,
+        "y": 58
+      }
+    },
+    {
+      "id": "sardines",
+      "displayName": "Sardines & sardinellas",
+      "kind": "functional-group",
+      "trophicLevel": 3.042,
+      "functionalRole": "primary-consumer",
+      "description": "Sardine (Sardina pilchardus), sardinellas (Sardinella aurita, S. maderensis) and anchovy (Engraulis encrasicolus) - the small clupeid plankton-eaters that school in enormous shoals and feed the birds, the big pelagics and the purse-seine fleet. Functional group pooling the source's sardine and sardinelles compartments: both are small filter-feeding planktivores (the source noted sardine is the one fish group that feeds entirely outside the Banc); pooled here to fit this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 52,
+        "y": 44
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Sardina_pilchardus"
+      }
+    },
+    {
+      "id": "selacians",
+      "displayName": "Sharks & rays",
+      "kind": "functional-group",
+      "trophicLevel": 3.788,
+      "functionalRole": "top-consumer",
+      "description": "Sharks, rays and skates - the elasmobranch predators of the shelf and the shallow coast, from guitarfish and eagle rays inshore to deep-water catsharks and seven-gill sharks offshore. Functional group pooling the source's coastal-selacians and shelf-selacians compartments - one shark-and-ray guild that the source split by habitat; pooled here to fit this atlas's 25-node ceiling. Shelf selacians import 21% of their diet from beyond the modelled system, so this node's weights sum to about 0.89.",
+      "layout": {
+        "x": 48,
+        "y": 70
+      }
+    },
+    {
+      "id": "coastal-m",
+      "displayName": "Medium coastal fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.06,
+      "functionalRole": "intermediate-consumer",
+      "description": "Medium-sized coastal fishes of the Banc and the near shore - drums, threadfins, pomadasyids and similar species (33 in the source's list), grazing the Banc's benthos: worms, molluscs, algae and eelgrass. Functional group pooling the source's single 'Coastal M' compartment, a size-and-habitat guild measured together by the source.",
+      "layout": {
+        "x": 18,
+        "y": 46
+      }
+    },
+    {
+      "id": "small-demersals",
+      "displayName": "Small demersal fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.178,
+      "functionalRole": "intermediate-consumer",
+      "description": "Small bottom-living fishes: the coastal-S group (gobies, sand-smelts), the shelf-S group (small shelf fish such as lizardfishes and sea-snails) and the shelf soles (flatfishes). Functional group pooling the source's Coastal S, Shelf S and Shelf soles compartments - the guild of small benthic-feeding demersals that turn worms, molluscs and meiobenthos into food for bigger fish and cephalopods; pooled to fit this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 66,
+        "y": 50
+      }
+    },
+    {
+      "id": "drums-croakers",
+      "displayName": "Drums & croakers",
+      "kind": "functional-group",
+      "trophicLevel": 3.301,
+      "functionalRole": "intermediate-consumer",
+      "description": "Drums and croakers - the sciaenid family: Pseudotolithus croakers (adults and juveniles measured as separate stanzas by the source) plus the Sciaena and Umbrina group. Functional group pooling the source's croakers-adult, croakers-juvenile and scianids compartments - one sciaenid guild clicking and drumming over the seafloor, eating large crustaceans and small fish; pooled to fit this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 44,
+        "y": 56
+      }
+    },
+    {
+      "id": "sparids-seabreams",
+      "displayName": "Seabreams & sparids",
+      "kind": "functional-group",
+      "trophicLevel": 2.999,
+      "functionalRole": "intermediate-consumer",
+      "description": "Seabreams and sparids - sea breams, dentexes, pandoras and salemas (adults and juveniles measured as separate stanzas by the source for the seabreams and sparids groups). Functional group pooling the source's seabreams-adult, seabreams-juvenile, sparids-adult and sparids-juvenile compartments - the sparid guild grazing algae and picking benthic invertebrates, one of the lightly exploited groups in the fishery; pooled to fit this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 34,
+        "y": 42
+      }
+    },
+    {
+      "id": "catfish",
+      "displayName": "Sea catfish",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.283,
+      "functionalRole": "intermediate-consumer",
+      "description": "Sea catfishes (Arius heudelotii, A. latiscutatus, A. parkii) - whiskered scavengers-predators of the shallow shelf. Life-stage group of the source's adult and juvenile catfish compartments, measured separately (adults take crustaceans, worms, seabreams and detritus; juveniles sift molluscs and worms), pooled here because the two stanzas form one population.",
+      "layout": {
+        "x": 28,
+        "y": 52
+      }
+    },
+    {
+      "id": "shelf-l",
+      "displayName": "Large shelf fish",
+      "kind": "functional-group",
+      "trophicLevel": 4.137,
+      "functionalRole": "top-consumer",
+      "description": "Large shelf fishes - conger and moray eels, anglerfishes (Lophius), oilfish and other big bottom-associated predators. Functional group pooling the source's single 'Shelf L' compartment, the guild of large demersal piscivores; it imports 5.8% of its diet from beyond the modelled system, so this node's weights sum to about 0.94.",
+      "layout": {
+        "x": 68,
+        "y": 78
+      }
+    },
+    {
+      "id": "shelf-m",
+      "displayName": "Medium shelf fish",
+      "kind": "functional-group",
+      "trophicLevel": 3.294,
+      "functionalRole": "intermediate-consumer",
+      "description": "Medium-sized shelf fishes - gurnards, pomadasyids, goatfishes, weevers and similar species (40 in the source's list), rooting through shelf worms and crustaceans. Functional group pooling the source's single 'Shelf M' compartment, a size-and-habitat guild measured together by the source.",
+      "layout": {
+        "x": 82,
+        "y": 54
+      }
+    },
+    {
+      "id": "groupers",
+      "displayName": "Groupers",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.548,
+      "functionalRole": "top-consumer",
+      "description": "Groupers - Epinephelus and Mycteroperca sea basses (adults and juveniles measured as separate stanzas by the source), the big reef predators of the rocky shelf, eating crabs, octopus and small fish. Life-stage group pooling the source's adult and juvenile grouper compartments, pooled here because the two stanzas form one population.",
+      "layout": {
+        "x": 60,
+        "y": 62
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Epinephelus"
+      }
+    },
+    {
+      "id": "octopus",
+      "displayName": "Common octopus",
+      "kind": "species",
+      "trophicLevel": 3.165,
+      "functionalRole": "intermediate-consumer",
+      "description": "Common octopus (Octopus vulgaris) - tracked as its own single-species compartment by the source, and the backbone of Mauritania's industrial demersal fishery. It hunts shelf molluscs, worms and crabs; in turn it is eaten by groupers, large shelf fishes and coastal selacians.",
+      "layout": {
+        "x": 90,
+        "y": 48
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Octopus_vulgaris"
+      }
+    },
+    {
+      "id": "cephalopods",
+      "displayName": "Squid & cuttlefish",
+      "kind": "functional-group",
+      "trophicLevel": 3.597,
+      "functionalRole": "intermediate-consumer",
+      "description": "Other cephalopods - squid and cuttlefish. Functional group pooling the source's cephalopods compartment (the squid and cuttlefish species measured together, apart from the octopus which has its own compartment); they hunt worms, small fish and each other, and feed the shelf's top predators.",
+      "layout": {
+        "x": 76,
+        "y": 64
+      }
+    },
+    {
+      "id": "banc-benthos",
+      "displayName": "Banc d'Arguin benthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.151,
+      "functionalRole": "primary-consumer",
+      "description": "The invertebrate life of the Banc d'Arguin's tidal flats and seagrass beds: large crustaceans (crabs), molluscs, polychaete worms, small crustaceans, other invertebrates and meiobenthos. Functional group pooling the source's six 'BA' benthic compartments - the resident, habitat-bound guild that recycles detritus and algae into food for the Banc's birds, juvenile fish and mullets; pooled to fit this atlas's 25-node ceiling. The source built three scenarios for exactly this biomass because it is so uncertain.",
+      "layout": {
+        "x": 14,
+        "y": 32
+      }
+    },
+    {
+      "id": "shelf-benthos",
+      "displayName": "Shelf benthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.134,
+      "functionalRole": "primary-consumer",
+      "description": "The invertebrate life of the open shelf seafloor: large crustaceans, molluscs, worms, small crustaceans, other invertebrates and meiobenthos. Functional group pooling the source's six shelf-benthic compartments - the detritus-driven benthic guild that underpins the demersal food web; pooled to fit this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 78,
+        "y": 30
+      }
+    },
+    {
+      "id": "banc-zooplankton",
+      "displayName": "Banc d'Arguin zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.235,
+      "functionalRole": "primary-consumer",
+      "description": "The tiny drifting grazers of the Banc's sheltered waters - meso- and macrozooplankton. Functional group pooling the source's BA mesozooplankton and BA macrozooplankton compartments (two size classes measured separately, as on the shelf), the plankton community that channels the Banc's phytoplankton to sardinellas, horse mackerels and juvenile fish.",
+      "layout": {
+        "x": 62,
+        "y": 34
+      }
+    },
+    {
+      "id": "shelf-zooplankton",
+      "displayName": "Shelf zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.242,
+      "functionalRole": "primary-consumer",
+      "description": "The tiny drifting grazers of the open shelf - meso- and macrozooplankton. Functional group pooling the source's mesozooplankton and macrozooplankton compartments (two size classes measured separately), the most-eaten prey of the whole web: sardine, anchovy, sardinellas, mackerel and young fish all filter them from the upwelling-enriched water.",
+      "layout": {
+        "x": 46,
+        "y": 36
+      }
+    },
+    {
+      "id": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Microscopic drifting algae of the upwelling-enriched shelf and the Banc's shallows - two habitats the source measured separately (shelf phytoplankton and BA phytoplankton, whose species composition differs inside and outside the Banc). Functional group pooling those two source compartments; the fuel of both food webs.",
+      "layout": {
+        "x": 34,
+        "y": 4
+      }
+    },
+    {
+      "id": "algae-eelgrass",
+      "displayName": "Algae & eelgrass",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Algae and eelgrass - the Banc's vast seagrass meadows and algal beds, the largest producer pool in the model (nearly 550 tonnes per square kilometre). Functional group matching the source's single 'algae and eelgrass' compartment; grazed by mullets and sparids, and the anchor of the detrital food chain.",
+      "layout": {
+        "x": 12,
+        "y": 6
+      }
+    },
+    {
+      "id": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Dead organic matter - decaying seagrass, fallen plankton, faeces and carcasses accumulating on the flats and the shelf. Functional group matching the source's single detritus compartment; the dominant food of both benthic guilds and part of the diet of several demersal fishes in this model.",
+      "layout": {
+        "x": 88,
+        "y": 8
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "algae-eelgrass",
+      "predator": "banc-benthos",
+      "weight": 0.033
+    },
+    {
+      "prey": "banc-zooplankton",
+      "predator": "banc-benthos",
+      "weight": 0.017
+    },
+    {
+      "prey": "detritus",
+      "predator": "banc-benthos",
+      "weight": 0.82
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "banc-benthos",
+      "weight": 0.017
+    },
+    {
+      "prey": "detritus",
+      "predator": "banc-zooplankton",
+      "weight": 0.155
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "banc-zooplankton",
+      "weight": 0.655
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "catfish",
+      "weight": 0.395
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "catfish",
+      "weight": 0.005
+    },
+    {
+      "prey": "detritus",
+      "predator": "catfish",
+      "weight": 0.025
+    },
+    {
+      "prey": "drums-croakers",
+      "predator": "catfish",
+      "weight": 0.004
+    },
+    {
+      "prey": "mackerels",
+      "predator": "catfish",
+      "weight": 0.016
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "catfish",
+      "weight": 0.396
+    },
+    {
+      "prey": "shelf-m",
+      "predator": "catfish",
+      "weight": 0.02
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "catfish",
+      "weight": 0.017
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "catfish",
+      "weight": 0.063
+    },
+    {
+      "prey": "sparids-seabreams",
+      "predator": "catfish",
+      "weight": 0.059
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "cephalopods",
+      "weight": 0.101
+    },
+    {
+      "prey": "banc-zooplankton",
+      "predator": "cephalopods",
+      "weight": 0.01
+    },
+    {
+      "prey": "mackerels",
+      "predator": "cephalopods",
+      "weight": 0.101
+    },
+    {
+      "prey": "octopus",
+      "predator": "cephalopods",
+      "weight": 0.04
+    },
+    {
+      "prey": "sardines",
+      "predator": "cephalopods",
+      "weight": 0.207
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "cephalopods",
+      "weight": 0.399
+    },
+    {
+      "prey": "shelf-m",
+      "predator": "cephalopods",
+      "weight": 0.005
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "cephalopods",
+      "weight": 0.04
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "cephalopods",
+      "weight": 0.067
+    },
+    {
+      "prey": "sparids-seabreams",
+      "predator": "cephalopods",
+      "weight": 0.02
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "coastal-birds",
+      "weight": 0.562
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "coastal-birds",
+      "weight": 0.035
+    },
+    {
+      "prey": "detritus",
+      "predator": "coastal-birds",
+      "weight": 0.004
+    },
+    {
+      "prey": "drums-croakers",
+      "predator": "coastal-birds",
+      "weight": 0.01
+    },
+    {
+      "prey": "mullets",
+      "predator": "coastal-birds",
+      "weight": 0.02
+    },
+    {
+      "prey": "sardines",
+      "predator": "coastal-birds",
+      "weight": 0.187
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "coastal-birds",
+      "weight": 0.082
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "coastal-birds",
+      "weight": 0.087
+    },
+    {
+      "prey": "sparids-seabreams",
+      "predator": "coastal-birds",
+      "weight": 0.012
+    },
+    {
+      "prey": "algae-eelgrass",
+      "predator": "coastal-m",
+      "weight": 0.1
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "coastal-m",
+      "weight": 0.284
+    },
+    {
+      "prey": "banc-zooplankton",
+      "predator": "coastal-m",
+      "weight": 0.074
+    },
+    {
+      "prey": "catfish",
+      "predator": "coastal-m",
+      "weight": 0.005
+    },
+    {
+      "prey": "detritus",
+      "predator": "coastal-m",
+      "weight": 0.037
+    },
+    {
+      "prey": "groupers",
+      "predator": "coastal-m",
+      "weight": 0.002
+    },
+    {
+      "prey": "mackerels",
+      "predator": "coastal-m",
+      "weight": 0.01
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "coastal-m",
+      "weight": 0.078
+    },
+    {
+      "prey": "sardines",
+      "predator": "coastal-m",
+      "weight": 0.02
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "coastal-m",
+      "weight": 0.245
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "coastal-m",
+      "weight": 0.034
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "coastal-m",
+      "weight": 0.098
+    },
+    {
+      "prey": "sparids-seabreams",
+      "predator": "coastal-m",
+      "weight": 0.006
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "drums-croakers",
+      "weight": 0.248
+    },
+    {
+      "prey": "banc-zooplankton",
+      "predator": "drums-croakers",
+      "weight": 0.043
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "drums-croakers",
+      "weight": 0.005
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "drums-croakers",
+      "weight": 0.018
+    },
+    {
+      "prey": "detritus",
+      "predator": "drums-croakers",
+      "weight": 0.002
+    },
+    {
+      "prey": "groupers",
+      "predator": "drums-croakers",
+      "weight": 0.003
+    },
+    {
+      "prey": "mackerels",
+      "predator": "drums-croakers",
+      "weight": 0.012
+    },
+    {
+      "prey": "pelagic-l",
+      "predator": "drums-croakers",
+      "weight": 0.002
+    },
+    {
+      "prey": "sardines",
+      "predator": "drums-croakers",
+      "weight": 0.041
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "drums-croakers",
+      "weight": 0.512
+    },
+    {
+      "prey": "shelf-m",
+      "predator": "drums-croakers",
+      "weight": 0.017
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "drums-croakers",
+      "weight": 0.044
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "drums-croakers",
+      "weight": 0.035
+    },
+    {
+      "prey": "sparids-seabreams",
+      "predator": "drums-croakers",
+      "weight": 0.013
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "groupers",
+      "weight": 0.236
+    },
+    {
+      "prey": "catfish",
+      "predator": "groupers",
+      "weight": 0.019
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "groupers",
+      "weight": 0.006
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "groupers",
+      "weight": 0.015
+    },
+    {
+      "prey": "drums-croakers",
+      "predator": "groupers",
+      "weight": 0.02
+    },
+    {
+      "prey": "mackerels",
+      "predator": "groupers",
+      "weight": 0.025
+    },
+    {
+      "prey": "octopus",
+      "predator": "groupers",
+      "weight": 0.036
+    },
+    {
+      "prey": "pelagic-l",
+      "predator": "groupers",
+      "weight": 0.018
+    },
+    {
+      "prey": "sardines",
+      "predator": "groupers",
+      "weight": 0.038
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "groupers",
+      "weight": 0.381
+    },
+    {
+      "prey": "shelf-m",
+      "predator": "groupers",
+      "weight": 0.011
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "groupers",
+      "weight": 0.145
+    },
+    {
+      "prey": "sparids-seabreams",
+      "predator": "groupers",
+      "weight": 0.051
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "mackerels",
+      "weight": 0.009
+    },
+    {
+      "prey": "banc-zooplankton",
+      "predator": "mackerels",
+      "weight": 0.13
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "mackerels",
+      "weight": 0.011
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "mackerels",
+      "weight": 0.001
+    },
+    {
+      "prey": "detritus",
+      "predator": "mackerels",
+      "weight": 0.035
+    },
+    {
+      "prey": "sardines",
+      "predator": "mackerels",
+      "weight": 0.065
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "mackerels",
+      "weight": 0.058
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "mackerels",
+      "weight": 0.613
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "mackerels",
+      "weight": 0.036
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "marine-mammals",
+      "weight": 0.013
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "marine-mammals",
+      "weight": 0.303
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "marine-mammals",
+      "weight": 0.048
+    },
+    {
+      "prey": "mackerels",
+      "predator": "marine-mammals",
+      "weight": 0.048
+    },
+    {
+      "prey": "mullets",
+      "predator": "marine-mammals",
+      "weight": 0.048
+    },
+    {
+      "prey": "sardines",
+      "predator": "marine-mammals",
+      "weight": 0.16
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "marine-mammals",
+      "weight": 0.013
+    },
+    {
+      "prey": "shelf-m",
+      "predator": "marine-mammals",
+      "weight": 0.048
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "marine-mammals",
+      "weight": 0.144
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "meagre",
+      "weight": 0.03
+    },
+    {
+      "prey": "banc-zooplankton",
+      "predator": "meagre",
+      "weight": 0.082
+    },
+    {
+      "prey": "catfish",
+      "predator": "meagre",
+      "weight": 0.042
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "meagre",
+      "weight": 0.059
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "meagre",
+      "weight": 0.117
+    },
+    {
+      "prey": "drums-croakers",
+      "predator": "meagre",
+      "weight": 0.061
+    },
+    {
+      "prey": "mullets",
+      "predator": "meagre",
+      "weight": 0.08
+    },
+    {
+      "prey": "sardines",
+      "predator": "meagre",
+      "weight": 0.119
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "meagre",
+      "weight": 0.03
+    },
+    {
+      "prey": "shelf-m",
+      "predator": "meagre",
+      "weight": 0.08
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "meagre",
+      "weight": 0.082
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "meagre",
+      "weight": 0.075
+    },
+    {
+      "prey": "sparids-seabreams",
+      "predator": "meagre",
+      "weight": 0.144
+    },
+    {
+      "prey": "algae-eelgrass",
+      "predator": "mullets",
+      "weight": 0.829
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "mullets",
+      "weight": 0.064
+    },
+    {
+      "prey": "detritus",
+      "predator": "mullets",
+      "weight": 0.079
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "mullets",
+      "weight": 0.028
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "octopus",
+      "weight": 0.14
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "octopus",
+      "weight": 0.005
+    },
+    {
+      "prey": "mackerels",
+      "predator": "octopus",
+      "weight": 0.01
+    },
+    {
+      "prey": "sardines",
+      "predator": "octopus",
+      "weight": 0.01
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "octopus",
+      "weight": 0.835
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "pelagic-l",
+      "weight": 0.007
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "pelagic-l",
+      "weight": 0.001
+    },
+    {
+      "prey": "mackerels",
+      "predator": "pelagic-l",
+      "weight": 0.075
+    },
+    {
+      "prey": "sardines",
+      "predator": "pelagic-l",
+      "weight": 0.67
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "pelagic-l",
+      "weight": 0.032
+    },
+    {
+      "prey": "shelf-m",
+      "predator": "pelagic-l",
+      "weight": 0.002
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "pelagic-l",
+      "weight": 0.07
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "pelagic-l",
+      "weight": 0.092
+    },
+    {
+      "prey": "sparids-seabreams",
+      "predator": "pelagic-l",
+      "weight": 0.018
+    },
+    {
+      "prey": "banc-zooplankton",
+      "predator": "sardines",
+      "weight": 0.056
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "sardines",
+      "weight": 0.161
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "sardines",
+      "weight": 0.783
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "selacians",
+      "weight": 0.119
+    },
+    {
+      "prey": "banc-zooplankton",
+      "predator": "selacians",
+      "weight": 0.002
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "selacians",
+      "weight": 0.092
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "selacians",
+      "weight": 0.018
+    },
+    {
+      "prey": "drums-croakers",
+      "predator": "selacians",
+      "weight": 0.007
+    },
+    {
+      "prey": "groupers",
+      "predator": "selacians",
+      "weight": 0.006
+    },
+    {
+      "prey": "mackerels",
+      "predator": "selacians",
+      "weight": 0.059
+    },
+    {
+      "prey": "meagre",
+      "predator": "selacians",
+      "weight": 0.001
+    },
+    {
+      "prey": "mullets",
+      "predator": "selacians",
+      "weight": 0.026
+    },
+    {
+      "prey": "octopus",
+      "predator": "selacians",
+      "weight": 0.002
+    },
+    {
+      "prey": "pelagic-l",
+      "predator": "selacians",
+      "weight": 0.005
+    },
+    {
+      "prey": "sardines",
+      "predator": "selacians",
+      "weight": 0.089
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "selacians",
+      "weight": 0.23
+    },
+    {
+      "prey": "shelf-l",
+      "predator": "selacians",
+      "weight": 0.013
+    },
+    {
+      "prey": "shelf-m",
+      "predator": "selacians",
+      "weight": 0.033
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "selacians",
+      "weight": 0.006
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "selacians",
+      "weight": 0.129
+    },
+    {
+      "prey": "sparids-seabreams",
+      "predator": "selacians",
+      "weight": 0.052
+    },
+    {
+      "prey": "detritus",
+      "predator": "shelf-benthos",
+      "weight": 0.817
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "shelf-benthos",
+      "weight": 0.067
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "shelf-benthos",
+      "weight": 0.017
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "shelf-l",
+      "weight": 0.013
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "shelf-l",
+      "weight": 0.004
+    },
+    {
+      "prey": "drums-croakers",
+      "predator": "shelf-l",
+      "weight": 0.017
+    },
+    {
+      "prey": "groupers",
+      "predator": "shelf-l",
+      "weight": 0.001
+    },
+    {
+      "prey": "mackerels",
+      "predator": "shelf-l",
+      "weight": 0.105
+    },
+    {
+      "prey": "sardines",
+      "predator": "shelf-l",
+      "weight": 0.168
+    },
+    {
+      "prey": "selacians",
+      "predator": "shelf-l",
+      "weight": 0.02
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "shelf-l",
+      "weight": 0.057
+    },
+    {
+      "prey": "shelf-m",
+      "predator": "shelf-l",
+      "weight": 0.2
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "shelf-l",
+      "weight": 0.004
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "shelf-l",
+      "weight": 0.302
+    },
+    {
+      "prey": "sparids-seabreams",
+      "predator": "shelf-l",
+      "weight": 0.051
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "shelf-m",
+      "weight": 0.149
+    },
+    {
+      "prey": "banc-zooplankton",
+      "predator": "shelf-m",
+      "weight": 0.039
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "shelf-m",
+      "weight": 0.002
+    },
+    {
+      "prey": "detritus",
+      "predator": "shelf-m",
+      "weight": 0.03
+    },
+    {
+      "prey": "mackerels",
+      "predator": "shelf-m",
+      "weight": 0.005
+    },
+    {
+      "prey": "pelagic-l",
+      "predator": "shelf-m",
+      "weight": 0.004
+    },
+    {
+      "prey": "sardines",
+      "predator": "shelf-m",
+      "weight": 0.066
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "shelf-m",
+      "weight": 0.49
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "shelf-m",
+      "weight": 0.118
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "shelf-m",
+      "weight": 0.076
+    },
+    {
+      "prey": "sparids-seabreams",
+      "predator": "shelf-m",
+      "weight": 0.005
+    },
+    {
+      "prey": "detritus",
+      "predator": "shelf-zooplankton",
+      "weight": 0.155
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "shelf-zooplankton",
+      "weight": 0.65
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "small-demersals",
+      "weight": 0.232
+    },
+    {
+      "prey": "banc-zooplankton",
+      "predator": "small-demersals",
+      "weight": 0.032
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "small-demersals",
+      "weight": 0.001
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "small-demersals",
+      "weight": 0.003
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "small-demersals",
+      "weight": 0.612
+    },
+    {
+      "prey": "shelf-zooplankton",
+      "predator": "small-demersals",
+      "weight": 0.097
+    },
+    {
+      "prey": "sparids-seabreams",
+      "predator": "small-demersals",
+      "weight": 0.006
+    },
+    {
+      "prey": "algae-eelgrass",
+      "predator": "sparids-seabreams",
+      "weight": 0.202
+    },
+    {
+      "prey": "banc-benthos",
+      "predator": "sparids-seabreams",
+      "weight": 0.316
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "sparids-seabreams",
+      "weight": 0.022
+    },
+    {
+      "prey": "coastal-m",
+      "predator": "sparids-seabreams",
+      "weight": 0.002
+    },
+    {
+      "prey": "octopus",
+      "predator": "sparids-seabreams",
+      "weight": 0.012
+    },
+    {
+      "prey": "sardines",
+      "predator": "sparids-seabreams",
+      "weight": 0.005
+    },
+    {
+      "prey": "shelf-benthos",
+      "predator": "sparids-seabreams",
+      "weight": 0.406
+    },
+    {
+      "prey": "small-demersals",
+      "predator": "sparids-seabreams",
+      "weight": 0.035
+    }
+  ]
+}

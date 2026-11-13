@@ -1,0 +1,18 @@
+{
+  "slug": "banc-d-arguin-benthos",
+  "name": "Banc d'Arguin benthos",
+  "kind": "functional-group",
+  "description": "The invertebrate life of the Banc d'Arguin's tidal flats and seagrass beds: large crustaceans (crabs), molluscs, polychaete worms, small crustaceans, other invertebrates and meiobenthos. Functional group pooling the source's six 'BA' benthic compartments - the resident, habitat-bound guild that recycles detritus and algae into food for the Banc's birds, juvenile fish and mullets; pooled to fit this atlas's 25-node ceiling. The source built three scenarios for exactly this biomass because it is so uncertain.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "banc-benthos",
+      "displayName": "Banc d'Arguin benthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.151
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "sea-catfish",
+  "name": "Sea catfish",
+  "kind": "life-stage-group",
+  "description": "Sea catfishes (Arius heudelotii, A. latiscutatus, A. parkii) - whiskered scavengers-predators of the shallow shelf. Life-stage group of the source's adult and juvenile catfish compartments, measured separately (adults take crustaceans, worms, seabreams and detritus; juveniles sift molluscs and worms), pooled here because the two stanzas form one population.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "catfish",
+      "displayName": "Sea catfish",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.283
+    }
+  ]
+}

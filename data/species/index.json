@@ -1,6 +1,6 @@
 {
-  "webCount": 12,
-  "entryCount": 234,
+  "webCount": 13,
+  "entryCount": 255,
   "entries": [
     {
       "slug": "adelie-penguin",
@@ -83,6 +83,20 @@
         {
           "web": "serengeti",
           "node": "wild-dog-cheetah"
+        }
+      ]
+    },
+    {
+      "slug": "algae-eelgrass",
+      "name": "Algae & eelgrass",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "algae-eelgrass"
         }
       ]
     },
@@ -377,6 +391,34 @@
       ]
     },
     {
+      "slug": "banc-d-arguin-benthos",
+      "name": "Banc d'Arguin benthos",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "banc-benthos"
+        }
+      ]
+    },
+    {
+      "slug": "banc-d-arguin-zooplankton",
+      "name": "Banc d'Arguin zooplankton",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "banc-zooplankton"
+        }
+      ]
+    },
+    {
       "slug": "bearded-goby",
       "name": "Bearded goby",
       "kind": "life-stage-group",
@@ -667,6 +709,34 @@
       ]
     },
     {
+      "slug": "coastal-birds",
+      "name": "Coastal birds",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "coastal-birds"
+        }
+      ]
+    },
+    {
+      "slug": "common-octopus",
+      "name": "Common octopus",
+      "kind": "species",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "octopus"
+        }
+      ]
+    },
+    {
       "slug": "condor-caracaras",
       "name": "Condor & caracaras",
       "kind": "functional-group",
@@ -914,6 +984,7 @@
       "name": "Detritus",
       "kind": "functional-group",
       "webs": [
+        "banc-darguin",
         "northern-benguela",
         "prince-william-sound",
         "shortgrass-prairie",
@@ -922,6 +993,10 @@
         "weddell-sea"
       ],
       "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "detritus"
+        },
         {
           "web": "northern-benguela",
           "node": "detritus"
@@ -1029,6 +1104,20 @@
         {
           "web": "little-rock-lake",
           "node": "dragonfly-nymphs"
+        }
+      ]
+    },
+    {
+      "slug": "drums-croakers",
+      "name": "Drums & croakers",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "drums-croakers"
         }
       ]
     },
@@ -1425,6 +1514,20 @@
       ]
     },
     {
+      "slug": "groupers",
+      "name": "Groupers",
+      "kind": "life-stage-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "groupers"
+        }
+      ]
+    },
+    {
       "slug": "guanaco",
       "name": "Guanaco",
       "kind": "species",
@@ -1696,6 +1799,20 @@
       ]
     },
     {
+      "slug": "large-pelagic-fish",
+      "name": "Large pelagic fish",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "pelagic-l"
+        }
+      ]
+    },
+    {
       "slug": "large-phytoplankton",
       "name": "Large phytoplankton",
       "kind": "functional-group",
@@ -1706,6 +1823,20 @@
         {
           "web": "southern-benguela",
           "node": "phytoplankton-2"
+        }
+      ]
+    },
+    {
+      "slug": "large-shelf-fish",
+      "name": "Large shelf fish",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "shelf-l"
         }
       ]
     },
@@ -1822,6 +1953,20 @@
       ]
     },
     {
+      "slug": "mackerel-horse-mackerels",
+      "name": "Mackerel & horse mackerels",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "mackerels"
+        }
+      ]
+    },
+    {
       "slug": "macroalgae-kelps",
       "name": "Macroalgae (kelps)",
       "kind": "functional-group",
@@ -1882,9 +2027,14 @@
       "name": "Marine mammals",
       "kind": "functional-group",
       "webs": [
+        "banc-darguin",
         "southern-benguela"
       ],
       "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "marine-mammals"
+        },
         {
           "web": "southern-benguela",
           "node": "marine-mammals"
@@ -1902,6 +2052,48 @@
         {
           "web": "little-rock-lake",
           "node": "mayflies"
+        }
+      ]
+    },
+    {
+      "slug": "meagre",
+      "name": "Meagre",
+      "kind": "life-stage-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "meagre"
+        }
+      ]
+    },
+    {
+      "slug": "medium-coastal-fish",
+      "name": "Medium coastal fish",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "coastal-m"
+        }
+      ]
+    },
+    {
+      "slug": "medium-shelf-fish",
+      "name": "Medium shelf fish",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "shelf-m"
         }
       ]
     },
@@ -2005,6 +2197,20 @@
         {
           "web": "northern-benguela",
           "node": "monkfish"
+        }
+      ]
+    },
+    {
+      "slug": "mullets",
+      "name": "Mullets",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "mullets"
         }
       ]
     },
@@ -2349,6 +2555,7 @@
       "name": "Phytoplankton",
       "kind": "functional-group",
       "webs": [
+        "banc-darguin",
         "chesapeake-bay",
         "cypress-wetland",
         "northern-benguela",
@@ -2357,6 +2564,10 @@
         "weddell-sea"
       ],
       "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "phytoplankton"
+        },
         {
           "web": "chesapeake-bay",
           "node": "phytoplankton"
@@ -2707,6 +2918,20 @@
       ]
     },
     {
+      "slug": "sardines-sardinellas",
+      "name": "Sardines & sardinellas",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "sardines"
+        }
+      ]
+    },
+    {
       "slug": "savanna-frogs-toads",
       "name": "Savanna frogs & toads",
       "kind": "functional-group",
@@ -2745,6 +2970,20 @@
         {
           "web": "little-rock-lake",
           "node": "amphipods"
+        }
+      ]
+    },
+    {
+      "slug": "sea-catfish",
+      "name": "Sea catfish",
+      "kind": "life-stage-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "catfish"
         }
       ]
     },
@@ -2791,6 +3030,20 @@
       ]
     },
     {
+      "slug": "seabreams-sparids",
+      "name": "Seabreams & sparids",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "sparids-seabreams"
+        }
+      ]
+    },
+    {
       "slug": "shallow-water-hake",
       "name": "Shallow-water hake",
       "kind": "life-stage-group",
@@ -2823,12 +3076,45 @@
       "name": "Sharks & rays",
       "kind": "functional-group",
       "webs": [
+        "banc-darguin",
         "southern-benguela"
       ],
       "occurrences": [
         {
+          "web": "banc-darguin",
+          "node": "selacians"
+        },
+        {
           "web": "southern-benguela",
           "node": "sharks-rays"
+        }
+      ]
+    },
+    {
+      "slug": "shelf-benthos",
+      "name": "Shelf benthos",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "shelf-benthos"
+        }
+      ]
+    },
+    {
+      "slug": "shelf-zooplankton",
+      "name": "Shelf zooplankton",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "shelf-zooplankton"
         }
       ]
     },
@@ -2871,6 +3157,20 @@
         {
           "web": "tapajos-river",
           "node": "small-cichlid-omnivores"
+        }
+      ]
+    },
+    {
+      "slug": "small-demersal-fish",
+      "name": "Small demersal fish",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "small-demersals"
         }
       ]
     },
@@ -3058,6 +3358,20 @@
         {
           "web": "weddell-sea",
           "node": "squid"
+        }
+      ]
+    },
+    {
+      "slug": "squid-cuttlefish",
+      "name": "Squid & cuttlefish",
+      "kind": "functional-group",
+      "webs": [
+        "banc-darguin"
+      ],
+      "occurrences": [
+        {
+          "web": "banc-darguin",
+          "node": "cephalopods"
         }
       ]
     },

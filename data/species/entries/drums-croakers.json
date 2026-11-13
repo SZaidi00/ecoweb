@@ -1,0 +1,18 @@
+{
+  "slug": "drums-croakers",
+  "name": "Drums & croakers",
+  "kind": "functional-group",
+  "description": "Drums and croakers - the sciaenid family: Pseudotolithus croakers (adults and juveniles measured as separate stanzas by the source) plus the Sciaena and Umbrina group. Functional group pooling the source's croakers-adult, croakers-juvenile and scianids compartments - one sciaenid guild clicking and drumming over the seafloor, eating large crustaceans and small fish; pooled to fit this atlas's 25-node ceiling.",
+  "sourceWeb": "banc-darguin",
+  "occurrences": [
+    {
+      "web": "banc-darguin",
+      "webName": "Banc d'Arguin & Mauritanian Shelf",
+      "biome": "marine",
+      "node": "drums-croakers",
+      "displayName": "Drums & croakers",
+      "kind": "functional-group",
+      "trophicLevel": 3.301
+    }
+  ]
+}
