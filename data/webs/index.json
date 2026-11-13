@@ -78,6 +78,17 @@
       "lng": -104.8
     },
     {
+      "id": "northern-benguela",
+      "name": "Northern Benguela",
+      "biome": "marine",
+      "location": "Northern Benguela upwelling system, Namibia (southern Angola to the Orange River)",
+      "nodeCount": 24,
+      "provenance": "empirical",
+      "tagline": "The upwelling sea where the sardine empire collapsed and jellyfish took the crown",
+      "lat": -22.0,
+      "lng": 14.3
+    },
+    {
       "id": "prince-william-sound",
       "name": "Prince William Sound",
       "biome": "marine",

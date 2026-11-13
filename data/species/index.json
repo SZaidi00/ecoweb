@@ -1,6 +1,6 @@
 {
-  "webCount": 11,
-  "entryCount": 218,
+  "webCount": 12,
+  "entryCount": 234,
   "entries": [
     {
       "slug": "adelie-penguin",
@@ -153,6 +153,20 @@
         {
           "web": "shortgrass-prairie",
           "node": "amoebae"
+        }
+      ]
+    },
+    {
+      "slug": "anchovy",
+      "name": "Anchovy",
+      "kind": "life-stage-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "anchovy"
         }
       ]
     },
@@ -363,6 +377,34 @@
       ]
     },
     {
+      "slug": "bearded-goby",
+      "name": "Bearded goby",
+      "kind": "life-stage-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "gobies"
+        }
+      ]
+    },
+    {
+      "slug": "benthic-algae",
+      "name": "Benthic algae",
+      "kind": "functional-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "benthic-producers"
+        }
+      ]
+    },
+    {
       "slug": "benthic-deposit-feeders",
       "name": "Benthic deposit feeders",
       "kind": "functional-group",
@@ -409,9 +451,14 @@
       "name": "Benthic invertebrates",
       "kind": "functional-group",
       "webs": [
+        "northern-benguela",
         "southern-benguela"
       ],
       "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "benthic-invertebrates"
+        },
         {
           "web": "southern-benguela",
           "node": "benthic-invertebrates"
@@ -531,6 +578,20 @@
       ]
     },
     {
+      "slug": "cape-fur-seal",
+      "name": "Cape fur seal",
+      "kind": "species",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "seals"
+        }
+      ]
+    },
+    {
       "slug": "cape-gannet",
       "name": "Cape gannet",
       "kind": "species",
@@ -541,6 +602,20 @@
         {
           "web": "southern-benguela",
           "node": "cape-gannet"
+        }
+      ]
+    },
+    {
+      "slug": "cape-hake",
+      "name": "Cape hake",
+      "kind": "life-stage-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "hake"
         }
       ]
     },
@@ -839,6 +914,7 @@
       "name": "Detritus",
       "kind": "functional-group",
       "webs": [
+        "northern-benguela",
         "prince-william-sound",
         "shortgrass-prairie",
         "southern-benguela",
@@ -846,6 +922,10 @@
         "weddell-sea"
       ],
       "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "detritus"
+        },
         {
           "web": "prince-william-sound",
           "node": "detritus"
@@ -1447,9 +1527,14 @@
       "name": "Horse mackerel",
       "kind": "life-stage-group",
       "webs": [
+        "northern-benguela",
         "southern-benguela"
       ],
       "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "horse-mackerel"
+        },
         {
           "web": "southern-benguela",
           "node": "horse-mackerel"
@@ -1551,6 +1636,20 @@
         {
           "web": "tapajos-river",
           "node": "jaraqui"
+        }
+      ]
+    },
+    {
+      "slug": "jellyfish",
+      "name": "Jellyfish",
+      "kind": "life-stage-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "jellyfish"
         }
       ]
     },
@@ -1737,6 +1836,20 @@
       ]
     },
     {
+      "slug": "macrozooplankton",
+      "name": "Macrozooplankton",
+      "kind": "functional-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "macrozooplankton"
+        }
+      ]
+    },
+    {
       "slug": "macrozooplankton-jellyfish",
       "name": "Macrozooplankton & jellyfish",
       "kind": "functional-group",
@@ -1807,13 +1920,32 @@
       ]
     },
     {
+      "slug": "mesopelagics",
+      "name": "Mesopelagics",
+      "kind": "functional-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "mesopelagics"
+        }
+      ]
+    },
+    {
       "slug": "mesozooplankton",
       "name": "Mesozooplankton",
       "kind": "functional-group",
       "webs": [
+        "northern-benguela",
         "prince-william-sound"
       ],
       "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "mesozooplankton"
+        },
         {
           "web": "prince-william-sound",
           "node": "mesozooplankton"
@@ -1859,6 +1991,20 @@
         {
           "web": "serengeti",
           "node": "small-carnivores"
+        }
+      ]
+    },
+    {
+      "slug": "monkfish",
+      "name": "Monkfish",
+      "kind": "functional-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "monkfish"
         }
       ]
     },
@@ -1989,6 +2135,34 @@
       ]
     },
     {
+      "slug": "other-demersals",
+      "name": "Other demersals",
+      "kind": "functional-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "other-demersals"
+        }
+      ]
+    },
+    {
+      "slug": "other-linefish",
+      "name": "Other linefish",
+      "kind": "functional-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "other-linefish"
+        }
+      ]
+    },
+    {
       "slug": "other-pelagic-fish",
       "name": "Other pelagic fish",
       "kind": "functional-group",
@@ -2013,6 +2187,20 @@
         {
           "web": "southern-benguela",
           "node": "other-seabirds"
+        }
+      ]
+    },
+    {
+      "slug": "other-small-pelagics",
+      "name": "Other small pelagics",
+      "kind": "functional-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "other-small-pelagics"
         }
       ]
     },
@@ -2163,6 +2351,7 @@
       "webs": [
         "chesapeake-bay",
         "cypress-wetland",
+        "northern-benguela",
         "prince-william-sound",
         "tapajos-river",
         "weddell-sea"
@@ -2174,6 +2363,10 @@
         },
         {
           "web": "cypress-wetland",
+          "node": "phytoplankton"
+        },
+        {
+          "web": "northern-benguela",
           "node": "phytoplankton"
         },
         {
@@ -2499,9 +2692,14 @@
       "name": "Sardine",
       "kind": "life-stage-group",
       "webs": [
+        "northern-benguela",
         "southern-benguela"
       ],
       "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "sardine"
+        },
         {
           "web": "southern-benguela",
           "node": "sardine"
@@ -2579,6 +2777,20 @@
       ]
     },
     {
+      "slug": "seabirds",
+      "name": "Seabirds",
+      "kind": "functional-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "seabirds"
+        }
+      ]
+    },
+    {
       "slug": "shallow-water-hake",
       "name": "Shallow-water hake",
       "kind": "life-stage-group",
@@ -2589,6 +2801,20 @@
         {
           "web": "southern-benguela",
           "node": "cape-hake-shallow"
+        }
+      ]
+    },
+    {
+      "slug": "sharks",
+      "name": "Sharks",
+      "kind": "functional-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "sharks"
         }
       ]
     },
@@ -2765,9 +2991,14 @@
       "name": "Snoek",
       "kind": "species",
       "webs": [
+        "northern-benguela",
         "southern-benguela"
       ],
       "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "snoek"
+        },
         {
           "web": "southern-benguela",
           "node": "snoek"
@@ -2835,9 +3066,14 @@
       "name": "Squid & octopus",
       "kind": "functional-group",
       "webs": [
+        "northern-benguela",
         "southern-benguela"
       ],
       "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "cephalopods"
+        },
         {
           "web": "southern-benguela",
           "node": "squid"
@@ -2943,6 +3179,20 @@
       ]
     },
     {
+      "slug": "tuna",
+      "name": "Tuna",
+      "kind": "functional-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "tuna"
+        }
+      ]
+    },
+    {
       "slug": "tuna-swordfish",
       "name": "Tuna & swordfish",
       "kind": "functional-group",
@@ -3037,6 +3287,20 @@
         {
           "web": "weddell-sea",
           "node": "weddell-seal"
+        }
+      ]
+    },
+    {
+      "slug": "whales-dolphins",
+      "name": "Whales & dolphins",
+      "kind": "functional-group",
+      "webs": [
+        "northern-benguela"
+      ],
+      "occurrences": [
+        {
+          "web": "northern-benguela",
+          "node": "marine-mammals"
         }
       ]
     },

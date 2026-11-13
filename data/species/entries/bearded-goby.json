@@ -1,0 +1,18 @@
+{
+  "slug": "bearded-goby",
+  "name": "Bearded goby",
+  "kind": "life-stage-group",
+  "description": "Bearded goby (Sufflogobius bibarbatus) - a small bottom-hugging fish that in this 1956 web is a minor plankton grazer, but which after the sardine collapse multiplied into one of the most abundant fish stocks on Earth, able to feed in the shelf's oxygen-poor mud layers and even on jellyfish. Life-stage group of the source model's juvenile and adult goby stanzas, measured separately and pooled here because the two stanzas form one population.",
+  "sourceWeb": "northern-benguela",
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "gobies",
+      "displayName": "Bearded goby",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.047
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "whales-dolphins",
+  "name": "Whales & dolphins",
+  "kind": "functional-group",
+  "description": "Whales and dolphins - the cetacean hunters of the shelf. Functional group matching the source model's 'marine mammals' compartment, which in this model covers the cetaceans (seals have their own compartment); it feeds on squid, small pelagics and hake and is barely preyed upon.",
+  "sourceWeb": "northern-benguela",
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "marine-mammals",
+      "displayName": "Whales & dolphins",
+      "kind": "functional-group",
+      "trophicLevel": 4.216
+    }
+  ]
+}

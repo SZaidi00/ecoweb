@@ -1,0 +1,18 @@
+{
+  "slug": "macrozooplankton",
+  "name": "Macrozooplankton",
+  "kind": "functional-group",
+  "description": "Larger drifting animals of the open water - krill, amphipods and their kin. Functional group matching the source model's macrozooplankton compartment; a staple food of anchovy, sardine, hake, horse mackerel and squid.",
+  "sourceWeb": "northern-benguela",
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "macrozooplankton",
+      "displayName": "Macrozooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.4
+    }
+  ]
+}

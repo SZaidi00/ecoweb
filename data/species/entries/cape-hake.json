@@ -1,0 +1,24 @@
+{
+  "slug": "cape-hake",
+  "name": "Cape hake",
+  "kind": "life-stage-group",
+  "description": "Cape hakes (Merluccius spp.) - the deep-water predatory cods that anchor Namibia's trawl fishery, the country's most valuable. Life-stage group of the source model's juvenile and adult hake stanzas, measured separately and pooled here because the two stanzas form one population: juveniles filter macrozooplankton while adults prey on fish, squid and smaller hake. Hake are both predator and prey here - seals, sharks, monkfish and bigger hake all take them.",
+  "sourceWeb": "northern-benguela",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Merluccius_capensis"
+  },
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "hake",
+      "displayName": "Cape hake",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.36,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Merluccius_capensis"
+      }
+    }
+  ]
+}

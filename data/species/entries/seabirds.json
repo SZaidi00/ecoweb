@@ -1,0 +1,18 @@
+{
+  "slug": "seabirds",
+  "name": "Seabirds",
+  "kind": "functional-group",
+  "description": "Seabirds - the diving birds breeding on the Benguela's islands and guano platforms. Functional group matching the source model's single 'birds' compartment, which pools the region's seabird species into one measured group; gobies are their single biggest food in this 1956 web.",
+  "sourceWeb": "northern-benguela",
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "seabirds",
+      "displayName": "Seabirds",
+      "kind": "functional-group",
+      "trophicLevel": 3.418
+    }
+  ]
+}

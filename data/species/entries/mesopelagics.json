@@ -1,0 +1,18 @@
+{
+  "slug": "mesopelagics",
+  "name": "Mesopelagics",
+  "kind": "functional-group",
+  "description": "Lanternfish and lightfish - small deep-water fishes that rise at night to feed on zooplankton. Functional group matching the source model's mesopelagics compartment, defined in the model lineage as the lanternfish and lightfish guild.",
+  "sourceWeb": "northern-benguela",
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "mesopelagics",
+      "displayName": "Mesopelagics",
+      "kind": "functional-group",
+      "trophicLevel": 3.24
+    }
+  ]
+}

@@ -6,6 +6,15 @@
   "sourceWeb": "shortgrass-prairie",
   "occurrences": [
     {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    },
+    {
       "web": "prince-william-sound",
       "webName": "Prince William Sound",
       "biome": "marine",

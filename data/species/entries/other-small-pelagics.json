@@ -1,0 +1,18 @@
+{
+  "slug": "other-small-pelagics",
+  "name": "Other small pelagics",
+  "kind": "functional-group",
+  "description": "Other small schooling fishes of the open water. Functional group matching the source model's 'other small pelagics' compartment - the residual guild of small plankton-eating fish left after anchovy, sardine, gobies and mesopelagics were separated; it grazes mesozooplankton and takes a little jellyfish.",
+  "sourceWeb": "northern-benguela",
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "other-small-pelagics",
+      "displayName": "Other small pelagics",
+      "kind": "functional-group",
+      "trophicLevel": 3.167
+    }
+  ]
+}

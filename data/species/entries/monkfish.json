@@ -1,0 +1,18 @@
+{
+  "slug": "monkfish",
+  "name": "Monkfish",
+  "kind": "functional-group",
+  "description": "Monkfish - the anglerfishes (Lophius spp.) that lie ambush-flat on the seabed. Functional group matching the source model's monkfish compartment, which pools the anglerfish species measured together; unusual in this web for eating sizeable fish (over a quarter of its diet is adult hake).",
+  "sourceWeb": "northern-benguela",
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "monkfish",
+      "displayName": "Monkfish",
+      "kind": "functional-group",
+      "trophicLevel": 4.036
+    }
+  ]
+}

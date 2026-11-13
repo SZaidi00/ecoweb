@@ -1,0 +1,18 @@
+{
+  "slug": "other-linefish",
+  "name": "Other linefish",
+  "kind": "functional-group",
+  "description": "The line-caught predatory fishes that are not modelled separately. Functional group matching the source model's 'other linefish' compartment - a guild of medium-sized predatory shelf fishes; in this web it leans heavily on anchovy.",
+  "sourceWeb": "northern-benguela",
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "other-linefish",
+      "displayName": "Other linefish",
+      "kind": "functional-group",
+      "trophicLevel": 3.527
+    }
+  ]
+}

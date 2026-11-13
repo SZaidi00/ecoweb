@@ -1,0 +1,18 @@
+{
+  "slug": "sharks",
+  "name": "Sharks",
+  "kind": "functional-group",
+  "description": "Sharks - the apex of this food web, preying on seals, other sharks, hake, tuna and the seafloor guilds. Functional group matching the source model's sharks compartment, pooling the region's shark species; in the model lineage their diets were reconstructed assuming apex sharks take large fish, tuna and seals.",
+  "sourceWeb": "northern-benguela",
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "sharks",
+      "displayName": "Sharks",
+      "kind": "functional-group",
+      "trophicLevel": 4.072
+    }
+  ]
+}

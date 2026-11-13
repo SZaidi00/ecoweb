@@ -1,0 +1,1071 @@
+{
+  "meta": {
+    "id": "northern-benguela",
+    "name": "Northern Benguela",
+    "location": "Northern Benguela upwelling system, Namibia (southern Angola to the Orange River)",
+    "biome": "marine",
+    "lat": -22.0,
+    "lng": 14.3,
+    "provenance": "empirical",
+    "tagline": "The upwelling sea where the sardine empire collapsed and jellyfish took the crown",
+    "citations": [
+      "Heymans, J.J. & Sumaila, U.R. (2007). Updated ecosystem model for the northern Benguela ecosystem, Namibia. pp. 25-70 In: Le Quesne, W.J.F., Arreguin-Sanchez, F. & Heymans, J.J.J. (eds), INCOFISH Ecosystem Models: Transiting from Ecopath to Ecospace. Fisheries Centre Research Reports 15(6), University of British Columbia, Vancouver. Open access: UBC cIRcle item 1.0074767.",
+      "Heymans, J.J. & Tomczak, M.T. (2016). Regime shifts in the northern Benguela ecosystem: challenges for management. Ecological Modelling 331:151-159. https://doi.org/10.1016/j.ecolmodel.2015.10.027",
+      "Colléter, M. et al. EcoBase model 115 - Northern Benguela, Namibia, 1956 (machine-readable Ecopath model: group parameters, trophic levels and the diet-composition matrix downloaded 2026-11-12). https://ecobase.ecopath.org"
+    ],
+    "sourceUrl": "https://open.library.ubc.ca/collections/ubccommunityandpartnerspublicati/52383/items/1.0074767",
+    "licenseNote": "Structure, parameters and diet composition are from Heymans & Sumaila (2007) as published in their 32-compartment Ecopath model of the northern Benguela in 1956, downloaded machine-readable from EcoBase model 115 (ecobase.ecopath.org) on 2026-11-12; the diet matrix was transcribed in full and verified - 31 of 32 predator columns sum to 1.0, and the tuna column sums to 0.625 with a documented diet import of 0.375. Curation and pooling: the 32 published compartments were pooled to 24 nodes - juvenile with adult anchovy into anchovy, juvenile with adult sardine into sardine, juvenile with adult gobies into bearded goby, juvenile with adult horse mackerel into horse mackerel, the two hake stanzas into Cape hake, juvenile with adult jellyfish into jellyfish (each a two-stanza life-stage pair measured separately by the source), and the source's Macrobenthos, Crabs and Lobster compartments into benthic-invertebrates - each pooling is also stated in the node's description. Edge weights were derived from the published diet matrix after pooling: for prey pools the weight is the sum of the source diet fractions of all prey in the pool for that source predator; for predator nodes pooling two source stanzas the component stanzas' fractions are averaged (as in the sibling southern-benguela web); rounded to 3 decimals. Within-pool predation (e.g. adult hake eating juvenile hake, sharks eating sharks) is omitted as self-loops, so the pooled sharks node's weights sum to 0.856, hake to 0.973, benthic-invertebrates to 0.705, and other pooled predators' weights sum to just under 1. Trophic levels were recomputed from the pooled diet matrix by solving the Ecopath trophic-level equations (TL_i = 1 + sum_j w_ji x TL_j, producers and detritus at TL 1), renormalising over in-system prey where the source documents diet import (tuna) and accounting for omitted within-pool flows as cannibalism; the resulting values track the source's published balanced trophic levels (EcoBase output table) closely - within about 0.2 for most nodes. The source's per-stanza trophic levels, where the stanzas were pooled, sit on either side of the pooled value (e.g. anchovy 2.0 juveniles / 2.76 adults vs 2.38 pooled). This web is the 1956 pre-collapse baseline of the system whose 1970s sardine collapse and jellyfish-goby takeover is analysed in Heymans & Tomczak (2016). Ecopath diet compositions are model-balanced estimates that are partly literature-informed. Data reuse requires citing Heymans & Sumaila (2007) and the EcoBase model.",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-11-12"
+  },
+  "nodes": [
+    {
+      "id": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Microscopic drifting algae - the base of this upwelling food web, blooming where winds draw cold, nutrient-rich deep water to the surface. Functional group matching the source model's single phytoplankton compartment, which produced ~433 tonnes per square kilometre in this 1956 baseline - among the richest primary production of any sea.",
+      "layout": {
+        "x": 56,
+        "y": 4
+      }
+    },
+    {
+      "id": "benthic-producers",
+      "displayName": "Benthic algae",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Seaweeds and other algae growing on the shallow shelf seafloor. Functional group matching the source model's single benthic-producers compartment; grazed by lobster and the pooled benthic invertebrates.",
+      "layout": {
+        "x": 14,
+        "y": 6
+      }
+    },
+    {
+      "id": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Dead organic matter - decaying plankton, faeces and carcasses - raining onto the shelf and recycling through the food web: half the diet of mesozooplankton, and the main food of the seafloor's invertebrates and demersal fishes in this model. Functional group pooling the source model's single detritus compartment.",
+      "layout": {
+        "x": 86,
+        "y": 6
+      }
+    },
+    {
+      "id": "mesozooplankton",
+      "displayName": "Mesozooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Small grazing crustaceans of the open water, dominated by copepods. Functional group matching the source model's mesozooplankton compartment; in this web it splits its diet evenly between living phytoplankton and detritus, and is the single most-eaten prey of the whole ecosystem.",
+      "layout": {
+        "x": 50,
+        "y": 20
+      }
+    },
+    {
+      "id": "macrozooplankton",
+      "displayName": "Macrozooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.4,
+      "functionalRole": "primary-consumer",
+      "description": "Larger drifting animals of the open water - krill, amphipods and their kin. Functional group matching the source model's macrozooplankton compartment; a staple food of anchovy, sardine, hake, horse mackerel and squid.",
+      "layout": {
+        "x": 68,
+        "y": 30
+      }
+    },
+    {
+      "id": "jellyfish",
+      "displayName": "Jellyfish",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.126,
+      "functionalRole": "primary-consumer",
+      "description": "Jellyfish - the gelatinous drifters that, after the sardine collapse of the 1970s, became this ecosystem's dominant plankton eaters, to the point that few animals prey on them. Life-stage group pooling the source model's juvenile and adult jellyfish stanzas: the two were measured separately (juveniles graze phytoplankton, adults mix phytoplankton, zooplankton and half-digested detritus) and are pooled here to keep the web within this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 86,
+        "y": 24
+      }
+    },
+    {
+      "id": "benthic-invertebrates",
+      "displayName": "Benthic invertebrates",
+      "kind": "functional-group",
+      "trophicLevel": 2.441,
+      "functionalRole": "primary-consumer",
+      "description": "The shelled and creeping life of the seafloor: macrobenthos (clams, worms, sea cucumbers and kin), crabs and rock lobster. Functional group pooling the source model's Macrobenthos, Crabs and Lobster compartments - the benthic-invertebrate guild that turns detritus and benthic algae into food for hake, monkfish, sharks and demersal fishes; pooled to fit this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 18,
+        "y": 32
+      }
+    },
+    {
+      "id": "anchovy",
+      "displayName": "Anchovy",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.38,
+      "functionalRole": "primary-consumer",
+      "description": "Cape anchovy (Engraulis encrasicolus) - one of the two great schooling plankton-eaters of the upwelling system. Life-stage group of the source model's juvenile and adult anchovy stanzas, measured separately and pooled here because the two stanzas form one population: young fish graze phytoplankton while adults filter a mixed plankton soup. Anchovy boomed as sardine collapsed, then waned with it - everything from seals to seabirds to tuna eats it.",
+      "layout": {
+        "x": 38,
+        "y": 29
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/European_anchovy"
+      }
+    },
+    {
+      "id": "sardine",
+      "displayName": "Sardine",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.216,
+      "functionalRole": "primary-consumer",
+      "description": "The sardine (Sardinops sagax) - in this 1956 baseline the ruling fish of the northern Benguela, grazing plankton in shoals so large they fed seabirds, seals, tuna and the biggest purse-seine fishery in Africa. Life-stage group of the source model's juvenile and adult sardine stanzas, measured separately and pooled here because the two stanzas form one population (juveniles take phytoplankton, adults add zooplankton). Under heavy fishing and the 1972 Benguela Nino warming the stock collapsed in the 1970s and never recovered - the regime shift this ecosystem is famous for.",
+      "layout": {
+        "x": 50,
+        "y": 27
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Sardinops_sagax"
+      }
+    },
+    {
+      "id": "gobies",
+      "displayName": "Bearded goby",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.047,
+      "functionalRole": "primary-consumer",
+      "description": "Bearded goby (Sufflogobius bibarbatus) - a small bottom-hugging fish that in this 1956 web is a minor plankton grazer, but which after the sardine collapse multiplied into one of the most abundant fish stocks on Earth, able to feed in the shelf's oxygen-poor mud layers and even on jellyfish. Life-stage group of the source model's juvenile and adult goby stanzas, measured separately and pooled here because the two stanzas form one population.",
+      "layout": {
+        "x": 26,
+        "y": 22
+      }
+    },
+    {
+      "id": "other-small-pelagics",
+      "displayName": "Other small pelagics",
+      "kind": "functional-group",
+      "trophicLevel": 3.167,
+      "functionalRole": "intermediate-consumer",
+      "description": "Other small schooling fishes of the open water. Functional group matching the source model's 'other small pelagics' compartment - the residual guild of small plankton-eating fish left after anchovy, sardine, gobies and mesopelagics were separated; it grazes mesozooplankton and takes a little jellyfish.",
+      "layout": {
+        "x": 64,
+        "y": 48
+      }
+    },
+    {
+      "id": "mesopelagics",
+      "displayName": "Mesopelagics",
+      "kind": "functional-group",
+      "trophicLevel": 3.24,
+      "functionalRole": "intermediate-consumer",
+      "description": "Lanternfish and lightfish - small deep-water fishes that rise at night to feed on zooplankton. Functional group matching the source model's mesopelagics compartment, defined in the model lineage as the lanternfish and lightfish guild.",
+      "layout": {
+        "x": 76,
+        "y": 52
+      }
+    },
+    {
+      "id": "horse-mackerel",
+      "displayName": "Horse mackerel",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.171,
+      "functionalRole": "intermediate-consumer",
+      "description": "Cape horse mackerel (Trachurus capensis) - a deep-bodied schooling carangid and one of the system's major mid-level predators, targeted by midwater trawlers. Life-stage group of the source model's juvenile and adult horse-mackerel stanzas, measured separately and pooled here because the two stanzas form one population: juveniles eat mesozooplankton, adults larger zooplankton.",
+      "layout": {
+        "x": 56,
+        "y": 50
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Trachurus_capensis"
+      }
+    },
+    {
+      "id": "hake",
+      "displayName": "Cape hake",
+      "kind": "life-stage-group",
+      "trophicLevel": 3.36,
+      "functionalRole": "intermediate-consumer",
+      "description": "Cape hakes (Merluccius spp.) - the deep-water predatory cods that anchor Namibia's trawl fishery, the country's most valuable. Life-stage group of the source model's juvenile and adult hake stanzas, measured separately and pooled here because the two stanzas form one population: juveniles filter macrozooplankton while adults prey on fish, squid and smaller hake. Hake are both predator and prey here - seals, sharks, monkfish and bigger hake all take them.",
+      "layout": {
+        "x": 44,
+        "y": 56
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Merluccius_capensis"
+      }
+    },
+    {
+      "id": "monkfish",
+      "displayName": "Monkfish",
+      "kind": "functional-group",
+      "trophicLevel": 4.036,
+      "functionalRole": "intermediate-consumer",
+      "description": "Monkfish - the anglerfishes (Lophius spp.) that lie ambush-flat on the seabed. Functional group matching the source model's monkfish compartment, which pools the anglerfish species measured together; unusual in this web for eating sizeable fish (over a quarter of its diet is adult hake).",
+      "layout": {
+        "x": 30,
+        "y": 75
+      }
+    },
+    {
+      "id": "other-demersals",
+      "displayName": "Other demersals",
+      "kind": "functional-group",
+      "trophicLevel": 2.784,
+      "functionalRole": "intermediate-consumer",
+      "description": "Bottom-living fishes outside the named groups. Functional group matching the source model's 'other demersals' compartment - a mixed guild of benthic-feeding and carnivorous demersal fishes; in this 1956 baseline it takes almost half its diet directly as detritus.",
+      "layout": {
+        "x": 20,
+        "y": 40
+      }
+    },
+    {
+      "id": "cephalopods",
+      "displayName": "Squid & octopus",
+      "kind": "functional-group",
+      "trophicLevel": 3.43,
+      "functionalRole": "intermediate-consumer",
+      "description": "Squid and octopus - fast-growing soft-bodied hunters of the midwater and seafloor, eaten by almost everything large in this web. Functional group matching the source model's cephalopods compartment, which pools the squid, cuttlefish and octopus species measured together.",
+      "layout": {
+        "x": 80,
+        "y": 62
+      }
+    },
+    {
+      "id": "snoek",
+      "displayName": "Snoek",
+      "kind": "species",
+      "trophicLevel": 3.63,
+      "functionalRole": "top-consumer",
+      "description": "Snoek (Thyrsites atun), tracked as its own compartment by the source. A long, predatory fish prized by line-fishermen, taking sardine, anchovy, small pelagics and young hake.",
+      "layout": {
+        "x": 30,
+        "y": 67
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Thyrsites_atun"
+      }
+    },
+    {
+      "id": "other-linefish",
+      "displayName": "Other linefish",
+      "kind": "functional-group",
+      "trophicLevel": 3.527,
+      "functionalRole": "intermediate-consumer",
+      "description": "The line-caught predatory fishes that are not modelled separately. Functional group matching the source model's 'other linefish' compartment - a guild of medium-sized predatory shelf fishes; in this web it leans heavily on anchovy.",
+      "layout": {
+        "x": 66,
+        "y": 64
+      }
+    },
+    {
+      "id": "tuna",
+      "displayName": "Tuna",
+      "kind": "functional-group",
+      "trophicLevel": 3.798,
+      "functionalRole": "top-consumer",
+      "description": "Tunas (Thunnus spp.) and their fast-swimming kin - wide-roaming oceanic predators that spend part of the year over this shelf. Functional group matching the source model's single tuna compartment. Tuna range far beyond the modelled area, so the source assigns only 0.625 of its diet to in-system prey (the documented import fraction of 0.375) - this node's weights sum to 0.625.",
+      "layout": {
+        "x": 88,
+        "y": 72
+      }
+    },
+    {
+      "id": "sharks",
+      "displayName": "Sharks",
+      "kind": "functional-group",
+      "trophicLevel": 4.072,
+      "functionalRole": "top-consumer",
+      "description": "Sharks - the apex of this food web, preying on seals, other sharks, hake, tuna and the seafloor guilds. Functional group matching the source model's sharks compartment, pooling the region's shark species; in the model lineage their diets were reconstructed assuming apex sharks take large fish, tuna and seals.",
+      "layout": {
+        "x": 58,
+        "y": 86
+      }
+    },
+    {
+      "id": "seals",
+      "displayName": "Cape fur seal",
+      "kind": "species",
+      "trophicLevel": 3.639,
+      "functionalRole": "top-consumer",
+      "description": "Cape fur seal (Arctocephalus pusillus pusillus), tracked as its own compartment by the source. The charismatic top predator of these waters, eating half a tonne of anchovy, hake, sardine and squid per year for every seal; mass pup starvations during Benguela Nino warm events made it the visible face of the ecosystem's decline.",
+      "layout": {
+        "x": 40,
+        "y": 69
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Cape_fur_seal"
+      }
+    },
+    {
+      "id": "marine-mammals",
+      "displayName": "Whales & dolphins",
+      "kind": "functional-group",
+      "trophicLevel": 4.216,
+      "functionalRole": "top-consumer",
+      "description": "Whales and dolphins - the cetacean hunters of the shelf. Functional group matching the source model's 'marine mammals' compartment, which in this model covers the cetaceans (seals have their own compartment); it feeds on squid, small pelagics and hake and is barely preyed upon.",
+      "layout": {
+        "x": 76,
+        "y": 90
+      }
+    },
+    {
+      "id": "seabirds",
+      "displayName": "Seabirds",
+      "kind": "functional-group",
+      "trophicLevel": 3.418,
+      "functionalRole": "top-consumer",
+      "description": "Seabirds - the diving birds breeding on the Benguela's islands and guano platforms. Functional group matching the source model's single 'birds' compartment, which pools the region's seabird species into one measured group; gobies are their single biggest food in this 1956 web.",
+      "layout": {
+        "x": 52,
+        "y": 60
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "detritus",
+      "predator": "anchovy",
+      "weight": 0.019
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "anchovy",
+      "weight": 0.16
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "anchovy",
+      "weight": 0.155
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "anchovy",
+      "weight": 0.665
+    },
+    {
+      "prey": "sardine",
+      "predator": "anchovy",
+      "weight": 0.001
+    },
+    {
+      "prey": "benthic-producers",
+      "predator": "benthic-invertebrates",
+      "weight": 0.183
+    },
+    {
+      "prey": "detritus",
+      "predator": "benthic-invertebrates",
+      "weight": 0.515
+    },
+    {
+      "prey": "monkfish",
+      "predator": "benthic-invertebrates",
+      "weight": 0.003
+    },
+    {
+      "prey": "other-demersals",
+      "predator": "benthic-invertebrates",
+      "weight": 0.003
+    },
+    {
+      "prey": "gobies",
+      "predator": "cephalopods",
+      "weight": 0.1
+    },
+    {
+      "prey": "hake",
+      "predator": "cephalopods",
+      "weight": 0.001
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "cephalopods",
+      "weight": 0.01
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "cephalopods",
+      "weight": 0.394
+    },
+    {
+      "prey": "mesopelagics",
+      "predator": "cephalopods",
+      "weight": 0.1
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "cephalopods",
+      "weight": 0.285
+    },
+    {
+      "prey": "other-small-pelagics",
+      "predator": "cephalopods",
+      "weight": 0.1
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "gobies",
+      "weight": 0.03
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "gobies",
+      "weight": 0.005
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "gobies",
+      "weight": 0.965
+    },
+    {
+      "prey": "anchovy",
+      "predator": "hake",
+      "weight": 0.014
+    },
+    {
+      "prey": "benthic-invertebrates",
+      "predator": "hake",
+      "weight": 0.031
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "hake",
+      "weight": 0.01
+    },
+    {
+      "prey": "gobies",
+      "predator": "hake",
+      "weight": 0.031
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "hake",
+      "weight": 0.01
+    },
+    {
+      "prey": "jellyfish",
+      "predator": "hake",
+      "weight": 0.022
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "hake",
+      "weight": 0.563
+    },
+    {
+      "prey": "mesopelagics",
+      "predator": "hake",
+      "weight": 0.01
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "hake",
+      "weight": 0.223
+    },
+    {
+      "prey": "other-demersals",
+      "predator": "hake",
+      "weight": 0.002
+    },
+    {
+      "prey": "other-small-pelagics",
+      "predator": "hake",
+      "weight": 0.022
+    },
+    {
+      "prey": "sardine",
+      "predator": "hake",
+      "weight": 0.031
+    },
+    {
+      "prey": "snoek",
+      "predator": "hake",
+      "weight": 0.001
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "horse-mackerel",
+      "weight": 0.001
+    },
+    {
+      "prey": "gobies",
+      "predator": "horse-mackerel",
+      "weight": 0.004
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "horse-mackerel",
+      "weight": 0.395
+    },
+    {
+      "prey": "mesopelagics",
+      "predator": "horse-mackerel",
+      "weight": 0.01
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "horse-mackerel",
+      "weight": 0.59
+    },
+    {
+      "prey": "anchovy",
+      "predator": "jellyfish",
+      "weight": 0.001
+    },
+    {
+      "prey": "detritus",
+      "predator": "jellyfish",
+      "weight": 0.25
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "jellyfish",
+      "weight": 0.125
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "jellyfish",
+      "weight": 0.624
+    },
+    {
+      "prey": "sardine",
+      "predator": "jellyfish",
+      "weight": 0.001
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "macrozooplankton",
+      "weight": 0.4
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "macrozooplankton",
+      "weight": 0.6
+    },
+    {
+      "prey": "anchovy",
+      "predator": "marine-mammals",
+      "weight": 0.014
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "marine-mammals",
+      "weight": 0.318
+    },
+    {
+      "prey": "gobies",
+      "predator": "marine-mammals",
+      "weight": 0.069
+    },
+    {
+      "prey": "hake",
+      "predator": "marine-mammals",
+      "weight": 0.275
+    },
+    {
+      "prey": "mesopelagics",
+      "predator": "marine-mammals",
+      "weight": 0.193
+    },
+    {
+      "prey": "other-small-pelagics",
+      "predator": "marine-mammals",
+      "weight": 0.117
+    },
+    {
+      "prey": "sardine",
+      "predator": "marine-mammals",
+      "weight": 0.014
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "mesopelagics",
+      "weight": 0.6
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "mesopelagics",
+      "weight": 0.4
+    },
+    {
+      "prey": "detritus",
+      "predator": "mesozooplankton",
+      "weight": 0.5
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "mesozooplankton",
+      "weight": 0.5
+    },
+    {
+      "prey": "anchovy",
+      "predator": "monkfish",
+      "weight": 0.039
+    },
+    {
+      "prey": "benthic-invertebrates",
+      "predator": "monkfish",
+      "weight": 0.062
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "monkfish",
+      "weight": 0.034
+    },
+    {
+      "prey": "gobies",
+      "predator": "monkfish",
+      "weight": 0.102
+    },
+    {
+      "prey": "hake",
+      "predator": "monkfish",
+      "weight": 0.261
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "monkfish",
+      "weight": 0.116
+    },
+    {
+      "prey": "mesopelagics",
+      "predator": "monkfish",
+      "weight": 0.129
+    },
+    {
+      "prey": "other-demersals",
+      "predator": "monkfish",
+      "weight": 0.05
+    },
+    {
+      "prey": "other-small-pelagics",
+      "predator": "monkfish",
+      "weight": 0.197
+    },
+    {
+      "prey": "benthic-invertebrates",
+      "predator": "other-demersals",
+      "weight": 0.018
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "other-demersals",
+      "weight": 0.001
+    },
+    {
+      "prey": "detritus",
+      "predator": "other-demersals",
+      "weight": 0.455
+    },
+    {
+      "prey": "gobies",
+      "predator": "other-demersals",
+      "weight": 0.021
+    },
+    {
+      "prey": "hake",
+      "predator": "other-demersals",
+      "weight": 0.01
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "other-demersals",
+      "weight": 0.304
+    },
+    {
+      "prey": "mesopelagics",
+      "predator": "other-demersals",
+      "weight": 0.018
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "other-demersals",
+      "weight": 0.11
+    },
+    {
+      "prey": "monkfish",
+      "predator": "other-demersals",
+      "weight": 0.001
+    },
+    {
+      "prey": "other-small-pelagics",
+      "predator": "other-demersals",
+      "weight": 0.054
+    },
+    {
+      "prey": "anchovy",
+      "predator": "other-linefish",
+      "weight": 0.562
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "other-linefish",
+      "weight": 0.033
+    },
+    {
+      "prey": "hake",
+      "predator": "other-linefish",
+      "weight": 0.055
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "other-linefish",
+      "weight": 0.036
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "other-linefish",
+      "weight": 0.254
+    },
+    {
+      "prey": "other-demersals",
+      "predator": "other-linefish",
+      "weight": 0.041
+    },
+    {
+      "prey": "other-small-pelagics",
+      "predator": "other-linefish",
+      "weight": 0.012
+    },
+    {
+      "prey": "sardine",
+      "predator": "other-linefish",
+      "weight": 0.007
+    },
+    {
+      "prey": "anchovy",
+      "predator": "other-small-pelagics",
+      "weight": 0.005
+    },
+    {
+      "prey": "benthic-invertebrates",
+      "predator": "other-small-pelagics",
+      "weight": 0.014
+    },
+    {
+      "prey": "jellyfish",
+      "predator": "other-small-pelagics",
+      "weight": 0.021
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "other-small-pelagics",
+      "weight": 0.35
+    },
+    {
+      "prey": "mesopelagics",
+      "predator": "other-small-pelagics",
+      "weight": 0.01
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "other-small-pelagics",
+      "weight": 0.597
+    },
+    {
+      "prey": "detritus",
+      "predator": "sardine",
+      "weight": 0.04
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "sardine",
+      "weight": 0.09
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "sardine",
+      "weight": 0.09
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "sardine",
+      "weight": 0.78
+    },
+    {
+      "prey": "anchovy",
+      "predator": "seabirds",
+      "weight": 0.253
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "seabirds",
+      "weight": 0.044
+    },
+    {
+      "prey": "gobies",
+      "predator": "seabirds",
+      "weight": 0.429
+    },
+    {
+      "prey": "hake",
+      "predator": "seabirds",
+      "weight": 0.01
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "seabirds",
+      "weight": 0.005
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "seabirds",
+      "weight": 0.043
+    },
+    {
+      "prey": "mesopelagics",
+      "predator": "seabirds",
+      "weight": 0.053
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "seabirds",
+      "weight": 0.003
+    },
+    {
+      "prey": "other-demersals",
+      "predator": "seabirds",
+      "weight": 0.108
+    },
+    {
+      "prey": "other-small-pelagics",
+      "predator": "seabirds",
+      "weight": 0.037
+    },
+    {
+      "prey": "sardine",
+      "predator": "seabirds",
+      "weight": 0.011
+    },
+    {
+      "prey": "snoek",
+      "predator": "seabirds",
+      "weight": 0.003
+    },
+    {
+      "prey": "anchovy",
+      "predator": "seals",
+      "weight": 0.5
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "seals",
+      "weight": 0.03
+    },
+    {
+      "prey": "gobies",
+      "predator": "seals",
+      "weight": 0.059
+    },
+    {
+      "prey": "hake",
+      "predator": "seals",
+      "weight": 0.035
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "seals",
+      "weight": 0.136
+    },
+    {
+      "prey": "mesopelagics",
+      "predator": "seals",
+      "weight": 0.007
+    },
+    {
+      "prey": "other-small-pelagics",
+      "predator": "seals",
+      "weight": 0.106
+    },
+    {
+      "prey": "sardine",
+      "predator": "seals",
+      "weight": 0.101
+    },
+    {
+      "prey": "snoek",
+      "predator": "seals",
+      "weight": 0.026
+    },
+    {
+      "prey": "anchovy",
+      "predator": "sharks",
+      "weight": 0.093
+    },
+    {
+      "prey": "benthic-invertebrates",
+      "predator": "sharks",
+      "weight": 0.104
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "sharks",
+      "weight": 0.1
+    },
+    {
+      "prey": "hake",
+      "predator": "sharks",
+      "weight": 0.004
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "sharks",
+      "weight": 0.012
+    },
+    {
+      "prey": "marine-mammals",
+      "predator": "sharks",
+      "weight": 0.001
+    },
+    {
+      "prey": "monkfish",
+      "predator": "sharks",
+      "weight": 0.05
+    },
+    {
+      "prey": "other-demersals",
+      "predator": "sharks",
+      "weight": 0.365
+    },
+    {
+      "prey": "other-linefish",
+      "predator": "sharks",
+      "weight": 0.002
+    },
+    {
+      "prey": "other-small-pelagics",
+      "predator": "sharks",
+      "weight": 0.11
+    },
+    {
+      "prey": "sardine",
+      "predator": "sharks",
+      "weight": 0.012
+    },
+    {
+      "prey": "seals",
+      "predator": "sharks",
+      "weight": 0.001
+    },
+    {
+      "prey": "snoek",
+      "predator": "sharks",
+      "weight": 0.002
+    },
+    {
+      "prey": "tuna",
+      "predator": "sharks",
+      "weight": 0.001
+    },
+    {
+      "prey": "anchovy",
+      "predator": "snoek",
+      "weight": 0.05
+    },
+    {
+      "prey": "benthic-invertebrates",
+      "predator": "snoek",
+      "weight": 0.126
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "snoek",
+      "weight": 0.007
+    },
+    {
+      "prey": "gobies",
+      "predator": "snoek",
+      "weight": 0.005
+    },
+    {
+      "prey": "hake",
+      "predator": "snoek",
+      "weight": 0.102
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "snoek",
+      "weight": 0.054
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "snoek",
+      "weight": 0.165
+    },
+    {
+      "prey": "mesopelagics",
+      "predator": "snoek",
+      "weight": 0.05
+    },
+    {
+      "prey": "mesozooplankton",
+      "predator": "snoek",
+      "weight": 0.111
+    },
+    {
+      "prey": "other-demersals",
+      "predator": "snoek",
+      "weight": 0.01
+    },
+    {
+      "prey": "other-small-pelagics",
+      "predator": "snoek",
+      "weight": 0.145
+    },
+    {
+      "prey": "sardine",
+      "predator": "snoek",
+      "weight": 0.175
+    },
+    {
+      "prey": "anchovy",
+      "predator": "tuna",
+      "weight": 0.091
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "tuna",
+      "weight": 0.091
+    },
+    {
+      "prey": "gobies",
+      "predator": "tuna",
+      "weight": 0.012
+    },
+    {
+      "prey": "hake",
+      "predator": "tuna",
+      "weight": 0.03
+    },
+    {
+      "prey": "horse-mackerel",
+      "predator": "tuna",
+      "weight": 0.05
+    },
+    {
+      "prey": "macrozooplankton",
+      "predator": "tuna",
+      "weight": 0.121
+    },
+    {
+      "prey": "mesopelagics",
+      "predator": "tuna",
+      "weight": 0.042
+    },
+    {
+      "prey": "other-small-pelagics",
+      "predator": "tuna",
+      "weight": 0.097
+    },
+    {
+      "prey": "sardine",
+      "predator": "tuna",
+      "weight": 0.091
+    }
+  ]
+}

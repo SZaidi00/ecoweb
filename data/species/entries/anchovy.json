@@ -1,0 +1,24 @@
+{
+  "slug": "anchovy",
+  "name": "Anchovy",
+  "kind": "life-stage-group",
+  "description": "Cape anchovy (Engraulis encrasicolus) - one of the two great schooling plankton-eaters of the upwelling system. Life-stage group of the source model's juvenile and adult anchovy stanzas, measured separately and pooled here because the two stanzas form one population: young fish graze phytoplankton while adults filter a mixed plankton soup. Anchovy boomed as sardine collapsed, then waned with it - everything from seals to seabirds to tuna eats it.",
+  "sourceWeb": "northern-benguela",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/European_anchovy"
+  },
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "anchovy",
+      "displayName": "Anchovy",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.38,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/European_anchovy"
+      }
+    }
+  ]
+}

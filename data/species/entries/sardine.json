@@ -2,12 +2,24 @@
   "slug": "sardine",
   "name": "Sardine",
   "kind": "life-stage-group",
-  "description": "The South African sardine (Sardinops sagax), the other great small pelagic of the upwelling system, famous for its vast shoals and boom-and-bust fortunes. Life-stage group of the source's juvenile and adult sardine compartments, pooled into one node because the two stanzas feed on the same plankton prey; sardine numbers swing with the climate and everything from gannets to fishermen feels it.",
-  "sourceWeb": "southern-benguela",
+  "description": "The sardine (Sardinops sagax) - in this 1956 baseline the ruling fish of the northern Benguela, grazing plankton in shoals so large they fed seabirds, seals, tuna and the biggest purse-seine fishery in Africa. Life-stage group of the source model's juvenile and adult sardine stanzas, measured separately and pooled here because the two stanzas form one population (juveniles take phytoplankton, adults add zooplankton). Under heavy fishing and the 1972 Benguela Nino warming the stock collapsed in the 1970s and never recovered - the regime shift this ecosystem is famous for.",
+  "sourceWeb": "northern-benguela",
   "externalLinks": {
     "wikipedia": "https://en.wikipedia.org/wiki/Sardinops_sagax"
   },
   "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "sardine",
+      "displayName": "Sardine",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.216,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Sardinops_sagax"
+      }
+    },
     {
       "web": "southern-benguela",
       "webName": "Southern Benguela",

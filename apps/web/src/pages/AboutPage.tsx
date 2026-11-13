@@ -86,6 +86,11 @@ const webSources = [
     note: 'Shannon et al. 2020, Frontiers in Marine Science.',
   },
   {
+    name: 'Northern Benguela',
+    href: 'https://ecobase.ecopath.org',
+    note: 'Heymans & Sumaila 2007, Fisheries Centre Research Reports 15(6); model via EcoBase 115.',
+  },
+  {
     name: 'Magellanic/Fuegian Steppe',
     href: 'https://doi.org/10.1038/s41598-024-70511-6',
     note: 'Mann-Vollrath et al. 2024, Scientific Reports; curated composite.',

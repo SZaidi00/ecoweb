@@ -1,0 +1,24 @@
+{
+  "slug": "cape-fur-seal",
+  "name": "Cape fur seal",
+  "kind": "species",
+  "description": "Cape fur seal (Arctocephalus pusillus pusillus), tracked as its own compartment by the source. The charismatic top predator of these waters, eating half a tonne of anchovy, hake, sardine and squid per year for every seal; mass pup starvations during Benguela Nino warm events made it the visible face of the ecosystem's decline.",
+  "sourceWeb": "northern-benguela",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Cape_fur_seal"
+  },
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "seals",
+      "displayName": "Cape fur seal",
+      "kind": "species",
+      "trophicLevel": 3.639,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Cape_fur_seal"
+      }
+    }
+  ]
+}

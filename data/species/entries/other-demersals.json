@@ -1,0 +1,18 @@
+{
+  "slug": "other-demersals",
+  "name": "Other demersals",
+  "kind": "functional-group",
+  "description": "Bottom-living fishes outside the named groups. Functional group matching the source model's 'other demersals' compartment - a mixed guild of benthic-feeding and carnivorous demersal fishes; in this 1956 baseline it takes almost half its diet directly as detritus.",
+  "sourceWeb": "northern-benguela",
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "other-demersals",
+      "displayName": "Other demersals",
+      "kind": "functional-group",
+      "trophicLevel": 2.784
+    }
+  ]
+}

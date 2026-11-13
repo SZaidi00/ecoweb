@@ -6,6 +6,15 @@
   "sourceWeb": "southern-benguela",
   "occurrences": [
     {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "benthic-invertebrates",
+      "displayName": "Benthic invertebrates",
+      "kind": "functional-group",
+      "trophicLevel": 2.441
+    },
+    {
       "web": "southern-benguela",
       "webName": "Southern Benguela",
       "biome": "marine",

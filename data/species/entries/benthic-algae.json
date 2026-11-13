@@ -1,0 +1,18 @@
+{
+  "slug": "benthic-algae",
+  "name": "Benthic algae",
+  "kind": "functional-group",
+  "description": "Seaweeds and other algae growing on the shallow shelf seafloor. Functional group matching the source model's single benthic-producers compartment; grazed by lobster and the pooled benthic invertebrates.",
+  "sourceWeb": "northern-benguela",
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "benthic-producers",
+      "displayName": "Benthic algae",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

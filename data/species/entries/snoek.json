@@ -9,6 +9,18 @@
   },
   "occurrences": [
     {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "snoek",
+      "displayName": "Snoek",
+      "kind": "species",
+      "trophicLevel": 3.63,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Thyrsites_atun"
+      }
+    },
+    {
       "web": "southern-benguela",
       "webName": "Southern Benguela",
       "biome": "marine",

@@ -1,0 +1,18 @@
+{
+  "slug": "jellyfish",
+  "name": "Jellyfish",
+  "kind": "life-stage-group",
+  "description": "Jellyfish - the gelatinous drifters that, after the sardine collapse of the 1970s, became this ecosystem's dominant plankton eaters, to the point that few animals prey on them. Life-stage group pooling the source model's juvenile and adult jellyfish stanzas: the two were measured separately (juveniles graze phytoplankton, adults mix phytoplankton, zooplankton and half-digested detritus) and are pooled here to keep the web within this atlas's 25-node ceiling.",
+  "sourceWeb": "northern-benguela",
+  "occurrences": [
+    {
+      "web": "northern-benguela",
+      "webName": "Northern Benguela",
+      "biome": "marine",
+      "node": "jellyfish",
+      "displayName": "Jellyfish",
+      "kind": "life-stage-group",
+      "trophicLevel": 2.126
+    }
+  ]
+}
