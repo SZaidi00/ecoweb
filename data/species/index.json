@@ -1,6 +1,6 @@
 {
-  "webCount": 15,
-  "entryCount": 300,
+  "webCount": 16,
+  "entryCount": 308,
   "entries": [
     {
       "slug": "adelie-penguin",
@@ -582,9 +582,14 @@
       "name": "Benthic producers",
       "kind": "functional-group",
       "webs": [
+        "sene-gambian-shelf",
         "southern-benguela"
       ],
       "occurrences": [
+        {
+          "web": "sene-gambian-shelf",
+          "node": "benthic-producers"
+        },
         {
           "web": "southern-benguela",
           "node": "benthic-producers"
@@ -765,6 +770,20 @@
       ]
     },
     {
+      "slug": "cephalopods",
+      "name": "Cephalopods",
+      "kind": "functional-group",
+      "webs": [
+        "sene-gambian-shelf"
+      ],
+      "occurrences": [
+        {
+          "web": "sene-gambian-shelf",
+          "node": "cephalopods"
+        }
+      ]
+    },
+    {
       "slug": "chaoborus-punctipennis-phantom-midge-larva",
       "name": "Chaoborus punctipennis (phantom midge larva)",
       "kind": "species",
@@ -803,6 +822,34 @@
         {
           "web": "banc-darguin",
           "node": "coastal-birds"
+        }
+      ]
+    },
+    {
+      "slug": "coastal-demersal-fish",
+      "name": "Coastal demersal fish",
+      "kind": "functional-group",
+      "webs": [
+        "sene-gambian-shelf"
+      ],
+      "occurrences": [
+        {
+          "web": "sene-gambian-shelf",
+          "node": "coastal-demersal-fish"
+        }
+      ]
+    },
+    {
+      "slug": "coastal-tunas",
+      "name": "Coastal tunas",
+      "kind": "functional-group",
+      "webs": [
+        "sene-gambian-shelf"
+      ],
+      "occurrences": [
+        {
+          "web": "sene-gambian-shelf",
+          "node": "coastal-tunas"
         }
       ]
     },
@@ -1142,6 +1189,7 @@
         "banc-darguin",
         "northern-benguela",
         "prince-william-sound",
+        "sene-gambian-shelf",
         "shortgrass-prairie",
         "southern-benguela",
         "tapajos-river",
@@ -1162,6 +1210,10 @@
         },
         {
           "web": "prince-william-sound",
+          "node": "detritus"
+        },
+        {
+          "web": "sene-gambian-shelf",
           "node": "detritus"
         },
         {
@@ -1473,6 +1525,20 @@
         {
           "web": "shortgrass-prairie",
           "node": "flagellates"
+        }
+      ]
+    },
+    {
+      "slug": "flat-sardinella",
+      "name": "Flat sardinella",
+      "kind": "species",
+      "webs": [
+        "sene-gambian-shelf"
+      ],
+      "occurrences": [
+        {
+          "web": "sene-gambian-shelf",
+          "node": "flat-sardinella"
         }
       ]
     },
@@ -2326,11 +2392,16 @@
       "name": "Macrobenthos",
       "kind": "functional-group",
       "webs": [
-        "bamboung"
+        "bamboung",
+        "sene-gambian-shelf"
       ],
       "occurrences": [
         {
           "web": "bamboung",
+          "node": "macrobenthos"
+        },
+        {
+          "web": "sene-gambian-shelf",
           "node": "macrobenthos"
         }
       ]
@@ -2383,11 +2454,16 @@
       "kind": "functional-group",
       "webs": [
         "banc-darguin",
+        "sene-gambian-shelf",
         "southern-benguela"
       ],
       "occurrences": [
         {
           "web": "banc-darguin",
+          "node": "marine-mammals"
+        },
+        {
+          "web": "sene-gambian-shelf",
           "node": "marine-mammals"
         },
         {
@@ -2457,11 +2533,16 @@
       "name": "Meiobenthos",
       "kind": "functional-group",
       "webs": [
-        "bamboung"
+        "bamboung",
+        "sene-gambian-shelf"
       ],
       "occurrences": [
         {
           "web": "bamboung",
+          "node": "meiobenthos"
+        },
+        {
+          "web": "sene-gambian-shelf",
           "node": "meiobenthos"
         }
       ]
@@ -2729,6 +2810,20 @@
       ]
     },
     {
+      "slug": "offshore-tunas",
+      "name": "Offshore tunas",
+      "kind": "functional-group",
+      "webs": [
+        "sene-gambian-shelf"
+      ],
+      "occurrences": [
+        {
+          "web": "sene-gambian-shelf",
+          "node": "offshore-tunas"
+        }
+      ]
+    },
+    {
       "slug": "oligochaete-worms-leeches",
       "name": "Oligochaete worms & leeches",
       "kind": "functional-group",
@@ -2767,6 +2862,20 @@
         {
           "web": "namib-fog-oasis",
           "node": "zygoribatula"
+        }
+      ]
+    },
+    {
+      "slug": "other-coastal-pelagics",
+      "name": "Other coastal pelagics",
+      "kind": "functional-group",
+      "webs": [
+        "sene-gambian-shelf"
+      ],
+      "occurrences": [
+        {
+          "web": "sene-gambian-shelf",
+          "node": "other-pelagic-fish"
         }
       ]
     },
@@ -3005,6 +3114,7 @@
         "cypress-wetland",
         "northern-benguela",
         "prince-william-sound",
+        "sene-gambian-shelf",
         "tapajos-river",
         "weddell-sea"
       ],
@@ -3031,6 +3141,10 @@
         },
         {
           "web": "prince-william-sound",
+          "node": "phytoplankton"
+        },
+        {
+          "web": "sene-gambian-shelf",
           "node": "phytoplankton"
         },
         {
@@ -3245,6 +3359,20 @@
       ]
     },
     {
+      "slug": "rays-guitarfish",
+      "name": "Rays & guitarfish",
+      "kind": "functional-group",
+      "webs": [
+        "sene-gambian-shelf"
+      ],
+      "occurrences": [
+        {
+          "web": "sene-gambian-shelf",
+          "node": "rays"
+        }
+      ]
+    },
+    {
       "slug": "redeye-round-herring",
       "name": "Redeye round herring",
       "kind": "species",
@@ -3330,6 +3458,20 @@
         {
           "web": "tuesday-lake",
           "node": "rotifers"
+        }
+      ]
+    },
+    {
+      "slug": "round-sardinella",
+      "name": "Round sardinella",
+      "kind": "species",
+      "webs": [
+        "sene-gambian-shelf"
+      ],
+      "occurrences": [
+        {
+          "web": "sene-gambian-shelf",
+          "node": "round-sardinella"
         }
       ]
     },
@@ -3511,11 +3653,16 @@
       "name": "Seabirds",
       "kind": "functional-group",
       "webs": [
-        "northern-benguela"
+        "northern-benguela",
+        "sene-gambian-shelf"
       ],
       "occurrences": [
         {
           "web": "northern-benguela",
+          "node": "seabirds"
+        },
+        {
+          "web": "sene-gambian-shelf",
           "node": "seabirds"
         }
       ]
@@ -3554,7 +3701,8 @@
       "kind": "functional-group",
       "webs": [
         "bamboung",
-        "northern-benguela"
+        "northern-benguela",
+        "sene-gambian-shelf"
       ],
       "occurrences": [
         {
@@ -3563,6 +3711,10 @@
         },
         {
           "web": "northern-benguela",
+          "node": "sharks"
+        },
+        {
+          "web": "sene-gambian-shelf",
           "node": "sharks"
         }
       ]
@@ -4330,11 +4482,16 @@
       "kind": "functional-group",
       "webs": [
         "bamboung",
+        "sene-gambian-shelf",
         "tapajos-river"
       ],
       "occurrences": [
         {
           "web": "bamboung",
+          "node": "zooplankton"
+        },
+        {
+          "web": "sene-gambian-shelf",
           "node": "zooplankton"
         },
         {

@@ -2,8 +2,8 @@
   "slug": "meiobenthos",
   "name": "Meiobenthos",
   "kind": "functional-group",
-  "description": "The meiobenthos - minute bottom-living invertebrates living between the sediment grains, eating organic detritus and microalgae and eaten by small benthic fish, flatfish and shrimps. Functional group pooling the source's Meiobenthos compartment.",
-  "sourceWeb": "bamboung",
+  "description": "The minute bottom-dwelling invertebrates (animals smaller than 1 mm - tiny worms and crustaceans) living between sediment grains. Functional group matching the source's meiobenthos compartment; feeds on detritus, benthic producers and macrobenthos, and is eaten by macrobenthos, rays and demersal fish.",
+  "sourceWeb": "sene-gambian-shelf",
   "occurrences": [
     {
       "web": "bamboung",
@@ -13,6 +13,15 @@
       "displayName": "Meiobenthos",
       "kind": "functional-group",
       "trophicLevel": 2.101
+    },
+    {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "meiobenthos",
+      "displayName": "Meiobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.1
     }
   ]
 }

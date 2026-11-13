@@ -1,0 +1,24 @@
+{
+  "slug": "flat-sardinella",
+  "name": "Flat sardinella",
+  "kind": "species",
+  "description": "Flat sardinella (Sardinella maderensis), tracked as its own compartment by the source (the model's richest fish at 13.5 t\u00b7km-2, catches ~82 000 t\u00b7yr-1). Slightly more zooplankton-dependent than its round cousin; together the two sardinelles supply around 70% of declared landings and anchor the artisanal fishery.",
+  "sourceWeb": "sene-gambian-shelf",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sardinella_maderensis"
+  },
+  "occurrences": [
+    {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "flat-sardinella",
+      "displayName": "Flat sardinella",
+      "kind": "species",
+      "trophicLevel": 2.8,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Sardinella_maderensis"
+      }
+    }
+  ]
+}

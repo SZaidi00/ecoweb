@@ -1,0 +1,18 @@
+{
+  "slug": "offshore-tunas",
+  "name": "Offshore tunas",
+  "kind": "functional-group",
+  "description": "The great oceanic wanderers that visit the shelf seasonally: yellowfin (Thunnus albacares - 'albacore' in the source), skipjack (Katsuwonus pelamis) and bigeye (Thunnus obesus) tuna, heavily fished by long-range fleets. Functional group pooling the source's thonid\u00e9s-du-large compartment; two-thirds of their diet is zooplankton here, and the local sharks in turn prey on them.",
+  "sourceWeb": "sene-gambian-shelf",
+  "occurrences": [
+    {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "offshore-tunas",
+      "displayName": "Offshore tunas",
+      "kind": "functional-group",
+      "trophicLevel": 3.3
+    }
+  ]
+}

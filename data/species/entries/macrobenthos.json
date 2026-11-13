@@ -13,6 +13,15 @@
       "displayName": "Macrobenthos",
       "kind": "functional-group",
       "trophicLevel": 2.0
+    },
+    {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "macrobenthos",
+      "displayName": "Macrobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.2
     }
   ]
 }

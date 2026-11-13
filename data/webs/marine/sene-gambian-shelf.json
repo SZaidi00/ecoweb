@@ -1,0 +1,533 @@
+{
+  "meta": {
+    "id": "sene-gambian-shelf",
+    "name": "Sene-Gambian Shelf",
+    "location": "Senegambian continental shelf, Senegal & The Gambia, NW Africa",
+    "biome": "marine",
+    "lat": 14.5,
+    "lng": -17.3,
+    "provenance": "empirical",
+    "tagline": "Upwelling-fed sardinella shoals feed seabirds, tunas and one of Africa's oldest fisheries",
+    "citations": [
+      "Samb, B. & Mendy, A.N. (2004). Dynamique du réseau trophique de l'écosystème sénégambien en 1990, pp. 57-70. In: Palomares, M.L.D. & Pauly, D. (eds.) West African marine ecosystems: models and fisheries impacts. Fisheries Centre Research Reports 12(7). Fisheries Centre, University of British Columbia, Vancouver. 221 pp.",
+      "Palomares, M.L.D. & Pauly, D. (eds.) (2004). West African marine ecosystems: models and fisheries impacts. Fisheries Centre Research Reports 12(7), Fisheries Centre, University of British Columbia, Vancouver — open-access volume carrying the Samb & Mendy chapter (Tableau 1 parameters, Tableau 2 diet-composition matrix). https://open.library.ubc.ca/collections/fisheriescentre/24/items/1.0074805"
+    ],
+    "sourceUrl": "https://open.library.ubc.ca/collections/fisheriescentre/24/items/1.0074805",
+    "licenseNote": "Structure and diet composition are from Samb & Mendy (2004, Fisheries Centre Research Reports 12(7):57-70), an 18-compartment Ecopath model of the Senegambian continental shelf in 1990: Tableau 2 (diet-composition matrix, transcribed in full - every predator column sums to 1.000 exactly as published) and Tableau 1 (published trophic levels, biomasses, P/B, Q/B, EE). The source's 18 compartments map one-to-one onto the 17 nodes here, so no aggregation was needed and the salmon rule holds at the source's own granularity. Two published entries are omitted, both documented: (1) the 'Rejets' (fishery discards) compartment, modelled at 0.001 t·km-2 with a single 0.000 diet link from coastal demersal fish, i.e. effectively unused by the model - dropping it removes that zero link and leaves every remaining column summing to 1.000; (2) the macrobenthos self-predation entry (0.07 of macrobenthos diet), omitted as a self-loop per this atlas's convention, so the macrobenthos node's diet weights sum to 0.93. All edge weights are the published diet fractions, rounded to 3 decimals. Ecopath diet compositions are model-balanced estimates partly built from regional stomach-content and literature data (cited per group in the chapter). Trophic levels are the source's published balanced values (Tableau 1). The volume is openly accessible via UBC Open Collections (FCRR series policy). Reuse requires citing Samb & Mendy (2004).",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-11-12"
+  },
+  "nodes": [
+    {
+      "id": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Microscopic drifting algae - the grass of the upwelling sea, blooming to 70-80 mg·m-2·day-1 of primary production where the trade winds draw cold nutrient-rich water to the surface. Functional group matching the source's single phytoplankton compartment (mean biomass 82 t·km-2 in the 1990 model).",
+      "layout": {
+        "x": 50,
+        "y": 4
+      }
+    },
+    {
+      "id": "benthic-producers",
+      "displayName": "Benthic producers",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Seagrasses and other algae rooted on the shallow shelf floor. Functional group matching the source's producteurs-benthiques compartment (parameters taken from the comparable upwelling study of Jarre-Teichmann et al. 1998); grazed by rays, meiobenthos, macrobenthos and coastal demersal fish.",
+      "layout": {
+        "x": 12,
+        "y": 6
+      }
+    },
+    {
+      "id": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Dead organic matter - decaying plankton, faeces and carrion - raining onto the shelf and recycling through the bottom-living food web. Functional group matching the source's détritus compartment.",
+      "layout": {
+        "x": 86,
+        "y": 6
+      }
+    },
+    {
+      "id": "zooplankton",
+      "displayName": "Zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The drifting grazing animals of the open water, dominated by copepods whose abundance tracks upwelling intensity from January to April. Functional group matching the source's zooplancton compartment (mean biomass 20.6 t·km-2); the engine that turns phytoplankton into food for sardinelles and almost every fish in the web.",
+      "layout": {
+        "x": 52,
+        "y": 18
+      }
+    },
+    {
+      "id": "meiobenthos",
+      "displayName": "Meiobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.1,
+      "functionalRole": "primary-consumer",
+      "description": "The minute bottom-dwelling invertebrates (animals smaller than 1 mm - tiny worms and crustaceans) living between sediment grains. Functional group matching the source's meiobenthos compartment; feeds on detritus, benthic producers and macrobenthos, and is eaten by macrobenthos, rays and demersal fish.",
+      "layout": {
+        "x": 28,
+        "y": 24
+      }
+    },
+    {
+      "id": "macrobenthos",
+      "displayName": "Macrobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.2,
+      "functionalRole": "primary-consumer",
+      "description": "The larger bottom-dwelling invertebrates - clams, snails, worms, crabs and sea cucumbers - the staple food of the demersal fishes. Functional group matching the source's macrobenthos compartment (the richest compartment in the model at 93 t·km-2); the source also documents it preying on itself (0.07 of its own diet), a within-group loop omitted here as a self-loop.",
+      "layout": {
+        "x": 10,
+        "y": 28
+      }
+    },
+    {
+      "id": "round-sardinella",
+      "displayName": "Round sardinella",
+      "kind": "species",
+      "trophicLevel": 2.8,
+      "functionalRole": "intermediate-consumer",
+      "description": "Round sardinella (Sardinella aurita), tracked as its own compartment by the source (mean biomass 8.6 t·km-2, catches ~139 000 t·yr-1 in the 1990s). A filter-feeding clupeid that grazes phytoplankton and zooplankton - and the single most important fish in the web, eaten by seabirds, marine mammals, both tuna groups, sharks, cephalopods and even demersal fish.",
+      "layout": {
+        "x": 60,
+        "y": 40
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Round_sardinella"
+      }
+    },
+    {
+      "id": "flat-sardinella",
+      "displayName": "Flat sardinella",
+      "kind": "species",
+      "trophicLevel": 2.8,
+      "functionalRole": "intermediate-consumer",
+      "description": "Flat sardinella (Sardinella maderensis), tracked as its own compartment by the source (the model's richest fish at 13.5 t·km-2, catches ~82 000 t·yr-1). Slightly more zooplankton-dependent than its round cousin; together the two sardinelles supply around 70% of declared landings and anchor the artisanal fishery.",
+      "layout": {
+        "x": 72,
+        "y": 42
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Sardinella_maderensis"
+      }
+    },
+    {
+      "id": "other-pelagic-fish",
+      "displayName": "Other coastal pelagics",
+      "kind": "functional-group",
+      "trophicLevel": 2.8,
+      "functionalRole": "intermediate-consumer",
+      "description": "The rest of the coastal pelagic assemblage: horse mackerels (blackchin Trachurus trecae and yellowstripe Decapterus rhonchus), chub mackerel (Scomber japonicus), bigeye grunt (Brachydeuterus auritus), Atlantic bumper (Chloroscombrus chrysurus), largehead hairtail (Trichiurus lepturus) and sompat grunt (Pomadasys jubelini). Functional group pooling the source's autres-pélagiques-côtiers compartment - a mixed schooling guild of zooplankton- and fish-feeders.",
+      "layout": {
+        "x": 84,
+        "y": 44
+      }
+    },
+    {
+      "id": "coastal-demersal-fish",
+      "displayName": "Coastal demersal fish",
+      "kind": "functional-group",
+      "trophicLevel": 2.3,
+      "functionalRole": "intermediate-consumer",
+      "description": "Bottom-living fishes of the shallow shelf: croakers (Pseudotolithus spp. and other sciaenids), threadfins (Galeoides spp. and other polynemids), jacks (Scyris spp.), tonguefishes (Cynoglossus spp.), seabreams (Dentex, Pagellus, Sparus), groupers (Epinephelus spp.) and goatfishes (Pseudupaeneus spp.), with red pandora ('pageot') the parameterised representative. Functional group pooling the source's demersaux-côtiers compartment - the most intensively exploited fish guild on the shelf, its exploitable biomass having fallen from 173 000 t to 81 000 t between 1986 and 1991.",
+      "layout": {
+        "x": 34,
+        "y": 34
+      }
+    },
+    {
+      "id": "rays",
+      "displayName": "Rays & guitarfish",
+      "kind": "functional-group",
+      "trophicLevel": 2.7,
+      "functionalRole": "intermediate-consumer",
+      "description": "Bottom-living cartilaginous fishes, with the common guitarfish (Rhinobatos rhinobatos) as the parameterised representative. Functional group pooling the source's raies compartment; they crush benthic invertebrates and small demersal fish on and in the sediment - a very different hunting style from the open-water sharks.",
+      "layout": {
+        "x": 14,
+        "y": 46
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Common_guitarfish"
+      }
+    },
+    {
+      "id": "cephalopods",
+      "displayName": "Cephalopods",
+      "kind": "functional-group",
+      "trophicLevel": 3.2,
+      "functionalRole": "intermediate-consumer",
+      "description": "Soft-bodied hunters: the common octopus (Octopus vulgaris) - which underwent a famous boom here in 1986 as predation on its young collapsed - and cuttlefishes (Sepia spp.). Functional group pooling the source's céphalopodes compartment; fast-growing mid-level predators eaten by both tuna groups and marine mammals.",
+      "layout": {
+        "x": 62,
+        "y": 56
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Common_octopus"
+      }
+    },
+    {
+      "id": "offshore-tunas",
+      "displayName": "Offshore tunas",
+      "kind": "functional-group",
+      "trophicLevel": 3.3,
+      "functionalRole": "top-consumer",
+      "description": "The great oceanic wanderers that visit the shelf seasonally: yellowfin (Thunnus albacares - 'albacore' in the source), skipjack (Katsuwonus pelamis) and bigeye (Thunnus obesus) tuna, heavily fished by long-range fleets. Functional group pooling the source's thonidés-du-large compartment; two-thirds of their diet is zooplankton here, and the local sharks in turn prey on them.",
+      "layout": {
+        "x": 76,
+        "y": 64
+      }
+    },
+    {
+      "id": "coastal-tunas",
+      "displayName": "Coastal tunas",
+      "kind": "functional-group",
+      "trophicLevel": 3.3,
+      "functionalRole": "top-consumer",
+      "description": "The small tuna-like predators present year-round and caught mostly by artisanal gear: little tunny (Euthynnus alletteratus), Atlantic bonito (Sarda sarda), West African Spanish mackerel (Scomberomorus tritor) and frigate tuna (Auxis thazard). Functional group pooling the source's thonidés-côtiers compartment; sardinelles make up 30% of their diet.",
+      "layout": {
+        "x": 86,
+        "y": 60
+      }
+    },
+    {
+      "id": "marine-mammals",
+      "displayName": "Marine mammals",
+      "kind": "functional-group",
+      "trophicLevel": 3.4,
+      "functionalRole": "top-consumer",
+      "description": "Dolphins and whales along the shelf edge, including fin (Balaenoptera physalus) and Bryde's (Balaenoptera edeni) whales. Functional group pooling the source's mammifères-marins compartment; half their diet is zooplankton, with sardinelles, cephalopods and other fish making up the rest - and they suffer incidental-capture mortality in the fisheries.",
+      "layout": {
+        "x": 44,
+        "y": 68
+      }
+    },
+    {
+      "id": "sharks",
+      "displayName": "Sharks",
+      "kind": "functional-group",
+      "trophicLevel": 3.5,
+      "functionalRole": "top-consumer",
+      "description": "The shelf's top cartilaginous predators, dominated in the landings by the requiem sharks (Carcharhinidae), with blacktip shark (Carcharhinus limbatus) the parameterised representative. Functional group pooling the source's requins compartment; generalists that take zooplankton, sardinelles, demersal fish and even the visiting offshore tunas.",
+      "layout": {
+        "x": 28,
+        "y": 74
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Blacktip_shark"
+      }
+    },
+    {
+      "id": "seabirds",
+      "displayName": "Seabirds",
+      "kind": "functional-group",
+      "trophicLevel": 3.8,
+      "functionalRole": "top-consumer",
+      "description": "Migratory seabirds wintering over the upwelling between November and March (parameterised from the southern Benguela system by the source). Functional group pooling the source's oiseaux-marins compartment; their diet is nothing but fish - 60% sardinelles - so their winter fortunes rise and fall with the small-pelagic stocks.",
+      "layout": {
+        "x": 58,
+        "y": 88
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "round-sardinella",
+      "predator": "seabirds",
+      "weight": 0.3
+    },
+    {
+      "prey": "flat-sardinella",
+      "predator": "seabirds",
+      "weight": 0.3
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "seabirds",
+      "weight": 0.4
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "marine-mammals",
+      "weight": 0.1
+    },
+    {
+      "prey": "coastal-demersal-fish",
+      "predator": "marine-mammals",
+      "weight": 0.05
+    },
+    {
+      "prey": "round-sardinella",
+      "predator": "marine-mammals",
+      "weight": 0.1
+    },
+    {
+      "prey": "flat-sardinella",
+      "predator": "marine-mammals",
+      "weight": 0.2
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "marine-mammals",
+      "weight": 0.1
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "marine-mammals",
+      "weight": 0.45
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "offshore-tunas",
+      "weight": 0.05
+    },
+    {
+      "prey": "round-sardinella",
+      "predator": "offshore-tunas",
+      "weight": 0.05
+    },
+    {
+      "prey": "flat-sardinella",
+      "predator": "offshore-tunas",
+      "weight": 0.1
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "offshore-tunas",
+      "weight": 0.15
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "offshore-tunas",
+      "weight": 0.65
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "coastal-tunas",
+      "weight": 0.025
+    },
+    {
+      "prey": "round-sardinella",
+      "predator": "coastal-tunas",
+      "weight": 0.1
+    },
+    {
+      "prey": "flat-sardinella",
+      "predator": "coastal-tunas",
+      "weight": 0.2
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "coastal-tunas",
+      "weight": 0.1
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "coastal-tunas",
+      "weight": 0.575
+    },
+    {
+      "prey": "offshore-tunas",
+      "predator": "sharks",
+      "weight": 0.1
+    },
+    {
+      "prey": "coastal-demersal-fish",
+      "predator": "sharks",
+      "weight": 0.1
+    },
+    {
+      "prey": "round-sardinella",
+      "predator": "sharks",
+      "weight": 0.125
+    },
+    {
+      "prey": "flat-sardinella",
+      "predator": "sharks",
+      "weight": 0.15
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "sharks",
+      "weight": 0.1
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "sharks",
+      "weight": 0.425
+    },
+    {
+      "prey": "coastal-demersal-fish",
+      "predator": "rays",
+      "weight": 0.14
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "rays",
+      "weight": 0.085
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "rays",
+      "weight": 0.375
+    },
+    {
+      "prey": "benthic-producers",
+      "predator": "rays",
+      "weight": 0.4
+    },
+    {
+      "prey": "coastal-demersal-fish",
+      "predator": "cephalopods",
+      "weight": 0.037
+    },
+    {
+      "prey": "round-sardinella",
+      "predator": "cephalopods",
+      "weight": 0.03
+    },
+    {
+      "prey": "flat-sardinella",
+      "predator": "cephalopods",
+      "weight": 0.06
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "cephalopods",
+      "weight": 0.05
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "cephalopods",
+      "weight": 0.573
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "cephalopods",
+      "weight": 0.25
+    },
+    {
+      "prey": "cephalopods",
+      "predator": "coastal-demersal-fish",
+      "weight": 0.002
+    },
+    {
+      "prey": "round-sardinella",
+      "predator": "coastal-demersal-fish",
+      "weight": 0.001
+    },
+    {
+      "prey": "flat-sardinella",
+      "predator": "coastal-demersal-fish",
+      "weight": 0.001
+    },
+    {
+      "prey": "other-pelagic-fish",
+      "predator": "coastal-demersal-fish",
+      "weight": 0.005
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "coastal-demersal-fish",
+      "weight": 0.14
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "coastal-demersal-fish",
+      "weight": 0.025
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "coastal-demersal-fish",
+      "weight": 0.1
+    },
+    {
+      "prey": "benthic-producers",
+      "predator": "coastal-demersal-fish",
+      "weight": 0.375
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "coastal-demersal-fish",
+      "weight": 0.155
+    },
+    {
+      "prey": "detritus",
+      "predator": "coastal-demersal-fish",
+      "weight": 0.196
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "round-sardinella",
+      "weight": 0.8
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "round-sardinella",
+      "weight": 0.2
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "flat-sardinella",
+      "weight": 0.75
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "flat-sardinella",
+      "weight": 0.25
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "other-pelagic-fish",
+      "weight": 0.8
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "other-pelagic-fish",
+      "weight": 0.2
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "zooplankton",
+      "weight": 1.0
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "meiobenthos",
+      "weight": 0.05
+    },
+    {
+      "prey": "benthic-producers",
+      "predator": "meiobenthos",
+      "weight": 0.05
+    },
+    {
+      "prey": "detritus",
+      "predator": "meiobenthos",
+      "weight": 0.9
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "macrobenthos",
+      "weight": 0.08
+    },
+    {
+      "prey": "benthic-producers",
+      "predator": "macrobenthos",
+      "weight": 0.05
+    },
+    {
+      "prey": "detritus",
+      "predator": "macrobenthos",
+      "weight": 0.8
+    }
+  ]
+}

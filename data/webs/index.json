@@ -133,6 +133,17 @@
       "lng": -147.14
     },
     {
+      "id": "sene-gambian-shelf",
+      "name": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "location": "Senegambian continental shelf, Senegal & The Gambia, NW Africa",
+      "nodeCount": 17,
+      "provenance": "empirical",
+      "tagline": "Upwelling-fed sardinella shoals feed seabirds, tunas and one of Africa's oldest fisheries",
+      "lat": 14.5,
+      "lng": -17.3
+    },
+    {
       "id": "southern-benguela",
       "name": "Southern Benguela",
       "biome": "marine",

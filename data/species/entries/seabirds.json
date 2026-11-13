@@ -2,8 +2,8 @@
   "slug": "seabirds",
   "name": "Seabirds",
   "kind": "functional-group",
-  "description": "Seabirds - the diving birds breeding on the Benguela's islands and guano platforms. Functional group matching the source model's single 'birds' compartment, which pools the region's seabird species into one measured group; gobies are their single biggest food in this 1956 web.",
-  "sourceWeb": "northern-benguela",
+  "description": "Migratory seabirds wintering over the upwelling between November and March (parameterised from the southern Benguela system by the source). Functional group pooling the source's oiseaux-marins compartment; their diet is nothing but fish - 60% sardinelles - so their winter fortunes rise and fall with the small-pelagic stocks.",
+  "sourceWeb": "sene-gambian-shelf",
   "occurrences": [
     {
       "web": "northern-benguela",
@@ -13,6 +13,15 @@
       "displayName": "Seabirds",
       "kind": "functional-group",
       "trophicLevel": 3.418
+    },
+    {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "seabirds",
+      "displayName": "Seabirds",
+      "kind": "functional-group",
+      "trophicLevel": 3.8
     }
   ]
 }

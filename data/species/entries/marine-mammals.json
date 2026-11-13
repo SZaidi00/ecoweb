@@ -18,6 +18,15 @@
       "trophicLevel": 4.217
     },
     {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "marine-mammals",
+      "displayName": "Marine mammals",
+      "kind": "functional-group",
+      "trophicLevel": 3.4
+    },
+    {
       "web": "southern-benguela",
       "webName": "Southern Benguela",
       "biome": "marine",

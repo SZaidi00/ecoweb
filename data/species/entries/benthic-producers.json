@@ -2,9 +2,18 @@
   "slug": "benthic-producers",
   "name": "Benthic producers",
   "kind": "functional-group",
-  "description": "Seaweeds and seagrasses growing on the shallow shelf and rocky grounds. Functional group aggregating the source's single benthic-producers compartment; eaten by sea urchins, abalone and other grazers in the source system, and here by the pooled benthic invertebrates.",
-  "sourceWeb": "southern-benguela",
+  "description": "Seagrasses and other algae rooted on the shallow shelf floor. Functional group matching the source's producteurs-benthiques compartment (parameters taken from the comparable upwelling study of Jarre-Teichmann et al. 1998); grazed by rays, meiobenthos, macrobenthos and coastal demersal fish.",
+  "sourceWeb": "sene-gambian-shelf",
   "occurrences": [
+    {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "benthic-producers",
+      "displayName": "Benthic producers",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    },
     {
       "web": "southern-benguela",
       "webName": "Southern Benguela",

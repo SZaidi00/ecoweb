@@ -42,6 +42,15 @@
       "trophicLevel": 1.0
     },
     {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    },
+    {
       "web": "shortgrass-prairie",
       "webName": "Shortgrass Prairie",
       "biome": "grassland",

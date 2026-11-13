@@ -96,6 +96,11 @@ const webSources = [
     note: 'Guénette, Meissa & Gascuel 2014, PLoS ONE; model via EcoBase 689.',
   },
   {
+    name: 'Sene-Gambian Shelf',
+    href: 'https://open.library.ubc.ca/collections/fisheriescentre/24/items/1.0074805',
+    note: 'Samb & Mendy 2004, Fisheries Centre Research Reports 12(7):57-70, UBC (open access).',
+  },
+  {
     name: 'Magellanic/Fuegian Steppe',
     href: 'https://doi.org/10.1038/s41598-024-70511-6',
     note: 'Mann-Vollrath et al. 2024, Scientific Reports; curated composite.',

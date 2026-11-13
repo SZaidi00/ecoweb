@@ -1,0 +1,18 @@
+{
+  "slug": "coastal-demersal-fish",
+  "name": "Coastal demersal fish",
+  "kind": "functional-group",
+  "description": "Bottom-living fishes of the shallow shelf: croakers (Pseudotolithus spp. and other sciaenids), threadfins (Galeoides spp. and other polynemids), jacks (Scyris spp.), tonguefishes (Cynoglossus spp.), seabreams (Dentex, Pagellus, Sparus), groupers (Epinephelus spp.) and goatfishes (Pseudupaeneus spp.), with red pandora ('pageot') the parameterised representative. Functional group pooling the source's demersaux-c\u00f4tiers compartment - the most intensively exploited fish guild on the shelf, its exploitable biomass having fallen from 173 000 t to 81 000 t between 1986 and 1991.",
+  "sourceWeb": "sene-gambian-shelf",
+  "occurrences": [
+    {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "coastal-demersal-fish",
+      "displayName": "Coastal demersal fish",
+      "kind": "functional-group",
+      "trophicLevel": 2.3
+    }
+  ]
+}

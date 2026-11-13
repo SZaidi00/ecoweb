@@ -1,0 +1,24 @@
+{
+  "slug": "cephalopods",
+  "name": "Cephalopods",
+  "kind": "functional-group",
+  "description": "Soft-bodied hunters: the common octopus (Octopus vulgaris) - which underwent a famous boom here in 1986 as predation on its young collapsed - and cuttlefishes (Sepia spp.). Functional group pooling the source's c\u00e9phalopodes compartment; fast-growing mid-level predators eaten by both tuna groups and marine mammals.",
+  "sourceWeb": "sene-gambian-shelf",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Common_octopus"
+  },
+  "occurrences": [
+    {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "cephalopods",
+      "displayName": "Cephalopods",
+      "kind": "functional-group",
+      "trophicLevel": 3.2,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Common_octopus"
+      }
+    }
+  ]
+}

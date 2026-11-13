@@ -2,13 +2,22 @@
   "slug": "zooplankton",
   "name": "Zooplankton",
   "kind": "functional-group",
-  "description": "Small drifting and weakly swimming animals grazed by filter-feeding fishes. Functional group aggregating the source's zooplankton compartment - branchiopod crustaceans, copepods and rotifers (classes Branchiopoda, Copepoda, Digononta and Monogononta) - measured together; it feeds on phytoplankton and periphyton.",
-  "sourceWeb": "tapajos-river",
+  "description": "The drifting grazing animals of the open water, dominated by copepods whose abundance tracks upwelling intensity from January to April. Functional group matching the source's zooplancton compartment (mean biomass 20.6 t\u00b7km-2); the engine that turns phytoplankton into food for sardinelles and almost every fish in the web.",
+  "sourceWeb": "sene-gambian-shelf",
   "occurrences": [
     {
       "web": "bamboung",
       "webName": "Bamboung Bolong",
       "biome": "estuary",
+      "node": "zooplankton",
+      "displayName": "Zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    },
+    {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
       "node": "zooplankton",
       "displayName": "Zooplankton",
       "kind": "functional-group",

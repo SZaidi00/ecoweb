@@ -1,0 +1,24 @@
+{
+  "slug": "round-sardinella",
+  "name": "Round sardinella",
+  "kind": "species",
+  "description": "Round sardinella (Sardinella aurita), tracked as its own compartment by the source (mean biomass 8.6 t\u00b7km-2, catches ~139 000 t\u00b7yr-1 in the 1990s). A filter-feeding clupeid that grazes phytoplankton and zooplankton - and the single most important fish in the web, eaten by seabirds, marine mammals, both tuna groups, sharks, cephalopods and even demersal fish.",
+  "sourceWeb": "sene-gambian-shelf",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Round_sardinella"
+  },
+  "occurrences": [
+    {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "round-sardinella",
+      "displayName": "Round sardinella",
+      "kind": "species",
+      "trophicLevel": 2.8,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Round_sardinella"
+      }
+    }
+  ]
+}

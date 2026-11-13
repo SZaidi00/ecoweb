@@ -60,6 +60,15 @@
       "trophicLevel": 1.0
     },
     {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    },
+    {
       "web": "tapajos-river",
       "webName": "Tapaj\u00f3s River",
       "biome": "freshwater",

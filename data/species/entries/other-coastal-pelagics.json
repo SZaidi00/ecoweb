@@ -1,0 +1,18 @@
+{
+  "slug": "other-coastal-pelagics",
+  "name": "Other coastal pelagics",
+  "kind": "functional-group",
+  "description": "The rest of the coastal pelagic assemblage: horse mackerels (blackchin Trachurus trecae and yellowstripe Decapterus rhonchus), chub mackerel (Scomber japonicus), bigeye grunt (Brachydeuterus auritus), Atlantic bumper (Chloroscombrus chrysurus), largehead hairtail (Trichiurus lepturus) and sompat grunt (Pomadasys jubelini). Functional group pooling the source's autres-p\u00e9lagiques-c\u00f4tiers compartment - a mixed schooling guild of zooplankton- and fish-feeders.",
+  "sourceWeb": "sene-gambian-shelf",
+  "occurrences": [
+    {
+      "web": "sene-gambian-shelf",
+      "webName": "Sene-Gambian Shelf",
+      "biome": "marine",
+      "node": "other-pelagic-fish",
+      "displayName": "Other coastal pelagics",
+      "kind": "functional-group",
+      "trophicLevel": 2.8
+    }
+  ]
+}
