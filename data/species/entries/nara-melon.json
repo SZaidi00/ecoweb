@@ -1,0 +1,24 @@
+{
+  "slug": "nara-melon",
+  "name": "Nara melon",
+  "kind": "species",
+  "description": "The Nara melon (Acanthosicyos horridus), a spiny fog-harvesting melon of the dune base - a second oasis-builder growing beside the fog-broom grass. Its flowers feed the blister beetle Hycleus zigzagus, and its dead stems plus the detritus beneath them carry the isotope signature that matches the darkling beetle Physadesmia globosa. Species node matching the source's A. horridus basal pools (dead stem litter and soil detritus).",
+  "sourceWeb": "namib-fog-oasis",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Acanthosicyos_horridus"
+  },
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "nara",
+      "displayName": "Nara melon",
+      "kind": "species",
+      "trophicLevel": 1.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Acanthosicyos_horridus"
+      }
+    }
+  ]
+}

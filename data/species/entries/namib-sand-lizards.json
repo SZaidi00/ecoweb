@@ -1,0 +1,24 @@
+{
+  "slug": "namib-sand-lizards",
+  "name": "Namib sand lizards",
+  "kind": "functional-group",
+  "description": "Namib sand lizards - the shovel-snouted Meroles cuneirostris and the fine-scaled Aporosaura anchietae - specialised predators of weevils and darkling beetles on the dunes around the oases. Functional group pooling the two lizard species measured together by the cited diet study (Robinson & Cunningham 1978).",
+  "sourceWeb": "namib-fog-oasis",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Meroles"
+  },
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "sand-lizards",
+      "displayName": "Namib sand lizards",
+      "kind": "functional-group",
+      "trophicLevel": 3.505,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Meroles"
+      }
+    }
+  ]
+}

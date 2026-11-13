@@ -1,0 +1,18 @@
+{
+  "slug": "darkling-beetle-physadesmia-globosa",
+  "name": "Darkling beetle (Physadesmia globosa)",
+  "kind": "species",
+  "description": "The darkling beetle Physadesmia globosa of the dune base near the Kuiseb riverbed - its carbon isotope signature matches the Nara melon rather than the fog grass, while its nitrogen isotopes (like the other darkling beetle's) suggest an omnivore above its plant-based carbon. Species node matching the source's Physadesmia globosa taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "physadesmia",
+      "displayName": "Darkling beetle (Physadesmia globosa)",
+      "kind": "species",
+      "trophicLevel": 2.0
+    }
+  ]
+}

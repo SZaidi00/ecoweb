@@ -1,0 +1,18 @@
+{
+  "slug": "parasitoid-wasps-haltichellinae",
+  "name": "Parasitoid wasps (Haltichellinae)",
+  "kind": "species",
+  "description": "Parasitoid wasps (Haltichellinae sp.) - the highest nitrogen isotopes of the whole web (about six trophic steps above the dead-leaf baseline); their estimated diet is dominated by thrips (75%), consistent with parasitoid or predatory habits. Species node matching the source's Haltichellinae sp. taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "haltichellinae",
+      "displayName": "Parasitoid wasps (Haltichellinae)",
+      "kind": "species",
+      "trophicLevel": 3.017
+    }
+  ]
+}

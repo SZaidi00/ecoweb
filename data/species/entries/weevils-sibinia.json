@@ -1,0 +1,18 @@
+{
+  "slug": "weevils-sibinia",
+  "name": "Weevils (Sibinia)",
+  "kind": "species",
+  "description": "Weevils (Sibinia sp.) - expected herbivores whose very high nitrogen isotopes ('possibly predator/secondary consumer') echo the thrips; the mixing model puts them in the diets of the darkling beetle, spiders and wasps. Their own food within this web is not resolved. Species node matching the source's Sibinia sp. taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "sibinia",
+      "displayName": "Weevils (Sibinia)",
+      "kind": "species",
+      "trophicLevel": 2.0
+    }
+  ]
+}

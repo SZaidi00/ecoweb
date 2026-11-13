@@ -1,0 +1,18 @@
+{
+  "slug": "hammock-soil-detritus",
+  "name": "Hammock soil detritus",
+  "kind": "functional-group",
+  "description": "The organic-rich sand of the soil hammock that accumulates beneath mature tussocks - decaying plant matter mixed into wind-blown sand. It is the dune ant's main estimated food (86%) and a steady source for the barklouse and ladybird. Functional group matching the source's 'soil detritus' basal pool under S. sabulicola.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "soil-detritus",
+      "displayName": "Hammock soil detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "darkling-beetle-onymacris-plana",
+  "name": "Darkling beetle (Onymacris plana)",
+  "kind": "species",
+  "description": "The darkling beetle Onymacris plana - a big, fast, heat-tolerant beetle of the dune surface and the fog oases; the mixing model credits scale insects (89%) but also smaller prey (barklice 45%... shared with litter sources - it is the web's most omnivorous consumer), and it is classic prey of the sand lizards and the dune lark. Species node matching the source's Onymacris plana taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Onymacris_plana"
+  },
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "onymacris",
+      "displayName": "Darkling beetle (Onymacris plana)",
+      "kind": "species",
+      "trophicLevel": 3.011,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Onymacris_plana"
+      }
+    }
+  ]
+}

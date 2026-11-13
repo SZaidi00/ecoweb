@@ -1,0 +1,18 @@
+{
+  "slug": "barklice-liposcelis",
+  "name": "Barklice (Liposcelis)",
+  "kind": "species",
+  "description": "Barklice (Liposcelis sp.) scraping at the dead grass leaves - an estimated 74% of their diet - with soil detritus and scale insects making up the rest. Species node matching the source's Liposcelis sp. taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "liposcelis",
+      "displayName": "Barklice (Liposcelis)",
+      "kind": "species",
+      "trophicLevel": 2.246
+    }
+  ]
+}

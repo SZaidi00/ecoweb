@@ -1,0 +1,18 @@
+{
+  "slug": "fungal-infected-litter",
+  "name": "Fungal-infected litter",
+  "kind": "functional-group",
+  "description": "Dead leaves of the fog-broom grass heavily colonised by fungi - the high-quality litter that decomposers selectively pick: the mixing model credits it with about 70% of the oribatid mite's diet and 67% of the ladybird's (the same selectivity shown by Namib termites). Functional group matching the source's 'dead leaves with fungal infection' basal pool.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "fungal-leaves",
+      "displayName": "Fungal-infected litter",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

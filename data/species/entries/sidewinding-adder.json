@@ -1,0 +1,24 @@
+{
+  "slug": "sidewinding-adder",
+  "name": "Sidewinding adder",
+  "kind": "species",
+  "description": "Peringuey's sidewinding adder (Bitis peringueyi) - a small viper that sidewinds across the dunes with only its eyes above the sand, hunting lizards (and occasionally lizards' prey). The top of this web's vertebrate chain. Species node; diet documented by Robinson & Hughes (1978) as cited in the source study.",
+  "sourceWeb": "namib-fog-oasis",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Bitis_peringueyi"
+  },
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "sidewinding-adder",
+      "displayName": "Sidewinding adder",
+      "kind": "species",
+      "trophicLevel": 4.505,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Bitis_peringueyi"
+      }
+    }
+  ]
+}

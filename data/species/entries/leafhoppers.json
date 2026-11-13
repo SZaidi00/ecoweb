@@ -1,0 +1,18 @@
+{
+  "slug": "leafhoppers",
+  "name": "Leafhoppers",
+  "kind": "species",
+  "description": "Leafhoppers (Deltocephalinae sp.) - sap feeders on the living fog grass, tended by the dune ant for honeydew, and prey for the spiders, beetles and wasps of the tussock. Species node matching the source's Deltocephalinae sp. taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "deltocephalinae",
+      "displayName": "Leafhoppers",
+      "kind": "species",
+      "trophicLevel": 2.0
+    }
+  ]
+}

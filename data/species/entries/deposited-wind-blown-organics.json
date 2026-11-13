@@ -1,0 +1,18 @@
+{
+  "slug": "deposited-wind-blown-organics",
+  "name": "Deposited wind-blown organics",
+  "kind": "functional-group",
+  "description": "Organic matter deposited with wind-blown sediment beneath the hummocks - the belowground energy base. Its isotope signature is markedly 13C-depleted compared with the fog grass, and the soil nematodes run on it rather than on the plant above: the study's key evidence that the FPO is two coupled, isotopically distinct food webs. Functional group matching the deposited-sources pool identified by the source's belowground isotope data.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "deposited-organics",
+      "displayName": "Deposited wind-blown organics",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

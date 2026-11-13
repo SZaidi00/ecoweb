@@ -1,0 +1,18 @@
+{
+  "slug": "oribatid-mite-zygoribatula",
+  "name": "Oribatid mite (Zygoribatula)",
+  "kind": "species",
+  "description": "An oribatid mite (Zygoribatula sp.) - the most abundant animal of the oases (100 collected) and the principal primary decomposer, grazing fungal-infected litter (an estimated 70% of its diet) and possibly helping control fungal pathogens of the grass. Species node matching the source's Zygoribatula sp. taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "zygoribatula",
+      "displayName": "Oribatid mite (Zygoribatula)",
+      "kind": "species",
+      "trophicLevel": 2.186
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "fog-grass-dead-leaves",
+  "name": "Fog-grass dead leaves",
+  "kind": "functional-group",
+  "description": "Fallen dead leaves of the fog-broom grass packed into the tussock axils - the main dead-plant pool, estimated to dominate the diets of barklice (74%) and featured in those of the dune ant, the oribatid mite and the ladybird. Functional group matching the source's 'dead leaves' basal pool.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "dead-leaves",
+      "displayName": "Fog-grass dead leaves",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

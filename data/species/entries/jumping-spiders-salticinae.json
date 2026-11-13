@@ -1,0 +1,18 @@
+{
+  "slug": "jumping-spiders-salticinae",
+  "name": "Jumping spiders (Salticinae)",
+  "kind": "species",
+  "description": "Jumping spiders (Salticinae sp.) - the oases' obligatory predators (the highest confirmed nitrogen isotopes of the invertebrates), with the ladybird beetle (37%) and thrips (19%) leading the estimated prey list. Species node matching the source's Salticinae sp. taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "salticinae",
+      "displayName": "Jumping spiders (Salticinae)",
+      "kind": "species",
+      "trophicLevel": 3.042
+    }
+  ]
+}

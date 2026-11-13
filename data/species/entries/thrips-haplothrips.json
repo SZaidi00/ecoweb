@@ -1,0 +1,18 @@
+{
+  "slug": "thrips-haplothrips",
+  "name": "Thrips (Haplothrips)",
+  "kind": "species",
+  "description": "Thrips (Haplothrips sp.) - expected flower-feeders, but their high nitrogen isotopes made the source class them as possible predators; the mixing model estimates them as the main prey of the parasitoid wasps (75%) and significant prey of the jumping spider. Their own food within this web is not resolved. Species node matching the source's Haplothrips sp. taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "haplothrips",
+      "displayName": "Thrips (Haplothrips)",
+      "kind": "species",
+      "trophicLevel": 2.0
+    }
+  ]
+}

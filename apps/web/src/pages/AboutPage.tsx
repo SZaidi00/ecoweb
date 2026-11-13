@@ -105,6 +105,11 @@ const webSources = [
     href: 'https://halieutique.institut-agro.fr/files/fichiers/memoires/201003.pdf',
     note: 'Colléter 2010, MSc memoir, Agrocampus Ouest / IRD; peer-reviewed as Colléter et al. 2012, Ecological Modelling 232.',
   },
+  {
+    name: 'Namib Fog-Plant Oases',
+    href: 'https://doi.org/10.1038/s41598-024-61796-8',
+    note: 'Gan et al. 2024, Scientific Reports 14:13334, CC BY; diets are published isotope-mixing-model estimates.',
+  },
 ]
 
 function ArrowUpRightIcon() {

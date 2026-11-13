@@ -1,6 +1,6 @@
 {
-  "webCount": 14,
-  "entryCount": 275,
+  "webCount": 15,
+  "entryCount": 300,
   "entries": [
     {
       "slug": "adelie-penguin",
@@ -344,6 +344,20 @@
       ]
     },
     {
+      "slug": "armoured-scale-insects",
+      "name": "Armoured scale insects",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "diaspididae"
+        }
+      ]
+    },
+    {
       "slug": "atlantic-menhaden",
       "name": "Atlantic menhaden",
       "kind": "species",
@@ -429,6 +443,20 @@
         {
           "web": "banc-darguin",
           "node": "banc-zooplankton"
+        }
+      ]
+    },
+    {
+      "slug": "barklice-liposcelis",
+      "name": "Barklice (Liposcelis)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "liposcelis"
         }
       ]
     },
@@ -602,6 +630,20 @@
         {
           "web": "serengeti",
           "node": "mamba-python"
+        }
+      ]
+    },
+    {
+      "slug": "blister-beetle-hycleus-zigzagus",
+      "name": "Blister beetle (Hycleus zigzagus)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "hycleus"
         }
       ]
     },
@@ -980,6 +1022,34 @@
       ]
     },
     {
+      "slug": "darkling-beetle-onymacris-plana",
+      "name": "Darkling beetle (Onymacris plana)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "onymacris"
+        }
+      ]
+    },
+    {
+      "slug": "darkling-beetle-physadesmia-globosa",
+      "name": "Darkling beetle (Physadesmia globosa)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "physadesmia"
+        }
+      ]
+    },
+    {
       "slug": "decaying-matter-carrion",
       "name": "Decaying matter & carrion",
       "kind": "functional-group",
@@ -1046,6 +1116,20 @@
         {
           "web": "chesapeake-bay",
           "node": "deposit-feeding-benthos"
+        }
+      ]
+    },
+    {
+      "slug": "deposited-wind-blown-organics",
+      "name": "Deposited wind-blown organics",
+      "kind": "functional-group",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "deposited-organics"
         }
       ]
     },
@@ -1221,6 +1305,34 @@
         {
           "web": "cypress-wetland",
           "node": "waterfowl-rails"
+        }
+      ]
+    },
+    {
+      "slug": "dune-ant-camponotus-detritus",
+      "name": "Dune ant (Camponotus detritus)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "camponotus"
+        }
+      ]
+    },
+    {
+      "slug": "dune-lark",
+      "name": "Dune lark",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "dune-lark"
         }
       ]
     },
@@ -1435,6 +1547,34 @@
       ]
     },
     {
+      "slug": "fog-broom-grass-living",
+      "name": "Fog-broom grass (living)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "sabulicola"
+        }
+      ]
+    },
+    {
+      "slug": "fog-grass-dead-leaves",
+      "name": "Fog-grass dead leaves",
+      "kind": "functional-group",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "dead-leaves"
+        }
+      ]
+    },
+    {
       "slug": "forbs-herbs",
       "name": "Forbs & herbs",
       "kind": "functional-group",
@@ -1515,6 +1655,20 @@
         {
           "web": "shortgrass-prairie",
           "node": "fungivorous-nematodes"
+        }
+      ]
+    },
+    {
+      "slug": "fungal-infected-litter",
+      "name": "Fungal-infected litter",
+      "kind": "functional-group",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "fungal-leaves"
         }
       ]
     },
@@ -1603,6 +1757,20 @@
       ]
     },
     {
+      "slug": "ground-sac-spider-thysanina",
+      "name": "Ground sac spider (Thysanina)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "thysanina"
+        }
+      ]
+    },
+    {
       "slug": "groupers",
       "name": "Groupers",
       "kind": "life-stage-group",
@@ -1627,6 +1795,20 @@
         {
           "web": "magellanic-rabbit-steppe",
           "node": "guanaco"
+        }
+      ]
+    },
+    {
+      "slug": "hammock-soil-detritus",
+      "name": "Hammock soil detritus",
+      "kind": "functional-group",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "soil-detritus"
         }
       ]
     },
@@ -1860,6 +2042,20 @@
       ]
     },
     {
+      "slug": "jumping-spiders-salticinae",
+      "name": "Jumping spiders (Salticinae)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "salticinae"
+        }
+      ]
+    },
+    {
       "slug": "killer-whale",
       "name": "Killer whale",
       "kind": "species",
@@ -1870,6 +2066,20 @@
         {
           "web": "weddell-sea",
           "node": "killer-whale"
+        }
+      ]
+    },
+    {
+      "slug": "ladybird-beetle-cybocephalus",
+      "name": "Ladybird beetle (Cybocephalus)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "cybocephalus"
         }
       ]
     },
@@ -1954,6 +2164,20 @@
         {
           "web": "banc-darguin",
           "node": "shelf-l"
+        }
+      ]
+    },
+    {
+      "slug": "leafhoppers",
+      "name": "Leafhoppers",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "deltocephalinae"
         }
       ]
     },
@@ -2393,6 +2617,34 @@
       ]
     },
     {
+      "slug": "namib-sand-lizards",
+      "name": "Namib sand lizards",
+      "kind": "functional-group",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "sand-lizards"
+        }
+      ]
+    },
+    {
+      "slug": "nara-melon",
+      "name": "Nara melon",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "nara"
+        }
+      ]
+    },
+    {
       "slug": "native-grasses-sedges",
       "name": "Native grasses & sedges",
       "kind": "functional-group",
@@ -2501,6 +2753,20 @@
         {
           "web": "shortgrass-prairie",
           "node": "omnivorous-nematodes"
+        }
+      ]
+    },
+    {
+      "slug": "oribatid-mite-zygoribatula",
+      "name": "Oribatid mite (Zygoribatula)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "zygoribatula"
         }
       ]
     },
@@ -2641,6 +2907,20 @@
         {
           "web": "cypress-wetland",
           "node": "big-predators"
+        }
+      ]
+    },
+    {
+      "slug": "parasitoid-wasps-haltichellinae",
+      "name": "Parasitoid wasps (Haltichellinae)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "haltichellinae"
         }
       ]
     },
@@ -2905,6 +3185,20 @@
         {
           "web": "little-rock-lake",
           "node": "predatory-water-bugs"
+        }
+      ]
+    },
+    {
+      "slug": "pseudoscorpion-nanolpium",
+      "name": "Pseudoscorpion (Nanolpium)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "nanolpium"
         }
       ]
     },
@@ -3349,6 +3643,20 @@
       ]
     },
     {
+      "slug": "sidewinding-adder",
+      "name": "Sidewinding adder",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "sidewinding-adder"
+        }
+      ]
+    },
+    {
       "slug": "small-bottom-feeding-fish",
       "name": "Small bottom-feeding fish",
       "kind": "functional-group",
@@ -3550,6 +3858,20 @@
       ]
     },
     {
+      "slug": "soil-nematodes",
+      "name": "Soil nematodes",
+      "kind": "functional-group",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "soil-nematodes"
+        }
+      ]
+    },
+    {
       "slug": "soles-tonguefishes-moonies",
       "name": "Soles, tonguefishes & moonies",
       "kind": "functional-group",
@@ -3719,6 +4041,20 @@
         {
           "web": "tapajos-river",
           "node": "terrestrial-invertebrates"
+        }
+      ]
+    },
+    {
+      "slug": "thrips-haplothrips",
+      "name": "Thrips (Haplothrips)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "haplothrips"
         }
       ]
     },
@@ -3901,6 +4237,20 @@
         {
           "web": "weddell-sea",
           "node": "weddell-seal"
+        }
+      ]
+    },
+    {
+      "slug": "weevils-sibinia",
+      "name": "Weevils (Sibinia)",
+      "kind": "species",
+      "webs": [
+        "namib-fog-oasis"
+      ],
+      "occurrences": [
+        {
+          "web": "namib-fog-oasis",
+          "node": "sibinia"
         }
       ]
     },

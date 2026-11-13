@@ -1,6 +1,17 @@
 {
   "webs": [
     {
+      "id": "namib-fog-oasis",
+      "name": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "location": "Gobabeb, Namib Sand Sea, Namibia",
+      "nodeCount": 25,
+      "provenance": "empirical",
+      "tagline": "In the world's oldest desert, one fog-harvesting grass builds a hidden oasis web from dew",
+      "lat": -23.57,
+      "lng": 15.05
+    },
+    {
       "id": "bamboung",
       "name": "Bamboung Bolong",
       "biome": "estuary",

@@ -1,0 +1,18 @@
+{
+  "slug": "dune-ant-camponotus-detritus",
+  "name": "Dune ant (Camponotus detritus)",
+  "kind": "species",
+  "description": "The dune ant Camponotus detritus - a generalist that clears surface detritus (an estimated 86% soil detritus), tends scale insects and leafhoppers for honeydew, and takes small prey. Species node matching the source's Camponotus detritus taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "camponotus",
+      "displayName": "Dune ant (Camponotus detritus)",
+      "kind": "species",
+      "trophicLevel": 2.077
+    }
+  ]
+}

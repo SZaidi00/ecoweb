@@ -1,0 +1,18 @@
+{
+  "slug": "armoured-scale-insects",
+  "name": "Armoured scale insects",
+  "kind": "species",
+  "description": "Armoured scale insects (Diapsididae sp.) living under the leaf sheaths, tapping the living grass for sap - and tended by the dune ant for honeydew. They are also the single largest estimated food of the darkling beetle Onymacris plana (89%). Species node matching the source's Diapsididae sp. taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "diaspididae",
+      "displayName": "Armoured scale insects",
+      "kind": "species",
+      "trophicLevel": 2.0
+    }
+  ]
+}

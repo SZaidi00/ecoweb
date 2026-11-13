@@ -1,0 +1,669 @@
+{
+  "meta": {
+    "id": "namib-fog-oasis",
+    "name": "Namib Fog-Plant Oases",
+    "location": "Gobabeb, Namib Sand Sea, Namibia",
+    "biome": "desert",
+    "lat": -23.57,
+    "lng": 15.05,
+    "provenance": "empirical",
+    "tagline": "In the world's oldest desert, one fog-harvesting grass builds a hidden oasis web from dew",
+    "citations": [
+      "Gan, H., Hohberg, K., Schneider, C., Ebner, M., Marais, E., Miranda, T., Lehmitz, R., Maggs-Kölling, G. & Bocherens, H. (2024). The hidden oases: unveiling trophic dynamics in Namib's fog plant ecosystem. Scientific Reports 14:13334. https://doi.org/10.1038/s41598-024-61796-8 (Tables 1-4: basal pools, isotope data and simmr diet estimates; open access, CC BY).",
+      "Robinson, M.D. & Cunningham, A.B. (1978). Comparative diet of two Namib Desert sand lizards (Lacertidae). Madoqua 11:41-53. (Vertebrate links: weevils and darkling beetles as prey of Meroles cuneirostris and Aporosaura anchietae, as cited in Gan et al. 2024.)",
+      "Cox, G.W. (1983). Foraging behaviour of the dune lark. Journal of African Ornithology 54:113-120. https://doi.org/10.1080/00306525.1983.9634454 (Dune lark prey: weevils and darkling beetles, as cited in Gan et al. 2024.)",
+      "Robinson, M.D. & Hughes, D.A. (1978). Observations on the natural history of Peringuey's Adder, Bitis peringueyi (Boulenger) (Reptilia: Viperidae). Annals of the Transvaal Museum 31:189-198. (Adder diet: lizards, as cited in Gan et al. 2024.)"
+    ],
+    "sourceUrl": "https://doi.org/10.1038/s41598-024-61796-8",
+    "licenseNote": "Structure and diet composition are from Gan et al. (2024, Scientific Reports 14:13334, open access under CC BY), who sampled fog-plant oases (FPOs) of Stipagrostis sabulicola near Gobabeb, Namib Sand Sea, in September 2022. Weighted edges are the study's published simmr isotope-mixing-model posterior means (Tables 3-4): they are model estimates with large posterior SDs (e.g. 0.70 +/- 0.35), not observed gut-content fractions - the same evidentiary class as Ecopath diet matrices, and labelled as such here. All other edges are documented-but-unquantified and marked qualitative: sap feeding on living foliage (Table 2 feeding-type assignments), the Nara-melon links for the blister beetle (observed herbivory) and Physadesmia globosa (matching delta13C to the A. horridus litter/detritus pools, with the riverbed-plant alternative noted by the source), the deposited-organics base of the soil nematodes (distinct belowground delta13C pathway), and the vertebrate links from Robinson & Cunningham (1978), Cox (1983) and Robinson & Hughes (1978) as cited in Gan et al. Node granularity follows the source's taxa: each of the 15 isotope-sampled invertebrate morphotaxa is its own node; the nematode assemblage (bacterial-, fungal- and omnivorous-feeders identified to genus) is pooled into one soil-nematodes functional group to fit this atlas's 25-node ceiling, with the bacterivore/fungivore split described in the node. The study's root and rhizosheath basal pools are omitted (no sampled consumer eats them). Trophic levels were computed from this web's edges using the atlas's diet-share accounting (weighted edges keep their measured share; qualitative edges split the unaccounted remainder equally): the resulting ordering tracks the source's delta15N-based trophic positions (detritivore Zygoribatula at the base; Salticinae and Haltichellinae at the invertebrate top; ~5 levels spanned) - with the source's own caveat that bulk delta15N positions are rough, and with the two anomalous high-delta15N taxa (Sibinia, Haplothrips, 'possibly predator/secondary consumer') placed by their documented trophic links rather than by their unexplained isotope enrichment. Reuse requires citing Gan et al. (2024) and is under CC BY.",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-11-12"
+  },
+  "nodes": [
+    {
+      "id": "sabulicola",
+      "displayName": "Fog-broom grass (living)",
+      "kind": "species",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "The fog-broom grass Stipagrostis sabulicola - the plant that makes the oasis. Its fan of grooved leaves condenses ocean fog into droplets (up to 39 mm a year, more than the rainfall) that water a hidden arthropod community in the leaf axils. This node is the living foliage: the source's 'fresh leaves' basal pool, tapped for sap by the scale insects and leafhoppers living under the sheaths. Species node matching the source's fresh-leaves basal pool.",
+      "layout": {
+        "x": 22,
+        "y": 6
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Stipagrostis_sabulicola"
+      }
+    },
+    {
+      "id": "nara",
+      "displayName": "Nara melon",
+      "kind": "species",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "The Nara melon (Acanthosicyos horridus), a spiny fog-harvesting melon of the dune base - a second oasis-builder growing beside the fog-broom grass. Its flowers feed the blister beetle Hycleus zigzagus, and its dead stems plus the detritus beneath them carry the isotope signature that matches the darkling beetle Physadesmia globosa. Species node matching the source's A. horridus basal pools (dead stem litter and soil detritus).",
+      "layout": {
+        "x": 84,
+        "y": 6
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Acanthosicyos_horridus"
+      }
+    },
+    {
+      "id": "dead-leaves",
+      "displayName": "Fog-grass dead leaves",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Fallen dead leaves of the fog-broom grass packed into the tussock axils - the main dead-plant pool, estimated to dominate the diets of barklice (74%) and featured in those of the dune ant, the oribatid mite and the ladybird. Functional group matching the source's 'dead leaves' basal pool.",
+      "layout": {
+        "x": 10,
+        "y": 6
+      }
+    },
+    {
+      "id": "fungal-leaves",
+      "displayName": "Fungal-infected litter",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Dead leaves of the fog-broom grass heavily colonised by fungi - the high-quality litter that decomposers selectively pick: the mixing model credits it with about 70% of the oribatid mite's diet and 67% of the ladybird's (the same selectivity shown by Namib termites). Functional group matching the source's 'dead leaves with fungal infection' basal pool.",
+      "layout": {
+        "x": 34,
+        "y": 6
+      }
+    },
+    {
+      "id": "soil-detritus",
+      "displayName": "Hammock soil detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "The organic-rich sand of the soil hammock that accumulates beneath mature tussocks - decaying plant matter mixed into wind-blown sand. It is the dune ant's main estimated food (86%) and a steady source for the barklouse and ladybird. Functional group matching the source's 'soil detritus' basal pool under S. sabulicola.",
+      "layout": {
+        "x": 58,
+        "y": 6
+      }
+    },
+    {
+      "id": "deposited-organics",
+      "displayName": "Deposited wind-blown organics",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Organic matter deposited with wind-blown sediment beneath the hummocks - the belowground energy base. Its isotope signature is markedly 13C-depleted compared with the fog grass, and the soil nematodes run on it rather than on the plant above: the study's key evidence that the FPO is two coupled, isotopically distinct food webs. Functional group matching the deposited-sources pool identified by the source's belowground isotope data.",
+      "layout": {
+        "x": 76,
+        "y": 6
+      }
+    },
+    {
+      "id": "zygoribatula",
+      "displayName": "Oribatid mite (Zygoribatula)",
+      "kind": "species",
+      "trophicLevel": 2.186,
+      "functionalRole": "primary-consumer",
+      "description": "An oribatid mite (Zygoribatula sp.) - the most abundant animal of the oases (100 collected) and the principal primary decomposer, grazing fungal-infected litter (an estimated 70% of its diet) and possibly helping control fungal pathogens of the grass. Species node matching the source's Zygoribatula sp. taxon.",
+      "layout": {
+        "x": 12,
+        "y": 32
+      }
+    },
+    {
+      "id": "diaspididae",
+      "displayName": "Armoured scale insects",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Armoured scale insects (Diapsididae sp.) living under the leaf sheaths, tapping the living grass for sap - and tended by the dune ant for honeydew. They are also the single largest estimated food of the darkling beetle Onymacris plana (89%). Species node matching the source's Diapsididae sp. taxon.",
+      "layout": {
+        "x": 30,
+        "y": 28
+      }
+    },
+    {
+      "id": "liposcelis",
+      "displayName": "Barklice (Liposcelis)",
+      "kind": "species",
+      "trophicLevel": 2.246,
+      "functionalRole": "intermediate-consumer",
+      "description": "Barklice (Liposcelis sp.) scraping at the dead grass leaves - an estimated 74% of their diet - with soil detritus and scale insects making up the rest. Species node matching the source's Liposcelis sp. taxon.",
+      "layout": {
+        "x": 48,
+        "y": 33
+      }
+    },
+    {
+      "id": "deltocephalinae",
+      "displayName": "Leafhoppers",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Leafhoppers (Deltocephalinae sp.) - sap feeders on the living fog grass, tended by the dune ant for honeydew, and prey for the spiders, beetles and wasps of the tussock. Species node matching the source's Deltocephalinae sp. taxon.",
+      "layout": {
+        "x": 64,
+        "y": 28
+      }
+    },
+    {
+      "id": "thysanina",
+      "displayName": "Ground sac spider (Thysanina)",
+      "kind": "species",
+      "trophicLevel": 3.106,
+      "functionalRole": "intermediate-consumer",
+      "description": "A ground sac spider (Thysanina sp.) hunting in the leaf axils - oribatid mites alone are an estimated 46% of its diet, with the ladybird and leafhoppers next. Species node matching the source's Thysanina sp. taxon.",
+      "layout": {
+        "x": 80,
+        "y": 52
+      }
+    },
+    {
+      "id": "nanolpium",
+      "displayName": "Pseudoscorpion (Nanolpium)",
+      "kind": "species",
+      "trophicLevel": 3.183,
+      "functionalRole": "intermediate-consumer",
+      "description": "A pseudoscorpion (Nanolpium sp.) - barklice are an estimated 65% of its diet, the rest oribatid mites, leafhoppers and thrips. Species node matching the source's Nanolpium sp. taxon.",
+      "layout": {
+        "x": 14,
+        "y": 54
+      }
+    },
+    {
+      "id": "cybocephalus",
+      "displayName": "Ladybird beetle (Cybocephalus)",
+      "kind": "species",
+      "trophicLevel": 2.034,
+      "functionalRole": "primary-consumer",
+      "description": "A tiny ladybird beetle (Cybocephalus sp.) - expected to hunt scale insects, but here estimated to live mostly on fungal-infected litter (67%), behaving as a secondary decomposer one step above the oribatid mite. Species node matching the source's Cybocephalus sp. taxon.",
+      "layout": {
+        "x": 32,
+        "y": 29
+      }
+    },
+    {
+      "id": "camponotus",
+      "displayName": "Dune ant (Camponotus detritus)",
+      "kind": "species",
+      "trophicLevel": 2.077,
+      "functionalRole": "primary-consumer",
+      "description": "The dune ant Camponotus detritus - a generalist that clears surface detritus (an estimated 86% soil detritus), tends scale insects and leafhoppers for honeydew, and takes small prey. Species node matching the source's Camponotus detritus taxon.",
+      "layout": {
+        "x": 50,
+        "y": 30
+      }
+    },
+    {
+      "id": "onymacris",
+      "displayName": "Darkling beetle (Onymacris plana)",
+      "kind": "species",
+      "trophicLevel": 3.011,
+      "functionalRole": "intermediate-consumer",
+      "description": "The darkling beetle Onymacris plana - a big, fast, heat-tolerant beetle of the dune surface and the fog oases; the mixing model credits scale insects (89%) but also smaller prey (barklice 45%... shared with litter sources - it is the web's most omnivorous consumer), and it is classic prey of the sand lizards and the dune lark. Species node matching the source's Onymacris plana taxon.",
+      "layout": {
+        "x": 66,
+        "y": 50
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Onymacris_plana"
+      }
+    },
+    {
+      "id": "physadesmia",
+      "displayName": "Darkling beetle (Physadesmia globosa)",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The darkling beetle Physadesmia globosa of the dune base near the Kuiseb riverbed - its carbon isotope signature matches the Nara melon rather than the fog grass, while its nitrogen isotopes (like the other darkling beetle's) suggest an omnivore above its plant-based carbon. Species node matching the source's Physadesmia globosa taxon.",
+      "layout": {
+        "x": 18,
+        "y": 28
+      }
+    },
+    {
+      "id": "hycleus",
+      "displayName": "Blister beetle (Hycleus zigzagus)",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The blister beetle Hycleus zigzagus - an aposematic flower-feeder on the Nara melon at the dune base, included by the source as the comparison herbivore of a second fog-harvesting plant. Species node matching the source's Hycleus zigzagus taxon.",
+      "layout": {
+        "x": 86,
+        "y": 28
+      }
+    },
+    {
+      "id": "salticinae",
+      "displayName": "Jumping spiders (Salticinae)",
+      "kind": "species",
+      "trophicLevel": 3.042,
+      "functionalRole": "intermediate-consumer",
+      "description": "Jumping spiders (Salticinae sp.) - the oases' obligatory predators (the highest confirmed nitrogen isotopes of the invertebrates), with the ladybird beetle (37%) and thrips (19%) leading the estimated prey list. Species node matching the source's Salticinae sp. taxon.",
+      "layout": {
+        "x": 36,
+        "y": 51
+      }
+    },
+    {
+      "id": "haplothrips",
+      "displayName": "Thrips (Haplothrips)",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Thrips (Haplothrips sp.) - expected flower-feeders, but their high nitrogen isotopes made the source class them as possible predators; the mixing model estimates them as the main prey of the parasitoid wasps (75%) and significant prey of the jumping spider. Their own food within this web is not resolved. Species node matching the source's Haplothrips sp. taxon.",
+      "layout": {
+        "x": 54,
+        "y": 28
+      }
+    },
+    {
+      "id": "sibinia",
+      "displayName": "Weevils (Sibinia)",
+      "kind": "species",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Weevils (Sibinia sp.) - expected herbivores whose very high nitrogen isotopes ('possibly predator/secondary consumer') echo the thrips; the mixing model puts them in the diets of the darkling beetle, spiders and wasps. Their own food within this web is not resolved. Species node matching the source's Sibinia sp. taxon.",
+      "layout": {
+        "x": 70,
+        "y": 28
+      }
+    },
+    {
+      "id": "haltichellinae",
+      "displayName": "Parasitoid wasps (Haltichellinae)",
+      "kind": "species",
+      "trophicLevel": 3.017,
+      "functionalRole": "intermediate-consumer",
+      "description": "Parasitoid wasps (Haltichellinae sp.) - the highest nitrogen isotopes of the whole web (about six trophic steps above the dead-leaf baseline); their estimated diet is dominated by thrips (75%), consistent with parasitoid or predatory habits. Species node matching the source's Haltichellinae sp. taxon.",
+      "layout": {
+        "x": 88,
+        "y": 50
+      }
+    },
+    {
+      "id": "soil-nematodes",
+      "displayName": "Soil nematodes",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Soil nematodes of the hummock sands - over 5,200 extracted, dominated by bacterial-feeders (84.8% of biomass: Acrobeles, Cephalobus, Cervidellus and kin) with fungal-feeders (Aphelenchoides and kin, 14.7%) and a sprinkle of omnivores. They run on the deposited wind-blown organics, not the fog grass, and the source read the bacterial-feeders as secondary decomposers while the fungal-feeders' depleted nitrogen echoes lichen-feeders elsewhere. Functional group pooling the source's genus-level nematode assemblage by feeding type.",
+      "layout": {
+        "x": 42,
+        "y": 28
+      }
+    },
+    {
+      "id": "sand-lizards",
+      "displayName": "Namib sand lizards",
+      "kind": "functional-group",
+      "trophicLevel": 3.505,
+      "functionalRole": "top-consumer",
+      "description": "Namib sand lizards - the shovel-snouted Meroles cuneirostris and the fine-scaled Aporosaura anchietae - specialised predators of weevils and darkling beetles on the dunes around the oases. Functional group pooling the two lizard species measured together by the cited diet study (Robinson & Cunningham 1978).",
+      "layout": {
+        "x": 24,
+        "y": 61
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Meroles"
+      }
+    },
+    {
+      "id": "dune-lark",
+      "displayName": "Dune lark",
+      "kind": "species",
+      "trophicLevel": 3.505,
+      "functionalRole": "top-consumer",
+      "description": "The dune lark (Mirafra erythrochlamys) - a bird endemic to the Namib sand sea that forages on weevils and darkling beetles around the tussocks. Species node; diet documented by Cox (1983) as cited in the source study.",
+      "layout": {
+        "x": 56,
+        "y": 61
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Dune_lark"
+      }
+    },
+    {
+      "id": "sidewinding-adder",
+      "displayName": "Sidewinding adder",
+      "kind": "species",
+      "trophicLevel": 4.505,
+      "functionalRole": "top-consumer",
+      "description": "Peringuey's sidewinding adder (Bitis peringueyi) - a small viper that sidewinds across the dunes with only its eyes above the sand, hunting lizards (and occasionally lizards' prey). The top of this web's vertebrate chain. Species node; diet documented by Robinson & Hughes (1978) as cited in the source study.",
+      "layout": {
+        "x": 78,
+        "y": 83
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Bitis_peringueyi"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "dead-leaves",
+      "predator": "camponotus",
+      "weight": 0.034
+    },
+    {
+      "prey": "fungal-leaves",
+      "predator": "camponotus",
+      "weight": 0.033
+    },
+    {
+      "prey": "soil-detritus",
+      "predator": "camponotus",
+      "weight": 0.856
+    },
+    {
+      "prey": "diaspididae",
+      "predator": "camponotus",
+      "weight": 0.077
+    },
+    {
+      "prey": "dead-leaves",
+      "predator": "cybocephalus",
+      "weight": 0.124
+    },
+    {
+      "prey": "fungal-leaves",
+      "predator": "cybocephalus",
+      "weight": 0.668
+    },
+    {
+      "prey": "soil-detritus",
+      "predator": "cybocephalus",
+      "weight": 0.174
+    },
+    {
+      "prey": "diaspididae",
+      "predator": "cybocephalus",
+      "weight": 0.034
+    },
+    {
+      "prey": "dead-leaves",
+      "predator": "liposcelis",
+      "weight": 0.74
+    },
+    {
+      "prey": "fungal-leaves",
+      "predator": "liposcelis",
+      "weight": 0.007
+    },
+    {
+      "prey": "soil-detritus",
+      "predator": "liposcelis",
+      "weight": 0.009
+    },
+    {
+      "prey": "diaspididae",
+      "predator": "liposcelis",
+      "weight": 0.247
+    },
+    {
+      "prey": "dead-leaves",
+      "predator": "onymacris",
+      "weight": 0.034
+    },
+    {
+      "prey": "fungal-leaves",
+      "predator": "onymacris",
+      "weight": 0.032
+    },
+    {
+      "prey": "soil-detritus",
+      "predator": "onymacris",
+      "weight": 0.041
+    },
+    {
+      "prey": "diaspididae",
+      "predator": "onymacris",
+      "weight": 0.892
+    },
+    {
+      "prey": "dead-leaves",
+      "predator": "zygoribatula",
+      "weight": 0.079
+    },
+    {
+      "prey": "fungal-leaves",
+      "predator": "zygoribatula",
+      "weight": 0.703
+    },
+    {
+      "prey": "soil-detritus",
+      "predator": "zygoribatula",
+      "weight": 0.034
+    },
+    {
+      "prey": "diaspididae",
+      "predator": "zygoribatula",
+      "weight": 0.186
+    },
+    {
+      "prey": "liposcelis",
+      "predator": "onymacris",
+      "weight": 0.452
+    },
+    {
+      "prey": "diaspididae",
+      "predator": "onymacris",
+      "weight": 0.036
+    },
+    {
+      "prey": "deltocephalinae",
+      "predator": "onymacris",
+      "weight": 0.028
+    },
+    {
+      "prey": "zygoribatula",
+      "predator": "onymacris",
+      "weight": 0.028
+    },
+    {
+      "prey": "sibinia",
+      "predator": "onymacris",
+      "weight": 0.048
+    },
+    {
+      "prey": "cybocephalus",
+      "predator": "onymacris",
+      "weight": 0.356
+    },
+    {
+      "prey": "haplothrips",
+      "predator": "onymacris",
+      "weight": 0.051
+    },
+    {
+      "prey": "liposcelis",
+      "predator": "nanolpium",
+      "weight": 0.65
+    },
+    {
+      "prey": "diaspididae",
+      "predator": "nanolpium",
+      "weight": 0.09
+    },
+    {
+      "prey": "deltocephalinae",
+      "predator": "nanolpium",
+      "weight": 0.055
+    },
+    {
+      "prey": "zygoribatula",
+      "predator": "nanolpium",
+      "weight": 0.119
+    },
+    {
+      "prey": "sibinia",
+      "predator": "nanolpium",
+      "weight": 0.023
+    },
+    {
+      "prey": "cybocephalus",
+      "predator": "nanolpium",
+      "weight": 0.037
+    },
+    {
+      "prey": "haplothrips",
+      "predator": "nanolpium",
+      "weight": 0.026
+    },
+    {
+      "prey": "liposcelis",
+      "predator": "thysanina",
+      "weight": 0.056
+    },
+    {
+      "prey": "diaspididae",
+      "predator": "thysanina",
+      "weight": 0.081
+    },
+    {
+      "prey": "deltocephalinae",
+      "predator": "thysanina",
+      "weight": 0.149
+    },
+    {
+      "prey": "zygoribatula",
+      "predator": "thysanina",
+      "weight": 0.464
+    },
+    {
+      "prey": "sibinia",
+      "predator": "thysanina",
+      "weight": 0.026
+    },
+    {
+      "prey": "cybocephalus",
+      "predator": "thysanina",
+      "weight": 0.19
+    },
+    {
+      "prey": "haplothrips",
+      "predator": "thysanina",
+      "weight": 0.033
+    },
+    {
+      "prey": "liposcelis",
+      "predator": "salticinae",
+      "weight": 0.061
+    },
+    {
+      "prey": "diaspididae",
+      "predator": "salticinae",
+      "weight": 0.088
+    },
+    {
+      "prey": "deltocephalinae",
+      "predator": "salticinae",
+      "weight": 0.12
+    },
+    {
+      "prey": "zygoribatula",
+      "predator": "salticinae",
+      "weight": 0.078
+    },
+    {
+      "prey": "sibinia",
+      "predator": "salticinae",
+      "weight": 0.095
+    },
+    {
+      "prey": "cybocephalus",
+      "predator": "salticinae",
+      "weight": 0.366
+    },
+    {
+      "prey": "haplothrips",
+      "predator": "salticinae",
+      "weight": 0.192
+    },
+    {
+      "prey": "liposcelis",
+      "predator": "haltichellinae",
+      "weight": 0.034
+    },
+    {
+      "prey": "diaspididae",
+      "predator": "haltichellinae",
+      "weight": 0.04
+    },
+    {
+      "prey": "deltocephalinae",
+      "predator": "haltichellinae",
+      "weight": 0.036
+    },
+    {
+      "prey": "zygoribatula",
+      "predator": "haltichellinae",
+      "weight": 0.033
+    },
+    {
+      "prey": "sibinia",
+      "predator": "haltichellinae",
+      "weight": 0.047
+    },
+    {
+      "prey": "cybocephalus",
+      "predator": "haltichellinae",
+      "weight": 0.059
+    },
+    {
+      "prey": "haplothrips",
+      "predator": "haltichellinae",
+      "weight": 0.75
+    },
+    {
+      "prey": "sabulicola",
+      "predator": "diaspididae",
+      "qualitative": true
+    },
+    {
+      "prey": "sabulicola",
+      "predator": "deltocephalinae",
+      "qualitative": true
+    },
+    {
+      "prey": "nara",
+      "predator": "hycleus",
+      "qualitative": true
+    },
+    {
+      "prey": "nara",
+      "predator": "physadesmia",
+      "qualitative": true
+    },
+    {
+      "prey": "deposited-organics",
+      "predator": "soil-nematodes",
+      "qualitative": true
+    },
+    {
+      "prey": "sibinia",
+      "predator": "sand-lizards",
+      "qualitative": true
+    },
+    {
+      "prey": "onymacris",
+      "predator": "sand-lizards",
+      "qualitative": true
+    },
+    {
+      "prey": "sibinia",
+      "predator": "dune-lark",
+      "qualitative": true
+    },
+    {
+      "prey": "onymacris",
+      "predator": "dune-lark",
+      "qualitative": true
+    },
+    {
+      "prey": "sand-lizards",
+      "predator": "sidewinding-adder",
+      "qualitative": true
+    }
+  ]
+}

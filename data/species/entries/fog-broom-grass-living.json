@@ -1,0 +1,24 @@
+{
+  "slug": "fog-broom-grass-living",
+  "name": "Fog-broom grass (living)",
+  "kind": "species",
+  "description": "The fog-broom grass Stipagrostis sabulicola - the plant that makes the oasis. Its fan of grooved leaves condenses ocean fog into droplets (up to 39 mm a year, more than the rainfall) that water a hidden arthropod community in the leaf axils. This node is the living foliage: the source's 'fresh leaves' basal pool, tapped for sap by the scale insects and leafhoppers living under the sheaths. Species node matching the source's fresh-leaves basal pool.",
+  "sourceWeb": "namib-fog-oasis",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Stipagrostis_sabulicola"
+  },
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "sabulicola",
+      "displayName": "Fog-broom grass (living)",
+      "kind": "species",
+      "trophicLevel": 1.0,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Stipagrostis_sabulicola"
+      }
+    }
+  ]
+}

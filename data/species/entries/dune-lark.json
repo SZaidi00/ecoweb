@@ -1,0 +1,24 @@
+{
+  "slug": "dune-lark",
+  "name": "Dune lark",
+  "kind": "species",
+  "description": "The dune lark (Mirafra erythrochlamys) - a bird endemic to the Namib sand sea that forages on weevils and darkling beetles around the tussocks. Species node; diet documented by Cox (1983) as cited in the source study.",
+  "sourceWeb": "namib-fog-oasis",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Dune_lark"
+  },
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "dune-lark",
+      "displayName": "Dune lark",
+      "kind": "species",
+      "trophicLevel": 3.505,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Dune_lark"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "pseudoscorpion-nanolpium",
+  "name": "Pseudoscorpion (Nanolpium)",
+  "kind": "species",
+  "description": "A pseudoscorpion (Nanolpium sp.) - barklice are an estimated 65% of its diet, the rest oribatid mites, leafhoppers and thrips. Species node matching the source's Nanolpium sp. taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "nanolpium",
+      "displayName": "Pseudoscorpion (Nanolpium)",
+      "kind": "species",
+      "trophicLevel": 3.183
+    }
+  ]
+}

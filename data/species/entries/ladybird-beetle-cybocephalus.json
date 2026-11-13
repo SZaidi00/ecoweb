@@ -1,0 +1,18 @@
+{
+  "slug": "ladybird-beetle-cybocephalus",
+  "name": "Ladybird beetle (Cybocephalus)",
+  "kind": "species",
+  "description": "A tiny ladybird beetle (Cybocephalus sp.) - expected to hunt scale insects, but here estimated to live mostly on fungal-infected litter (67%), behaving as a secondary decomposer one step above the oribatid mite. Species node matching the source's Cybocephalus sp. taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "cybocephalus",
+      "displayName": "Ladybird beetle (Cybocephalus)",
+      "kind": "species",
+      "trophicLevel": 2.034
+    }
+  ]
+}

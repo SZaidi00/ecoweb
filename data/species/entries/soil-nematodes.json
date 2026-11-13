@@ -1,0 +1,18 @@
+{
+  "slug": "soil-nematodes",
+  "name": "Soil nematodes",
+  "kind": "functional-group",
+  "description": "Soil nematodes of the hummock sands - over 5,200 extracted, dominated by bacterial-feeders (84.8% of biomass: Acrobeles, Cephalobus, Cervidellus and kin) with fungal-feeders (Aphelenchoides and kin, 14.7%) and a sprinkle of omnivores. They run on the deposited wind-blown organics, not the fog grass, and the source read the bacterial-feeders as secondary decomposers while the fungal-feeders' depleted nitrogen echoes lichen-feeders elsewhere. Functional group pooling the source's genus-level nematode assemblage by feeding type.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "soil-nematodes",
+      "displayName": "Soil nematodes",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "blister-beetle-hycleus-zigzagus",
+  "name": "Blister beetle (Hycleus zigzagus)",
+  "kind": "species",
+  "description": "The blister beetle Hycleus zigzagus - an aposematic flower-feeder on the Nara melon at the dune base, included by the source as the comparison herbivore of a second fog-harvesting plant. Species node matching the source's Hycleus zigzagus taxon.",
+  "sourceWeb": "namib-fog-oasis",
+  "occurrences": [
+    {
+      "web": "namib-fog-oasis",
+      "webName": "Namib Fog-Plant Oases",
+      "biome": "desert",
+      "node": "hycleus",
+      "displayName": "Blister beetle (Hycleus zigzagus)",
+      "kind": "species",
+      "trophicLevel": 2.0
+    }
+  ]
+}
