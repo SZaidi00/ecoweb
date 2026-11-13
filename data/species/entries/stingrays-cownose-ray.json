@@ -1,0 +1,18 @@
+{
+  "slug": "stingrays-cownose-ray",
+  "name": "Stingrays & cownose ray",
+  "kind": "functional-group",
+  "description": "Stingrays and a cownose ray - the source's 'Raies' compartment: the two Dasyatis stingrays (D. margarita, D. margaritella) and the Lusitanian cownose ray (Rhinoptera marginata). Half their diet is shrimps, with macrobenthos and meiobenthos from the mud. Functional group pooling the source's Raies compartment - the ray species measured together, apart from the very large rays pooled with sharks.",
+  "sourceWeb": "bamboung",
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "rays",
+      "displayName": "Stingrays & cownose ray",
+      "kind": "functional-group",
+      "trophicLevel": 3.22
+    }
+  ]
+}

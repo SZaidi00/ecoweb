@@ -1,0 +1,18 @@
+{
+  "slug": "puffers-pompanos",
+  "name": "Puffers & pompanos",
+  "kind": "functional-group",
+  "description": "Small opportunistic hunters of the flats - puffers, pompanos, a butterflyfish, the bonefish, batfishes, a toadfish, a sicklefish and a halfbeak - measured across the source's 'Tetrodon +' and 'Pompaneau +' compartments, two small-bodied mixed guilds that crunch crabs and macrobenthos in the shallows. Functional group pooling those two source compartments, which measured 12 species between them, pooled here to fit this atlas's 25-node ceiling.",
+  "sourceWeb": "bamboung",
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "puffers-pompanos",
+      "displayName": "Puffers & pompanos",
+      "kind": "functional-group",
+      "trophicLevel": 3.333
+    }
+  ]
+}

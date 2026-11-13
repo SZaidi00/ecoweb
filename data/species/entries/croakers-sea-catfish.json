@@ -1,0 +1,18 @@
+{
+  "slug": "croakers-sea-catfish",
+  "name": "Croakers & sea catfish",
+  "kind": "functional-group",
+  "description": "Croakers and sea catfish - the muddy channel's drumming, whiskered mid-water predators. Functional group pooling the source's 'Otolithes +' compartment (the four Pseudotolithus croakers plus the leerfish Lichia amia) with its 'M\u00e2choirons marins' compartment (three Arius sea catfishes): both are mid-trophic generalist predators whose diets are built on shrimps and crabs, measured as separate compartments by the source and pooled here to fit this atlas's 25-node ceiling.",
+  "sourceWeb": "bamboung",
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "croakers-catfish",
+      "displayName": "Croakers & sea catfish",
+      "kind": "functional-group",
+      "trophicLevel": 3.477
+    }
+  ]
+}

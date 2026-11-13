@@ -1,0 +1,18 @@
+{
+  "slug": "small-bottom-feeding-fish",
+  "name": "Small bottom-feeding fish",
+  "kind": "functional-group",
+  "description": "Small benthic-feeding fish - the source's Gerres compartment (two mojarras, or silverbellies), its Pomadasys compartment (three grunts) and its 'Petits benthophages' compartment (a blenny, a goby, a puffer, a seahorse and a pipefish): small-mouthed pickers over meiobenthos, macrobenthos and shrimps. Functional group pooling those three source compartments to fit this atlas's 25-node ceiling.",
+  "sourceWeb": "bamboung",
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "small-benthic-fish",
+      "displayName": "Small bottom-feeding fish",
+      "kind": "functional-group",
+      "trophicLevel": 2.839
+    }
+  ]
+}

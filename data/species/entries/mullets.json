@@ -9,6 +9,18 @@
   },
   "occurrences": [
     {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "mullets",
+      "displayName": "Mullets",
+      "kind": "functional-group",
+      "trophicLevel": 2.655,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Flathead_grey_mullet"
+      }
+    },
+    {
       "web": "banc-darguin",
       "webName": "Banc d'Arguin & Mauritanian Shelf",
       "biome": "marine",

@@ -6,6 +6,15 @@
   "sourceWeb": "shortgrass-prairie",
   "occurrences": [
     {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    },
+    {
       "web": "banc-darguin",
       "webName": "Banc d'Arguin & Mauritanian Shelf",
       "biome": "marine",

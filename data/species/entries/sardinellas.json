@@ -1,0 +1,24 @@
+{
+  "slug": "sardinellas",
+  "name": "Sardinellas",
+  "kind": "functional-group",
+  "description": "Sardinellas - the source's 'Sardinelle +' compartment: the round sardinella (Sardinella aurita), the Madeiran sardinella (S. maderensis) and the West African ilisha (Ilisha africana), measured together with the remoras that shadow the schools (Echeneis naucrates, Remora remora). They filter zooplankton and graze microalgae in the turbid water, and take an occasional shrimp. Functional group pooling the source's Sardinelle + compartment.",
+  "sourceWeb": "bamboung",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Round_sardinella"
+  },
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "sardinellas",
+      "displayName": "Sardinellas",
+      "kind": "functional-group",
+      "trophicLevel": 2.731,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Round_sardinella"
+      }
+    }
+  ]
+}

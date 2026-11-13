@@ -1,0 +1,18 @@
+{
+  "slug": "jacks-sweetlips-grunts",
+  "name": "Jacks, sweetlips & grunts",
+  "kind": "functional-group",
+  "description": "Jacks, sweetlips and grunts - the source's 'Petit capitaine +' compartment (called 'Diagramme +' in the memoir's species table: the sweetlips Plectorhinchus macrolepis, the grunts Galeoides decadactylus and Brachydeuterus auritus, a puffer, a seabass and a surgeonfish) together with its 'Carangues' compartment (the bumper Chloroscombrus chrysurus, two Caranx jacks, a pompano and Hemicaranx). Both are zooplankton-and-shrimp-feeding mid-water schools of the turbid creek. Functional group pooling those two source compartments to fit this atlas's 25-node ceiling.",
+  "sourceWeb": "bamboung",
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "jacks-grunts",
+      "displayName": "Jacks, sweetlips & grunts",
+      "kind": "functional-group",
+      "trophicLevel": 3.137
+    }
+  ]
+}

@@ -100,6 +100,11 @@ const webSources = [
     href: 'https://doi.org/10.1038/s41598-024-70511-6',
     note: 'Mann-Vollrath et al. 2024, Scientific Reports; curated composite.',
   },
+  {
+    name: 'Bamboung Bolong',
+    href: 'https://halieutique.institut-agro.fr/files/fichiers/memoires/201003.pdf',
+    note: 'Colléter 2010, MSc memoir, Agrocampus Ouest / IRD; peer-reviewed as Colléter et al. 2012, Ecological Modelling 232.',
+  },
 ]
 
 function ArrowUpRightIcon() {

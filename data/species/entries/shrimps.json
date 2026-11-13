@@ -1,0 +1,18 @@
+{
+  "slug": "shrimps",
+  "name": "Shrimps",
+  "kind": "functional-group",
+  "description": "Shrimps - the source's 'Crevettes' compartment, built from Sine-Saloum invertebrate data refined by isotope work: the penaeid shrimps of the muddy channel, filtering zooplankton and phytoplankton. They are the single most important prey of the creek's predators - rays, catfish, ladyfish, threadfin and barracudas all hunt them. Functional group pooling the source's shrimps compartment.",
+  "sourceWeb": "bamboung",
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "shrimps",
+      "displayName": "Shrimps",
+      "kind": "functional-group",
+      "trophicLevel": 2.51
+    }
+  ]
+}

@@ -6,6 +6,15 @@
   "sourceWeb": "tapajos-river",
   "occurrences": [
     {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "zooplankton",
+      "displayName": "Zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    },
+    {
       "web": "tapajos-river",
       "webName": "Tapaj\u00f3s River",
       "biome": "freshwater",

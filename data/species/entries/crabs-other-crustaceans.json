@@ -1,0 +1,18 @@
+{
+  "slug": "crabs-other-crustaceans",
+  "name": "Crabs & other crustaceans",
+  "kind": "functional-group",
+  "description": "Crabs and other crustaceans - the source's 'Crabes et autres crustac\u00e9s' compartment: the portunid crabs and other benthic crustaceans of the mudflats, eating macrobenthos, meiobenthos and detritus (with a little cannibalism, omitted here as a self-loop). Functional group pooling the source's crabs-and-other-crustaceans compartment.",
+  "sourceWeb": "bamboung",
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "crabs",
+      "displayName": "Crabs & other crustaceans",
+      "kind": "functional-group",
+      "trophicLevel": 2.724
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "dolphins",
+  "name": "Dolphins",
+  "kind": "functional-group",
+  "description": "Dolphins - the source's single dolphin compartment. They hunt the small schooling fish of the creek (sardinellas, ethmalose, mullets) plus shrimps and crabs; their feeding rate (Q/B) and ecotrophic efficiency are taken from work on the Guinean shelf. Functional group pooling the dolphin species visiting the bolong, measured as one compartment.",
+  "sourceWeb": "bamboung",
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "dolphins",
+      "displayName": "Dolphins",
+      "kind": "functional-group",
+      "trophicLevel": 3.691
+    }
+  ]
+}

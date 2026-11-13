@@ -1,0 +1,18 @@
+{
+  "slug": "soles-tonguefishes-moonies",
+  "name": "Soles, tonguefishes & moonies",
+  "kind": "functional-group",
+  "description": "Small soft-bottom fish - the African moony (Monodactylus sebae) and the flatfish Citharichthys stampflii from the source's 'Breton africain +' compartment, pooled with its 'Sole-langue +' compartment (two Cynoglossus tonguefishes and the sole Synaptura lusitanica). All rest on or hug the mud and pick off shrimps, crabs and benthos. Functional group pooling those two source compartments to fit this atlas's 25-node ceiling.",
+  "sourceWeb": "bamboung",
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "flatfish-moonies",
+      "displayName": "Soles, tonguefishes & moonies",
+      "kind": "functional-group",
+      "trophicLevel": 3.191
+    }
+  ]
+}

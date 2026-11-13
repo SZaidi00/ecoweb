@@ -2,9 +2,24 @@
   "slug": "sharks",
   "name": "Sharks",
   "kind": "functional-group",
-  "description": "Sharks - the apex of this food web, preying on seals, other sharks, hake, tuna and the seafloor guilds. Functional group matching the source model's sharks compartment, pooling the region's shark species; in the model lineage their diets were reconstructed assuming apex sharks take large fish, tuna and seals.",
-  "sourceWeb": "northern-benguela",
+  "description": "Sharks and very large rays at the top of the creek's food web - the source's 'Requin +' compartment, pooling the bull shark (Carcharhinus leucas) with two big ray species measured together with it (the bull ray Pteromylaeus bovinus and a torpedo ray, Torpedo sp.). They eat everything from rays and catfish to mullets and shrimps; their biomass was set by expert judgement ('one large shark or two medium ones in the bolong in a year'). Functional group pooling the source's Requin + compartment.",
+  "sourceWeb": "bamboung",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Bull_shark"
+  },
   "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "sharks",
+      "displayName": "Sharks",
+      "kind": "functional-group",
+      "trophicLevel": 4.044,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Bull_shark"
+      }
+    },
     {
       "web": "northern-benguela",
       "webName": "Northern Benguela",

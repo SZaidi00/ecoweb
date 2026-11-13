@@ -1,0 +1,18 @@
+{
+  "slug": "microphytobenthos",
+  "name": "Microphytobenthos",
+  "kind": "functional-group",
+  "description": "Benthic microalgae - the diatom films coating the Saloum's vast mudflats, the grazing base of the meiobenthos and mullets alongside detritus; in this 'reverse estuary' the mudflats can outproduce the plankton. Functional group matching the source's Microphytobenthos compartment.",
+  "sourceWeb": "bamboung",
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "microphytobenthos",
+      "displayName": "Microphytobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 1.0
+    }
+  ]
+}

@@ -1,6 +1,17 @@
 {
   "webs": [
     {
+      "id": "bamboung",
+      "name": "Bamboung Bolong",
+      "biome": "estuary",
+      "location": "Bolong de Bamboung, Saloum Delta, Senegal",
+      "nodeCount": 25,
+      "provenance": "empirical",
+      "tagline": "A community-run mangrove creek closed to fishing, where West Africa's fish nursery rebuilds its web",
+      "lat": 13.83,
+      "lng": -16.55
+    },
+    {
       "id": "chesapeake-bay",
       "name": "Chesapeake Bay",
       "biome": "estuary",

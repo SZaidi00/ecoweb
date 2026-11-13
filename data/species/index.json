@@ -1,6 +1,6 @@
 {
-  "webCount": 13,
-  "entryCount": 255,
+  "webCount": 14,
+  "entryCount": 275,
   "entries": [
     {
       "slug": "adelie-penguin",
@@ -69,6 +69,20 @@
         {
           "web": "southern-benguela",
           "node": "african-penguin"
+        }
+      ]
+    },
+    {
+      "slug": "african-threadfin",
+      "name": "African threadfin",
+      "kind": "species",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "threadfin"
         }
       ]
     },
@@ -419,6 +433,20 @@
       ]
     },
     {
+      "slug": "barracudas-needlefish",
+      "name": "Barracudas & needlefish",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "barracudas"
+        }
+      ]
+    },
+    {
       "slug": "bearded-goby",
       "name": "Bearded goby",
       "kind": "life-stage-group",
@@ -588,6 +616,20 @@
         {
           "web": "chesapeake-bay",
           "node": "blue-crab"
+        }
+      ]
+    },
+    {
+      "slug": "bonga-shad",
+      "name": "Bonga shad",
+      "kind": "species",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "ethmalose"
         }
       ]
     },
@@ -779,6 +821,20 @@
       ]
     },
     {
+      "slug": "crabs-other-crustaceans",
+      "name": "Crabs & other crustaceans",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "crabs"
+        }
+      ]
+    },
+    {
       "slug": "crayfish-prawns-and-aquatic-insects",
       "name": "Crayfish, prawns and aquatic insects",
       "kind": "functional-group",
@@ -803,6 +859,20 @@
         {
           "web": "serengeti",
           "node": "crickets-grasshoppers"
+        }
+      ]
+    },
+    {
+      "slug": "croakers-sea-catfish",
+      "name": "Croakers & sea catfish",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "croakers-catfish"
         }
       ]
     },
@@ -984,6 +1054,7 @@
       "name": "Detritus",
       "kind": "functional-group",
       "webs": [
+        "bamboung",
         "banc-darguin",
         "northern-benguela",
         "prince-william-sound",
@@ -993,6 +1064,10 @@
         "weddell-sea"
       ],
       "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "detritus"
+        },
         {
           "web": "banc-darguin",
           "node": "detritus"
@@ -1090,6 +1165,20 @@
         {
           "web": "tuesday-lake",
           "node": "dinoflagellates"
+        }
+      ]
+    },
+    {
+      "slug": "dolphins",
+      "name": "Dolphins",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "dolphins"
         }
       ]
     },
@@ -1729,6 +1818,20 @@
       ]
     },
     {
+      "slug": "jacks-sweetlips-grunts",
+      "name": "Jacks, sweetlips & grunts",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "jacks-grunts"
+        }
+      ]
+    },
+    {
       "slug": "jaraqui",
       "name": "Jaraqui",
       "kind": "functional-group",
@@ -1767,6 +1870,20 @@
         {
           "web": "weddell-sea",
           "node": "killer-whale"
+        }
+      ]
+    },
+    {
+      "slug": "ladyfish",
+      "name": "Ladyfish",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "ladyfish"
         }
       ]
     },
@@ -1981,6 +2098,20 @@
       ]
     },
     {
+      "slug": "macrobenthos",
+      "name": "Macrobenthos",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "macrobenthos"
+        }
+      ]
+    },
+    {
       "slug": "macrozooplankton",
       "name": "Macrozooplankton",
       "kind": "functional-group",
@@ -2098,6 +2229,20 @@
       ]
     },
     {
+      "slug": "meiobenthos",
+      "name": "Meiobenthos",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "meiobenthos"
+        }
+      ]
+    },
+    {
       "slug": "meiofauna",
       "name": "Meiofauna",
       "kind": "functional-group",
@@ -2141,6 +2286,20 @@
         {
           "web": "prince-william-sound",
           "node": "mesozooplankton"
+        }
+      ]
+    },
+    {
+      "slug": "microphytobenthos",
+      "name": "Microphytobenthos",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "microphytobenthos"
         }
       ]
     },
@@ -2205,9 +2364,14 @@
       "name": "Mullets",
       "kind": "functional-group",
       "webs": [
+        "bamboung",
         "banc-darguin"
       ],
       "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "mullets"
+        },
         {
           "web": "banc-darguin",
           "node": "mullets"
@@ -2555,6 +2719,7 @@
       "name": "Phytoplankton",
       "kind": "functional-group",
       "webs": [
+        "bamboung",
         "banc-darguin",
         "chesapeake-bay",
         "cypress-wetland",
@@ -2564,6 +2729,10 @@
         "weddell-sea"
       ],
       "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "phytoplankton"
+        },
         {
           "web": "banc-darguin",
           "node": "phytoplankton"
@@ -2736,6 +2905,20 @@
         {
           "web": "little-rock-lake",
           "node": "predatory-water-bugs"
+        }
+      ]
+    },
+    {
+      "slug": "puffers-pompanos",
+      "name": "Puffers & pompanos",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "puffers-pompanos"
         }
       ]
     },
@@ -2918,6 +3101,20 @@
       ]
     },
     {
+      "slug": "sardinellas",
+      "name": "Sardinellas",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "sardinellas"
+        }
+      ]
+    },
+    {
       "slug": "sardines-sardinellas",
       "name": "Sardines & sardinellas",
       "kind": "functional-group",
@@ -3062,9 +3259,14 @@
       "name": "Sharks",
       "kind": "functional-group",
       "webs": [
+        "bamboung",
         "northern-benguela"
       ],
       "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "sharks"
+        },
         {
           "web": "northern-benguela",
           "node": "sharks"
@@ -3119,6 +3321,20 @@
       ]
     },
     {
+      "slug": "shrimps",
+      "name": "Shrimps",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "shrimps"
+        }
+      ]
+    },
+    {
       "slug": "shrubs-scrub",
       "name": "Shrubs & scrub",
       "kind": "functional-group",
@@ -3129,6 +3345,20 @@
         {
           "web": "magellanic-rabbit-steppe",
           "node": "shrubs"
+        }
+      ]
+    },
+    {
+      "slug": "small-bottom-feeding-fish",
+      "name": "Small bottom-feeding fish",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "small-benthic-fish"
         }
       ]
     },
@@ -3287,6 +3517,20 @@
       ]
     },
     {
+      "slug": "snappers-groupers",
+      "name": "Snappers & groupers",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "snappers-groupers"
+        }
+      ]
+    },
+    {
       "slug": "snoek",
       "name": "Snoek",
       "kind": "species",
@@ -3302,6 +3546,20 @@
         {
           "web": "southern-benguela",
           "node": "snoek"
+        }
+      ]
+    },
+    {
+      "slug": "soles-tonguefishes-moonies",
+      "name": "Soles, tonguefishes & moonies",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "flatfish-moonies"
         }
       ]
     },
@@ -3395,6 +3653,20 @@
       ]
     },
     {
+      "slug": "stingrays-cownose-ray",
+      "name": "Stingrays & cownose ray",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "rays"
+        }
+      ]
+    },
+    {
       "slug": "suspension-feeding-benthos",
       "name": "Suspension-feeding benthos",
       "kind": "functional-group",
@@ -3447,6 +3719,20 @@
         {
           "web": "tapajos-river",
           "node": "terrestrial-invertebrates"
+        }
+      ]
+    },
+    {
+      "slug": "tilapias",
+      "name": "Tilapias",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "tilapias"
         }
       ]
     },
@@ -3559,6 +3845,20 @@
         {
           "web": "little-rock-lake",
           "node": "zooplankton"
+        }
+      ]
+    },
+    {
+      "slug": "waterbirds",
+      "name": "Waterbirds",
+      "kind": "functional-group",
+      "webs": [
+        "bamboung"
+      ],
+      "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "birds"
         }
       ]
     },
@@ -3679,9 +3979,14 @@
       "name": "Zooplankton",
       "kind": "functional-group",
       "webs": [
+        "bamboung",
         "tapajos-river"
       ],
       "occurrences": [
+        {
+          "web": "bamboung",
+          "node": "zooplankton"
+        },
         {
           "web": "tapajos-river",
           "node": "zooplankton"

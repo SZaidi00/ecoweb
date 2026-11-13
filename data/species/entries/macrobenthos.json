@@ -1,0 +1,18 @@
+{
+  "slug": "macrobenthos",
+  "name": "Macrobenthos",
+  "kind": "functional-group",
+  "description": "The macrobenthos - big bottom-dwelling invertebrates (polychaete worms, bivalves, gastropods, small crustaceans) of the soft mud; data come from the Sine-Saloum invertebrate compartments refined by local isotope work. It is the most-eaten prey of the whole web - birds, crabs and fish of every guild feed on it - and the study flags it as the ecological linchpin of this turbid mangrove system. Functional group pooling the source's Macrobenthos compartment.",
+  "sourceWeb": "bamboung",
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "macrobenthos",
+      "displayName": "Macrobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.0
+    }
+  ]
+}

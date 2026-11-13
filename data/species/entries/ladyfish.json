@@ -1,0 +1,24 @@
+{
+  "slug": "ladyfish",
+  "name": "Ladyfish",
+  "kind": "functional-group",
+  "description": "Ladyfish - the source's Elops compartment: two Elops species (E. lacerta, E. senegalensis), slim silvery predators that chase the shrimp schools of the channel - over half their diet is shrimps, with bonga shad and sardinellas next. Functional group pooling the source's two ladyfish species, measured together.",
+  "sourceWeb": "bamboung",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Ladyfish"
+  },
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "ladyfish",
+      "displayName": "Ladyfish",
+      "kind": "functional-group",
+      "trophicLevel": 3.472,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Ladyfish"
+      }
+    }
+  ]
+}

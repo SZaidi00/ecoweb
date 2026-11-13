@@ -1,0 +1,24 @@
+{
+  "slug": "snappers-groupers",
+  "name": "Snappers & groupers",
+  "kind": "functional-group",
+  "description": "Snappers, groupers and mackerels - the source's 'Vivaneaux +' compartment: Lutjanus snappers, the white grouper (Epinephelus aeneus), the comber (Serranus cabrilla), the plain bonito (Orcynopsis unicolor), the king mackerel (Scomberomorus tritor) and the meagre (Argyrosomus regius). Crabs dominate their diet, with macrobenthos and shrimps. Functional group pooling the source's Vivaneaux + compartment.",
+  "sourceWeb": "bamboung",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Lutjanus"
+  },
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "snappers-groupers",
+      "displayName": "Snappers & groupers",
+      "kind": "functional-group",
+      "trophicLevel": 3.545,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Lutjanus"
+      }
+    }
+  ]
+}

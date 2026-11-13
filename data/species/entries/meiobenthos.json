@@ -1,0 +1,18 @@
+{
+  "slug": "meiobenthos",
+  "name": "Meiobenthos",
+  "kind": "functional-group",
+  "description": "The meiobenthos - minute bottom-living invertebrates living between the sediment grains, eating organic detritus and microalgae and eaten by small benthic fish, flatfish and shrimps. Functional group pooling the source's Meiobenthos compartment.",
+  "sourceWeb": "bamboung",
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "meiobenthos",
+      "displayName": "Meiobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.101
+    }
+  ]
+}

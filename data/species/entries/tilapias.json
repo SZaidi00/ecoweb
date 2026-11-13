@@ -1,0 +1,24 @@
+{
+  "slug": "tilapias",
+  "name": "Tilapias",
+  "kind": "functional-group",
+  "description": "Tilapias - the source's Tilapias compartment: the blackchin tilapia (Sarotherodon melanotheron) and Tilapia guineensis, herbivorous cichlids of the creek that browse phytoplankton and benthic microalgae with a large helping of detritus. Functional group pooling the source's two tilapia species, measured together.",
+  "sourceWeb": "bamboung",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Blackchin_tilapia"
+  },
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "tilapias",
+      "displayName": "Tilapias",
+      "kind": "functional-group",
+      "trophicLevel": 2.03,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Blackchin_tilapia"
+      }
+    }
+  ]
+}

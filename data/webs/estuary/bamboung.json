@@ -1,0 +1,1386 @@
+{
+  "meta": {
+    "id": "bamboung",
+    "name": "Bamboung Bolong",
+    "location": "Bolong de Bamboung, Saloum Delta, Senegal",
+    "biome": "estuary",
+    "lat": 13.83,
+    "lng": -16.55,
+    "provenance": "empirical",
+    "tagline": "A community-run mangrove creek closed to fishing, where West Africa's fish nursery rebuilds its web",
+    "citations": [
+      "Colléter, M. (2010). Analyse de l'impact d'une Aire Marine Protégée (AMP) sur le fonctionnement trophique d'un écosystème : Modélisation Ecopath/EcoTroph de la réserve du bolong de Bamboung, Sénégal. Mémoire de fin d'études (halieutique), Agrocampus Ouest, Rennes / IRD Dakar, 72 pp. + annexes. Openly archived at https://halieutique.institut-agro.fr/files/fichiers/memoires/201003.pdf (Annexe 2: functional groups and species composition; Annexe 4: Ecopath 2003 input parameters; Annexe 5: diet-composition matrix).",
+      "Colléter, M., Gascuel, D., Écoutin, J.-M. & Tito de Morais, L. (2012). Modelling trophic flows in ecosystems to assess the efficiency of marine protected areas (MPA), a case study on the coast of Sénégal. Ecological Modelling 232:1-13. https://doi.org/10.1016/j.ecolmodel.2012.01.019"
+    ],
+    "sourceUrl": "https://halieutique.institut-agro.fr/files/fichiers/memoires/201003.pdf",
+    "licenseNote": "Structure, parameters and diet composition are from Colléter (2010, MSc memoir, Agrocampus Ouest / IRD Dakar): the 31-compartment Ecopath reference model of the Bamboung bolong for 2003 - the last year fishing was permitted inside the reserve - from Annexe 5 (diet matrix), Annexe 2 (functional groups) and Annexe 4 (parameters) of the openly archived memoir, peer-reviewed as Colléter, Gascuel, Écoutin & Tito de Morais (2012, Ecological Modelling 232:1-13). The 2003 reference model uses the source's low fishing mortality scenario (F=0.1); the source also built a 2006-2008 unfished model and fished-control (Bolong de Sangako) models. Curation and pooling: the 31 published compartments were pooled to 25 nodes - the source's 'Otolithes +' and 'Mâchoirons marins' compartments into croakers-catfish; its 'Tétrodon +' and 'Pompaneau +' compartments into puffers-pompanos; its 'Petit capitaine +' (called 'Diagramme +' in the memoir's own species table) and 'Carangues' compartments into jacks-grunts; its 'Breton africain +' and 'Sole-langue +' compartments into flatfish-moonies; and its Gerres, Pomadasys and 'Petits benthophages' compartments into small-benthic-fish - each pooling is also stated in the node's description. Edge weights were derived from the published diet matrix after pooling: for prey pools the weight is the sum of the source diet fractions of all prey in the pool for that source predator; for predator nodes pooling several source compartments the component compartments' fractions are averaged (the same convention as the atlas's other Ecopath webs); rounded to 3 decimals. Within-group cannibalism printed in the source matrix (Requins 0.001, Crabes 0.005, Meiobenthos 0.01, Zooplancton 0.05) is omitted as self-loops, so those predators' weights sum to 0.95-0.999. The waterbirds compartment imports 6.3% of its diet from outside the modelled system (its weights sum to 0.937); no other predator imports. Trophic levels were recomputed from the pooled diet matrix by solving the Ecopath trophic-level equations (TL_i = 1 + sum_j w_ji x TL_j, producers and detritus at TL 1), renormalising over in-system prey for the waterbird compartment; the result reproduces the source's published trophic ordering (sharks, dolphins and barracudas on top; macrobenthos the most-eaten prey). The same model is held machine-readably as EcoBase models 179 (2003) and 180 (2006-2008). Ecopath diet compositions are model-balanced estimates that are partly literature-informed (here, Sine-Saloum stomach-content studies and FishBase). The memoir is openly archived by Agrocampus Ouest; reuse requires citing Colléter (2010) and the 2012 paper.",
+    "curator": "Food Web Explorer contributors (AI-assisted curation, human-reviewed)",
+    "dateCurated": "2026-11-12"
+  },
+  "nodes": [
+    {
+      "id": "sharks",
+      "displayName": "Sharks",
+      "kind": "functional-group",
+      "trophicLevel": 4.044,
+      "functionalRole": "top-consumer",
+      "description": "Sharks and very large rays at the top of the creek's food web - the source's 'Requin +' compartment, pooling the bull shark (Carcharhinus leucas) with two big ray species measured together with it (the bull ray Pteromylaeus bovinus and a torpedo ray, Torpedo sp.). They eat everything from rays and catfish to mullets and shrimps; their biomass was set by expert judgement ('one large shark or two medium ones in the bolong in a year'). Functional group pooling the source's Requin + compartment.",
+      "layout": {
+        "x": 30,
+        "y": 81
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Bull_shark"
+      }
+    },
+    {
+      "id": "dolphins",
+      "displayName": "Dolphins",
+      "kind": "functional-group",
+      "trophicLevel": 3.691,
+      "functionalRole": "top-consumer",
+      "description": "Dolphins - the source's single dolphin compartment. They hunt the small schooling fish of the creek (sardinellas, ethmalose, mullets) plus shrimps and crabs; their feeding rate (Q/B) and ecotrophic efficiency are taken from work on the Guinean shelf. Functional group pooling the dolphin species visiting the bolong, measured as one compartment.",
+      "layout": {
+        "x": 68,
+        "y": 73
+      }
+    },
+    {
+      "id": "birds",
+      "displayName": "Waterbirds",
+      "kind": "functional-group",
+      "trophicLevel": 3.477,
+      "functionalRole": "top-consumer",
+      "description": "Waterbirds - the source's single bird compartment, built from Saloum ornithological observations and weighted across piscivorous and wading (limnicole) feeding types. Almost two-fifths of their diet is macrobenthos - the worms and bivalves of the mudflats - plus small fish, shrimps and crabs; 6.3% of their food is imported from outside the modelled system, so this node's weights sum to 0.937. Functional group pooling the waterbird species observed in the Saloum, measured together.",
+      "layout": {
+        "x": 46,
+        "y": 67
+      }
+    },
+    {
+      "id": "rays",
+      "displayName": "Stingrays & cownose ray",
+      "kind": "functional-group",
+      "trophicLevel": 3.22,
+      "functionalRole": "intermediate-consumer",
+      "description": "Stingrays and a cownose ray - the source's 'Raies' compartment: the two Dasyatis stingrays (D. margarita, D. margaritella) and the Lusitanian cownose ray (Rhinoptera marginata). Half their diet is shrimps, with macrobenthos and meiobenthos from the mud. Functional group pooling the source's Raies compartment - the ray species measured together, apart from the very large rays pooled with sharks.",
+      "layout": {
+        "x": 74,
+        "y": 61
+      }
+    },
+    {
+      "id": "croakers-catfish",
+      "displayName": "Croakers & sea catfish",
+      "kind": "functional-group",
+      "trophicLevel": 3.477,
+      "functionalRole": "top-consumer",
+      "description": "Croakers and sea catfish - the muddy channel's drumming, whiskered mid-water predators. Functional group pooling the source's 'Otolithes +' compartment (the four Pseudotolithus croakers plus the leerfish Lichia amia) with its 'Mâchoirons marins' compartment (three Arius sea catfishes): both are mid-trophic generalist predators whose diets are built on shrimps and crabs, measured as separate compartments by the source and pooled here to fit this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 16,
+        "y": 67
+      }
+    },
+    {
+      "id": "barracudas",
+      "displayName": "Barracudas & needlefish",
+      "kind": "functional-group",
+      "trophicLevel": 3.659,
+      "functionalRole": "top-consumer",
+      "description": "Barracudas, needlefish and cutlassfish - the source's 'Barracudas +' compartment: Sphyraena barracudas, Tylosurus and Strongylura needlefish, a halfbeak (Hemiramphus) and the cutlassfish Trichiurus lepturus - the sleek open-water hunters of the bolong. Their diet leans heavily on ethmalose (bonga shad) and shrimps. The study uses them as its worked example of a fishery-targeted group whose increase ripples through the whole web. Functional group pooling the source's Barracudas + compartment.",
+      "layout": {
+        "x": 10,
+        "y": 72
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Great_barracuda"
+      }
+    },
+    {
+      "id": "threadfin",
+      "displayName": "African threadfin",
+      "kind": "species",
+      "trophicLevel": 3.559,
+      "functionalRole": "top-consumer",
+      "description": "The grand capitaine (Polydactylus quadrifilis), a big West African threadfin whose free fin rays feel like threads. It tracks shrimp and crab swarms in the turbid channel - over a quarter of its diet is shrimps - and it is one of the few predators taking meiobenthos. Tracked as its own single-species compartment by the source.",
+      "layout": {
+        "x": 36,
+        "y": 69
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Polydactylus_quadrifilis"
+      }
+    },
+    {
+      "id": "snappers-groupers",
+      "displayName": "Snappers & groupers",
+      "kind": "functional-group",
+      "trophicLevel": 3.545,
+      "functionalRole": "top-consumer",
+      "description": "Snappers, groupers and mackerels - the source's 'Vivaneaux +' compartment: Lutjanus snappers, the white grouper (Epinephelus aeneus), the comber (Serranus cabrilla), the plain bonito (Orcynopsis unicolor), the king mackerel (Scomberomorus tritor) and the meagre (Argyrosomus regius). Crabs dominate their diet, with macrobenthos and shrimps. Functional group pooling the source's Vivaneaux + compartment.",
+      "layout": {
+        "x": 60,
+        "y": 69
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Lutjanus"
+      }
+    },
+    {
+      "id": "puffers-pompanos",
+      "displayName": "Puffers & pompanos",
+      "kind": "functional-group",
+      "trophicLevel": 3.333,
+      "functionalRole": "intermediate-consumer",
+      "description": "Small opportunistic hunters of the flats - puffers, pompanos, a butterflyfish, the bonefish, batfishes, a toadfish, a sicklefish and a halfbeak - measured across the source's 'Tetrodon +' and 'Pompaneau +' compartments, two small-bodied mixed guilds that crunch crabs and macrobenthos in the shallows. Functional group pooling those two source compartments, which measured 12 species between them, pooled here to fit this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 88,
+        "y": 64
+      }
+    },
+    {
+      "id": "jacks-grunts",
+      "displayName": "Jacks, sweetlips & grunts",
+      "kind": "functional-group",
+      "trophicLevel": 3.137,
+      "functionalRole": "intermediate-consumer",
+      "description": "Jacks, sweetlips and grunts - the source's 'Petit capitaine +' compartment (called 'Diagramme +' in the memoir's species table: the sweetlips Plectorhinchus macrolepis, the grunts Galeoides decadactylus and Brachydeuterus auritus, a puffer, a seabass and a surgeonfish) together with its 'Carangues' compartment (the bumper Chloroscombrus chrysurus, two Caranx jacks, a pompano and Hemicaranx). Both are zooplankton-and-shrimp-feeding mid-water schools of the turbid creek. Functional group pooling those two source compartments to fit this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 78,
+        "y": 59
+      }
+    },
+    {
+      "id": "flatfish-moonies",
+      "displayName": "Soles, tonguefishes & moonies",
+      "kind": "functional-group",
+      "trophicLevel": 3.191,
+      "functionalRole": "intermediate-consumer",
+      "description": "Small soft-bottom fish - the African moony (Monodactylus sebae) and the flatfish Citharichthys stampflii from the source's 'Breton africain +' compartment, pooled with its 'Sole-langue +' compartment (two Cynoglossus tonguefishes and the sole Synaptura lusitanica). All rest on or hug the mud and pick off shrimps, crabs and benthos. Functional group pooling those two source compartments to fit this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 54,
+        "y": 61
+      }
+    },
+    {
+      "id": "small-benthic-fish",
+      "displayName": "Small bottom-feeding fish",
+      "kind": "functional-group",
+      "trophicLevel": 2.839,
+      "functionalRole": "intermediate-consumer",
+      "description": "Small benthic-feeding fish - the source's Gerres compartment (two mojarras, or silverbellies), its Pomadasys compartment (three grunts) and its 'Petits benthophages' compartment (a blenny, a goby, a puffer, a seahorse and a pipefish): small-mouthed pickers over meiobenthos, macrobenthos and shrimps. Functional group pooling those three source compartments to fit this atlas's 25-node ceiling.",
+      "layout": {
+        "x": 10,
+        "y": 52
+      }
+    },
+    {
+      "id": "sardinellas",
+      "displayName": "Sardinellas",
+      "kind": "functional-group",
+      "trophicLevel": 2.731,
+      "functionalRole": "intermediate-consumer",
+      "description": "Sardinellas - the source's 'Sardinelle +' compartment: the round sardinella (Sardinella aurita), the Madeiran sardinella (S. maderensis) and the West African ilisha (Ilisha africana), measured together with the remoras that shadow the schools (Echeneis naucrates, Remora remora). They filter zooplankton and graze microalgae in the turbid water, and take an occasional shrimp. Functional group pooling the source's Sardinelle + compartment.",
+      "layout": {
+        "x": 32,
+        "y": 50
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Round_sardinella"
+      }
+    },
+    {
+      "id": "ethmalose",
+      "displayName": "Bonga shad",
+      "kind": "species",
+      "trophicLevel": 2.551,
+      "functionalRole": "intermediate-consumer",
+      "description": "The bonga shad (Ethmalosa fimbriata) - by far the most abundant fish of the creek by biomass (nearly 25 tonnes per square kilometre in the 2003 model), a small clupeid that filters zooplankton and phytoplankton from the turbid water and feeds predators from ladyfish to sharks. Tracked as its own single-species compartment by the source.",
+      "layout": {
+        "x": 22,
+        "y": 45
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Bonga_shad"
+      }
+    },
+    {
+      "id": "mullets",
+      "displayName": "Mullets",
+      "kind": "functional-group",
+      "trophicLevel": 2.655,
+      "functionalRole": "intermediate-consumer",
+      "description": "Mullets - the source's 'Mulets +' compartment: six Liza and Mugil mullets plus the parrotfish Scarus hoefleri, grazing detritus, microalgae and zooplankton over the mudflats - the second-biggest fish biomass in the model (about 16 t/km²) and a staple of the artisanal fishery. Functional group pooling the source's Mulets + compartment.",
+      "layout": {
+        "x": 82,
+        "y": 48
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Flathead_grey_mullet"
+      }
+    },
+    {
+      "id": "tilapias",
+      "displayName": "Tilapias",
+      "kind": "functional-group",
+      "trophicLevel": 2.03,
+      "functionalRole": "primary-consumer",
+      "description": "Tilapias - the source's Tilapias compartment: the blackchin tilapia (Sarotherodon melanotheron) and Tilapia guineensis, herbivorous cichlids of the creek that browse phytoplankton and benthic microalgae with a large helping of detritus. Functional group pooling the source's two tilapia species, measured together.",
+      "layout": {
+        "x": 34,
+        "y": 33
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Blackchin_tilapia"
+      }
+    },
+    {
+      "id": "ladyfish",
+      "displayName": "Ladyfish",
+      "kind": "functional-group",
+      "trophicLevel": 3.472,
+      "functionalRole": "top-consumer",
+      "description": "Ladyfish - the source's Elops compartment: two Elops species (E. lacerta, E. senegalensis), slim silvery predators that chase the shrimp schools of the channel - over half their diet is shrimps, with bonga shad and sardinellas next. Functional group pooling the source's two ladyfish species, measured together.",
+      "layout": {
+        "x": 88,
+        "y": 67
+      },
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Ladyfish"
+      }
+    },
+    {
+      "id": "shrimps",
+      "displayName": "Shrimps",
+      "kind": "functional-group",
+      "trophicLevel": 2.51,
+      "functionalRole": "intermediate-consumer",
+      "description": "Shrimps - the source's 'Crevettes' compartment, built from Sine-Saloum invertebrate data refined by isotope work: the penaeid shrimps of the muddy channel, filtering zooplankton and phytoplankton. They are the single most important prey of the creek's predators - rays, catfish, ladyfish, threadfin and barracudas all hunt them. Functional group pooling the source's shrimps compartment.",
+      "layout": {
+        "x": 48,
+        "y": 44
+      }
+    },
+    {
+      "id": "crabs",
+      "displayName": "Crabs & other crustaceans",
+      "kind": "functional-group",
+      "trophicLevel": 2.724,
+      "functionalRole": "intermediate-consumer",
+      "description": "Crabs and other crustaceans - the source's 'Crabes et autres crustacés' compartment: the portunid crabs and other benthic crustaceans of the mudflats, eating macrobenthos, meiobenthos and detritus (with a little cannibalism, omitted here as a self-loop). Functional group pooling the source's crabs-and-other-crustaceans compartment.",
+      "layout": {
+        "x": 58,
+        "y": 49
+      }
+    },
+    {
+      "id": "macrobenthos",
+      "displayName": "Macrobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "The macrobenthos - big bottom-dwelling invertebrates (polychaete worms, bivalves, gastropods, small crustaceans) of the soft mud; data come from the Sine-Saloum invertebrate compartments refined by local isotope work. It is the most-eaten prey of the whole web - birds, crabs and fish of every guild feed on it - and the study flags it as the ecological linchpin of this turbid mangrove system. Functional group pooling the source's Macrobenthos compartment.",
+      "layout": {
+        "x": 10,
+        "y": 32
+      }
+    },
+    {
+      "id": "meiobenthos",
+      "displayName": "Meiobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 2.101,
+      "functionalRole": "primary-consumer",
+      "description": "The meiobenthos - minute bottom-living invertebrates living between the sediment grains, eating organic detritus and microalgae and eaten by small benthic fish, flatfish and shrimps. Functional group pooling the source's Meiobenthos compartment.",
+      "layout": {
+        "x": 66,
+        "y": 34
+      }
+    },
+    {
+      "id": "zooplankton",
+      "displayName": "Zooplankton",
+      "kind": "functional-group",
+      "trophicLevel": 2.0,
+      "functionalRole": "primary-consumer",
+      "description": "Zooplankton - the drifting grazers (copepods and kin) of the turbid water, channelling phytoplankton and detritus up to sardinellas, bonga shad, shrimps and the small fish guilds. Functional group pooling the source's Zooplancton compartment.",
+      "layout": {
+        "x": 90,
+        "y": 32
+      }
+    },
+    {
+      "id": "phytoplankton",
+      "displayName": "Phytoplankton",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Microscopic drifting algae of the turbid estuarine water - the source's Phytoplancton compartment, feeding the zooplankton, the filter-feeding fish and half the macrobenthos's diet. Functional group matching the source's phytoplankton compartment.",
+      "layout": {
+        "x": 26,
+        "y": 8
+      }
+    },
+    {
+      "id": "microphytobenthos",
+      "displayName": "Microphytobenthos",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "producer",
+      "description": "Benthic microalgae - the diatom films coating the Saloum's vast mudflats, the grazing base of the meiobenthos and mullets alongside detritus; in this 'reverse estuary' the mudflats can outproduce the plankton. Functional group matching the source's Microphytobenthos compartment.",
+      "layout": {
+        "x": 58,
+        "y": 8
+      }
+    },
+    {
+      "id": "detritus",
+      "displayName": "Detritus",
+      "kind": "functional-group",
+      "trophicLevel": 1.0,
+      "functionalRole": "detritus",
+      "description": "Dead organic matter - fallen mangrove leaves, decaying plankton, faeces and carcasses accumulating on the mud, the fuel of the benthic food chain: meiobenthos, macrobenthos and crabs all feed on it, and the tilapias take almost half their diet from it. Functional group matching the source's single detritus compartment.",
+      "layout": {
+        "x": 86,
+        "y": 8
+      }
+    }
+  ],
+  "edges": [
+    {
+      "prey": "barracudas",
+      "predator": "birds",
+      "weight": 0.002
+    },
+    {
+      "prey": "barracudas",
+      "predator": "sharks",
+      "weight": 0.01
+    },
+    {
+      "prey": "barracudas",
+      "predator": "threadfin",
+      "weight": 0.001
+    },
+    {
+      "prey": "birds",
+      "predator": "sharks",
+      "weight": 0.0
+    },
+    {
+      "prey": "crabs",
+      "predator": "barracudas",
+      "weight": 0.01
+    },
+    {
+      "prey": "crabs",
+      "predator": "birds",
+      "weight": 0.061
+    },
+    {
+      "prey": "crabs",
+      "predator": "croakers-catfish",
+      "weight": 0.275
+    },
+    {
+      "prey": "crabs",
+      "predator": "dolphins",
+      "weight": 0.08
+    },
+    {
+      "prey": "crabs",
+      "predator": "flatfish-moonies",
+      "weight": 0.16
+    },
+    {
+      "prey": "crabs",
+      "predator": "jacks-grunts",
+      "weight": 0.075
+    },
+    {
+      "prey": "crabs",
+      "predator": "puffers-pompanos",
+      "weight": 0.205
+    },
+    {
+      "prey": "crabs",
+      "predator": "sharks",
+      "weight": 0.04
+    },
+    {
+      "prey": "crabs",
+      "predator": "small-benthic-fish",
+      "weight": 0.04
+    },
+    {
+      "prey": "crabs",
+      "predator": "snappers-groupers",
+      "weight": 0.3
+    },
+    {
+      "prey": "crabs",
+      "predator": "threadfin",
+      "weight": 0.16
+    },
+    {
+      "prey": "croakers-catfish",
+      "predator": "barracudas",
+      "weight": 0.04
+    },
+    {
+      "prey": "croakers-catfish",
+      "predator": "birds",
+      "weight": 0.018
+    },
+    {
+      "prey": "croakers-catfish",
+      "predator": "sharks",
+      "weight": 0.14
+    },
+    {
+      "prey": "croakers-catfish",
+      "predator": "snappers-groupers",
+      "weight": 0.03
+    },
+    {
+      "prey": "croakers-catfish",
+      "predator": "threadfin",
+      "weight": 0.032
+    },
+    {
+      "prey": "detritus",
+      "predator": "crabs",
+      "weight": 0.205
+    },
+    {
+      "prey": "detritus",
+      "predator": "croakers-catfish",
+      "weight": 0.005
+    },
+    {
+      "prey": "detritus",
+      "predator": "ethmalose",
+      "weight": 0.05
+    },
+    {
+      "prey": "detritus",
+      "predator": "jacks-grunts",
+      "weight": 0.04
+    },
+    {
+      "prey": "detritus",
+      "predator": "macrobenthos",
+      "weight": 0.35
+    },
+    {
+      "prey": "detritus",
+      "predator": "meiobenthos",
+      "weight": 0.65
+    },
+    {
+      "prey": "detritus",
+      "predator": "mullets",
+      "weight": 0.1
+    },
+    {
+      "prey": "detritus",
+      "predator": "rays",
+      "weight": 0.02
+    },
+    {
+      "prey": "detritus",
+      "predator": "sardinellas",
+      "weight": 0.05
+    },
+    {
+      "prey": "detritus",
+      "predator": "sharks",
+      "weight": 0.005
+    },
+    {
+      "prey": "detritus",
+      "predator": "shrimps",
+      "weight": 0.1
+    },
+    {
+      "prey": "detritus",
+      "predator": "small-benthic-fish",
+      "weight": 0.147
+    },
+    {
+      "prey": "detritus",
+      "predator": "tilapias",
+      "weight": 0.46
+    },
+    {
+      "prey": "detritus",
+      "predator": "zooplankton",
+      "weight": 0.05
+    },
+    {
+      "prey": "dolphins",
+      "predator": "sharks",
+      "weight": 0.001
+    },
+    {
+      "prey": "ethmalose",
+      "predator": "barracudas",
+      "weight": 0.41
+    },
+    {
+      "prey": "ethmalose",
+      "predator": "birds",
+      "weight": 0.026
+    },
+    {
+      "prey": "ethmalose",
+      "predator": "croakers-catfish",
+      "weight": 0.068
+    },
+    {
+      "prey": "ethmalose",
+      "predator": "dolphins",
+      "weight": 0.19
+    },
+    {
+      "prey": "ethmalose",
+      "predator": "flatfish-moonies",
+      "weight": 0.003
+    },
+    {
+      "prey": "ethmalose",
+      "predator": "jacks-grunts",
+      "weight": 0.007
+    },
+    {
+      "prey": "ethmalose",
+      "predator": "ladyfish",
+      "weight": 0.19
+    },
+    {
+      "prey": "ethmalose",
+      "predator": "puffers-pompanos",
+      "weight": 0.031
+    },
+    {
+      "prey": "ethmalose",
+      "predator": "sharks",
+      "weight": 0.1
+    },
+    {
+      "prey": "ethmalose",
+      "predator": "small-benthic-fish",
+      "weight": 0.013
+    },
+    {
+      "prey": "ethmalose",
+      "predator": "snappers-groupers",
+      "weight": 0.08
+    },
+    {
+      "prey": "ethmalose",
+      "predator": "threadfin",
+      "weight": 0.13
+    },
+    {
+      "prey": "flatfish-moonies",
+      "predator": "barracudas",
+      "weight": 0.01
+    },
+    {
+      "prey": "flatfish-moonies",
+      "predator": "birds",
+      "weight": 0.021
+    },
+    {
+      "prey": "flatfish-moonies",
+      "predator": "croakers-catfish",
+      "weight": 0.013
+    },
+    {
+      "prey": "flatfish-moonies",
+      "predator": "dolphins",
+      "weight": 0.01
+    },
+    {
+      "prey": "flatfish-moonies",
+      "predator": "puffers-pompanos",
+      "weight": 0.003
+    },
+    {
+      "prey": "flatfish-moonies",
+      "predator": "sharks",
+      "weight": 0.02
+    },
+    {
+      "prey": "flatfish-moonies",
+      "predator": "threadfin",
+      "weight": 0.01
+    },
+    {
+      "prey": "jacks-grunts",
+      "predator": "barracudas",
+      "weight": 0.012
+    },
+    {
+      "prey": "jacks-grunts",
+      "predator": "birds",
+      "weight": 0.101
+    },
+    {
+      "prey": "jacks-grunts",
+      "predator": "croakers-catfish",
+      "weight": 0.009
+    },
+    {
+      "prey": "jacks-grunts",
+      "predator": "dolphins",
+      "weight": 0.02
+    },
+    {
+      "prey": "jacks-grunts",
+      "predator": "flatfish-moonies",
+      "weight": 0.001
+    },
+    {
+      "prey": "jacks-grunts",
+      "predator": "ladyfish",
+      "weight": 0.011
+    },
+    {
+      "prey": "jacks-grunts",
+      "predator": "puffers-pompanos",
+      "weight": 0.003
+    },
+    {
+      "prey": "jacks-grunts",
+      "predator": "sharks",
+      "weight": 0.15
+    },
+    {
+      "prey": "jacks-grunts",
+      "predator": "threadfin",
+      "weight": 0.007
+    },
+    {
+      "prey": "ladyfish",
+      "predator": "barracudas",
+      "weight": 0.005
+    },
+    {
+      "prey": "ladyfish",
+      "predator": "dolphins",
+      "weight": 0.01
+    },
+    {
+      "prey": "ladyfish",
+      "predator": "sharks",
+      "weight": 0.05
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "barracudas",
+      "weight": 0.01
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "birds",
+      "weight": 0.382
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "crabs",
+      "weight": 0.4
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "croakers-catfish",
+      "weight": 0.05
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "dolphins",
+      "weight": 0.02
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "ethmalose",
+      "weight": 0.14
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "flatfish-moonies",
+      "weight": 0.282
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "jacks-grunts",
+      "weight": 0.05
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "ladyfish",
+      "weight": 0.042
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "mullets",
+      "weight": 0.3
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "puffers-pompanos",
+      "weight": 0.343
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "rays",
+      "weight": 0.3
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "sardinellas",
+      "weight": 0.25
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "sharks",
+      "weight": 0.01
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "small-benthic-fish",
+      "weight": 0.228
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "snappers-groupers",
+      "weight": 0.2
+    },
+    {
+      "prey": "macrobenthos",
+      "predator": "tilapias",
+      "weight": 0.003
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "crabs",
+      "weight": 0.2
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "croakers-catfish",
+      "weight": 0.085
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "ethmalose",
+      "weight": 0.01
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "flatfish-moonies",
+      "weight": 0.115
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "jacks-grunts",
+      "weight": 0.055
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "mullets",
+      "weight": 0.05
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "puffers-pompanos",
+      "weight": 0.125
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "rays",
+      "weight": 0.15
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "sardinellas",
+      "weight": 0.05
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "shrimps",
+      "weight": 0.1
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "small-benthic-fish",
+      "weight": 0.167
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "threadfin",
+      "weight": 0.16
+    },
+    {
+      "prey": "meiobenthos",
+      "predator": "tilapias",
+      "weight": 0.003
+    },
+    {
+      "prey": "microphytobenthos",
+      "predator": "crabs",
+      "weight": 0.06
+    },
+    {
+      "prey": "microphytobenthos",
+      "predator": "ethmalose",
+      "weight": 0.1
+    },
+    {
+      "prey": "microphytobenthos",
+      "predator": "jacks-grunts",
+      "weight": 0.005
+    },
+    {
+      "prey": "microphytobenthos",
+      "predator": "macrobenthos",
+      "weight": 0.15
+    },
+    {
+      "prey": "microphytobenthos",
+      "predator": "meiobenthos",
+      "weight": 0.14
+    },
+    {
+      "prey": "microphytobenthos",
+      "predator": "mullets",
+      "weight": 0.05
+    },
+    {
+      "prey": "microphytobenthos",
+      "predator": "rays",
+      "weight": 0.03
+    },
+    {
+      "prey": "microphytobenthos",
+      "predator": "sardinellas",
+      "weight": 0.05
+    },
+    {
+      "prey": "microphytobenthos",
+      "predator": "shrimps",
+      "weight": 0.1
+    },
+    {
+      "prey": "microphytobenthos",
+      "predator": "small-benthic-fish",
+      "weight": 0.067
+    },
+    {
+      "prey": "microphytobenthos",
+      "predator": "tilapias",
+      "weight": 0.2
+    },
+    {
+      "prey": "microphytobenthos",
+      "predator": "zooplankton",
+      "weight": 0.05
+    },
+    {
+      "prey": "mullets",
+      "predator": "barracudas",
+      "weight": 0.07
+    },
+    {
+      "prey": "mullets",
+      "predator": "birds",
+      "weight": 0.06
+    },
+    {
+      "prey": "mullets",
+      "predator": "croakers-catfish",
+      "weight": 0.013
+    },
+    {
+      "prey": "mullets",
+      "predator": "dolphins",
+      "weight": 0.21
+    },
+    {
+      "prey": "mullets",
+      "predator": "flatfish-moonies",
+      "weight": 0.007
+    },
+    {
+      "prey": "mullets",
+      "predator": "jacks-grunts",
+      "weight": 0.013
+    },
+    {
+      "prey": "mullets",
+      "predator": "ladyfish",
+      "weight": 0.03
+    },
+    {
+      "prey": "mullets",
+      "predator": "puffers-pompanos",
+      "weight": 0.001
+    },
+    {
+      "prey": "mullets",
+      "predator": "sharks",
+      "weight": 0.099
+    },
+    {
+      "prey": "mullets",
+      "predator": "small-benthic-fish",
+      "weight": 0.003
+    },
+    {
+      "prey": "mullets",
+      "predator": "snappers-groupers",
+      "weight": 0.06
+    },
+    {
+      "prey": "mullets",
+      "predator": "threadfin",
+      "weight": 0.027
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "crabs",
+      "weight": 0.03
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "ethmalose",
+      "weight": 0.3
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "jacks-grunts",
+      "weight": 0.045
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "macrobenthos",
+      "weight": 0.5
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "meiobenthos",
+      "weight": 0.1
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "mullets",
+      "weight": 0.2
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "sardinellas",
+      "weight": 0.2
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "shrimps",
+      "weight": 0.3
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "small-benthic-fish",
+      "weight": 0.067
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "tilapias",
+      "weight": 0.31
+    },
+    {
+      "prey": "phytoplankton",
+      "predator": "zooplankton",
+      "weight": 0.85
+    },
+    {
+      "prey": "puffers-pompanos",
+      "predator": "barracudas",
+      "weight": 0.022
+    },
+    {
+      "prey": "puffers-pompanos",
+      "predator": "birds",
+      "weight": 0.001
+    },
+    {
+      "prey": "puffers-pompanos",
+      "predator": "dolphins",
+      "weight": 0.01
+    },
+    {
+      "prey": "puffers-pompanos",
+      "predator": "ladyfish",
+      "weight": 0.001
+    },
+    {
+      "prey": "puffers-pompanos",
+      "predator": "sharks",
+      "weight": 0.074
+    },
+    {
+      "prey": "puffers-pompanos",
+      "predator": "threadfin",
+      "weight": 0.01
+    },
+    {
+      "prey": "rays",
+      "predator": "barracudas",
+      "weight": 0.001
+    },
+    {
+      "prey": "rays",
+      "predator": "sharks",
+      "weight": 0.08
+    },
+    {
+      "prey": "rays",
+      "predator": "threadfin",
+      "weight": 0.001
+    },
+    {
+      "prey": "sardinellas",
+      "predator": "barracudas",
+      "weight": 0.04
+    },
+    {
+      "prey": "sardinellas",
+      "predator": "birds",
+      "weight": 0.093
+    },
+    {
+      "prey": "sardinellas",
+      "predator": "croakers-catfish",
+      "weight": 0.017
+    },
+    {
+      "prey": "sardinellas",
+      "predator": "dolphins",
+      "weight": 0.17
+    },
+    {
+      "prey": "sardinellas",
+      "predator": "flatfish-moonies",
+      "weight": 0.004
+    },
+    {
+      "prey": "sardinellas",
+      "predator": "jacks-grunts",
+      "weight": 0.02
+    },
+    {
+      "prey": "sardinellas",
+      "predator": "ladyfish",
+      "weight": 0.04
+    },
+    {
+      "prey": "sardinellas",
+      "predator": "puffers-pompanos",
+      "weight": 0.021
+    },
+    {
+      "prey": "sardinellas",
+      "predator": "sharks",
+      "weight": 0.04
+    },
+    {
+      "prey": "sardinellas",
+      "predator": "small-benthic-fish",
+      "weight": 0.007
+    },
+    {
+      "prey": "sardinellas",
+      "predator": "snappers-groupers",
+      "weight": 0.04
+    },
+    {
+      "prey": "sardinellas",
+      "predator": "threadfin",
+      "weight": 0.03
+    },
+    {
+      "prey": "shrimps",
+      "predator": "barracudas",
+      "weight": 0.235
+    },
+    {
+      "prey": "shrimps",
+      "predator": "birds",
+      "weight": 0.026
+    },
+    {
+      "prey": "shrimps",
+      "predator": "croakers-catfish",
+      "weight": 0.309
+    },
+    {
+      "prey": "shrimps",
+      "predator": "dolphins",
+      "weight": 0.09
+    },
+    {
+      "prey": "shrimps",
+      "predator": "flatfish-moonies",
+      "weight": 0.105
+    },
+    {
+      "prey": "shrimps",
+      "predator": "jacks-grunts",
+      "weight": 0.237
+    },
+    {
+      "prey": "shrimps",
+      "predator": "ladyfish",
+      "weight": 0.56
+    },
+    {
+      "prey": "shrimps",
+      "predator": "puffers-pompanos",
+      "weight": 0.211
+    },
+    {
+      "prey": "shrimps",
+      "predator": "rays",
+      "weight": 0.5
+    },
+    {
+      "prey": "shrimps",
+      "predator": "sardinellas",
+      "weight": 0.05
+    },
+    {
+      "prey": "shrimps",
+      "predator": "sharks",
+      "weight": 0.01
+    },
+    {
+      "prey": "shrimps",
+      "predator": "small-benthic-fish",
+      "weight": 0.118
+    },
+    {
+      "prey": "shrimps",
+      "predator": "snappers-groupers",
+      "weight": 0.22
+    },
+    {
+      "prey": "shrimps",
+      "predator": "threadfin",
+      "weight": 0.266
+    },
+    {
+      "prey": "small-benthic-fish",
+      "predator": "barracudas",
+      "weight": 0.12
+    },
+    {
+      "prey": "small-benthic-fish",
+      "predator": "birds",
+      "weight": 0.114
+    },
+    {
+      "prey": "small-benthic-fish",
+      "predator": "croakers-catfish",
+      "weight": 0.033
+    },
+    {
+      "prey": "small-benthic-fish",
+      "predator": "dolphins",
+      "weight": 0.17
+    },
+    {
+      "prey": "small-benthic-fish",
+      "predator": "jacks-grunts",
+      "weight": 0.023
+    },
+    {
+      "prey": "small-benthic-fish",
+      "predator": "ladyfish",
+      "weight": 0.022
+    },
+    {
+      "prey": "small-benthic-fish",
+      "predator": "puffers-pompanos",
+      "weight": 0.029
+    },
+    {
+      "prey": "small-benthic-fish",
+      "predator": "sharks",
+      "weight": 0.08
+    },
+    {
+      "prey": "small-benthic-fish",
+      "predator": "snappers-groupers",
+      "weight": 0.07
+    },
+    {
+      "prey": "small-benthic-fish",
+      "predator": "threadfin",
+      "weight": 0.105
+    },
+    {
+      "prey": "snappers-groupers",
+      "predator": "croakers-catfish",
+      "weight": 0.003
+    },
+    {
+      "prey": "snappers-groupers",
+      "predator": "dolphins",
+      "weight": 0.01
+    },
+    {
+      "prey": "snappers-groupers",
+      "predator": "sharks",
+      "weight": 0.059
+    },
+    {
+      "prey": "snappers-groupers",
+      "predator": "threadfin",
+      "weight": 0.005
+    },
+    {
+      "prey": "threadfin",
+      "predator": "barracudas",
+      "weight": 0.005
+    },
+    {
+      "prey": "threadfin",
+      "predator": "birds",
+      "weight": 0.0
+    },
+    {
+      "prey": "threadfin",
+      "predator": "sharks",
+      "weight": 0.01
+    },
+    {
+      "prey": "tilapias",
+      "predator": "barracudas",
+      "weight": 0.01
+    },
+    {
+      "prey": "tilapias",
+      "predator": "birds",
+      "weight": 0.032
+    },
+    {
+      "prey": "tilapias",
+      "predator": "croakers-catfish",
+      "weight": 0.007
+    },
+    {
+      "prey": "tilapias",
+      "predator": "dolphins",
+      "weight": 0.01
+    },
+    {
+      "prey": "tilapias",
+      "predator": "jacks-grunts",
+      "weight": 0.007
+    },
+    {
+      "prey": "tilapias",
+      "predator": "ladyfish",
+      "weight": 0.01
+    },
+    {
+      "prey": "tilapias",
+      "predator": "puffers-pompanos",
+      "weight": 0.004
+    },
+    {
+      "prey": "tilapias",
+      "predator": "sharks",
+      "weight": 0.02
+    },
+    {
+      "prey": "tilapias",
+      "predator": "small-benthic-fish",
+      "weight": 0.007
+    },
+    {
+      "prey": "tilapias",
+      "predator": "threadfin",
+      "weight": 0.02
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "crabs",
+      "weight": 0.1
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "croakers-catfish",
+      "weight": 0.112
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "ethmalose",
+      "weight": 0.4
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "flatfish-moonies",
+      "weight": 0.323
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "jacks-grunts",
+      "weight": 0.422
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "ladyfish",
+      "weight": 0.094
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "meiobenthos",
+      "weight": 0.1
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "mullets",
+      "weight": 0.3
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "puffers-pompanos",
+      "weight": 0.025
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "sardinellas",
+      "weight": 0.35
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "shrimps",
+      "weight": 0.4
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "small-benthic-fish",
+      "weight": 0.133
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "threadfin",
+      "weight": 0.036
+    },
+    {
+      "prey": "zooplankton",
+      "predator": "tilapias",
+      "weight": 0.024
+    }
+  ]
+}

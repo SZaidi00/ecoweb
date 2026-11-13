@@ -1,0 +1,24 @@
+{
+  "slug": "bonga-shad",
+  "name": "Bonga shad",
+  "kind": "species",
+  "description": "The bonga shad (Ethmalosa fimbriata) - by far the most abundant fish of the creek by biomass (nearly 25 tonnes per square kilometre in the 2003 model), a small clupeid that filters zooplankton and phytoplankton from the turbid water and feeds predators from ladyfish to sharks. Tracked as its own single-species compartment by the source.",
+  "sourceWeb": "bamboung",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Bonga_shad"
+  },
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "ethmalose",
+      "displayName": "Bonga shad",
+      "kind": "species",
+      "trophicLevel": 2.551,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Bonga_shad"
+      }
+    }
+  ]
+}

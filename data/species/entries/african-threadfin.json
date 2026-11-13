@@ -1,0 +1,24 @@
+{
+  "slug": "african-threadfin",
+  "name": "African threadfin",
+  "kind": "species",
+  "description": "The grand capitaine (Polydactylus quadrifilis), a big West African threadfin whose free fin rays feel like threads. It tracks shrimp and crab swarms in the turbid channel - over a quarter of its diet is shrimps - and it is one of the few predators taking meiobenthos. Tracked as its own single-species compartment by the source.",
+  "sourceWeb": "bamboung",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Polydactylus_quadrifilis"
+  },
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "threadfin",
+      "displayName": "African threadfin",
+      "kind": "species",
+      "trophicLevel": 3.559,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Polydactylus_quadrifilis"
+      }
+    }
+  ]
+}

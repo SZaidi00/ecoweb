@@ -1,0 +1,24 @@
+{
+  "slug": "barracudas-needlefish",
+  "name": "Barracudas & needlefish",
+  "kind": "functional-group",
+  "description": "Barracudas, needlefish and cutlassfish - the source's 'Barracudas +' compartment: Sphyraena barracudas, Tylosurus and Strongylura needlefish, a halfbeak (Hemiramphus) and the cutlassfish Trichiurus lepturus - the sleek open-water hunters of the bolong. Their diet leans heavily on ethmalose (bonga shad) and shrimps. The study uses them as its worked example of a fishery-targeted group whose increase ripples through the whole web. Functional group pooling the source's Barracudas + compartment.",
+  "sourceWeb": "bamboung",
+  "externalLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Great_barracuda"
+  },
+  "occurrences": [
+    {
+      "web": "bamboung",
+      "webName": "Bamboung Bolong",
+      "biome": "estuary",
+      "node": "barracudas",
+      "displayName": "Barracudas & needlefish",
+      "kind": "functional-group",
+      "trophicLevel": 3.659,
+      "externalLinks": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Great_barracuda"
+      }
+    }
+  ]
+}
