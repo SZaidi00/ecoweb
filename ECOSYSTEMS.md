@@ -344,3 +344,44 @@ For every candidate, record:
 | skaftafellsjokull-soil-web | Iceland — Skaftafellsjökull glacier-foreland soil | appendix (richness gate) | researched — researched/iceland.md | — | — |
 | myvatn-midge-grassland | Iceland — Mývatn midge-subsidised grassland | rejected (no edge matrix) | researched — researched/iceland.md | — | — |
 | myvatn-lake-web | Iceland — Mývatn freshwater lake | rejected (no resolved matrix) | researched — researched/iceland.md | — | — |
+| yellow-river-estuary | China — Yellow Sea & Bohai Sea (Yellow River Estuary) | 1 | researched — researched/china-yellow-sea-bohai.md | — | — |
+| laizhou-bay | China — Yellow Sea & Bohai Sea (Laizhou Bay) | appendix (biome-saturation gate) | researched — researched/china-yellow-sea-bohai.md | — | — |
+| haizhou-bay | China — Yellow Sea & Bohai Sea (Haizhou Bay) | appendix (biome-saturation gate) | researched — researched/china-yellow-sea-bohai.md | — | — |
+| southern-yellow-sea | China — Yellow Sea & Bohai Sea (southern shelf) | appendix (access + biome-saturation gate) | researched — researched/china-yellow-sea-bohai.md | — | — |
+| bohai-sea-2016 | China — Yellow Sea & Bohai Sea (whole basin, 2016) | appendix (access + biome-saturation gate) | researched — researched/china-yellow-sea-bohai.md | — | — |
+| jiaozhou-bay | China — Yellow Sea & Bohai Sea (Jiaozhou Bay) | appendix (access + biome-saturation gate) | researched — researched/china-yellow-sea-bohai.md | — | — |
+| bohai-sea-1982 | China — Yellow Sea & Bohai Sea (whole basin, 1982–83) | appendix (richness + biome-saturation gate) | researched — researched/china-yellow-sea-bohai.md | — | — |
+| liaohe-estuary-salt-marsh | China — Yellow Sea & Bohai Sea (Liaohe tidal wetland) | appendix (richness gate) | researched — researched/china-yellow-sea-bohai.md | — | — |
+| mae-klong-estuary | Thailand — Inner Gulf mangrove estuary | 1 | researched — researched/thailand.md | — | — |
+| bandon-bay | Thailand — Gulf of Thailand estuarine bay | 1 | researched — researched/thailand.md | — | — |
+| gulf-of-thailand-1973 | Thailand — Gulf coastal shelf (1973 model) | appendix (biome-saturation gate) | researched — researched/thailand.md | — | — |
+| coastal-andaman-sea | Thailand — Andaman coastal fisheries | appendix (access + biome-saturation gate) | researched — researched/thailand.md | — | — |
+| pasak-jolasid-reservoir | Thailand — newly impounded freshwater reservoir | appendix (access + biome-saturation gate) | researched — researched/thailand.md | — | — |
+| ubolratana-reservoir | Thailand — hydropower reservoir | appendix (access + biome-saturation gate) | researched — researched/thailand.md | — | — |
+| sakaerat-spider-prey | Thailand — dry-forest understory subwebs | appendix (access + partial-subweb gate) | researched — researched/thailand.md | — | — |
+| kyoto-coastal-regime-shift | Japan — Kyoto coast, Sea of Japan (Ecopath) | appendix (biome-saturation gate) | researched — researched/notbuildable/japan.md | — | — |
+| suo-nada | Japan — Suo-nada, Seto Inland Sea (Ecopath) | appendix (biome-saturation gate) | researched — researched/notbuildable/japan.md | — | — |
+| osaka-bay-anchovy | Japan — Osaka Bay (Ecopath) | appendix (biome-saturation gate) | researched — researched/notbuildable/japan.md | — | — |
+| sanriku-demersal | Japan — Sanriku/northern Tohoku demersal (Ecopath) | appendix (biome-saturation gate) | researched — researched/notbuildable/japan.md | — | — |
+| eastern-japan-pacific | Japan — eastern Pacific coast / pre-Fukushima (Ecopath) | appendix (access; biome-saturation gate) | researched — researched/notbuildable/japan.md | — | — |
+| western-north-pacific-small-pelagics | Japan — western North Pacific off Japan (Ecopath) | appendix (biome-saturation gate; broad scope) | researched — researched/notbuildable/japan.md | — | — |
+| lake-toya | Japan — Hokkaido freshwater lake (Ecopath) | appendix (biome-saturation gate; access check) | researched — researched/notbuildable/japan.md | — | — |
+| tokyo-bay | Japan — Tokyo estuarine/coastal bay (Ecopath) | appendix (inaccessible matrix) | researched — researched/notbuildable/japan.md | — | — |
+| suruga-bay | Japan — Suruga Bay classic epipelagic web | appendix (biome-saturation gate) | researched — researched/notbuildable/japan.md | — | — |
+| sendai-bay | Japan — Sendai Bay classic mesopelagic web | appendix (richness; biome-saturation gate) | researched — researched/notbuildable/japan.md | — | — |
+| fukushima-forest-detrital | Japan — Fukushima forest detrital chain | appendix (richness; no edge matrix) | researched — researched/notbuildable/japan.md | — | — |
+| uljin-marine-ranch | South Korea — East Sea marine ranch | appendix (biome-saturation gate) | researched — researched/notbuildable/south-korea.md | — | — |
+| east-sea-minke-whales | South Korea — southwestern East Sea | appendix (biome-saturation gate) | researched — researched/notbuildable/south-korea.md | — | — |
+| nakdong-estuary-barrage | South Korea — Nakdong estuary | appendix (14 nodes; richness gate) | researched — researched/notbuildable/south-korea.md | — | — |
+| tongyeong-marine-ranch | South Korea — southern marine ranch | appendix (access + biome-saturation gate) | researched — researched/notbuildable/south-korea.md | — | — |
+| gwangyang-bay-isotope-web | South Korea — Seomjin estuary/Gwangyang Bay | appendix (richness + pairwise-matrix gate) | researched — researched/notbuildable/south-korea.md | — | — |
+| restored-korean-streams | South Korea — national stream monitoring | appendix (freshwater saturation; model-inferred links) | researched — researched/notbuildable/south-korea.md | — | — |
+| kf-metaweb | South Korea — national freshwater metaweb | appendix (freshwater saturation; high-curation-risk) | researched — researched/notbuildable/south-korea.md | — | — |
+| gwangyang-bay-ecopath | South Korea — Gwangyang Bay preliminary model | appendix (9 nodes; richness gate) | researched — researched/notbuildable/south-korea.md | — | — |
+| namyang-reservoir | South Korea — Namyang Reservoir | appendix (10 nodes; richness + freshwater-saturation gate) | researched — researched/notbuildable/south-korea.md | — | — |
+| nepenthes-albomarginata-web | Malaysia — West Malaysian tropical phytotelm | 1 | researched — researched/malaysia.md | — | — |
+| nepenthes-ampullaria-web | Malaysia — West Malaysian tropical phytotelm | 1 | researched — researched/malaysia.md | — | — |
+| west-peninsular-malaysia-coast | Malaysia — west Peninsular continental shelf | appendix (biome-saturation gate) | researched — researched/malaysia.md | — | — |
+| sabah-sarawak-coastal | Malaysia — Sabah & Sarawak continental shelves | appendix (biome-saturation gate) | researched — researched/malaysia.md | — | — |
+| matang-mangrove-estuaries | Malaysia — Perak mangrove estuaries | appendix (complete edge matrix inaccessible) | researched — researched/malaysia.md | — | — |
+| terengganu-coast | Malaysia — Terengganu shallow coastal marine | appendix (richness; access; biome-saturation gate) | researched — researched/malaysia.md | — | — |
