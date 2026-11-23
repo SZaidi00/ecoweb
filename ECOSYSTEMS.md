@@ -395,3 +395,20 @@ For every candidate, record:
 | east-scotland-shelf | Scotland — East Coast shelf (1890s/1990s Ecopath) | appendix (biome-saturation gate) | researched — researched/scotland.md | — | — |
 | west-scotland-shelf | Scotland — West Coast shelf (Ecopath) | appendix (biome-saturation gate) | researched — researched/scotland.md | — | — |
 | moray-firth | Scotland — Moray Firth coastal shelf (Ecopath) | appendix (biome-saturation gate) | researched — researched/scotland.md | — | — |
+| gulf-of-nicoya | Costa Rica — Pacific mangrove-fringed estuary | 1 | researched — researched/costa-rica.md | — | — |
+| golfo-dulce | Costa Rica — deep fjord-like tropical estuary | 1 | researched — researched/costa-rica.md | — | — |
+| jiron-dog-carrion | Costa Rica — premontane humid-forest carrion | 2 | researched — researched/costa-rica.md | — | — |
+| osa-wet-toad-carrion | Costa Rica — wet lowland-forest carrion | 2 | researched — researched/costa-rica.md | — | — |
+| isla-del-coco-shallow | Costa Rica — oceanic-island shallow marine | appendix (biome-saturation gate) | researched — researched/costa-rica.md | — | — |
+| costa-rica-dome | Costa Rica — offshore upwelling plankton web | appendix (biome-saturation gate) | researched — researched/costa-rica.md | — | — |
+| costa-rica-coastal-streams | Costa Rica — Corcovado & Tortuguero coastal streams | appendix (biome saturation; inaccessible matrix) | researched — researched/costa-rica.md | — | — |
+| guanacaste-dry-toad-carrion | Costa Rica — dry lowland-forest carrion | appendix (trophic-depth gate) | researched — researched/costa-rica.md | — | — |
+| osa-heliconia-webs | Costa Rica — Osa phytotelmata | appendix (richness gate) | researched — researched/costa-rica.md | — | — |
+| central-chile-upwelling | Chile — central upwelling shelf (33–39°S) | appendix (biome-saturation gate) | researched — researched/notbuildable/chile-central.md | — | — |
+| tongoy-bay-scallops | Chile — Tongoy Bay marine aquaculture | appendix (biome-saturation gate) | researched — researched/notbuildable/chile-central.md | — | — |
+| san-vicente-bay-meabr | Chile — San Vicente Bay coastal marine | appendix (biome-saturation gate) | researched — researched/notbuildable/chile-central.md | — | — |
+| chilean-intertidal | Chile — central rocky intertidal | appendix (biome-saturation gate; aggregation cost) | researched — researched/notbuildable/chile-central.md | — | — |
+| chilean-subtidal-reef | Chile — central shallow subtidal reef | appendix (biome-saturation gate; inaccessible edge list) | researched — researched/notbuildable/chile-central.md | — | — |
+| chilean-mediterranean-invasives | Chile — Mediterranean sclerophyllous forest/scrub | appendix (inaccessible matrix; high-curation-risk) | researched — researched/notbuildable/chile-central.md | — | — |
+| las-chinchillas-rabbit-web | Chile — Las Chinchillas semi-arid reserve | appendix (inaccessible matrix) | researched — researched/notbuildable/chile-central.md | — | — |
+| mocha-island-rat-frog | Chile — Mocha Island rat–frog interactions | rejected (partial interaction study; inaccessible matrix) | researched — researched/notbuildable/chile-central.md | — | — |
