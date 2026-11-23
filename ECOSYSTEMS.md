@@ -385,3 +385,13 @@ For every candidate, record:
 | sabah-sarawak-coastal | Malaysia — Sabah & Sarawak continental shelves | appendix (biome-saturation gate) | researched — researched/malaysia.md | — | — |
 | matang-mangrove-estuaries | Malaysia — Perak mangrove estuaries | appendix (complete edge matrix inaccessible) | researched — researched/malaysia.md | — | — |
 | terengganu-coast | Malaysia — Terengganu shallow coastal marine | appendix (richness; access; biome-saturation gate) | researched — researched/malaysia.md | — | — |
+| gearagh-forest-floor | Ireland — alluvial woodland/forest floor (Co. Cork) | 2 | researched — researched/ireland.md | — | — |
+| lough-neagh-ecopath | Ireland — Northern Ireland freshwater lake | appendix (biome-saturation gate; grey literature) | researched — researched/ireland.md | — | — |
+| dublin-bay-energy-flow | Ireland — Dublin Bay intertidal estuary | appendix (richness + access gates) | researched — researched/ireland.md | — | — |
+| lough-feeagh-food-web | Ireland — Burrishoole freshwater lake/catchment | rejected (no published web; biome-saturation gate) | researched — researched/ireland.md | — | — |
+| carlingford-lough-oyster-model | Ireland/Northern Ireland — coastal lough aquaculture | rejected (partial submodel; no edge matrix) | researched — researched/ireland.md | — | — |
+| eden-estuary | Scotland — Fife estuary (benthic Ecopath) | 1 | researched — researched/scotland.md | — | — |
+| culbin-sands-lagoon | Scotland — Moray Firth coastal lagoon | 2 (high-curation-risk) | researched — researched/scotland.md | — | — |
+| east-scotland-shelf | Scotland — East Coast shelf (1890s/1990s Ecopath) | appendix (biome-saturation gate) | researched — researched/scotland.md | — | — |
+| west-scotland-shelf | Scotland — West Coast shelf (Ecopath) | appendix (biome-saturation gate) | researched — researched/scotland.md | — | — |
+| moray-firth | Scotland — Moray Firth coastal shelf (Ecopath) | appendix (biome-saturation gate) | researched — researched/scotland.md | — | — |
