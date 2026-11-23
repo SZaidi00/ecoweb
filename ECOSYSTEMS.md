@@ -412,3 +412,12 @@ For every candidate, record:
 | chilean-mediterranean-invasives | Chile — Mediterranean sclerophyllous forest/scrub | appendix (inaccessible matrix; high-curation-risk) | researched — researched/notbuildable/chile-central.md | — | — |
 | las-chinchillas-rabbit-web | Chile — Las Chinchillas semi-arid reserve | appendix (inaccessible matrix) | researched — researched/notbuildable/chile-central.md | — | — |
 | mocha-island-rat-frog | Chile — Mocha Island rat–frog interactions | rejected (partial interaction study; inaccessible matrix) | researched — researched/notbuildable/chile-central.md | — | — |
+| gazi-bay | Kenya — southern mangrove–seagrass coastal bay | 1 | researched — researched/kenya.md | — | — |
+| nyali-mombasa-reef | Kenya — Mombasa fringing-reef lagoon | appendix (biome-saturation gate) | researched — researched/kenya.md | — | — |
+| ungwana-bay | Kenya — Malindi–Ungwana estuarine/coastal fishery | appendix (MSc-thesis-only model source) | researched — researched/kenya.md | — | — |
+| lake-baringo | Kenya — Rift Valley freshwater lake | appendix (richness + biome-saturation gates) | researched — researched/kenya.md | — | — |
+| lake-naivasha | Kenya — Rift Valley freshwater lake | appendix (inaccessible matrix + biome-saturation gate) | researched — researched/kenya.md | — | — |
+| lake-nakuru | Kenya — Rift Valley alkaline-saline lake | appendix (inaccessible matrix + biome-saturation gate) | researched — researched/kenya.md | — | — |
+| central-amazon-biomass-flow | Brazil — Central Amazon terra firme rainforest | appendix (6 compartments; no diet matrix) | researched — researched/notbuildable/brazil-amazon-rainforest.md | — | — |
+| bdffp-beetle-trophic-web | Brazil — Central Amazon forest-fragment leaf litter | appendix (no edge matrix) | researched — researched/notbuildable/brazil-amazon-rainforest.md | — | — |
+| amazon-dark-earth-macrofauna | Brazil — Amazonian Dark Earths and forest soils | appendix (no edge matrix) | researched — researched/notbuildable/brazil-amazon-rainforest.md | — | — |
