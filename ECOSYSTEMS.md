@@ -421,3 +421,48 @@ For every candidate, record:
 | central-amazon-biomass-flow | Brazil — Central Amazon terra firme rainforest | appendix (6 compartments; no diet matrix) | researched — researched/notbuildable/brazil-amazon-rainforest.md | — | — |
 | bdffp-beetle-trophic-web | Brazil — Central Amazon forest-fragment leaf litter | appendix (no edge matrix) | researched — researched/notbuildable/brazil-amazon-rainforest.md | — | — |
 | amazon-dark-earth-macrofauna | Brazil — Amazonian Dark Earths and forest soils | appendix (no edge matrix) | researched — researched/notbuildable/brazil-amazon-rainforest.md | — | — |
+| lake-burullus | Nile River — Lower Nile & Nile Delta, Egypt (coastal lagoon) | 1 | researched — researched/nile-lower-egypt.md (matrix: open figshare supplement Table S5, 16 compartments; main-text group key pending) | — | — |
+| rias-baixas | Spain — Ría de Arousa/Rías Baixas estuarine coastal shelf | 1 | researched — researched/spain.md | — | — |
+| veta-la-palma-wetland | Spain — Doñana reconstructed brackish wetland | 1 (high-curation-risk) | researched — researched/spain.md | — | — |
+| san-simon-bay | Spain — Ría de Vigo estuarine seagrass/intertidal | 2 | researched — researched/spain.md | — | — |
+| los-monegros-salt-lakes | Spain — Los Monegros temporary inland saline wetland | 2 | researched — researched/spain.md | — | — |
+| mar-menor-lagoon | Spain — Murcia coastal hypersaline lagoon/wetland | appendix (inaccessible matrix) | researched — researched/spain.md | — | — |
+| gredos-alpine-lakes | Spain — Central high-mountain freshwater lakes | appendix (freshwater saturation) | researched — researched/spain.md | — | — |
+| lake-ciso | Spain — Banyoles stratified microbial freshwater lake | appendix (freshwater saturation; microbial-only scope) | researched — researched/spain.md | — | — |
+| andalusian-stream-webs | Spain — Andalusian Mediterranean freshwater streams | appendix (freshwater saturation; inaccessible matrices) | researched — researched/spain.md | — | — |
+| gulf-of-cadiz | Spain — NE Atlantic marine shelf | appendix (marine saturation) | researched — researched/spain.md | — | — |
+| cantabrian-sea-shelf | Spain — northern marine shelf | appendix (marine saturation) | researched — researched/spain.md | — | — |
+| balearic-islands-shelf | Spain — Balearic Islands marine shelf | appendix (marine saturation) | researched — researched/spain.md | — | — |
+| ebro-delta-shelf | Spain — Ebro Delta marine coastal shelf | appendix (marine saturation) | researched — researched/spain.md | — | — |
+| santa-pola-fish-farm | Spain — Alicante marine aquaculture | appendix (marine saturation) | researched — researched/spain.md | — | — |
+| iberian-pond-metaweb | Iberian Peninsula — experimental freshwater mesocosms | rejected (model-inferred links; freshwater saturation) | researched — researched/spain.md | — | — |
+| donana-multiplex-network | Spain — Doñana mixed trophic/non-trophic interactions | rejected (not a single resolved food web) | researched — researched/spain.md | — | — |
+| egyptian-mediterranean-plankton | Egypt — Mediterranean coastal sea (plankton process model) | appendix (9–10 groups; richness + marine-saturation gates) | researched — researched/notbuildable/egypt-mediterranean.md | — | — |
+| schiermonnikoog-soil-succession | Netherlands — Schiermonnikoog salt-marsh/wetland soil | 1 | researched — researched/netherlands.md | — | — |
+| hulshorsterzand-soil-succession | Netherlands — Veluwe dune/heathland soil | 1 | researched — researched/netherlands.md | — | — |
+| ex-arable-heathland-succession | Netherlands — central Veluwe restored heathland soil | 1 | researched — researched/netherlands.md | — | — |
+| wekerom-scots-pine-soil | Netherlands — central temperate coniferous forest soil | 1 (access-dependent) | researched — researched/netherlands.md | — | — |
+| lovinkhoeve-farming-soil | Netherlands — Marknesse agricultural grassland soil | appendix (biome-saturation gate) | researched — researched/netherlands.md | — | — |
+| soest-pasture-microfauna | Netherlands — Soest abandoned grassland soil | appendix (biome-saturation gate) | researched — researched/netherlands.md | — | — |
+| ijsselmeer-ecopath | Netherlands — shallow eutrophic freshwater lake | appendix (freshwater saturation; inaccessible matrix) | researched — researched/netherlands.md | — | — |
+| subtidal-wadden-interactions | Netherlands — Dutch subtidal Wadden Sea benthos | appendix (marine saturation; high-curation-risk) | researched — researched/netherlands.md | — | — |
+| dutch-wadden-food-web-model | Netherlands — Dutch Wadden Sea whole-system model | appendix (preprint; inaccessible matrix; marine saturation) | researched — researched/netherlands.md | — | — |
+| schrama-salt-marsh-assembly | Netherlands — Schiermonnikoog salt-marsh green/brown assembly | rejected (no resolved matrix; richness gate) | researched — researched/netherlands.md | — | — |
+| westerschelde-food-chains | Netherlands/Belgium — Westerschelde estuary | rejected (no edge matrix; richness gate) | researched — researched/netherlands.md | — | — |
+| dutch-grazing-arthropod-webs | Netherlands — grassland herbivore exclosure experiments | rejected (no edge matrix; biome-saturation gate) | researched — researched/netherlands.md | — | — |
+| mondego-benthic | Portugal — Mondego Estuary benthic/seagrass | 1 | researched — researched/portugal.md | — | — |
+| ria-de-aveiro | Portugal — Ria de Aveiro estuarine coastal lagoon | 1 | researched — researched/portugal.md | — | — |
+| tagus-estuary | Portugal — Tagus Estuary present-day web | 1 (high-curation-risk) | researched — researched/portugal.md | — | — |
+| ria-formosa-lagoon | Portugal — Ria Formosa estuarine coastal lagoon | 2 (high-curation-risk) | researched — researched/portugal.md | — | — |
+| portuguese-intermittent-estuaries | Portugal — small intermittent estuaries | 2 (high-curation-risk) | researched — researched/portugal.md | — | — |
+| portuguese-continental-shelf | Portugal — continental shelf upwelling marine | appendix (marine saturation) | researched — researched/portugal.md | — | — |
+| portuguese-tide-pools | Portugal — mainland rocky intertidal tide pools | appendix (marine saturation) | researched — researched/portugal.md | — | — |
+| arrabida-mpa | Portugal — Arrábida marine protected area | appendix (marine saturation; aggregation cost) | researched — researched/portugal.md | — | — |
+| ria-formosa-reservoir | Portugal — Ria Formosa managed water reservoir | appendix (14 compartments; inaccessible matrix) | researched — researched/portugal.md | — | — |
+| sw-portugal-trawl | Portugal — southern/southwestern marine slope trawl ecosystem | rejected (preprint; marine saturation) | researched — researched/portugal.md | — | — |
+| white-river-peatland-soils | Canada — boreal forest & Canadian Shield (Ontario peatland soil) | 1 | researched — researched/canada-boreal-shield.md | — | — |
+| boreal-tetrapod-metaweb | Canada/N. America — boreal forest biome (literature metaweb) | 2 (high-curation-risk) | researched — researched/canada-boreal-shield.md | — | — |
+| great-slave-lake | Canada — boreal forest & Canadian Shield (NWT freshwater) | appendix (freshwater saturation) | researched — researched/canada-boreal-shield.md | — | — |
+| great-bear-lake | Canada — boreal forest & Canadian Shield (NWT freshwater) | appendix (13 groups; richness + freshwater saturation) | researched — researched/canada-boreal-shield.md | — | — |
+| aspen-parkland-communities | Canada — Aspen Parkland transition (out of sub-region scope) | appendix (out of scope + grassland saturation) | researched — researched/canada-boreal-shield.md | — | — |
+| new-brunswick-budworm-web | Canada — Acadian forest (out of sub-region scope) | appendix (scope + host–parasitoid surface + aggregation) | researched — researched/canada-boreal-shield.md | — | — |
