@@ -466,3 +466,15 @@ For every candidate, record:
 | great-bear-lake | Canada — boreal forest & Canadian Shield (NWT freshwater) | appendix (13 groups; richness + freshwater saturation) | researched — researched/canada-boreal-shield.md | — | — |
 | aspen-parkland-communities | Canada — Aspen Parkland transition (out of sub-region scope) | appendix (out of scope + grassland saturation) | researched — researched/canada-boreal-shield.md | — | — |
 | new-brunswick-budworm-web | Canada — Acadian forest (out of sub-region scope) | appendix (scope + host–parasitoid surface + aggregation) | researched — researched/canada-boreal-shield.md | — | — |
+| aland-coastal-regime-webs | Finland — Åland coastal Baltic | appendix (marine saturation) | researched — researched/notbuildable/finland.md | — | — |
+| formica-aquilonia-detrital | Finland — boreal forest-floor/ant-mound soil | appendix (14 groups; inaccessible matrix) | researched — researched/notbuildable/finland.md | — | — |
+| finnish-benthic-enrichment | Finland — Åland fish-farm benthic marine | appendix (inaccessible matrix + marine saturation) | researched — researched/notbuildable/finland.md | — | — |
+| lake-pyhajarvi-littoral | Finland — SW freshwater lake littoral | appendix (inaccessible matrix + freshwater saturation) | researched — researched/notbuildable/finland.md | — | — |
+| lake-oulujarvi-atn | Finland — boreal freshwater lake | rejected (nonlocal/model-inferred links; freshwater saturation) | researched — researched/notbuildable/finland.md | — | — |
+| north-karelia-soil-web | Finland — North Karelia boreal forest soil | rejected (trait-generated links) | researched — researched/notbuildable/finland.md | — | — |
+| midtdalsbreen-pioneer-web | Norway — alpine glacier foreland (Hardangerjøkulen) | 1 (high-curation-risk) | researched — researched/norway.md | — | — |
+| porsangerfjorden-red-king-crab | Norway — sub-Arctic marine fjord | appendix (marine-saturation gate) | researched — researched/norway.md | — | — |
+| malangen-deep-kelp-subsidy | Norway — Arctic deep-sea fjord | appendix (marine-saturation gate) | researched — researched/norway.md | — | — |
+| sorfjord-cod-ecopath | Norway — high-latitude marine fjord | appendix (marine saturation; matrix access) | researched — researched/norway.md | — | — |
+| ovre-heimdalsvatn | Norway — subalpine freshwater lake | appendix (freshwater-saturation gate) | researched — researched/norway.md | — | — |
+| takvatn-parasite-web | Norway — sub-Arctic freshwater lake | appendix (freshwater saturation; aggregation cost) | researched — researched/norway.md | — | — |
