@@ -478,3 +478,62 @@ For every candidate, record:
 | sorfjord-cod-ecopath | Norway — high-latitude marine fjord | appendix (marine saturation; matrix access) | researched — researched/norway.md | — | — |
 | ovre-heimdalsvatn | Norway — subalpine freshwater lake | appendix (freshwater-saturation gate) | researched — researched/norway.md | — | — |
 | takvatn-parasite-web | Norway — sub-Arctic freshwater lake | appendix (freshwater saturation; aggregation cost) | researched — researched/norway.md | — | — |
+| celestun-lagoon | Mexico — Yucatán mangrove estuary | 1 | researched — researched/mexico.md | — | — |
+| terminos-lagoon | Mexico — Campeche whole lagoon-estuary | 1 | researched — researched/mexico.md | — | — |
+| terminos-seagrass-mangrove | Mexico — Términos Lagoon critical habitats | 1 | researched — researched/mexico.md | — | — |
+| chantuto-panzacola | Mexico — Chiapas mangrove lagoon-estuary | 1 | researched — researched/mexico.md | — | — |
+| huizache-caimanero | Mexico — Sinaloa coastal lagoon complex | 1 | researched — researched/mexico.md | — | — |
+| tampamachoco-lagoon | Mexico — Veracruz mangrove estuary | 1 | researched — researched/mexico.md | — | — |
+| carretas-pereyra | Mexico — Chiapas periodically closed lagoon | 1 | researched — researched/mexico.md | — | — |
+| mandinga-lagoon | Mexico — Veracruz mangrove lagoon | 1 | researched — researched/mexico.md | — | — |
+| laguna-alvarado | Mexico — Veracruz coastal lagoon | appendix (complete-matrix access) | researched — researched/mexico.md | — | — |
+| bahia-de-la-ascension | Mexico — Quintana Roo mangrove/reef-influenced bay | appendix (marine saturation) | researched — researched/mexico.md | — | — |
+| los-tuxtlas-aroid-herbivores | Mexico — Los Tuxtlas rainforest aroid subweb | appendix (trophic-depth/scope gate) | researched — researched/mexico.md | — | — |
+| tamiahua-lagoon | Mexico — western Gulf coastal lagoon | appendix (13 nodes; richness gate) | researched — researched/mexico.md | — | — |
+| attalea-palm-crown-webs | Panama — central palm-crown tropical terrestrial microhabitats | appendix (inaccessible matrix; aggregation/provenance) | researched — researched/notbuildable/panama.md | — | — |
+| gatun-lake-pre-invasion | Panama — Gatun Lake freshwater, pre-invasion | appendix (freshwater saturation) | researched — researched/notbuildable/panama.md | — | — |
+| rio-guabal-energy-web | Panama — El Copé montane freshwater stream | appendix (freshwater saturation) | researched — researched/notbuildable/panama.md | — | — |
+| taboguilla-intertidal | Panama — Bay of Panama tropical rocky intertidal | appendix (marine saturation) | researched — researched/notbuildable/panama.md | — | — |
+| coiba-national-park | Panama — Coiba National Park protected marine ecosystem | appendix (marine saturation; inaccessible matrix) | researched — researched/notbuildable/panama.md | — | — |
+| rio-de-la-plata | Argentina/Uruguay — Río de la Plata estuary & adjacent shelf | 1 | researched — researched/argentina.md | — | — |
+| middle-parana-floodplain | Argentina — middle Paraná riverine floodplain wetland | 1 | researched — researched/argentina.md | — | — |
+| chaco-serrano-fragmentation | Argentina — Chaco Serrano dry-forest remnants | 1 (high-curation-risk) | researched — researched/argentina.md | — | — |
+| bahia-blanca-microbial | Argentina — Bahía Blanca estuarine microbial experiments | appendix (richness + partial-subweb gates) | researched — researched/argentina.md | — | — |
+| mar-chiquita-isotope-web | Argentina — Mar Chiquita coastal lagoon isotope web | appendix (inaccessible edge matrix) | researched — researched/argentina.md | — | — |
+| monte-terrestrial-web | Argentina — Monte Desert terrestrial systems | rejected (no resolved community matrix) | researched — researched/argentina.md | — | — |
+| ibera-wetland-web | Argentina — Iberá wetland | rejected (species-specific diets only) | researched — researched/argentina.md | — | — |
+| bahia-malaga | Colombia — Pacific mangrove estuary | 1 | researched — researched/colombia.md | — | — |
+| malpelo-terrestrial | Colombia — Malpelo Island tropical terrestrial | 2 (high-curation-risk) | researched — researched/colombia.md | — | — |
+| san-pedro-pichido | Colombia — San Pedro riverine mangrove | appendix (thesis-only provenance) | researched — researched/colombia.md | — | — |
+| cienaga-zapatosa | Colombia — Cesar/Magdalena floodplain wetland | appendix (complete-matrix access) | researched — researched/colombia.md | — | — |
+| cienaga-ayapel | Colombia — San Jorge floodplain wetland | appendix (matrix access + aggregation) | researched — researched/colombia.md | — | — |
+| yahuarcaca-lake | Colombia — Amazon várzea/floodplain lake | appendix (freshwater saturation) | researched — researched/colombia.md | — | — |
+| colombian-dry-forest-anurans | Colombia — Caribbean tropical dry forest subwebs | appendix (partial two-level subweb) | researched — researched/colombia.md | — | — |
+| gulf-of-salamanca | Colombia — Caribbean upwelling shelf | appendix (marine saturation) | researched — researched/colombia.md | — | — |
+| la-guajira-upwelling | Colombia — Caribbean upwelling shelf | appendix (marine saturation) | researched — researched/colombia.md | — | — |
+| gulf-of-tortugas | Colombia — Pacific continental shelf | appendix (marine saturation + aggregation) | researched — researched/colombia.md | — | — |
+| mont-saint-michel-bay | France — Normandy estuarine/coastal bay & intertidal wetland | 1 | researched — researched/france.md | — | — |
+| gironde-estuary | France — SW Atlantic estuary | 1 | researched — researched/france.md | — | — |
+| brouage-mudflat | France — Marennes-Oléron intertidal estuarine mudflat | 1 | researched — researched/france.md | — | — |
+| seine-estuary-mosaic | France — Normandy estuary/coastal habitat mosaic | 1 (access-dependent) | researched — researched/france.md | — | — |
+| aiguillon-cove | France — SW Atlantic intertidal estuarine mudflat | 1 | researched — researched/france.md | — | — |
+| canche-estuary | France — eastern English Channel estuary | appendix (inaccessible matrix) | researched — researched/france.md | — | — |
+| lake-annecy | France — subalpine freshwater lake | appendix (freshwater saturation; count reconciliation) | researched — researched/france.md | — | — |
+| bay-of-biscay-shelf | France/Spain — NE Atlantic continental shelf | appendix (marine saturation) | researched — researched/france.md | — | — |
+| port-cros-mpa | France — NW Mediterranean marine protected area | appendix (marine saturation) | researched — researched/france.md | — | — |
+| ile-nouvelle-restored-marsh | France — Gironde restored estuarine wetland | rejected (no resolved community matrix) | researched — researched/france.md | — | — |
+| bay-of-somme | France — eastern English Channel estuarine/coastal bay | rejected (9 compartments; richness gate) | researched — researched/france.md | — | — |
+| french-alps-soil-metaweb | France — montane forest/grassland/shrubland soil | rejected (potential links inferred from co-occurrence) | researched — researched/france.md | — | — |
+| french-pond-marsh-metaweb | France — pond & marsh freshwater wetland | rejected (preprint; model-imputed/local potential links) | researched — researched/france.md | — | — |
+| german-forest-soil-webs | Germany — temperate forest soil (Biodiversity Exploratories) | 2 (high-curation-risk) | researched — researched/germany.md | — | — |
+| messel-shale-food-webs | Germany — early-Eocene fossil lake & forest | 2 (high-curation-risk) | researched — researched/germany.md | — | — |
+| jena-experiment-metaweb | Germany — Jena experimental grassland | appendix (grassland saturation; aggregation) | researched — researched/germany.md | — | — |
+| lake-constance-pelagic | Germany — Lake Constance pelagic freshwater | appendix (freshwater saturation) | researched — researched/germany.md | — | — |
+| sylt-tidal-basin-parasite-web | Germany/Denmark — Sylt intertidal coastal marine | appendix (marine saturation; aggregation) | researched — researched/germany.md | — | — |
+| flensburg-fjord-parasite-web | Germany/Denmark — Flensburg brackish coastal marine | appendix (marine saturation; aggregation) | researched — researched/germany.md | — | — |
+| sylt-romo-bight-energy-flow | Germany/Denmark — Sylt–Rømø intertidal coastal marine | appendix (marine saturation) | researched — researched/germany.md | — | — |
+| german-bight-metaweb | Germany — German Bight coastal marine | appendix (marine saturation) | researched — researched/germany.md | — | — |
+| sylt-outer-reef-ecopath | Germany — Sylt Outer Reef coastal marine | appendix (marine saturation) | researched — researched/germany.md | — | — |
+| spiekeroog-mesofauna-isotope-web | Germany — Spiekeroog salt-marsh soil | rejected (no resolved consumer–prey matrix) | researched — researched/germany.md | — | — |
+| northern-germany-forest-energy-models | Germany — northern temperate forest soil | rejected (4-node model; richness gate) | researched — researched/germany.md | — | — |
+| goettingen-solling-beech-isotope-web | Germany — Göttinger Wald & Solling forest soil | rejected (no resolved edge matrix) | researched — researched/germany.md | — | — |
